@@ -1,0 +1,6 @@
+Repeating attributes: The TJIII interpretor supports repeating attributes.  The editor
+does not have to.  It can restrict only one of each attribute, or allow repeating attributes.
+Currently, the editor is implemented to allow repeating attributes.
+
+CellText: TJIII doc is ambiguous: assuming: celltext <rich text> <logical expression>
+

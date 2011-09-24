@@ -1,0 +1,1277 @@
+grammar org.jjflyboy.tjpeditor.Project with org.eclipse.xtext.common.Terminals
+
+generate project "http://www.jjflyboy.org/tjpeditor/Project"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+//
+// The pattern used here for specifying attributes
+// XXXX:
+//  'xxxx' ..... ( '{' attributes+=XxxxAttribute* '}' )?;
+//
+// XxxxAttribute:
+//    Yyyy | Zzzz | ....
+//
+// See Account below for real life example.  This pattern is
+// in use because TaskJuggler permits attributes in any
+// order and permits repeats
+//
+
+Global: project=Project attributes+=GlobalAttribute*;
+
+GlobalAttribute:
+    Account
+    | Balance
+	| Copyright
+//	| Export
+	| Flags
+	| Limits
+//	| Macro
+//	| Navigator
+//	| NikuReport
+	| Rate
+	| ResourceReport
+	| TaskReport
+	| TextReport
+	| Resource
+	| Shift
+//	| StatusSheet
+//	| StatusSheetReport
+	| SupplementAccount
+	| SupplementReport
+	| SupplementResource
+	| SupplementTask
+	| Task
+//	| Timesheet
+//	| TimesheetReport
+	| TrackingScenario
+	| Vacation
+;
+
+// http://www.taskjuggler.org/tj3/manual/account.html
+Account:
+	'account' id=ID? name=STRING ('{' attributes+=AccountAttribute* '}')?;
+
+AccountAttribute:
+	Account
+	| Credit
+	| Flags
+;
+
+// http://www.taskjuggler.org/tj3/manual/supplement.html
+SupplementAccount:
+	 'supplement' 'account' account=[Account] ('{' attributes+=AccountAttribute* '}')?;
+
+
+
+// http://www.taskjuggler.org/tj3/manual/project.html
+Project : 
+	'project' id=ID? name=STRING version=STRING? interval=Interval2 ('{' attributes+=ProjectAttribute* '}' );
+
+ProjectAttribute:
+	(
+		Currency
+		| CurrencyFormat
+		| DailyWorkingHours
+//		| ExtendTask
+//		| ExtendResource
+		| Include
+		| JournalEntry
+		| Now
+		| NumberFormat
+		| Scenario
+		| ShortTimeFormat
+		| Timezone
+		| TimingResolution
+		| WeekStarts
+		| WorkingHours
+		| YearlyWorkingDays
+	)
+;
+
+// http://www.taskjuggler.org/tj3/manual/task.html
+Task:
+	'task' id=ID? name=STRING ( '{' attributes+=TaskAttribute*	'}'	)?;
+	
+// http://www.taskjuggler.org/tj3/manual/supplement.task.html
+SupplementTask:
+	'supplement' 'task' task=[Task] ( '{' attributes+=TaskAttribute*	'}'	)?;
+	
+TaskAttribute:
+	(
+		Allocate
+		| BookingTask
+		| Charge
+		| ChargeSet
+		| Complete
+		| Depends
+		| Duration
+		| Effort
+		| End
+		| EndCredit
+		| Flags
+		| JournalEntry
+		| Length
+		| Limits
+		| MaxEnd
+		| MaxStart
+		| Milestone
+		| MinEnd
+		| MinStart
+		| Note
+		| Period
+		| Precedes
+		| Priority
+		| ProjectId
+		| Purge
+		| Responsible
+		| Scheduled
+		| Scheduling
+		| Shifts
+		| Start
+		| StartCredit
+		| SupplementTask
+		| Task
+//		| Warn
+	)
+;
+
+// http://www.taskjuggler.org/tj3/manual/report.html
+// http://www.taskjuggler.org/tj3/manual/resourcereport.html
+// http://www.taskjuggler.org/tj3/manual/taskreport.html
+// http://www.taskjuggler.org/tj3/manual/textreport.html
+Report:
+        id=ID? name=STRING ('{' attributes+=ReportAttribute* '}')?;
+
+// http://www.taskjuggler.org/tj3/manual/supplement.html
+SupplementReport:
+        'supplement' 'report' report=[Report] ('{' attributes+=ReportAttribute* '}')?;
+
+        
+ReportAttribute:
+	Balance
+	| Caption
+	| Center
+	| Columns
+	| End
+	| Epilog
+	| Flags
+	| Footer
+	| Formats
+	| Header
+	| Headline
+//	| HideResource
+//	| HideTask
+	| Left
+	| LoadUnit
+	| Period
+	| Prolog
+	| ResourceReport
+	| TaskReport
+	| TextReport
+	| Right
+//	| RollupTask
+	| Scenarios
+	| SelfContained
+	| SortResources
+	| SortTasks
+	| Start
+	| TaskRoot
+	| TimeFormat
+	| Title
+;
+
+
+// http://www.taskjuggler.org/tj3/manual/icalreport.html
+// TODO: ical report
+IcalReport: STRING;
+
+// TODO: export report
+// http://www.taskjuggler.org/tj3/manual/export.html
+Export: 'export' STRING;
+
+// http://www.taskjuggler.org/tj3/manual/resource.html
+Resource:
+	'resource' id=ID? name=STRING ( '{' attributes+=ResourceAttribute*	'}'	)?;
+	
+SupplementResource:
+        'supplement' 'resource' resource=[Resource] ( '{' attributes+=ResourceAttribute*	'}'	)?;
+
+ResourceAttribute:
+	(
+		VacationResource
+		| BookingResource
+		| WorkingHours
+		| Efficiency
+		| Flags
+		| Limits
+		| Purge
+		| Rate
+		| Resource
+		| Shifts
+		| SupplementResource
+	);
+
+// http://www.taskjuggler.org/tj3/manual/allocate.html
+Allocate: 'allocate' resources+=AllocateResource (',' resources+=AllocateResource)*;
+AllocateResource: resource=[Resource] ('{' attributes += AllocateResourceAttribute* '}')?;
+AllocateResourceAttribute:
+	Alternative
+	| Limits
+	| Mandatory
+	| Persistent
+	| Select
+	| Shifts
+;
+
+// http://www.taskjuggler.org/tj3/manual/navigator.html
+Navigator: 'navigator' id=ID ('{' attributes += NavigatorAttribute* '}')?;
+
+NavigatorAttribute:
+	HideReport
+;
+
+// http://www.taskjuggler.org/tj3/manual/newtask.html
+NewTask: 'newtask' id=ID text=STRING ('{' attributes += NewTaskAttribute* '}')?;
+
+NewTaskAttribute: 
+	End
+	| Priority
+	| Remaining
+//	| StatusTimesheet
+	| Work
+;
+
+// http://www.taskjuggler.org/tj3/manual/nikureport.html
+NikuReport: filename = STRING ('{' attributes += NikuReportAttribute* '}')?;
+
+NikuReportAttribute:
+	End
+	| Formats
+	| Headline
+	| HideResource
+	| HideTask
+	| NumberFormat
+	| Period
+	| Start
+	| Timeoff
+	| Title;
+
+// http://www.taskjuggler.org/tj3/manual/alert.html
+Alert: 'alert' level=AlertLevel;
+
+// http://www.taskjuggler.org/tj3/manual/alternative.html
+Alternative: resources+=[Resource] (',' resources += [Resource])*;
+
+// http://www.taskjuggler.org/tj3/manual/author.html
+Author: 'author' resource=[Resource];
+
+// http://www.taskjuggler.org/tj3/manual/balance.html
+Balance: 'balance' cost=[Account] revenue=[Account];
+
+// http://www.taskjuggler.org/tj3/manual/booking.html	
+// http://www.taskjuggler.org/tj3/manual/booking.task.html
+Booking:
+        'booking' (BookingTask | BookingResource) interval=Interval4 ('{'
+                (
+                        ('overtime' overtime=BookingRestriction)? &
+                        ('sloppy' sloppy=BookingRestriction)?
+                )
+        '}')?;
+BookingTask: resource=[Resource];
+BookingResource: task=[Task];
+
+
+// http://www.taskjuggler.org/tj3/manual/caption.html
+Caption: 'caption' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
+CellColor: 'cellcolor' expression=LogicalExpression color=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/celltext.column.html
+CellText: 'celltext' text=STRING expresssion=LogicalExpression;
+
+// http://www.taskjuggler.org/tj3/manual/center.html
+Center: 'center' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/charge.html
+Charge: 'charge' amount=XFloat applies=ChargeApplies;
+
+// http://www.taskjuggler.org/tj3/manual/chargeset.html
+ChargeSet: 'chargeset' accountShares+=AccountShare (',' accountShares+=AccountShare)*;
+
+// http://www.taskjuggler.org/tj3/manual/columns.html
+Columns: 'columns' columns+=Column (',' columns+=Column)*;
+
+// http://www.taskjuggler.org/tj3/manual/complete.html
+Complete: 'complete' complete=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/copyright.html
+Copyright: 'copyright' text=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/credit.html	
+Credit:	'credit' date=ISODATE description=STRING amount=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/currency.html
+Currency: 'currency' currency=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/currencyformat.html
+CurrencyFormat: 'currencyformat' RealFormat;
+
+// http://www.taskjuggler.org/tj3/manual/date.extend.html
+DateExtend: 'date' ExtendAttribute;
+
+// http://www.taskjuggler.org/tj3/manual/dailymax.html
+DailyMax returns Limit: 'dailymax' {Limit};
+
+// http://www.taskjuggler.org/tj3/manual/dailymin.html
+DailyMin returns Limit: 'dailymin' {Limit};
+
+// http://www.taskjuggler.org/tj3/manual/dailyworkinghours.html
+DailyWorkingHours: 'dailyworkinghours' dailyWorkingHours=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/date.html
+// http://www.taskjuggler.org/tj3/manual/date.extend.html
+// Date: see ISODATE below
+
+// http://www.taskjuggler.org/tj3/manual/definitions.html
+Definitions: (all ?= '*'  | none ?= '-' | 
+		(flags ?= 'flags' &
+			 resources ?= 'resources' &
+			 tasks ?= 'tasks' &
+			 project ?= 'project' &
+			 projectids ?= 'projectids')
+);
+
+// http://www.taskjuggler.org/tj3/manual/depends.html
+Depends: 'depends' TaskDependency;
+
+// http://www.taskjuggler.org/tj3/manual/details.html
+Details: 'details' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/duration.html
+Duration: 'duration' duration=DurationQuantity;
+
+// http://www.taskjuggler.org/tj3/manual/efficiency.html
+Efficiency: 'efficiency' efficiency=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/effort.html
+Effort: 'effort' effort=DurationQuantity;
+
+// http://www.taskjuggler.org/tj3/manual/email.html
+Email: 'email' address = STRING;
+
+// http://www.taskjuggler.org/tj3/manual/end.html
+End: 'end' end=ISODATE;
+
+// http://www.taskjuggler.org/tj3/manual/endcredit.html
+EndCredit: 'endcredit' credit=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/epilog.html
+Epilog: 'epilog' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/extend.html
+Extend: 'extend' type=('task' | 'reource') ('{'
+		reference = ReferenceExtend
+		& date = DateExtend
+		& richtext = RichTextExtend
+		& text = TextExtend 
+	'}')?	
+;
+
+// http://www.taskjuggler.org/tj3/manual/fail.html
+Fail: 'fail' expression=LogicalExpression;
+
+// http://www.taskjuggler.org/tj3/manual/flags.html
+Flags: 'flags' flags += ID (',' flags += ID)*;
+
+// http://www.taskjuggler.org/tj3/manual/fontcolor.column.html
+FontColor: 'fontcolor' color=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/footer.html
+Footer: 'footer' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/formats.html
+Formats: 'formats' formats+=ReportFormat (',' formats+=ReportFormat)*;
+
+// http://www.taskjuggler.org/tj3/manual/functions.html
+// TODO: Functions
+Functions: STRING;
+
+// http://www.taskjuggler.org/tj3/manual/gapduration.html
+GapDuration: 'gapduration' DurationQuantity;
+
+// http://www.taskjuggler.org/tj3/manual/gaplength.html
+GapLength: 'gaplength' DurationQuantity;
+	
+// http://www.taskjuggler.org/tj3/manual/halign.column.html
+// http://www.taskjuggler.org/tj3/manual/halign.center.html
+// http://www.taskjuggler.org/tj3/manual/halign.left.html
+// http://www.taskjuggler.org/tj3/manual/halign.right.html
+HAlign: expression=LogicalExpression justification=Justification;
+
+// http://www.taskjuggler.org/tj3/manual/hasalert.html
+// TODO - has alert
+HasAlert: STRING;
+
+// http://www.taskjuggler.org/tj3/manual/header.html
+Header: 'header' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/headline.html
+Headline: 'headline' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/hidejournalentry.html
+HideJournalEntry: 'hidejournalentry' LogicalFlagExpression;
+
+// http://www.taskjuggler.org/tj3/manual/hidereport.html
+HideReport: 'hidereport' expression = LogicalExpression;
+
+// http://www.taskjuggler.org/tj3/manual/hideresource.html
+HideResource: 'hideresource' expression = LogicalExpression;
+
+// http://www.taskjuggler.org/tj3/manual/hidetask.html
+HideTask: 'hidetask' expression = LogicalExpression;
+
+// http://www.taskjuggler.org/tj3/manual/include.macro.html
+// http://www.taskjuggler.org/tj3/manual/include.project.html
+// TODO
+Include: 'include' filename=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/include.properties.html
+// TODO
+// not sure how this include and the above include can be differentiated by parser
+
+// http://www.taskjuggler.org/tj3/manual/inherit.extend.html
+// do not implement.
+
+// http://www.taskjuggler.org/tj3/manual/interval1.html
+Interval1: start = ISODATE ('-' end = ISODATE) | ('+' duration = DurationQuantity);
+
+// http://www.taskjuggler.org/tj3/manual/interval2.html
+Interval2: start = ISODATE ('-' end = ISODATE) | ('+' duration = DurationQuantity);
+
+// http://www.taskjuggler.org/tj3/manual/interval3.html
+Interval3: start = ISODATE (('-' end = ISODATE) | ('+' duration = DurationQuantity))?;
+
+// http://www.taskjuggler.org/tj3/manual/interval4.html
+Interval4: start = ISODATE (('-' end = ISODATE) | ('+' duration = DurationQuantity))?;
+
+// http://www.taskjuggler.org/tj3/manual/isactive.html
+// http://www.taskjuggler.org/tj3/manual/ischildof.html
+// http://www.taskjuggler.org/tj3/manual/isdependencyof.html
+// http://www.taskjuggler.org/tj3/manual/isdutyof.html
+// http://www.taskjuggler.org/tj3/manual/isfeatureof.html
+// http://www.taskjuggler.org/tj3/manual/isleaf.html
+// http://www.taskjuggler.org/tj3/manual/ismilestone.html
+// http://www.taskjuggler.org/tj3/manual/isongoing.html
+// http://www.taskjuggler.org/tj3/manual/isresource.html
+// http://www.taskjuggler.org/tj3/manual/istask.html
+// TODO
+
+
+// http://www.taskjuggler.org/tj3/manual/journalattributes.html
+JournalAttributes: (all ?= '*' | none ?= '-' | 
+		(flags ?= 'flags' &
+			 property ?= 'property' &
+			 details ?= 'details' &
+			 author ?= 'author' &
+			 headline ?= 'headline' &
+			 date ?= 'date' &
+			 timesheet ?= 'timesheet' &
+			 propertyid ?= 'propertyid' &
+			 summary ?= 'summary')
+);
+
+// http://www.taskjuggler.org/tj3/manual/journalentry.html
+JournalEntry:
+	'journalentry' date=ISODATE headline=STRING ('{'
+		(
+			(alert = Alert) &
+			(author = Author) &
+			(details = Details) &
+			(summary = Summary)
+		)
+	'}')?;
+
+// http://www.taskjuggler.org/tj3/manual/journalmode.html
+JournalMode: 'journalmode'  mode=JournalModeValue;
+	
+
+
+// http://www.taskjuggler.org/tj3/manual/left.html	
+Left: 'left' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/length.html
+Length: 'length' length=DurationQuantity;
+
+// http://www.taskjuggler.org/tj3/manual/limits.task.html
+// http://www.taskjuggler.org/tj3/manual/limits.resource.html
+// http://www.taskjuggler.org/tj3/manual/limits.allocate.html
+// http://www.taskjuggler.org/tj3/manual/limits.html
+Limits: 'limits'
+	dailymax = DailyMax? &
+	dailymin = DailyMin? &
+	maximum = Maximum? &
+	minimum = Minimum? &
+	monthlymax = MonthlyMax? &
+	monthlymin = MonthlyMin? &
+	weeklymax = WeeklyMax? &
+	weeklymin = WeeklyMin?
+;
+
+// http://www.taskjuggler.org/tj3/manual/listitem.column.html
+ListItem: 'listitem' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/listtype.column.html
+ListType: 'listtype' type=ListTypeValues;
+
+// http://www.taskjuggler.org/tj3/manual/loadunit.html
+LoadUnit: 'loadunit' unit=LoadDisplayUnit;
+
+// http://www.taskjuggler.org/tj3/manual/logicalexpression.html
+LogicalExpression: STRING;
+
+// http://www.taskjuggler.org/tj3/manual/logicalflagexpression.html
+LogicalFlagExpression: STRING;
+
+// http://www.taskjuggler.org/tj3/manual/macro.html
+// TODO
+Macro: 'macro' STRING;
+
+// http://www.taskjuggler.org/tj3/manual/managers.html
+Managers: 'managers' resources += [Resource] (',' resources += [Resource])*;
+
+// http://www.taskjuggler.org/tj3/manual/mandatory.html
+Mandatory: mandatory ?= 'mandatory';
+
+// http://www.taskjuggler.org/tj3/manual/maxend.html
+MaxEnd: 'maxend' maxEnd=ISODATE;
+
+// http://www.taskjuggler.org/tj3/manual/maximum.html
+Maximum: 'maximum' Limit;
+
+// http://www.taskjuggler.org/tj3/manual/maxstart.html
+MaxStart: 'maxstart' maxStart=ISODATE;
+
+// http://www.taskjuggler.org/tj3/manual/milestone.html
+Milestone: milestone ?= 'milestone';
+
+// http://www.taskjuggler.org/tj3/manual/minimum.html
+Minimum: 'minimum' Limit;
+
+// http://www.taskjuggler.org/tj3/manual/minend.html
+MinEnd: 'minend' minEnd=ISODATE;
+
+// http://www.taskjuggler.org/tj3/manual/minstart.html
+MinStart: 'minstart' minStart=ISODATE;
+
+// http://www.taskjuggler.org/tj3/manual/monthlymax.html
+MonthlyMax: 'monthlymax' Limit;
+
+// http://www.taskjuggler.org/tj3/manual/monthlymin.html
+MonthlyMin: 'monthlymin' Limit;
+
+// http://www.taskjuggler.org/tj3/manual/note.task.html
+Note: 'note' note=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/now.html
+Now: 'now' now=ISODATE;
+
+// http://www.taskjuggler.org/tj3/manual/numberformat.html
+NumberFormat: 'numberformat' RealFormat;
+
+// http://www.taskjuggler.org/tj3/manual/onend.html
+// http://www.taskjuggler.org/tj3/manual/onstart.html
+// See DependPolicy
+
+
+// http://www.taskjuggler.org/tj3/manual/opennodes.html
+// internal use only
+
+
+// http://www.taskjuggler.org/tj3/manual/overtime.booking.html
+// See BookingRestriction
+
+// http://www.taskjuggler.org/tj3/manual/period.column.html
+Period: 'period' period=Interval2;
+
+// http://www.taskjuggler.org/tj3/manual/persistent.html
+Persistent: persistent ?= 'persistent';
+
+// http://www.taskjuggler.org/tj3/manual/precedes.html
+Precedes: 'precedes' TaskDependency;
+
+// http://www.taskjuggler.org/tj3/manual/priority.html
+Priority: 'priority' priority=INT;
+
+// http://www.taskjuggler.org/tj3/manual/projectid.html
+ProjectId: 'projectid' projectId=ID;
+
+//http://www.taskjuggler.org/tj3/manual/projectids.html
+ProjectIds: 'projectids' ids += ID (',' ids+= ID)*;
+
+// http://www.taskjuggler.org/tj3/manual/projection.html
+// deprecated
+
+// http://www.taskjuggler.org/tj3/manual/prolog.html
+Prolog: 'prolog' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/purge.html
+// TODO: I wonder what a 'list attribute' is.
+Purge: 'purge' listAttribute=STRING;
+
+
+
+// http://www.taskjuggler.org/tj3/manual/rate.html
+Rate: 'rate' rate=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/reference.extend.html
+ReferenceExtend: 'reference' ExtendAttribute;
+
+// http://www.taskjuggler.org/tj3/manual/remaining.html
+Remaining: 'remaining' remaining=DurationQuantity;
+
+
+
+// http://www.taskjuggler.org/tj3/manual/replace.html
+// see Shift
+
+// http://www.taskjuggler.org/tj3/manual/reportprefix.html
+ReportPrefix: 'reportprefix' report=[Report];
+
+
+// http://www.taskjuggler.org/tj3/manual/resourceattributes.html
+ResourceAttributes: ((all ?= '*'  | none ?= '-' | 
+		(vacation ?= 'vacation' &
+			 booking ?= 'booking' &
+			 workingHours ?= 'workinghours')
+));
+
+// http://www.taskjuggler.org/tj3/manual/resourceprefix.html
+ResourcePrefix: 'resourceprefix' resource=[Resource];
+
+// http://www.taskjuggler.org/tj3/manual/resourcereport.html
+ResourceReport: 'resourcereport' Report;
+
+// http://www.taskjuggler.org/tj3/manual/resourceroot.html
+ResourceRoot: 'resourceroot' resource = [Resource];
+
+// http://www.taskjuggler.org/tj3/manual/resources.limit.html
+// See Limit
+
+// http://www.taskjuggler.org/tj3/manual/responsible.html
+Responsible: 'responsible' resources+=[Resource] (',' resources+=[Resource])*;
+
+// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
+RichTextExtend: 'richtext' ExtendAttribute;
+
+// http://www.taskjuggler.org/tj3/manual/right.html
+Right: 'right' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/rollupresource.html
+RollupResource: 'rollupresource' expression=LogicalExpression;
+
+// http://www.taskjuggler.org/tj3/manual/rolluptask.html
+RollupTask: 'rolluptask' expression=LogicalExpression;
+
+// http://www.taskjuggler.org/tj3/manual/scale.column.html
+Scale: 'scale' scale=('hour' | 'day' |'week' | 'month' | 'quarter' | 'year');
+
+// http://www.taskjuggler.org/tj3/manual/scenario.html	
+Scenario: 
+	'scenario' id=ID name=STRING ('{'
+		(
+			'active' active=YesNo &
+			'scenario' scenario=Scenario
+		)
+	'}')?;
+
+
+// http://www.taskjuggler.org/tj3/manual/scenario.ical.html
+// TODO
+ScenarioIcal: STRING;
+
+// http://www.taskjuggler.org/tj3/manual/scenarios.html
+Scenarios: 'scenarios' scenarios+=[Scenario] (',' scenarios+=[Scenario])*;
+
+// http://www.taskjuggler.org/tj3/manual/scenariospecific.extend.html
+// see ExtendAttribute
+
+// http://www.taskjuggler.org/tj3/manual/scheduled.html
+Scheduled: scheduled?='scheduled';
+
+// http://www.taskjuggler.org/tj3/manual/scheduling.html
+Scheduling: 'scheduling' scheduling=SchedulingPolicy;
+
+// http://www.taskjuggler.org/tj3/manual/select.html
+Select: 'select' argument=SelectArgument;
+
+// http://www.taskjuggler.org/tj3/manual/selfcontained.html
+SelfContained: 'selfcontained' selfcontained=YesNo;
+
+// http://www.taskjuggler.org/tj3/manual/shift.html
+// http://www.taskjuggler.org/tj3/manual/shift.resource.html
+// http://www.taskjuggler.org/tj3/manual/shifts.task.html
+Shift:
+	'shift' id=ID? name=STRING ( '{'
+		((replace='replace')? & 
+		('timezone' timezone=STRING)?  &
+		('vacation' vacation=VacationShift)? &
+		('shift' shift=Shift)? &
+		('workinghours' workingHours=WorkingHours)?)
+	'}')?;
+
+// http://www.taskjuggler.org/tj3/manual/shift.timesheet.html
+ShiftTimesheet: 'shift' shift=[Shift];
+
+// http://www.taskjuggler.org/tj3/manual/shifts.resource.html
+// http://www.taskjuggler.org/tj3/manual/shifts.task.html
+// http://www.taskjuggler.org/tj3/manual/shifts.allocate.html
+Shifts: 'shifts' limits += ShiftLimit (',' limits+=ShiftLimit)*;
+
+// http://www.taskjuggler.org/tj3/manual/shorttimeformat.html
+ShortTimeFormat: 'shorttimeformat' shortTimeFormat=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
+// http://www.taskjuggler.org/tj3/manual/sloppy.projection.html
+// see Booking
+
+// http://www.taskjuggler.org/tj3/manual/sortjournalentries.html
+SortJournalEntries: 'sortjournalentries' 
+	criteria+=JournalEntrySortCriterion 
+	  (',' criteria+= JournalEntrySortCriterion)*;
+
+
+// http://www.taskjuggler.org/tj3/manual/sortresources.html
+SortResources: 'sortresources' Sort;
+
+// http://www.taskjuggler.org/tj3/manual/sorttasks.html
+SortTasks: 'sorttasks' Sort;
+
+// http://www.taskjuggler.org/tj3/manual/start.html
+// http://www.taskjuggler.org/tj3/manual/start.column.html
+// http://www.taskjuggler.org/tj3/manual/start.limit.html
+// http://www.taskjuggler.org/tj3/manual/start.report.html
+Start: 'start' start=ISODATE;
+
+// http://www.taskjuggler.org/tj3/manual/startcredit.html
+StartCredit: 'startcredit' startCredit=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/status.statussheet.html
+StatusStatusSheet: 'status' level=AlertLevel text=STRING ( '{' attributes += StatusStatusSheetAttribute* '}' ) ?;
+
+StatusStatusSheetAttribute:
+	Author |
+	Details |
+	Flags |
+	Summary;
+	
+// http://www.taskjuggler.org/tj3/manual/status.timesheet.html
+//StatusTimesheet: 'statusB' level=AlertLevel text=STRING 
+//	(details = Details & flags = Flags & summary = Summary);
+
+
+// http://www.taskjuggler.org/tj3/manual/statussheet.html
+// TODO
+StatusSheet: 'statussheet' STRING;
+
+// http://www.taskjuggler.org/tj3/manual/statussheetreport.html
+// TODO
+StatusSheetReport: 'statussheetreport' STRING;
+
+// http://www.taskjuggler.org/tj3/manual/strict.projection.html
+// deprecated.
+
+// http://www.taskjuggler.org/tj3/manual/summary.html
+// TODO: limit to 240 characters
+Summary: 'summary' RichText;
+
+
+// http://www.taskjuggler.org/tj3/manual/supplement.html
+// http://www.taskjuggler.org/tj3/manual/supplement.resource.html
+// http://www.taskjuggler.org/tj3/manual/supplement.task.html
+// TODO
+
+// http://www.taskjuggler.org/tj3/manual/tagfile.html
+TagFile: 'tagfile' file=STRING 
+	('{' hideResource = HideResource?
+		& hideTask = HideTask?
+		& rollupResource = RollupResource?
+		& rollupTask = RollupTask?
+		'}'
+	)?;
+
+// http://www.taskjuggler.org/tj3/manual/task.statussheet.html
+TaskStatusSheet: 'task' task=[Task] ('{' attributes += TaskStatusSheetAttribute* '}')?;
+
+TaskStatusSheetAttribute: TaskStatusSheet | StatusStatusSheet;
+
+// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
+TaskTimesheet: 'task' task=[Task] ('{' attributes += TaskTimesheetAttribute* '}')?;
+
+// http://www.taskjuggler.org/tj3/manual/taskattributes.html
+TaskAttributes: (all ?= '*' | none ?= '-' | 
+		(responsible ?= 'responsible' &
+			 flags ?= 'flags' &
+			 maxstart ?= 'maxstart' &
+			 maxend ?= 'maxstart' &
+			 priority ?= 'priority' &
+			 booking ?= 'priority' &
+			 note ?= 'note' &
+			 minstart ?= 'minstart' &
+			 minend ?= 'minend' &
+			 complete ?= 'complete' &
+			 depends ?= 'depends')
+);
+
+
+// http://www.taskjuggler.org/tj3/manual/taskprefix.html
+TaskPrefix: 'taskprefix' task=[Task];
+
+// http://www.taskjuggler.org/tj3/manual/taskreport.html
+TaskReport: 'taskreport' Report;
+
+// http://www.taskjuggler.org/tj3/manual/taskroot.html
+TaskRoot: 'taskroot' task=[Task];
+
+// http://www.taskjuggler.org/tj3/manual/text.extend.html
+TextExtend: 'text' ExtendAttribute;
+
+// http://www.taskjuggler.org/tj3/manual/textreport.html
+TextReport: 'textreport' Report;
+
+// http://www.taskjuggler.org/tj3/manual/timeformat.html
+// TODO: specify format string syntax ?
+TimeFormat: 'timeformat' timeformat=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/timeoff.nikureport.html
+Timeoff: 'timeoff' id = STRING name = STRING;
+
+// http://www.taskjuggler.org/tj3/manual/timesheet.html
+Timesheet: 'timesheet' resource=[Resource] interval=Interval4
+	('{' attributes+=TimesheetAttribute*)?
+;
+
+// http://www.taskjuggler.org/tj3/manual/timesheetreport.html
+TimesheetReport: 'timesheetreport' filename=STRING comnent=STRING
+	 ('{' attributes+=TimesheetReportAttribute* '}')?;
+
+// http://www.taskjuggler.org/tj3/manual/timezone.export.html
+// http://www.taskjuggler.org/tj3/manual/timezone.html
+// http://www.taskjuggler.org/tj3/manual/timezone.shift.html
+Timezone: 'timezone' timezone=STRING;
+
+
+// http://www.taskjuggler.org/tj3/manual/timingresolution.html
+TimingResolution: 'timingresolution' timingResolution=INT 'min';
+
+// http://www.taskjuggler.org/tj3/manual/title.column.html
+// http://www.taskjuggler.org/tj3/manual/title.html
+Title: 'title' title=STRING;
+
+
+// http://www.taskjuggler.org/tj3/manual/tooltip.column.html
+ToolTip: 'tooltip' expression=LogicalExpression tip=STRING;
+
+
+// http://www.taskjuggler.org/tj3/manual/trackingscenario.html
+TrackingScenario: 'trackingscenario' scenario = [Scenario];
+
+// http://www.taskjuggler.org/tj3/manual/treelevel.html
+// TODO
+TreeLevel: 'treelevel' level=STRING;
+
+// http://www.taskjuggler.org/tj3/manual/vacation.html
+Vacation: 'vacation' name=STRING intervals+=Interval3 (',' intervals+=Interval3)*;
+
+// http://www.taskjuggler.org/tj3/manual/vacation.resource.html
+VacationResource returns Vacation:
+	'vacation' name=STRING? intervals+=Interval3 (',' intervals+=Interval3)*;
+
+// http://www.taskjuggler.org/tj3/manual/vacation.shift.html	
+VacationShift:
+	// TODO: both name and interval can be empty: explain
+	'vacation' {VacationShift} name=STRING?
+		(intervals+=Interval3 (',' intervals+=Interval3)*)?;
+
+// http://www.taskjuggler.org/tj3/manual/warn.html
+Warn: 'warn' expression=LogicalExpression;
+
+// http://www.taskjuggler.org/tj3/manual/weekstartsmonday.html;
+// http://www.taskjuggler.org/tj3/manual/weekstartssunday.html
+WeekStarts: (sunday?='weekstartssunday') | (monday?='weekstartsmonday');
+
+// http://www.taskjuggler.org/tj3/manual/weeklymax.html
+WeeklyMax: 'weeklymax' Limit;
+
+// http://www.taskjuggler.org/tj3/manual/weeklymin.html
+WeeklyMin: 'weeklymin' Limit;
+
+// http://www.taskjuggler.org/tj3/manual/width.column.html
+Width: 'width' width=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/work.html
+Work:  'work' value=XFloat unit = WorkQuantityUnit;
+
+// http://www.taskjuggler.org/tj3/manual/workinghours.project.html
+// http://www.taskjuggler.org/tj3/manual/workinghours.resource.html
+// http://www.taskjuggler.org/tj3/manual/workinghours.shift.html
+WorkingHours: 'workinghours'
+	(weekdays+=Weekdays (',' weekdays+=Weekdays)*) ((off?='off') | (hours+=WorkHours (',' hours+=WorkHours)*));
+
+// http://www.taskjuggler.org/tj3/manual/yearlyworkingdays.html
+YearlyWorkingDays: 'yearlyworkingdays' yearlyWorkingDays=INT;
+
+
+
+
+
+
+
+
+
+
+// http://www.taskjuggler.org/tj3/manual/chargeset.html
+AccountShare: account=[Account] share=XFloat;
+
+// http://www.taskjuggler.org/tj3/manual/columns.html
+ColumnAttribute: CellColor
+	| CellText
+	| End
+	| FontColor
+	| HAlign
+	| ListItem
+	| ListType
+	| Period
+	| Scale
+	| Start
+	| Title
+	| ToolTip
+	| Width
+;
+
+// http://www.taskjuggler.org/tj3/manual/columns.html
+Column: id=ColumnId attribute=ColumnAttribute;
+
+// http://www.taskjuggler.org/tj3/manual/sorttasks.html
+// http://www.taskjuggler.org/tj3/manual/sortresources.html
+Criterion:
+        (scenario=[Scenario] '.')? criterionId = CriterionId;
+
+// http://www.taskjuggler.org/tj3/manual/sorttasks.html
+// http://www.taskjuggler.org/tj3/manual/sortresources.html
+CriterionId: columnId=ColumnId ('.' direction=CriterionDirection)?;
+
+// http://www.taskjuggler.org/tj3/manual/duration.html
+// http://www.taskjuggler.org/tj3/manual/effort.html
+// http://www.taskjuggler.org/tj3/manual/gapduration.html
+// http://www.taskjuggler.org/tj3/manual/gaplength.html
+// http://www.taskjuggler.org/tj3/manual/interval1.html
+// http://www.taskjuggler.org/tj3/manual/interval2.html
+// http://www.taskjuggler.org/tj3/manual/interval3.html
+// http://www.taskjuggler.org/tj3/manual/interval4.html
+// http://www.taskjuggler.org/tj3/manual/length.html
+// http://www.taskjuggler.org/tj3/manual/remaining.html
+DurationQuantity: value=XFloat unit=TimeUnit;
+
+// http://www.taskjuggler.org/tj3/manual/date.extend.html
+// http://www.taskjuggler.org/tj3/manual/reference.extend.html
+// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
+// http://www.taskjuggler.org/tj3/manual/scenariospecific.extend.html
+// http://www.taskjuggler.org/tj3/manual/text.extend.html
+ExtendAttribute:
+	 id=ID name=STRING ('{'
+	 	inherit?='inherit'
+	 	& scenariospecific?='scenariospecific'
+	 '}')?;
+
+// http://www.taskjuggler.org/tj3/manual/limits.task.html
+// http://www.taskjuggler.org/tj3/manual/limits.resource.html
+// http://www.taskjuggler.org/tj3/manual/limits.allocate.html
+// http://www.taskjuggler.org/tj3/manual/limits.html
+Limit:
+	    value=XFloat unit=TimeUnit ('{'
+	    (
+	    	('end' end=ISODATE) &
+	    	('period' period=Interval1) &
+	    	('resource' resources+=[Resource] (',' resources+=[Resource])*) &
+	    	('start' ISODATE)
+	    )
+	'}')?;
+
+// http://www.taskjuggler.org/tj3/manual/currencyformat.html
+// http://www.taskjuggler.org/tj3/manual/numberformat.html
+RealFormat:
+	negativePrefix=STRING negativeSuffix=STRING thousandsSeparator=STRING fractionSeparator=STRING fractionDigits=INT;
+
+// supports Shifts
+ShiftLimit: shift=[Shift] ((intervals+=Interval3) (',' intervals+=Interval3)*)?;
+
+// http://www.taskjuggler.org/tj3/manual/sorttasks.html
+// http://www.taskjuggler.org/tj3/manual/sortresources.html
+Sort:
+        (id?=ID |criteria+=Criterion) (',' criteria+=Criterion)*;
+
+TaskDependency:
+	task=[Task] ('{'
+		(
+			(gapDuration = GapDuration)? &
+			(gapLength = GapLength)? &
+			(policy=DependsPolicy)?
+		)
+	'}')?;
+	
+// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
+TaskTimesheetAttribute: 
+	End
+	| Priority
+	| Remaining
+//	| StatusTimesheet
+	| Work
+;
+
+// http://www.taskjuggler.org/tj3/manual/timesheet.html
+TimesheetAttribute: 
+	NewTask | ShiftTimesheet | /*StatusTimesheet | */TaskTimesheet;
+	
+// http://www.taskjuggler.org/tj3/manual/timesheetreport.html
+TimesheetReportAttribute:
+	End | HideResource | Period | Start;
+	
+
+RichText: text=STRING;
+
+
+// http://www.taskjuggler.org/tj3/manual/workinghours.shift.html
+// http://www.taskjuggler.org/tj3/manual/workinghours.resource.html
+// http://www.taskjuggler.org/tj3/manual/workinghours.project.html
+WorkHours:
+	(start=TIME '-' stop=TIME);
+Weekdays:
+	(first=Weekday ('-' last=Weekday)?);
+
+
+
+
+// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
+// http://www.taskjuggler.org/tj3/manual/overtime.booking.html
+enum BookingRestriction:
+	WORKING_TIME_ONLY = '0' |
+	PLUS_OFF_DUTY = '1' |
+	PLUS_VACATION = '2'
+;
+
+// http://www.taskjuggler.org/tj3/manual/charge.html
+enum ChargeApplies: 
+	ONSTART = 'onstart' | ONEND = 'onend' | PERHOUR = 'perhour' | PERDAY = 'perday' | PERWEEK = 'perweek';
+
+
+enum Justification:
+	LEFT = 'left' |
+	CENTER = 'center' |
+	RIGHT = 'right'
+;
+
+// http://www.taskjuggler.org/tj3/manual/journalmode.html
+enum JournalModeValue:
+	JOURNAL = 'journal'
+	| JOURNAL_SUB =' journal_sub'
+	| STATUS_DOWN = 'status_down'
+	| STATUS_UP = 'status_up'
+	| ALERTS_DOWN = 'alerts_down'
+;
+
+// http://www.taskjuggler.org/tj3/manual/sortjournalentries.html
+enum JournalEntrySortCriterion:
+	DATE_DOWN = 'date.down'
+	| DATE_UP = 'date.up'
+	| ALERT_DOWN = 'alert.down'
+	| ALERT_UP = 'alert.up'
+	| PROPERTY_UP = 'property.up'
+;
+
+// http://www.taskjuggler.org/tj3/manual/listtype.column.html
+enum ListTypeValues:
+	BULLETS = 'bullets'
+	| COMMA = 'comma'
+	| NUMBERED = 'numbered'
+;
+
+// http://www.taskjuggler.org/tj3/manual/sorttasks.html
+// http://www.taskjuggler.org/tj3/manual/sortresources.html
+enum CriterionDirection:
+	UP = 'up' | DOWN = 'down';
+
+enum YesNo:
+	YES = 'yes' | NO = 'no';
+
+// http://www.taskjuggler.org/tj3/manual/formats.html
+enum ReportFormat:
+	CSV = 'csv' | HTML = 'html' | NIKU = 'niku';
+
+// http://www.taskjuggler.org/tj3/manual/loadunit.html
+enum LoadDisplayUnit:
+	DAYS = 'days' |
+	HOURS = 'hours' |
+	LONGAUTO = 'longauto' |
+	MINUTES = 'minutes' |
+	MONTHS = 'months' |
+	SHORTAUTO = 'shortauto' |
+	WEEKS = 'weeks' |
+	YEARS = 'years';
+
+// http://www.taskjuggler.org/tj3/manual/scale.column.html
+enum ScaleResolution:
+	HOUR = 'hour' |
+	DAY = 'day' |
+	WEEK = 'week' |
+	MONTH = 'month' |
+	QUARTER = 'quarter' |
+	YEAR = 'year';
+
+// http://www.taskjuggler.org/tj3/manual/select.html
+enum SelectArgument:
+	MAXLOADED = 'maxloaded' | 
+	MINLOADED = 'minloaded' | 
+	MINALLOCATED = 'minallocated' | 
+	ORDER = 'order' | 
+	RANDOM = 'random'
+;
+
+// http://www.taskjuggler.org/tj3/manual/columnid.html	
+enum ColumnId:
+	ALERT = 'alert' |
+	ALERTMESSAGE = 'alertmessage' |
+	ALERTSUMMARY='alertsummar' |
+	ALERTTREND='alerttrend' |
+	CHART='chart' |
+	COMPLETE='complete' |
+	COMPLETED='completed' |
+	CRITICALNESS='criticalness' | 
+	COST='cost' | 
+	DAILY='daily' | 
+	DURATION='duration' |
+	DUTIES='duties' | 
+	EFFICIENCY='efficiency' | 
+	EFFORT='effort' | 
+	EFFORTDONE='effortdone' | 
+	EFFORTLEFT='effortleft' | 
+	EMAIL='email' | 
+	END='end' | 
+	FLAGS='flags' |
+	FOLLOWERS='followers' |
+	FREETIME='freetime' | 
+	FREEWORK='freework' | 
+	FTE='fte' |
+	HEADCOUNT='headcount' | 
+	HIERARCHINDEX='hierarchindex' | 
+	HOURLY='hourly' |
+	ID='id' |
+	INDEX='index' | 
+	JOURNAL='journal' | 
+	LINE='line' | 
+	MAXEND='maxend' | 
+	MAXSTART='maxstart' |
+	MINEND='minend' | 
+	MINSTART='minstart' | 
+	MONTHLY='monthly' | 
+	NO='no' | 
+	NAME='name' |
+	NOTE='note' |
+	PATHCRITICALNESS='pathcriticalness' |
+	PRECURSOR='precursor' | 
+	PRIORITY='priority' |
+	QUARTERLY='quarterly' | 
+	RATE='rate' | 
+	RESOURCES='resources' | 
+	RESPONSIBLE='responsible' | 
+	REVENUE='revenue' | 
+	SCENARIO='scenario' | 
+	SEQNO='seqno' | 
+	START='start' | 
+	STATUS='status' | 
+	TARGETS='targets' | 
+	WBS='wbs' | 
+	WEEKLY='weekly' |
+	YEARLY='yearly'
+;
+
+// http://www.taskjuggler.org/tj3/manual/alert.html
+enum AlertLevel:
+	RED='red' |
+	YELLOW='yellow' |
+	GREEN='green';
+
+// http://www.taskjuggler.org/tj3/manual/onend.html
+// http://www.taskjuggler.org/tj3/manual/onstart.html
+enum DependsPolicy:
+  ONEND = 'onend' |
+  ONSTART = 'onstart';
+
+enum SchedulingPolicy:
+	ALAP = 'alap' |
+	ASAP = 'asap';
+
+
+enum TimeUnit: 
+	MINUTE='min'|
+	HOUR='h'|
+	DAY='d'|
+	WEEK='w'|
+	MONTH='m'|
+	YEAR='y';
+
+enum Weekday:
+  MON = 'mon' |
+  TUE = 'tue' |
+  WED = 'wed' |
+  THR = 'thu' |
+  FRI = 'fri' |
+  SAT = 'sat' |
+  SUN = 'sun'
+;
+
+// http://www.taskjuggler.org/tj3/manual/work.html
+enum WorkQuantityUnit:
+	PERCENT = '%'
+	| MINUTES = 'min'
+	| HOURS = 'h'
+	| DAYS = 'd'
+;
+// http://www.taskjuggler.org/tj3/manual/depends.html
+// http://www.taskjuggler.org/tj3/manual/The_TaskJuggler_Syntax.html#ABSOLUTEID
+AbsoluteId: ID ('.' ID)*;
+RelativeId: '!' (RelativeId)? ID ('.' ID)*;
+terminal ID  		: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+
+
+// XFloat is permitting either an int or a float: eg: 4 and 4.0 are parsed as intended.
+// this technique avoids a FLOAT terminal definition that would hide INT:
+// eg: avoiding 4 would only be INT and 4.0 would only be FLOAT.
+XFloat returns ecore::EFloat:
+	FLOAT | INT;
+
+terminal FLOAT returns ecore::EFloat: (('0'..'9')+ '.' ('0'..'9')+);
+
+
+ 
+terminal SL_COMMENT 	: '#' !('\n'|'\r')* ('\r'? '\n')? ;
+terminal STRING	: 
+			'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+			"'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'"'|"'"|'\\') | !('\\'|"'") )* "'" |
+			'-8<-' -> '->8-'
+		; 
+
+terminal TIME : ((('0'? | '1') '0'..'9') | ('2' '0'..'4')) ':' '0'..'5' '0'..'9';
+terminal ISODATE : // YYYY-MM-DD-HH:mm[:ss][-xNNNN]  (x being + or -, NNNN being utc timezone offset
+  '20' '0'..'9' '0'..'9' '-' (('0' '1'..'9') | ('1' '0'..'2')) '-' (('0' '1'..'9') | (('1' | '2') '0'..'9') | ('3' ('0' | '1')))
+    ('-' ((('0' | '1') '0'..'9') | ('2' '0'..'4')) ':' '0'..'5' '0'..'9' (':' '0'..'5' '0'..'9')? ('-' ('+' | '-') '0'..'5' '0'..'9' '0'..'5' '0'..'9')?)?;
+
+// commented out because conflict with enum TimeUnit example: 3d  TimUnit or RGB?
+// for example, color spec of: http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
+terminal RGB: ((('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')));
+
+/*
+terminal RRGGBB: (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
+				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
+				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F'));
+*/
