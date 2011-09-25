@@ -4566,11 +4566,11 @@ ruleInterval2 returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(((
+((
 (
 		lv_start_0_0=RULE_ISODATE
 		{
-			newLeafNode(lv_start_0_0, grammarAccess.getInterval2Access().getStartISODATETerminalRuleCall_0_0_0()); 
+			newLeafNode(lv_start_0_0, grammarAccess.getInterval2Access().getStartISODATETerminalRuleCall_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4584,15 +4584,15 @@ ruleInterval2 returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_1='-' 
+)((	otherlv_1='-' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getInterval2Access().getHyphenMinusKeyword_0_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getInterval2Access().getHyphenMinusKeyword_1_0_0());
     }
 (
 (
 		lv_end_2_0=RULE_ISODATE
 		{
-			newLeafNode(lv_end_2_0, grammarAccess.getInterval2Access().getEndISODATETerminalRuleCall_0_1_1_0()); 
+			newLeafNode(lv_end_2_0, grammarAccess.getInterval2Access().getEndISODATETerminalRuleCall_1_0_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4606,15 +4606,15 @@ ruleInterval2 returns [EObject current=null]
 	    }
 
 )
-)))
+))
     |(	otherlv_3='+' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getInterval2Access().getPlusSignKeyword_1_0());
+    	newLeafNode(otherlv_3, grammarAccess.getInterval2Access().getPlusSignKeyword_1_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getInterval2Access().getDurationDurationQuantityParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getInterval2Access().getDurationDurationQuantityParserRuleCall_1_1_1_0()); 
 	    }
 		lv_duration_4_0=ruleDurationQuantity		{
 	        if ($current==null) {
@@ -4629,7 +4629,7 @@ ruleInterval2 returns [EObject current=null]
 	    }
 
 )
-)))
+))))
 ;
 
 

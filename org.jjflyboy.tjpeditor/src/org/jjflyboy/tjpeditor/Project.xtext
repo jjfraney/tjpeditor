@@ -447,7 +447,7 @@ Include: 'include' filename=STRING;
 Interval1: start = ISODATE ('-' end = ISODATE) | ('+' duration = DurationQuantity);
 
 // http://www.taskjuggler.org/tj3/manual/interval2.html
-Interval2: start = ISODATE ('-' end = ISODATE) | ('+' duration = DurationQuantity);
+Interval2: start = ISODATE (('-' end = ISODATE) | ('+' duration = DurationQuantity));
 
 // http://www.taskjuggler.org/tj3/manual/interval3.html
 Interval3: start = ISODATE (('-' end = ISODATE) | ('+' duration = DurationQuantity))?;

@@ -3054,59 +3054,59 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class Interval2Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Interval2");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Assignment cStartAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final RuleCall cStartISODATETerminalRuleCall_0_0_0 = (RuleCall)cStartAssignment_0_0.eContents().get(0);
-		private final Group cGroup_0_1 = (Group)cGroup_0.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
-		private final Assignment cEndAssignment_0_1_1 = (Assignment)cGroup_0_1.eContents().get(1);
-		private final RuleCall cEndISODATETerminalRuleCall_0_1_1_0 = (RuleCall)cEndAssignment_0_1_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cPlusSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cDurationAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cDurationDurationQuantityParserRuleCall_1_1_0 = (RuleCall)cDurationAssignment_1_1.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cStartAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cStartISODATETerminalRuleCall_0_0 = (RuleCall)cStartAssignment_0.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cAlternatives_1.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
+		private final Assignment cEndAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
+		private final RuleCall cEndISODATETerminalRuleCall_1_0_1_0 = (RuleCall)cEndAssignment_1_0_1.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
+		private final Keyword cPlusSignKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Assignment cDurationAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cDurationDurationQuantityParserRuleCall_1_1_1_0 = (RuleCall)cDurationAssignment_1_1_1.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/interval2.html
 		//Interval2:
-		//	start=ISODATE ("-" end=ISODATE) | "+" duration=DurationQuantity;
+		//	start=ISODATE ("-" end=ISODATE | "+" duration=DurationQuantity);
 		public ParserRule getRule() { return rule; }
 
-		//start=ISODATE ("-" end=ISODATE) | "+" duration=DurationQuantity
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//start=ISODATE ("-" end=ISODATE)
-		public Group getGroup_0() { return cGroup_0; }
+		//start=ISODATE ("-" end=ISODATE | "+" duration=DurationQuantity)
+		public Group getGroup() { return cGroup; }
 
 		//start=ISODATE
-		public Assignment getStartAssignment_0_0() { return cStartAssignment_0_0; }
+		public Assignment getStartAssignment_0() { return cStartAssignment_0; }
 
 		//ISODATE
-		public RuleCall getStartISODATETerminalRuleCall_0_0_0() { return cStartISODATETerminalRuleCall_0_0_0; }
+		public RuleCall getStartISODATETerminalRuleCall_0_0() { return cStartISODATETerminalRuleCall_0_0; }
+
+		//"-" end=ISODATE | "+" duration=DurationQuantity
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//"-" end=ISODATE
-		public Group getGroup_0_1() { return cGroup_0_1; }
+		public Group getGroup_1_0() { return cGroup_1_0; }
 
 		//"-"
-		public Keyword getHyphenMinusKeyword_0_1_0() { return cHyphenMinusKeyword_0_1_0; }
+		public Keyword getHyphenMinusKeyword_1_0_0() { return cHyphenMinusKeyword_1_0_0; }
 
 		//end=ISODATE
-		public Assignment getEndAssignment_0_1_1() { return cEndAssignment_0_1_1; }
+		public Assignment getEndAssignment_1_0_1() { return cEndAssignment_1_0_1; }
 
 		//ISODATE
-		public RuleCall getEndISODATETerminalRuleCall_0_1_1_0() { return cEndISODATETerminalRuleCall_0_1_1_0; }
+		public RuleCall getEndISODATETerminalRuleCall_1_0_1_0() { return cEndISODATETerminalRuleCall_1_0_1_0; }
 
 		//"+" duration=DurationQuantity
-		public Group getGroup_1() { return cGroup_1; }
+		public Group getGroup_1_1() { return cGroup_1_1; }
 
 		//"+"
-		public Keyword getPlusSignKeyword_1_0() { return cPlusSignKeyword_1_0; }
+		public Keyword getPlusSignKeyword_1_1_0() { return cPlusSignKeyword_1_1_0; }
 
 		//duration=DurationQuantity
-		public Assignment getDurationAssignment_1_1() { return cDurationAssignment_1_1; }
+		public Assignment getDurationAssignment_1_1_1() { return cDurationAssignment_1_1_1; }
 
 		//DurationQuantity
-		public RuleCall getDurationDurationQuantityParserRuleCall_1_1_0() { return cDurationDurationQuantityParserRuleCall_1_1_0; }
+		public RuleCall getDurationDurationQuantityParserRuleCall_1_1_1_0() { return cDurationDurationQuantityParserRuleCall_1_1_1_0; }
 	}
 
 	public class Interval3Elements extends AbstractParserRuleElementFinder {
@@ -10033,7 +10033,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/interval2.html
 	//Interval2:
-	//	start=ISODATE ("-" end=ISODATE) | "+" duration=DurationQuantity;
+	//	start=ISODATE ("-" end=ISODATE | "+" duration=DurationQuantity);
 	public Interval2Elements getInterval2Access() {
 		return (pInterval2 != null) ? pInterval2 : (pInterval2 = new Interval2Elements());
 	}

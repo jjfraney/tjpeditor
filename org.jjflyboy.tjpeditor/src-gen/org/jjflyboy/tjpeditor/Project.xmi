@@ -1230,22 +1230,22 @@
       <type metamodel="/0/@metamodelDeclarations.0">
         <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//Interval2"/>
       </type>
-      <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Assignment" feature="start" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.227"/>
-          </elements>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="start" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.227"/>
+        </elements>
+        <elements xsi:type="xtext:Alternatives">
           <elements xsi:type="xtext:Group">
             <elements xsi:type="xtext:Keyword" value="-"/>
             <elements xsi:type="xtext:Assignment" feature="end" operator="=">
               <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.227"/>
             </elements>
           </elements>
-        </elements>
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="+"/>
-          <elements xsi:type="xtext:Assignment" feature="duration" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.187"/>
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Keyword" value="+"/>
+            <elements xsi:type="xtext:Assignment" feature="duration" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.187"/>
+            </elements>
           </elements>
         </elements>
       </alternatives>

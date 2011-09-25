@@ -5489,31 +5489,31 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleInterval2"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1969:1: ruleInterval2 : ( ( rule__Interval2__Alternatives ) ) ;
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1969:1: ruleInterval2 : ( ( rule__Interval2__Group__0 ) ) ;
     public final void ruleInterval2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1973:2: ( ( ( rule__Interval2__Alternatives ) ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1974:1: ( ( rule__Interval2__Alternatives ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1973:2: ( ( ( rule__Interval2__Group__0 ) ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1974:1: ( ( rule__Interval2__Group__0 ) )
             {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1974:1: ( ( rule__Interval2__Alternatives ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1975:1: ( rule__Interval2__Alternatives )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1974:1: ( ( rule__Interval2__Group__0 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1975:1: ( rule__Interval2__Group__0 )
             {
-             before(grammarAccess.getInterval2Access().getAlternatives()); 
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1976:1: ( rule__Interval2__Alternatives )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1976:2: rule__Interval2__Alternatives
+             before(grammarAccess.getInterval2Access().getGroup()); 
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1976:1: ( rule__Interval2__Group__0 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:1976:2: rule__Interval2__Group__0
             {
-            pushFollow(FOLLOW_rule__Interval2__Alternatives_in_ruleInterval24137);
-            rule__Interval2__Alternatives();
+            pushFollow(FOLLOW_rule__Interval2__Group__0_in_ruleInterval24137);
+            rule__Interval2__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getInterval2Access().getAlternatives()); 
+             after(grammarAccess.getInterval2Access().getGroup()); 
 
             }
 
@@ -17322,18 +17322,18 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Interval1__Alternatives"
 
 
-    // $ANTLR start "rule__Interval2__Alternatives"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6101:1: rule__Interval2__Alternatives : ( ( ( rule__Interval2__Group_0__0 ) ) | ( ( rule__Interval2__Group_1__0 ) ) );
-    public final void rule__Interval2__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Alternatives_1"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6101:1: rule__Interval2__Alternatives_1 : ( ( ( rule__Interval2__Group_1_0__0 ) ) | ( ( rule__Interval2__Group_1_1__0 ) ) );
+    public final void rule__Interval2__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6105:1: ( ( ( rule__Interval2__Group_0__0 ) ) | ( ( rule__Interval2__Group_1__0 ) ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6105:1: ( ( ( rule__Interval2__Group_1_0__0 ) ) | ( ( rule__Interval2__Group_1_1__0 ) ) )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==RULE_ISODATE) ) {
+            if ( (LA11_0==178) ) {
                 alt11=1;
             }
             else if ( (LA11_0==179) ) {
@@ -17347,24 +17347,24 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6106:1: ( ( rule__Interval2__Group_0__0 ) )
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6106:1: ( ( rule__Interval2__Group_1_0__0 ) )
                     {
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6106:1: ( ( rule__Interval2__Group_0__0 ) )
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6107:1: ( rule__Interval2__Group_0__0 )
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6106:1: ( ( rule__Interval2__Group_1_0__0 ) )
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6107:1: ( rule__Interval2__Group_1_0__0 )
                     {
-                     before(grammarAccess.getInterval2Access().getGroup_0()); 
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6108:1: ( rule__Interval2__Group_0__0 )
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6108:2: rule__Interval2__Group_0__0
+                     before(grammarAccess.getInterval2Access().getGroup_1_0()); 
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6108:1: ( rule__Interval2__Group_1_0__0 )
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6108:2: rule__Interval2__Group_1_0__0
                     {
-                    pushFollow(FOLLOW_rule__Interval2__Group_0__0_in_rule__Interval2__Alternatives13314);
-                    rule__Interval2__Group_0__0();
+                    pushFollow(FOLLOW_rule__Interval2__Group_1_0__0_in_rule__Interval2__Alternatives_113314);
+                    rule__Interval2__Group_1_0__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getInterval2Access().getGroup_0()); 
+                     after(grammarAccess.getInterval2Access().getGroup_1_0()); 
 
                     }
 
@@ -17372,24 +17372,24 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6112:6: ( ( rule__Interval2__Group_1__0 ) )
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6112:6: ( ( rule__Interval2__Group_1_1__0 ) )
                     {
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6112:6: ( ( rule__Interval2__Group_1__0 ) )
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6113:1: ( rule__Interval2__Group_1__0 )
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6112:6: ( ( rule__Interval2__Group_1_1__0 ) )
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6113:1: ( rule__Interval2__Group_1_1__0 )
                     {
-                     before(grammarAccess.getInterval2Access().getGroup_1()); 
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6114:1: ( rule__Interval2__Group_1__0 )
-                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6114:2: rule__Interval2__Group_1__0
+                     before(grammarAccess.getInterval2Access().getGroup_1_1()); 
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6114:1: ( rule__Interval2__Group_1_1__0 )
+                    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:6114:2: rule__Interval2__Group_1_1__0
                     {
-                    pushFollow(FOLLOW_rule__Interval2__Group_1__0_in_rule__Interval2__Alternatives13332);
-                    rule__Interval2__Group_1__0();
+                    pushFollow(FOLLOW_rule__Interval2__Group_1_1__0_in_rule__Interval2__Alternatives_113332);
+                    rule__Interval2__Group_1_1__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getInterval2Access().getGroup_1()); 
+                     after(grammarAccess.getInterval2Access().getGroup_1_1()); 
 
                     }
 
@@ -17410,7 +17410,7 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Alternatives"
+    // $ANTLR end "rule__Interval2__Alternatives_1"
 
 
     // $ANTLR start "rule__Interval3__Alternatives_1"
@@ -38262,23 +38262,23 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Interval1__Group_1__1__Impl"
 
 
-    // $ANTLR start "rule__Interval2__Group_0__0"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13625:1: rule__Interval2__Group_0__0 : rule__Interval2__Group_0__0__Impl rule__Interval2__Group_0__1 ;
-    public final void rule__Interval2__Group_0__0() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group__0"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13625:1: rule__Interval2__Group__0 : rule__Interval2__Group__0__Impl rule__Interval2__Group__1 ;
+    public final void rule__Interval2__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13629:1: ( rule__Interval2__Group_0__0__Impl rule__Interval2__Group_0__1 )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13630:2: rule__Interval2__Group_0__0__Impl rule__Interval2__Group_0__1
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13629:1: ( rule__Interval2__Group__0__Impl rule__Interval2__Group__1 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13630:2: rule__Interval2__Group__0__Impl rule__Interval2__Group__1
             {
-            pushFollow(FOLLOW_rule__Interval2__Group_0__0__Impl_in_rule__Interval2__Group_0__029063);
-            rule__Interval2__Group_0__0__Impl();
+            pushFollow(FOLLOW_rule__Interval2__Group__0__Impl_in_rule__Interval2__Group__029063);
+            rule__Interval2__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Interval2__Group_0__1_in_rule__Interval2__Group_0__029066);
-            rule__Interval2__Group_0__1();
+            pushFollow(FOLLOW_rule__Interval2__Group__1_in_rule__Interval2__Group__029066);
+            rule__Interval2__Group__1();
 
             state._fsp--;
 
@@ -38297,35 +38297,35 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_0__0"
+    // $ANTLR end "rule__Interval2__Group__0"
 
 
-    // $ANTLR start "rule__Interval2__Group_0__0__Impl"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13637:1: rule__Interval2__Group_0__0__Impl : ( ( rule__Interval2__StartAssignment_0_0 ) ) ;
-    public final void rule__Interval2__Group_0__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group__0__Impl"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13637:1: rule__Interval2__Group__0__Impl : ( ( rule__Interval2__StartAssignment_0 ) ) ;
+    public final void rule__Interval2__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13641:1: ( ( ( rule__Interval2__StartAssignment_0_0 ) ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13642:1: ( ( rule__Interval2__StartAssignment_0_0 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13641:1: ( ( ( rule__Interval2__StartAssignment_0 ) ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13642:1: ( ( rule__Interval2__StartAssignment_0 ) )
             {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13642:1: ( ( rule__Interval2__StartAssignment_0_0 ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13643:1: ( rule__Interval2__StartAssignment_0_0 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13642:1: ( ( rule__Interval2__StartAssignment_0 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13643:1: ( rule__Interval2__StartAssignment_0 )
             {
-             before(grammarAccess.getInterval2Access().getStartAssignment_0_0()); 
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13644:1: ( rule__Interval2__StartAssignment_0_0 )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13644:2: rule__Interval2__StartAssignment_0_0
+             before(grammarAccess.getInterval2Access().getStartAssignment_0()); 
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13644:1: ( rule__Interval2__StartAssignment_0 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13644:2: rule__Interval2__StartAssignment_0
             {
-            pushFollow(FOLLOW_rule__Interval2__StartAssignment_0_0_in_rule__Interval2__Group_0__0__Impl29093);
-            rule__Interval2__StartAssignment_0_0();
+            pushFollow(FOLLOW_rule__Interval2__StartAssignment_0_in_rule__Interval2__Group__0__Impl29093);
+            rule__Interval2__StartAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getInterval2Access().getStartAssignment_0_0()); 
+             after(grammarAccess.getInterval2Access().getStartAssignment_0()); 
 
             }
 
@@ -38344,21 +38344,21 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_0__0__Impl"
+    // $ANTLR end "rule__Interval2__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Interval2__Group_0__1"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13654:1: rule__Interval2__Group_0__1 : rule__Interval2__Group_0__1__Impl ;
-    public final void rule__Interval2__Group_0__1() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group__1"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13654:1: rule__Interval2__Group__1 : rule__Interval2__Group__1__Impl ;
+    public final void rule__Interval2__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13658:1: ( rule__Interval2__Group_0__1__Impl )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13659:2: rule__Interval2__Group_0__1__Impl
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13658:1: ( rule__Interval2__Group__1__Impl )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13659:2: rule__Interval2__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Interval2__Group_0__1__Impl_in_rule__Interval2__Group_0__129123);
-            rule__Interval2__Group_0__1__Impl();
+            pushFollow(FOLLOW_rule__Interval2__Group__1__Impl_in_rule__Interval2__Group__129123);
+            rule__Interval2__Group__1__Impl();
 
             state._fsp--;
 
@@ -38377,35 +38377,35 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_0__1"
+    // $ANTLR end "rule__Interval2__Group__1"
 
 
-    // $ANTLR start "rule__Interval2__Group_0__1__Impl"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13665:1: rule__Interval2__Group_0__1__Impl : ( ( rule__Interval2__Group_0_1__0 ) ) ;
-    public final void rule__Interval2__Group_0__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group__1__Impl"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13665:1: rule__Interval2__Group__1__Impl : ( ( rule__Interval2__Alternatives_1 ) ) ;
+    public final void rule__Interval2__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13669:1: ( ( ( rule__Interval2__Group_0_1__0 ) ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13670:1: ( ( rule__Interval2__Group_0_1__0 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13669:1: ( ( ( rule__Interval2__Alternatives_1 ) ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13670:1: ( ( rule__Interval2__Alternatives_1 ) )
             {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13670:1: ( ( rule__Interval2__Group_0_1__0 ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13671:1: ( rule__Interval2__Group_0_1__0 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13670:1: ( ( rule__Interval2__Alternatives_1 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13671:1: ( rule__Interval2__Alternatives_1 )
             {
-             before(grammarAccess.getInterval2Access().getGroup_0_1()); 
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13672:1: ( rule__Interval2__Group_0_1__0 )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13672:2: rule__Interval2__Group_0_1__0
+             before(grammarAccess.getInterval2Access().getAlternatives_1()); 
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13672:1: ( rule__Interval2__Alternatives_1 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13672:2: rule__Interval2__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Interval2__Group_0_1__0_in_rule__Interval2__Group_0__1__Impl29150);
-            rule__Interval2__Group_0_1__0();
+            pushFollow(FOLLOW_rule__Interval2__Alternatives_1_in_rule__Interval2__Group__1__Impl29150);
+            rule__Interval2__Alternatives_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getInterval2Access().getGroup_0_1()); 
+             after(grammarAccess.getInterval2Access().getAlternatives_1()); 
 
             }
 
@@ -38424,26 +38424,26 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_0__1__Impl"
+    // $ANTLR end "rule__Interval2__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Interval2__Group_0_1__0"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13686:1: rule__Interval2__Group_0_1__0 : rule__Interval2__Group_0_1__0__Impl rule__Interval2__Group_0_1__1 ;
-    public final void rule__Interval2__Group_0_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group_1_0__0"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13686:1: rule__Interval2__Group_1_0__0 : rule__Interval2__Group_1_0__0__Impl rule__Interval2__Group_1_0__1 ;
+    public final void rule__Interval2__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13690:1: ( rule__Interval2__Group_0_1__0__Impl rule__Interval2__Group_0_1__1 )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13691:2: rule__Interval2__Group_0_1__0__Impl rule__Interval2__Group_0_1__1
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13690:1: ( rule__Interval2__Group_1_0__0__Impl rule__Interval2__Group_1_0__1 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13691:2: rule__Interval2__Group_1_0__0__Impl rule__Interval2__Group_1_0__1
             {
-            pushFollow(FOLLOW_rule__Interval2__Group_0_1__0__Impl_in_rule__Interval2__Group_0_1__029184);
-            rule__Interval2__Group_0_1__0__Impl();
+            pushFollow(FOLLOW_rule__Interval2__Group_1_0__0__Impl_in_rule__Interval2__Group_1_0__029184);
+            rule__Interval2__Group_1_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Interval2__Group_0_1__1_in_rule__Interval2__Group_0_1__029187);
-            rule__Interval2__Group_0_1__1();
+            pushFollow(FOLLOW_rule__Interval2__Group_1_0__1_in_rule__Interval2__Group_1_0__029187);
+            rule__Interval2__Group_1_0__1();
 
             state._fsp--;
 
@@ -38462,12 +38462,12 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_0_1__0"
+    // $ANTLR end "rule__Interval2__Group_1_0__0"
 
 
-    // $ANTLR start "rule__Interval2__Group_0_1__0__Impl"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13698:1: rule__Interval2__Group_0_1__0__Impl : ( '-' ) ;
-    public final void rule__Interval2__Group_0_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group_1_0__0__Impl"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13698:1: rule__Interval2__Group_1_0__0__Impl : ( '-' ) ;
+    public final void rule__Interval2__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -38478,9 +38478,9 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13703:1: ( '-' )
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13704:1: '-'
             {
-             before(grammarAccess.getInterval2Access().getHyphenMinusKeyword_0_1_0()); 
-            match(input,178,FOLLOW_178_in_rule__Interval2__Group_0_1__0__Impl29215); 
-             after(grammarAccess.getInterval2Access().getHyphenMinusKeyword_0_1_0()); 
+             before(grammarAccess.getInterval2Access().getHyphenMinusKeyword_1_0_0()); 
+            match(input,178,FOLLOW_178_in_rule__Interval2__Group_1_0__0__Impl29215); 
+             after(grammarAccess.getInterval2Access().getHyphenMinusKeyword_1_0_0()); 
 
             }
 
@@ -38499,21 +38499,21 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_0_1__0__Impl"
+    // $ANTLR end "rule__Interval2__Group_1_0__0__Impl"
 
 
-    // $ANTLR start "rule__Interval2__Group_0_1__1"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13717:1: rule__Interval2__Group_0_1__1 : rule__Interval2__Group_0_1__1__Impl ;
-    public final void rule__Interval2__Group_0_1__1() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group_1_0__1"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13717:1: rule__Interval2__Group_1_0__1 : rule__Interval2__Group_1_0__1__Impl ;
+    public final void rule__Interval2__Group_1_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13721:1: ( rule__Interval2__Group_0_1__1__Impl )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13722:2: rule__Interval2__Group_0_1__1__Impl
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13721:1: ( rule__Interval2__Group_1_0__1__Impl )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13722:2: rule__Interval2__Group_1_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Interval2__Group_0_1__1__Impl_in_rule__Interval2__Group_0_1__129246);
-            rule__Interval2__Group_0_1__1__Impl();
+            pushFollow(FOLLOW_rule__Interval2__Group_1_0__1__Impl_in_rule__Interval2__Group_1_0__129246);
+            rule__Interval2__Group_1_0__1__Impl();
 
             state._fsp--;
 
@@ -38532,35 +38532,35 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_0_1__1"
+    // $ANTLR end "rule__Interval2__Group_1_0__1"
 
 
-    // $ANTLR start "rule__Interval2__Group_0_1__1__Impl"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13728:1: rule__Interval2__Group_0_1__1__Impl : ( ( rule__Interval2__EndAssignment_0_1_1 ) ) ;
-    public final void rule__Interval2__Group_0_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group_1_0__1__Impl"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13728:1: rule__Interval2__Group_1_0__1__Impl : ( ( rule__Interval2__EndAssignment_1_0_1 ) ) ;
+    public final void rule__Interval2__Group_1_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13732:1: ( ( ( rule__Interval2__EndAssignment_0_1_1 ) ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13733:1: ( ( rule__Interval2__EndAssignment_0_1_1 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13732:1: ( ( ( rule__Interval2__EndAssignment_1_0_1 ) ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13733:1: ( ( rule__Interval2__EndAssignment_1_0_1 ) )
             {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13733:1: ( ( rule__Interval2__EndAssignment_0_1_1 ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13734:1: ( rule__Interval2__EndAssignment_0_1_1 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13733:1: ( ( rule__Interval2__EndAssignment_1_0_1 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13734:1: ( rule__Interval2__EndAssignment_1_0_1 )
             {
-             before(grammarAccess.getInterval2Access().getEndAssignment_0_1_1()); 
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13735:1: ( rule__Interval2__EndAssignment_0_1_1 )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13735:2: rule__Interval2__EndAssignment_0_1_1
+             before(grammarAccess.getInterval2Access().getEndAssignment_1_0_1()); 
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13735:1: ( rule__Interval2__EndAssignment_1_0_1 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13735:2: rule__Interval2__EndAssignment_1_0_1
             {
-            pushFollow(FOLLOW_rule__Interval2__EndAssignment_0_1_1_in_rule__Interval2__Group_0_1__1__Impl29273);
-            rule__Interval2__EndAssignment_0_1_1();
+            pushFollow(FOLLOW_rule__Interval2__EndAssignment_1_0_1_in_rule__Interval2__Group_1_0__1__Impl29273);
+            rule__Interval2__EndAssignment_1_0_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getInterval2Access().getEndAssignment_0_1_1()); 
+             after(grammarAccess.getInterval2Access().getEndAssignment_1_0_1()); 
 
             }
 
@@ -38579,26 +38579,26 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_0_1__1__Impl"
+    // $ANTLR end "rule__Interval2__Group_1_0__1__Impl"
 
 
-    // $ANTLR start "rule__Interval2__Group_1__0"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13749:1: rule__Interval2__Group_1__0 : rule__Interval2__Group_1__0__Impl rule__Interval2__Group_1__1 ;
-    public final void rule__Interval2__Group_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group_1_1__0"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13749:1: rule__Interval2__Group_1_1__0 : rule__Interval2__Group_1_1__0__Impl rule__Interval2__Group_1_1__1 ;
+    public final void rule__Interval2__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13753:1: ( rule__Interval2__Group_1__0__Impl rule__Interval2__Group_1__1 )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13754:2: rule__Interval2__Group_1__0__Impl rule__Interval2__Group_1__1
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13753:1: ( rule__Interval2__Group_1_1__0__Impl rule__Interval2__Group_1_1__1 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13754:2: rule__Interval2__Group_1_1__0__Impl rule__Interval2__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__Interval2__Group_1__0__Impl_in_rule__Interval2__Group_1__029307);
-            rule__Interval2__Group_1__0__Impl();
+            pushFollow(FOLLOW_rule__Interval2__Group_1_1__0__Impl_in_rule__Interval2__Group_1_1__029307);
+            rule__Interval2__Group_1_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Interval2__Group_1__1_in_rule__Interval2__Group_1__029310);
-            rule__Interval2__Group_1__1();
+            pushFollow(FOLLOW_rule__Interval2__Group_1_1__1_in_rule__Interval2__Group_1_1__029310);
+            rule__Interval2__Group_1_1__1();
 
             state._fsp--;
 
@@ -38617,12 +38617,12 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_1__0"
+    // $ANTLR end "rule__Interval2__Group_1_1__0"
 
 
-    // $ANTLR start "rule__Interval2__Group_1__0__Impl"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13761:1: rule__Interval2__Group_1__0__Impl : ( '+' ) ;
-    public final void rule__Interval2__Group_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group_1_1__0__Impl"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13761:1: rule__Interval2__Group_1_1__0__Impl : ( '+' ) ;
+    public final void rule__Interval2__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -38633,9 +38633,9 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13766:1: ( '+' )
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13767:1: '+'
             {
-             before(grammarAccess.getInterval2Access().getPlusSignKeyword_1_0()); 
-            match(input,179,FOLLOW_179_in_rule__Interval2__Group_1__0__Impl29338); 
-             after(grammarAccess.getInterval2Access().getPlusSignKeyword_1_0()); 
+             before(grammarAccess.getInterval2Access().getPlusSignKeyword_1_1_0()); 
+            match(input,179,FOLLOW_179_in_rule__Interval2__Group_1_1__0__Impl29338); 
+             after(grammarAccess.getInterval2Access().getPlusSignKeyword_1_1_0()); 
 
             }
 
@@ -38654,21 +38654,21 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_1__0__Impl"
+    // $ANTLR end "rule__Interval2__Group_1_1__0__Impl"
 
 
-    // $ANTLR start "rule__Interval2__Group_1__1"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13780:1: rule__Interval2__Group_1__1 : rule__Interval2__Group_1__1__Impl ;
-    public final void rule__Interval2__Group_1__1() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group_1_1__1"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13780:1: rule__Interval2__Group_1_1__1 : rule__Interval2__Group_1_1__1__Impl ;
+    public final void rule__Interval2__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13784:1: ( rule__Interval2__Group_1__1__Impl )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13785:2: rule__Interval2__Group_1__1__Impl
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13784:1: ( rule__Interval2__Group_1_1__1__Impl )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13785:2: rule__Interval2__Group_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Interval2__Group_1__1__Impl_in_rule__Interval2__Group_1__129369);
-            rule__Interval2__Group_1__1__Impl();
+            pushFollow(FOLLOW_rule__Interval2__Group_1_1__1__Impl_in_rule__Interval2__Group_1_1__129369);
+            rule__Interval2__Group_1_1__1__Impl();
 
             state._fsp--;
 
@@ -38687,35 +38687,35 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_1__1"
+    // $ANTLR end "rule__Interval2__Group_1_1__1"
 
 
-    // $ANTLR start "rule__Interval2__Group_1__1__Impl"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13791:1: rule__Interval2__Group_1__1__Impl : ( ( rule__Interval2__DurationAssignment_1_1 ) ) ;
-    public final void rule__Interval2__Group_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__Group_1_1__1__Impl"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13791:1: rule__Interval2__Group_1_1__1__Impl : ( ( rule__Interval2__DurationAssignment_1_1_1 ) ) ;
+    public final void rule__Interval2__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13795:1: ( ( ( rule__Interval2__DurationAssignment_1_1 ) ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13796:1: ( ( rule__Interval2__DurationAssignment_1_1 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13795:1: ( ( ( rule__Interval2__DurationAssignment_1_1_1 ) ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13796:1: ( ( rule__Interval2__DurationAssignment_1_1_1 ) )
             {
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13796:1: ( ( rule__Interval2__DurationAssignment_1_1 ) )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13797:1: ( rule__Interval2__DurationAssignment_1_1 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13796:1: ( ( rule__Interval2__DurationAssignment_1_1_1 ) )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13797:1: ( rule__Interval2__DurationAssignment_1_1_1 )
             {
-             before(grammarAccess.getInterval2Access().getDurationAssignment_1_1()); 
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13798:1: ( rule__Interval2__DurationAssignment_1_1 )
-            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13798:2: rule__Interval2__DurationAssignment_1_1
+             before(grammarAccess.getInterval2Access().getDurationAssignment_1_1_1()); 
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13798:1: ( rule__Interval2__DurationAssignment_1_1_1 )
+            // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:13798:2: rule__Interval2__DurationAssignment_1_1_1
             {
-            pushFollow(FOLLOW_rule__Interval2__DurationAssignment_1_1_in_rule__Interval2__Group_1__1__Impl29396);
-            rule__Interval2__DurationAssignment_1_1();
+            pushFollow(FOLLOW_rule__Interval2__DurationAssignment_1_1_1_in_rule__Interval2__Group_1_1__1__Impl29396);
+            rule__Interval2__DurationAssignment_1_1_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getInterval2Access().getDurationAssignment_1_1()); 
+             after(grammarAccess.getInterval2Access().getDurationAssignment_1_1_1()); 
 
             }
 
@@ -38734,7 +38734,7 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__Group_1__1__Impl"
+    // $ANTLR end "rule__Interval2__Group_1_1__1__Impl"
 
 
     // $ANTLR start "rule__Interval3__Group__0"
@@ -69425,9 +69425,9 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Interval1__DurationAssignment_1_1"
 
 
-    // $ANTLR start "rule__Interval2__StartAssignment_0_0"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25654:1: rule__Interval2__StartAssignment_0_0 : ( RULE_ISODATE ) ;
-    public final void rule__Interval2__StartAssignment_0_0() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__StartAssignment_0"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25654:1: rule__Interval2__StartAssignment_0 : ( RULE_ISODATE ) ;
+    public final void rule__Interval2__StartAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -69438,9 +69438,9 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25659:1: ( RULE_ISODATE )
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25660:1: RULE_ISODATE
             {
-             before(grammarAccess.getInterval2Access().getStartISODATETerminalRuleCall_0_0_0()); 
-            match(input,RULE_ISODATE,FOLLOW_RULE_ISODATE_in_rule__Interval2__StartAssignment_0_054285); 
-             after(grammarAccess.getInterval2Access().getStartISODATETerminalRuleCall_0_0_0()); 
+             before(grammarAccess.getInterval2Access().getStartISODATETerminalRuleCall_0_0()); 
+            match(input,RULE_ISODATE,FOLLOW_RULE_ISODATE_in_rule__Interval2__StartAssignment_054285); 
+             after(grammarAccess.getInterval2Access().getStartISODATETerminalRuleCall_0_0()); 
 
             }
 
@@ -69459,12 +69459,12 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__StartAssignment_0_0"
+    // $ANTLR end "rule__Interval2__StartAssignment_0"
 
 
-    // $ANTLR start "rule__Interval2__EndAssignment_0_1_1"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25669:1: rule__Interval2__EndAssignment_0_1_1 : ( RULE_ISODATE ) ;
-    public final void rule__Interval2__EndAssignment_0_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__EndAssignment_1_0_1"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25669:1: rule__Interval2__EndAssignment_1_0_1 : ( RULE_ISODATE ) ;
+    public final void rule__Interval2__EndAssignment_1_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -69475,9 +69475,9 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25674:1: ( RULE_ISODATE )
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25675:1: RULE_ISODATE
             {
-             before(grammarAccess.getInterval2Access().getEndISODATETerminalRuleCall_0_1_1_0()); 
-            match(input,RULE_ISODATE,FOLLOW_RULE_ISODATE_in_rule__Interval2__EndAssignment_0_1_154316); 
-             after(grammarAccess.getInterval2Access().getEndISODATETerminalRuleCall_0_1_1_0()); 
+             before(grammarAccess.getInterval2Access().getEndISODATETerminalRuleCall_1_0_1_0()); 
+            match(input,RULE_ISODATE,FOLLOW_RULE_ISODATE_in_rule__Interval2__EndAssignment_1_0_154316); 
+             after(grammarAccess.getInterval2Access().getEndISODATETerminalRuleCall_1_0_1_0()); 
 
             }
 
@@ -69496,12 +69496,12 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__EndAssignment_0_1_1"
+    // $ANTLR end "rule__Interval2__EndAssignment_1_0_1"
 
 
-    // $ANTLR start "rule__Interval2__DurationAssignment_1_1"
-    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25684:1: rule__Interval2__DurationAssignment_1_1 : ( ruleDurationQuantity ) ;
-    public final void rule__Interval2__DurationAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Interval2__DurationAssignment_1_1_1"
+    // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25684:1: rule__Interval2__DurationAssignment_1_1_1 : ( ruleDurationQuantity ) ;
+    public final void rule__Interval2__DurationAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -69512,13 +69512,13 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25689:1: ( ruleDurationQuantity )
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:25690:1: ruleDurationQuantity
             {
-             before(grammarAccess.getInterval2Access().getDurationDurationQuantityParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleDurationQuantity_in_rule__Interval2__DurationAssignment_1_154347);
+             before(grammarAccess.getInterval2Access().getDurationDurationQuantityParserRuleCall_1_1_1_0()); 
+            pushFollow(FOLLOW_ruleDurationQuantity_in_rule__Interval2__DurationAssignment_1_1_154347);
             ruleDurationQuantity();
 
             state._fsp--;
 
-             after(grammarAccess.getInterval2Access().getDurationDurationQuantityParserRuleCall_1_1_0()); 
+             after(grammarAccess.getInterval2Access().getDurationDurationQuantityParserRuleCall_1_1_1_0()); 
 
             }
 
@@ -69537,7 +69537,7 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Interval2__DurationAssignment_1_1"
+    // $ANTLR end "rule__Interval2__DurationAssignment_1_1_1"
 
 
     // $ANTLR start "rule__Interval3__StartAssignment_0"
@@ -78385,7 +78385,7 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Interval1__Alternatives_in_ruleInterval14077 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleInterval2_in_entryRuleInterval24104 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleInterval24111 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Alternatives_in_ruleInterval24137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group__0_in_ruleInterval24137 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleInterval3_in_entryRuleInterval34164 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleInterval34171 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval3__Group__0_in_ruleInterval34197 = new BitSet(new long[]{0x0000000000000002L});
@@ -78838,8 +78838,8 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleTitle_in_rule__NikuReportAttribute__Alternatives13228 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval1__Group_0__0_in_rule__Interval1__Alternatives13263 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval1__Group_1__0_in_rule__Interval1__Alternatives13281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_0__0_in_rule__Interval2__Alternatives13314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_1__0_in_rule__Interval2__Alternatives13332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group_1_0__0_in_rule__Interval2__Alternatives_113314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group_1_1__0_in_rule__Interval2__Alternatives_113332 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval3__Group_1_0__0_in_rule__Interval3__Alternatives_113365 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval3__Group_1_1__0_in_rule__Interval3__Alternatives_113383 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval4__Group_1_0__0_in_rule__Interval4__Alternatives_113416 = new BitSet(new long[]{0x0000000000000002L});
@@ -79059,10 +79059,10 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Project__Group__1__Impl_in_rule__Project__Group__118297 = new BitSet(new long[]{0x0000000000000110L});
     public static final BitSet FOLLOW_rule__Project__Group__2_in_rule__Project__Group__118300 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Project__IdAssignment_1_in_rule__Project__Group__1__Impl18327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Project__Group__2__Impl_in_rule__Project__Group__218358 = new BitSet(new long[]{0x0000000000000090L,0x0000000000000000L,0x0008000000000000L});
+    public static final BitSet FOLLOW_rule__Project__Group__2__Impl_in_rule__Project__Group__218358 = new BitSet(new long[]{0x0000000000000090L});
     public static final BitSet FOLLOW_rule__Project__Group__3_in_rule__Project__Group__218361 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Project__NameAssignment_2_in_rule__Project__Group__2__Impl18388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Project__Group__3__Impl_in_rule__Project__Group__318418 = new BitSet(new long[]{0x0000000000000090L,0x0000000000000000L,0x0008000000000000L});
+    public static final BitSet FOLLOW_rule__Project__Group__3__Impl_in_rule__Project__Group__318418 = new BitSet(new long[]{0x0000000000000090L});
     public static final BitSet FOLLOW_rule__Project__Group__4_in_rule__Project__Group__318421 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Project__VersionAssignment_3_in_rule__Project__Group__3__Impl18448 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Project__Group__4__Impl_in_rule__Project__Group__418479 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000200L});
@@ -79507,21 +79507,21 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_179_in_rule__Interval1__Group_1__0__Impl28971 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval1__Group_1__1__Impl_in_rule__Interval1__Group_1__129002 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval1__DurationAssignment_1_1_in_rule__Interval1__Group_1__1__Impl29029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_0__0__Impl_in_rule__Interval2__Group_0__029063 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0004000000000000L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_0__1_in_rule__Interval2__Group_0__029066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__StartAssignment_0_0_in_rule__Interval2__Group_0__0__Impl29093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_0__1__Impl_in_rule__Interval2__Group_0__129123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_0_1__0_in_rule__Interval2__Group_0__1__Impl29150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_0_1__0__Impl_in_rule__Interval2__Group_0_1__029184 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_0_1__1_in_rule__Interval2__Group_0_1__029187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_178_in_rule__Interval2__Group_0_1__0__Impl29215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_0_1__1__Impl_in_rule__Interval2__Group_0_1__129246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__EndAssignment_0_1_1_in_rule__Interval2__Group_0_1__1__Impl29273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_1__0__Impl_in_rule__Interval2__Group_1__029307 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_1__1_in_rule__Interval2__Group_1__029310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_179_in_rule__Interval2__Group_1__0__Impl29338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__Group_1__1__Impl_in_rule__Interval2__Group_1__129369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Interval2__DurationAssignment_1_1_in_rule__Interval2__Group_1__1__Impl29396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group__0__Impl_in_rule__Interval2__Group__029063 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000C000000000000L});
+    public static final BitSet FOLLOW_rule__Interval2__Group__1_in_rule__Interval2__Group__029066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__StartAssignment_0_in_rule__Interval2__Group__0__Impl29093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group__1__Impl_in_rule__Interval2__Group__129123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Alternatives_1_in_rule__Interval2__Group__1__Impl29150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group_1_0__0__Impl_in_rule__Interval2__Group_1_0__029184 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__Interval2__Group_1_0__1_in_rule__Interval2__Group_1_0__029187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_178_in_rule__Interval2__Group_1_0__0__Impl29215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group_1_0__1__Impl_in_rule__Interval2__Group_1_0__129246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__EndAssignment_1_0_1_in_rule__Interval2__Group_1_0__1__Impl29273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group_1_1__0__Impl_in_rule__Interval2__Group_1_1__029307 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_rule__Interval2__Group_1_1__1_in_rule__Interval2__Group_1_1__029310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_179_in_rule__Interval2__Group_1_1__0__Impl29338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__Group_1_1__1__Impl_in_rule__Interval2__Group_1_1__129369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Interval2__DurationAssignment_1_1_1_in_rule__Interval2__Group_1_1__1__Impl29396 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval3__Group__0__Impl_in_rule__Interval3__Group__029430 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000C000000000000L});
     public static final BitSet FOLLOW_rule__Interval3__Group__1_in_rule__Interval3__Group__029433 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Interval3__StartAssignment_0_in_rule__Interval3__Group__0__Impl29460 = new BitSet(new long[]{0x0000000000000002L});
@@ -79656,7 +79656,7 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_191_in_rule__NumberFormat__Group__0__Impl32599 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__NumberFormat__Group__1__Impl_in_rule__NumberFormat__Group__132630 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRealFormat_in_rule__NumberFormat__Group__1__Impl32657 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Period__Group__0__Impl_in_rule__Period__Group__032690 = new BitSet(new long[]{0x0000000000000090L,0x0000000000000000L,0x0008000000000000L});
+    public static final BitSet FOLLOW_rule__Period__Group__0__Impl_in_rule__Period__Group__032690 = new BitSet(new long[]{0x0000000000000090L});
     public static final BitSet FOLLOW_rule__Period__Group__1_in_rule__Period__Group__032693 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_192_in_rule__Period__Group__0__Impl32721 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Period__Group__1__Impl_in_rule__Period__Group__132752 = new BitSet(new long[]{0x0000000000000002L});
@@ -80456,9 +80456,9 @@ public class InternalProjectParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_RULE_ISODATE_in_rule__Interval1__StartAssignment_0_054192 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ISODATE_in_rule__Interval1__EndAssignment_0_1_154223 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDurationQuantity_in_rule__Interval1__DurationAssignment_1_154254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ISODATE_in_rule__Interval2__StartAssignment_0_054285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ISODATE_in_rule__Interval2__EndAssignment_0_1_154316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDurationQuantity_in_rule__Interval2__DurationAssignment_1_154347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ISODATE_in_rule__Interval2__StartAssignment_054285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ISODATE_in_rule__Interval2__EndAssignment_1_0_154316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDurationQuantity_in_rule__Interval2__DurationAssignment_1_1_154347 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ISODATE_in_rule__Interval3__StartAssignment_054378 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ISODATE_in_rule__Interval3__EndAssignment_1_0_154409 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDurationQuantity_in_rule__Interval3__DurationAssignment_1_1_154440 = new BitSet(new long[]{0x0000000000000002L});
