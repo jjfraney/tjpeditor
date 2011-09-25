@@ -11320,7 +11320,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInterval1"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4481:1: ruleInterval1 returns [EObject current=null] : ( ( ( (lv_start_0_0= RULE_ISODATE ) ) (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4481:1: ruleInterval1 returns [EObject current=null] : ( ( (lv_start_0_0= RULE_ISODATE ) ) ( (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) ) ) ;
     public final EObject ruleInterval1() throws RecognitionException {
         EObject current = null;
 
@@ -11334,14 +11334,43 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4484:28: ( ( ( ( (lv_start_0_0= RULE_ISODATE ) ) (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:1: ( ( ( (lv_start_0_0= RULE_ISODATE ) ) (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4484:28: ( ( ( (lv_start_0_0= RULE_ISODATE ) ) ( (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:1: ( ( (lv_start_0_0= RULE_ISODATE ) ) ( (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:1: ( ( ( (lv_start_0_0= RULE_ISODATE ) ) (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:1: ( ( (lv_start_0_0= RULE_ISODATE ) ) ( (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:2: ( (lv_start_0_0= RULE_ISODATE ) ) ( (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) )
+            {
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:2: ( (lv_start_0_0= RULE_ISODATE ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4486:1: (lv_start_0_0= RULE_ISODATE )
+            {
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4486:1: (lv_start_0_0= RULE_ISODATE )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4487:3: lv_start_0_0= RULE_ISODATE
+            {
+            lv_start_0_0=(Token)match(input,RULE_ISODATE,FOLLOW_RULE_ISODATE_in_ruleInterval111097); 
+
+            			newLeafNode(lv_start_0_0, grammarAccess.getInterval1Access().getStartISODATETerminalRuleCall_0_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getInterval1Rule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"start",
+                    		lv_start_0_0, 
+                    		"ISODATE");
+            	    
+
+            }
+
+
+            }
+
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4503:2: ( (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) | (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) ) )
             int alt44=2;
             int LA44_0 = input.LA(1);
 
-            if ( (LA44_0==RULE_ISODATE) ) {
+            if ( (LA44_0==65) ) {
                 alt44=1;
             }
             else if ( (LA44_0==66) ) {
@@ -11355,43 +11384,14 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
             }
             switch (alt44) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:2: ( ( (lv_start_0_0= RULE_ISODATE ) ) (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4503:3: (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:2: ( ( (lv_start_0_0= RULE_ISODATE ) ) (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) ) )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:3: ( (lv_start_0_0= RULE_ISODATE ) ) (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) )
-                    {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4485:3: ( (lv_start_0_0= RULE_ISODATE ) )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4486:1: (lv_start_0_0= RULE_ISODATE )
-                    {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4486:1: (lv_start_0_0= RULE_ISODATE )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4487:3: lv_start_0_0= RULE_ISODATE
-                    {
-                    lv_start_0_0=(Token)match(input,RULE_ISODATE,FOLLOW_RULE_ISODATE_in_ruleInterval111098); 
-
-                    			newLeafNode(lv_start_0_0, grammarAccess.getInterval1Access().getStartISODATETerminalRuleCall_0_0_0()); 
-                    		
-
-                    	        if (current==null) {
-                    	            current = createModelElement(grammarAccess.getInterval1Rule());
-                    	        }
-                           		setWithLastConsumed(
-                           			current, 
-                           			"start",
-                            		lv_start_0_0, 
-                            		"ISODATE");
-                    	    
-
-                    }
-
-
-                    }
-
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4503:2: (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4503:4: otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4503:3: (otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) ) )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4503:5: otherlv_1= '-' ( (lv_end_2_0= RULE_ISODATE ) )
                     {
                     otherlv_1=(Token)match(input,65,FOLLOW_65_in_ruleInterval111116); 
 
-                        	newLeafNode(otherlv_1, grammarAccess.getInterval1Access().getHyphenMinusKeyword_0_1_0());
+                        	newLeafNode(otherlv_1, grammarAccess.getInterval1Access().getHyphenMinusKeyword_1_0_0());
                         
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4507:1: ( (lv_end_2_0= RULE_ISODATE ) )
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4508:1: (lv_end_2_0= RULE_ISODATE )
@@ -11401,7 +11401,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     {
                     lv_end_2_0=(Token)match(input,RULE_ISODATE,FOLLOW_RULE_ISODATE_in_ruleInterval111133); 
 
-                    			newLeafNode(lv_end_2_0, grammarAccess.getInterval1Access().getEndISODATETerminalRuleCall_0_1_1_0()); 
+                    			newLeafNode(lv_end_2_0, grammarAccess.getInterval1Access().getEndISODATETerminalRuleCall_1_0_1_0()); 
                     		
 
                     	        if (current==null) {
@@ -11424,9 +11424,6 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
                     }
-
-
-                    }
                     break;
                 case 2 :
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4526:6: (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) )
@@ -11434,9 +11431,9 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4526:6: (otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) ) )
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4526:8: otherlv_3= '+' ( (lv_duration_4_0= ruleDurationQuantity ) )
                     {
-                    otherlv_3=(Token)match(input,66,FOLLOW_66_in_ruleInterval111159); 
+                    otherlv_3=(Token)match(input,66,FOLLOW_66_in_ruleInterval111158); 
 
-                        	newLeafNode(otherlv_3, grammarAccess.getInterval1Access().getPlusSignKeyword_1_0());
+                        	newLeafNode(otherlv_3, grammarAccess.getInterval1Access().getPlusSignKeyword_1_1_0());
                         
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4530:1: ( (lv_duration_4_0= ruleDurationQuantity ) )
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4531:1: (lv_duration_4_0= ruleDurationQuantity )
@@ -11445,9 +11442,9 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:4532:3: lv_duration_4_0= ruleDurationQuantity
                     {
                      
-                    	        newCompositeNode(grammarAccess.getInterval1Access().getDurationDurationQuantityParserRuleCall_1_1_0()); 
+                    	        newCompositeNode(grammarAccess.getInterval1Access().getDurationDurationQuantityParserRuleCall_1_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleDurationQuantity_in_ruleInterval111180);
+                    pushFollow(FOLLOW_ruleDurationQuantity_in_ruleInterval111179);
                     lv_duration_4_0=ruleDurationQuantity();
 
                     state._fsp--;
@@ -11475,6 +11472,9 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+
+            }
+
 
             }
 
@@ -31699,11 +31699,11 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_STRING_in_ruleInclude11004 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleInterval1_in_entryRuleInterval111045 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleInterval111055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ISODATE_in_ruleInterval111098 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ISODATE_in_ruleInterval111097 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000006L});
     public static final BitSet FOLLOW_65_in_ruleInterval111116 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_ISODATE_in_ruleInterval111133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleInterval111159 = new BitSet(new long[]{0x0000000000000280L});
-    public static final BitSet FOLLOW_ruleDurationQuantity_in_ruleInterval111180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleInterval111158 = new BitSet(new long[]{0x0000000000000280L});
+    public static final BitSet FOLLOW_ruleDurationQuantity_in_ruleInterval111179 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleInterval2_in_entryRuleInterval211217 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleInterval211227 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ISODATE_in_ruleInterval211269 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000006L});
@@ -32166,7 +32166,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_16_in_ruleLimit24269 = new BitSet(new long[]{0x0004000000400000L,0x4000000000800000L});
     public static final BitSet FOLLOW_50_in_ruleLimit24327 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_ISODATE_in_ruleLimit24344 = new BitSet(new long[]{0x0004000000420000L,0x4000000000800000L});
-    public static final BitSet FOLLOW_87_in_ruleLimit24417 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000004L});
+    public static final BitSet FOLLOW_87_in_ruleLimit24417 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleInterval1_in_ruleLimit24438 = new BitSet(new long[]{0x0004000000420000L,0x4000000000800000L});
     public static final BitSet FOLLOW_22_in_ruleLimit24506 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleLimit24526 = new BitSet(new long[]{0x0004000001420000L,0x4000000000800000L});

@@ -49,7 +49,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBookingAccess().getAlternatives_1(), "rule__Booking__Alternatives_1");
 					put(grammarAccess.getDefinitionsAccess().getAlternatives(), "rule__Definitions__Alternatives");
 					put(grammarAccess.getExtendAccess().getTypeAlternatives_1_0(), "rule__Extend__TypeAlternatives_1_0");
-					put(grammarAccess.getInterval1Access().getAlternatives(), "rule__Interval1__Alternatives");
+					put(grammarAccess.getInterval1Access().getAlternatives_1(), "rule__Interval1__Alternatives_1");
 					put(grammarAccess.getInterval2Access().getAlternatives_1(), "rule__Interval2__Alternatives_1");
 					put(grammarAccess.getInterval3Access().getAlternatives_1(), "rule__Interval3__Alternatives_1");
 					put(grammarAccess.getInterval4Access().getAlternatives_1(), "rule__Interval4__Alternatives_1");
@@ -172,9 +172,9 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHideResourceAccess().getGroup(), "rule__HideResource__Group__0");
 					put(grammarAccess.getHideTaskAccess().getGroup(), "rule__HideTask__Group__0");
 					put(grammarAccess.getIncludeAccess().getGroup(), "rule__Include__Group__0");
-					put(grammarAccess.getInterval1Access().getGroup_0(), "rule__Interval1__Group_0__0");
-					put(grammarAccess.getInterval1Access().getGroup_0_1(), "rule__Interval1__Group_0_1__0");
-					put(grammarAccess.getInterval1Access().getGroup_1(), "rule__Interval1__Group_1__0");
+					put(grammarAccess.getInterval1Access().getGroup(), "rule__Interval1__Group__0");
+					put(grammarAccess.getInterval1Access().getGroup_1_0(), "rule__Interval1__Group_1_0__0");
+					put(grammarAccess.getInterval1Access().getGroup_1_1(), "rule__Interval1__Group_1_1__0");
 					put(grammarAccess.getInterval2Access().getGroup(), "rule__Interval2__Group__0");
 					put(grammarAccess.getInterval2Access().getGroup_1_0(), "rule__Interval2__Group_1_0__0");
 					put(grammarAccess.getInterval2Access().getGroup_1_1(), "rule__Interval2__Group_1_1__0");
@@ -429,9 +429,9 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHideResourceAccess().getExpressionAssignment_1(), "rule__HideResource__ExpressionAssignment_1");
 					put(grammarAccess.getHideTaskAccess().getExpressionAssignment_1(), "rule__HideTask__ExpressionAssignment_1");
 					put(grammarAccess.getIncludeAccess().getFilenameAssignment_1(), "rule__Include__FilenameAssignment_1");
-					put(grammarAccess.getInterval1Access().getStartAssignment_0_0(), "rule__Interval1__StartAssignment_0_0");
-					put(grammarAccess.getInterval1Access().getEndAssignment_0_1_1(), "rule__Interval1__EndAssignment_0_1_1");
-					put(grammarAccess.getInterval1Access().getDurationAssignment_1_1(), "rule__Interval1__DurationAssignment_1_1");
+					put(grammarAccess.getInterval1Access().getStartAssignment_0(), "rule__Interval1__StartAssignment_0");
+					put(grammarAccess.getInterval1Access().getEndAssignment_1_0_1(), "rule__Interval1__EndAssignment_1_0_1");
+					put(grammarAccess.getInterval1Access().getDurationAssignment_1_1_1(), "rule__Interval1__DurationAssignment_1_1_1");
 					put(grammarAccess.getInterval2Access().getStartAssignment_0(), "rule__Interval2__StartAssignment_0");
 					put(grammarAccess.getInterval2Access().getEndAssignment_1_0_1(), "rule__Interval2__EndAssignment_1_0_1");
 					put(grammarAccess.getInterval2Access().getDurationAssignment_1_1_1(), "rule__Interval2__DurationAssignment_1_1_1");

@@ -2088,19 +2088,13 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     ((start=ISODATE end=ISODATE) | duration=DurationQuantity)
+	 *     (start=ISODATE (end=ISODATE | duration=DurationQuantity))
 	 *
 	 * Features:
-	 *    start[0, 1]
-	 *         EXCLUDE_IF_UNSET end
-	 *         MANDATORY_IF_SET end
-	 *         EXCLUDE_IF_SET duration
+	 *    start[1, 1]
 	 *    end[0, 1]
-	 *         EXCLUDE_IF_UNSET start
-	 *         MANDATORY_IF_SET start
 	 *         EXCLUDE_IF_SET duration
 	 *    duration[0, 1]
-	 *         EXCLUDE_IF_SET start
 	 *         EXCLUDE_IF_SET end
 	 */
 	protected void sequence_Interval1(EObject context, Interval1 semanticObject) {

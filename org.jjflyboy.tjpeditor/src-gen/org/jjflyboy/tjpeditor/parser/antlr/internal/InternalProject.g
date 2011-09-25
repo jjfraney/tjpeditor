@@ -4482,11 +4482,11 @@ ruleInterval1 returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(((
+((
 (
 		lv_start_0_0=RULE_ISODATE
 		{
-			newLeafNode(lv_start_0_0, grammarAccess.getInterval1Access().getStartISODATETerminalRuleCall_0_0_0()); 
+			newLeafNode(lv_start_0_0, grammarAccess.getInterval1Access().getStartISODATETerminalRuleCall_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4500,15 +4500,15 @@ ruleInterval1 returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_1='-' 
+)((	otherlv_1='-' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getInterval1Access().getHyphenMinusKeyword_0_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getInterval1Access().getHyphenMinusKeyword_1_0_0());
     }
 (
 (
 		lv_end_2_0=RULE_ISODATE
 		{
-			newLeafNode(lv_end_2_0, grammarAccess.getInterval1Access().getEndISODATETerminalRuleCall_0_1_1_0()); 
+			newLeafNode(lv_end_2_0, grammarAccess.getInterval1Access().getEndISODATETerminalRuleCall_1_0_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4522,15 +4522,15 @@ ruleInterval1 returns [EObject current=null]
 	    }
 
 )
-)))
+))
     |(	otherlv_3='+' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getInterval1Access().getPlusSignKeyword_1_0());
+    	newLeafNode(otherlv_3, grammarAccess.getInterval1Access().getPlusSignKeyword_1_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getInterval1Access().getDurationDurationQuantityParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getInterval1Access().getDurationDurationQuantityParserRuleCall_1_1_1_0()); 
 	    }
 		lv_duration_4_0=ruleDurationQuantity		{
 	        if ($current==null) {
@@ -4545,7 +4545,7 @@ ruleInterval1 returns [EObject current=null]
 	    }
 
 )
-)))
+))))
 ;
 
 
@@ -11712,7 +11712,7 @@ RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'
 
 RULE_TIME : (('0'?|'1') '0'..'9'|'2' '0'..'4') ':' '0'..'5' '0'..'9';
 
-RULE_ISODATE : '20' '0'..'9' '0'..'9' '-' ('0' '1'..'9'|'1' '0'..'2') '-' ('0' '1'..'9'|('1'|'2') '0'..'9'|'3' ('0'|'1')) ('-' (('0'|'1') '0'..'9'|'2' '0'..'4') ':' '0'..'5' '0'..'9' (':' '0'..'5' '0'..'9')? ('-' ('+'|'-') '0'..'5' '0'..'9' '0'..'5' '0'..'9')?)?;
+RULE_ISODATE : '20' '0'..'9' '0'..'9' '-' ('0' '1'..'9'|'1' '0'..'2') '-' ('0' '1'..'9'|('1'|'2') '0'..'9'|'3' ('0'|'1')) ('-' (('0'|'1') '0'..'9'|'2' '0'..'4') ':' '0'..'5' '0'..'9' (':' '0'..'5' '0'..'9')? (('+'|'-') '0'..'5' '0'..'9' '0'..'5' '0'..'9')?)?;
 
 RULE_RGB : ('0'..'9'|'a'..'f'|'A'..'F') ('0'..'9'|'a'..'f'|'A'..'F') ('0'..'9'|'a'..'f'|'A'..'F');
 
