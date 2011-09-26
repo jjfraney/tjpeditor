@@ -363,7 +363,14 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass limitEClass = null;
+  private EClass dailyMaxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dailyMinEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -616,6 +623,13 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * @generated
    */
   private EClass limitsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass limitsAttributeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1274,6 +1288,20 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * @generated
    */
   private EClass extendAttributeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass limitEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass limitAttributeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -2777,13 +2805,13 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLimit()
+  public EClass getDailyMax()
   {
-    if (limitEClass == null)
+    if (dailyMaxEClass == null)
     {
-      limitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(45);
+      dailyMaxEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(45);
     }
-    return limitEClass;
+    return dailyMaxEClass;
   }
 
   /**
@@ -2791,49 +2819,13 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLimit_Value()
+  public EClass getDailyMin()
   {
-        return (EAttribute)getLimit().getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLimit_Unit()
-  {
-        return (EAttribute)getLimit().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLimit_End()
-  {
-        return (EAttribute)getLimit().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLimit_Period()
-  {
-        return (EReference)getLimit().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLimit_Resources()
-  {
-        return (EReference)getLimit().getEStructuralFeatures().get(4);
+    if (dailyMinEClass == null)
+    {
+      dailyMinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(46);
+    }
+    return dailyMinEClass;
   }
 
   /**
@@ -2845,7 +2837,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (dailyWorkingHoursEClass == null)
     {
-      dailyWorkingHoursEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(46);
+      dailyWorkingHoursEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(47);
     }
     return dailyWorkingHoursEClass;
   }
@@ -2869,7 +2861,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (definitionsEClass == null)
     {
-      definitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(47);
+      definitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(48);
     }
     return definitionsEClass;
   }
@@ -2953,7 +2945,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (dependsEClass == null)
     {
-      dependsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(48);
+      dependsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(49);
     }
     return dependsEClass;
   }
@@ -2967,7 +2959,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (detailsEClass == null)
     {
-      detailsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(49);
+      detailsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(50);
     }
     return detailsEClass;
   }
@@ -2981,7 +2973,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (durationEClass == null)
     {
-      durationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(50);
+      durationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(51);
     }
     return durationEClass;
   }
@@ -3005,7 +2997,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (efficiencyEClass == null)
     {
-      efficiencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(51);
+      efficiencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(52);
     }
     return efficiencyEClass;
   }
@@ -3029,7 +3021,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (effortEClass == null)
     {
-      effortEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(52);
+      effortEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(53);
     }
     return effortEClass;
   }
@@ -3053,7 +3045,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (emailEClass == null)
     {
-      emailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(53);
+      emailEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(54);
     }
     return emailEClass;
   }
@@ -3077,7 +3069,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (endEClass == null)
     {
-      endEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(54);
+      endEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(55);
     }
     return endEClass;
   }
@@ -3101,7 +3093,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (endCreditEClass == null)
     {
-      endCreditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(55);
+      endCreditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(56);
     }
     return endCreditEClass;
   }
@@ -3125,7 +3117,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (epilogEClass == null)
     {
-      epilogEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(56);
+      epilogEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(57);
     }
     return epilogEClass;
   }
@@ -3139,7 +3131,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (extendEClass == null)
     {
-      extendEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(57);
+      extendEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(58);
     }
     return extendEClass;
   }
@@ -3203,7 +3195,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (failEClass == null)
     {
-      failEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(58);
+      failEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(59);
     }
     return failEClass;
   }
@@ -3227,7 +3219,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (flagsEClass == null)
     {
-      flagsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(59);
+      flagsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(60);
     }
     return flagsEClass;
   }
@@ -3251,7 +3243,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (fontColorEClass == null)
     {
-      fontColorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(60);
+      fontColorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(61);
     }
     return fontColorEClass;
   }
@@ -3275,7 +3267,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (footerEClass == null)
     {
-      footerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(61);
+      footerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(62);
     }
     return footerEClass;
   }
@@ -3289,7 +3281,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (formatsEClass == null)
     {
-      formatsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(62);
+      formatsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(63);
     }
     return formatsEClass;
   }
@@ -3313,7 +3305,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (gapDurationEClass == null)
     {
-      gapDurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(63);
+      gapDurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(64);
     }
     return gapDurationEClass;
   }
@@ -3327,7 +3319,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (gapLengthEClass == null)
     {
-      gapLengthEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(64);
+      gapLengthEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(65);
     }
     return gapLengthEClass;
   }
@@ -3341,7 +3333,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (hAlignEClass == null)
     {
-      hAlignEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(65);
+      hAlignEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(66);
     }
     return hAlignEClass;
   }
@@ -3375,7 +3367,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (headerEClass == null)
     {
-      headerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(66);
+      headerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(67);
     }
     return headerEClass;
   }
@@ -3389,7 +3381,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (headlineEClass == null)
     {
-      headlineEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(67);
+      headlineEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(68);
     }
     return headlineEClass;
   }
@@ -3403,7 +3395,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (hideReportEClass == null)
     {
-      hideReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(68);
+      hideReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(69);
     }
     return hideReportEClass;
   }
@@ -3427,7 +3419,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (hideResourceEClass == null)
     {
-      hideResourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(69);
+      hideResourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(70);
     }
     return hideResourceEClass;
   }
@@ -3451,7 +3443,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (hideTaskEClass == null)
     {
-      hideTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(70);
+      hideTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(71);
     }
     return hideTaskEClass;
   }
@@ -3475,7 +3467,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (includeEClass == null)
     {
-      includeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(71);
+      includeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(72);
     }
     return includeEClass;
   }
@@ -3499,7 +3491,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (interval1EClass == null)
     {
-      interval1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(72);
+      interval1EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(73);
     }
     return interval1EClass;
   }
@@ -3543,7 +3535,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (interval2EClass == null)
     {
-      interval2EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(73);
+      interval2EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(74);
     }
     return interval2EClass;
   }
@@ -3587,7 +3579,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (interval3EClass == null)
     {
-      interval3EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(74);
+      interval3EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(75);
     }
     return interval3EClass;
   }
@@ -3631,7 +3623,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (interval4EClass == null)
     {
-      interval4EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(75);
+      interval4EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(76);
     }
     return interval4EClass;
   }
@@ -3675,7 +3667,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (journalAttributesEClass == null)
     {
-      journalAttributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(76);
+      journalAttributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(77);
     }
     return journalAttributesEClass;
   }
@@ -3799,7 +3791,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (journalEntryEClass == null)
     {
-      journalEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(77);
+      journalEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(78);
     }
     return journalEntryEClass;
   }
@@ -3873,7 +3865,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (journalModeEClass == null)
     {
-      journalModeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(78);
+      journalModeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(79);
     }
     return journalModeEClass;
   }
@@ -3897,7 +3889,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (leftEClass == null)
     {
-      leftEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(79);
+      leftEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(80);
     }
     return leftEClass;
   }
@@ -3911,7 +3903,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (lengthEClass == null)
     {
-      lengthEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(80);
+      lengthEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(81);
     }
     return lengthEClass;
   }
@@ -3935,7 +3927,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (limitsEClass == null)
     {
-      limitsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(81);
+      limitsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(82);
     }
     return limitsEClass;
   }
@@ -3945,7 +3937,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLimits_Dailymax()
+  public EReference getLimits_Attributes()
   {
         return (EReference)getLimits().getEStructuralFeatures().get(0);
   }
@@ -3955,69 +3947,13 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLimits_Dailymin()
+  public EClass getLimitsAttribute()
   {
-        return (EReference)getLimits().getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLimits_Maximum()
-  {
-        return (EReference)getLimits().getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLimits_Minimum()
-  {
-        return (EReference)getLimits().getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLimits_Monthlymax()
-  {
-        return (EReference)getLimits().getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLimits_Monthlymin()
-  {
-        return (EReference)getLimits().getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLimits_Weeklymax()
-  {
-        return (EReference)getLimits().getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLimits_Weeklymin()
-  {
-        return (EReference)getLimits().getEStructuralFeatures().get(7);
+    if (limitsAttributeEClass == null)
+    {
+      limitsAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(83);
+    }
+    return limitsAttributeEClass;
   }
 
   /**
@@ -4029,7 +3965,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (listItemEClass == null)
     {
-      listItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(82);
+      listItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(84);
     }
     return listItemEClass;
   }
@@ -4043,7 +3979,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (listTypeEClass == null)
     {
-      listTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(83);
+      listTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(85);
     }
     return listTypeEClass;
   }
@@ -4067,7 +4003,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (loadUnitEClass == null)
     {
-      loadUnitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(84);
+      loadUnitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(86);
     }
     return loadUnitEClass;
   }
@@ -4091,7 +4027,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (managersEClass == null)
     {
-      managersEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(85);
+      managersEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(87);
     }
     return managersEClass;
   }
@@ -4115,7 +4051,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (mandatoryEClass == null)
     {
-      mandatoryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(86);
+      mandatoryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(88);
     }
     return mandatoryEClass;
   }
@@ -4139,7 +4075,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (maxEndEClass == null)
     {
-      maxEndEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(87);
+      maxEndEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(89);
     }
     return maxEndEClass;
   }
@@ -4163,7 +4099,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (maximumEClass == null)
     {
-      maximumEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(88);
+      maximumEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(90);
     }
     return maximumEClass;
   }
@@ -4177,7 +4113,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (maxStartEClass == null)
     {
-      maxStartEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(89);
+      maxStartEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(91);
     }
     return maxStartEClass;
   }
@@ -4201,7 +4137,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (milestoneEClass == null)
     {
-      milestoneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(90);
+      milestoneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(92);
     }
     return milestoneEClass;
   }
@@ -4225,7 +4161,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (minimumEClass == null)
     {
-      minimumEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(91);
+      minimumEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(93);
     }
     return minimumEClass;
   }
@@ -4239,7 +4175,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (minEndEClass == null)
     {
-      minEndEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(92);
+      minEndEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(94);
     }
     return minEndEClass;
   }
@@ -4263,7 +4199,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (minStartEClass == null)
     {
-      minStartEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(93);
+      minStartEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(95);
     }
     return minStartEClass;
   }
@@ -4287,7 +4223,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (monthlyMaxEClass == null)
     {
-      monthlyMaxEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(94);
+      monthlyMaxEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(96);
     }
     return monthlyMaxEClass;
   }
@@ -4301,7 +4237,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (monthlyMinEClass == null)
     {
-      monthlyMinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(95);
+      monthlyMinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(97);
     }
     return monthlyMinEClass;
   }
@@ -4315,7 +4251,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (noteEClass == null)
     {
-      noteEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(96);
+      noteEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(98);
     }
     return noteEClass;
   }
@@ -4339,7 +4275,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (nowEClass == null)
     {
-      nowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(97);
+      nowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(99);
     }
     return nowEClass;
   }
@@ -4363,7 +4299,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (numberFormatEClass == null)
     {
-      numberFormatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(98);
+      numberFormatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(100);
     }
     return numberFormatEClass;
   }
@@ -4377,7 +4313,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (periodEClass == null)
     {
-      periodEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(99);
+      periodEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(101);
     }
     return periodEClass;
   }
@@ -4401,7 +4337,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (persistentEClass == null)
     {
-      persistentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(100);
+      persistentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(102);
     }
     return persistentEClass;
   }
@@ -4425,7 +4361,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (precedesEClass == null)
     {
-      precedesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(101);
+      precedesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(103);
     }
     return precedesEClass;
   }
@@ -4439,7 +4375,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (priorityEClass == null)
     {
-      priorityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(102);
+      priorityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(104);
     }
     return priorityEClass;
   }
@@ -4463,7 +4399,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (projectIdEClass == null)
     {
-      projectIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(103);
+      projectIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(105);
     }
     return projectIdEClass;
   }
@@ -4487,7 +4423,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (projectIdsEClass == null)
     {
-      projectIdsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(104);
+      projectIdsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(106);
     }
     return projectIdsEClass;
   }
@@ -4511,7 +4447,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (prologEClass == null)
     {
-      prologEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(105);
+      prologEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(107);
     }
     return prologEClass;
   }
@@ -4525,7 +4461,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (purgeEClass == null)
     {
-      purgeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(106);
+      purgeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(108);
     }
     return purgeEClass;
   }
@@ -4549,7 +4485,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (rateEClass == null)
     {
-      rateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(107);
+      rateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(109);
     }
     return rateEClass;
   }
@@ -4573,7 +4509,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (referenceExtendEClass == null)
     {
-      referenceExtendEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(108);
+      referenceExtendEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(110);
     }
     return referenceExtendEClass;
   }
@@ -4587,7 +4523,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (remainingEClass == null)
     {
-      remainingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(109);
+      remainingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(111);
     }
     return remainingEClass;
   }
@@ -4611,7 +4547,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (reportPrefixEClass == null)
     {
-      reportPrefixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(110);
+      reportPrefixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(112);
     }
     return reportPrefixEClass;
   }
@@ -4635,7 +4571,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (resourceAttributesEClass == null)
     {
-      resourceAttributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(111);
+      resourceAttributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(113);
     }
     return resourceAttributesEClass;
   }
@@ -4699,7 +4635,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (resourcePrefixEClass == null)
     {
-      resourcePrefixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(112);
+      resourcePrefixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(114);
     }
     return resourcePrefixEClass;
   }
@@ -4723,7 +4659,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (resourceReportEClass == null)
     {
-      resourceReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(113);
+      resourceReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(115);
     }
     return resourceReportEClass;
   }
@@ -4737,7 +4673,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (resourceRootEClass == null)
     {
-      resourceRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(114);
+      resourceRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(116);
     }
     return resourceRootEClass;
   }
@@ -4761,7 +4697,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (responsibleEClass == null)
     {
-      responsibleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(115);
+      responsibleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(117);
     }
     return responsibleEClass;
   }
@@ -4785,7 +4721,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (richTextExtendEClass == null)
     {
-      richTextExtendEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(116);
+      richTextExtendEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(118);
     }
     return richTextExtendEClass;
   }
@@ -4799,7 +4735,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (rightEClass == null)
     {
-      rightEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(117);
+      rightEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(119);
     }
     return rightEClass;
   }
@@ -4813,7 +4749,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (rollupResourceEClass == null)
     {
-      rollupResourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(118);
+      rollupResourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(120);
     }
     return rollupResourceEClass;
   }
@@ -4837,7 +4773,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (rollupTaskEClass == null)
     {
-      rollupTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(119);
+      rollupTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(121);
     }
     return rollupTaskEClass;
   }
@@ -4861,7 +4797,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (scaleEClass == null)
     {
-      scaleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(120);
+      scaleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(122);
     }
     return scaleEClass;
   }
@@ -4885,7 +4821,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (scenarioEClass == null)
     {
-      scenarioEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(121);
+      scenarioEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(123);
     }
     return scenarioEClass;
   }
@@ -4939,7 +4875,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (scenariosEClass == null)
     {
-      scenariosEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(122);
+      scenariosEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(124);
     }
     return scenariosEClass;
   }
@@ -4963,7 +4899,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (scheduledEClass == null)
     {
-      scheduledEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(123);
+      scheduledEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(125);
     }
     return scheduledEClass;
   }
@@ -4987,7 +4923,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (schedulingEClass == null)
     {
-      schedulingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(124);
+      schedulingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(126);
     }
     return schedulingEClass;
   }
@@ -5011,7 +4947,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (selectEClass == null)
     {
-      selectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(125);
+      selectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(127);
     }
     return selectEClass;
   }
@@ -5035,7 +4971,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (selfContainedEClass == null)
     {
-      selfContainedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(126);
+      selfContainedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(128);
     }
     return selfContainedEClass;
   }
@@ -5059,7 +4995,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (shiftEClass == null)
     {
-      shiftEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(127);
+      shiftEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(129);
     }
     return shiftEClass;
   }
@@ -5143,7 +5079,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (shiftTimesheetEClass == null)
     {
-      shiftTimesheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(128);
+      shiftTimesheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(130);
     }
     return shiftTimesheetEClass;
   }
@@ -5167,7 +5103,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (shiftsEClass == null)
     {
-      shiftsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(129);
+      shiftsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(131);
     }
     return shiftsEClass;
   }
@@ -5191,7 +5127,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (shortTimeFormatEClass == null)
     {
-      shortTimeFormatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(130);
+      shortTimeFormatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(132);
     }
     return shortTimeFormatEClass;
   }
@@ -5215,7 +5151,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (sortJournalEntriesEClass == null)
     {
-      sortJournalEntriesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(131);
+      sortJournalEntriesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(133);
     }
     return sortJournalEntriesEClass;
   }
@@ -5239,7 +5175,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (sortResourcesEClass == null)
     {
-      sortResourcesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(132);
+      sortResourcesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(134);
     }
     return sortResourcesEClass;
   }
@@ -5253,7 +5189,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (sortTasksEClass == null)
     {
-      sortTasksEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(133);
+      sortTasksEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(135);
     }
     return sortTasksEClass;
   }
@@ -5267,7 +5203,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (startEClass == null)
     {
-      startEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(134);
+      startEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(136);
     }
     return startEClass;
   }
@@ -5291,7 +5227,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (startCreditEClass == null)
     {
-      startCreditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(135);
+      startCreditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(137);
     }
     return startCreditEClass;
   }
@@ -5315,7 +5251,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (statusStatusSheetEClass == null)
     {
-      statusStatusSheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(136);
+      statusStatusSheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(138);
     }
     return statusStatusSheetEClass;
   }
@@ -5359,7 +5295,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (statusStatusSheetAttributeEClass == null)
     {
-      statusStatusSheetAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(137);
+      statusStatusSheetAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(139);
     }
     return statusStatusSheetAttributeEClass;
   }
@@ -5373,7 +5309,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (summaryEClass == null)
     {
-      summaryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(138);
+      summaryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(140);
     }
     return summaryEClass;
   }
@@ -5387,7 +5323,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (tagFileEClass == null)
     {
-      tagFileEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(139);
+      tagFileEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(141);
     }
     return tagFileEClass;
   }
@@ -5451,7 +5387,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskStatusSheetEClass == null)
     {
-      taskStatusSheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(140);
+      taskStatusSheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(142);
     }
     return taskStatusSheetEClass;
   }
@@ -5485,7 +5421,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskStatusSheetAttributeEClass == null)
     {
-      taskStatusSheetAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(141);
+      taskStatusSheetAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(143);
     }
     return taskStatusSheetAttributeEClass;
   }
@@ -5499,7 +5435,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskTimesheetEClass == null)
     {
-      taskTimesheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(142);
+      taskTimesheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(144);
     }
     return taskTimesheetEClass;
   }
@@ -5533,7 +5469,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskAttributesEClass == null)
     {
-      taskAttributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(143);
+      taskAttributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(145);
     }
     return taskAttributesEClass;
   }
@@ -5677,7 +5613,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskPrefixEClass == null)
     {
-      taskPrefixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(144);
+      taskPrefixEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(146);
     }
     return taskPrefixEClass;
   }
@@ -5701,7 +5637,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskReportEClass == null)
     {
-      taskReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(145);
+      taskReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(147);
     }
     return taskReportEClass;
   }
@@ -5715,7 +5651,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskRootEClass == null)
     {
-      taskRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(146);
+      taskRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(148);
     }
     return taskRootEClass;
   }
@@ -5739,7 +5675,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (textExtendEClass == null)
     {
-      textExtendEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(147);
+      textExtendEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(149);
     }
     return textExtendEClass;
   }
@@ -5753,7 +5689,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (textReportEClass == null)
     {
-      textReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(148);
+      textReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(150);
     }
     return textReportEClass;
   }
@@ -5767,7 +5703,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timeFormatEClass == null)
     {
-      timeFormatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(149);
+      timeFormatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(151);
     }
     return timeFormatEClass;
   }
@@ -5791,7 +5727,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timeoffEClass == null)
     {
-      timeoffEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(150);
+      timeoffEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(152);
     }
     return timeoffEClass;
   }
@@ -5825,7 +5761,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timesheetEClass == null)
     {
-      timesheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(151);
+      timesheetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(153);
     }
     return timesheetEClass;
   }
@@ -5869,7 +5805,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timesheetReportEClass == null)
     {
-      timesheetReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(152);
+      timesheetReportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(154);
     }
     return timesheetReportEClass;
   }
@@ -5913,7 +5849,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timezoneEClass == null)
     {
-      timezoneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(153);
+      timezoneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(155);
     }
     return timezoneEClass;
   }
@@ -5937,7 +5873,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timingResolutionEClass == null)
     {
-      timingResolutionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(154);
+      timingResolutionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(156);
     }
     return timingResolutionEClass;
   }
@@ -5961,7 +5897,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (titleEClass == null)
     {
-      titleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(155);
+      titleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(157);
     }
     return titleEClass;
   }
@@ -5985,7 +5921,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (toolTipEClass == null)
     {
-      toolTipEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(156);
+      toolTipEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(158);
     }
     return toolTipEClass;
   }
@@ -6019,7 +5955,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (trackingScenarioEClass == null)
     {
-      trackingScenarioEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(157);
+      trackingScenarioEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(159);
     }
     return trackingScenarioEClass;
   }
@@ -6043,7 +5979,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (treeLevelEClass == null)
     {
-      treeLevelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(158);
+      treeLevelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(160);
     }
     return treeLevelEClass;
   }
@@ -6067,7 +6003,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (vacationEClass == null)
     {
-      vacationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(159);
+      vacationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(161);
     }
     return vacationEClass;
   }
@@ -6101,7 +6037,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (vacationShiftEClass == null)
     {
-      vacationShiftEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(160);
+      vacationShiftEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(162);
     }
     return vacationShiftEClass;
   }
@@ -6135,7 +6071,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (warnEClass == null)
     {
-      warnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(161);
+      warnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(163);
     }
     return warnEClass;
   }
@@ -6159,7 +6095,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (weekStartsEClass == null)
     {
-      weekStartsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(162);
+      weekStartsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(164);
     }
     return weekStartsEClass;
   }
@@ -6193,7 +6129,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (weeklyMaxEClass == null)
     {
-      weeklyMaxEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(163);
+      weeklyMaxEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(165);
     }
     return weeklyMaxEClass;
   }
@@ -6207,7 +6143,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (weeklyMinEClass == null)
     {
-      weeklyMinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(164);
+      weeklyMinEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(166);
     }
     return weeklyMinEClass;
   }
@@ -6221,7 +6157,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (widthEClass == null)
     {
-      widthEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(165);
+      widthEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(167);
     }
     return widthEClass;
   }
@@ -6245,7 +6181,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (workEClass == null)
     {
-      workEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(166);
+      workEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(168);
     }
     return workEClass;
   }
@@ -6279,7 +6215,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (workingHoursEClass == null)
     {
-      workingHoursEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(167);
+      workingHoursEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(169);
     }
     return workingHoursEClass;
   }
@@ -6323,7 +6259,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (yearlyWorkingDaysEClass == null)
     {
-      yearlyWorkingDaysEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(168);
+      yearlyWorkingDaysEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(170);
     }
     return yearlyWorkingDaysEClass;
   }
@@ -6347,7 +6283,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (accountShareEClass == null)
     {
-      accountShareEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(169);
+      accountShareEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(171);
     }
     return accountShareEClass;
   }
@@ -6381,7 +6317,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (columnAttributeEClass == null)
     {
-      columnAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(170);
+      columnAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(172);
     }
     return columnAttributeEClass;
   }
@@ -6395,7 +6331,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (columnEClass == null)
     {
-      columnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(171);
+      columnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(173);
     }
     return columnEClass;
   }
@@ -6429,7 +6365,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (criterionEClass == null)
     {
-      criterionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(172);
+      criterionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(174);
     }
     return criterionEClass;
   }
@@ -6463,7 +6399,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (criterionIdEClass == null)
     {
-      criterionIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(173);
+      criterionIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(175);
     }
     return criterionIdEClass;
   }
@@ -6497,7 +6433,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (durationQuantityEClass == null)
     {
-      durationQuantityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(174);
+      durationQuantityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(176);
     }
     return durationQuantityEClass;
   }
@@ -6531,7 +6467,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (extendAttributeEClass == null)
     {
-      extendAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(175);
+      extendAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(177);
     }
     return extendAttributeEClass;
   }
@@ -6581,11 +6517,109 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLimit()
+  {
+    if (limitEClass == null)
+    {
+      limitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(178);
+    }
+    return limitEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLimit_Value()
+  {
+        return (EAttribute)getLimit().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLimit_Unit()
+  {
+        return (EAttribute)getLimit().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLimit_Attributes()
+  {
+        return (EReference)getLimit().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLimitAttribute()
+  {
+    if (limitAttributeEClass == null)
+    {
+      limitAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(179);
+    }
+    return limitAttributeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLimitAttribute_End()
+  {
+        return (EAttribute)getLimitAttribute().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLimitAttribute_Period()
+  {
+        return (EReference)getLimitAttribute().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLimitAttribute_Resources()
+  {
+        return (EReference)getLimitAttribute().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLimitAttribute_Start()
+  {
+        return (EAttribute)getLimitAttribute().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRealFormat()
   {
     if (realFormatEClass == null)
     {
-      realFormatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(176);
+      realFormatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(180);
     }
     return realFormatEClass;
   }
@@ -6649,7 +6683,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (shiftLimitEClass == null)
     {
-      shiftLimitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(177);
+      shiftLimitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(181);
     }
     return shiftLimitEClass;
   }
@@ -6683,7 +6717,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (sortEClass == null)
     {
-      sortEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(178);
+      sortEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(182);
     }
     return sortEClass;
   }
@@ -6717,7 +6751,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskDependencyEClass == null)
     {
-      taskDependencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(179);
+      taskDependencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(183);
     }
     return taskDependencyEClass;
   }
@@ -6771,7 +6805,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (taskTimesheetAttributeEClass == null)
     {
-      taskTimesheetAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(180);
+      taskTimesheetAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(184);
     }
     return taskTimesheetAttributeEClass;
   }
@@ -6785,7 +6819,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timesheetAttributeEClass == null)
     {
-      timesheetAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(181);
+      timesheetAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(185);
     }
     return timesheetAttributeEClass;
   }
@@ -6799,7 +6833,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timesheetReportAttributeEClass == null)
     {
-      timesheetReportAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(182);
+      timesheetReportAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(186);
     }
     return timesheetReportAttributeEClass;
   }
@@ -6813,7 +6847,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (richTextEClass == null)
     {
-      richTextEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(183);
+      richTextEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(187);
     }
     return richTextEClass;
   }
@@ -6837,7 +6871,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (workHoursEClass == null)
     {
-      workHoursEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(184);
+      workHoursEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(188);
     }
     return workHoursEClass;
   }
@@ -6871,7 +6905,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (weekdaysEClass == null)
     {
-      weekdaysEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(185);
+      weekdaysEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(189);
     }
     return weekdaysEClass;
   }
@@ -6905,7 +6939,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (chargeAppliesEEnum == null)
     {
-      chargeAppliesEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(186);
+      chargeAppliesEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(190);
     }
     return chargeAppliesEEnum;
   }
@@ -6919,7 +6953,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (justificationEEnum == null)
     {
-      justificationEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(187);
+      justificationEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(191);
     }
     return justificationEEnum;
   }
@@ -6933,7 +6967,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (journalModeValueEEnum == null)
     {
-      journalModeValueEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(188);
+      journalModeValueEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(192);
     }
     return journalModeValueEEnum;
   }
@@ -6947,7 +6981,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (journalEntrySortCriterionEEnum == null)
     {
-      journalEntrySortCriterionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(189);
+      journalEntrySortCriterionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(193);
     }
     return journalEntrySortCriterionEEnum;
   }
@@ -6961,7 +6995,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (listTypeValuesEEnum == null)
     {
-      listTypeValuesEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(190);
+      listTypeValuesEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(194);
     }
     return listTypeValuesEEnum;
   }
@@ -6975,7 +7009,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (criterionDirectionEEnum == null)
     {
-      criterionDirectionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(191);
+      criterionDirectionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(195);
     }
     return criterionDirectionEEnum;
   }
@@ -6989,7 +7023,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (yesNoEEnum == null)
     {
-      yesNoEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(192);
+      yesNoEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(196);
     }
     return yesNoEEnum;
   }
@@ -7003,7 +7037,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (reportFormatEEnum == null)
     {
-      reportFormatEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(193);
+      reportFormatEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(197);
     }
     return reportFormatEEnum;
   }
@@ -7017,7 +7051,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (loadDisplayUnitEEnum == null)
     {
-      loadDisplayUnitEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(194);
+      loadDisplayUnitEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(198);
     }
     return loadDisplayUnitEEnum;
   }
@@ -7031,7 +7065,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (scaleResolutionEEnum == null)
     {
-      scaleResolutionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(195);
+      scaleResolutionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(199);
     }
     return scaleResolutionEEnum;
   }
@@ -7045,7 +7079,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (selectArgumentEEnum == null)
     {
-      selectArgumentEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(196);
+      selectArgumentEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(200);
     }
     return selectArgumentEEnum;
   }
@@ -7059,7 +7093,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (columnIdEEnum == null)
     {
-      columnIdEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(197);
+      columnIdEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(201);
     }
     return columnIdEEnum;
   }
@@ -7073,7 +7107,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (alertLevelEEnum == null)
     {
-      alertLevelEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(198);
+      alertLevelEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(202);
     }
     return alertLevelEEnum;
   }
@@ -7087,7 +7121,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (dependsPolicyEEnum == null)
     {
-      dependsPolicyEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(199);
+      dependsPolicyEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(203);
     }
     return dependsPolicyEEnum;
   }
@@ -7101,7 +7135,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (schedulingPolicyEEnum == null)
     {
-      schedulingPolicyEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(200);
+      schedulingPolicyEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(204);
     }
     return schedulingPolicyEEnum;
   }
@@ -7115,7 +7149,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (timeUnitEEnum == null)
     {
-      timeUnitEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(201);
+      timeUnitEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(205);
     }
     return timeUnitEEnum;
   }
@@ -7129,7 +7163,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (weekdayEEnum == null)
     {
-      weekdayEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(202);
+      weekdayEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(206);
     }
     return weekdayEEnum;
   }
@@ -7143,7 +7177,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   {
     if (workQuantityUnitEEnum == null)
     {
-      workQuantityUnitEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(203);
+      workQuantityUnitEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(ProjectPackage.eNS_URI).getEClassifiers().get(207);
     }
     return workQuantityUnitEEnum;
   }

@@ -17,9 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.jjflyboy.tjpeditor.project.Limit#getValue <em>Value</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.Limit#getUnit <em>Unit</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Limit#getEnd <em>End</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Limit#getPeriod <em>Period</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Limit#getResources <em>Resources</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.Limit#getAttributes <em>Attributes</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Limit extends Maximum, Minimum, MonthlyMax, MonthlyMin, WeeklyMax, WeeklyMin
+public interface Limit extends DailyMax, DailyMin, Maximum, Minimum, MonthlyMax, MonthlyMin, WeeklyMax, WeeklyMin
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.
@@ -85,71 +83,19 @@ public interface Limit extends Maximum, Minimum, MonthlyMax, MonthlyMin, WeeklyM
   void setUnit(TimeUnit value);
 
   /**
-   * Returns the value of the '<em><b>End</b></em>' attribute.
+   * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
+   * The list contents are of type {@link org.jjflyboy.tjpeditor.project.LimitAttribute}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>End</em>' attribute isn't clear,
+   * If the meaning of the '<em>Attributes</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>End</em>' attribute.
-   * @see #setEnd(String)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getLimit_End()
-   * @model
-   * @generated
-   */
-  String getEnd();
-
-  /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Limit#getEnd <em>End</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>End</em>' attribute.
-   * @see #getEnd()
-   * @generated
-   */
-  void setEnd(String value);
-
-  /**
-   * Returns the value of the '<em><b>Period</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Period</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Period</em>' containment reference.
-   * @see #setPeriod(Interval1)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getLimit_Period()
+   * @return the value of the '<em>Attributes</em>' containment reference list.
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getLimit_Attributes()
    * @model containment="true"
    * @generated
    */
-  Interval1 getPeriod();
-
-  /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Limit#getPeriod <em>Period</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Period</em>' containment reference.
-   * @see #getPeriod()
-   * @generated
-   */
-  void setPeriod(Interval1 value);
-
-  /**
-   * Returns the value of the '<em><b>Resources</b></em>' reference list.
-   * The list contents are of type {@link org.jjflyboy.tjpeditor.project.Resource}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Resources</em>' reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Resources</em>' reference list.
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getLimit_Resources()
-   * @model
-   * @generated
-   */
-  EList<Resource> getResources();
+  EList<LimitAttribute> getAttributes();
 
 } // Limit

@@ -65,6 +65,7 @@ import org.jjflyboy.tjpeditor.project.JournalEntry;
 import org.jjflyboy.tjpeditor.project.JournalMode;
 import org.jjflyboy.tjpeditor.project.Length;
 import org.jjflyboy.tjpeditor.project.Limit;
+import org.jjflyboy.tjpeditor.project.LimitAttribute;
 import org.jjflyboy.tjpeditor.project.Limits;
 import org.jjflyboy.tjpeditor.project.ListType;
 import org.jjflyboy.tjpeditor.project.LoadUnit;
@@ -550,11 +551,9 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.LIMIT:
 				if(context == grammarAccess.getDailyMaxRule() ||
-				   context == grammarAccess.getDailyMinRule()) {
-					sequence_DailyMax(context, (Limit) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getLimitRule() ||
+				   context == grammarAccess.getDailyMinRule() ||
+				   context == grammarAccess.getLimitRule() ||
+				   context == grammarAccess.getLimitsAttributeRule() ||
 				   context == grammarAccess.getMaximumRule() ||
 				   context == grammarAccess.getMinimumRule() ||
 				   context == grammarAccess.getMonthlyMaxRule() ||
@@ -562,6 +561,12 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getWeeklyMaxRule() ||
 				   context == grammarAccess.getWeeklyMinRule()) {
 					sequence_Limit(context, (Limit) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.LIMIT_ATTRIBUTE:
+				if(context == grammarAccess.getLimitAttributeRule()) {
+					sequence_LimitAttribute(context, (LimitAttribute) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1608,17 +1613,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     {Limit}
-	 *
-	 * Features:
-	 */
-	protected void sequence_DailyMax(EObject context, Limit semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     dailyWorkingHours=XFloat
 	 *
 	 * Features:
@@ -2449,26 +2443,27 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (value=XFloat unit=TimeUnit (end=ISODATE period=Interval1 resources+=[Resource|ID] resources+=[Resource|ID]*)?)
+	 *     (end=ISODATE period=Interval1 resources+=[Resource|ID] resources+=[Resource|ID]* start=ISODATE)
+	 *
+	 * Features:
+	 *    end[1, 1]
+	 *    period[1, 1]
+	 *    resources[1, *]
+	 *    start[1, 1]
+	 */
+	protected void sequence_LimitAttribute(EObject context, LimitAttribute semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (value=XFloat unit=TimeUnit attributes+=LimitAttribute*)
 	 *
 	 * Features:
 	 *    value[1, 1]
 	 *    unit[1, 1]
-	 *    end[0, 1]
-	 *         EXCLUDE_IF_UNSET period
-	 *         MANDATORY_IF_SET period
-	 *         EXCLUDE_IF_UNSET resources
-	 *         MANDATORY_IF_SET resources
-	 *         MANDATORY_IF_SET resources
-	 *    period[0, 1]
-	 *         EXCLUDE_IF_UNSET end
-	 *         MANDATORY_IF_SET end
-	 *         EXCLUDE_IF_UNSET resources
-	 *         MANDATORY_IF_SET resources
-	 *         MANDATORY_IF_SET resources
-	 *    resources[0, *]
-	 *         EXCLUDE_IF_UNSET end
-	 *         EXCLUDE_IF_UNSET period
+	 *    attributes[0, *]
 	 */
 	protected void sequence_Limit(EObject context, Limit semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2477,26 +2472,10 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         dailymax=DailyMax? 
-	 *         dailymin=DailyMin? 
-	 *         maximum=Maximum? 
-	 *         minimum=Minimum? 
-	 *         monthlymax=MonthlyMax? 
-	 *         monthlymin=MonthlyMin? 
-	 *         weeklymax=WeeklyMax? 
-	 *         weeklymin=WeeklyMin?
-	 *     )
+	 *     (attributes+=LimitsAttribute*)
 	 *
 	 * Features:
-	 *    dailymax[0, 1]
-	 *    dailymin[0, 1]
-	 *    maximum[0, 1]
-	 *    minimum[0, 1]
-	 *    monthlymax[0, 1]
-	 *    monthlymin[0, 1]
-	 *    weeklymax[0, 1]
-	 *    weeklymin[0, 1]
+	 *    attributes[0, *]
 	 */
 	protected void sequence_Limits(EObject context, Limits semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

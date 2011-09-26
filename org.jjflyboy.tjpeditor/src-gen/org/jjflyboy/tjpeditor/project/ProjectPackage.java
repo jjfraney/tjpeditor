@@ -411,7 +411,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getResourceReport()
    * @generated
    */
-  int RESOURCE_REPORT = 113;
+  int RESOURCE_REPORT = 115;
 
   /**
    * The number of structural features of the '<em>Resource Report</em>' class.
@@ -774,7 +774,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimesheetAttribute()
    * @generated
    */
-  int TIMESHEET_ATTRIBUTE = 181;
+  int TIMESHEET_ATTRIBUTE = 185;
 
   /**
    * The number of structural features of the '<em>Timesheet Attribute</em>' class.
@@ -970,7 +970,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getStatusStatusSheetAttribute()
    * @generated
    */
-  int STATUS_STATUS_SHEET_ATTRIBUTE = 137;
+  int STATUS_STATUS_SHEET_ATTRIBUTE = 139;
 
   /**
    * The number of structural features of the '<em>Status Status Sheet Attribute</em>' class.
@@ -1229,7 +1229,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getColumnAttribute()
    * @generated
    */
-  int COLUMN_ATTRIBUTE = 170;
+  int COLUMN_ATTRIBUTE = 172;
 
   /**
    * The number of structural features of the '<em>Column Attribute</em>' class.
@@ -1595,87 +1595,61 @@ public interface ProjectPackage extends EPackage
   int DATE_EXTEND_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.MaximumImpl <em>Maximum</em>}' class.
+   * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.LimitsAttributeImpl <em>Limits Attribute</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.jjflyboy.tjpeditor.project.impl.MaximumImpl
-   * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMaximum()
+   * @see org.jjflyboy.tjpeditor.project.impl.LimitsAttributeImpl
+   * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLimitsAttribute()
    * @generated
    */
-  int MAXIMUM = 88;
+  int LIMITS_ATTRIBUTE = 83;
 
   /**
-   * The number of structural features of the '<em>Maximum</em>' class.
+   * The number of structural features of the '<em>Limits Attribute</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAXIMUM_FEATURE_COUNT = 0;
+  int LIMITS_ATTRIBUTE_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl <em>Limit</em>}' class.
+   * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.DailyMaxImpl <em>Daily Max</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.jjflyboy.tjpeditor.project.impl.LimitImpl
-   * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLimit()
+   * @see org.jjflyboy.tjpeditor.project.impl.DailyMaxImpl
+   * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDailyMax()
    * @generated
    */
-  int LIMIT = 45;
+  int DAILY_MAX = 45;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMIT__VALUE = MAXIMUM_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Unit</b></em>' attribute.
+   * The number of structural features of the '<em>Daily Max</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIMIT__UNIT = MAXIMUM_FEATURE_COUNT + 1;
+  int DAILY_MAX_FEATURE_COUNT = LIMITS_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>End</b></em>' attribute.
+   * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.DailyMinImpl <em>Daily Min</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.jjflyboy.tjpeditor.project.impl.DailyMinImpl
+   * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDailyMin()
+   * @generated
+   */
+  int DAILY_MIN = 46;
+
+  /**
+   * The number of structural features of the '<em>Daily Min</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIMIT__END = MAXIMUM_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Period</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMIT__PERIOD = MAXIMUM_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Resources</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMIT__RESOURCES = MAXIMUM_FEATURE_COUNT + 4;
-
-  /**
-   * The number of structural features of the '<em>Limit</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMIT_FEATURE_COUNT = MAXIMUM_FEATURE_COUNT + 5;
+  int DAILY_MIN_FEATURE_COUNT = LIMITS_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.DailyWorkingHoursImpl <em>Daily Working Hours</em>}' class.
@@ -1685,7 +1659,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDailyWorkingHours()
    * @generated
    */
-  int DAILY_WORKING_HOURS = 46;
+  int DAILY_WORKING_HOURS = 47;
 
   /**
    * The feature id for the '<em><b>Daily Working Hours</b></em>' attribute.
@@ -1713,7 +1687,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDefinitions()
    * @generated
    */
-  int DEFINITIONS = 47;
+  int DEFINITIONS = 48;
 
   /**
    * The feature id for the '<em><b>All</b></em>' attribute.
@@ -1795,7 +1769,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDepends()
    * @generated
    */
-  int DEPENDS = 48;
+  int DEPENDS = 49;
 
   /**
    * The number of structural features of the '<em>Depends</em>' class.
@@ -1814,7 +1788,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDetails()
    * @generated
    */
-  int DETAILS = 49;
+  int DETAILS = 50;
 
   /**
    * The number of structural features of the '<em>Details</em>' class.
@@ -1833,7 +1807,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDuration()
    * @generated
    */
-  int DURATION = 50;
+  int DURATION = 51;
 
   /**
    * The feature id for the '<em><b>Duration</b></em>' containment reference.
@@ -1861,7 +1835,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getEfficiency()
    * @generated
    */
-  int EFFICIENCY = 51;
+  int EFFICIENCY = 52;
 
   /**
    * The feature id for the '<em><b>Efficiency</b></em>' attribute.
@@ -1889,7 +1863,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getEffort()
    * @generated
    */
-  int EFFORT = 52;
+  int EFFORT = 53;
 
   /**
    * The feature id for the '<em><b>Effort</b></em>' containment reference.
@@ -1917,7 +1891,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getEmail()
    * @generated
    */
-  int EMAIL = 53;
+  int EMAIL = 54;
 
   /**
    * The feature id for the '<em><b>Address</b></em>' attribute.
@@ -1945,7 +1919,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getEnd()
    * @generated
    */
-  int END = 54;
+  int END = 55;
 
   /**
    * The feature id for the '<em><b>End</b></em>' attribute.
@@ -1973,7 +1947,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getEndCredit()
    * @generated
    */
-  int END_CREDIT = 55;
+  int END_CREDIT = 56;
 
   /**
    * The feature id for the '<em><b>Credit</b></em>' attribute.
@@ -2001,7 +1975,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getEpilog()
    * @generated
    */
-  int EPILOG = 56;
+  int EPILOG = 57;
 
   /**
    * The number of structural features of the '<em>Epilog</em>' class.
@@ -2020,7 +1994,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getExtend()
    * @generated
    */
-  int EXTEND = 57;
+  int EXTEND = 58;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2084,7 +2058,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getFail()
    * @generated
    */
-  int FAIL = 58;
+  int FAIL = 59;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -2112,7 +2086,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getFlags()
    * @generated
    */
-  int FLAGS = 59;
+  int FLAGS = 60;
 
   /**
    * The feature id for the '<em><b>Flags</b></em>' attribute list.
@@ -2140,7 +2114,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getFontColor()
    * @generated
    */
-  int FONT_COLOR = 60;
+  int FONT_COLOR = 61;
 
   /**
    * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -2168,7 +2142,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getFooter()
    * @generated
    */
-  int FOOTER = 61;
+  int FOOTER = 62;
 
   /**
    * The number of structural features of the '<em>Footer</em>' class.
@@ -2187,7 +2161,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getFormats()
    * @generated
    */
-  int FORMATS = 62;
+  int FORMATS = 63;
 
   /**
    * The feature id for the '<em><b>Formats</b></em>' attribute list.
@@ -2215,7 +2189,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getGapDuration()
    * @generated
    */
-  int GAP_DURATION = 63;
+  int GAP_DURATION = 64;
 
   /**
    * The number of structural features of the '<em>Gap Duration</em>' class.
@@ -2234,7 +2208,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getGapLength()
    * @generated
    */
-  int GAP_LENGTH = 64;
+  int GAP_LENGTH = 65;
 
   /**
    * The number of structural features of the '<em>Gap Length</em>' class.
@@ -2253,7 +2227,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getHAlign()
    * @generated
    */
-  int HALIGN = 65;
+  int HALIGN = 66;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -2290,7 +2264,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getHeader()
    * @generated
    */
-  int HEADER = 66;
+  int HEADER = 67;
 
   /**
    * The number of structural features of the '<em>Header</em>' class.
@@ -2309,7 +2283,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getHeadline()
    * @generated
    */
-  int HEADLINE = 67;
+  int HEADLINE = 68;
 
   /**
    * The number of structural features of the '<em>Headline</em>' class.
@@ -2328,7 +2302,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getHideReport()
    * @generated
    */
-  int HIDE_REPORT = 68;
+  int HIDE_REPORT = 69;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -2356,7 +2330,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getHideResource()
    * @generated
    */
-  int HIDE_RESOURCE = 69;
+  int HIDE_RESOURCE = 70;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -2384,7 +2358,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getHideTask()
    * @generated
    */
-  int HIDE_TASK = 70;
+  int HIDE_TASK = 71;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -2412,7 +2386,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getInclude()
    * @generated
    */
-  int INCLUDE = 71;
+  int INCLUDE = 72;
 
   /**
    * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -2440,7 +2414,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getInterval1()
    * @generated
    */
-  int INTERVAL1 = 72;
+  int INTERVAL1 = 73;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -2486,7 +2460,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getInterval2()
    * @generated
    */
-  int INTERVAL2 = 73;
+  int INTERVAL2 = 74;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -2532,7 +2506,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getInterval3()
    * @generated
    */
-  int INTERVAL3 = 74;
+  int INTERVAL3 = 75;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -2578,7 +2552,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getInterval4()
    * @generated
    */
-  int INTERVAL4 = 75;
+  int INTERVAL4 = 76;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -2624,7 +2598,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getJournalAttributes()
    * @generated
    */
-  int JOURNAL_ATTRIBUTES = 76;
+  int JOURNAL_ATTRIBUTES = 77;
 
   /**
    * The feature id for the '<em><b>All</b></em>' attribute.
@@ -2742,7 +2716,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getJournalEntry()
    * @generated
    */
-  int JOURNAL_ENTRY = 77;
+  int JOURNAL_ENTRY = 78;
 
   /**
    * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -2815,7 +2789,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getJournalMode()
    * @generated
    */
-  int JOURNAL_MODE = 78;
+  int JOURNAL_MODE = 79;
 
   /**
    * The feature id for the '<em><b>Mode</b></em>' attribute.
@@ -2843,7 +2817,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLeft()
    * @generated
    */
-  int LEFT = 79;
+  int LEFT = 80;
 
   /**
    * The number of structural features of the '<em>Left</em>' class.
@@ -2862,7 +2836,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLength()
    * @generated
    */
-  int LENGTH = 80;
+  int LENGTH = 81;
 
   /**
    * The feature id for the '<em><b>Length</b></em>' containment reference.
@@ -2890,79 +2864,16 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLimits()
    * @generated
    */
-  int LIMITS = 81;
+  int LIMITS = 82;
 
   /**
-   * The feature id for the '<em><b>Dailymax</b></em>' containment reference.
+   * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIMITS__DAILYMAX = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Dailymin</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMITS__DAILYMIN = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Maximum</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMITS__MAXIMUM = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Minimum</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMITS__MINIMUM = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Monthlymax</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMITS__MONTHLYMAX = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Monthlymin</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMITS__MONTHLYMIN = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 5;
-
-  /**
-   * The feature id for the '<em><b>Weeklymax</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMITS__WEEKLYMAX = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Weeklymin</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIMITS__WEEKLYMIN = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 7;
+  int LIMITS__ATTRIBUTES = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Limits</em>' class.
@@ -2971,7 +2882,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIMITS_FEATURE_COUNT = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 8;
+  int LIMITS_FEATURE_COUNT = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.ListItemImpl <em>List Item</em>}' class.
@@ -2981,7 +2892,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getListItem()
    * @generated
    */
-  int LIST_ITEM = 82;
+  int LIST_ITEM = 84;
 
   /**
    * The number of structural features of the '<em>List Item</em>' class.
@@ -3000,7 +2911,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getListType()
    * @generated
    */
-  int LIST_TYPE = 83;
+  int LIST_TYPE = 85;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -3028,7 +2939,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLoadUnit()
    * @generated
    */
-  int LOAD_UNIT = 84;
+  int LOAD_UNIT = 86;
 
   /**
    * The feature id for the '<em><b>Unit</b></em>' attribute.
@@ -3056,7 +2967,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getManagers()
    * @generated
    */
-  int MANAGERS = 85;
+  int MANAGERS = 87;
 
   /**
    * The feature id for the '<em><b>Resources</b></em>' reference list.
@@ -3084,7 +2995,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMandatory()
    * @generated
    */
-  int MANDATORY = 86;
+  int MANDATORY = 88;
 
   /**
    * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -3112,7 +3023,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMaxEnd()
    * @generated
    */
-  int MAX_END = 87;
+  int MAX_END = 89;
 
   /**
    * The feature id for the '<em><b>Max End</b></em>' attribute.
@@ -3133,6 +3044,25 @@ public interface ProjectPackage extends EPackage
   int MAX_END_FEATURE_COUNT = TASK_ATTRIBUTE_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.MaximumImpl <em>Maximum</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.jjflyboy.tjpeditor.project.impl.MaximumImpl
+   * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMaximum()
+   * @generated
+   */
+  int MAXIMUM = 90;
+
+  /**
+   * The number of structural features of the '<em>Maximum</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAXIMUM_FEATURE_COUNT = LIMITS_ATTRIBUTE_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.MaxStartImpl <em>Max Start</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3140,7 +3070,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMaxStart()
    * @generated
    */
-  int MAX_START = 89;
+  int MAX_START = 91;
 
   /**
    * The feature id for the '<em><b>Max Start</b></em>' attribute.
@@ -3168,7 +3098,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMilestone()
    * @generated
    */
-  int MILESTONE = 90;
+  int MILESTONE = 92;
 
   /**
    * The feature id for the '<em><b>Milestone</b></em>' attribute.
@@ -3196,7 +3126,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMinimum()
    * @generated
    */
-  int MINIMUM = 91;
+  int MINIMUM = 93;
 
   /**
    * The number of structural features of the '<em>Minimum</em>' class.
@@ -3205,7 +3135,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINIMUM_FEATURE_COUNT = 0;
+  int MINIMUM_FEATURE_COUNT = LIMITS_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.MinEndImpl <em>Min End</em>}' class.
@@ -3215,7 +3145,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMinEnd()
    * @generated
    */
-  int MIN_END = 92;
+  int MIN_END = 94;
 
   /**
    * The feature id for the '<em><b>Min End</b></em>' attribute.
@@ -3243,7 +3173,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMinStart()
    * @generated
    */
-  int MIN_START = 93;
+  int MIN_START = 95;
 
   /**
    * The feature id for the '<em><b>Min Start</b></em>' attribute.
@@ -3271,7 +3201,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMonthlyMax()
    * @generated
    */
-  int MONTHLY_MAX = 94;
+  int MONTHLY_MAX = 96;
 
   /**
    * The number of structural features of the '<em>Monthly Max</em>' class.
@@ -3280,7 +3210,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONTHLY_MAX_FEATURE_COUNT = 0;
+  int MONTHLY_MAX_FEATURE_COUNT = LIMITS_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.MonthlyMinImpl <em>Monthly Min</em>}' class.
@@ -3290,7 +3220,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getMonthlyMin()
    * @generated
    */
-  int MONTHLY_MIN = 95;
+  int MONTHLY_MIN = 97;
 
   /**
    * The number of structural features of the '<em>Monthly Min</em>' class.
@@ -3299,7 +3229,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MONTHLY_MIN_FEATURE_COUNT = 0;
+  int MONTHLY_MIN_FEATURE_COUNT = LIMITS_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.NoteImpl <em>Note</em>}' class.
@@ -3309,7 +3239,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getNote()
    * @generated
    */
-  int NOTE = 96;
+  int NOTE = 98;
 
   /**
    * The feature id for the '<em><b>Note</b></em>' attribute.
@@ -3337,7 +3267,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getNow()
    * @generated
    */
-  int NOW = 97;
+  int NOW = 99;
 
   /**
    * The feature id for the '<em><b>Now</b></em>' attribute.
@@ -3365,7 +3295,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getNumberFormat()
    * @generated
    */
-  int NUMBER_FORMAT = 98;
+  int NUMBER_FORMAT = 100;
 
   /**
    * The number of structural features of the '<em>Number Format</em>' class.
@@ -3384,7 +3314,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getPeriod()
    * @generated
    */
-  int PERIOD = 99;
+  int PERIOD = 101;
 
   /**
    * The feature id for the '<em><b>Period</b></em>' containment reference.
@@ -3412,7 +3342,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getPersistent()
    * @generated
    */
-  int PERSISTENT = 100;
+  int PERSISTENT = 102;
 
   /**
    * The feature id for the '<em><b>Persistent</b></em>' attribute.
@@ -3440,7 +3370,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getPrecedes()
    * @generated
    */
-  int PRECEDES = 101;
+  int PRECEDES = 103;
 
   /**
    * The number of structural features of the '<em>Precedes</em>' class.
@@ -3459,7 +3389,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getPriority()
    * @generated
    */
-  int PRIORITY = 102;
+  int PRIORITY = 104;
 
   /**
    * The feature id for the '<em><b>Priority</b></em>' attribute.
@@ -3487,7 +3417,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getProjectId()
    * @generated
    */
-  int PROJECT_ID = 103;
+  int PROJECT_ID = 105;
 
   /**
    * The feature id for the '<em><b>Project Id</b></em>' attribute.
@@ -3515,7 +3445,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getProjectIds()
    * @generated
    */
-  int PROJECT_IDS = 104;
+  int PROJECT_IDS = 106;
 
   /**
    * The feature id for the '<em><b>Ids</b></em>' attribute list.
@@ -3543,7 +3473,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getProlog()
    * @generated
    */
-  int PROLOG = 105;
+  int PROLOG = 107;
 
   /**
    * The number of structural features of the '<em>Prolog</em>' class.
@@ -3562,7 +3492,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getPurge()
    * @generated
    */
-  int PURGE = 106;
+  int PURGE = 108;
 
   /**
    * The feature id for the '<em><b>List Attribute</b></em>' attribute.
@@ -3590,7 +3520,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getRate()
    * @generated
    */
-  int RATE = 107;
+  int RATE = 109;
 
   /**
    * The feature id for the '<em><b>Rate</b></em>' attribute.
@@ -3618,7 +3548,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getReferenceExtend()
    * @generated
    */
-  int REFERENCE_EXTEND = 108;
+  int REFERENCE_EXTEND = 110;
 
   /**
    * The number of structural features of the '<em>Reference Extend</em>' class.
@@ -3637,7 +3567,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getRemaining()
    * @generated
    */
-  int REMAINING = 109;
+  int REMAINING = 111;
 
   /**
    * The feature id for the '<em><b>Remaining</b></em>' containment reference.
@@ -3665,7 +3595,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getReportPrefix()
    * @generated
    */
-  int REPORT_PREFIX = 110;
+  int REPORT_PREFIX = 112;
 
   /**
    * The feature id for the '<em><b>Report</b></em>' reference.
@@ -3693,7 +3623,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getResourceAttributes()
    * @generated
    */
-  int RESOURCE_ATTRIBUTES = 111;
+  int RESOURCE_ATTRIBUTES = 113;
 
   /**
    * The feature id for the '<em><b>All</b></em>' attribute.
@@ -3757,7 +3687,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getResourcePrefix()
    * @generated
    */
-  int RESOURCE_PREFIX = 112;
+  int RESOURCE_PREFIX = 114;
 
   /**
    * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -3785,7 +3715,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getResourceRoot()
    * @generated
    */
-  int RESOURCE_ROOT = 114;
+  int RESOURCE_ROOT = 116;
 
   /**
    * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -3813,7 +3743,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getResponsible()
    * @generated
    */
-  int RESPONSIBLE = 115;
+  int RESPONSIBLE = 117;
 
   /**
    * The feature id for the '<em><b>Resources</b></em>' reference list.
@@ -3841,7 +3771,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getRichTextExtend()
    * @generated
    */
-  int RICH_TEXT_EXTEND = 116;
+  int RICH_TEXT_EXTEND = 118;
 
   /**
    * The number of structural features of the '<em>Rich Text Extend</em>' class.
@@ -3860,7 +3790,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getRight()
    * @generated
    */
-  int RIGHT = 117;
+  int RIGHT = 119;
 
   /**
    * The number of structural features of the '<em>Right</em>' class.
@@ -3879,7 +3809,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getRollupResource()
    * @generated
    */
-  int ROLLUP_RESOURCE = 118;
+  int ROLLUP_RESOURCE = 120;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -3907,7 +3837,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getRollupTask()
    * @generated
    */
-  int ROLLUP_TASK = 119;
+  int ROLLUP_TASK = 121;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -3935,7 +3865,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getScale()
    * @generated
    */
-  int SCALE = 120;
+  int SCALE = 122;
 
   /**
    * The feature id for the '<em><b>Scale</b></em>' attribute.
@@ -3963,7 +3893,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getScenario()
    * @generated
    */
-  int SCENARIO = 121;
+  int SCENARIO = 123;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4018,7 +3948,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getScenarios()
    * @generated
    */
-  int SCENARIOS = 122;
+  int SCENARIOS = 124;
 
   /**
    * The feature id for the '<em><b>Scenarios</b></em>' reference list.
@@ -4046,7 +3976,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getScheduled()
    * @generated
    */
-  int SCHEDULED = 123;
+  int SCHEDULED = 125;
 
   /**
    * The feature id for the '<em><b>Scheduled</b></em>' attribute.
@@ -4074,7 +4004,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getScheduling()
    * @generated
    */
-  int SCHEDULING = 124;
+  int SCHEDULING = 126;
 
   /**
    * The feature id for the '<em><b>Scheduling</b></em>' attribute.
@@ -4102,7 +4032,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSelect()
    * @generated
    */
-  int SELECT = 125;
+  int SELECT = 127;
 
   /**
    * The feature id for the '<em><b>Argument</b></em>' attribute.
@@ -4130,7 +4060,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSelfContained()
    * @generated
    */
-  int SELF_CONTAINED = 126;
+  int SELF_CONTAINED = 128;
 
   /**
    * The feature id for the '<em><b>Selfcontained</b></em>' attribute.
@@ -4158,7 +4088,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getShift()
    * @generated
    */
-  int SHIFT = 127;
+  int SHIFT = 129;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4240,7 +4170,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getShiftTimesheet()
    * @generated
    */
-  int SHIFT_TIMESHEET = 128;
+  int SHIFT_TIMESHEET = 130;
 
   /**
    * The feature id for the '<em><b>Shift</b></em>' reference.
@@ -4268,7 +4198,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getShifts()
    * @generated
    */
-  int SHIFTS = 129;
+  int SHIFTS = 131;
 
   /**
    * The feature id for the '<em><b>Limits</b></em>' containment reference list.
@@ -4296,7 +4226,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getShortTimeFormat()
    * @generated
    */
-  int SHORT_TIME_FORMAT = 130;
+  int SHORT_TIME_FORMAT = 132;
 
   /**
    * The feature id for the '<em><b>Short Time Format</b></em>' attribute.
@@ -4324,7 +4254,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSortJournalEntries()
    * @generated
    */
-  int SORT_JOURNAL_ENTRIES = 131;
+  int SORT_JOURNAL_ENTRIES = 133;
 
   /**
    * The feature id for the '<em><b>Criteria</b></em>' attribute list.
@@ -4352,7 +4282,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSortResources()
    * @generated
    */
-  int SORT_RESOURCES = 132;
+  int SORT_RESOURCES = 134;
 
   /**
    * The number of structural features of the '<em>Sort Resources</em>' class.
@@ -4371,7 +4301,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSortTasks()
    * @generated
    */
-  int SORT_TASKS = 133;
+  int SORT_TASKS = 135;
 
   /**
    * The number of structural features of the '<em>Sort Tasks</em>' class.
@@ -4390,7 +4320,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getStart()
    * @generated
    */
-  int START = 134;
+  int START = 136;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -4418,7 +4348,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getStartCredit()
    * @generated
    */
-  int START_CREDIT = 135;
+  int START_CREDIT = 137;
 
   /**
    * The feature id for the '<em><b>Start Credit</b></em>' attribute.
@@ -4446,7 +4376,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskStatusSheetAttribute()
    * @generated
    */
-  int TASK_STATUS_SHEET_ATTRIBUTE = 141;
+  int TASK_STATUS_SHEET_ATTRIBUTE = 143;
 
   /**
    * The number of structural features of the '<em>Task Status Sheet Attribute</em>' class.
@@ -4465,7 +4395,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getStatusStatusSheet()
    * @generated
    */
-  int STATUS_STATUS_SHEET = 136;
+  int STATUS_STATUS_SHEET = 138;
 
   /**
    * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -4511,7 +4441,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSummary()
    * @generated
    */
-  int SUMMARY = 138;
+  int SUMMARY = 140;
 
   /**
    * The number of structural features of the '<em>Summary</em>' class.
@@ -4530,7 +4460,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTagFile()
    * @generated
    */
-  int TAG_FILE = 139;
+  int TAG_FILE = 141;
 
   /**
    * The feature id for the '<em><b>File</b></em>' attribute.
@@ -4594,7 +4524,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskStatusSheet()
    * @generated
    */
-  int TASK_STATUS_SHEET = 140;
+  int TASK_STATUS_SHEET = 142;
 
   /**
    * The feature id for the '<em><b>Task</b></em>' reference.
@@ -4631,7 +4561,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskTimesheet()
    * @generated
    */
-  int TASK_TIMESHEET = 142;
+  int TASK_TIMESHEET = 144;
 
   /**
    * The feature id for the '<em><b>Task</b></em>' reference.
@@ -4668,7 +4598,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskAttributes()
    * @generated
    */
-  int TASK_ATTRIBUTES = 143;
+  int TASK_ATTRIBUTES = 145;
 
   /**
    * The feature id for the '<em><b>All</b></em>' attribute.
@@ -4804,7 +4734,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskPrefix()
    * @generated
    */
-  int TASK_PREFIX = 144;
+  int TASK_PREFIX = 146;
 
   /**
    * The feature id for the '<em><b>Task</b></em>' reference.
@@ -4832,7 +4762,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskReport()
    * @generated
    */
-  int TASK_REPORT = 145;
+  int TASK_REPORT = 147;
 
   /**
    * The number of structural features of the '<em>Task Report</em>' class.
@@ -4851,7 +4781,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskRoot()
    * @generated
    */
-  int TASK_ROOT = 146;
+  int TASK_ROOT = 148;
 
   /**
    * The feature id for the '<em><b>Task</b></em>' reference.
@@ -4879,7 +4809,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTextExtend()
    * @generated
    */
-  int TEXT_EXTEND = 147;
+  int TEXT_EXTEND = 149;
 
   /**
    * The number of structural features of the '<em>Text Extend</em>' class.
@@ -4898,7 +4828,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTextReport()
    * @generated
    */
-  int TEXT_REPORT = 148;
+  int TEXT_REPORT = 150;
 
   /**
    * The number of structural features of the '<em>Text Report</em>' class.
@@ -4917,7 +4847,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimeFormat()
    * @generated
    */
-  int TIME_FORMAT = 149;
+  int TIME_FORMAT = 151;
 
   /**
    * The feature id for the '<em><b>Timeformat</b></em>' attribute.
@@ -4945,7 +4875,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimeoff()
    * @generated
    */
-  int TIMEOFF = 150;
+  int TIMEOFF = 152;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4982,7 +4912,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimesheet()
    * @generated
    */
-  int TIMESHEET = 151;
+  int TIMESHEET = 153;
 
   /**
    * The feature id for the '<em><b>Resource</b></em>' reference.
@@ -5028,7 +4958,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimesheetReport()
    * @generated
    */
-  int TIMESHEET_REPORT = 152;
+  int TIMESHEET_REPORT = 154;
 
   /**
    * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -5074,7 +5004,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimezone()
    * @generated
    */
-  int TIMEZONE = 153;
+  int TIMEZONE = 155;
 
   /**
    * The feature id for the '<em><b>Timezone</b></em>' attribute.
@@ -5102,7 +5032,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimingResolution()
    * @generated
    */
-  int TIMING_RESOLUTION = 154;
+  int TIMING_RESOLUTION = 156;
 
   /**
    * The feature id for the '<em><b>Timing Resolution</b></em>' attribute.
@@ -5130,7 +5060,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTitle()
    * @generated
    */
-  int TITLE = 155;
+  int TITLE = 157;
 
   /**
    * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -5158,7 +5088,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getToolTip()
    * @generated
    */
-  int TOOL_TIP = 156;
+  int TOOL_TIP = 158;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -5195,7 +5125,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTrackingScenario()
    * @generated
    */
-  int TRACKING_SCENARIO = 157;
+  int TRACKING_SCENARIO = 159;
 
   /**
    * The feature id for the '<em><b>Scenario</b></em>' reference.
@@ -5223,7 +5153,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTreeLevel()
    * @generated
    */
-  int TREE_LEVEL = 158;
+  int TREE_LEVEL = 160;
 
   /**
    * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -5251,7 +5181,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getVacation()
    * @generated
    */
-  int VACATION = 159;
+  int VACATION = 161;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5288,7 +5218,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getVacationShift()
    * @generated
    */
-  int VACATION_SHIFT = 160;
+  int VACATION_SHIFT = 162;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5325,7 +5255,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWarn()
    * @generated
    */
-  int WARN = 161;
+  int WARN = 163;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -5353,7 +5283,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWeekStarts()
    * @generated
    */
-  int WEEK_STARTS = 162;
+  int WEEK_STARTS = 164;
 
   /**
    * The feature id for the '<em><b>Sunday</b></em>' attribute.
@@ -5390,7 +5320,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWeeklyMax()
    * @generated
    */
-  int WEEKLY_MAX = 163;
+  int WEEKLY_MAX = 165;
 
   /**
    * The number of structural features of the '<em>Weekly Max</em>' class.
@@ -5399,7 +5329,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WEEKLY_MAX_FEATURE_COUNT = 0;
+  int WEEKLY_MAX_FEATURE_COUNT = LIMITS_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.WeeklyMinImpl <em>Weekly Min</em>}' class.
@@ -5409,7 +5339,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWeeklyMin()
    * @generated
    */
-  int WEEKLY_MIN = 164;
+  int WEEKLY_MIN = 166;
 
   /**
    * The number of structural features of the '<em>Weekly Min</em>' class.
@@ -5418,7 +5348,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WEEKLY_MIN_FEATURE_COUNT = 0;
+  int WEEKLY_MIN_FEATURE_COUNT = LIMITS_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.WidthImpl <em>Width</em>}' class.
@@ -5428,7 +5358,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWidth()
    * @generated
    */
-  int WIDTH = 165;
+  int WIDTH = 167;
 
   /**
    * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -5456,7 +5386,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWork()
    * @generated
    */
-  int WORK = 166;
+  int WORK = 168;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -5493,7 +5423,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWorkingHours()
    * @generated
    */
-  int WORKING_HOURS = 167;
+  int WORKING_HOURS = 169;
 
   /**
    * The feature id for the '<em><b>Weekdays</b></em>' containment reference list.
@@ -5539,7 +5469,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getYearlyWorkingDays()
    * @generated
    */
-  int YEARLY_WORKING_DAYS = 168;
+  int YEARLY_WORKING_DAYS = 170;
 
   /**
    * The feature id for the '<em><b>Yearly Working Days</b></em>' attribute.
@@ -5567,7 +5497,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getAccountShare()
    * @generated
    */
-  int ACCOUNT_SHARE = 169;
+  int ACCOUNT_SHARE = 171;
 
   /**
    * The feature id for the '<em><b>Account</b></em>' reference.
@@ -5604,7 +5534,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getColumn()
    * @generated
    */
-  int COLUMN = 171;
+  int COLUMN = 173;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5641,7 +5571,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getCriterion()
    * @generated
    */
-  int CRITERION = 172;
+  int CRITERION = 174;
 
   /**
    * The feature id for the '<em><b>Scenario</b></em>' reference.
@@ -5678,7 +5608,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getCriterionId()
    * @generated
    */
-  int CRITERION_ID = 173;
+  int CRITERION_ID = 175;
 
   /**
    * The feature id for the '<em><b>Column Id</b></em>' attribute.
@@ -5715,7 +5645,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDurationQuantity()
    * @generated
    */
-  int DURATION_QUANTITY = 174;
+  int DURATION_QUANTITY = 176;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -5752,7 +5682,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getExtendAttribute()
    * @generated
    */
-  int EXTEND_ATTRIBUTE = 175;
+  int EXTEND_ATTRIBUTE = 177;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5800,6 +5730,107 @@ public interface ProjectPackage extends EPackage
   int EXTEND_ATTRIBUTE_FEATURE_COUNT = DATE_EXTEND_FEATURE_COUNT + 4;
 
   /**
+   * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl <em>Limit</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.jjflyboy.tjpeditor.project.impl.LimitImpl
+   * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLimit()
+   * @generated
+   */
+  int LIMIT = 178;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT__VALUE = DAILY_MAX_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Unit</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT__UNIT = DAILY_MAX_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT__ATTRIBUTES = DAILY_MAX_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Limit</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT_FEATURE_COUNT = DAILY_MAX_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.LimitAttributeImpl <em>Limit Attribute</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.jjflyboy.tjpeditor.project.impl.LimitAttributeImpl
+   * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLimitAttribute()
+   * @generated
+   */
+  int LIMIT_ATTRIBUTE = 179;
+
+  /**
+   * The feature id for the '<em><b>End</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT_ATTRIBUTE__END = 0;
+
+  /**
+   * The feature id for the '<em><b>Period</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT_ATTRIBUTE__PERIOD = 1;
+
+  /**
+   * The feature id for the '<em><b>Resources</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT_ATTRIBUTE__RESOURCES = 2;
+
+  /**
+   * The feature id for the '<em><b>Start</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT_ATTRIBUTE__START = 3;
+
+  /**
+   * The number of structural features of the '<em>Limit Attribute</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIMIT_ATTRIBUTE_FEATURE_COUNT = 4;
+
+  /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.RealFormatImpl <em>Real Format</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5807,7 +5838,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getRealFormat()
    * @generated
    */
-  int REAL_FORMAT = 176;
+  int REAL_FORMAT = 180;
 
   /**
    * The feature id for the '<em><b>Negative Prefix</b></em>' attribute.
@@ -5871,7 +5902,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getShiftLimit()
    * @generated
    */
-  int SHIFT_LIMIT = 177;
+  int SHIFT_LIMIT = 181;
 
   /**
    * The feature id for the '<em><b>Shift</b></em>' reference.
@@ -5908,7 +5939,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSort()
    * @generated
    */
-  int SORT = 178;
+  int SORT = 182;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5945,7 +5976,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskDependency()
    * @generated
    */
-  int TASK_DEPENDENCY = 179;
+  int TASK_DEPENDENCY = 183;
 
   /**
    * The feature id for the '<em><b>Task</b></em>' reference.
@@ -6000,7 +6031,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTaskTimesheetAttribute()
    * @generated
    */
-  int TASK_TIMESHEET_ATTRIBUTE = 180;
+  int TASK_TIMESHEET_ATTRIBUTE = 184;
 
   /**
    * The number of structural features of the '<em>Task Timesheet Attribute</em>' class.
@@ -6019,7 +6050,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimesheetReportAttribute()
    * @generated
    */
-  int TIMESHEET_REPORT_ATTRIBUTE = 182;
+  int TIMESHEET_REPORT_ATTRIBUTE = 186;
 
   /**
    * The number of structural features of the '<em>Timesheet Report Attribute</em>' class.
@@ -6038,7 +6069,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getRichText()
    * @generated
    */
-  int RICH_TEXT = 183;
+  int RICH_TEXT = 187;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -6066,7 +6097,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWorkHours()
    * @generated
    */
-  int WORK_HOURS = 184;
+  int WORK_HOURS = 188;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -6103,7 +6134,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWeekdays()
    * @generated
    */
-  int WEEKDAYS = 185;
+  int WEEKDAYS = 189;
 
   /**
    * The feature id for the '<em><b>First</b></em>' attribute.
@@ -6140,7 +6171,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getChargeApplies()
    * @generated
    */
-  int CHARGE_APPLIES = 186;
+  int CHARGE_APPLIES = 190;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.Justification <em>Justification</em>}' enum.
@@ -6150,7 +6181,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getJustification()
    * @generated
    */
-  int JUSTIFICATION = 187;
+  int JUSTIFICATION = 191;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.JournalModeValue <em>Journal Mode Value</em>}' enum.
@@ -6160,7 +6191,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getJournalModeValue()
    * @generated
    */
-  int JOURNAL_MODE_VALUE = 188;
+  int JOURNAL_MODE_VALUE = 192;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.JournalEntrySortCriterion <em>Journal Entry Sort Criterion</em>}' enum.
@@ -6170,7 +6201,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getJournalEntrySortCriterion()
    * @generated
    */
-  int JOURNAL_ENTRY_SORT_CRITERION = 189;
+  int JOURNAL_ENTRY_SORT_CRITERION = 193;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.ListTypeValues <em>List Type Values</em>}' enum.
@@ -6180,7 +6211,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getListTypeValues()
    * @generated
    */
-  int LIST_TYPE_VALUES = 190;
+  int LIST_TYPE_VALUES = 194;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.CriterionDirection <em>Criterion Direction</em>}' enum.
@@ -6190,7 +6221,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getCriterionDirection()
    * @generated
    */
-  int CRITERION_DIRECTION = 191;
+  int CRITERION_DIRECTION = 195;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.YesNo <em>Yes No</em>}' enum.
@@ -6200,7 +6231,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getYesNo()
    * @generated
    */
-  int YES_NO = 192;
+  int YES_NO = 196;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.ReportFormat <em>Report Format</em>}' enum.
@@ -6210,7 +6241,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getReportFormat()
    * @generated
    */
-  int REPORT_FORMAT = 193;
+  int REPORT_FORMAT = 197;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.LoadDisplayUnit <em>Load Display Unit</em>}' enum.
@@ -6220,7 +6251,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getLoadDisplayUnit()
    * @generated
    */
-  int LOAD_DISPLAY_UNIT = 194;
+  int LOAD_DISPLAY_UNIT = 198;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.ScaleResolution <em>Scale Resolution</em>}' enum.
@@ -6230,7 +6261,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getScaleResolution()
    * @generated
    */
-  int SCALE_RESOLUTION = 195;
+  int SCALE_RESOLUTION = 199;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.SelectArgument <em>Select Argument</em>}' enum.
@@ -6240,7 +6271,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSelectArgument()
    * @generated
    */
-  int SELECT_ARGUMENT = 196;
+  int SELECT_ARGUMENT = 200;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.ColumnId <em>Column Id</em>}' enum.
@@ -6250,7 +6281,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getColumnId()
    * @generated
    */
-  int COLUMN_ID = 197;
+  int COLUMN_ID = 201;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.AlertLevel <em>Alert Level</em>}' enum.
@@ -6260,7 +6291,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getAlertLevel()
    * @generated
    */
-  int ALERT_LEVEL = 198;
+  int ALERT_LEVEL = 202;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.DependsPolicy <em>Depends Policy</em>}' enum.
@@ -6270,7 +6301,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getDependsPolicy()
    * @generated
    */
-  int DEPENDS_POLICY = 199;
+  int DEPENDS_POLICY = 203;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.SchedulingPolicy <em>Scheduling Policy</em>}' enum.
@@ -6280,7 +6311,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getSchedulingPolicy()
    * @generated
    */
-  int SCHEDULING_POLICY = 200;
+  int SCHEDULING_POLICY = 204;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.TimeUnit <em>Time Unit</em>}' enum.
@@ -6290,7 +6321,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getTimeUnit()
    * @generated
    */
-  int TIME_UNIT = 201;
+  int TIME_UNIT = 205;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.Weekday <em>Weekday</em>}' enum.
@@ -6300,7 +6331,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWeekday()
    * @generated
    */
-  int WEEKDAY = 202;
+  int WEEKDAY = 206;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.WorkQuantityUnit <em>Work Quantity Unit</em>}' enum.
@@ -6310,7 +6341,7 @@ public interface ProjectPackage extends EPackage
    * @see org.jjflyboy.tjpeditor.project.impl.ProjectPackageImpl#getWorkQuantityUnit()
    * @generated
    */
-  int WORK_QUANTITY_UNIT = 203;
+  int WORK_QUANTITY_UNIT = 207;
 
 
   /**
@@ -7435,69 +7466,24 @@ public interface ProjectPackage extends EPackage
   EClass getDateExtend();
 
   /**
-   * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.Limit <em>Limit</em>}'.
+   * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.DailyMax <em>Daily Max</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Limit</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limit
+   * @return the meta object for class '<em>Daily Max</em>'.
+   * @see org.jjflyboy.tjpeditor.project.DailyMax
    * @generated
    */
-  EClass getLimit();
+  EClass getDailyMax();
 
   /**
-   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.Limit#getValue <em>Value</em>}'.
+   * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.DailyMin <em>Daily Min</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limit#getValue()
-   * @see #getLimit()
+   * @return the meta object for class '<em>Daily Min</em>'.
+   * @see org.jjflyboy.tjpeditor.project.DailyMin
    * @generated
    */
-  EAttribute getLimit_Value();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.Limit#getUnit <em>Unit</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Unit</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limit#getUnit()
-   * @see #getLimit()
-   * @generated
-   */
-  EAttribute getLimit_Unit();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.Limit#getEnd <em>End</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>End</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limit#getEnd()
-   * @see #getLimit()
-   * @generated
-   */
-  EAttribute getLimit_End();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limit#getPeriod <em>Period</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Period</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limit#getPeriod()
-   * @see #getLimit()
-   * @generated
-   */
-  EReference getLimit_Period();
-
-  /**
-   * Returns the meta object for the reference list '{@link org.jjflyboy.tjpeditor.project.Limit#getResources <em>Resources</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Resources</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limit#getResources()
-   * @see #getLimit()
-   * @generated
-   */
-  EReference getLimit_Resources();
+  EClass getDailyMin();
 
   /**
    * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.DailyWorkingHours <em>Daily Working Hours</em>}'.
@@ -8520,92 +8506,25 @@ public interface ProjectPackage extends EPackage
   EClass getLimits();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limits#getDailymax <em>Dailymax</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.jjflyboy.tjpeditor.project.Limits#getAttributes <em>Attributes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Dailymax</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limits#getDailymax()
+   * @return the meta object for the containment reference list '<em>Attributes</em>'.
+   * @see org.jjflyboy.tjpeditor.project.Limits#getAttributes()
    * @see #getLimits()
    * @generated
    */
-  EReference getLimits_Dailymax();
+  EReference getLimits_Attributes();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limits#getDailymin <em>Dailymin</em>}'.
+   * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.LimitsAttribute <em>Limits Attribute</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Dailymin</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limits#getDailymin()
-   * @see #getLimits()
+   * @return the meta object for class '<em>Limits Attribute</em>'.
+   * @see org.jjflyboy.tjpeditor.project.LimitsAttribute
    * @generated
    */
-  EReference getLimits_Dailymin();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limits#getMaximum <em>Maximum</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Maximum</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limits#getMaximum()
-   * @see #getLimits()
-   * @generated
-   */
-  EReference getLimits_Maximum();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limits#getMinimum <em>Minimum</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Minimum</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limits#getMinimum()
-   * @see #getLimits()
-   * @generated
-   */
-  EReference getLimits_Minimum();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limits#getMonthlymax <em>Monthlymax</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Monthlymax</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limits#getMonthlymax()
-   * @see #getLimits()
-   * @generated
-   */
-  EReference getLimits_Monthlymax();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limits#getMonthlymin <em>Monthlymin</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Monthlymin</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limits#getMonthlymin()
-   * @see #getLimits()
-   * @generated
-   */
-  EReference getLimits_Monthlymin();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limits#getWeeklymax <em>Weeklymax</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Weeklymax</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limits#getWeeklymax()
-   * @see #getLimits()
-   * @generated
-   */
-  EReference getLimits_Weeklymax();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.Limits#getWeeklymin <em>Weeklymin</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Weeklymin</em>'.
-   * @see org.jjflyboy.tjpeditor.project.Limits#getWeeklymin()
-   * @see #getLimits()
-   * @generated
-   */
-  EReference getLimits_Weeklymin();
+  EClass getLimitsAttribute();
 
   /**
    * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.ListItem <em>List Item</em>}'.
@@ -10910,6 +10829,103 @@ public interface ProjectPackage extends EPackage
    * @generated
    */
   EAttribute getExtendAttribute_Scenariospecific();
+
+  /**
+   * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.Limit <em>Limit</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Limit</em>'.
+   * @see org.jjflyboy.tjpeditor.project.Limit
+   * @generated
+   */
+  EClass getLimit();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.Limit#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.jjflyboy.tjpeditor.project.Limit#getValue()
+   * @see #getLimit()
+   * @generated
+   */
+  EAttribute getLimit_Value();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.Limit#getUnit <em>Unit</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Unit</em>'.
+   * @see org.jjflyboy.tjpeditor.project.Limit#getUnit()
+   * @see #getLimit()
+   * @generated
+   */
+  EAttribute getLimit_Unit();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.jjflyboy.tjpeditor.project.Limit#getAttributes <em>Attributes</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Attributes</em>'.
+   * @see org.jjflyboy.tjpeditor.project.Limit#getAttributes()
+   * @see #getLimit()
+   * @generated
+   */
+  EReference getLimit_Attributes();
+
+  /**
+   * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.LimitAttribute <em>Limit Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Limit Attribute</em>'.
+   * @see org.jjflyboy.tjpeditor.project.LimitAttribute
+   * @generated
+   */
+  EClass getLimitAttribute();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.LimitAttribute#getEnd <em>End</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End</em>'.
+   * @see org.jjflyboy.tjpeditor.project.LimitAttribute#getEnd()
+   * @see #getLimitAttribute()
+   * @generated
+   */
+  EAttribute getLimitAttribute_End();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.LimitAttribute#getPeriod <em>Period</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Period</em>'.
+   * @see org.jjflyboy.tjpeditor.project.LimitAttribute#getPeriod()
+   * @see #getLimitAttribute()
+   * @generated
+   */
+  EReference getLimitAttribute_Period();
+
+  /**
+   * Returns the meta object for the reference list '{@link org.jjflyboy.tjpeditor.project.LimitAttribute#getResources <em>Resources</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Resources</em>'.
+   * @see org.jjflyboy.tjpeditor.project.LimitAttribute#getResources()
+   * @see #getLimitAttribute()
+   * @generated
+   */
+  EReference getLimitAttribute_Resources();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.LimitAttribute#getStart <em>Start</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start</em>'.
+   * @see org.jjflyboy.tjpeditor.project.LimitAttribute#getStart()
+   * @see #getLimitAttribute()
+   * @generated
+   */
+  EAttribute getLimitAttribute_Start();
 
   /**
    * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.RealFormat <em>Real Format</em>}'.

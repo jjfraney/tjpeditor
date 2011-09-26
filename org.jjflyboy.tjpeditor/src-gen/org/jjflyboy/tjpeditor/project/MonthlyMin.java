@@ -5,7 +5,6 @@
  */
 package org.jjflyboy.tjpeditor.project;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface MonthlyMin extends EObject
+public interface MonthlyMin extends LimitsAttribute
 {
 } // MonthlyMin

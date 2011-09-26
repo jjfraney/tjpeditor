@@ -2134,42 +2134,42 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DailyMax");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDailymaxKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Action cLimitAction_1 = (Action)cGroup.eContents().get(1);
+		private final RuleCall cLimitParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//// http://www.taskjuggler.org/tj3/manual/dailymax.html
-		//DailyMax returns Limit:
-		//	"dailymax" {Limit};
+		//DailyMax:
+		//	"dailymax" Limit;
 		public ParserRule getRule() { return rule; }
 
-		//"dailymax" {Limit}
+		//"dailymax" Limit
 		public Group getGroup() { return cGroup; }
 
 		//"dailymax"
 		public Keyword getDailymaxKeyword_0() { return cDailymaxKeyword_0; }
 
-		//{Limit}
-		public Action getLimitAction_1() { return cLimitAction_1; }
+		//Limit
+		public RuleCall getLimitParserRuleCall_1() { return cLimitParserRuleCall_1; }
 	}
 
 	public class DailyMinElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DailyMin");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDailyminKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Action cLimitAction_1 = (Action)cGroup.eContents().get(1);
+		private final RuleCall cLimitParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//// http://www.taskjuggler.org/tj3/manual/dailymin.html
-		//DailyMin returns Limit:
-		//	"dailymin" {Limit};
+		//DailyMin:
+		//	"dailymin" Limit;
 		public ParserRule getRule() { return rule; }
 
-		//"dailymin" {Limit}
+		//"dailymin" Limit
 		public Group getGroup() { return cGroup; }
 
 		//"dailymin"
 		public Keyword getDailyminKeyword_0() { return cDailyminKeyword_0; }
 
-		//{Limit}
-		public Action getLimitAction_1() { return cLimitAction_1; }
+		//Limit
+		public RuleCall getLimitParserRuleCall_1() { return cLimitParserRuleCall_1; }
 	}
 
 	public class DailyWorkingHoursElements extends AbstractParserRuleElementFinder {
@@ -3502,92 +3502,90 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class LimitsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Limits");
-		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
-		private final Keyword cLimitsKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cDailymaxAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cDailymaxDailyMaxParserRuleCall_0_1_0 = (RuleCall)cDailymaxAssignment_0_1.eContents().get(0);
-		private final Assignment cDailyminAssignment_1 = (Assignment)cUnorderedGroup.eContents().get(1);
-		private final RuleCall cDailyminDailyMinParserRuleCall_1_0 = (RuleCall)cDailyminAssignment_1.eContents().get(0);
-		private final Assignment cMaximumAssignment_2 = (Assignment)cUnorderedGroup.eContents().get(2);
-		private final RuleCall cMaximumMaximumParserRuleCall_2_0 = (RuleCall)cMaximumAssignment_2.eContents().get(0);
-		private final Assignment cMinimumAssignment_3 = (Assignment)cUnorderedGroup.eContents().get(3);
-		private final RuleCall cMinimumMinimumParserRuleCall_3_0 = (RuleCall)cMinimumAssignment_3.eContents().get(0);
-		private final Assignment cMonthlymaxAssignment_4 = (Assignment)cUnorderedGroup.eContents().get(4);
-		private final RuleCall cMonthlymaxMonthlyMaxParserRuleCall_4_0 = (RuleCall)cMonthlymaxAssignment_4.eContents().get(0);
-		private final Assignment cMonthlyminAssignment_5 = (Assignment)cUnorderedGroup.eContents().get(5);
-		private final RuleCall cMonthlyminMonthlyMinParserRuleCall_5_0 = (RuleCall)cMonthlyminAssignment_5.eContents().get(0);
-		private final Assignment cWeeklymaxAssignment_6 = (Assignment)cUnorderedGroup.eContents().get(6);
-		private final RuleCall cWeeklymaxWeeklyMaxParserRuleCall_6_0 = (RuleCall)cWeeklymaxAssignment_6.eContents().get(0);
-		private final Assignment cWeeklyminAssignment_7 = (Assignment)cUnorderedGroup.eContents().get(7);
-		private final RuleCall cWeeklyminWeeklyMinParserRuleCall_7_0 = (RuleCall)cWeeklyminAssignment_7.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLimitsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Action cLimitsAction_1 = (Action)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cAttributesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cAttributesLimitsAttributeParserRuleCall_2_1_0 = (RuleCall)cAttributesAssignment_2_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/limits.task.html
 		//// http://www.taskjuggler.org/tj3/manual/limits.resource.html
 		//// http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 		//// http://www.taskjuggler.org/tj3/manual/limits.html
 		//Limits:
-		//	"limits" dailymax=DailyMax? & dailymin=DailyMin? & maximum=Maximum? & minimum=Minimum? & monthlymax=MonthlyMax? &
-		//	monthlymin=MonthlyMin? & weeklymax=WeeklyMax? & weeklymin=WeeklyMin?;
+		//	"limits" {Limits} ("{" attributes+=LimitsAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"limits" dailymax=DailyMax? & dailymin=DailyMin? & maximum=Maximum? & minimum=Minimum? & monthlymax=MonthlyMax? &
-		//monthlymin=MonthlyMin? & weeklymax=WeeklyMax? & weeklymin=WeeklyMin?
-		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
-
-		//"limits" dailymax=DailyMax?
-		public Group getGroup_0() { return cGroup_0; }
+		//"limits" {Limits} ("{" attributes+=LimitsAttribute* "}")?
+		public Group getGroup() { return cGroup; }
 
 		//"limits"
-		public Keyword getLimitsKeyword_0_0() { return cLimitsKeyword_0_0; }
+		public Keyword getLimitsKeyword_0() { return cLimitsKeyword_0; }
 
-		//dailymax=DailyMax?
-		public Assignment getDailymaxAssignment_0_1() { return cDailymaxAssignment_0_1; }
+		//{Limits}
+		public Action getLimitsAction_1() { return cLimitsAction_1; }
+
+		//("{" attributes+=LimitsAttribute* "}")?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
+
+		//attributes+=LimitsAttribute*
+		public Assignment getAttributesAssignment_2_1() { return cAttributesAssignment_2_1; }
+
+		//LimitsAttribute
+		public RuleCall getAttributesLimitsAttributeParserRuleCall_2_1_0() { return cAttributesLimitsAttributeParserRuleCall_2_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
+	}
+
+	public class LimitsAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LimitsAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cDailyMaxParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cDailyMinParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cMaximumParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cMinimumParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cMonthlyMaxParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cMonthlyMinParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cWeeklyMaxParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cWeeklyMinParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		
+		//LimitsAttribute:
+		//	DailyMax | DailyMin | Maximum | Minimum | MonthlyMax | MonthlyMin | WeeklyMax | WeeklyMin;
+		public ParserRule getRule() { return rule; }
+
+		//DailyMax | DailyMin | Maximum | Minimum | MonthlyMax | MonthlyMin | WeeklyMax | WeeklyMin
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//DailyMax
-		public RuleCall getDailymaxDailyMaxParserRuleCall_0_1_0() { return cDailymaxDailyMaxParserRuleCall_0_1_0; }
-
-		//dailymin=DailyMin?
-		public Assignment getDailyminAssignment_1() { return cDailyminAssignment_1; }
+		public RuleCall getDailyMaxParserRuleCall_0() { return cDailyMaxParserRuleCall_0; }
 
 		//DailyMin
-		public RuleCall getDailyminDailyMinParserRuleCall_1_0() { return cDailyminDailyMinParserRuleCall_1_0; }
-
-		//maximum=Maximum?
-		public Assignment getMaximumAssignment_2() { return cMaximumAssignment_2; }
+		public RuleCall getDailyMinParserRuleCall_1() { return cDailyMinParserRuleCall_1; }
 
 		//Maximum
-		public RuleCall getMaximumMaximumParserRuleCall_2_0() { return cMaximumMaximumParserRuleCall_2_0; }
-
-		//minimum=Minimum?
-		public Assignment getMinimumAssignment_3() { return cMinimumAssignment_3; }
+		public RuleCall getMaximumParserRuleCall_2() { return cMaximumParserRuleCall_2; }
 
 		//Minimum
-		public RuleCall getMinimumMinimumParserRuleCall_3_0() { return cMinimumMinimumParserRuleCall_3_0; }
-
-		//monthlymax=MonthlyMax?
-		public Assignment getMonthlymaxAssignment_4() { return cMonthlymaxAssignment_4; }
+		public RuleCall getMinimumParserRuleCall_3() { return cMinimumParserRuleCall_3; }
 
 		//MonthlyMax
-		public RuleCall getMonthlymaxMonthlyMaxParserRuleCall_4_0() { return cMonthlymaxMonthlyMaxParserRuleCall_4_0; }
-
-		//monthlymin=MonthlyMin?
-		public Assignment getMonthlyminAssignment_5() { return cMonthlyminAssignment_5; }
+		public RuleCall getMonthlyMaxParserRuleCall_4() { return cMonthlyMaxParserRuleCall_4; }
 
 		//MonthlyMin
-		public RuleCall getMonthlyminMonthlyMinParserRuleCall_5_0() { return cMonthlyminMonthlyMinParserRuleCall_5_0; }
-
-		//weeklymax=WeeklyMax?
-		public Assignment getWeeklymaxAssignment_6() { return cWeeklymaxAssignment_6; }
+		public RuleCall getMonthlyMinParserRuleCall_5() { return cMonthlyMinParserRuleCall_5; }
 
 		//WeeklyMax
-		public RuleCall getWeeklymaxWeeklyMaxParserRuleCall_6_0() { return cWeeklymaxWeeklyMaxParserRuleCall_6_0; }
-
-		//weeklymin=WeeklyMin?
-		public Assignment getWeeklyminAssignment_7() { return cWeeklyminAssignment_7; }
+		public RuleCall getWeeklyMaxParserRuleCall_6() { return cWeeklyMaxParserRuleCall_6; }
 
 		//WeeklyMin
-		public RuleCall getWeeklyminWeeklyMinParserRuleCall_7_0() { return cWeeklyminWeeklyMinParserRuleCall_7_0; }
+		public RuleCall getWeeklyMinParserRuleCall_7() { return cWeeklyMinParserRuleCall_7; }
 	}
 
 	public class ListItemElements extends AbstractParserRuleElementFinder {
@@ -6972,28 +6970,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUnitTimeUnitEnumRuleCall_1_0 = (RuleCall)cUnitAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_2_1 = (UnorderedGroup)cGroup_2.eContents().get(1);
-		private final Group cGroup_2_1_0 = (Group)cUnorderedGroup_2_1.eContents().get(0);
-		private final Keyword cEndKeyword_2_1_0_0 = (Keyword)cGroup_2_1_0.eContents().get(0);
-		private final Assignment cEndAssignment_2_1_0_1 = (Assignment)cGroup_2_1_0.eContents().get(1);
-		private final RuleCall cEndISODATETerminalRuleCall_2_1_0_1_0 = (RuleCall)cEndAssignment_2_1_0_1.eContents().get(0);
-		private final Group cGroup_2_1_1 = (Group)cUnorderedGroup_2_1.eContents().get(1);
-		private final Keyword cPeriodKeyword_2_1_1_0 = (Keyword)cGroup_2_1_1.eContents().get(0);
-		private final Assignment cPeriodAssignment_2_1_1_1 = (Assignment)cGroup_2_1_1.eContents().get(1);
-		private final RuleCall cPeriodInterval1ParserRuleCall_2_1_1_1_0 = (RuleCall)cPeriodAssignment_2_1_1_1.eContents().get(0);
-		private final Group cGroup_2_1_2 = (Group)cUnorderedGroup_2_1.eContents().get(2);
-		private final Keyword cResourceKeyword_2_1_2_0 = (Keyword)cGroup_2_1_2.eContents().get(0);
-		private final Assignment cResourcesAssignment_2_1_2_1 = (Assignment)cGroup_2_1_2.eContents().get(1);
-		private final CrossReference cResourcesResourceCrossReference_2_1_2_1_0 = (CrossReference)cResourcesAssignment_2_1_2_1.eContents().get(0);
-		private final RuleCall cResourcesResourceIDTerminalRuleCall_2_1_2_1_0_1 = (RuleCall)cResourcesResourceCrossReference_2_1_2_1_0.eContents().get(1);
-		private final Group cGroup_2_1_2_2 = (Group)cGroup_2_1_2.eContents().get(2);
-		private final Keyword cCommaKeyword_2_1_2_2_0 = (Keyword)cGroup_2_1_2_2.eContents().get(0);
-		private final Assignment cResourcesAssignment_2_1_2_2_1 = (Assignment)cGroup_2_1_2_2.eContents().get(1);
-		private final CrossReference cResourcesResourceCrossReference_2_1_2_2_1_0 = (CrossReference)cResourcesAssignment_2_1_2_2_1.eContents().get(0);
-		private final RuleCall cResourcesResourceIDTerminalRuleCall_2_1_2_2_1_0_1 = (RuleCall)cResourcesResourceCrossReference_2_1_2_2_1_0.eContents().get(1);
-		private final Group cGroup_2_1_3 = (Group)cUnorderedGroup_2_1.eContents().get(3);
-		private final Keyword cStartKeyword_2_1_3_0 = (Keyword)cGroup_2_1_3.eContents().get(0);
-		private final RuleCall cISODATETerminalRuleCall_2_1_3_1 = (RuleCall)cGroup_2_1_3.eContents().get(1);
+		private final Assignment cAttributesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cAttributesLimitAttributeParserRuleCall_2_1_0 = (RuleCall)cAttributesAssignment_2_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/limits.task.html
@@ -7001,12 +6979,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//// http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 		//// http://www.taskjuggler.org/tj3/manual/limits.html
 		//Limit:
-		//	value=XFloat unit=TimeUnit ("{" ("end" end=ISODATE & "period" period=Interval1 & "resource" resources+=[Resource] (","
-		//	resources+=[Resource])* & "start" ISODATE) "}")?;
+		//	value=XFloat unit=TimeUnit ("{" attributes+=LimitAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//value=XFloat unit=TimeUnit ("{" ("end" end=ISODATE & "period" period=Interval1 & "resource" resources+=[Resource] (","
-		//resources+=[Resource])* & "start" ISODATE) "}")?
+		//value=XFloat unit=TimeUnit ("{" attributes+=LimitAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//value=XFloat
@@ -7021,82 +6997,122 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//TimeUnit
 		public RuleCall getUnitTimeUnitEnumRuleCall_1_0() { return cUnitTimeUnitEnumRuleCall_1_0; }
 
-		//("{" ("end" end=ISODATE & "period" period=Interval1 & "resource" resources+=[Resource] ("," resources+=[Resource])* &
-		//"start" ISODATE) "}")?
+		//("{" attributes+=LimitAttribute* "}")?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
 
-		//"end" end=ISODATE & "period" period=Interval1 & "resource" resources+=[Resource] ("," resources+=[Resource])* & "start"
-		//ISODATE
-		public UnorderedGroup getUnorderedGroup_2_1() { return cUnorderedGroup_2_1; }
+		//attributes+=LimitAttribute*
+		public Assignment getAttributesAssignment_2_1() { return cAttributesAssignment_2_1; }
 
-		//"end" end=ISODATE
-		public Group getGroup_2_1_0() { return cGroup_2_1_0; }
-
-		//"end"
-		public Keyword getEndKeyword_2_1_0_0() { return cEndKeyword_2_1_0_0; }
-
-		//end=ISODATE
-		public Assignment getEndAssignment_2_1_0_1() { return cEndAssignment_2_1_0_1; }
-
-		//ISODATE
-		public RuleCall getEndISODATETerminalRuleCall_2_1_0_1_0() { return cEndISODATETerminalRuleCall_2_1_0_1_0; }
-
-		//"period" period=Interval1
-		public Group getGroup_2_1_1() { return cGroup_2_1_1; }
-
-		//"period"
-		public Keyword getPeriodKeyword_2_1_1_0() { return cPeriodKeyword_2_1_1_0; }
-
-		//period=Interval1
-		public Assignment getPeriodAssignment_2_1_1_1() { return cPeriodAssignment_2_1_1_1; }
-
-		//Interval1
-		public RuleCall getPeriodInterval1ParserRuleCall_2_1_1_1_0() { return cPeriodInterval1ParserRuleCall_2_1_1_1_0; }
-
-		//"resource" resources+=[Resource] ("," resources+=[Resource])*
-		public Group getGroup_2_1_2() { return cGroup_2_1_2; }
-
-		//"resource"
-		public Keyword getResourceKeyword_2_1_2_0() { return cResourceKeyword_2_1_2_0; }
-
-		//resources+=[Resource]
-		public Assignment getResourcesAssignment_2_1_2_1() { return cResourcesAssignment_2_1_2_1; }
-
-		//[Resource]
-		public CrossReference getResourcesResourceCrossReference_2_1_2_1_0() { return cResourcesResourceCrossReference_2_1_2_1_0; }
-
-		//ID
-		public RuleCall getResourcesResourceIDTerminalRuleCall_2_1_2_1_0_1() { return cResourcesResourceIDTerminalRuleCall_2_1_2_1_0_1; }
-
-		//("," resources+=[Resource])*
-		public Group getGroup_2_1_2_2() { return cGroup_2_1_2_2; }
-
-		//","
-		public Keyword getCommaKeyword_2_1_2_2_0() { return cCommaKeyword_2_1_2_2_0; }
-
-		//resources+=[Resource]
-		public Assignment getResourcesAssignment_2_1_2_2_1() { return cResourcesAssignment_2_1_2_2_1; }
-
-		//[Resource]
-		public CrossReference getResourcesResourceCrossReference_2_1_2_2_1_0() { return cResourcesResourceCrossReference_2_1_2_2_1_0; }
-
-		//ID
-		public RuleCall getResourcesResourceIDTerminalRuleCall_2_1_2_2_1_0_1() { return cResourcesResourceIDTerminalRuleCall_2_1_2_2_1_0_1; }
-
-		//"start" ISODATE
-		public Group getGroup_2_1_3() { return cGroup_2_1_3; }
-
-		//"start"
-		public Keyword getStartKeyword_2_1_3_0() { return cStartKeyword_2_1_3_0; }
-
-		//ISODATE
-		public RuleCall getISODATETerminalRuleCall_2_1_3_1() { return cISODATETerminalRuleCall_2_1_3_1; }
+		//LimitAttribute
+		public RuleCall getAttributesLimitAttributeParserRuleCall_2_1_0() { return cAttributesLimitAttributeParserRuleCall_2_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
+	}
+
+	public class LimitAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LimitAttribute");
+		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
+		private final Keyword cEndKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cEndAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cEndISODATETerminalRuleCall_0_1_0 = (RuleCall)cEndAssignment_0_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cUnorderedGroup.eContents().get(1);
+		private final Keyword cPeriodKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cPeriodAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cPeriodInterval1ParserRuleCall_1_1_0 = (RuleCall)cPeriodAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cUnorderedGroup.eContents().get(2);
+		private final Keyword cResourcesKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cResourcesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cResourcesResourceCrossReference_2_1_0 = (CrossReference)cResourcesAssignment_2_1.eContents().get(0);
+		private final RuleCall cResourcesResourceIDTerminalRuleCall_2_1_0_1 = (RuleCall)cResourcesResourceCrossReference_2_1_0.eContents().get(1);
+		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
+		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
+		private final Assignment cResourcesAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
+		private final CrossReference cResourcesResourceCrossReference_2_2_1_0 = (CrossReference)cResourcesAssignment_2_2_1.eContents().get(0);
+		private final RuleCall cResourcesResourceIDTerminalRuleCall_2_2_1_0_1 = (RuleCall)cResourcesResourceCrossReference_2_2_1_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cUnorderedGroup.eContents().get(3);
+		private final Keyword cStartKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cStartAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cStartISODATETerminalRuleCall_3_1_0 = (RuleCall)cStartAssignment_3_1.eContents().get(0);
+		
+		//LimitAttribute:
+		//	"end" end=ISODATE & "period" period=Interval1 & "resources" resources+=[Resource] ("," resources+=[Resource])* &
+		//	"start" start=ISODATE;
+		public ParserRule getRule() { return rule; }
+
+		//"end" end=ISODATE & "period" period=Interval1 & "resources" resources+=[Resource] ("," resources+=[Resource])* & "start"
+		//start=ISODATE
+		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
+
+		//"end" end=ISODATE
+		public Group getGroup_0() { return cGroup_0; }
+
+		//"end"
+		public Keyword getEndKeyword_0_0() { return cEndKeyword_0_0; }
+
+		//end=ISODATE
+		public Assignment getEndAssignment_0_1() { return cEndAssignment_0_1; }
+
+		//ISODATE
+		public RuleCall getEndISODATETerminalRuleCall_0_1_0() { return cEndISODATETerminalRuleCall_0_1_0; }
+
+		//"period" period=Interval1
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"period"
+		public Keyword getPeriodKeyword_1_0() { return cPeriodKeyword_1_0; }
+
+		//period=Interval1
+		public Assignment getPeriodAssignment_1_1() { return cPeriodAssignment_1_1; }
+
+		//Interval1
+		public RuleCall getPeriodInterval1ParserRuleCall_1_1_0() { return cPeriodInterval1ParserRuleCall_1_1_0; }
+
+		//"resources" resources+=[Resource] ("," resources+=[Resource])*
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"resources"
+		public Keyword getResourcesKeyword_2_0() { return cResourcesKeyword_2_0; }
+
+		//resources+=[Resource]
+		public Assignment getResourcesAssignment_2_1() { return cResourcesAssignment_2_1; }
+
+		//[Resource]
+		public CrossReference getResourcesResourceCrossReference_2_1_0() { return cResourcesResourceCrossReference_2_1_0; }
+
+		//ID
+		public RuleCall getResourcesResourceIDTerminalRuleCall_2_1_0_1() { return cResourcesResourceIDTerminalRuleCall_2_1_0_1; }
+
+		//("," resources+=[Resource])*
+		public Group getGroup_2_2() { return cGroup_2_2; }
+
+		//","
+		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
+
+		//resources+=[Resource]
+		public Assignment getResourcesAssignment_2_2_1() { return cResourcesAssignment_2_2_1; }
+
+		//[Resource]
+		public CrossReference getResourcesResourceCrossReference_2_2_1_0() { return cResourcesResourceCrossReference_2_2_1_0; }
+
+		//ID
+		public RuleCall getResourcesResourceIDTerminalRuleCall_2_2_1_0_1() { return cResourcesResourceIDTerminalRuleCall_2_2_1_0_1; }
+
+		//"start" start=ISODATE
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"start"
+		public Keyword getStartKeyword_3_0() { return cStartKeyword_3_0; }
+
+		//start=ISODATE
+		public Assignment getStartAssignment_3_1() { return cStartAssignment_3_1; }
+
+		//ISODATE
+		public RuleCall getStartISODATETerminalRuleCall_3_1_0() { return cStartISODATETerminalRuleCall_3_1_0; }
 	}
 
 	public class RealFormatElements extends AbstractParserRuleElementFinder {
@@ -8923,6 +8939,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private LeftElements pLeft;
 	private LengthElements pLength;
 	private LimitsElements pLimits;
+	private LimitsAttributeElements pLimitsAttribute;
 	private ListItemElements pListItem;
 	private ListTypeElements pListType;
 	private LoadUnitElements pLoadUnit;
@@ -9025,6 +9042,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private DurationQuantityElements pDurationQuantity;
 	private ExtendAttributeElements pExtendAttribute;
 	private LimitElements pLimit;
+	private LimitAttributeElements pLimitAttribute;
 	private RealFormatElements pRealFormat;
 	private ShiftLimitElements pShiftLimit;
 	private SortElements pSort;
@@ -9634,8 +9652,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/dailymax.html
-	//DailyMax returns Limit:
-	//	"dailymax" {Limit};
+	//DailyMax:
+	//	"dailymax" Limit;
 	public DailyMaxElements getDailyMaxAccess() {
 		return (pDailyMax != null) ? pDailyMax : (pDailyMax = new DailyMaxElements());
 	}
@@ -9645,8 +9663,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/dailymin.html
-	//DailyMin returns Limit:
-	//	"dailymin" {Limit};
+	//DailyMin:
+	//	"dailymin" Limit;
 	public DailyMinElements getDailyMinAccess() {
 		return (pDailyMin != null) ? pDailyMin : (pDailyMin = new DailyMinElements());
 	}
@@ -10108,14 +10126,23 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 	//// http://www.taskjuggler.org/tj3/manual/limits.html
 	//Limits:
-	//	"limits" dailymax=DailyMax? & dailymin=DailyMin? & maximum=Maximum? & minimum=Minimum? & monthlymax=MonthlyMax? &
-	//	monthlymin=MonthlyMin? & weeklymax=WeeklyMax? & weeklymin=WeeklyMin?;
+	//	"limits" {Limits} ("{" attributes+=LimitsAttribute* "}")?;
 	public LimitsElements getLimitsAccess() {
 		return (pLimits != null) ? pLimits : (pLimits = new LimitsElements());
 	}
 	
 	public ParserRule getLimitsRule() {
 		return getLimitsAccess().getRule();
+	}
+
+	//LimitsAttribute:
+	//	DailyMax | DailyMin | Maximum | Minimum | MonthlyMax | MonthlyMin | WeeklyMax | WeeklyMin;
+	public LimitsAttributeElements getLimitsAttributeAccess() {
+		return (pLimitsAttribute != null) ? pLimitsAttribute : (pLimitsAttribute = new LimitsAttributeElements());
+	}
+	
+	public ParserRule getLimitsAttributeRule() {
+		return getLimitsAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/listitem.column.html
@@ -11300,14 +11327,24 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 	//// http://www.taskjuggler.org/tj3/manual/limits.html
 	//Limit:
-	//	value=XFloat unit=TimeUnit ("{" ("end" end=ISODATE & "period" period=Interval1 & "resource" resources+=[Resource] (","
-	//	resources+=[Resource])* & "start" ISODATE) "}")?;
+	//	value=XFloat unit=TimeUnit ("{" attributes+=LimitAttribute* "}")?;
 	public LimitElements getLimitAccess() {
 		return (pLimit != null) ? pLimit : (pLimit = new LimitElements());
 	}
 	
 	public ParserRule getLimitRule() {
 		return getLimitAccess().getRule();
+	}
+
+	//LimitAttribute:
+	//	"end" end=ISODATE & "period" period=Interval1 & "resources" resources+=[Resource] ("," resources+=[Resource])* &
+	//	"start" start=ISODATE;
+	public LimitAttributeElements getLimitAttributeAccess() {
+		return (pLimitAttribute != null) ? pLimitAttribute : (pLimitAttribute = new LimitAttributeElements());
+	}
+	
+	public ParserRule getLimitAttributeRule() {
+		return getLimitAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/currencyformat.html

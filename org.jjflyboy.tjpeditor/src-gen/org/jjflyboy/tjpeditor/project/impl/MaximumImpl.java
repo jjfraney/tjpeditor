@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.jjflyboy.tjpeditor.project.Maximum;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 
@@ -21,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class MaximumImpl extends MinimalEObjectImpl.Container implements Maximum
+public class MaximumImpl extends LimitsAttributeImpl implements Maximum
 {
   /**
    * <!-- begin-user-doc -->

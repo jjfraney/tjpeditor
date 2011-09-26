@@ -429,16 +429,19 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.LIMIT:
+      case ProjectPackage.DAILY_MAX:
       {
-        Limit limit = (Limit)theEObject;
-        T result = caseLimit(limit);
-        if (result == null) result = caseMaximum(limit);
-        if (result == null) result = caseMinimum(limit);
-        if (result == null) result = caseMonthlyMax(limit);
-        if (result == null) result = caseMonthlyMin(limit);
-        if (result == null) result = caseWeeklyMax(limit);
-        if (result == null) result = caseWeeklyMin(limit);
+        DailyMax dailyMax = (DailyMax)theEObject;
+        T result = caseDailyMax(dailyMax);
+        if (result == null) result = caseLimitsAttribute(dailyMax);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.DAILY_MIN:
+      {
+        DailyMin dailyMin = (DailyMin)theEObject;
+        T result = caseDailyMin(dailyMin);
+        if (result == null) result = caseLimitsAttribute(dailyMin);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -736,6 +739,13 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.LIMITS_ATTRIBUTE:
+      {
+        LimitsAttribute limitsAttribute = (LimitsAttribute)theEObject;
+        T result = caseLimitsAttribute(limitsAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.LIST_ITEM:
       {
         ListItem listItem = (ListItem)theEObject;
@@ -787,6 +797,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Maximum maximum = (Maximum)theEObject;
         T result = caseMaximum(maximum);
+        if (result == null) result = caseLimitsAttribute(maximum);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -810,6 +821,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Minimum minimum = (Minimum)theEObject;
         T result = caseMinimum(minimum);
+        if (result == null) result = caseLimitsAttribute(minimum);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -833,6 +845,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         MonthlyMax monthlyMax = (MonthlyMax)theEObject;
         T result = caseMonthlyMax(monthlyMax);
+        if (result == null) result = caseLimitsAttribute(monthlyMax);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -840,6 +853,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         MonthlyMin monthlyMin = (MonthlyMin)theEObject;
         T result = caseMonthlyMin(monthlyMin);
+        if (result == null) result = caseLimitsAttribute(monthlyMin);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1384,6 +1398,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         WeeklyMax weeklyMax = (WeeklyMax)theEObject;
         T result = caseWeeklyMax(weeklyMax);
+        if (result == null) result = caseLimitsAttribute(weeklyMax);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1391,6 +1406,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         WeeklyMin weeklyMin = (WeeklyMin)theEObject;
         T result = caseWeeklyMin(weeklyMin);
+        if (result == null) result = caseLimitsAttribute(weeklyMin);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1480,6 +1496,29 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseReferenceExtend(extendAttribute);
         if (result == null) result = caseRichTextExtend(extendAttribute);
         if (result == null) result = caseTextExtend(extendAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LIMIT:
+      {
+        Limit limit = (Limit)theEObject;
+        T result = caseLimit(limit);
+        if (result == null) result = caseDailyMax(limit);
+        if (result == null) result = caseDailyMin(limit);
+        if (result == null) result = caseMaximum(limit);
+        if (result == null) result = caseMinimum(limit);
+        if (result == null) result = caseMonthlyMax(limit);
+        if (result == null) result = caseMonthlyMin(limit);
+        if (result == null) result = caseWeeklyMax(limit);
+        if (result == null) result = caseWeeklyMin(limit);
+        if (result == null) result = caseLimitsAttribute(limit);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LIMIT_ATTRIBUTE:
+      {
+        LimitAttribute limitAttribute = (LimitAttribute)theEObject;
+        T result = caseLimitAttribute(limitAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -2304,17 +2343,33 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Limit</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Daily Max</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Limit</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Daily Max</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLimit(Limit object)
+  public T caseDailyMax(DailyMax object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Daily Min</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Daily Min</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDailyMin(DailyMin object)
   {
     return null;
   }
@@ -2891,6 +2946,22 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLimits(Limits object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Limits Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Limits Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLimitsAttribute(LimitsAttribute object)
   {
     return null;
   }
@@ -4395,6 +4466,38 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExtendAttribute(ExtendAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Limit</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Limit</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLimit(Limit object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Limit Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Limit Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLimitAttribute(LimitAttribute object)
   {
     return null;
   }

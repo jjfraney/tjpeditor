@@ -431,13 +431,22 @@ public interface ProjectFactory extends EFactory
   DateExtend createDateExtend();
 
   /**
-   * Returns a new object of class '<em>Limit</em>'.
+   * Returns a new object of class '<em>Daily Max</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Limit</em>'.
+   * @return a new object of class '<em>Daily Max</em>'.
    * @generated
    */
-  Limit createLimit();
+  DailyMax createDailyMax();
+
+  /**
+   * Returns a new object of class '<em>Daily Min</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Daily Min</em>'.
+   * @generated
+   */
+  DailyMin createDailyMin();
 
   /**
    * Returns a new object of class '<em>Daily Working Hours</em>'.
@@ -762,6 +771,15 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Limits createLimits();
+
+  /**
+   * Returns a new object of class '<em>Limits Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Limits Attribute</em>'.
+   * @generated
+   */
+  LimitsAttribute createLimitsAttribute();
 
   /**
    * Returns a new object of class '<em>List Item</em>'.
@@ -1608,6 +1626,24 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   ExtendAttribute createExtendAttribute();
+
+  /**
+   * Returns a new object of class '<em>Limit</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Limit</em>'.
+   * @generated
+   */
+  Limit createLimit();
+
+  /**
+   * Returns a new object of class '<em>Limit Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Limit Attribute</em>'.
+   * @generated
+   */
+  LimitAttribute createLimitAttribute();
 
   /**
    * Returns a new object of class '<em>Real Format</em>'.

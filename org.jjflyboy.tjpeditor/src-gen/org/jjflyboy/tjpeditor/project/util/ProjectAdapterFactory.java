@@ -303,9 +303,14 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createDateExtendAdapter();
       }
       @Override
-      public Adapter caseLimit(Limit object)
+      public Adapter caseDailyMax(DailyMax object)
       {
-        return createLimitAdapter();
+        return createDailyMaxAdapter();
+      }
+      @Override
+      public Adapter caseDailyMin(DailyMin object)
+      {
+        return createDailyMinAdapter();
       }
       @Override
       public Adapter caseDailyWorkingHours(DailyWorkingHours object)
@@ -486,6 +491,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseLimits(Limits object)
       {
         return createLimitsAdapter();
+      }
+      @Override
+      public Adapter caseLimitsAttribute(LimitsAttribute object)
+      {
+        return createLimitsAttributeAdapter();
       }
       @Override
       public Adapter caseListItem(ListItem object)
@@ -956,6 +966,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseExtendAttribute(ExtendAttribute object)
       {
         return createExtendAttributeAdapter();
+      }
+      @Override
+      public Adapter caseLimit(Limit object)
+      {
+        return createLimitAdapter();
+      }
+      @Override
+      public Adapter caseLimitAttribute(LimitAttribute object)
+      {
+        return createLimitAttributeAdapter();
       }
       @Override
       public Adapter caseRealFormat(RealFormat object)
@@ -1705,16 +1725,31 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Limit <em>Limit</em>}'.
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.DailyMax <em>Daily Max</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.Limit
+   * @see org.jjflyboy.tjpeditor.project.DailyMax
    * @generated
    */
-  public Adapter createLimitAdapter()
+  public Adapter createDailyMaxAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.DailyMin <em>Daily Min</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.DailyMin
+   * @generated
+   */
+  public Adapter createDailyMinAdapter()
   {
     return null;
   }
@@ -2255,6 +2290,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLimitsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LimitsAttribute <em>Limits Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LimitsAttribute
+   * @generated
+   */
+  public Adapter createLimitsAttributeAdapter()
   {
     return null;
   }
@@ -3665,6 +3715,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExtendAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Limit <em>Limit</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.Limit
+   * @generated
+   */
+  public Adapter createLimitAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LimitAttribute <em>Limit Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LimitAttribute
+   * @generated
+   */
+  public Adapter createLimitAttributeAdapter()
   {
     return null;
   }

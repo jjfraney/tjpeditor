@@ -327,10 +327,10 @@ CurrencyFormat: 'currencyformat' RealFormat;
 DateExtend: 'date' ExtendAttribute;
 
 // http://www.taskjuggler.org/tj3/manual/dailymax.html
-DailyMax returns Limit: 'dailymax' {Limit};
+DailyMax: 'dailymax' Limit;
 
 // http://www.taskjuggler.org/tj3/manual/dailymin.html
-DailyMin returns Limit: 'dailymin' {Limit};
+DailyMin: 'dailymin' Limit;
 
 // http://www.taskjuggler.org/tj3/manual/dailyworkinghours.html
 DailyWorkingHours: 'dailyworkinghours' dailyWorkingHours=XFloat;
@@ -513,17 +513,18 @@ Length: 'length' length=DurationQuantity;
 // http://www.taskjuggler.org/tj3/manual/limits.resource.html
 // http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 // http://www.taskjuggler.org/tj3/manual/limits.html
-Limits: 'limits'
-	dailymax = DailyMax? &
-	dailymin = DailyMin? &
-	maximum = Maximum? &
-	minimum = Minimum? &
-	monthlymax = MonthlyMax? &
-	monthlymin = MonthlyMin? &
-	weeklymax = WeeklyMax? &
-	weeklymin = WeeklyMin?
-;
+Limits: 'limits' {Limits} ( '{' attributes += LimitsAttribute* '}' )? ;
 
+LimitsAttribute:
+	DailyMax |
+	DailyMin |
+	Maximum |
+	Minimum |
+	MonthlyMax | 
+	MonthlyMin | 
+	WeeklyMax | 
+	WeeklyMin
+;
 // http://www.taskjuggler.org/tj3/manual/listitem.column.html
 ListItem: 'listitem' RichText;
 
@@ -995,14 +996,14 @@ ExtendAttribute:
 // http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 // http://www.taskjuggler.org/tj3/manual/limits.html
 Limit:
-	    value=XFloat unit=TimeUnit ('{'
-	    (
-	    	('end' end=ISODATE) &
-	    	('period' period=Interval1) &
-	    	('resource' resources+=[Resource] (',' resources+=[Resource])*) &
-	    	('start' ISODATE)
-	    )
-	'}')?;
+	    value=XFloat unit=TimeUnit ('{' attributes+=LimitAttribute*	'}')?;
+
+LimitAttribute: 
+	    	('end' end=ISODATE) |
+	    	('period' period=Interval1) |
+	    	('resources' resources+=[Resource] (',' resources+=[Resource])*) |
+	    	('start' start=ISODATE)
+;
 
 // http://www.taskjuggler.org/tj3/manual/currencyformat.html
 // http://www.taskjuggler.org/tj3/manual/numberformat.html

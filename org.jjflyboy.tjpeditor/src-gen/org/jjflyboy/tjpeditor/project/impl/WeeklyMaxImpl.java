@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.WeeklyMax;
 
@@ -21,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.WeeklyMax;
  *
  * @generated
  */
-public class WeeklyMaxImpl extends MinimalEObjectImpl.Container implements WeeklyMax
+public class WeeklyMaxImpl extends LimitsAttributeImpl implements WeeklyMax
 {
   /**
    * <!-- begin-user-doc -->

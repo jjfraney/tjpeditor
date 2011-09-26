@@ -161,15 +161,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CurrencyFormat" eSuperTypes="#//ProjectAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="DateExtend"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Limit" eSuperTypes="#//Maximum #//Minimum #//MonthlyMax #//MonthlyMin #//WeeklyMax #//WeeklyMin">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//TimeUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="period" eType="#//Interval1"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" unique="false"
-        upperBound="-1" eType="#//Resource"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DailyMax" eSuperTypes="#//LimitsAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DailyMin" eSuperTypes="#//LimitsAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="DailyWorkingHours" eSuperTypes="#//ProjectAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dailyWorkingHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
@@ -309,23 +302,10 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Limits" eSuperTypes="#//GlobalAttribute #//TaskAttribute #//ResourceAttribute #//AllocateResourceAttribute">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dailymax" eType="#//Limit"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dailymin" eType="#//Limit"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="maximum" eType="#//Maximum"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="minimum" eType="#//Minimum"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="monthlymax" eType="#//MonthlyMax"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="monthlymin" eType="#//MonthlyMin"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="weeklymax" eType="#//WeeklyMax"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="weeklymin" eType="#//WeeklyMin"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//LimitsAttribute" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LimitsAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="ListItem" eSuperTypes="#//ColumnAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="ListType" eSuperTypes="#//ColumnAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ListTypeValues"/>
@@ -343,22 +323,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="MaxEnd" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxEnd" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Maximum"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Maximum" eSuperTypes="#//LimitsAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="MaxStart" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxStart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Milestone" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="milestone" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Minimum"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Minimum" eSuperTypes="#//LimitsAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="MinEnd" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minEnd" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MinStart" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minStart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MonthlyMax"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MonthlyMin"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MonthlyMax" eSuperTypes="#//LimitsAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MonthlyMin" eSuperTypes="#//LimitsAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Note" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -595,8 +575,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sunday" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="monday" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WeeklyMax"/>
-  <eClassifiers xsi:type="ecore:EClass" name="WeeklyMin"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WeeklyMax" eSuperTypes="#//LimitsAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WeeklyMin" eSuperTypes="#//LimitsAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Width" eSuperTypes="#//ColumnAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
@@ -642,6 +622,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inherit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scenariospecific" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Limit" eSuperTypes="#//DailyMax #//DailyMin #//Maximum #//Minimum #//MonthlyMax #//MonthlyMin #//WeeklyMax #//WeeklyMin">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//TimeUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//LimitAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LimitAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="period" eType="#//Interval1"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" unique="false"
+        upperBound="-1" eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RealFormat" eSuperTypes="#//CurrencyFormat #//NumberFormat">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="negativePrefix" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

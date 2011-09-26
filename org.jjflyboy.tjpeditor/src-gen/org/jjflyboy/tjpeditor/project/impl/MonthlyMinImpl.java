@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.jjflyboy.tjpeditor.project.MonthlyMin;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 
@@ -21,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class MonthlyMinImpl extends MinimalEObjectImpl.Container implements MonthlyMin
+public class MonthlyMinImpl extends LimitsAttributeImpl implements MonthlyMin
 {
   /**
    * <!-- begin-user-doc -->

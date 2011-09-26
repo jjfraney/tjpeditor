@@ -3478,13 +3478,16 @@ ruleDailyMax returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getDailyMaxAccess().getDailymaxKeyword_0());
     }
-(
-    {
-        $current = forceCreateModelElement(
-            grammarAccess.getDailyMaxAccess().getLimitAction_1(),
-            $current);
+
+    { 
+        newCompositeNode(grammarAccess.getDailyMaxAccess().getLimitParserRuleCall_1()); 
     }
-))
+    this_Limit_1=ruleLimit
+    { 
+        $current = $this_Limit_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
 ;
 
 
@@ -3509,13 +3512,16 @@ ruleDailyMin returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getDailyMinAccess().getDailyminKeyword_0());
     }
-(
-    {
-        $current = forceCreateModelElement(
-            grammarAccess.getDailyMinAccess().getLimitAction_1(),
-            $current);
+
+    { 
+        newCompositeNode(grammarAccess.getDailyMinAccess().getLimitParserRuleCall_1()); 
     }
-))
+    this_Limit_1=ruleLimit
+    { 
+        $current = $this_Limit_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
 ;
 
 
@@ -5105,267 +5111,142 @@ ruleLimits returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-
-(
-	{ 
-	  getUnorderedGroupHelper().enter(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	}
-	(
-		(
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 0)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitsAccess().getUnorderedGroup(), 0);
-	 				}
-					({true}?=>(	otherlv_1='limits' 
+(	otherlv_0='limits' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getLimitsAccess().getLimitsKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getLimitsAccess().getLimitsKeyword_0());
+    }
+(
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getLimitsAccess().getLimitsAction_1(),
+            $current);
+    }
+)(	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getLimitsAccess().getLeftCurlyBracketKeyword_2_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLimitsAccess().getDailymaxDailyMaxParserRuleCall_0_1_0()); 
+	        newCompositeNode(grammarAccess.getLimitsAccess().getAttributesLimitsAttributeParserRuleCall_2_1_0()); 
 	    }
-		lv_dailymax_2_0=ruleDailyMax		{
+		lv_attributes_3_0=ruleLimitsAttribute		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLimitsRule());
 	        }
-       		set(
+       		add(
        			$current, 
-       			"dailymax",
-        		lv_dailymax_2_0, 
-        		"DailyMax");
+       			"attributes",
+        		lv_attributes_3_0, 
+        		"LimitsAttribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
+)*	otherlv_4='}' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getLimitsAccess().getRightCurlyBracketKeyword_2_2());
+    }
+)?)
+;
 
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 1)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitsAccess().getUnorderedGroup(), 1);
-	 				}
-					({true}?=>(
+
+
+
+
+// Entry rule entryRuleLimitsAttribute
+entryRuleLimitsAttribute returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLimitsAttributeRule()); }
+	 iv_ruleLimitsAttribute=ruleLimitsAttribute 
+	 { $current=$iv_ruleLimitsAttribute.current; } 
+	 EOF 
+;
+
+// Rule LimitsAttribute
+ruleLimitsAttribute returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
 (
-		{ 
-	        newCompositeNode(grammarAccess.getLimitsAccess().getDailyminDailyMinParserRuleCall_1_0()); 
-	    }
-		lv_dailymin_3_0=ruleDailyMin		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitsRule());
-	        }
-       		set(
-       			$current, 
-       			"dailymin",
-        		lv_dailymin_3_0, 
-        		"DailyMin");
-	        afterParserOrEnumRuleCall();
-	    }
+    { 
+        newCompositeNode(grammarAccess.getLimitsAttributeAccess().getDailyMaxParserRuleCall_0()); 
+    }
+    this_DailyMax_0=ruleDailyMax
+    { 
+        $current = $this_DailyMax_0.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-)
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
+    |
+    { 
+        newCompositeNode(grammarAccess.getLimitsAttributeAccess().getDailyMinParserRuleCall_1()); 
+    }
+    this_DailyMin_1=ruleDailyMin
+    { 
+        $current = $this_DailyMin_1.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 2)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitsAccess().getUnorderedGroup(), 2);
-	 				}
-					({true}?=>(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLimitsAccess().getMaximumMaximumParserRuleCall_2_0()); 
-	    }
-		lv_maximum_4_0=ruleMaximum		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitsRule());
-	        }
-       		set(
-       			$current, 
-       			"maximum",
-        		lv_maximum_4_0, 
-        		"Maximum");
-	        afterParserOrEnumRuleCall();
-	    }
+    |
+    { 
+        newCompositeNode(grammarAccess.getLimitsAttributeAccess().getMaximumParserRuleCall_2()); 
+    }
+    this_Maximum_2=ruleMaximum
+    { 
+        $current = $this_Maximum_2.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-)
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
+    |
+    { 
+        newCompositeNode(grammarAccess.getLimitsAttributeAccess().getMinimumParserRuleCall_3()); 
+    }
+    this_Minimum_3=ruleMinimum
+    { 
+        $current = $this_Minimum_3.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 3)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitsAccess().getUnorderedGroup(), 3);
-	 				}
-					({true}?=>(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLimitsAccess().getMinimumMinimumParserRuleCall_3_0()); 
-	    }
-		lv_minimum_5_0=ruleMinimum		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitsRule());
-	        }
-       		set(
-       			$current, 
-       			"minimum",
-        		lv_minimum_5_0, 
-        		"Minimum");
-	        afterParserOrEnumRuleCall();
-	    }
+    |
+    { 
+        newCompositeNode(grammarAccess.getLimitsAttributeAccess().getMonthlyMaxParserRuleCall_4()); 
+    }
+    this_MonthlyMax_4=ruleMonthlyMax
+    { 
+        $current = $this_MonthlyMax_4.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-)
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
+    |
+    { 
+        newCompositeNode(grammarAccess.getLimitsAttributeAccess().getMonthlyMinParserRuleCall_5()); 
+    }
+    this_MonthlyMin_5=ruleMonthlyMin
+    { 
+        $current = $this_MonthlyMin_5.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 4)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitsAccess().getUnorderedGroup(), 4);
-	 				}
-					({true}?=>(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLimitsAccess().getMonthlymaxMonthlyMaxParserRuleCall_4_0()); 
-	    }
-		lv_monthlymax_6_0=ruleMonthlyMax		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitsRule());
-	        }
-       		set(
-       			$current, 
-       			"monthlymax",
-        		lv_monthlymax_6_0, 
-        		"MonthlyMax");
-	        afterParserOrEnumRuleCall();
-	    }
+    |
+    { 
+        newCompositeNode(grammarAccess.getLimitsAttributeAccess().getWeeklyMaxParserRuleCall_6()); 
+    }
+    this_WeeklyMax_6=ruleWeeklyMax
+    { 
+        $current = $this_WeeklyMax_6.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-)
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 5)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitsAccess().getUnorderedGroup(), 5);
-	 				}
-					({true}?=>(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLimitsAccess().getMonthlyminMonthlyMinParserRuleCall_5_0()); 
-	    }
-		lv_monthlymin_7_0=ruleMonthlyMin		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitsRule());
-	        }
-       		set(
-       			$current, 
-       			"monthlymin",
-        		lv_monthlymin_7_0, 
-        		"MonthlyMin");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 6)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitsAccess().getUnorderedGroup(), 6);
-	 				}
-					({true}?=>(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLimitsAccess().getWeeklymaxWeeklyMaxParserRuleCall_6_0()); 
-	    }
-		lv_weeklymax_8_0=ruleWeeklyMax		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitsRule());
-	        }
-       		set(
-       			$current, 
-       			"weeklymax",
-        		lv_weeklymax_8_0, 
-        		"WeeklyMax");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 7)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitsAccess().getUnorderedGroup(), 7);
-	 				}
-					({true}?=>(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLimitsAccess().getWeeklyminWeeklyMinParserRuleCall_7_0()); 
-	    }
-		lv_weeklymin_9_0=ruleWeeklyMin		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitsRule());
-	        }
-       		set(
-       			$current, 
-       			"weeklymin",
-        		lv_weeklymin_9_0, 
-        		"WeeklyMin");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  
-
-		)+
-	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getLimitsAccess().getUnorderedGroup())}?	
-	)
-)
-	{ 
-	  getUnorderedGroupHelper().leave(grammarAccess.getLimitsAccess().getUnorderedGroup());
-	}
-
+    |
+    { 
+        newCompositeNode(grammarAccess.getLimitsAttributeAccess().getWeeklyMinParserRuleCall_7()); 
+    }
+    this_WeeklyMin_7=ruleWeeklyMin
+    { 
+        $current = $this_WeeklyMin_7.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -9841,70 +9722,113 @@ ruleLimit returns [EObject current=null]
     	newLeafNode(otherlv_2, grammarAccess.getLimitAccess().getLeftCurlyBracketKeyword_2_0());
     }
 (
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLimitAccess().getAttributesLimitAttributeParserRuleCall_2_1_0()); 
+	    }
+		lv_attributes_3_0=ruleLimitAttribute		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLimitRule());
+	        }
+       		add(
+       			$current, 
+       			"attributes",
+        		lv_attributes_3_0, 
+        		"LimitAttribute");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_4='}' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getLimitAccess().getRightCurlyBracketKeyword_2_2());
+    }
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleLimitAttribute
+entryRuleLimitAttribute returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLimitAttributeRule()); }
+	 iv_ruleLimitAttribute=ruleLimitAttribute 
+	 { $current=$iv_ruleLimitAttribute.current; } 
+	 EOF 
+;
+
+// Rule LimitAttribute
+ruleLimitAttribute returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
 
 (
 	{ 
-	  getUnorderedGroupHelper().enter(grammarAccess.getLimitAccess().getUnorderedGroup_2_1());
+	  getUnorderedGroupHelper().enter(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
 	}
 	(
 		(
 
 			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAccess().getUnorderedGroup_2_1(), 0)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 0)}?=>(
 					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAccess().getUnorderedGroup_2_1(), 0);
+	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 0);
 	 				}
-					({true}?=>(	otherlv_4='end' 
+					({true}?=>(	otherlv_1='end' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getLimitAccess().getEndKeyword_2_1_0_0());
+    	newLeafNode(otherlv_1, grammarAccess.getLimitAttributeAccess().getEndKeyword_0_0());
     }
 (
 (
-		lv_end_5_0=RULE_ISODATE
+		lv_end_2_0=RULE_ISODATE
 		{
-			newLeafNode(lv_end_5_0, grammarAccess.getLimitAccess().getEndISODATETerminalRuleCall_2_1_0_1_0()); 
+			newLeafNode(lv_end_2_0, grammarAccess.getLimitAttributeAccess().getEndISODATETerminalRuleCall_0_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLimitRule());
+	            $current = createModelElement(grammarAccess.getLimitAttributeRule());
 	        }
        		setWithLastConsumed(
        			$current, 
        			"end",
-        		lv_end_5_0, 
+        		lv_end_2_0, 
         		"ISODATE");
 	    }
 
 )
 )))
 					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAccess().getUnorderedGroup_2_1());
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
 	 				}
  				)
 			)  |
 
 			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAccess().getUnorderedGroup_2_1(), 1)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 1)}?=>(
 					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAccess().getUnorderedGroup_2_1(), 1);
+	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 1);
 	 				}
-					({true}?=>(	otherlv_6='period' 
+					({true}?=>(	otherlv_3='period' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getLimitAccess().getPeriodKeyword_2_1_1_0());
+    	newLeafNode(otherlv_3, grammarAccess.getLimitAttributeAccess().getPeriodKeyword_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLimitAccess().getPeriodInterval1ParserRuleCall_2_1_1_1_0()); 
+	        newCompositeNode(grammarAccess.getLimitAttributeAccess().getPeriodInterval1ParserRuleCall_1_1_0()); 
 	    }
-		lv_period_7_0=ruleInterval1		{
+		lv_period_4_0=ruleInterval1		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitRule());
+	            $current = createModelElementForParent(grammarAccess.getLimitAttributeRule());
 	        }
        		set(
        			$current, 
        			"period",
-        		lv_period_7_0, 
+        		lv_period_4_0, 
         		"Interval1");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -9912,90 +9836,100 @@ ruleLimit returns [EObject current=null]
 )
 )))
 					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAccess().getUnorderedGroup_2_1());
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
 	 				}
  				)
 			)  |
 
 			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAccess().getUnorderedGroup_2_1(), 2)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 2)}?=>(
 					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAccess().getUnorderedGroup_2_1(), 2);
+	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 2);
 	 				}
-					({true}?=>(	otherlv_8='resource' 
+					({true}?=>(	otherlv_5='resources' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getLimitAccess().getResourceKeyword_2_1_2_0());
+    	newLeafNode(otherlv_5, grammarAccess.getLimitAttributeAccess().getResourcesKeyword_2_0());
     }
 (
 (
 		{
 			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLimitRule());
+	            $current = createModelElement(grammarAccess.getLimitAttributeRule());
 	        }
         }
-	otherlv_9=RULE_ID
+	otherlv_6=RULE_ID
 	{
-		newLeafNode(otherlv_9, grammarAccess.getLimitAccess().getResourcesResourceCrossReference_2_1_2_1_0()); 
+		newLeafNode(otherlv_6, grammarAccess.getLimitAttributeAccess().getResourcesResourceCrossReference_2_1_0()); 
 	}
 
 )
-)(	otherlv_10=',' 
+)(	otherlv_7=',' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getLimitAccess().getCommaKeyword_2_1_2_2_0());
+    	newLeafNode(otherlv_7, grammarAccess.getLimitAttributeAccess().getCommaKeyword_2_2_0());
     }
 (
 (
 		{
 			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLimitRule());
+	            $current = createModelElement(grammarAccess.getLimitAttributeRule());
 	        }
         }
-	otherlv_11=RULE_ID
+	otherlv_8=RULE_ID
 	{
-		newLeafNode(otherlv_11, grammarAccess.getLimitAccess().getResourcesResourceCrossReference_2_1_2_2_1_0()); 
+		newLeafNode(otherlv_8, grammarAccess.getLimitAttributeAccess().getResourcesResourceCrossReference_2_2_1_0()); 
 	}
 
 )
 ))*))
 					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAccess().getUnorderedGroup_2_1());
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
 	 				}
  				)
 			)  |
 
 			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAccess().getUnorderedGroup_2_1(), 3)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 3)}?=>(
 					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAccess().getUnorderedGroup_2_1(), 3);
+	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 3);
 	 				}
-					({true}?=>(	otherlv_12='start' 
+					({true}?=>(	otherlv_9='start' 
     {
-    	newLeafNode(otherlv_12, grammarAccess.getLimitAccess().getStartKeyword_2_1_3_0());
+    	newLeafNode(otherlv_9, grammarAccess.getLimitAttributeAccess().getStartKeyword_3_0());
     }
-this_ISODATE_13=RULE_ISODATE
-    { 
-    newLeafNode(this_ISODATE_13, grammarAccess.getLimitAccess().getISODATETerminalRuleCall_2_1_3_1()); 
-    }
-))
+(
+(
+		lv_start_10_0=RULE_ISODATE
+		{
+			newLeafNode(lv_start_10_0, grammarAccess.getLimitAttributeAccess().getStartISODATETerminalRuleCall_3_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLimitAttributeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"start",
+        		lv_start_10_0, 
+        		"ISODATE");
+	    }
+
+)
+)))
 					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAccess().getUnorderedGroup_2_1());
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
 	 				}
  				)
 			)  
 
 		)+
-	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getLimitAccess().getUnorderedGroup_2_1())}?	
+	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getLimitAttributeAccess().getUnorderedGroup())}?	
 	)
 )
 	{ 
-	  getUnorderedGroupHelper().leave(grammarAccess.getLimitAccess().getUnorderedGroup_2_1());
+	  getUnorderedGroupHelper().leave(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
 	}
 
-)	otherlv_14='}' 
-    {
-    	newLeafNode(otherlv_14, grammarAccess.getLimitAccess().getRightCurlyBracketKeyword_2_2());
-    }
-)?)
+)
 ;
 
 

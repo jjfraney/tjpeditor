@@ -17,12 +17,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.jjflyboy.tjpeditor.project.Interval1;
 import org.jjflyboy.tjpeditor.project.Limit;
+import org.jjflyboy.tjpeditor.project.LimitAttribute;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
-import org.jjflyboy.tjpeditor.project.Resource;
 import org.jjflyboy.tjpeditor.project.TimeUnit;
 
 /**
@@ -34,15 +34,13 @@ import org.jjflyboy.tjpeditor.project.TimeUnit;
  * <ul>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getUnit <em>Unit</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getEnd <em>End</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getPeriod <em>Period</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getResources <em>Resources</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LimitImpl extends MaximumImpl implements Limit
+public class LimitImpl extends DailyMaxImpl implements Limit
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -85,44 +83,14 @@ public class LimitImpl extends MaximumImpl implements Limit
   protected TimeUnit unit = UNIT_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getEnd() <em>End</em>}' attribute.
+   * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEnd()
+   * @see #getAttributes()
    * @generated
    * @ordered
    */
-  protected static final String END_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getEnd() <em>End</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEnd()
-   * @generated
-   * @ordered
-   */
-  protected String end = END_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getPeriod() <em>Period</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPeriod()
-   * @generated
-   * @ordered
-   */
-  protected Interval1 period;
-
-  /**
-   * The cached value of the '{@link #getResources() <em>Resources</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getResources()
-   * @generated
-   * @ordered
-   */
-  protected EList<Resource> resources;
+  protected EList<LimitAttribute> attributes;
 
   /**
    * <!-- begin-user-doc -->
@@ -196,84 +164,13 @@ public class LimitImpl extends MaximumImpl implements Limit
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getEnd()
+  public EList<LimitAttribute> getAttributes()
   {
-    return end;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setEnd(String newEnd)
-  {
-    String oldEnd = end;
-    end = newEnd;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.LIMIT__END, oldEnd, end));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Interval1 getPeriod()
-  {
-    return period;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetPeriod(Interval1 newPeriod, NotificationChain msgs)
-  {
-    Interval1 oldPeriod = period;
-    period = newPeriod;
-    if (eNotificationRequired())
+    if (attributes == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.LIMIT__PERIOD, oldPeriod, newPeriod);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      attributes = new EObjectContainmentEList<LimitAttribute>(LimitAttribute.class, this, ProjectPackage.LIMIT__ATTRIBUTES);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPeriod(Interval1 newPeriod)
-  {
-    if (newPeriod != period)
-    {
-      NotificationChain msgs = null;
-      if (period != null)
-        msgs = ((InternalEObject)period).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.LIMIT__PERIOD, null, msgs);
-      if (newPeriod != null)
-        msgs = ((InternalEObject)newPeriod).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.LIMIT__PERIOD, null, msgs);
-      msgs = basicSetPeriod(newPeriod, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.LIMIT__PERIOD, newPeriod, newPeriod));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Resource> getResources()
-  {
-    if (resources == null)
-    {
-      resources = new EObjectResolvingEList<Resource>(Resource.class, this, ProjectPackage.LIMIT__RESOURCES);
-    }
-    return resources;
+    return attributes;
   }
 
   /**
@@ -286,8 +183,8 @@ public class LimitImpl extends MaximumImpl implements Limit
   {
     switch (featureID)
     {
-      case ProjectPackage.LIMIT__PERIOD:
-        return basicSetPeriod(null, msgs);
+      case ProjectPackage.LIMIT__ATTRIBUTES:
+        return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -306,12 +203,8 @@ public class LimitImpl extends MaximumImpl implements Limit
         return getValue();
       case ProjectPackage.LIMIT__UNIT:
         return getUnit();
-      case ProjectPackage.LIMIT__END:
-        return getEnd();
-      case ProjectPackage.LIMIT__PERIOD:
-        return getPeriod();
-      case ProjectPackage.LIMIT__RESOURCES:
-        return getResources();
+      case ProjectPackage.LIMIT__ATTRIBUTES:
+        return getAttributes();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -333,15 +226,9 @@ public class LimitImpl extends MaximumImpl implements Limit
       case ProjectPackage.LIMIT__UNIT:
         setUnit((TimeUnit)newValue);
         return;
-      case ProjectPackage.LIMIT__END:
-        setEnd((String)newValue);
-        return;
-      case ProjectPackage.LIMIT__PERIOD:
-        setPeriod((Interval1)newValue);
-        return;
-      case ProjectPackage.LIMIT__RESOURCES:
-        getResources().clear();
-        getResources().addAll((Collection<? extends Resource>)newValue);
+      case ProjectPackage.LIMIT__ATTRIBUTES:
+        getAttributes().clear();
+        getAttributes().addAll((Collection<? extends LimitAttribute>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -363,14 +250,8 @@ public class LimitImpl extends MaximumImpl implements Limit
       case ProjectPackage.LIMIT__UNIT:
         setUnit(UNIT_EDEFAULT);
         return;
-      case ProjectPackage.LIMIT__END:
-        setEnd(END_EDEFAULT);
-        return;
-      case ProjectPackage.LIMIT__PERIOD:
-        setPeriod((Interval1)null);
-        return;
-      case ProjectPackage.LIMIT__RESOURCES:
-        getResources().clear();
+      case ProjectPackage.LIMIT__ATTRIBUTES:
+        getAttributes().clear();
         return;
     }
     super.eUnset(featureID);
@@ -390,12 +271,8 @@ public class LimitImpl extends MaximumImpl implements Limit
         return value != VALUE_EDEFAULT;
       case ProjectPackage.LIMIT__UNIT:
         return unit != UNIT_EDEFAULT;
-      case ProjectPackage.LIMIT__END:
-        return END_EDEFAULT == null ? end != null : !END_EDEFAULT.equals(end);
-      case ProjectPackage.LIMIT__PERIOD:
-        return period != null;
-      case ProjectPackage.LIMIT__RESOURCES:
-        return resources != null && !resources.isEmpty();
+      case ProjectPackage.LIMIT__ATTRIBUTES:
+        return attributes != null && !attributes.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -415,8 +292,6 @@ public class LimitImpl extends MaximumImpl implements Limit
     result.append(value);
     result.append(", unit: ");
     result.append(unit);
-    result.append(", end: ");
-    result.append(end);
     result.append(')');
     return result.toString();
   }

@@ -113,7 +113,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.CURRENCY: return createCurrency();
       case ProjectPackage.CURRENCY_FORMAT: return createCurrencyFormat();
       case ProjectPackage.DATE_EXTEND: return createDateExtend();
-      case ProjectPackage.LIMIT: return createLimit();
+      case ProjectPackage.DAILY_MAX: return createDailyMax();
+      case ProjectPackage.DAILY_MIN: return createDailyMin();
       case ProjectPackage.DAILY_WORKING_HOURS: return createDailyWorkingHours();
       case ProjectPackage.DEFINITIONS: return createDefinitions();
       case ProjectPackage.DEPENDS: return createDepends();
@@ -150,6 +151,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.LEFT: return createLeft();
       case ProjectPackage.LENGTH: return createLength();
       case ProjectPackage.LIMITS: return createLimits();
+      case ProjectPackage.LIMITS_ATTRIBUTE: return createLimitsAttribute();
       case ProjectPackage.LIST_ITEM: return createListItem();
       case ProjectPackage.LIST_TYPE: return createListType();
       case ProjectPackage.LOAD_UNIT: return createLoadUnit();
@@ -244,6 +246,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.CRITERION_ID: return createCriterionId();
       case ProjectPackage.DURATION_QUANTITY: return createDurationQuantity();
       case ProjectPackage.EXTEND_ATTRIBUTE: return createExtendAttribute();
+      case ProjectPackage.LIMIT: return createLimit();
+      case ProjectPackage.LIMIT_ATTRIBUTE: return createLimitAttribute();
       case ProjectPackage.REAL_FORMAT: return createRealFormat();
       case ProjectPackage.SHIFT_LIMIT: return createShiftLimit();
       case ProjectPackage.SORT: return createSort();
@@ -861,10 +865,21 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Limit createLimit()
+  public DailyMax createDailyMax()
   {
-    LimitImpl limit = new LimitImpl();
-    return limit;
+    DailyMaxImpl dailyMax = new DailyMaxImpl();
+    return dailyMax;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DailyMin createDailyMin()
+  {
+    DailyMinImpl dailyMin = new DailyMinImpl();
+    return dailyMin;
   }
 
   /**
@@ -1261,6 +1276,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     LimitsImpl limits = new LimitsImpl();
     return limits;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LimitsAttribute createLimitsAttribute()
+  {
+    LimitsAttributeImpl limitsAttribute = new LimitsAttributeImpl();
+    return limitsAttribute;
   }
 
   /**
@@ -2295,6 +2321,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ExtendAttributeImpl extendAttribute = new ExtendAttributeImpl();
     return extendAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Limit createLimit()
+  {
+    LimitImpl limit = new LimitImpl();
+    return limit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LimitAttribute createLimitAttribute()
+  {
+    LimitAttributeImpl limitAttribute = new LimitAttributeImpl();
+    return limitAttribute;
   }
 
   /**

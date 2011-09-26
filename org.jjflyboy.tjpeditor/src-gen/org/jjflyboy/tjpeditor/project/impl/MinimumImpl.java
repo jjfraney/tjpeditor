@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.jjflyboy.tjpeditor.project.Minimum;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 
@@ -21,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class MinimumImpl extends MinimalEObjectImpl.Container implements Minimum
+public class MinimumImpl extends LimitsAttributeImpl implements Minimum
 {
   /**
    * <!-- begin-user-doc -->

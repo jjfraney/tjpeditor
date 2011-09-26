@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.WeeklyMin;
 
@@ -21,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.WeeklyMin;
  *
  * @generated
  */
-public class WeeklyMinImpl extends MinimalEObjectImpl.Container implements WeeklyMin
+public class WeeklyMinImpl extends LimitsAttributeImpl implements WeeklyMin
 {
   /**
    * <!-- begin-user-doc -->
