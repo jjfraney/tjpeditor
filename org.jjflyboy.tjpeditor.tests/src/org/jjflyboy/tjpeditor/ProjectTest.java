@@ -14,8 +14,18 @@ public class ProjectTest extends XtextTest {
 	}
 	
 	@Test
-	public void simpleProjectTest() {
-		testFile("simpleProject.tjp");
+	public void simpleProjectZeroAttributesTest() {
+		testFile("simpleProjectZeroAttributes.tjp");
+	}
+	
+	@Test
+	public void simpleProjectMissingAttributesTest() {
+		testFile("simpleProjectMissingAttributes.tjp");
+	}
+
+	@Test
+	public void simpleProjectMissingIdTest() {
+		testFile("simpleProjectMissingId.tjp");
 	}
 
 }

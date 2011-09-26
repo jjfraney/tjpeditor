@@ -309,10 +309,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// http://www.taskjuggler.org/tj3/manual/project.html
 		//Project:
-		//	"project" id=ID? name=STRING version=STRING? interval=Interval2 ("{" attributes+=ProjectAttribute* "}");
+		//	"project" id=ID? name=STRING version=STRING? interval=Interval2 ("{" attributes+=ProjectAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"project" id=ID? name=STRING version=STRING? interval=Interval2 ("{" attributes+=ProjectAttribute* "}")
+		//"project" id=ID? name=STRING version=STRING? interval=Interval2 ("{" attributes+=ProjectAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"project"
@@ -342,7 +342,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Interval2
 		public RuleCall getIntervalInterval2ParserRuleCall_4_0() { return cIntervalInterval2ParserRuleCall_4_0; }
 
-		//"{" attributes+=ProjectAttribute* "}"
+		//("{" attributes+=ProjectAttribute* "}")?
 		public Group getGroup_5() { return cGroup_5; }
 
 		//"{"
@@ -9194,7 +9194,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/project.html
 	//Project:
-	//	"project" id=ID? name=STRING version=STRING? interval=Interval2 ("{" attributes+=ProjectAttribute* "}");
+	//	"project" id=ID? name=STRING version=STRING? interval=Interval2 ("{" attributes+=ProjectAttribute* "}")?;
 	public ProjectElements getProjectAccess() {
 		return (pProject != null) ? pProject : (pProject = new ProjectElements());
 	}

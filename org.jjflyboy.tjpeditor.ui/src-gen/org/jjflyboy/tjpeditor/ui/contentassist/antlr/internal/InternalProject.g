@@ -8260,7 +8260,7 @@ rule__Project__Group__5__Impl
 :
 (
 { before(grammarAccess.getProjectAccess().getGroup_5()); }
-(rule__Project__Group_5__0)
+(rule__Project__Group_5__0)?
 { after(grammarAccess.getProjectAccess().getGroup_5()); }
 )
 

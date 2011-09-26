@@ -65,7 +65,7 @@ SupplementAccount:
 
 // http://www.taskjuggler.org/tj3/manual/project.html
 Project : 
-	'project' id=ID? name=STRING version=STRING? interval=Interval2 ('{' attributes+=ProjectAttribute* '}' );
+	'project' id=ID? name=STRING version=STRING? interval=Interval2 ('{' attributes+=ProjectAttribute* '}' )?;
 
 ProjectAttribute:
 	(

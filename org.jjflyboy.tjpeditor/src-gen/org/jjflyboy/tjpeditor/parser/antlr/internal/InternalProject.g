@@ -642,7 +642,7 @@ ruleProject returns [EObject current=null]
     {
     	newLeafNode(otherlv_7, grammarAccess.getProjectAccess().getRightCurlyBracketKeyword_5_2());
     }
-))
+)?)
 ;
 
 
