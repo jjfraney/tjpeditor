@@ -20,4 +20,10 @@ public class Interval2Test  extends XtextTest {
 		testParserRule("2010-01-16 - 2011-01-16", "Interval2");
 	}
 
+	@Test 
+	public void testInterval2MissingEnd() {
+		testParserRuleErrors("2010-01-16", "Interval2", "no viable alternative");
+	}
+
+
 }
