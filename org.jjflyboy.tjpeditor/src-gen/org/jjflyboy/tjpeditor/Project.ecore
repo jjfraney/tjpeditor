@@ -129,8 +129,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Booking">
     <eStructuralFeatures xsi:type="ecore:EReference" name="interval" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval4"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="overtime" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingRestriction"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sloppy" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingRestriction"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="overtime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sloppy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingTask" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Booking">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource"/>
@@ -710,11 +710,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Weekdays">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="first" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="last" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="BookingRestriction">
-    <eLiterals name="WORKING_TIME_ONLY" literal="0"/>
-    <eLiterals name="PLUS_OFF_DUTY" value="1" literal="1"/>
-    <eLiterals name="PLUS_VACATION" value="2" literal="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ChargeApplies">
     <eLiterals name="ONSTART" literal="onstart"/>

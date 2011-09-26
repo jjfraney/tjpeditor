@@ -55,7 +55,6 @@ public interface Booking extends EObject
 
   /**
    * Returns the value of the '<em><b>Overtime</b></em>' attribute.
-   * The literals are from the enumeration {@link org.jjflyboy.tjpeditor.project.BookingRestriction}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Overtime</em>' attribute isn't clear,
@@ -63,28 +62,25 @@ public interface Booking extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Overtime</em>' attribute.
-   * @see org.jjflyboy.tjpeditor.project.BookingRestriction
-   * @see #setOvertime(BookingRestriction)
+   * @see #setOvertime(int)
    * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getBooking_Overtime()
    * @model
    * @generated
    */
-  BookingRestriction getOvertime();
+  int getOvertime();
 
   /**
    * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Booking#getOvertime <em>Overtime</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Overtime</em>' attribute.
-   * @see org.jjflyboy.tjpeditor.project.BookingRestriction
    * @see #getOvertime()
    * @generated
    */
-  void setOvertime(BookingRestriction value);
+  void setOvertime(int value);
 
   /**
    * Returns the value of the '<em><b>Sloppy</b></em>' attribute.
-   * The literals are from the enumeration {@link org.jjflyboy.tjpeditor.project.BookingRestriction}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Sloppy</em>' attribute isn't clear,
@@ -92,23 +88,21 @@ public interface Booking extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Sloppy</em>' attribute.
-   * @see org.jjflyboy.tjpeditor.project.BookingRestriction
-   * @see #setSloppy(BookingRestriction)
+   * @see #setSloppy(int)
    * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getBooking_Sloppy()
    * @model
    * @generated
    */
-  BookingRestriction getSloppy();
+  int getSloppy();
 
   /**
    * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Booking#getSloppy <em>Sloppy</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Sloppy</em>' attribute.
-   * @see org.jjflyboy.tjpeditor.project.BookingRestriction
    * @see #getSloppy()
    * @generated
    */
-  void setSloppy(BookingRestriction value);
+  void setSloppy(int value);
 
 } // Booking

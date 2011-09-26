@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.jjflyboy.tjpeditor.project.Booking;
-import org.jjflyboy.tjpeditor.project.BookingRestriction;
 import org.jjflyboy.tjpeditor.project.BookingTask;
 import org.jjflyboy.tjpeditor.project.Interval4;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
@@ -56,7 +55,7 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * @generated
    * @ordered
    */
-  protected static final BookingRestriction OVERTIME_EDEFAULT = BookingRestriction.WORKING_TIME_ONLY;
+  protected static final int OVERTIME_EDEFAULT = 0;
 
   /**
    * The cached value of the '{@link #getOvertime() <em>Overtime</em>}' attribute.
@@ -66,7 +65,7 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * @generated
    * @ordered
    */
-  protected BookingRestriction overtime = OVERTIME_EDEFAULT;
+  protected int overtime = OVERTIME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getSloppy() <em>Sloppy</em>}' attribute.
@@ -76,7 +75,7 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * @generated
    * @ordered
    */
-  protected static final BookingRestriction SLOPPY_EDEFAULT = BookingRestriction.WORKING_TIME_ONLY;
+  protected static final int SLOPPY_EDEFAULT = 0;
 
   /**
    * The cached value of the '{@link #getSloppy() <em>Sloppy</em>}' attribute.
@@ -86,7 +85,7 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * @generated
    * @ordered
    */
-  protected BookingRestriction sloppy = SLOPPY_EDEFAULT;
+  protected int sloppy = SLOPPY_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
@@ -172,7 +171,7 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * <!-- end-user-doc -->
    * @generated
    */
-  public BookingRestriction getOvertime()
+  public int getOvertime()
   {
     return overtime;
   }
@@ -182,10 +181,10 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOvertime(BookingRestriction newOvertime)
+  public void setOvertime(int newOvertime)
   {
-    BookingRestriction oldOvertime = overtime;
-    overtime = newOvertime == null ? OVERTIME_EDEFAULT : newOvertime;
+    int oldOvertime = overtime;
+    overtime = newOvertime;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.BOOKING_TASK__OVERTIME, oldOvertime, overtime));
   }
@@ -195,7 +194,7 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * <!-- end-user-doc -->
    * @generated
    */
-  public BookingRestriction getSloppy()
+  public int getSloppy()
   {
     return sloppy;
   }
@@ -205,10 +204,10 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSloppy(BookingRestriction newSloppy)
+  public void setSloppy(int newSloppy)
   {
-    BookingRestriction oldSloppy = sloppy;
-    sloppy = newSloppy == null ? SLOPPY_EDEFAULT : newSloppy;
+    int oldSloppy = sloppy;
+    sloppy = newSloppy;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.BOOKING_TASK__SLOPPY, oldSloppy, sloppy));
   }
@@ -309,10 +308,10 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
         setInterval((Interval4)newValue);
         return;
       case ProjectPackage.BOOKING_TASK__OVERTIME:
-        setOvertime((BookingRestriction)newValue);
+        setOvertime((Integer)newValue);
         return;
       case ProjectPackage.BOOKING_TASK__SLOPPY:
-        setSloppy((BookingRestriction)newValue);
+        setSloppy((Integer)newValue);
         return;
       case ProjectPackage.BOOKING_TASK__RESOURCE:
         setResource((Resource)newValue);

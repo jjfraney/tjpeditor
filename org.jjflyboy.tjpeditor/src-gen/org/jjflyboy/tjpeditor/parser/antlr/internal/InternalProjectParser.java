@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_ISODATE", "RULE_INT", "RULE_TIME", "RULE_FLOAT", "RULE_SL_COMMENT", "RULE_RGB", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'account'", "'{'", "'}'", "'supplement'", "'project'", "'task'", "'report'", "'resource'", "'allocate'", "','", "'newtask'", "'alert'", "'author'", "'balance'", "'caption'", "'cellcolor'", "'celltext'", "'center'", "'charge'", "'chargeset'", "'columns'", "'complete'", "'copyright'", "'credit'", "'currency'", "'currencyformat'", "'date'", "'dailymax'", "'dailymin'", "'dailyworkinghours'", "'depends'", "'details'", "'duration'", "'efficiency'", "'effort'", "'end'", "'endcredit'", "'epilog'", "'flags'", "'fontcolor'", "'footer'", "'formats'", "'gapduration'", "'gaplength'", "'header'", "'headline'", "'hidereport'", "'hideresource'", "'hidetask'", "'include'", "'-'", "'+'", "'journalentry'", "'left'", "'length'", "'limits'", "'listitem'", "'listtype'", "'loadunit'", "'mandatory'", "'maxend'", "'maximum'", "'maxstart'", "'milestone'", "'minimum'", "'minend'", "'minstart'", "'monthlymax'", "'monthlymin'", "'note'", "'now'", "'numberformat'", "'period'", "'persistent'", "'precedes'", "'priority'", "'projectid'", "'prolog'", "'purge'", "'rate'", "'reference'", "'remaining'", "'resourcereport'", "'responsible'", "'richtext'", "'right'", "'rollupresource'", "'rolluptask'", "'scale'", "'hour'", "'day'", "'week'", "'month'", "'quarter'", "'year'", "'scenario'", "'active'", "'scenarios'", "'scheduled'", "'scheduling'", "'select'", "'selfcontained'", "'shift'", "'replace'", "'timezone'", "'vacation'", "'workinghours'", "'shifts'", "'shorttimeformat'", "'sortresources'", "'sorttasks'", "'start'", "'startcredit'", "'status'", "'summary'", "'taskreport'", "'taskroot'", "'text'", "'textreport'", "'timeformat'", "'timeoff'", "'timingresolution'", "'min'", "'title'", "'tooltip'", "'trackingscenario'", "'weekstartssunday'", "'weekstartsmonday'", "'weeklymax'", "'weeklymin'", "'width'", "'work'", "'off'", "'yearlyworkingdays'", "'.'", "'inherit'", "'scenariospecific'", "'!'", "'0'", "'1'", "'2'", "'onstart'", "'onend'", "'perhour'", "'perday'", "'perweek'", "'journal'", "' journal_sub'", "'status_down'", "'status_up'", "'alerts_down'", "'date.down'", "'date.up'", "'alert.down'", "'alert.up'", "'property.up'", "'bullets'", "'comma'", "'numbered'", "'up'", "'down'", "'yes'", "'no'", "'csv'", "'html'", "'niku'", "'days'", "'hours'", "'longauto'", "'minutes'", "'months'", "'shortauto'", "'weeks'", "'years'", "'maxloaded'", "'minloaded'", "'minallocated'", "'order'", "'random'", "'alertmessage'", "'alertsummar'", "'alerttrend'", "'chart'", "'completed'", "'criticalness'", "'cost'", "'daily'", "'duties'", "'effortdone'", "'effortleft'", "'email'", "'followers'", "'freetime'", "'freework'", "'fte'", "'headcount'", "'hierarchindex'", "'hourly'", "'id'", "'index'", "'line'", "'monthly'", "'name'", "'pathcriticalness'", "'precursor'", "'quarterly'", "'resources'", "'revenue'", "'seqno'", "'targets'", "'wbs'", "'weekly'", "'yearly'", "'red'", "'yellow'", "'green'", "'alap'", "'asap'", "'h'", "'d'", "'w'", "'m'", "'y'", "'mon'", "'tue'", "'wed'", "'thu'", "'fri'", "'sat'", "'sun'", "'%'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_ISODATE", "RULE_INT", "RULE_TIME", "RULE_FLOAT", "RULE_SL_COMMENT", "RULE_RGB", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'account'", "'{'", "'}'", "'supplement'", "'project'", "'task'", "'report'", "'resource'", "'allocate'", "','", "'newtask'", "'alert'", "'author'", "'balance'", "'caption'", "'cellcolor'", "'celltext'", "'center'", "'charge'", "'chargeset'", "'columns'", "'complete'", "'copyright'", "'credit'", "'currency'", "'currencyformat'", "'date'", "'dailymax'", "'dailymin'", "'dailyworkinghours'", "'depends'", "'details'", "'duration'", "'efficiency'", "'effort'", "'end'", "'endcredit'", "'epilog'", "'flags'", "'fontcolor'", "'footer'", "'formats'", "'gapduration'", "'gaplength'", "'header'", "'headline'", "'hidereport'", "'hideresource'", "'hidetask'", "'include'", "'-'", "'+'", "'journalentry'", "'left'", "'length'", "'limits'", "'listitem'", "'listtype'", "'loadunit'", "'mandatory'", "'maxend'", "'maximum'", "'maxstart'", "'milestone'", "'minimum'", "'minend'", "'minstart'", "'monthlymax'", "'monthlymin'", "'note'", "'now'", "'numberformat'", "'period'", "'persistent'", "'precedes'", "'priority'", "'projectid'", "'prolog'", "'purge'", "'rate'", "'reference'", "'remaining'", "'resourcereport'", "'responsible'", "'richtext'", "'right'", "'rollupresource'", "'rolluptask'", "'scale'", "'hour'", "'day'", "'week'", "'month'", "'quarter'", "'year'", "'scenario'", "'active'", "'scenarios'", "'scheduled'", "'scheduling'", "'select'", "'selfcontained'", "'shift'", "'replace'", "'timezone'", "'vacation'", "'workinghours'", "'shifts'", "'shorttimeformat'", "'sortresources'", "'sorttasks'", "'start'", "'startcredit'", "'status'", "'summary'", "'taskreport'", "'taskroot'", "'text'", "'textreport'", "'timeformat'", "'timeoff'", "'timingresolution'", "'min'", "'title'", "'tooltip'", "'trackingscenario'", "'weekstartssunday'", "'weekstartsmonday'", "'weeklymax'", "'weeklymin'", "'width'", "'work'", "'off'", "'yearlyworkingdays'", "'.'", "'inherit'", "'scenariospecific'", "'!'", "'onstart'", "'onend'", "'perhour'", "'perday'", "'perweek'", "'journal'", "' journal_sub'", "'status_down'", "'status_up'", "'alerts_down'", "'date.down'", "'date.up'", "'alert.down'", "'alert.up'", "'property.up'", "'bullets'", "'comma'", "'numbered'", "'up'", "'down'", "'yes'", "'no'", "'csv'", "'html'", "'niku'", "'days'", "'hours'", "'longauto'", "'minutes'", "'months'", "'shortauto'", "'weeks'", "'years'", "'maxloaded'", "'minloaded'", "'minallocated'", "'order'", "'random'", "'alertmessage'", "'alertsummar'", "'alerttrend'", "'chart'", "'completed'", "'criticalness'", "'cost'", "'daily'", "'duties'", "'effortdone'", "'effortleft'", "'email'", "'followers'", "'freetime'", "'freework'", "'fte'", "'headcount'", "'hierarchindex'", "'hourly'", "'id'", "'index'", "'line'", "'monthly'", "'name'", "'pathcriticalness'", "'precursor'", "'quarterly'", "'resources'", "'revenue'", "'seqno'", "'targets'", "'wbs'", "'weekly'", "'yearly'", "'red'", "'yellow'", "'green'", "'alap'", "'asap'", "'h'", "'d'", "'w'", "'m'", "'y'", "'mon'", "'tue'", "'wed'", "'thu'", "'fri'", "'sat'", "'sun'", "'%'"
     };
     public static final int RULE_ID=4;
     public static final int T__159=159;
@@ -156,10 +156,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final int T__102=102;
     public static final int T__101=101;
     public static final int T__100=100;
-    public static final int T__245=245;
     public static final int RULE_SL_COMMENT=10;
-    public static final int T__244=244;
-    public static final int T__243=243;
     public static final int T__242=242;
     public static final int T__241=241;
     public static final int T__240=240;
@@ -25593,11 +25590,11 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
             if ( (LA90_0==RULE_ID) ) {
                 int LA90_1 = input.LA(2);
 
-                if ( (LA90_1==EOF||LA90_1==17||LA90_1==24||(LA90_1>=28 && LA90_1<=29)||LA90_1==32||LA90_1==35||LA90_1==50||(LA90_1>=52 && LA90_1<=53)||(LA90_1>=55 && LA90_1<=56)||(LA90_1>=59 && LA90_1<=60)||LA90_1==68||LA90_1==73||LA90_1==87||LA90_1==92||LA90_1==97||LA90_1==100||LA90_1==112||LA90_1==116||(LA90_1>=124 && LA90_1<=126)||(LA90_1>=130 && LA90_1<=131)||(LA90_1>=133 && LA90_1<=134)||LA90_1==138) ) {
-                    alt90=1;
-                }
-                else if ( (LA90_1==149) ) {
+                if ( (LA90_1==149) ) {
                     alt90=2;
+                }
+                else if ( (LA90_1==EOF||LA90_1==17||LA90_1==24||(LA90_1>=28 && LA90_1<=29)||LA90_1==32||LA90_1==35||LA90_1==50||(LA90_1>=52 && LA90_1<=53)||(LA90_1>=55 && LA90_1<=56)||(LA90_1>=59 && LA90_1<=60)||LA90_1==68||LA90_1==73||LA90_1==87||LA90_1==92||LA90_1==97||LA90_1==100||LA90_1==112||LA90_1==116||(LA90_1>=124 && LA90_1<=126)||(LA90_1>=130 && LA90_1<=131)||(LA90_1>=133 && LA90_1<=134)||LA90_1==138) ) {
+                    alt90=1;
                 }
                 else {
                     NoViableAltException nvae =
@@ -25606,7 +25603,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     throw nvae;
                 }
             }
-            else if ( (LA90_0==26||LA90_0==36||(LA90_0>=47 && LA90_0<=50)||LA90_0==53||LA90_0==75||LA90_0==77||(LA90_0>=80 && LA90_0<=81)||LA90_0==84||LA90_0==90||LA90_0==94||LA90_0==98||LA90_0==110||LA90_0==126||LA90_0==128||LA90_0==161||LA90_0==177||(LA90_0>=194 && LA90_0<=227)) ) {
+            else if ( (LA90_0==26||LA90_0==36||(LA90_0>=47 && LA90_0<=50)||LA90_0==53||LA90_0==75||LA90_0==77||(LA90_0>=80 && LA90_0<=81)||LA90_0==84||LA90_0==90||LA90_0==94||LA90_0==98||LA90_0==110||LA90_0==126||LA90_0==128||LA90_0==158||LA90_0==174||(LA90_0>=191 && LA90_0<=224)) ) {
                 alt90=2;
             }
             else {
@@ -25887,7 +25884,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                         else if ( LA92_0 ==58 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskDependencyAccess().getUnorderedGroup_1_1(), 1) ) {
                             alt92=2;
                         }
-                        else if ( LA92_0 >=156 && LA92_0<=157 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskDependencyAccess().getUnorderedGroup_1_1(), 2) ) {
+                        else if ( LA92_0 >=153 && LA92_0<=154 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskDependencyAccess().getUnorderedGroup_1_1(), 2) ) {
                             alt92=3;
                         }
 
@@ -27303,22 +27300,24 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleXFloat"
 
 
-    // $ANTLR start "ruleBookingRestriction"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10846:1: ruleBookingRestriction returns [Enumerator current=null] : ( (enumLiteral_0= '0' ) | (enumLiteral_1= '1' ) | (enumLiteral_2= '2' ) ) ;
-    public final Enumerator ruleBookingRestriction() throws RecognitionException {
+    // $ANTLR start "ruleChargeApplies"
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10846:1: ruleChargeApplies returns [Enumerator current=null] : ( (enumLiteral_0= 'onstart' ) | (enumLiteral_1= 'onend' ) | (enumLiteral_2= 'perhour' ) | (enumLiteral_3= 'perday' ) | (enumLiteral_4= 'perweek' ) ) ;
+    public final Enumerator ruleChargeApplies() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10848:28: ( ( (enumLiteral_0= '0' ) | (enumLiteral_1= '1' ) | (enumLiteral_2= '2' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:1: ( (enumLiteral_0= '0' ) | (enumLiteral_1= '1' ) | (enumLiteral_2= '2' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10848:28: ( ( (enumLiteral_0= 'onstart' ) | (enumLiteral_1= 'onend' ) | (enumLiteral_2= 'perhour' ) | (enumLiteral_3= 'perday' ) | (enumLiteral_4= 'perweek' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:1: ( (enumLiteral_0= 'onstart' ) | (enumLiteral_1= 'onend' ) | (enumLiteral_2= 'perhour' ) | (enumLiteral_3= 'perday' ) | (enumLiteral_4= 'perweek' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:1: ( (enumLiteral_0= '0' ) | (enumLiteral_1= '1' ) | (enumLiteral_2= '2' ) )
-            int alt101=3;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:1: ( (enumLiteral_0= 'onstart' ) | (enumLiteral_1= 'onend' ) | (enumLiteral_2= 'perhour' ) | (enumLiteral_3= 'perday' ) | (enumLiteral_4= 'perweek' ) )
+            int alt101=5;
             switch ( input.LA(1) ) {
             case 153:
                 {
@@ -27335,6 +27334,16 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                 alt101=3;
                 }
                 break;
+            case 156:
+                {
+                alt101=4;
+                }
+                break;
+            case 157:
+                {
+                alt101=5;
+                }
+                break;
             default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 101, 0, input);
@@ -27344,135 +27353,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
             switch (alt101) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:2: (enumLiteral_0= '0' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:2: (enumLiteral_0= 'onstart' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:2: (enumLiteral_0= '0' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:4: enumLiteral_0= '0'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:2: (enumLiteral_0= 'onstart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10849:4: enumLiteral_0= 'onstart'
                     {
-                    enumLiteral_0=(Token)match(input,153,FOLLOW_153_in_ruleBookingRestriction26754); 
-
-                            current = grammarAccess.getBookingRestrictionAccess().getWORKING_TIME_ONLYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_0, grammarAccess.getBookingRestrictionAccess().getWORKING_TIME_ONLYEnumLiteralDeclaration_0()); 
-                        
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10855:6: (enumLiteral_1= '1' )
-                    {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10855:6: (enumLiteral_1= '1' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10855:8: enumLiteral_1= '1'
-                    {
-                    enumLiteral_1=(Token)match(input,154,FOLLOW_154_in_ruleBookingRestriction26771); 
-
-                            current = grammarAccess.getBookingRestrictionAccess().getPLUS_OFF_DUTYEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_1, grammarAccess.getBookingRestrictionAccess().getPLUS_OFF_DUTYEnumLiteralDeclaration_1()); 
-                        
-
-                    }
-
-
-                    }
-                    break;
-                case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10861:6: (enumLiteral_2= '2' )
-                    {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10861:6: (enumLiteral_2= '2' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10861:8: enumLiteral_2= '2'
-                    {
-                    enumLiteral_2=(Token)match(input,155,FOLLOW_155_in_ruleBookingRestriction26788); 
-
-                            current = grammarAccess.getBookingRestrictionAccess().getPLUS_VACATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_2, grammarAccess.getBookingRestrictionAccess().getPLUS_VACATIONEnumLiteralDeclaration_2()); 
-                        
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleBookingRestriction"
-
-
-    // $ANTLR start "ruleChargeApplies"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10871:1: ruleChargeApplies returns [Enumerator current=null] : ( (enumLiteral_0= 'onstart' ) | (enumLiteral_1= 'onend' ) | (enumLiteral_2= 'perhour' ) | (enumLiteral_3= 'perday' ) | (enumLiteral_4= 'perweek' ) ) ;
-    public final Enumerator ruleChargeApplies() throws RecognitionException {
-        Enumerator current = null;
-
-        Token enumLiteral_0=null;
-        Token enumLiteral_1=null;
-        Token enumLiteral_2=null;
-        Token enumLiteral_3=null;
-        Token enumLiteral_4=null;
-
-         enterRule(); 
-        try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10873:28: ( ( (enumLiteral_0= 'onstart' ) | (enumLiteral_1= 'onend' ) | (enumLiteral_2= 'perhour' ) | (enumLiteral_3= 'perday' ) | (enumLiteral_4= 'perweek' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10874:1: ( (enumLiteral_0= 'onstart' ) | (enumLiteral_1= 'onend' ) | (enumLiteral_2= 'perhour' ) | (enumLiteral_3= 'perday' ) | (enumLiteral_4= 'perweek' ) )
-            {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10874:1: ( (enumLiteral_0= 'onstart' ) | (enumLiteral_1= 'onend' ) | (enumLiteral_2= 'perhour' ) | (enumLiteral_3= 'perday' ) | (enumLiteral_4= 'perweek' ) )
-            int alt102=5;
-            switch ( input.LA(1) ) {
-            case 156:
-                {
-                alt102=1;
-                }
-                break;
-            case 157:
-                {
-                alt102=2;
-                }
-                break;
-            case 158:
-                {
-                alt102=3;
-                }
-                break;
-            case 159:
-                {
-                alt102=4;
-                }
-                break;
-            case 160:
-                {
-                alt102=5;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 102, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt102) {
-                case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10874:2: (enumLiteral_0= 'onstart' )
-                    {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10874:2: (enumLiteral_0= 'onstart' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10874:4: enumLiteral_0= 'onstart'
-                    {
-                    enumLiteral_0=(Token)match(input,156,FOLLOW_156_in_ruleChargeApplies26833); 
+                    enumLiteral_0=(Token)match(input,153,FOLLOW_153_in_ruleChargeApplies26754); 
 
                             current = grammarAccess.getChargeAppliesAccess().getONSTARTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getChargeAppliesAccess().getONSTARTEnumLiteralDeclaration_0()); 
@@ -27484,12 +27370,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10880:6: (enumLiteral_1= 'onend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10855:6: (enumLiteral_1= 'onend' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10880:6: (enumLiteral_1= 'onend' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10880:8: enumLiteral_1= 'onend'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10855:6: (enumLiteral_1= 'onend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10855:8: enumLiteral_1= 'onend'
                     {
-                    enumLiteral_1=(Token)match(input,157,FOLLOW_157_in_ruleChargeApplies26850); 
+                    enumLiteral_1=(Token)match(input,154,FOLLOW_154_in_ruleChargeApplies26771); 
 
                             current = grammarAccess.getChargeAppliesAccess().getONENDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getChargeAppliesAccess().getONENDEnumLiteralDeclaration_1()); 
@@ -27501,12 +27387,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10886:6: (enumLiteral_2= 'perhour' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10861:6: (enumLiteral_2= 'perhour' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10886:6: (enumLiteral_2= 'perhour' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10886:8: enumLiteral_2= 'perhour'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10861:6: (enumLiteral_2= 'perhour' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10861:8: enumLiteral_2= 'perhour'
                     {
-                    enumLiteral_2=(Token)match(input,158,FOLLOW_158_in_ruleChargeApplies26867); 
+                    enumLiteral_2=(Token)match(input,155,FOLLOW_155_in_ruleChargeApplies26788); 
 
                             current = grammarAccess.getChargeAppliesAccess().getPERHOUREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getChargeAppliesAccess().getPERHOUREnumLiteralDeclaration_2()); 
@@ -27518,12 +27404,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10892:6: (enumLiteral_3= 'perday' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10867:6: (enumLiteral_3= 'perday' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10892:6: (enumLiteral_3= 'perday' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10892:8: enumLiteral_3= 'perday'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10867:6: (enumLiteral_3= 'perday' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10867:8: enumLiteral_3= 'perday'
                     {
-                    enumLiteral_3=(Token)match(input,159,FOLLOW_159_in_ruleChargeApplies26884); 
+                    enumLiteral_3=(Token)match(input,156,FOLLOW_156_in_ruleChargeApplies26805); 
 
                             current = grammarAccess.getChargeAppliesAccess().getPERDAYEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getChargeAppliesAccess().getPERDAYEnumLiteralDeclaration_3()); 
@@ -27535,12 +27421,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10898:6: (enumLiteral_4= 'perweek' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10873:6: (enumLiteral_4= 'perweek' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10898:6: (enumLiteral_4= 'perweek' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10898:8: enumLiteral_4= 'perweek'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10873:6: (enumLiteral_4= 'perweek' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10873:8: enumLiteral_4= 'perweek'
                     {
-                    enumLiteral_4=(Token)match(input,160,FOLLOW_160_in_ruleChargeApplies26901); 
+                    enumLiteral_4=(Token)match(input,157,FOLLOW_157_in_ruleChargeApplies26822); 
 
                             current = grammarAccess.getChargeAppliesAccess().getPERWEEKEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getChargeAppliesAccess().getPERWEEKEnumLiteralDeclaration_4()); 
@@ -27572,7 +27458,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJustification"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10908:1: ruleJustification returns [Enumerator current=null] : ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10883:1: ruleJustification returns [Enumerator current=null] : ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) ) ;
     public final Enumerator ruleJustification() throws RecognitionException {
         Enumerator current = null;
 
@@ -27582,42 +27468,42 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10910:28: ( ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:1: ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10885:28: ( ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10886:1: ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:1: ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) )
-            int alt103=3;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10886:1: ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) )
+            int alt102=3;
             switch ( input.LA(1) ) {
             case 68:
                 {
-                alt103=1;
+                alt102=1;
                 }
                 break;
             case 32:
                 {
-                alt103=2;
+                alt102=2;
                 }
                 break;
             case 100:
                 {
-                alt103=3;
+                alt102=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 103, 0, input);
+                    new NoViableAltException("", 102, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt103) {
+            switch (alt102) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:2: (enumLiteral_0= 'left' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10886:2: (enumLiteral_0= 'left' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:2: (enumLiteral_0= 'left' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:4: enumLiteral_0= 'left'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10886:2: (enumLiteral_0= 'left' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10886:4: enumLiteral_0= 'left'
                     {
-                    enumLiteral_0=(Token)match(input,68,FOLLOW_68_in_ruleJustification26946); 
+                    enumLiteral_0=(Token)match(input,68,FOLLOW_68_in_ruleJustification26867); 
 
                             current = grammarAccess.getJustificationAccess().getLEFTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getJustificationAccess().getLEFTEnumLiteralDeclaration_0()); 
@@ -27629,12 +27515,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10917:6: (enumLiteral_1= 'center' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10892:6: (enumLiteral_1= 'center' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10917:6: (enumLiteral_1= 'center' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10917:8: enumLiteral_1= 'center'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10892:6: (enumLiteral_1= 'center' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10892:8: enumLiteral_1= 'center'
                     {
-                    enumLiteral_1=(Token)match(input,32,FOLLOW_32_in_ruleJustification26963); 
+                    enumLiteral_1=(Token)match(input,32,FOLLOW_32_in_ruleJustification26884); 
 
                             current = grammarAccess.getJustificationAccess().getCENTEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getJustificationAccess().getCENTEREnumLiteralDeclaration_1()); 
@@ -27646,12 +27532,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10923:6: (enumLiteral_2= 'right' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10898:6: (enumLiteral_2= 'right' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10923:6: (enumLiteral_2= 'right' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10923:8: enumLiteral_2= 'right'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10898:6: (enumLiteral_2= 'right' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10898:8: enumLiteral_2= 'right'
                     {
-                    enumLiteral_2=(Token)match(input,100,FOLLOW_100_in_ruleJustification26980); 
+                    enumLiteral_2=(Token)match(input,100,FOLLOW_100_in_ruleJustification26901); 
 
                             current = grammarAccess.getJustificationAccess().getRIGHTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getJustificationAccess().getRIGHTEnumLiteralDeclaration_2()); 
@@ -27683,7 +27569,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJournalModeValue"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10933:1: ruleJournalModeValue returns [Enumerator current=null] : ( (enumLiteral_0= 'journal' ) | (enumLiteral_1= ' journal_sub' ) | (enumLiteral_2= 'status_down' ) | (enumLiteral_3= 'status_up' ) | (enumLiteral_4= 'alerts_down' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10908:1: ruleJournalModeValue returns [Enumerator current=null] : ( (enumLiteral_0= 'journal' ) | (enumLiteral_1= ' journal_sub' ) | (enumLiteral_2= 'status_down' ) | (enumLiteral_3= 'status_up' ) | (enumLiteral_4= 'alerts_down' ) ) ;
     public final Enumerator ruleJournalModeValue() throws RecognitionException {
         Enumerator current = null;
 
@@ -27695,52 +27581,52 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10935:28: ( ( (enumLiteral_0= 'journal' ) | (enumLiteral_1= ' journal_sub' ) | (enumLiteral_2= 'status_down' ) | (enumLiteral_3= 'status_up' ) | (enumLiteral_4= 'alerts_down' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10936:1: ( (enumLiteral_0= 'journal' ) | (enumLiteral_1= ' journal_sub' ) | (enumLiteral_2= 'status_down' ) | (enumLiteral_3= 'status_up' ) | (enumLiteral_4= 'alerts_down' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10910:28: ( ( (enumLiteral_0= 'journal' ) | (enumLiteral_1= ' journal_sub' ) | (enumLiteral_2= 'status_down' ) | (enumLiteral_3= 'status_up' ) | (enumLiteral_4= 'alerts_down' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:1: ( (enumLiteral_0= 'journal' ) | (enumLiteral_1= ' journal_sub' ) | (enumLiteral_2= 'status_down' ) | (enumLiteral_3= 'status_up' ) | (enumLiteral_4= 'alerts_down' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10936:1: ( (enumLiteral_0= 'journal' ) | (enumLiteral_1= ' journal_sub' ) | (enumLiteral_2= 'status_down' ) | (enumLiteral_3= 'status_up' ) | (enumLiteral_4= 'alerts_down' ) )
-            int alt104=5;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:1: ( (enumLiteral_0= 'journal' ) | (enumLiteral_1= ' journal_sub' ) | (enumLiteral_2= 'status_down' ) | (enumLiteral_3= 'status_up' ) | (enumLiteral_4= 'alerts_down' ) )
+            int alt103=5;
             switch ( input.LA(1) ) {
+            case 158:
+                {
+                alt103=1;
+                }
+                break;
+            case 159:
+                {
+                alt103=2;
+                }
+                break;
+            case 160:
+                {
+                alt103=3;
+                }
+                break;
             case 161:
                 {
-                alt104=1;
+                alt103=4;
                 }
                 break;
             case 162:
                 {
-                alt104=2;
-                }
-                break;
-            case 163:
-                {
-                alt104=3;
-                }
-                break;
-            case 164:
-                {
-                alt104=4;
-                }
-                break;
-            case 165:
-                {
-                alt104=5;
+                alt103=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 104, 0, input);
+                    new NoViableAltException("", 103, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt104) {
+            switch (alt103) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10936:2: (enumLiteral_0= 'journal' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:2: (enumLiteral_0= 'journal' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10936:2: (enumLiteral_0= 'journal' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10936:4: enumLiteral_0= 'journal'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:2: (enumLiteral_0= 'journal' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10911:4: enumLiteral_0= 'journal'
                     {
-                    enumLiteral_0=(Token)match(input,161,FOLLOW_161_in_ruleJournalModeValue27025); 
+                    enumLiteral_0=(Token)match(input,158,FOLLOW_158_in_ruleJournalModeValue26946); 
 
                             current = grammarAccess.getJournalModeValueAccess().getJOURNALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getJournalModeValueAccess().getJOURNALEnumLiteralDeclaration_0()); 
@@ -27752,12 +27638,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10942:6: (enumLiteral_1= ' journal_sub' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10917:6: (enumLiteral_1= ' journal_sub' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10942:6: (enumLiteral_1= ' journal_sub' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10942:8: enumLiteral_1= ' journal_sub'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10917:6: (enumLiteral_1= ' journal_sub' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10917:8: enumLiteral_1= ' journal_sub'
                     {
-                    enumLiteral_1=(Token)match(input,162,FOLLOW_162_in_ruleJournalModeValue27042); 
+                    enumLiteral_1=(Token)match(input,159,FOLLOW_159_in_ruleJournalModeValue26963); 
 
                             current = grammarAccess.getJournalModeValueAccess().getJOURNAL_SUBEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getJournalModeValueAccess().getJOURNAL_SUBEnumLiteralDeclaration_1()); 
@@ -27769,12 +27655,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10948:6: (enumLiteral_2= 'status_down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10923:6: (enumLiteral_2= 'status_down' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10948:6: (enumLiteral_2= 'status_down' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10948:8: enumLiteral_2= 'status_down'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10923:6: (enumLiteral_2= 'status_down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10923:8: enumLiteral_2= 'status_down'
                     {
-                    enumLiteral_2=(Token)match(input,163,FOLLOW_163_in_ruleJournalModeValue27059); 
+                    enumLiteral_2=(Token)match(input,160,FOLLOW_160_in_ruleJournalModeValue26980); 
 
                             current = grammarAccess.getJournalModeValueAccess().getSTATUS_DOWNEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getJournalModeValueAccess().getSTATUS_DOWNEnumLiteralDeclaration_2()); 
@@ -27786,12 +27672,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10954:6: (enumLiteral_3= 'status_up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10929:6: (enumLiteral_3= 'status_up' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10954:6: (enumLiteral_3= 'status_up' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10954:8: enumLiteral_3= 'status_up'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10929:6: (enumLiteral_3= 'status_up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10929:8: enumLiteral_3= 'status_up'
                     {
-                    enumLiteral_3=(Token)match(input,164,FOLLOW_164_in_ruleJournalModeValue27076); 
+                    enumLiteral_3=(Token)match(input,161,FOLLOW_161_in_ruleJournalModeValue26997); 
 
                             current = grammarAccess.getJournalModeValueAccess().getSTATUS_UPEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getJournalModeValueAccess().getSTATUS_UPEnumLiteralDeclaration_3()); 
@@ -27803,12 +27689,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10960:6: (enumLiteral_4= 'alerts_down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10935:6: (enumLiteral_4= 'alerts_down' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10960:6: (enumLiteral_4= 'alerts_down' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10960:8: enumLiteral_4= 'alerts_down'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10935:6: (enumLiteral_4= 'alerts_down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10935:8: enumLiteral_4= 'alerts_down'
                     {
-                    enumLiteral_4=(Token)match(input,165,FOLLOW_165_in_ruleJournalModeValue27093); 
+                    enumLiteral_4=(Token)match(input,162,FOLLOW_162_in_ruleJournalModeValue27014); 
 
                             current = grammarAccess.getJournalModeValueAccess().getALERTS_DOWNEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getJournalModeValueAccess().getALERTS_DOWNEnumLiteralDeclaration_4()); 
@@ -27840,7 +27726,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleJournalEntrySortCriterion"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10970:1: ruleJournalEntrySortCriterion returns [Enumerator current=null] : ( (enumLiteral_0= 'date.down' ) | (enumLiteral_1= 'date.up' ) | (enumLiteral_2= 'alert.down' ) | (enumLiteral_3= 'alert.up' ) | (enumLiteral_4= 'property.up' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10945:1: ruleJournalEntrySortCriterion returns [Enumerator current=null] : ( (enumLiteral_0= 'date.down' ) | (enumLiteral_1= 'date.up' ) | (enumLiteral_2= 'alert.down' ) | (enumLiteral_3= 'alert.up' ) | (enumLiteral_4= 'property.up' ) ) ;
     public final Enumerator ruleJournalEntrySortCriterion() throws RecognitionException {
         Enumerator current = null;
 
@@ -27852,52 +27738,52 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10972:28: ( ( (enumLiteral_0= 'date.down' ) | (enumLiteral_1= 'date.up' ) | (enumLiteral_2= 'alert.down' ) | (enumLiteral_3= 'alert.up' ) | (enumLiteral_4= 'property.up' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10973:1: ( (enumLiteral_0= 'date.down' ) | (enumLiteral_1= 'date.up' ) | (enumLiteral_2= 'alert.down' ) | (enumLiteral_3= 'alert.up' ) | (enumLiteral_4= 'property.up' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10947:28: ( ( (enumLiteral_0= 'date.down' ) | (enumLiteral_1= 'date.up' ) | (enumLiteral_2= 'alert.down' ) | (enumLiteral_3= 'alert.up' ) | (enumLiteral_4= 'property.up' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10948:1: ( (enumLiteral_0= 'date.down' ) | (enumLiteral_1= 'date.up' ) | (enumLiteral_2= 'alert.down' ) | (enumLiteral_3= 'alert.up' ) | (enumLiteral_4= 'property.up' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10973:1: ( (enumLiteral_0= 'date.down' ) | (enumLiteral_1= 'date.up' ) | (enumLiteral_2= 'alert.down' ) | (enumLiteral_3= 'alert.up' ) | (enumLiteral_4= 'property.up' ) )
-            int alt105=5;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10948:1: ( (enumLiteral_0= 'date.down' ) | (enumLiteral_1= 'date.up' ) | (enumLiteral_2= 'alert.down' ) | (enumLiteral_3= 'alert.up' ) | (enumLiteral_4= 'property.up' ) )
+            int alt104=5;
             switch ( input.LA(1) ) {
+            case 163:
+                {
+                alt104=1;
+                }
+                break;
+            case 164:
+                {
+                alt104=2;
+                }
+                break;
+            case 165:
+                {
+                alt104=3;
+                }
+                break;
             case 166:
                 {
-                alt105=1;
+                alt104=4;
                 }
                 break;
             case 167:
                 {
-                alt105=2;
-                }
-                break;
-            case 168:
-                {
-                alt105=3;
-                }
-                break;
-            case 169:
-                {
-                alt105=4;
-                }
-                break;
-            case 170:
-                {
-                alt105=5;
+                alt104=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 105, 0, input);
+                    new NoViableAltException("", 104, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt105) {
+            switch (alt104) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10973:2: (enumLiteral_0= 'date.down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10948:2: (enumLiteral_0= 'date.down' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10973:2: (enumLiteral_0= 'date.down' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10973:4: enumLiteral_0= 'date.down'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10948:2: (enumLiteral_0= 'date.down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10948:4: enumLiteral_0= 'date.down'
                     {
-                    enumLiteral_0=(Token)match(input,166,FOLLOW_166_in_ruleJournalEntrySortCriterion27138); 
+                    enumLiteral_0=(Token)match(input,163,FOLLOW_163_in_ruleJournalEntrySortCriterion27059); 
 
                             current = grammarAccess.getJournalEntrySortCriterionAccess().getDATE_DOWNEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getJournalEntrySortCriterionAccess().getDATE_DOWNEnumLiteralDeclaration_0()); 
@@ -27909,12 +27795,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10979:6: (enumLiteral_1= 'date.up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10954:6: (enumLiteral_1= 'date.up' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10979:6: (enumLiteral_1= 'date.up' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10979:8: enumLiteral_1= 'date.up'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10954:6: (enumLiteral_1= 'date.up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10954:8: enumLiteral_1= 'date.up'
                     {
-                    enumLiteral_1=(Token)match(input,167,FOLLOW_167_in_ruleJournalEntrySortCriterion27155); 
+                    enumLiteral_1=(Token)match(input,164,FOLLOW_164_in_ruleJournalEntrySortCriterion27076); 
 
                             current = grammarAccess.getJournalEntrySortCriterionAccess().getDATE_UPEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getJournalEntrySortCriterionAccess().getDATE_UPEnumLiteralDeclaration_1()); 
@@ -27926,12 +27812,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10985:6: (enumLiteral_2= 'alert.down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10960:6: (enumLiteral_2= 'alert.down' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10985:6: (enumLiteral_2= 'alert.down' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10985:8: enumLiteral_2= 'alert.down'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10960:6: (enumLiteral_2= 'alert.down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10960:8: enumLiteral_2= 'alert.down'
                     {
-                    enumLiteral_2=(Token)match(input,168,FOLLOW_168_in_ruleJournalEntrySortCriterion27172); 
+                    enumLiteral_2=(Token)match(input,165,FOLLOW_165_in_ruleJournalEntrySortCriterion27093); 
 
                             current = grammarAccess.getJournalEntrySortCriterionAccess().getALERT_DOWNEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getJournalEntrySortCriterionAccess().getALERT_DOWNEnumLiteralDeclaration_2()); 
@@ -27943,12 +27829,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10991:6: (enumLiteral_3= 'alert.up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10966:6: (enumLiteral_3= 'alert.up' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10991:6: (enumLiteral_3= 'alert.up' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10991:8: enumLiteral_3= 'alert.up'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10966:6: (enumLiteral_3= 'alert.up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10966:8: enumLiteral_3= 'alert.up'
                     {
-                    enumLiteral_3=(Token)match(input,169,FOLLOW_169_in_ruleJournalEntrySortCriterion27189); 
+                    enumLiteral_3=(Token)match(input,166,FOLLOW_166_in_ruleJournalEntrySortCriterion27110); 
 
                             current = grammarAccess.getJournalEntrySortCriterionAccess().getALERT_UPEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getJournalEntrySortCriterionAccess().getALERT_UPEnumLiteralDeclaration_3()); 
@@ -27960,12 +27846,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10997:6: (enumLiteral_4= 'property.up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10972:6: (enumLiteral_4= 'property.up' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10997:6: (enumLiteral_4= 'property.up' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10997:8: enumLiteral_4= 'property.up'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10972:6: (enumLiteral_4= 'property.up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10972:8: enumLiteral_4= 'property.up'
                     {
-                    enumLiteral_4=(Token)match(input,170,FOLLOW_170_in_ruleJournalEntrySortCriterion27206); 
+                    enumLiteral_4=(Token)match(input,167,FOLLOW_167_in_ruleJournalEntrySortCriterion27127); 
 
                             current = grammarAccess.getJournalEntrySortCriterionAccess().getPROPERTY_UPEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getJournalEntrySortCriterionAccess().getPROPERTY_UPEnumLiteralDeclaration_4()); 
@@ -27997,7 +27883,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleListTypeValues"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11007:1: ruleListTypeValues returns [Enumerator current=null] : ( (enumLiteral_0= 'bullets' ) | (enumLiteral_1= 'comma' ) | (enumLiteral_2= 'numbered' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10982:1: ruleListTypeValues returns [Enumerator current=null] : ( (enumLiteral_0= 'bullets' ) | (enumLiteral_1= 'comma' ) | (enumLiteral_2= 'numbered' ) ) ;
     public final Enumerator ruleListTypeValues() throws RecognitionException {
         Enumerator current = null;
 
@@ -28007,42 +27893,42 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11009:28: ( ( (enumLiteral_0= 'bullets' ) | (enumLiteral_1= 'comma' ) | (enumLiteral_2= 'numbered' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:1: ( (enumLiteral_0= 'bullets' ) | (enumLiteral_1= 'comma' ) | (enumLiteral_2= 'numbered' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10984:28: ( ( (enumLiteral_0= 'bullets' ) | (enumLiteral_1= 'comma' ) | (enumLiteral_2= 'numbered' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10985:1: ( (enumLiteral_0= 'bullets' ) | (enumLiteral_1= 'comma' ) | (enumLiteral_2= 'numbered' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:1: ( (enumLiteral_0= 'bullets' ) | (enumLiteral_1= 'comma' ) | (enumLiteral_2= 'numbered' ) )
-            int alt106=3;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10985:1: ( (enumLiteral_0= 'bullets' ) | (enumLiteral_1= 'comma' ) | (enumLiteral_2= 'numbered' ) )
+            int alt105=3;
             switch ( input.LA(1) ) {
-            case 171:
+            case 168:
                 {
-                alt106=1;
+                alt105=1;
                 }
                 break;
-            case 172:
+            case 169:
                 {
-                alt106=2;
+                alt105=2;
                 }
                 break;
-            case 173:
+            case 170:
                 {
-                alt106=3;
+                alt105=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 106, 0, input);
+                    new NoViableAltException("", 105, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt106) {
+            switch (alt105) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:2: (enumLiteral_0= 'bullets' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10985:2: (enumLiteral_0= 'bullets' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:2: (enumLiteral_0= 'bullets' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:4: enumLiteral_0= 'bullets'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10985:2: (enumLiteral_0= 'bullets' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10985:4: enumLiteral_0= 'bullets'
                     {
-                    enumLiteral_0=(Token)match(input,171,FOLLOW_171_in_ruleListTypeValues27251); 
+                    enumLiteral_0=(Token)match(input,168,FOLLOW_168_in_ruleListTypeValues27172); 
 
                             current = grammarAccess.getListTypeValuesAccess().getBULLETSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getListTypeValuesAccess().getBULLETSEnumLiteralDeclaration_0()); 
@@ -28054,12 +27940,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11016:6: (enumLiteral_1= 'comma' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10991:6: (enumLiteral_1= 'comma' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11016:6: (enumLiteral_1= 'comma' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11016:8: enumLiteral_1= 'comma'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10991:6: (enumLiteral_1= 'comma' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10991:8: enumLiteral_1= 'comma'
                     {
-                    enumLiteral_1=(Token)match(input,172,FOLLOW_172_in_ruleListTypeValues27268); 
+                    enumLiteral_1=(Token)match(input,169,FOLLOW_169_in_ruleListTypeValues27189); 
 
                             current = grammarAccess.getListTypeValuesAccess().getCOMMAEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getListTypeValuesAccess().getCOMMAEnumLiteralDeclaration_1()); 
@@ -28071,12 +27957,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11022:6: (enumLiteral_2= 'numbered' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10997:6: (enumLiteral_2= 'numbered' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11022:6: (enumLiteral_2= 'numbered' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11022:8: enumLiteral_2= 'numbered'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10997:6: (enumLiteral_2= 'numbered' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:10997:8: enumLiteral_2= 'numbered'
                     {
-                    enumLiteral_2=(Token)match(input,173,FOLLOW_173_in_ruleListTypeValues27285); 
+                    enumLiteral_2=(Token)match(input,170,FOLLOW_170_in_ruleListTypeValues27206); 
 
                             current = grammarAccess.getListTypeValuesAccess().getNUMBEREDEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getListTypeValuesAccess().getNUMBEREDEnumLiteralDeclaration_2()); 
@@ -28108,7 +27994,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCriterionDirection"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11032:1: ruleCriterionDirection returns [Enumerator current=null] : ( (enumLiteral_0= 'up' ) | (enumLiteral_1= 'down' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11007:1: ruleCriterionDirection returns [Enumerator current=null] : ( (enumLiteral_0= 'up' ) | (enumLiteral_1= 'down' ) ) ;
     public final Enumerator ruleCriterionDirection() throws RecognitionException {
         Enumerator current = null;
 
@@ -28117,33 +28003,33 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11034:28: ( ( (enumLiteral_0= 'up' ) | (enumLiteral_1= 'down' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11035:1: ( (enumLiteral_0= 'up' ) | (enumLiteral_1= 'down' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11009:28: ( ( (enumLiteral_0= 'up' ) | (enumLiteral_1= 'down' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:1: ( (enumLiteral_0= 'up' ) | (enumLiteral_1= 'down' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11035:1: ( (enumLiteral_0= 'up' ) | (enumLiteral_1= 'down' ) )
-            int alt107=2;
-            int LA107_0 = input.LA(1);
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:1: ( (enumLiteral_0= 'up' ) | (enumLiteral_1= 'down' ) )
+            int alt106=2;
+            int LA106_0 = input.LA(1);
 
-            if ( (LA107_0==174) ) {
-                alt107=1;
+            if ( (LA106_0==171) ) {
+                alt106=1;
             }
-            else if ( (LA107_0==175) ) {
-                alt107=2;
+            else if ( (LA106_0==172) ) {
+                alt106=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 107, 0, input);
+                    new NoViableAltException("", 106, 0, input);
 
                 throw nvae;
             }
-            switch (alt107) {
+            switch (alt106) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11035:2: (enumLiteral_0= 'up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:2: (enumLiteral_0= 'up' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11035:2: (enumLiteral_0= 'up' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11035:4: enumLiteral_0= 'up'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:2: (enumLiteral_0= 'up' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11010:4: enumLiteral_0= 'up'
                     {
-                    enumLiteral_0=(Token)match(input,174,FOLLOW_174_in_ruleCriterionDirection27330); 
+                    enumLiteral_0=(Token)match(input,171,FOLLOW_171_in_ruleCriterionDirection27251); 
 
                             current = grammarAccess.getCriterionDirectionAccess().getUPEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getCriterionDirectionAccess().getUPEnumLiteralDeclaration_0()); 
@@ -28155,12 +28041,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11041:6: (enumLiteral_1= 'down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11016:6: (enumLiteral_1= 'down' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11041:6: (enumLiteral_1= 'down' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11041:8: enumLiteral_1= 'down'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11016:6: (enumLiteral_1= 'down' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11016:8: enumLiteral_1= 'down'
                     {
-                    enumLiteral_1=(Token)match(input,175,FOLLOW_175_in_ruleCriterionDirection27347); 
+                    enumLiteral_1=(Token)match(input,172,FOLLOW_172_in_ruleCriterionDirection27268); 
 
                             current = grammarAccess.getCriterionDirectionAccess().getDOWNEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getCriterionDirectionAccess().getDOWNEnumLiteralDeclaration_1()); 
@@ -28192,7 +28078,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleYesNo"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11051:1: ruleYesNo returns [Enumerator current=null] : ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11026:1: ruleYesNo returns [Enumerator current=null] : ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) ) ;
     public final Enumerator ruleYesNo() throws RecognitionException {
         Enumerator current = null;
 
@@ -28201,33 +28087,33 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11053:28: ( ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11054:1: ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11028:28: ( ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11029:1: ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11054:1: ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) )
-            int alt108=2;
-            int LA108_0 = input.LA(1);
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11029:1: ( (enumLiteral_0= 'yes' ) | (enumLiteral_1= 'no' ) )
+            int alt107=2;
+            int LA107_0 = input.LA(1);
 
-            if ( (LA108_0==176) ) {
-                alt108=1;
+            if ( (LA107_0==173) ) {
+                alt107=1;
             }
-            else if ( (LA108_0==177) ) {
-                alt108=2;
+            else if ( (LA107_0==174) ) {
+                alt107=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 108, 0, input);
+                    new NoViableAltException("", 107, 0, input);
 
                 throw nvae;
             }
-            switch (alt108) {
+            switch (alt107) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11054:2: (enumLiteral_0= 'yes' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11029:2: (enumLiteral_0= 'yes' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11054:2: (enumLiteral_0= 'yes' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11054:4: enumLiteral_0= 'yes'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11029:2: (enumLiteral_0= 'yes' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11029:4: enumLiteral_0= 'yes'
                     {
-                    enumLiteral_0=(Token)match(input,176,FOLLOW_176_in_ruleYesNo27392); 
+                    enumLiteral_0=(Token)match(input,173,FOLLOW_173_in_ruleYesNo27313); 
 
                             current = grammarAccess.getYesNoAccess().getYESEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getYesNoAccess().getYESEnumLiteralDeclaration_0()); 
@@ -28239,12 +28125,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11060:6: (enumLiteral_1= 'no' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11035:6: (enumLiteral_1= 'no' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11060:6: (enumLiteral_1= 'no' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11060:8: enumLiteral_1= 'no'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11035:6: (enumLiteral_1= 'no' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11035:8: enumLiteral_1= 'no'
                     {
-                    enumLiteral_1=(Token)match(input,177,FOLLOW_177_in_ruleYesNo27409); 
+                    enumLiteral_1=(Token)match(input,174,FOLLOW_174_in_ruleYesNo27330); 
 
                             current = grammarAccess.getYesNoAccess().getNOEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getYesNoAccess().getNOEnumLiteralDeclaration_1()); 
@@ -28276,7 +28162,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReportFormat"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11070:1: ruleReportFormat returns [Enumerator current=null] : ( (enumLiteral_0= 'csv' ) | (enumLiteral_1= 'html' ) | (enumLiteral_2= 'niku' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11045:1: ruleReportFormat returns [Enumerator current=null] : ( (enumLiteral_0= 'csv' ) | (enumLiteral_1= 'html' ) | (enumLiteral_2= 'niku' ) ) ;
     public final Enumerator ruleReportFormat() throws RecognitionException {
         Enumerator current = null;
 
@@ -28286,42 +28172,42 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11072:28: ( ( (enumLiteral_0= 'csv' ) | (enumLiteral_1= 'html' ) | (enumLiteral_2= 'niku' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:1: ( (enumLiteral_0= 'csv' ) | (enumLiteral_1= 'html' ) | (enumLiteral_2= 'niku' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11047:28: ( ( (enumLiteral_0= 'csv' ) | (enumLiteral_1= 'html' ) | (enumLiteral_2= 'niku' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11048:1: ( (enumLiteral_0= 'csv' ) | (enumLiteral_1= 'html' ) | (enumLiteral_2= 'niku' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:1: ( (enumLiteral_0= 'csv' ) | (enumLiteral_1= 'html' ) | (enumLiteral_2= 'niku' ) )
-            int alt109=3;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11048:1: ( (enumLiteral_0= 'csv' ) | (enumLiteral_1= 'html' ) | (enumLiteral_2= 'niku' ) )
+            int alt108=3;
             switch ( input.LA(1) ) {
-            case 178:
+            case 175:
                 {
-                alt109=1;
+                alt108=1;
                 }
                 break;
-            case 179:
+            case 176:
                 {
-                alt109=2;
+                alt108=2;
                 }
                 break;
-            case 180:
+            case 177:
                 {
-                alt109=3;
+                alt108=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 109, 0, input);
+                    new NoViableAltException("", 108, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt109) {
+            switch (alt108) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:2: (enumLiteral_0= 'csv' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11048:2: (enumLiteral_0= 'csv' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:2: (enumLiteral_0= 'csv' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:4: enumLiteral_0= 'csv'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11048:2: (enumLiteral_0= 'csv' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11048:4: enumLiteral_0= 'csv'
                     {
-                    enumLiteral_0=(Token)match(input,178,FOLLOW_178_in_ruleReportFormat27454); 
+                    enumLiteral_0=(Token)match(input,175,FOLLOW_175_in_ruleReportFormat27375); 
 
                             current = grammarAccess.getReportFormatAccess().getCSVEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getReportFormatAccess().getCSVEnumLiteralDeclaration_0()); 
@@ -28333,12 +28219,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11079:6: (enumLiteral_1= 'html' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11054:6: (enumLiteral_1= 'html' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11079:6: (enumLiteral_1= 'html' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11079:8: enumLiteral_1= 'html'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11054:6: (enumLiteral_1= 'html' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11054:8: enumLiteral_1= 'html'
                     {
-                    enumLiteral_1=(Token)match(input,179,FOLLOW_179_in_ruleReportFormat27471); 
+                    enumLiteral_1=(Token)match(input,176,FOLLOW_176_in_ruleReportFormat27392); 
 
                             current = grammarAccess.getReportFormatAccess().getHTMLEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getReportFormatAccess().getHTMLEnumLiteralDeclaration_1()); 
@@ -28350,12 +28236,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11085:6: (enumLiteral_2= 'niku' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11060:6: (enumLiteral_2= 'niku' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11085:6: (enumLiteral_2= 'niku' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11085:8: enumLiteral_2= 'niku'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11060:6: (enumLiteral_2= 'niku' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11060:8: enumLiteral_2= 'niku'
                     {
-                    enumLiteral_2=(Token)match(input,180,FOLLOW_180_in_ruleReportFormat27488); 
+                    enumLiteral_2=(Token)match(input,177,FOLLOW_177_in_ruleReportFormat27409); 
 
                             current = grammarAccess.getReportFormatAccess().getNIKUEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getReportFormatAccess().getNIKUEnumLiteralDeclaration_2()); 
@@ -28387,7 +28273,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLoadDisplayUnit"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11095:1: ruleLoadDisplayUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'days' ) | (enumLiteral_1= 'hours' ) | (enumLiteral_2= 'longauto' ) | (enumLiteral_3= 'minutes' ) | (enumLiteral_4= 'months' ) | (enumLiteral_5= 'shortauto' ) | (enumLiteral_6= 'weeks' ) | (enumLiteral_7= 'years' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11070:1: ruleLoadDisplayUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'days' ) | (enumLiteral_1= 'hours' ) | (enumLiteral_2= 'longauto' ) | (enumLiteral_3= 'minutes' ) | (enumLiteral_4= 'months' ) | (enumLiteral_5= 'shortauto' ) | (enumLiteral_6= 'weeks' ) | (enumLiteral_7= 'years' ) ) ;
     public final Enumerator ruleLoadDisplayUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -28402,67 +28288,67 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11097:28: ( ( (enumLiteral_0= 'days' ) | (enumLiteral_1= 'hours' ) | (enumLiteral_2= 'longauto' ) | (enumLiteral_3= 'minutes' ) | (enumLiteral_4= 'months' ) | (enumLiteral_5= 'shortauto' ) | (enumLiteral_6= 'weeks' ) | (enumLiteral_7= 'years' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11098:1: ( (enumLiteral_0= 'days' ) | (enumLiteral_1= 'hours' ) | (enumLiteral_2= 'longauto' ) | (enumLiteral_3= 'minutes' ) | (enumLiteral_4= 'months' ) | (enumLiteral_5= 'shortauto' ) | (enumLiteral_6= 'weeks' ) | (enumLiteral_7= 'years' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11072:28: ( ( (enumLiteral_0= 'days' ) | (enumLiteral_1= 'hours' ) | (enumLiteral_2= 'longauto' ) | (enumLiteral_3= 'minutes' ) | (enumLiteral_4= 'months' ) | (enumLiteral_5= 'shortauto' ) | (enumLiteral_6= 'weeks' ) | (enumLiteral_7= 'years' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:1: ( (enumLiteral_0= 'days' ) | (enumLiteral_1= 'hours' ) | (enumLiteral_2= 'longauto' ) | (enumLiteral_3= 'minutes' ) | (enumLiteral_4= 'months' ) | (enumLiteral_5= 'shortauto' ) | (enumLiteral_6= 'weeks' ) | (enumLiteral_7= 'years' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11098:1: ( (enumLiteral_0= 'days' ) | (enumLiteral_1= 'hours' ) | (enumLiteral_2= 'longauto' ) | (enumLiteral_3= 'minutes' ) | (enumLiteral_4= 'months' ) | (enumLiteral_5= 'shortauto' ) | (enumLiteral_6= 'weeks' ) | (enumLiteral_7= 'years' ) )
-            int alt110=8;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:1: ( (enumLiteral_0= 'days' ) | (enumLiteral_1= 'hours' ) | (enumLiteral_2= 'longauto' ) | (enumLiteral_3= 'minutes' ) | (enumLiteral_4= 'months' ) | (enumLiteral_5= 'shortauto' ) | (enumLiteral_6= 'weeks' ) | (enumLiteral_7= 'years' ) )
+            int alt109=8;
             switch ( input.LA(1) ) {
+            case 178:
+                {
+                alt109=1;
+                }
+                break;
+            case 179:
+                {
+                alt109=2;
+                }
+                break;
+            case 180:
+                {
+                alt109=3;
+                }
+                break;
             case 181:
                 {
-                alt110=1;
+                alt109=4;
                 }
                 break;
             case 182:
                 {
-                alt110=2;
+                alt109=5;
                 }
                 break;
             case 183:
                 {
-                alt110=3;
+                alt109=6;
                 }
                 break;
             case 184:
                 {
-                alt110=4;
+                alt109=7;
                 }
                 break;
             case 185:
                 {
-                alt110=5;
-                }
-                break;
-            case 186:
-                {
-                alt110=6;
-                }
-                break;
-            case 187:
-                {
-                alt110=7;
-                }
-                break;
-            case 188:
-                {
-                alt110=8;
+                alt109=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 110, 0, input);
+                    new NoViableAltException("", 109, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt110) {
+            switch (alt109) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11098:2: (enumLiteral_0= 'days' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:2: (enumLiteral_0= 'days' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11098:2: (enumLiteral_0= 'days' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11098:4: enumLiteral_0= 'days'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:2: (enumLiteral_0= 'days' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11073:4: enumLiteral_0= 'days'
                     {
-                    enumLiteral_0=(Token)match(input,181,FOLLOW_181_in_ruleLoadDisplayUnit27533); 
+                    enumLiteral_0=(Token)match(input,178,FOLLOW_178_in_ruleLoadDisplayUnit27454); 
 
                             current = grammarAccess.getLoadDisplayUnitAccess().getDAYSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getLoadDisplayUnitAccess().getDAYSEnumLiteralDeclaration_0()); 
@@ -28474,12 +28360,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11104:6: (enumLiteral_1= 'hours' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11079:6: (enumLiteral_1= 'hours' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11104:6: (enumLiteral_1= 'hours' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11104:8: enumLiteral_1= 'hours'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11079:6: (enumLiteral_1= 'hours' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11079:8: enumLiteral_1= 'hours'
                     {
-                    enumLiteral_1=(Token)match(input,182,FOLLOW_182_in_ruleLoadDisplayUnit27550); 
+                    enumLiteral_1=(Token)match(input,179,FOLLOW_179_in_ruleLoadDisplayUnit27471); 
 
                             current = grammarAccess.getLoadDisplayUnitAccess().getHOURSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getLoadDisplayUnitAccess().getHOURSEnumLiteralDeclaration_1()); 
@@ -28491,12 +28377,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11110:6: (enumLiteral_2= 'longauto' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11085:6: (enumLiteral_2= 'longauto' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11110:6: (enumLiteral_2= 'longauto' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11110:8: enumLiteral_2= 'longauto'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11085:6: (enumLiteral_2= 'longauto' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11085:8: enumLiteral_2= 'longauto'
                     {
-                    enumLiteral_2=(Token)match(input,183,FOLLOW_183_in_ruleLoadDisplayUnit27567); 
+                    enumLiteral_2=(Token)match(input,180,FOLLOW_180_in_ruleLoadDisplayUnit27488); 
 
                             current = grammarAccess.getLoadDisplayUnitAccess().getLONGAUTOEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getLoadDisplayUnitAccess().getLONGAUTOEnumLiteralDeclaration_2()); 
@@ -28508,12 +28394,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11116:6: (enumLiteral_3= 'minutes' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11091:6: (enumLiteral_3= 'minutes' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11116:6: (enumLiteral_3= 'minutes' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11116:8: enumLiteral_3= 'minutes'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11091:6: (enumLiteral_3= 'minutes' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11091:8: enumLiteral_3= 'minutes'
                     {
-                    enumLiteral_3=(Token)match(input,184,FOLLOW_184_in_ruleLoadDisplayUnit27584); 
+                    enumLiteral_3=(Token)match(input,181,FOLLOW_181_in_ruleLoadDisplayUnit27505); 
 
                             current = grammarAccess.getLoadDisplayUnitAccess().getMINUTESEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getLoadDisplayUnitAccess().getMINUTESEnumLiteralDeclaration_3()); 
@@ -28525,12 +28411,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11122:6: (enumLiteral_4= 'months' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11097:6: (enumLiteral_4= 'months' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11122:6: (enumLiteral_4= 'months' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11122:8: enumLiteral_4= 'months'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11097:6: (enumLiteral_4= 'months' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11097:8: enumLiteral_4= 'months'
                     {
-                    enumLiteral_4=(Token)match(input,185,FOLLOW_185_in_ruleLoadDisplayUnit27601); 
+                    enumLiteral_4=(Token)match(input,182,FOLLOW_182_in_ruleLoadDisplayUnit27522); 
 
                             current = grammarAccess.getLoadDisplayUnitAccess().getMONTHSEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getLoadDisplayUnitAccess().getMONTHSEnumLiteralDeclaration_4()); 
@@ -28542,12 +28428,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11128:6: (enumLiteral_5= 'shortauto' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11103:6: (enumLiteral_5= 'shortauto' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11128:6: (enumLiteral_5= 'shortauto' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11128:8: enumLiteral_5= 'shortauto'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11103:6: (enumLiteral_5= 'shortauto' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11103:8: enumLiteral_5= 'shortauto'
                     {
-                    enumLiteral_5=(Token)match(input,186,FOLLOW_186_in_ruleLoadDisplayUnit27618); 
+                    enumLiteral_5=(Token)match(input,183,FOLLOW_183_in_ruleLoadDisplayUnit27539); 
 
                             current = grammarAccess.getLoadDisplayUnitAccess().getSHORTAUTOEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getLoadDisplayUnitAccess().getSHORTAUTOEnumLiteralDeclaration_5()); 
@@ -28559,12 +28445,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11134:6: (enumLiteral_6= 'weeks' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11109:6: (enumLiteral_6= 'weeks' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11134:6: (enumLiteral_6= 'weeks' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11134:8: enumLiteral_6= 'weeks'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11109:6: (enumLiteral_6= 'weeks' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11109:8: enumLiteral_6= 'weeks'
                     {
-                    enumLiteral_6=(Token)match(input,187,FOLLOW_187_in_ruleLoadDisplayUnit27635); 
+                    enumLiteral_6=(Token)match(input,184,FOLLOW_184_in_ruleLoadDisplayUnit27556); 
 
                             current = grammarAccess.getLoadDisplayUnitAccess().getWEEKSEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getLoadDisplayUnitAccess().getWEEKSEnumLiteralDeclaration_6()); 
@@ -28576,12 +28462,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11140:6: (enumLiteral_7= 'years' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11115:6: (enumLiteral_7= 'years' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11140:6: (enumLiteral_7= 'years' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11140:8: enumLiteral_7= 'years'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11115:6: (enumLiteral_7= 'years' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11115:8: enumLiteral_7= 'years'
                     {
-                    enumLiteral_7=(Token)match(input,188,FOLLOW_188_in_ruleLoadDisplayUnit27652); 
+                    enumLiteral_7=(Token)match(input,185,FOLLOW_185_in_ruleLoadDisplayUnit27573); 
 
                             current = grammarAccess.getLoadDisplayUnitAccess().getYEARSEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_7, grammarAccess.getLoadDisplayUnitAccess().getYEARSEnumLiteralDeclaration_7()); 
@@ -28613,7 +28499,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectArgument"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11152:1: ruleSelectArgument returns [Enumerator current=null] : ( (enumLiteral_0= 'maxloaded' ) | (enumLiteral_1= 'minloaded' ) | (enumLiteral_2= 'minallocated' ) | (enumLiteral_3= 'order' ) | (enumLiteral_4= 'random' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11127:1: ruleSelectArgument returns [Enumerator current=null] : ( (enumLiteral_0= 'maxloaded' ) | (enumLiteral_1= 'minloaded' ) | (enumLiteral_2= 'minallocated' ) | (enumLiteral_3= 'order' ) | (enumLiteral_4= 'random' ) ) ;
     public final Enumerator ruleSelectArgument() throws RecognitionException {
         Enumerator current = null;
 
@@ -28625,52 +28511,52 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11154:28: ( ( (enumLiteral_0= 'maxloaded' ) | (enumLiteral_1= 'minloaded' ) | (enumLiteral_2= 'minallocated' ) | (enumLiteral_3= 'order' ) | (enumLiteral_4= 'random' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11155:1: ( (enumLiteral_0= 'maxloaded' ) | (enumLiteral_1= 'minloaded' ) | (enumLiteral_2= 'minallocated' ) | (enumLiteral_3= 'order' ) | (enumLiteral_4= 'random' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11129:28: ( ( (enumLiteral_0= 'maxloaded' ) | (enumLiteral_1= 'minloaded' ) | (enumLiteral_2= 'minallocated' ) | (enumLiteral_3= 'order' ) | (enumLiteral_4= 'random' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11130:1: ( (enumLiteral_0= 'maxloaded' ) | (enumLiteral_1= 'minloaded' ) | (enumLiteral_2= 'minallocated' ) | (enumLiteral_3= 'order' ) | (enumLiteral_4= 'random' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11155:1: ( (enumLiteral_0= 'maxloaded' ) | (enumLiteral_1= 'minloaded' ) | (enumLiteral_2= 'minallocated' ) | (enumLiteral_3= 'order' ) | (enumLiteral_4= 'random' ) )
-            int alt111=5;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11130:1: ( (enumLiteral_0= 'maxloaded' ) | (enumLiteral_1= 'minloaded' ) | (enumLiteral_2= 'minallocated' ) | (enumLiteral_3= 'order' ) | (enumLiteral_4= 'random' ) )
+            int alt110=5;
             switch ( input.LA(1) ) {
+            case 186:
+                {
+                alt110=1;
+                }
+                break;
+            case 187:
+                {
+                alt110=2;
+                }
+                break;
+            case 188:
+                {
+                alt110=3;
+                }
+                break;
             case 189:
                 {
-                alt111=1;
+                alt110=4;
                 }
                 break;
             case 190:
                 {
-                alt111=2;
-                }
-                break;
-            case 191:
-                {
-                alt111=3;
-                }
-                break;
-            case 192:
-                {
-                alt111=4;
-                }
-                break;
-            case 193:
-                {
-                alt111=5;
+                alt110=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 111, 0, input);
+                    new NoViableAltException("", 110, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt111) {
+            switch (alt110) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11155:2: (enumLiteral_0= 'maxloaded' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11130:2: (enumLiteral_0= 'maxloaded' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11155:2: (enumLiteral_0= 'maxloaded' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11155:4: enumLiteral_0= 'maxloaded'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11130:2: (enumLiteral_0= 'maxloaded' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11130:4: enumLiteral_0= 'maxloaded'
                     {
-                    enumLiteral_0=(Token)match(input,189,FOLLOW_189_in_ruleSelectArgument27699); 
+                    enumLiteral_0=(Token)match(input,186,FOLLOW_186_in_ruleSelectArgument27620); 
 
                             current = grammarAccess.getSelectArgumentAccess().getMAXLOADEDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getSelectArgumentAccess().getMAXLOADEDEnumLiteralDeclaration_0()); 
@@ -28682,12 +28568,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11161:6: (enumLiteral_1= 'minloaded' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11136:6: (enumLiteral_1= 'minloaded' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11161:6: (enumLiteral_1= 'minloaded' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11161:8: enumLiteral_1= 'minloaded'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11136:6: (enumLiteral_1= 'minloaded' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11136:8: enumLiteral_1= 'minloaded'
                     {
-                    enumLiteral_1=(Token)match(input,190,FOLLOW_190_in_ruleSelectArgument27716); 
+                    enumLiteral_1=(Token)match(input,187,FOLLOW_187_in_ruleSelectArgument27637); 
 
                             current = grammarAccess.getSelectArgumentAccess().getMINLOADEDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getSelectArgumentAccess().getMINLOADEDEnumLiteralDeclaration_1()); 
@@ -28699,12 +28585,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11167:6: (enumLiteral_2= 'minallocated' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11142:6: (enumLiteral_2= 'minallocated' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11167:6: (enumLiteral_2= 'minallocated' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11167:8: enumLiteral_2= 'minallocated'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11142:6: (enumLiteral_2= 'minallocated' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11142:8: enumLiteral_2= 'minallocated'
                     {
-                    enumLiteral_2=(Token)match(input,191,FOLLOW_191_in_ruleSelectArgument27733); 
+                    enumLiteral_2=(Token)match(input,188,FOLLOW_188_in_ruleSelectArgument27654); 
 
                             current = grammarAccess.getSelectArgumentAccess().getMINALLOCATEDEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getSelectArgumentAccess().getMINALLOCATEDEnumLiteralDeclaration_2()); 
@@ -28716,12 +28602,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11173:6: (enumLiteral_3= 'order' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11148:6: (enumLiteral_3= 'order' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11173:6: (enumLiteral_3= 'order' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11173:8: enumLiteral_3= 'order'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11148:6: (enumLiteral_3= 'order' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11148:8: enumLiteral_3= 'order'
                     {
-                    enumLiteral_3=(Token)match(input,192,FOLLOW_192_in_ruleSelectArgument27750); 
+                    enumLiteral_3=(Token)match(input,189,FOLLOW_189_in_ruleSelectArgument27671); 
 
                             current = grammarAccess.getSelectArgumentAccess().getORDEREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getSelectArgumentAccess().getORDEREnumLiteralDeclaration_3()); 
@@ -28733,12 +28619,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11179:6: (enumLiteral_4= 'random' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11154:6: (enumLiteral_4= 'random' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11179:6: (enumLiteral_4= 'random' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11179:8: enumLiteral_4= 'random'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11154:6: (enumLiteral_4= 'random' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11154:8: enumLiteral_4= 'random'
                     {
-                    enumLiteral_4=(Token)match(input,193,FOLLOW_193_in_ruleSelectArgument27767); 
+                    enumLiteral_4=(Token)match(input,190,FOLLOW_190_in_ruleSelectArgument27688); 
 
                             current = grammarAccess.getSelectArgumentAccess().getRANDOMEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getSelectArgumentAccess().getRANDOMEnumLiteralDeclaration_4()); 
@@ -28770,7 +28656,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColumnId"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11189:1: ruleColumnId returns [Enumerator current=null] : ( (enumLiteral_0= 'alert' ) | (enumLiteral_1= 'alertmessage' ) | (enumLiteral_2= 'alertsummar' ) | (enumLiteral_3= 'alerttrend' ) | (enumLiteral_4= 'chart' ) | (enumLiteral_5= 'complete' ) | (enumLiteral_6= 'completed' ) | (enumLiteral_7= 'criticalness' ) | (enumLiteral_8= 'cost' ) | (enumLiteral_9= 'daily' ) | (enumLiteral_10= 'duration' ) | (enumLiteral_11= 'duties' ) | (enumLiteral_12= 'efficiency' ) | (enumLiteral_13= 'effort' ) | (enumLiteral_14= 'effortdone' ) | (enumLiteral_15= 'effortleft' ) | (enumLiteral_16= 'email' ) | (enumLiteral_17= 'end' ) | (enumLiteral_18= 'flags' ) | (enumLiteral_19= 'followers' ) | (enumLiteral_20= 'freetime' ) | (enumLiteral_21= 'freework' ) | (enumLiteral_22= 'fte' ) | (enumLiteral_23= 'headcount' ) | (enumLiteral_24= 'hierarchindex' ) | (enumLiteral_25= 'hourly' ) | (enumLiteral_26= 'id' ) | (enumLiteral_27= 'index' ) | (enumLiteral_28= 'journal' ) | (enumLiteral_29= 'line' ) | (enumLiteral_30= 'maxend' ) | (enumLiteral_31= 'maxstart' ) | (enumLiteral_32= 'minend' ) | (enumLiteral_33= 'minstart' ) | (enumLiteral_34= 'monthly' ) | (enumLiteral_35= 'no' ) | (enumLiteral_36= 'name' ) | (enumLiteral_37= 'note' ) | (enumLiteral_38= 'pathcriticalness' ) | (enumLiteral_39= 'precursor' ) | (enumLiteral_40= 'priority' ) | (enumLiteral_41= 'quarterly' ) | (enumLiteral_42= 'rate' ) | (enumLiteral_43= 'resources' ) | (enumLiteral_44= 'responsible' ) | (enumLiteral_45= 'revenue' ) | (enumLiteral_46= 'scenario' ) | (enumLiteral_47= 'seqno' ) | (enumLiteral_48= 'start' ) | (enumLiteral_49= 'status' ) | (enumLiteral_50= 'targets' ) | (enumLiteral_51= 'wbs' ) | (enumLiteral_52= 'weekly' ) | (enumLiteral_53= 'yearly' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11164:1: ruleColumnId returns [Enumerator current=null] : ( (enumLiteral_0= 'alert' ) | (enumLiteral_1= 'alertmessage' ) | (enumLiteral_2= 'alertsummar' ) | (enumLiteral_3= 'alerttrend' ) | (enumLiteral_4= 'chart' ) | (enumLiteral_5= 'complete' ) | (enumLiteral_6= 'completed' ) | (enumLiteral_7= 'criticalness' ) | (enumLiteral_8= 'cost' ) | (enumLiteral_9= 'daily' ) | (enumLiteral_10= 'duration' ) | (enumLiteral_11= 'duties' ) | (enumLiteral_12= 'efficiency' ) | (enumLiteral_13= 'effort' ) | (enumLiteral_14= 'effortdone' ) | (enumLiteral_15= 'effortleft' ) | (enumLiteral_16= 'email' ) | (enumLiteral_17= 'end' ) | (enumLiteral_18= 'flags' ) | (enumLiteral_19= 'followers' ) | (enumLiteral_20= 'freetime' ) | (enumLiteral_21= 'freework' ) | (enumLiteral_22= 'fte' ) | (enumLiteral_23= 'headcount' ) | (enumLiteral_24= 'hierarchindex' ) | (enumLiteral_25= 'hourly' ) | (enumLiteral_26= 'id' ) | (enumLiteral_27= 'index' ) | (enumLiteral_28= 'journal' ) | (enumLiteral_29= 'line' ) | (enumLiteral_30= 'maxend' ) | (enumLiteral_31= 'maxstart' ) | (enumLiteral_32= 'minend' ) | (enumLiteral_33= 'minstart' ) | (enumLiteral_34= 'monthly' ) | (enumLiteral_35= 'no' ) | (enumLiteral_36= 'name' ) | (enumLiteral_37= 'note' ) | (enumLiteral_38= 'pathcriticalness' ) | (enumLiteral_39= 'precursor' ) | (enumLiteral_40= 'priority' ) | (enumLiteral_41= 'quarterly' ) | (enumLiteral_42= 'rate' ) | (enumLiteral_43= 'resources' ) | (enumLiteral_44= 'responsible' ) | (enumLiteral_45= 'revenue' ) | (enumLiteral_46= 'scenario' ) | (enumLiteral_47= 'seqno' ) | (enumLiteral_48= 'start' ) | (enumLiteral_49= 'status' ) | (enumLiteral_50= 'targets' ) | (enumLiteral_51= 'wbs' ) | (enumLiteral_52= 'weekly' ) | (enumLiteral_53= 'yearly' ) ) ;
     public final Enumerator ruleColumnId() throws RecognitionException {
         Enumerator current = null;
 
@@ -28831,297 +28717,297 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11191:28: ( ( (enumLiteral_0= 'alert' ) | (enumLiteral_1= 'alertmessage' ) | (enumLiteral_2= 'alertsummar' ) | (enumLiteral_3= 'alerttrend' ) | (enumLiteral_4= 'chart' ) | (enumLiteral_5= 'complete' ) | (enumLiteral_6= 'completed' ) | (enumLiteral_7= 'criticalness' ) | (enumLiteral_8= 'cost' ) | (enumLiteral_9= 'daily' ) | (enumLiteral_10= 'duration' ) | (enumLiteral_11= 'duties' ) | (enumLiteral_12= 'efficiency' ) | (enumLiteral_13= 'effort' ) | (enumLiteral_14= 'effortdone' ) | (enumLiteral_15= 'effortleft' ) | (enumLiteral_16= 'email' ) | (enumLiteral_17= 'end' ) | (enumLiteral_18= 'flags' ) | (enumLiteral_19= 'followers' ) | (enumLiteral_20= 'freetime' ) | (enumLiteral_21= 'freework' ) | (enumLiteral_22= 'fte' ) | (enumLiteral_23= 'headcount' ) | (enumLiteral_24= 'hierarchindex' ) | (enumLiteral_25= 'hourly' ) | (enumLiteral_26= 'id' ) | (enumLiteral_27= 'index' ) | (enumLiteral_28= 'journal' ) | (enumLiteral_29= 'line' ) | (enumLiteral_30= 'maxend' ) | (enumLiteral_31= 'maxstart' ) | (enumLiteral_32= 'minend' ) | (enumLiteral_33= 'minstart' ) | (enumLiteral_34= 'monthly' ) | (enumLiteral_35= 'no' ) | (enumLiteral_36= 'name' ) | (enumLiteral_37= 'note' ) | (enumLiteral_38= 'pathcriticalness' ) | (enumLiteral_39= 'precursor' ) | (enumLiteral_40= 'priority' ) | (enumLiteral_41= 'quarterly' ) | (enumLiteral_42= 'rate' ) | (enumLiteral_43= 'resources' ) | (enumLiteral_44= 'responsible' ) | (enumLiteral_45= 'revenue' ) | (enumLiteral_46= 'scenario' ) | (enumLiteral_47= 'seqno' ) | (enumLiteral_48= 'start' ) | (enumLiteral_49= 'status' ) | (enumLiteral_50= 'targets' ) | (enumLiteral_51= 'wbs' ) | (enumLiteral_52= 'weekly' ) | (enumLiteral_53= 'yearly' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11192:1: ( (enumLiteral_0= 'alert' ) | (enumLiteral_1= 'alertmessage' ) | (enumLiteral_2= 'alertsummar' ) | (enumLiteral_3= 'alerttrend' ) | (enumLiteral_4= 'chart' ) | (enumLiteral_5= 'complete' ) | (enumLiteral_6= 'completed' ) | (enumLiteral_7= 'criticalness' ) | (enumLiteral_8= 'cost' ) | (enumLiteral_9= 'daily' ) | (enumLiteral_10= 'duration' ) | (enumLiteral_11= 'duties' ) | (enumLiteral_12= 'efficiency' ) | (enumLiteral_13= 'effort' ) | (enumLiteral_14= 'effortdone' ) | (enumLiteral_15= 'effortleft' ) | (enumLiteral_16= 'email' ) | (enumLiteral_17= 'end' ) | (enumLiteral_18= 'flags' ) | (enumLiteral_19= 'followers' ) | (enumLiteral_20= 'freetime' ) | (enumLiteral_21= 'freework' ) | (enumLiteral_22= 'fte' ) | (enumLiteral_23= 'headcount' ) | (enumLiteral_24= 'hierarchindex' ) | (enumLiteral_25= 'hourly' ) | (enumLiteral_26= 'id' ) | (enumLiteral_27= 'index' ) | (enumLiteral_28= 'journal' ) | (enumLiteral_29= 'line' ) | (enumLiteral_30= 'maxend' ) | (enumLiteral_31= 'maxstart' ) | (enumLiteral_32= 'minend' ) | (enumLiteral_33= 'minstart' ) | (enumLiteral_34= 'monthly' ) | (enumLiteral_35= 'no' ) | (enumLiteral_36= 'name' ) | (enumLiteral_37= 'note' ) | (enumLiteral_38= 'pathcriticalness' ) | (enumLiteral_39= 'precursor' ) | (enumLiteral_40= 'priority' ) | (enumLiteral_41= 'quarterly' ) | (enumLiteral_42= 'rate' ) | (enumLiteral_43= 'resources' ) | (enumLiteral_44= 'responsible' ) | (enumLiteral_45= 'revenue' ) | (enumLiteral_46= 'scenario' ) | (enumLiteral_47= 'seqno' ) | (enumLiteral_48= 'start' ) | (enumLiteral_49= 'status' ) | (enumLiteral_50= 'targets' ) | (enumLiteral_51= 'wbs' ) | (enumLiteral_52= 'weekly' ) | (enumLiteral_53= 'yearly' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11166:28: ( ( (enumLiteral_0= 'alert' ) | (enumLiteral_1= 'alertmessage' ) | (enumLiteral_2= 'alertsummar' ) | (enumLiteral_3= 'alerttrend' ) | (enumLiteral_4= 'chart' ) | (enumLiteral_5= 'complete' ) | (enumLiteral_6= 'completed' ) | (enumLiteral_7= 'criticalness' ) | (enumLiteral_8= 'cost' ) | (enumLiteral_9= 'daily' ) | (enumLiteral_10= 'duration' ) | (enumLiteral_11= 'duties' ) | (enumLiteral_12= 'efficiency' ) | (enumLiteral_13= 'effort' ) | (enumLiteral_14= 'effortdone' ) | (enumLiteral_15= 'effortleft' ) | (enumLiteral_16= 'email' ) | (enumLiteral_17= 'end' ) | (enumLiteral_18= 'flags' ) | (enumLiteral_19= 'followers' ) | (enumLiteral_20= 'freetime' ) | (enumLiteral_21= 'freework' ) | (enumLiteral_22= 'fte' ) | (enumLiteral_23= 'headcount' ) | (enumLiteral_24= 'hierarchindex' ) | (enumLiteral_25= 'hourly' ) | (enumLiteral_26= 'id' ) | (enumLiteral_27= 'index' ) | (enumLiteral_28= 'journal' ) | (enumLiteral_29= 'line' ) | (enumLiteral_30= 'maxend' ) | (enumLiteral_31= 'maxstart' ) | (enumLiteral_32= 'minend' ) | (enumLiteral_33= 'minstart' ) | (enumLiteral_34= 'monthly' ) | (enumLiteral_35= 'no' ) | (enumLiteral_36= 'name' ) | (enumLiteral_37= 'note' ) | (enumLiteral_38= 'pathcriticalness' ) | (enumLiteral_39= 'precursor' ) | (enumLiteral_40= 'priority' ) | (enumLiteral_41= 'quarterly' ) | (enumLiteral_42= 'rate' ) | (enumLiteral_43= 'resources' ) | (enumLiteral_44= 'responsible' ) | (enumLiteral_45= 'revenue' ) | (enumLiteral_46= 'scenario' ) | (enumLiteral_47= 'seqno' ) | (enumLiteral_48= 'start' ) | (enumLiteral_49= 'status' ) | (enumLiteral_50= 'targets' ) | (enumLiteral_51= 'wbs' ) | (enumLiteral_52= 'weekly' ) | (enumLiteral_53= 'yearly' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11167:1: ( (enumLiteral_0= 'alert' ) | (enumLiteral_1= 'alertmessage' ) | (enumLiteral_2= 'alertsummar' ) | (enumLiteral_3= 'alerttrend' ) | (enumLiteral_4= 'chart' ) | (enumLiteral_5= 'complete' ) | (enumLiteral_6= 'completed' ) | (enumLiteral_7= 'criticalness' ) | (enumLiteral_8= 'cost' ) | (enumLiteral_9= 'daily' ) | (enumLiteral_10= 'duration' ) | (enumLiteral_11= 'duties' ) | (enumLiteral_12= 'efficiency' ) | (enumLiteral_13= 'effort' ) | (enumLiteral_14= 'effortdone' ) | (enumLiteral_15= 'effortleft' ) | (enumLiteral_16= 'email' ) | (enumLiteral_17= 'end' ) | (enumLiteral_18= 'flags' ) | (enumLiteral_19= 'followers' ) | (enumLiteral_20= 'freetime' ) | (enumLiteral_21= 'freework' ) | (enumLiteral_22= 'fte' ) | (enumLiteral_23= 'headcount' ) | (enumLiteral_24= 'hierarchindex' ) | (enumLiteral_25= 'hourly' ) | (enumLiteral_26= 'id' ) | (enumLiteral_27= 'index' ) | (enumLiteral_28= 'journal' ) | (enumLiteral_29= 'line' ) | (enumLiteral_30= 'maxend' ) | (enumLiteral_31= 'maxstart' ) | (enumLiteral_32= 'minend' ) | (enumLiteral_33= 'minstart' ) | (enumLiteral_34= 'monthly' ) | (enumLiteral_35= 'no' ) | (enumLiteral_36= 'name' ) | (enumLiteral_37= 'note' ) | (enumLiteral_38= 'pathcriticalness' ) | (enumLiteral_39= 'precursor' ) | (enumLiteral_40= 'priority' ) | (enumLiteral_41= 'quarterly' ) | (enumLiteral_42= 'rate' ) | (enumLiteral_43= 'resources' ) | (enumLiteral_44= 'responsible' ) | (enumLiteral_45= 'revenue' ) | (enumLiteral_46= 'scenario' ) | (enumLiteral_47= 'seqno' ) | (enumLiteral_48= 'start' ) | (enumLiteral_49= 'status' ) | (enumLiteral_50= 'targets' ) | (enumLiteral_51= 'wbs' ) | (enumLiteral_52= 'weekly' ) | (enumLiteral_53= 'yearly' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11192:1: ( (enumLiteral_0= 'alert' ) | (enumLiteral_1= 'alertmessage' ) | (enumLiteral_2= 'alertsummar' ) | (enumLiteral_3= 'alerttrend' ) | (enumLiteral_4= 'chart' ) | (enumLiteral_5= 'complete' ) | (enumLiteral_6= 'completed' ) | (enumLiteral_7= 'criticalness' ) | (enumLiteral_8= 'cost' ) | (enumLiteral_9= 'daily' ) | (enumLiteral_10= 'duration' ) | (enumLiteral_11= 'duties' ) | (enumLiteral_12= 'efficiency' ) | (enumLiteral_13= 'effort' ) | (enumLiteral_14= 'effortdone' ) | (enumLiteral_15= 'effortleft' ) | (enumLiteral_16= 'email' ) | (enumLiteral_17= 'end' ) | (enumLiteral_18= 'flags' ) | (enumLiteral_19= 'followers' ) | (enumLiteral_20= 'freetime' ) | (enumLiteral_21= 'freework' ) | (enumLiteral_22= 'fte' ) | (enumLiteral_23= 'headcount' ) | (enumLiteral_24= 'hierarchindex' ) | (enumLiteral_25= 'hourly' ) | (enumLiteral_26= 'id' ) | (enumLiteral_27= 'index' ) | (enumLiteral_28= 'journal' ) | (enumLiteral_29= 'line' ) | (enumLiteral_30= 'maxend' ) | (enumLiteral_31= 'maxstart' ) | (enumLiteral_32= 'minend' ) | (enumLiteral_33= 'minstart' ) | (enumLiteral_34= 'monthly' ) | (enumLiteral_35= 'no' ) | (enumLiteral_36= 'name' ) | (enumLiteral_37= 'note' ) | (enumLiteral_38= 'pathcriticalness' ) | (enumLiteral_39= 'precursor' ) | (enumLiteral_40= 'priority' ) | (enumLiteral_41= 'quarterly' ) | (enumLiteral_42= 'rate' ) | (enumLiteral_43= 'resources' ) | (enumLiteral_44= 'responsible' ) | (enumLiteral_45= 'revenue' ) | (enumLiteral_46= 'scenario' ) | (enumLiteral_47= 'seqno' ) | (enumLiteral_48= 'start' ) | (enumLiteral_49= 'status' ) | (enumLiteral_50= 'targets' ) | (enumLiteral_51= 'wbs' ) | (enumLiteral_52= 'weekly' ) | (enumLiteral_53= 'yearly' ) )
-            int alt112=54;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11167:1: ( (enumLiteral_0= 'alert' ) | (enumLiteral_1= 'alertmessage' ) | (enumLiteral_2= 'alertsummar' ) | (enumLiteral_3= 'alerttrend' ) | (enumLiteral_4= 'chart' ) | (enumLiteral_5= 'complete' ) | (enumLiteral_6= 'completed' ) | (enumLiteral_7= 'criticalness' ) | (enumLiteral_8= 'cost' ) | (enumLiteral_9= 'daily' ) | (enumLiteral_10= 'duration' ) | (enumLiteral_11= 'duties' ) | (enumLiteral_12= 'efficiency' ) | (enumLiteral_13= 'effort' ) | (enumLiteral_14= 'effortdone' ) | (enumLiteral_15= 'effortleft' ) | (enumLiteral_16= 'email' ) | (enumLiteral_17= 'end' ) | (enumLiteral_18= 'flags' ) | (enumLiteral_19= 'followers' ) | (enumLiteral_20= 'freetime' ) | (enumLiteral_21= 'freework' ) | (enumLiteral_22= 'fte' ) | (enumLiteral_23= 'headcount' ) | (enumLiteral_24= 'hierarchindex' ) | (enumLiteral_25= 'hourly' ) | (enumLiteral_26= 'id' ) | (enumLiteral_27= 'index' ) | (enumLiteral_28= 'journal' ) | (enumLiteral_29= 'line' ) | (enumLiteral_30= 'maxend' ) | (enumLiteral_31= 'maxstart' ) | (enumLiteral_32= 'minend' ) | (enumLiteral_33= 'minstart' ) | (enumLiteral_34= 'monthly' ) | (enumLiteral_35= 'no' ) | (enumLiteral_36= 'name' ) | (enumLiteral_37= 'note' ) | (enumLiteral_38= 'pathcriticalness' ) | (enumLiteral_39= 'precursor' ) | (enumLiteral_40= 'priority' ) | (enumLiteral_41= 'quarterly' ) | (enumLiteral_42= 'rate' ) | (enumLiteral_43= 'resources' ) | (enumLiteral_44= 'responsible' ) | (enumLiteral_45= 'revenue' ) | (enumLiteral_46= 'scenario' ) | (enumLiteral_47= 'seqno' ) | (enumLiteral_48= 'start' ) | (enumLiteral_49= 'status' ) | (enumLiteral_50= 'targets' ) | (enumLiteral_51= 'wbs' ) | (enumLiteral_52= 'weekly' ) | (enumLiteral_53= 'yearly' ) )
+            int alt111=54;
             switch ( input.LA(1) ) {
             case 26:
                 {
-                alt112=1;
+                alt111=1;
+                }
+                break;
+            case 191:
+                {
+                alt111=2;
+                }
+                break;
+            case 192:
+                {
+                alt111=3;
+                }
+                break;
+            case 193:
+                {
+                alt111=4;
                 }
                 break;
             case 194:
                 {
-                alt112=2;
-                }
-                break;
-            case 195:
-                {
-                alt112=3;
-                }
-                break;
-            case 196:
-                {
-                alt112=4;
-                }
-                break;
-            case 197:
-                {
-                alt112=5;
+                alt111=5;
                 }
                 break;
             case 36:
                 {
-                alt112=6;
+                alt111=6;
+                }
+                break;
+            case 195:
+                {
+                alt111=7;
+                }
+                break;
+            case 196:
+                {
+                alt111=8;
+                }
+                break;
+            case 197:
+                {
+                alt111=9;
                 }
                 break;
             case 198:
                 {
-                alt112=7;
-                }
-                break;
-            case 199:
-                {
-                alt112=8;
-                }
-                break;
-            case 200:
-                {
-                alt112=9;
-                }
-                break;
-            case 201:
-                {
-                alt112=10;
+                alt111=10;
                 }
                 break;
             case 47:
                 {
-                alt112=11;
+                alt111=11;
                 }
                 break;
-            case 202:
+            case 199:
                 {
-                alt112=12;
+                alt111=12;
                 }
                 break;
             case 48:
                 {
-                alt112=13;
+                alt111=13;
                 }
                 break;
             case 49:
                 {
-                alt112=14;
+                alt111=14;
                 }
                 break;
-            case 203:
+            case 200:
                 {
-                alt112=15;
+                alt111=15;
                 }
                 break;
-            case 204:
+            case 201:
                 {
-                alt112=16;
+                alt111=16;
                 }
                 break;
-            case 205:
+            case 202:
                 {
-                alt112=17;
+                alt111=17;
                 }
                 break;
             case 50:
                 {
-                alt112=18;
+                alt111=18;
                 }
                 break;
             case 53:
                 {
-                alt112=19;
+                alt111=19;
+                }
+                break;
+            case 203:
+                {
+                alt111=20;
+                }
+                break;
+            case 204:
+                {
+                alt111=21;
+                }
+                break;
+            case 205:
+                {
+                alt111=22;
                 }
                 break;
             case 206:
                 {
-                alt112=20;
+                alt111=23;
                 }
                 break;
             case 207:
                 {
-                alt112=21;
+                alt111=24;
                 }
                 break;
             case 208:
                 {
-                alt112=22;
+                alt111=25;
                 }
                 break;
             case 209:
                 {
-                alt112=23;
+                alt111=26;
                 }
                 break;
             case 210:
                 {
-                alt112=24;
+                alt111=27;
                 }
                 break;
             case 211:
                 {
-                alt112=25;
+                alt111=28;
+                }
+                break;
+            case 158:
+                {
+                alt111=29;
                 }
                 break;
             case 212:
                 {
-                alt112=26;
-                }
-                break;
-            case 213:
-                {
-                alt112=27;
-                }
-                break;
-            case 214:
-                {
-                alt112=28;
-                }
-                break;
-            case 161:
-                {
-                alt112=29;
-                }
-                break;
-            case 215:
-                {
-                alt112=30;
+                alt111=30;
                 }
                 break;
             case 75:
                 {
-                alt112=31;
+                alt111=31;
                 }
                 break;
             case 77:
                 {
-                alt112=32;
+                alt111=32;
                 }
                 break;
             case 80:
                 {
-                alt112=33;
+                alt111=33;
                 }
                 break;
             case 81:
                 {
-                alt112=34;
+                alt111=34;
                 }
                 break;
-            case 216:
+            case 213:
                 {
-                alt112=35;
+                alt111=35;
                 }
                 break;
-            case 177:
+            case 174:
                 {
-                alt112=36;
+                alt111=36;
                 }
                 break;
-            case 217:
+            case 214:
                 {
-                alt112=37;
+                alt111=37;
                 }
                 break;
             case 84:
                 {
-                alt112=38;
+                alt111=38;
                 }
                 break;
-            case 218:
+            case 215:
                 {
-                alt112=39;
+                alt111=39;
                 }
                 break;
-            case 219:
+            case 216:
                 {
-                alt112=40;
+                alt111=40;
                 }
                 break;
             case 90:
                 {
-                alt112=41;
+                alt111=41;
                 }
                 break;
-            case 220:
+            case 217:
                 {
-                alt112=42;
+                alt111=42;
                 }
                 break;
             case 94:
                 {
-                alt112=43;
+                alt111=43;
                 }
                 break;
-            case 221:
+            case 218:
                 {
-                alt112=44;
+                alt111=44;
                 }
                 break;
             case 98:
                 {
-                alt112=45;
+                alt111=45;
                 }
                 break;
-            case 222:
+            case 219:
                 {
-                alt112=46;
+                alt111=46;
                 }
                 break;
             case 110:
                 {
-                alt112=47;
+                alt111=47;
                 }
                 break;
-            case 223:
+            case 220:
                 {
-                alt112=48;
+                alt111=48;
                 }
                 break;
             case 126:
                 {
-                alt112=49;
+                alt111=49;
                 }
                 break;
             case 128:
                 {
-                alt112=50;
+                alt111=50;
+                }
+                break;
+            case 221:
+                {
+                alt111=51;
+                }
+                break;
+            case 222:
+                {
+                alt111=52;
+                }
+                break;
+            case 223:
+                {
+                alt111=53;
                 }
                 break;
             case 224:
                 {
-                alt112=51;
-                }
-                break;
-            case 225:
-                {
-                alt112=52;
-                }
-                break;
-            case 226:
-                {
-                alt112=53;
-                }
-                break;
-            case 227:
-                {
-                alt112=54;
+                alt111=54;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 112, 0, input);
+                    new NoViableAltException("", 111, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt112) {
+            switch (alt111) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11192:2: (enumLiteral_0= 'alert' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11167:2: (enumLiteral_0= 'alert' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11192:2: (enumLiteral_0= 'alert' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11192:4: enumLiteral_0= 'alert'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11167:2: (enumLiteral_0= 'alert' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11167:4: enumLiteral_0= 'alert'
                     {
-                    enumLiteral_0=(Token)match(input,26,FOLLOW_26_in_ruleColumnId27812); 
+                    enumLiteral_0=(Token)match(input,26,FOLLOW_26_in_ruleColumnId27733); 
 
                             current = grammarAccess.getColumnIdAccess().getALERTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getColumnIdAccess().getALERTEnumLiteralDeclaration_0()); 
@@ -29133,12 +29019,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11198:6: (enumLiteral_1= 'alertmessage' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11173:6: (enumLiteral_1= 'alertmessage' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11198:6: (enumLiteral_1= 'alertmessage' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11198:8: enumLiteral_1= 'alertmessage'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11173:6: (enumLiteral_1= 'alertmessage' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11173:8: enumLiteral_1= 'alertmessage'
                     {
-                    enumLiteral_1=(Token)match(input,194,FOLLOW_194_in_ruleColumnId27829); 
+                    enumLiteral_1=(Token)match(input,191,FOLLOW_191_in_ruleColumnId27750); 
 
                             current = grammarAccess.getColumnIdAccess().getALERTMESSAGEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getColumnIdAccess().getALERTMESSAGEEnumLiteralDeclaration_1()); 
@@ -29150,12 +29036,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11204:6: (enumLiteral_2= 'alertsummar' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11179:6: (enumLiteral_2= 'alertsummar' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11204:6: (enumLiteral_2= 'alertsummar' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11204:8: enumLiteral_2= 'alertsummar'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11179:6: (enumLiteral_2= 'alertsummar' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11179:8: enumLiteral_2= 'alertsummar'
                     {
-                    enumLiteral_2=(Token)match(input,195,FOLLOW_195_in_ruleColumnId27846); 
+                    enumLiteral_2=(Token)match(input,192,FOLLOW_192_in_ruleColumnId27767); 
 
                             current = grammarAccess.getColumnIdAccess().getALERTSUMMARYEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getColumnIdAccess().getALERTSUMMARYEnumLiteralDeclaration_2()); 
@@ -29167,12 +29053,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11210:6: (enumLiteral_3= 'alerttrend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11185:6: (enumLiteral_3= 'alerttrend' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11210:6: (enumLiteral_3= 'alerttrend' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11210:8: enumLiteral_3= 'alerttrend'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11185:6: (enumLiteral_3= 'alerttrend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11185:8: enumLiteral_3= 'alerttrend'
                     {
-                    enumLiteral_3=(Token)match(input,196,FOLLOW_196_in_ruleColumnId27863); 
+                    enumLiteral_3=(Token)match(input,193,FOLLOW_193_in_ruleColumnId27784); 
 
                             current = grammarAccess.getColumnIdAccess().getALERTTRENDEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getColumnIdAccess().getALERTTRENDEnumLiteralDeclaration_3()); 
@@ -29184,12 +29070,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11216:6: (enumLiteral_4= 'chart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11191:6: (enumLiteral_4= 'chart' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11216:6: (enumLiteral_4= 'chart' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11216:8: enumLiteral_4= 'chart'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11191:6: (enumLiteral_4= 'chart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11191:8: enumLiteral_4= 'chart'
                     {
-                    enumLiteral_4=(Token)match(input,197,FOLLOW_197_in_ruleColumnId27880); 
+                    enumLiteral_4=(Token)match(input,194,FOLLOW_194_in_ruleColumnId27801); 
 
                             current = grammarAccess.getColumnIdAccess().getCHARTEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getColumnIdAccess().getCHARTEnumLiteralDeclaration_4()); 
@@ -29201,12 +29087,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11222:6: (enumLiteral_5= 'complete' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11197:6: (enumLiteral_5= 'complete' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11222:6: (enumLiteral_5= 'complete' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11222:8: enumLiteral_5= 'complete'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11197:6: (enumLiteral_5= 'complete' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11197:8: enumLiteral_5= 'complete'
                     {
-                    enumLiteral_5=(Token)match(input,36,FOLLOW_36_in_ruleColumnId27897); 
+                    enumLiteral_5=(Token)match(input,36,FOLLOW_36_in_ruleColumnId27818); 
 
                             current = grammarAccess.getColumnIdAccess().getCOMPLETEEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getColumnIdAccess().getCOMPLETEEnumLiteralDeclaration_5()); 
@@ -29218,12 +29104,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11228:6: (enumLiteral_6= 'completed' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11203:6: (enumLiteral_6= 'completed' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11228:6: (enumLiteral_6= 'completed' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11228:8: enumLiteral_6= 'completed'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11203:6: (enumLiteral_6= 'completed' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11203:8: enumLiteral_6= 'completed'
                     {
-                    enumLiteral_6=(Token)match(input,198,FOLLOW_198_in_ruleColumnId27914); 
+                    enumLiteral_6=(Token)match(input,195,FOLLOW_195_in_ruleColumnId27835); 
 
                             current = grammarAccess.getColumnIdAccess().getCOMPLETEDEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getColumnIdAccess().getCOMPLETEDEnumLiteralDeclaration_6()); 
@@ -29235,12 +29121,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11234:6: (enumLiteral_7= 'criticalness' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11209:6: (enumLiteral_7= 'criticalness' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11234:6: (enumLiteral_7= 'criticalness' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11234:8: enumLiteral_7= 'criticalness'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11209:6: (enumLiteral_7= 'criticalness' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11209:8: enumLiteral_7= 'criticalness'
                     {
-                    enumLiteral_7=(Token)match(input,199,FOLLOW_199_in_ruleColumnId27931); 
+                    enumLiteral_7=(Token)match(input,196,FOLLOW_196_in_ruleColumnId27852); 
 
                             current = grammarAccess.getColumnIdAccess().getCRITICALNESSEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_7, grammarAccess.getColumnIdAccess().getCRITICALNESSEnumLiteralDeclaration_7()); 
@@ -29252,12 +29138,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11240:6: (enumLiteral_8= 'cost' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11215:6: (enumLiteral_8= 'cost' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11240:6: (enumLiteral_8= 'cost' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11240:8: enumLiteral_8= 'cost'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11215:6: (enumLiteral_8= 'cost' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11215:8: enumLiteral_8= 'cost'
                     {
-                    enumLiteral_8=(Token)match(input,200,FOLLOW_200_in_ruleColumnId27948); 
+                    enumLiteral_8=(Token)match(input,197,FOLLOW_197_in_ruleColumnId27869); 
 
                             current = grammarAccess.getColumnIdAccess().getCOSTEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_8, grammarAccess.getColumnIdAccess().getCOSTEnumLiteralDeclaration_8()); 
@@ -29269,12 +29155,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11246:6: (enumLiteral_9= 'daily' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11221:6: (enumLiteral_9= 'daily' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11246:6: (enumLiteral_9= 'daily' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11246:8: enumLiteral_9= 'daily'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11221:6: (enumLiteral_9= 'daily' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11221:8: enumLiteral_9= 'daily'
                     {
-                    enumLiteral_9=(Token)match(input,201,FOLLOW_201_in_ruleColumnId27965); 
+                    enumLiteral_9=(Token)match(input,198,FOLLOW_198_in_ruleColumnId27886); 
 
                             current = grammarAccess.getColumnIdAccess().getDAILYEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_9, grammarAccess.getColumnIdAccess().getDAILYEnumLiteralDeclaration_9()); 
@@ -29286,12 +29172,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11252:6: (enumLiteral_10= 'duration' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11227:6: (enumLiteral_10= 'duration' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11252:6: (enumLiteral_10= 'duration' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11252:8: enumLiteral_10= 'duration'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11227:6: (enumLiteral_10= 'duration' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11227:8: enumLiteral_10= 'duration'
                     {
-                    enumLiteral_10=(Token)match(input,47,FOLLOW_47_in_ruleColumnId27982); 
+                    enumLiteral_10=(Token)match(input,47,FOLLOW_47_in_ruleColumnId27903); 
 
                             current = grammarAccess.getColumnIdAccess().getDURATIONEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_10, grammarAccess.getColumnIdAccess().getDURATIONEnumLiteralDeclaration_10()); 
@@ -29303,12 +29189,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11258:6: (enumLiteral_11= 'duties' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11233:6: (enumLiteral_11= 'duties' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11258:6: (enumLiteral_11= 'duties' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11258:8: enumLiteral_11= 'duties'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11233:6: (enumLiteral_11= 'duties' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11233:8: enumLiteral_11= 'duties'
                     {
-                    enumLiteral_11=(Token)match(input,202,FOLLOW_202_in_ruleColumnId27999); 
+                    enumLiteral_11=(Token)match(input,199,FOLLOW_199_in_ruleColumnId27920); 
 
                             current = grammarAccess.getColumnIdAccess().getDUTIESEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_11, grammarAccess.getColumnIdAccess().getDUTIESEnumLiteralDeclaration_11()); 
@@ -29320,12 +29206,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11264:6: (enumLiteral_12= 'efficiency' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11239:6: (enumLiteral_12= 'efficiency' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11264:6: (enumLiteral_12= 'efficiency' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11264:8: enumLiteral_12= 'efficiency'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11239:6: (enumLiteral_12= 'efficiency' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11239:8: enumLiteral_12= 'efficiency'
                     {
-                    enumLiteral_12=(Token)match(input,48,FOLLOW_48_in_ruleColumnId28016); 
+                    enumLiteral_12=(Token)match(input,48,FOLLOW_48_in_ruleColumnId27937); 
 
                             current = grammarAccess.getColumnIdAccess().getEFFICIENCYEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_12, grammarAccess.getColumnIdAccess().getEFFICIENCYEnumLiteralDeclaration_12()); 
@@ -29337,12 +29223,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11270:6: (enumLiteral_13= 'effort' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11245:6: (enumLiteral_13= 'effort' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11270:6: (enumLiteral_13= 'effort' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11270:8: enumLiteral_13= 'effort'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11245:6: (enumLiteral_13= 'effort' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11245:8: enumLiteral_13= 'effort'
                     {
-                    enumLiteral_13=(Token)match(input,49,FOLLOW_49_in_ruleColumnId28033); 
+                    enumLiteral_13=(Token)match(input,49,FOLLOW_49_in_ruleColumnId27954); 
 
                             current = grammarAccess.getColumnIdAccess().getEFFORTEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_13, grammarAccess.getColumnIdAccess().getEFFORTEnumLiteralDeclaration_13()); 
@@ -29354,12 +29240,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11276:6: (enumLiteral_14= 'effortdone' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11251:6: (enumLiteral_14= 'effortdone' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11276:6: (enumLiteral_14= 'effortdone' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11276:8: enumLiteral_14= 'effortdone'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11251:6: (enumLiteral_14= 'effortdone' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11251:8: enumLiteral_14= 'effortdone'
                     {
-                    enumLiteral_14=(Token)match(input,203,FOLLOW_203_in_ruleColumnId28050); 
+                    enumLiteral_14=(Token)match(input,200,FOLLOW_200_in_ruleColumnId27971); 
 
                             current = grammarAccess.getColumnIdAccess().getEFFORTDONEEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_14, grammarAccess.getColumnIdAccess().getEFFORTDONEEnumLiteralDeclaration_14()); 
@@ -29371,12 +29257,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11282:6: (enumLiteral_15= 'effortleft' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11257:6: (enumLiteral_15= 'effortleft' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11282:6: (enumLiteral_15= 'effortleft' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11282:8: enumLiteral_15= 'effortleft'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11257:6: (enumLiteral_15= 'effortleft' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11257:8: enumLiteral_15= 'effortleft'
                     {
-                    enumLiteral_15=(Token)match(input,204,FOLLOW_204_in_ruleColumnId28067); 
+                    enumLiteral_15=(Token)match(input,201,FOLLOW_201_in_ruleColumnId27988); 
 
                             current = grammarAccess.getColumnIdAccess().getEFFORTLEFTEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_15, grammarAccess.getColumnIdAccess().getEFFORTLEFTEnumLiteralDeclaration_15()); 
@@ -29388,12 +29274,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11288:6: (enumLiteral_16= 'email' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11263:6: (enumLiteral_16= 'email' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11288:6: (enumLiteral_16= 'email' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11288:8: enumLiteral_16= 'email'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11263:6: (enumLiteral_16= 'email' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11263:8: enumLiteral_16= 'email'
                     {
-                    enumLiteral_16=(Token)match(input,205,FOLLOW_205_in_ruleColumnId28084); 
+                    enumLiteral_16=(Token)match(input,202,FOLLOW_202_in_ruleColumnId28005); 
 
                             current = grammarAccess.getColumnIdAccess().getEMAILEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_16, grammarAccess.getColumnIdAccess().getEMAILEnumLiteralDeclaration_16()); 
@@ -29405,12 +29291,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11294:6: (enumLiteral_17= 'end' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11269:6: (enumLiteral_17= 'end' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11294:6: (enumLiteral_17= 'end' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11294:8: enumLiteral_17= 'end'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11269:6: (enumLiteral_17= 'end' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11269:8: enumLiteral_17= 'end'
                     {
-                    enumLiteral_17=(Token)match(input,50,FOLLOW_50_in_ruleColumnId28101); 
+                    enumLiteral_17=(Token)match(input,50,FOLLOW_50_in_ruleColumnId28022); 
 
                             current = grammarAccess.getColumnIdAccess().getENDEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_17, grammarAccess.getColumnIdAccess().getENDEnumLiteralDeclaration_17()); 
@@ -29422,12 +29308,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11300:6: (enumLiteral_18= 'flags' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11275:6: (enumLiteral_18= 'flags' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11300:6: (enumLiteral_18= 'flags' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11300:8: enumLiteral_18= 'flags'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11275:6: (enumLiteral_18= 'flags' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11275:8: enumLiteral_18= 'flags'
                     {
-                    enumLiteral_18=(Token)match(input,53,FOLLOW_53_in_ruleColumnId28118); 
+                    enumLiteral_18=(Token)match(input,53,FOLLOW_53_in_ruleColumnId28039); 
 
                             current = grammarAccess.getColumnIdAccess().getFLAGSEnumLiteralDeclaration_18().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_18, grammarAccess.getColumnIdAccess().getFLAGSEnumLiteralDeclaration_18()); 
@@ -29439,12 +29325,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11306:6: (enumLiteral_19= 'followers' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11281:6: (enumLiteral_19= 'followers' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11306:6: (enumLiteral_19= 'followers' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11306:8: enumLiteral_19= 'followers'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11281:6: (enumLiteral_19= 'followers' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11281:8: enumLiteral_19= 'followers'
                     {
-                    enumLiteral_19=(Token)match(input,206,FOLLOW_206_in_ruleColumnId28135); 
+                    enumLiteral_19=(Token)match(input,203,FOLLOW_203_in_ruleColumnId28056); 
 
                             current = grammarAccess.getColumnIdAccess().getFOLLOWERSEnumLiteralDeclaration_19().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_19, grammarAccess.getColumnIdAccess().getFOLLOWERSEnumLiteralDeclaration_19()); 
@@ -29456,12 +29342,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11312:6: (enumLiteral_20= 'freetime' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11287:6: (enumLiteral_20= 'freetime' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11312:6: (enumLiteral_20= 'freetime' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11312:8: enumLiteral_20= 'freetime'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11287:6: (enumLiteral_20= 'freetime' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11287:8: enumLiteral_20= 'freetime'
                     {
-                    enumLiteral_20=(Token)match(input,207,FOLLOW_207_in_ruleColumnId28152); 
+                    enumLiteral_20=(Token)match(input,204,FOLLOW_204_in_ruleColumnId28073); 
 
                             current = grammarAccess.getColumnIdAccess().getFREETIMEEnumLiteralDeclaration_20().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_20, grammarAccess.getColumnIdAccess().getFREETIMEEnumLiteralDeclaration_20()); 
@@ -29473,12 +29359,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11318:6: (enumLiteral_21= 'freework' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11293:6: (enumLiteral_21= 'freework' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11318:6: (enumLiteral_21= 'freework' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11318:8: enumLiteral_21= 'freework'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11293:6: (enumLiteral_21= 'freework' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11293:8: enumLiteral_21= 'freework'
                     {
-                    enumLiteral_21=(Token)match(input,208,FOLLOW_208_in_ruleColumnId28169); 
+                    enumLiteral_21=(Token)match(input,205,FOLLOW_205_in_ruleColumnId28090); 
 
                             current = grammarAccess.getColumnIdAccess().getFREEWORKEnumLiteralDeclaration_21().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_21, grammarAccess.getColumnIdAccess().getFREEWORKEnumLiteralDeclaration_21()); 
@@ -29490,12 +29376,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11324:6: (enumLiteral_22= 'fte' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11299:6: (enumLiteral_22= 'fte' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11324:6: (enumLiteral_22= 'fte' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11324:8: enumLiteral_22= 'fte'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11299:6: (enumLiteral_22= 'fte' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11299:8: enumLiteral_22= 'fte'
                     {
-                    enumLiteral_22=(Token)match(input,209,FOLLOW_209_in_ruleColumnId28186); 
+                    enumLiteral_22=(Token)match(input,206,FOLLOW_206_in_ruleColumnId28107); 
 
                             current = grammarAccess.getColumnIdAccess().getFTEEnumLiteralDeclaration_22().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_22, grammarAccess.getColumnIdAccess().getFTEEnumLiteralDeclaration_22()); 
@@ -29507,12 +29393,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 24 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11330:6: (enumLiteral_23= 'headcount' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11305:6: (enumLiteral_23= 'headcount' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11330:6: (enumLiteral_23= 'headcount' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11330:8: enumLiteral_23= 'headcount'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11305:6: (enumLiteral_23= 'headcount' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11305:8: enumLiteral_23= 'headcount'
                     {
-                    enumLiteral_23=(Token)match(input,210,FOLLOW_210_in_ruleColumnId28203); 
+                    enumLiteral_23=(Token)match(input,207,FOLLOW_207_in_ruleColumnId28124); 
 
                             current = grammarAccess.getColumnIdAccess().getHEADCOUNTEnumLiteralDeclaration_23().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_23, grammarAccess.getColumnIdAccess().getHEADCOUNTEnumLiteralDeclaration_23()); 
@@ -29524,12 +29410,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 25 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11336:6: (enumLiteral_24= 'hierarchindex' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11311:6: (enumLiteral_24= 'hierarchindex' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11336:6: (enumLiteral_24= 'hierarchindex' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11336:8: enumLiteral_24= 'hierarchindex'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11311:6: (enumLiteral_24= 'hierarchindex' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11311:8: enumLiteral_24= 'hierarchindex'
                     {
-                    enumLiteral_24=(Token)match(input,211,FOLLOW_211_in_ruleColumnId28220); 
+                    enumLiteral_24=(Token)match(input,208,FOLLOW_208_in_ruleColumnId28141); 
 
                             current = grammarAccess.getColumnIdAccess().getHIERARCHINDEXEnumLiteralDeclaration_24().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_24, grammarAccess.getColumnIdAccess().getHIERARCHINDEXEnumLiteralDeclaration_24()); 
@@ -29541,12 +29427,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 26 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11342:6: (enumLiteral_25= 'hourly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11317:6: (enumLiteral_25= 'hourly' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11342:6: (enumLiteral_25= 'hourly' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11342:8: enumLiteral_25= 'hourly'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11317:6: (enumLiteral_25= 'hourly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11317:8: enumLiteral_25= 'hourly'
                     {
-                    enumLiteral_25=(Token)match(input,212,FOLLOW_212_in_ruleColumnId28237); 
+                    enumLiteral_25=(Token)match(input,209,FOLLOW_209_in_ruleColumnId28158); 
 
                             current = grammarAccess.getColumnIdAccess().getHOURLYEnumLiteralDeclaration_25().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_25, grammarAccess.getColumnIdAccess().getHOURLYEnumLiteralDeclaration_25()); 
@@ -29558,12 +29444,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 27 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11348:6: (enumLiteral_26= 'id' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11323:6: (enumLiteral_26= 'id' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11348:6: (enumLiteral_26= 'id' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11348:8: enumLiteral_26= 'id'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11323:6: (enumLiteral_26= 'id' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11323:8: enumLiteral_26= 'id'
                     {
-                    enumLiteral_26=(Token)match(input,213,FOLLOW_213_in_ruleColumnId28254); 
+                    enumLiteral_26=(Token)match(input,210,FOLLOW_210_in_ruleColumnId28175); 
 
                             current = grammarAccess.getColumnIdAccess().getIDEnumLiteralDeclaration_26().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_26, grammarAccess.getColumnIdAccess().getIDEnumLiteralDeclaration_26()); 
@@ -29575,12 +29461,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 28 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11354:6: (enumLiteral_27= 'index' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11329:6: (enumLiteral_27= 'index' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11354:6: (enumLiteral_27= 'index' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11354:8: enumLiteral_27= 'index'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11329:6: (enumLiteral_27= 'index' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11329:8: enumLiteral_27= 'index'
                     {
-                    enumLiteral_27=(Token)match(input,214,FOLLOW_214_in_ruleColumnId28271); 
+                    enumLiteral_27=(Token)match(input,211,FOLLOW_211_in_ruleColumnId28192); 
 
                             current = grammarAccess.getColumnIdAccess().getINDEXEnumLiteralDeclaration_27().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_27, grammarAccess.getColumnIdAccess().getINDEXEnumLiteralDeclaration_27()); 
@@ -29592,12 +29478,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 29 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11360:6: (enumLiteral_28= 'journal' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11335:6: (enumLiteral_28= 'journal' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11360:6: (enumLiteral_28= 'journal' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11360:8: enumLiteral_28= 'journal'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11335:6: (enumLiteral_28= 'journal' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11335:8: enumLiteral_28= 'journal'
                     {
-                    enumLiteral_28=(Token)match(input,161,FOLLOW_161_in_ruleColumnId28288); 
+                    enumLiteral_28=(Token)match(input,158,FOLLOW_158_in_ruleColumnId28209); 
 
                             current = grammarAccess.getColumnIdAccess().getJOURNALEnumLiteralDeclaration_28().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_28, grammarAccess.getColumnIdAccess().getJOURNALEnumLiteralDeclaration_28()); 
@@ -29609,12 +29495,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 30 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11366:6: (enumLiteral_29= 'line' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11341:6: (enumLiteral_29= 'line' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11366:6: (enumLiteral_29= 'line' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11366:8: enumLiteral_29= 'line'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11341:6: (enumLiteral_29= 'line' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11341:8: enumLiteral_29= 'line'
                     {
-                    enumLiteral_29=(Token)match(input,215,FOLLOW_215_in_ruleColumnId28305); 
+                    enumLiteral_29=(Token)match(input,212,FOLLOW_212_in_ruleColumnId28226); 
 
                             current = grammarAccess.getColumnIdAccess().getLINEEnumLiteralDeclaration_29().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_29, grammarAccess.getColumnIdAccess().getLINEEnumLiteralDeclaration_29()); 
@@ -29626,12 +29512,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 31 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11372:6: (enumLiteral_30= 'maxend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11347:6: (enumLiteral_30= 'maxend' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11372:6: (enumLiteral_30= 'maxend' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11372:8: enumLiteral_30= 'maxend'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11347:6: (enumLiteral_30= 'maxend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11347:8: enumLiteral_30= 'maxend'
                     {
-                    enumLiteral_30=(Token)match(input,75,FOLLOW_75_in_ruleColumnId28322); 
+                    enumLiteral_30=(Token)match(input,75,FOLLOW_75_in_ruleColumnId28243); 
 
                             current = grammarAccess.getColumnIdAccess().getMAXENDEnumLiteralDeclaration_30().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_30, grammarAccess.getColumnIdAccess().getMAXENDEnumLiteralDeclaration_30()); 
@@ -29643,12 +29529,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 32 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11378:6: (enumLiteral_31= 'maxstart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11353:6: (enumLiteral_31= 'maxstart' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11378:6: (enumLiteral_31= 'maxstart' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11378:8: enumLiteral_31= 'maxstart'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11353:6: (enumLiteral_31= 'maxstart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11353:8: enumLiteral_31= 'maxstart'
                     {
-                    enumLiteral_31=(Token)match(input,77,FOLLOW_77_in_ruleColumnId28339); 
+                    enumLiteral_31=(Token)match(input,77,FOLLOW_77_in_ruleColumnId28260); 
 
                             current = grammarAccess.getColumnIdAccess().getMAXSTARTEnumLiteralDeclaration_31().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_31, grammarAccess.getColumnIdAccess().getMAXSTARTEnumLiteralDeclaration_31()); 
@@ -29660,12 +29546,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 33 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11384:6: (enumLiteral_32= 'minend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11359:6: (enumLiteral_32= 'minend' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11384:6: (enumLiteral_32= 'minend' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11384:8: enumLiteral_32= 'minend'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11359:6: (enumLiteral_32= 'minend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11359:8: enumLiteral_32= 'minend'
                     {
-                    enumLiteral_32=(Token)match(input,80,FOLLOW_80_in_ruleColumnId28356); 
+                    enumLiteral_32=(Token)match(input,80,FOLLOW_80_in_ruleColumnId28277); 
 
                             current = grammarAccess.getColumnIdAccess().getMINENDEnumLiteralDeclaration_32().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_32, grammarAccess.getColumnIdAccess().getMINENDEnumLiteralDeclaration_32()); 
@@ -29677,12 +29563,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 34 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11390:6: (enumLiteral_33= 'minstart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11365:6: (enumLiteral_33= 'minstart' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11390:6: (enumLiteral_33= 'minstart' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11390:8: enumLiteral_33= 'minstart'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11365:6: (enumLiteral_33= 'minstart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11365:8: enumLiteral_33= 'minstart'
                     {
-                    enumLiteral_33=(Token)match(input,81,FOLLOW_81_in_ruleColumnId28373); 
+                    enumLiteral_33=(Token)match(input,81,FOLLOW_81_in_ruleColumnId28294); 
 
                             current = grammarAccess.getColumnIdAccess().getMINSTARTEnumLiteralDeclaration_33().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_33, grammarAccess.getColumnIdAccess().getMINSTARTEnumLiteralDeclaration_33()); 
@@ -29694,12 +29580,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 35 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11396:6: (enumLiteral_34= 'monthly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11371:6: (enumLiteral_34= 'monthly' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11396:6: (enumLiteral_34= 'monthly' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11396:8: enumLiteral_34= 'monthly'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11371:6: (enumLiteral_34= 'monthly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11371:8: enumLiteral_34= 'monthly'
                     {
-                    enumLiteral_34=(Token)match(input,216,FOLLOW_216_in_ruleColumnId28390); 
+                    enumLiteral_34=(Token)match(input,213,FOLLOW_213_in_ruleColumnId28311); 
 
                             current = grammarAccess.getColumnIdAccess().getMONTHLYEnumLiteralDeclaration_34().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_34, grammarAccess.getColumnIdAccess().getMONTHLYEnumLiteralDeclaration_34()); 
@@ -29711,12 +29597,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 36 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11402:6: (enumLiteral_35= 'no' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11377:6: (enumLiteral_35= 'no' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11402:6: (enumLiteral_35= 'no' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11402:8: enumLiteral_35= 'no'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11377:6: (enumLiteral_35= 'no' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11377:8: enumLiteral_35= 'no'
                     {
-                    enumLiteral_35=(Token)match(input,177,FOLLOW_177_in_ruleColumnId28407); 
+                    enumLiteral_35=(Token)match(input,174,FOLLOW_174_in_ruleColumnId28328); 
 
                             current = grammarAccess.getColumnIdAccess().getNOEnumLiteralDeclaration_35().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_35, grammarAccess.getColumnIdAccess().getNOEnumLiteralDeclaration_35()); 
@@ -29728,12 +29614,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 37 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11408:6: (enumLiteral_36= 'name' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11383:6: (enumLiteral_36= 'name' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11408:6: (enumLiteral_36= 'name' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11408:8: enumLiteral_36= 'name'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11383:6: (enumLiteral_36= 'name' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11383:8: enumLiteral_36= 'name'
                     {
-                    enumLiteral_36=(Token)match(input,217,FOLLOW_217_in_ruleColumnId28424); 
+                    enumLiteral_36=(Token)match(input,214,FOLLOW_214_in_ruleColumnId28345); 
 
                             current = grammarAccess.getColumnIdAccess().getNAMEEnumLiteralDeclaration_36().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_36, grammarAccess.getColumnIdAccess().getNAMEEnumLiteralDeclaration_36()); 
@@ -29745,12 +29631,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 38 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11414:6: (enumLiteral_37= 'note' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11389:6: (enumLiteral_37= 'note' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11414:6: (enumLiteral_37= 'note' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11414:8: enumLiteral_37= 'note'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11389:6: (enumLiteral_37= 'note' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11389:8: enumLiteral_37= 'note'
                     {
-                    enumLiteral_37=(Token)match(input,84,FOLLOW_84_in_ruleColumnId28441); 
+                    enumLiteral_37=(Token)match(input,84,FOLLOW_84_in_ruleColumnId28362); 
 
                             current = grammarAccess.getColumnIdAccess().getNOTEEnumLiteralDeclaration_37().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_37, grammarAccess.getColumnIdAccess().getNOTEEnumLiteralDeclaration_37()); 
@@ -29762,12 +29648,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 39 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11420:6: (enumLiteral_38= 'pathcriticalness' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11395:6: (enumLiteral_38= 'pathcriticalness' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11420:6: (enumLiteral_38= 'pathcriticalness' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11420:8: enumLiteral_38= 'pathcriticalness'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11395:6: (enumLiteral_38= 'pathcriticalness' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11395:8: enumLiteral_38= 'pathcriticalness'
                     {
-                    enumLiteral_38=(Token)match(input,218,FOLLOW_218_in_ruleColumnId28458); 
+                    enumLiteral_38=(Token)match(input,215,FOLLOW_215_in_ruleColumnId28379); 
 
                             current = grammarAccess.getColumnIdAccess().getPATHCRITICALNESSEnumLiteralDeclaration_38().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_38, grammarAccess.getColumnIdAccess().getPATHCRITICALNESSEnumLiteralDeclaration_38()); 
@@ -29779,12 +29665,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 40 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11426:6: (enumLiteral_39= 'precursor' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11401:6: (enumLiteral_39= 'precursor' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11426:6: (enumLiteral_39= 'precursor' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11426:8: enumLiteral_39= 'precursor'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11401:6: (enumLiteral_39= 'precursor' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11401:8: enumLiteral_39= 'precursor'
                     {
-                    enumLiteral_39=(Token)match(input,219,FOLLOW_219_in_ruleColumnId28475); 
+                    enumLiteral_39=(Token)match(input,216,FOLLOW_216_in_ruleColumnId28396); 
 
                             current = grammarAccess.getColumnIdAccess().getPRECURSOREnumLiteralDeclaration_39().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_39, grammarAccess.getColumnIdAccess().getPRECURSOREnumLiteralDeclaration_39()); 
@@ -29796,12 +29682,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 41 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11432:6: (enumLiteral_40= 'priority' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11407:6: (enumLiteral_40= 'priority' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11432:6: (enumLiteral_40= 'priority' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11432:8: enumLiteral_40= 'priority'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11407:6: (enumLiteral_40= 'priority' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11407:8: enumLiteral_40= 'priority'
                     {
-                    enumLiteral_40=(Token)match(input,90,FOLLOW_90_in_ruleColumnId28492); 
+                    enumLiteral_40=(Token)match(input,90,FOLLOW_90_in_ruleColumnId28413); 
 
                             current = grammarAccess.getColumnIdAccess().getPRIORITYEnumLiteralDeclaration_40().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_40, grammarAccess.getColumnIdAccess().getPRIORITYEnumLiteralDeclaration_40()); 
@@ -29813,12 +29699,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 42 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11438:6: (enumLiteral_41= 'quarterly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11413:6: (enumLiteral_41= 'quarterly' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11438:6: (enumLiteral_41= 'quarterly' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11438:8: enumLiteral_41= 'quarterly'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11413:6: (enumLiteral_41= 'quarterly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11413:8: enumLiteral_41= 'quarterly'
                     {
-                    enumLiteral_41=(Token)match(input,220,FOLLOW_220_in_ruleColumnId28509); 
+                    enumLiteral_41=(Token)match(input,217,FOLLOW_217_in_ruleColumnId28430); 
 
                             current = grammarAccess.getColumnIdAccess().getQUARTERLYEnumLiteralDeclaration_41().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_41, grammarAccess.getColumnIdAccess().getQUARTERLYEnumLiteralDeclaration_41()); 
@@ -29830,12 +29716,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 43 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11444:6: (enumLiteral_42= 'rate' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11419:6: (enumLiteral_42= 'rate' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11444:6: (enumLiteral_42= 'rate' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11444:8: enumLiteral_42= 'rate'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11419:6: (enumLiteral_42= 'rate' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11419:8: enumLiteral_42= 'rate'
                     {
-                    enumLiteral_42=(Token)match(input,94,FOLLOW_94_in_ruleColumnId28526); 
+                    enumLiteral_42=(Token)match(input,94,FOLLOW_94_in_ruleColumnId28447); 
 
                             current = grammarAccess.getColumnIdAccess().getRATEEnumLiteralDeclaration_42().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_42, grammarAccess.getColumnIdAccess().getRATEEnumLiteralDeclaration_42()); 
@@ -29847,12 +29733,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 44 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11450:6: (enumLiteral_43= 'resources' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11425:6: (enumLiteral_43= 'resources' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11450:6: (enumLiteral_43= 'resources' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11450:8: enumLiteral_43= 'resources'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11425:6: (enumLiteral_43= 'resources' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11425:8: enumLiteral_43= 'resources'
                     {
-                    enumLiteral_43=(Token)match(input,221,FOLLOW_221_in_ruleColumnId28543); 
+                    enumLiteral_43=(Token)match(input,218,FOLLOW_218_in_ruleColumnId28464); 
 
                             current = grammarAccess.getColumnIdAccess().getRESOURCESEnumLiteralDeclaration_43().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_43, grammarAccess.getColumnIdAccess().getRESOURCESEnumLiteralDeclaration_43()); 
@@ -29864,12 +29750,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 45 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11456:6: (enumLiteral_44= 'responsible' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11431:6: (enumLiteral_44= 'responsible' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11456:6: (enumLiteral_44= 'responsible' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11456:8: enumLiteral_44= 'responsible'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11431:6: (enumLiteral_44= 'responsible' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11431:8: enumLiteral_44= 'responsible'
                     {
-                    enumLiteral_44=(Token)match(input,98,FOLLOW_98_in_ruleColumnId28560); 
+                    enumLiteral_44=(Token)match(input,98,FOLLOW_98_in_ruleColumnId28481); 
 
                             current = grammarAccess.getColumnIdAccess().getRESPONSIBLEEnumLiteralDeclaration_44().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_44, grammarAccess.getColumnIdAccess().getRESPONSIBLEEnumLiteralDeclaration_44()); 
@@ -29881,12 +29767,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 46 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11462:6: (enumLiteral_45= 'revenue' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11437:6: (enumLiteral_45= 'revenue' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11462:6: (enumLiteral_45= 'revenue' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11462:8: enumLiteral_45= 'revenue'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11437:6: (enumLiteral_45= 'revenue' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11437:8: enumLiteral_45= 'revenue'
                     {
-                    enumLiteral_45=(Token)match(input,222,FOLLOW_222_in_ruleColumnId28577); 
+                    enumLiteral_45=(Token)match(input,219,FOLLOW_219_in_ruleColumnId28498); 
 
                             current = grammarAccess.getColumnIdAccess().getREVENUEEnumLiteralDeclaration_45().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_45, grammarAccess.getColumnIdAccess().getREVENUEEnumLiteralDeclaration_45()); 
@@ -29898,12 +29784,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 47 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11468:6: (enumLiteral_46= 'scenario' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11443:6: (enumLiteral_46= 'scenario' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11468:6: (enumLiteral_46= 'scenario' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11468:8: enumLiteral_46= 'scenario'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11443:6: (enumLiteral_46= 'scenario' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11443:8: enumLiteral_46= 'scenario'
                     {
-                    enumLiteral_46=(Token)match(input,110,FOLLOW_110_in_ruleColumnId28594); 
+                    enumLiteral_46=(Token)match(input,110,FOLLOW_110_in_ruleColumnId28515); 
 
                             current = grammarAccess.getColumnIdAccess().getSCENARIOEnumLiteralDeclaration_46().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_46, grammarAccess.getColumnIdAccess().getSCENARIOEnumLiteralDeclaration_46()); 
@@ -29915,12 +29801,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 48 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11474:6: (enumLiteral_47= 'seqno' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11449:6: (enumLiteral_47= 'seqno' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11474:6: (enumLiteral_47= 'seqno' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11474:8: enumLiteral_47= 'seqno'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11449:6: (enumLiteral_47= 'seqno' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11449:8: enumLiteral_47= 'seqno'
                     {
-                    enumLiteral_47=(Token)match(input,223,FOLLOW_223_in_ruleColumnId28611); 
+                    enumLiteral_47=(Token)match(input,220,FOLLOW_220_in_ruleColumnId28532); 
 
                             current = grammarAccess.getColumnIdAccess().getSEQNOEnumLiteralDeclaration_47().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_47, grammarAccess.getColumnIdAccess().getSEQNOEnumLiteralDeclaration_47()); 
@@ -29932,12 +29818,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 49 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11480:6: (enumLiteral_48= 'start' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11455:6: (enumLiteral_48= 'start' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11480:6: (enumLiteral_48= 'start' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11480:8: enumLiteral_48= 'start'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11455:6: (enumLiteral_48= 'start' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11455:8: enumLiteral_48= 'start'
                     {
-                    enumLiteral_48=(Token)match(input,126,FOLLOW_126_in_ruleColumnId28628); 
+                    enumLiteral_48=(Token)match(input,126,FOLLOW_126_in_ruleColumnId28549); 
 
                             current = grammarAccess.getColumnIdAccess().getSTARTEnumLiteralDeclaration_48().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_48, grammarAccess.getColumnIdAccess().getSTARTEnumLiteralDeclaration_48()); 
@@ -29949,12 +29835,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 50 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11486:6: (enumLiteral_49= 'status' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11461:6: (enumLiteral_49= 'status' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11486:6: (enumLiteral_49= 'status' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11486:8: enumLiteral_49= 'status'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11461:6: (enumLiteral_49= 'status' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11461:8: enumLiteral_49= 'status'
                     {
-                    enumLiteral_49=(Token)match(input,128,FOLLOW_128_in_ruleColumnId28645); 
+                    enumLiteral_49=(Token)match(input,128,FOLLOW_128_in_ruleColumnId28566); 
 
                             current = grammarAccess.getColumnIdAccess().getSTATUSEnumLiteralDeclaration_49().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_49, grammarAccess.getColumnIdAccess().getSTATUSEnumLiteralDeclaration_49()); 
@@ -29966,12 +29852,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 51 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11492:6: (enumLiteral_50= 'targets' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11467:6: (enumLiteral_50= 'targets' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11492:6: (enumLiteral_50= 'targets' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11492:8: enumLiteral_50= 'targets'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11467:6: (enumLiteral_50= 'targets' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11467:8: enumLiteral_50= 'targets'
                     {
-                    enumLiteral_50=(Token)match(input,224,FOLLOW_224_in_ruleColumnId28662); 
+                    enumLiteral_50=(Token)match(input,221,FOLLOW_221_in_ruleColumnId28583); 
 
                             current = grammarAccess.getColumnIdAccess().getTARGETSEnumLiteralDeclaration_50().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_50, grammarAccess.getColumnIdAccess().getTARGETSEnumLiteralDeclaration_50()); 
@@ -29983,12 +29869,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 52 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11498:6: (enumLiteral_51= 'wbs' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11473:6: (enumLiteral_51= 'wbs' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11498:6: (enumLiteral_51= 'wbs' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11498:8: enumLiteral_51= 'wbs'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11473:6: (enumLiteral_51= 'wbs' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11473:8: enumLiteral_51= 'wbs'
                     {
-                    enumLiteral_51=(Token)match(input,225,FOLLOW_225_in_ruleColumnId28679); 
+                    enumLiteral_51=(Token)match(input,222,FOLLOW_222_in_ruleColumnId28600); 
 
                             current = grammarAccess.getColumnIdAccess().getWBSEnumLiteralDeclaration_51().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_51, grammarAccess.getColumnIdAccess().getWBSEnumLiteralDeclaration_51()); 
@@ -30000,12 +29886,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 53 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11504:6: (enumLiteral_52= 'weekly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11479:6: (enumLiteral_52= 'weekly' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11504:6: (enumLiteral_52= 'weekly' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11504:8: enumLiteral_52= 'weekly'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11479:6: (enumLiteral_52= 'weekly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11479:8: enumLiteral_52= 'weekly'
                     {
-                    enumLiteral_52=(Token)match(input,226,FOLLOW_226_in_ruleColumnId28696); 
+                    enumLiteral_52=(Token)match(input,223,FOLLOW_223_in_ruleColumnId28617); 
 
                             current = grammarAccess.getColumnIdAccess().getWEEKLYEnumLiteralDeclaration_52().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_52, grammarAccess.getColumnIdAccess().getWEEKLYEnumLiteralDeclaration_52()); 
@@ -30017,12 +29903,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 54 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11510:6: (enumLiteral_53= 'yearly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11485:6: (enumLiteral_53= 'yearly' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11510:6: (enumLiteral_53= 'yearly' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11510:8: enumLiteral_53= 'yearly'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11485:6: (enumLiteral_53= 'yearly' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11485:8: enumLiteral_53= 'yearly'
                     {
-                    enumLiteral_53=(Token)match(input,227,FOLLOW_227_in_ruleColumnId28713); 
+                    enumLiteral_53=(Token)match(input,224,FOLLOW_224_in_ruleColumnId28634); 
 
                             current = grammarAccess.getColumnIdAccess().getYEARLYEnumLiteralDeclaration_53().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_53, grammarAccess.getColumnIdAccess().getYEARLYEnumLiteralDeclaration_53()); 
@@ -30054,7 +29940,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAlertLevel"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11520:1: ruleAlertLevel returns [Enumerator current=null] : ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'yellow' ) | (enumLiteral_2= 'green' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11495:1: ruleAlertLevel returns [Enumerator current=null] : ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'yellow' ) | (enumLiteral_2= 'green' ) ) ;
     public final Enumerator ruleAlertLevel() throws RecognitionException {
         Enumerator current = null;
 
@@ -30064,42 +29950,42 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11522:28: ( ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'yellow' ) | (enumLiteral_2= 'green' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:1: ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'yellow' ) | (enumLiteral_2= 'green' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11497:28: ( ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'yellow' ) | (enumLiteral_2= 'green' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11498:1: ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'yellow' ) | (enumLiteral_2= 'green' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:1: ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'yellow' ) | (enumLiteral_2= 'green' ) )
-            int alt113=3;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11498:1: ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'yellow' ) | (enumLiteral_2= 'green' ) )
+            int alt112=3;
             switch ( input.LA(1) ) {
-            case 228:
+            case 225:
                 {
-                alt113=1;
+                alt112=1;
                 }
                 break;
-            case 229:
+            case 226:
                 {
-                alt113=2;
+                alt112=2;
                 }
                 break;
-            case 230:
+            case 227:
                 {
-                alt113=3;
+                alt112=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 113, 0, input);
+                    new NoViableAltException("", 112, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt113) {
+            switch (alt112) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:2: (enumLiteral_0= 'red' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11498:2: (enumLiteral_0= 'red' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:2: (enumLiteral_0= 'red' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:4: enumLiteral_0= 'red'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11498:2: (enumLiteral_0= 'red' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11498:4: enumLiteral_0= 'red'
                     {
-                    enumLiteral_0=(Token)match(input,228,FOLLOW_228_in_ruleAlertLevel28758); 
+                    enumLiteral_0=(Token)match(input,225,FOLLOW_225_in_ruleAlertLevel28679); 
 
                             current = grammarAccess.getAlertLevelAccess().getREDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getAlertLevelAccess().getREDEnumLiteralDeclaration_0()); 
@@ -30111,12 +29997,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11529:6: (enumLiteral_1= 'yellow' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11504:6: (enumLiteral_1= 'yellow' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11529:6: (enumLiteral_1= 'yellow' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11529:8: enumLiteral_1= 'yellow'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11504:6: (enumLiteral_1= 'yellow' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11504:8: enumLiteral_1= 'yellow'
                     {
-                    enumLiteral_1=(Token)match(input,229,FOLLOW_229_in_ruleAlertLevel28775); 
+                    enumLiteral_1=(Token)match(input,226,FOLLOW_226_in_ruleAlertLevel28696); 
 
                             current = grammarAccess.getAlertLevelAccess().getYELLOWEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getAlertLevelAccess().getYELLOWEnumLiteralDeclaration_1()); 
@@ -30128,12 +30014,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11535:6: (enumLiteral_2= 'green' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11510:6: (enumLiteral_2= 'green' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11535:6: (enumLiteral_2= 'green' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11535:8: enumLiteral_2= 'green'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11510:6: (enumLiteral_2= 'green' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11510:8: enumLiteral_2= 'green'
                     {
-                    enumLiteral_2=(Token)match(input,230,FOLLOW_230_in_ruleAlertLevel28792); 
+                    enumLiteral_2=(Token)match(input,227,FOLLOW_227_in_ruleAlertLevel28713); 
 
                             current = grammarAccess.getAlertLevelAccess().getGREENEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getAlertLevelAccess().getGREENEnumLiteralDeclaration_2()); 
@@ -30165,7 +30051,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDependsPolicy"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11545:1: ruleDependsPolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'onend' ) | (enumLiteral_1= 'onstart' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11520:1: ruleDependsPolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'onend' ) | (enumLiteral_1= 'onstart' ) ) ;
     public final Enumerator ruleDependsPolicy() throws RecognitionException {
         Enumerator current = null;
 
@@ -30174,33 +30060,33 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11547:28: ( ( (enumLiteral_0= 'onend' ) | (enumLiteral_1= 'onstart' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11548:1: ( (enumLiteral_0= 'onend' ) | (enumLiteral_1= 'onstart' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11522:28: ( ( (enumLiteral_0= 'onend' ) | (enumLiteral_1= 'onstart' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:1: ( (enumLiteral_0= 'onend' ) | (enumLiteral_1= 'onstart' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11548:1: ( (enumLiteral_0= 'onend' ) | (enumLiteral_1= 'onstart' ) )
-            int alt114=2;
-            int LA114_0 = input.LA(1);
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:1: ( (enumLiteral_0= 'onend' ) | (enumLiteral_1= 'onstart' ) )
+            int alt113=2;
+            int LA113_0 = input.LA(1);
 
-            if ( (LA114_0==157) ) {
-                alt114=1;
+            if ( (LA113_0==154) ) {
+                alt113=1;
             }
-            else if ( (LA114_0==156) ) {
-                alt114=2;
+            else if ( (LA113_0==153) ) {
+                alt113=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 114, 0, input);
+                    new NoViableAltException("", 113, 0, input);
 
                 throw nvae;
             }
-            switch (alt114) {
+            switch (alt113) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11548:2: (enumLiteral_0= 'onend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:2: (enumLiteral_0= 'onend' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11548:2: (enumLiteral_0= 'onend' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11548:4: enumLiteral_0= 'onend'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:2: (enumLiteral_0= 'onend' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11523:4: enumLiteral_0= 'onend'
                     {
-                    enumLiteral_0=(Token)match(input,157,FOLLOW_157_in_ruleDependsPolicy28837); 
+                    enumLiteral_0=(Token)match(input,154,FOLLOW_154_in_ruleDependsPolicy28758); 
 
                             current = grammarAccess.getDependsPolicyAccess().getONENDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getDependsPolicyAccess().getONENDEnumLiteralDeclaration_0()); 
@@ -30212,12 +30098,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11554:6: (enumLiteral_1= 'onstart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11529:6: (enumLiteral_1= 'onstart' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11554:6: (enumLiteral_1= 'onstart' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11554:8: enumLiteral_1= 'onstart'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11529:6: (enumLiteral_1= 'onstart' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11529:8: enumLiteral_1= 'onstart'
                     {
-                    enumLiteral_1=(Token)match(input,156,FOLLOW_156_in_ruleDependsPolicy28854); 
+                    enumLiteral_1=(Token)match(input,153,FOLLOW_153_in_ruleDependsPolicy28775); 
 
                             current = grammarAccess.getDependsPolicyAccess().getONSTARTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getDependsPolicyAccess().getONSTARTEnumLiteralDeclaration_1()); 
@@ -30249,7 +30135,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSchedulingPolicy"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11564:1: ruleSchedulingPolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'alap' ) | (enumLiteral_1= 'asap' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11539:1: ruleSchedulingPolicy returns [Enumerator current=null] : ( (enumLiteral_0= 'alap' ) | (enumLiteral_1= 'asap' ) ) ;
     public final Enumerator ruleSchedulingPolicy() throws RecognitionException {
         Enumerator current = null;
 
@@ -30258,33 +30144,33 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11566:28: ( ( (enumLiteral_0= 'alap' ) | (enumLiteral_1= 'asap' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11567:1: ( (enumLiteral_0= 'alap' ) | (enumLiteral_1= 'asap' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11541:28: ( ( (enumLiteral_0= 'alap' ) | (enumLiteral_1= 'asap' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11542:1: ( (enumLiteral_0= 'alap' ) | (enumLiteral_1= 'asap' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11567:1: ( (enumLiteral_0= 'alap' ) | (enumLiteral_1= 'asap' ) )
-            int alt115=2;
-            int LA115_0 = input.LA(1);
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11542:1: ( (enumLiteral_0= 'alap' ) | (enumLiteral_1= 'asap' ) )
+            int alt114=2;
+            int LA114_0 = input.LA(1);
 
-            if ( (LA115_0==231) ) {
-                alt115=1;
+            if ( (LA114_0==228) ) {
+                alt114=1;
             }
-            else if ( (LA115_0==232) ) {
-                alt115=2;
+            else if ( (LA114_0==229) ) {
+                alt114=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 115, 0, input);
+                    new NoViableAltException("", 114, 0, input);
 
                 throw nvae;
             }
-            switch (alt115) {
+            switch (alt114) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11567:2: (enumLiteral_0= 'alap' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11542:2: (enumLiteral_0= 'alap' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11567:2: (enumLiteral_0= 'alap' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11567:4: enumLiteral_0= 'alap'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11542:2: (enumLiteral_0= 'alap' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11542:4: enumLiteral_0= 'alap'
                     {
-                    enumLiteral_0=(Token)match(input,231,FOLLOW_231_in_ruleSchedulingPolicy28899); 
+                    enumLiteral_0=(Token)match(input,228,FOLLOW_228_in_ruleSchedulingPolicy28820); 
 
                             current = grammarAccess.getSchedulingPolicyAccess().getALAPEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getSchedulingPolicyAccess().getALAPEnumLiteralDeclaration_0()); 
@@ -30296,12 +30182,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11573:6: (enumLiteral_1= 'asap' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11548:6: (enumLiteral_1= 'asap' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11573:6: (enumLiteral_1= 'asap' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11573:8: enumLiteral_1= 'asap'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11548:6: (enumLiteral_1= 'asap' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11548:8: enumLiteral_1= 'asap'
                     {
-                    enumLiteral_1=(Token)match(input,232,FOLLOW_232_in_ruleSchedulingPolicy28916); 
+                    enumLiteral_1=(Token)match(input,229,FOLLOW_229_in_ruleSchedulingPolicy28837); 
 
                             current = grammarAccess.getSchedulingPolicyAccess().getASAPEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getSchedulingPolicyAccess().getASAPEnumLiteralDeclaration_1()); 
@@ -30333,7 +30219,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTimeUnit"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11583:1: ruleTimeUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'h' ) | (enumLiteral_2= 'd' ) | (enumLiteral_3= 'w' ) | (enumLiteral_4= 'm' ) | (enumLiteral_5= 'y' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11558:1: ruleTimeUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'h' ) | (enumLiteral_2= 'd' ) | (enumLiteral_3= 'w' ) | (enumLiteral_4= 'm' ) | (enumLiteral_5= 'y' ) ) ;
     public final Enumerator ruleTimeUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -30346,57 +30232,57 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11585:28: ( ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'h' ) | (enumLiteral_2= 'd' ) | (enumLiteral_3= 'w' ) | (enumLiteral_4= 'm' ) | (enumLiteral_5= 'y' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11586:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'h' ) | (enumLiteral_2= 'd' ) | (enumLiteral_3= 'w' ) | (enumLiteral_4= 'm' ) | (enumLiteral_5= 'y' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11560:28: ( ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'h' ) | (enumLiteral_2= 'd' ) | (enumLiteral_3= 'w' ) | (enumLiteral_4= 'm' ) | (enumLiteral_5= 'y' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11561:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'h' ) | (enumLiteral_2= 'd' ) | (enumLiteral_3= 'w' ) | (enumLiteral_4= 'm' ) | (enumLiteral_5= 'y' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11586:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'h' ) | (enumLiteral_2= 'd' ) | (enumLiteral_3= 'w' ) | (enumLiteral_4= 'm' ) | (enumLiteral_5= 'y' ) )
-            int alt116=6;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11561:1: ( (enumLiteral_0= 'min' ) | (enumLiteral_1= 'h' ) | (enumLiteral_2= 'd' ) | (enumLiteral_3= 'w' ) | (enumLiteral_4= 'm' ) | (enumLiteral_5= 'y' ) )
+            int alt115=6;
             switch ( input.LA(1) ) {
             case 137:
                 {
-                alt116=1;
+                alt115=1;
+                }
+                break;
+            case 230:
+                {
+                alt115=2;
+                }
+                break;
+            case 231:
+                {
+                alt115=3;
+                }
+                break;
+            case 232:
+                {
+                alt115=4;
                 }
                 break;
             case 233:
                 {
-                alt116=2;
+                alt115=5;
                 }
                 break;
             case 234:
                 {
-                alt116=3;
-                }
-                break;
-            case 235:
-                {
-                alt116=4;
-                }
-                break;
-            case 236:
-                {
-                alt116=5;
-                }
-                break;
-            case 237:
-                {
-                alt116=6;
+                alt115=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 116, 0, input);
+                    new NoViableAltException("", 115, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt116) {
+            switch (alt115) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11586:2: (enumLiteral_0= 'min' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11561:2: (enumLiteral_0= 'min' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11586:2: (enumLiteral_0= 'min' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11586:4: enumLiteral_0= 'min'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11561:2: (enumLiteral_0= 'min' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11561:4: enumLiteral_0= 'min'
                     {
-                    enumLiteral_0=(Token)match(input,137,FOLLOW_137_in_ruleTimeUnit28961); 
+                    enumLiteral_0=(Token)match(input,137,FOLLOW_137_in_ruleTimeUnit28882); 
 
                             current = grammarAccess.getTimeUnitAccess().getMINUTEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getTimeUnitAccess().getMINUTEEnumLiteralDeclaration_0()); 
@@ -30408,12 +30294,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11592:6: (enumLiteral_1= 'h' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11567:6: (enumLiteral_1= 'h' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11592:6: (enumLiteral_1= 'h' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11592:8: enumLiteral_1= 'h'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11567:6: (enumLiteral_1= 'h' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11567:8: enumLiteral_1= 'h'
                     {
-                    enumLiteral_1=(Token)match(input,233,FOLLOW_233_in_ruleTimeUnit28978); 
+                    enumLiteral_1=(Token)match(input,230,FOLLOW_230_in_ruleTimeUnit28899); 
 
                             current = grammarAccess.getTimeUnitAccess().getHOUREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getTimeUnitAccess().getHOUREnumLiteralDeclaration_1()); 
@@ -30425,12 +30311,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11598:6: (enumLiteral_2= 'd' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11573:6: (enumLiteral_2= 'd' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11598:6: (enumLiteral_2= 'd' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11598:8: enumLiteral_2= 'd'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11573:6: (enumLiteral_2= 'd' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11573:8: enumLiteral_2= 'd'
                     {
-                    enumLiteral_2=(Token)match(input,234,FOLLOW_234_in_ruleTimeUnit28995); 
+                    enumLiteral_2=(Token)match(input,231,FOLLOW_231_in_ruleTimeUnit28916); 
 
                             current = grammarAccess.getTimeUnitAccess().getDAYEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getTimeUnitAccess().getDAYEnumLiteralDeclaration_2()); 
@@ -30442,12 +30328,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11604:6: (enumLiteral_3= 'w' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11579:6: (enumLiteral_3= 'w' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11604:6: (enumLiteral_3= 'w' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11604:8: enumLiteral_3= 'w'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11579:6: (enumLiteral_3= 'w' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11579:8: enumLiteral_3= 'w'
                     {
-                    enumLiteral_3=(Token)match(input,235,FOLLOW_235_in_ruleTimeUnit29012); 
+                    enumLiteral_3=(Token)match(input,232,FOLLOW_232_in_ruleTimeUnit28933); 
 
                             current = grammarAccess.getTimeUnitAccess().getWEEKEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getTimeUnitAccess().getWEEKEnumLiteralDeclaration_3()); 
@@ -30459,12 +30345,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11610:6: (enumLiteral_4= 'm' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11585:6: (enumLiteral_4= 'm' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11610:6: (enumLiteral_4= 'm' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11610:8: enumLiteral_4= 'm'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11585:6: (enumLiteral_4= 'm' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11585:8: enumLiteral_4= 'm'
                     {
-                    enumLiteral_4=(Token)match(input,236,FOLLOW_236_in_ruleTimeUnit29029); 
+                    enumLiteral_4=(Token)match(input,233,FOLLOW_233_in_ruleTimeUnit28950); 
 
                             current = grammarAccess.getTimeUnitAccess().getMONTHEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getTimeUnitAccess().getMONTHEnumLiteralDeclaration_4()); 
@@ -30476,12 +30362,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11616:6: (enumLiteral_5= 'y' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11591:6: (enumLiteral_5= 'y' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11616:6: (enumLiteral_5= 'y' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11616:8: enumLiteral_5= 'y'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11591:6: (enumLiteral_5= 'y' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11591:8: enumLiteral_5= 'y'
                     {
-                    enumLiteral_5=(Token)match(input,237,FOLLOW_237_in_ruleTimeUnit29046); 
+                    enumLiteral_5=(Token)match(input,234,FOLLOW_234_in_ruleTimeUnit28967); 
 
                             current = grammarAccess.getTimeUnitAccess().getYEAREnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getTimeUnitAccess().getYEAREnumLiteralDeclaration_5()); 
@@ -30513,7 +30399,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWeekday"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11626:1: ruleWeekday returns [Enumerator current=null] : ( (enumLiteral_0= 'mon' ) | (enumLiteral_1= 'tue' ) | (enumLiteral_2= 'wed' ) | (enumLiteral_3= 'thu' ) | (enumLiteral_4= 'fri' ) | (enumLiteral_5= 'sat' ) | (enumLiteral_6= 'sun' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11601:1: ruleWeekday returns [Enumerator current=null] : ( (enumLiteral_0= 'mon' ) | (enumLiteral_1= 'tue' ) | (enumLiteral_2= 'wed' ) | (enumLiteral_3= 'thu' ) | (enumLiteral_4= 'fri' ) | (enumLiteral_5= 'sat' ) | (enumLiteral_6= 'sun' ) ) ;
     public final Enumerator ruleWeekday() throws RecognitionException {
         Enumerator current = null;
 
@@ -30527,62 +30413,62 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11628:28: ( ( (enumLiteral_0= 'mon' ) | (enumLiteral_1= 'tue' ) | (enumLiteral_2= 'wed' ) | (enumLiteral_3= 'thu' ) | (enumLiteral_4= 'fri' ) | (enumLiteral_5= 'sat' ) | (enumLiteral_6= 'sun' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11629:1: ( (enumLiteral_0= 'mon' ) | (enumLiteral_1= 'tue' ) | (enumLiteral_2= 'wed' ) | (enumLiteral_3= 'thu' ) | (enumLiteral_4= 'fri' ) | (enumLiteral_5= 'sat' ) | (enumLiteral_6= 'sun' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11603:28: ( ( (enumLiteral_0= 'mon' ) | (enumLiteral_1= 'tue' ) | (enumLiteral_2= 'wed' ) | (enumLiteral_3= 'thu' ) | (enumLiteral_4= 'fri' ) | (enumLiteral_5= 'sat' ) | (enumLiteral_6= 'sun' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11604:1: ( (enumLiteral_0= 'mon' ) | (enumLiteral_1= 'tue' ) | (enumLiteral_2= 'wed' ) | (enumLiteral_3= 'thu' ) | (enumLiteral_4= 'fri' ) | (enumLiteral_5= 'sat' ) | (enumLiteral_6= 'sun' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11629:1: ( (enumLiteral_0= 'mon' ) | (enumLiteral_1= 'tue' ) | (enumLiteral_2= 'wed' ) | (enumLiteral_3= 'thu' ) | (enumLiteral_4= 'fri' ) | (enumLiteral_5= 'sat' ) | (enumLiteral_6= 'sun' ) )
-            int alt117=7;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11604:1: ( (enumLiteral_0= 'mon' ) | (enumLiteral_1= 'tue' ) | (enumLiteral_2= 'wed' ) | (enumLiteral_3= 'thu' ) | (enumLiteral_4= 'fri' ) | (enumLiteral_5= 'sat' ) | (enumLiteral_6= 'sun' ) )
+            int alt116=7;
             switch ( input.LA(1) ) {
+            case 235:
+                {
+                alt116=1;
+                }
+                break;
+            case 236:
+                {
+                alt116=2;
+                }
+                break;
+            case 237:
+                {
+                alt116=3;
+                }
+                break;
             case 238:
                 {
-                alt117=1;
+                alt116=4;
                 }
                 break;
             case 239:
                 {
-                alt117=2;
+                alt116=5;
                 }
                 break;
             case 240:
                 {
-                alt117=3;
+                alt116=6;
                 }
                 break;
             case 241:
                 {
-                alt117=4;
-                }
-                break;
-            case 242:
-                {
-                alt117=5;
-                }
-                break;
-            case 243:
-                {
-                alt117=6;
-                }
-                break;
-            case 244:
-                {
-                alt117=7;
+                alt116=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 117, 0, input);
+                    new NoViableAltException("", 116, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt117) {
+            switch (alt116) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11629:2: (enumLiteral_0= 'mon' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11604:2: (enumLiteral_0= 'mon' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11629:2: (enumLiteral_0= 'mon' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11629:4: enumLiteral_0= 'mon'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11604:2: (enumLiteral_0= 'mon' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11604:4: enumLiteral_0= 'mon'
                     {
-                    enumLiteral_0=(Token)match(input,238,FOLLOW_238_in_ruleWeekday29091); 
+                    enumLiteral_0=(Token)match(input,235,FOLLOW_235_in_ruleWeekday29012); 
 
                             current = grammarAccess.getWeekdayAccess().getMONEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getWeekdayAccess().getMONEnumLiteralDeclaration_0()); 
@@ -30594,12 +30480,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11635:6: (enumLiteral_1= 'tue' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11610:6: (enumLiteral_1= 'tue' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11635:6: (enumLiteral_1= 'tue' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11635:8: enumLiteral_1= 'tue'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11610:6: (enumLiteral_1= 'tue' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11610:8: enumLiteral_1= 'tue'
                     {
-                    enumLiteral_1=(Token)match(input,239,FOLLOW_239_in_ruleWeekday29108); 
+                    enumLiteral_1=(Token)match(input,236,FOLLOW_236_in_ruleWeekday29029); 
 
                             current = grammarAccess.getWeekdayAccess().getTUEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getWeekdayAccess().getTUEEnumLiteralDeclaration_1()); 
@@ -30611,12 +30497,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11641:6: (enumLiteral_2= 'wed' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11616:6: (enumLiteral_2= 'wed' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11641:6: (enumLiteral_2= 'wed' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11641:8: enumLiteral_2= 'wed'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11616:6: (enumLiteral_2= 'wed' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11616:8: enumLiteral_2= 'wed'
                     {
-                    enumLiteral_2=(Token)match(input,240,FOLLOW_240_in_ruleWeekday29125); 
+                    enumLiteral_2=(Token)match(input,237,FOLLOW_237_in_ruleWeekday29046); 
 
                             current = grammarAccess.getWeekdayAccess().getWEDEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getWeekdayAccess().getWEDEnumLiteralDeclaration_2()); 
@@ -30628,12 +30514,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11647:6: (enumLiteral_3= 'thu' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11622:6: (enumLiteral_3= 'thu' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11647:6: (enumLiteral_3= 'thu' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11647:8: enumLiteral_3= 'thu'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11622:6: (enumLiteral_3= 'thu' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11622:8: enumLiteral_3= 'thu'
                     {
-                    enumLiteral_3=(Token)match(input,241,FOLLOW_241_in_ruleWeekday29142); 
+                    enumLiteral_3=(Token)match(input,238,FOLLOW_238_in_ruleWeekday29063); 
 
                             current = grammarAccess.getWeekdayAccess().getTHREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getWeekdayAccess().getTHREnumLiteralDeclaration_3()); 
@@ -30645,12 +30531,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11653:6: (enumLiteral_4= 'fri' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11628:6: (enumLiteral_4= 'fri' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11653:6: (enumLiteral_4= 'fri' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11653:8: enumLiteral_4= 'fri'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11628:6: (enumLiteral_4= 'fri' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11628:8: enumLiteral_4= 'fri'
                     {
-                    enumLiteral_4=(Token)match(input,242,FOLLOW_242_in_ruleWeekday29159); 
+                    enumLiteral_4=(Token)match(input,239,FOLLOW_239_in_ruleWeekday29080); 
 
                             current = grammarAccess.getWeekdayAccess().getFRIEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getWeekdayAccess().getFRIEnumLiteralDeclaration_4()); 
@@ -30662,12 +30548,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11659:6: (enumLiteral_5= 'sat' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11634:6: (enumLiteral_5= 'sat' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11659:6: (enumLiteral_5= 'sat' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11659:8: enumLiteral_5= 'sat'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11634:6: (enumLiteral_5= 'sat' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11634:8: enumLiteral_5= 'sat'
                     {
-                    enumLiteral_5=(Token)match(input,243,FOLLOW_243_in_ruleWeekday29176); 
+                    enumLiteral_5=(Token)match(input,240,FOLLOW_240_in_ruleWeekday29097); 
 
                             current = grammarAccess.getWeekdayAccess().getSATEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getWeekdayAccess().getSATEnumLiteralDeclaration_5()); 
@@ -30679,12 +30565,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11665:6: (enumLiteral_6= 'sun' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11640:6: (enumLiteral_6= 'sun' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11665:6: (enumLiteral_6= 'sun' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11665:8: enumLiteral_6= 'sun'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11640:6: (enumLiteral_6= 'sun' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11640:8: enumLiteral_6= 'sun'
                     {
-                    enumLiteral_6=(Token)match(input,244,FOLLOW_244_in_ruleWeekday29193); 
+                    enumLiteral_6=(Token)match(input,241,FOLLOW_241_in_ruleWeekday29114); 
 
                             current = grammarAccess.getWeekdayAccess().getSUNEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getWeekdayAccess().getSUNEnumLiteralDeclaration_6()); 
@@ -30716,7 +30602,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWorkQuantityUnit"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11675:1: ruleWorkQuantityUnit returns [Enumerator current=null] : ( (enumLiteral_0= '%' ) | (enumLiteral_1= 'min' ) | (enumLiteral_2= 'h' ) | (enumLiteral_3= 'd' ) ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11650:1: ruleWorkQuantityUnit returns [Enumerator current=null] : ( (enumLiteral_0= '%' ) | (enumLiteral_1= 'min' ) | (enumLiteral_2= 'h' ) | (enumLiteral_3= 'd' ) ) ;
     public final Enumerator ruleWorkQuantityUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -30727,47 +30613,47 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11677:28: ( ( (enumLiteral_0= '%' ) | (enumLiteral_1= 'min' ) | (enumLiteral_2= 'h' ) | (enumLiteral_3= 'd' ) ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11678:1: ( (enumLiteral_0= '%' ) | (enumLiteral_1= 'min' ) | (enumLiteral_2= 'h' ) | (enumLiteral_3= 'd' ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11652:28: ( ( (enumLiteral_0= '%' ) | (enumLiteral_1= 'min' ) | (enumLiteral_2= 'h' ) | (enumLiteral_3= 'd' ) ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11653:1: ( (enumLiteral_0= '%' ) | (enumLiteral_1= 'min' ) | (enumLiteral_2= 'h' ) | (enumLiteral_3= 'd' ) )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11678:1: ( (enumLiteral_0= '%' ) | (enumLiteral_1= 'min' ) | (enumLiteral_2= 'h' ) | (enumLiteral_3= 'd' ) )
-            int alt118=4;
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11653:1: ( (enumLiteral_0= '%' ) | (enumLiteral_1= 'min' ) | (enumLiteral_2= 'h' ) | (enumLiteral_3= 'd' ) )
+            int alt117=4;
             switch ( input.LA(1) ) {
-            case 245:
+            case 242:
                 {
-                alt118=1;
+                alt117=1;
                 }
                 break;
             case 137:
                 {
-                alt118=2;
+                alt117=2;
                 }
                 break;
-            case 233:
+            case 230:
                 {
-                alt118=3;
+                alt117=3;
                 }
                 break;
-            case 234:
+            case 231:
                 {
-                alt118=4;
+                alt117=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 118, 0, input);
+                    new NoViableAltException("", 117, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt118) {
+            switch (alt117) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11678:2: (enumLiteral_0= '%' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11653:2: (enumLiteral_0= '%' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11678:2: (enumLiteral_0= '%' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11678:4: enumLiteral_0= '%'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11653:2: (enumLiteral_0= '%' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11653:4: enumLiteral_0= '%'
                     {
-                    enumLiteral_0=(Token)match(input,245,FOLLOW_245_in_ruleWorkQuantityUnit29238); 
+                    enumLiteral_0=(Token)match(input,242,FOLLOW_242_in_ruleWorkQuantityUnit29159); 
 
                             current = grammarAccess.getWorkQuantityUnitAccess().getPERCENTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getWorkQuantityUnitAccess().getPERCENTEnumLiteralDeclaration_0()); 
@@ -30779,12 +30665,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11684:6: (enumLiteral_1= 'min' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11659:6: (enumLiteral_1= 'min' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11684:6: (enumLiteral_1= 'min' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11684:8: enumLiteral_1= 'min'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11659:6: (enumLiteral_1= 'min' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11659:8: enumLiteral_1= 'min'
                     {
-                    enumLiteral_1=(Token)match(input,137,FOLLOW_137_in_ruleWorkQuantityUnit29255); 
+                    enumLiteral_1=(Token)match(input,137,FOLLOW_137_in_ruleWorkQuantityUnit29176); 
 
                             current = grammarAccess.getWorkQuantityUnitAccess().getMINUTESEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getWorkQuantityUnitAccess().getMINUTESEnumLiteralDeclaration_1()); 
@@ -30796,12 +30682,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11690:6: (enumLiteral_2= 'h' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11665:6: (enumLiteral_2= 'h' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11690:6: (enumLiteral_2= 'h' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11690:8: enumLiteral_2= 'h'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11665:6: (enumLiteral_2= 'h' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11665:8: enumLiteral_2= 'h'
                     {
-                    enumLiteral_2=(Token)match(input,233,FOLLOW_233_in_ruleWorkQuantityUnit29272); 
+                    enumLiteral_2=(Token)match(input,230,FOLLOW_230_in_ruleWorkQuantityUnit29193); 
 
                             current = grammarAccess.getWorkQuantityUnitAccess().getHOURSEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getWorkQuantityUnitAccess().getHOURSEnumLiteralDeclaration_2()); 
@@ -30813,12 +30699,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11696:6: (enumLiteral_3= 'd' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11671:6: (enumLiteral_3= 'd' )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11696:6: (enumLiteral_3= 'd' )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11696:8: enumLiteral_3= 'd'
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11671:6: (enumLiteral_3= 'd' )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:11671:8: enumLiteral_3= 'd'
                     {
-                    enumLiteral_3=(Token)match(input,234,FOLLOW_234_in_ruleWorkQuantityUnit29289); 
+                    enumLiteral_3=(Token)match(input,231,FOLLOW_231_in_ruleWorkQuantityUnit29210); 
 
                             current = grammarAccess.getWorkQuantityUnitAccess().getDAYSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getWorkQuantityUnitAccess().getDAYSEnumLiteralDeclaration_3()); 
@@ -30865,7 +30751,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
         "\1\u0090\13\uffff\1\26\7\uffff";
     static final String DFA2_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\uffff"+
-        "\1\20\1\21\1\22\1\17\1\14\1\16\1\15";
+        "\1\20\1\21\1\22\1\17\1\14\1\15\1\16";
     static final String DFA2_specialS =
         "\24\uffff}>";
     static final String[] DFA2_transitionS = {
@@ -30884,7 +30770,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
             "",
             "",
             "",
-            "\1\21\4\uffff\1\20\1\23\1\22",
+            "\1\21\4\uffff\1\20\1\22\1\23",
             "",
             "",
             "",
@@ -31089,7 +30975,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     static final String DFA52_acceptS =
         "\1\uffff\1\11\10\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10";
     static final String DFA52_specialS =
-        "\2\uffff\1\4\1\3\1\2\1\6\1\7\1\1\1\0\1\5\10\uffff}>";
+        "\2\uffff\1\6\1\5\1\2\1\3\1\4\1\1\1\0\1\7\10\uffff}>";
     static final String[] DFA52_transitionS = {
             "\1\1\12\uffff\1\1\1\uffff\2\1\1\uffff\1\1\1\uffff\2\1\4\uffff"+
             "\1\1\4\uffff\2\1\1\uffff\2\1\5\uffff\1\3\1\uffff\1\1\1\uffff"+
@@ -31198,51 +31084,6 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA52_3 = input.LA(1);
-
-                         
-                        int index52_3 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 1) ) {s = 11;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLimitsAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index52_3);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA52_2 = input.LA(1);
-
-                         
-                        int index52_2 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 0) ) {s = 10;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLimitsAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index52_2);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA52_9 = input.LA(1);
-
-                         
-                        int index52_9 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 7) ) {s = 17;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLimitsAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index52_9);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 6 : 
                         int LA52_5 = input.LA(1);
 
                          
@@ -31257,7 +31098,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                         input.seek(index52_5);
                         if ( s>=0 ) return s;
                         break;
-                    case 7 : 
+                    case 4 : 
                         int LA52_6 = input.LA(1);
 
                          
@@ -31270,6 +31111,51 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index52_6);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA52_3 = input.LA(1);
+
+                         
+                        int index52_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 1) ) {s = 11;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLimitsAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index52_3);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA52_2 = input.LA(1);
+
+                         
+                        int index52_2 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 0) ) {s = 10;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLimitsAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index52_2);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA52_9 = input.LA(1);
+
+                         
+                        int index52_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getLimitsAccess().getUnorderedGroup(), 7) ) {s = 17;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getLimitsAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index52_9);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -31527,7 +31413,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleTitle_in_ruleNikuReportAttribute6268 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlert_in_entryRuleAlert6303 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAlert6313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleAlert6350 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000007000000000L});
+    public static final BitSet FOLLOW_26_in_ruleAlert6350 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000E00000000L});
     public static final BitSet FOLLOW_ruleAlertLevel_in_ruleAlert6371 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlternative_in_entryRuleAlternative6407 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAlternative6417 = new BitSet(new long[]{0x0000000000000002L});
@@ -31570,7 +31456,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleCharge_in_entryRuleCharge7399 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCharge7409 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_ruleCharge7446 = new BitSet(new long[]{0x0000000000000280L});
-    public static final BitSet FOLLOW_ruleXFloat_in_ruleCharge7467 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x00000001F0000000L});
+    public static final BitSet FOLLOW_ruleXFloat_in_ruleCharge7467 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000003E000000L});
     public static final BitSet FOLLOW_ruleChargeApplies_in_ruleCharge7488 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleChargeSet_in_entryRuleChargeSet7524 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleChargeSet7534 = new BitSet(new long[]{0x0000000000000002L});
@@ -31580,9 +31466,9 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleAccountShare_in_ruleChargeSet7626 = new BitSet(new long[]{0x0000000001000002L});
     public static final BitSet FOLLOW_ruleColumns_in_entryRuleColumns7664 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleColumns7674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleColumns7711 = new BitSet(new long[]{0x0027801004000000L,0x4000400444132800L,0x0002000200000001L,0x0000000FFFFFFFFCL});
+    public static final BitSet FOLLOW_35_in_ruleColumns7711 = new BitSet(new long[]{0x0027801004000000L,0x4000400444132800L,0x8000400040000001L,0x00000001FFFFFFFFL});
     public static final BitSet FOLLOW_ruleColumn_in_ruleColumns7732 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleColumns7745 = new BitSet(new long[]{0x0027801004000000L,0x4000400444132800L,0x0002000200000001L,0x0000000FFFFFFFFCL});
+    public static final BitSet FOLLOW_24_in_ruleColumns7745 = new BitSet(new long[]{0x0027801004000000L,0x4000400444132800L,0x8000400040000001L,0x00000001FFFFFFFFL});
     public static final BitSet FOLLOW_ruleColumn_in_ruleColumns7766 = new BitSet(new long[]{0x0000000001000002L});
     public static final BitSet FOLLOW_ruleComplete_in_entryRuleComplete7804 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleComplete7814 = new BitSet(new long[]{0x0000000000000002L});
@@ -31668,9 +31554,9 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRichText_in_ruleFooter9919 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFormats_in_entryRuleFormats9954 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFormats9964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleFormats10001 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x001C000000000000L});
+    public static final BitSet FOLLOW_56_in_ruleFormats10001 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0003800000000000L});
     public static final BitSet FOLLOW_ruleReportFormat_in_ruleFormats10022 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleFormats10035 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x001C000000000000L});
+    public static final BitSet FOLLOW_24_in_ruleFormats10035 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0003800000000000L});
     public static final BitSet FOLLOW_ruleReportFormat_in_ruleFormats10056 = new BitSet(new long[]{0x0000000001000002L});
     public static final BitSet FOLLOW_ruleGapDuration_in_entryRuleGapDuration10096 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGapDuration10106 = new BitSet(new long[]{0x0000000000000002L});
@@ -31772,11 +31658,11 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleRichText_in_ruleListItem13229 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListType_in_entryRuleListType13264 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListType13274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleListType13311 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000380000000000L});
+    public static final BitSet FOLLOW_72_in_ruleListType13311 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000070000000000L});
     public static final BitSet FOLLOW_ruleListTypeValues_in_ruleListType13332 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLoadUnit_in_entryRuleLoadUnit13368 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLoadUnit13378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleLoadUnit13415 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x1FE0000000000000L});
+    public static final BitSet FOLLOW_73_in_ruleLoadUnit13415 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x03FC000000000000L});
     public static final BitSet FOLLOW_ruleLoadDisplayUnit_in_ruleLoadUnit13436 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLogicalExpression_in_entryRuleLogicalExpression13473 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLogicalExpression13484 = new BitSet(new long[]{0x0000000000000002L});
@@ -31914,7 +31800,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_ID_in_ruleScenario17051 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleScenario17073 = new BitSet(new long[]{0x0000000000010002L});
     public static final BitSet FOLLOW_16_in_ruleScenario17091 = new BitSet(new long[]{0x0000000000000000L,0x0000C00000000000L});
-    public static final BitSet FOLLOW_111_in_ruleScenario17149 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0003000000000000L});
+    public static final BitSet FOLLOW_111_in_ruleScenario17149 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000600000000000L});
     public static final BitSet FOLLOW_ruleYesNo_in_ruleScenario17170 = new BitSet(new long[]{0x0000000000020000L,0x0000C00000000000L});
     public static final BitSet FOLLOW_110_in_ruleScenario17238 = new BitSet(new long[]{0x0000000000000000L,0x0000400000000000L});
     public static final BitSet FOLLOW_ruleScenario_in_ruleScenario17259 = new BitSet(new long[]{0x0000000000020000L,0x0000C00000000000L});
@@ -31930,15 +31816,15 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_113_in_ruleScheduled17548 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleScheduling_in_entryRuleScheduling17596 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleScheduling17606 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_114_in_ruleScheduling17643 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000018000000000L});
+    public static final BitSet FOLLOW_114_in_ruleScheduling17643 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000003000000000L});
     public static final BitSet FOLLOW_ruleSchedulingPolicy_in_ruleScheduling17664 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSelect_in_entryRuleSelect17700 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSelect17710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_115_in_ruleSelect17747 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xE000000000000000L,0x0000000000000003L});
+    public static final BitSet FOLLOW_115_in_ruleSelect17747 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x7C00000000000000L});
     public static final BitSet FOLLOW_ruleSelectArgument_in_ruleSelect17768 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSelfContained_in_entryRuleSelfContained17804 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSelfContained17814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_116_in_ruleSelfContained17851 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0003000000000000L});
+    public static final BitSet FOLLOW_116_in_ruleSelfContained17851 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000600000000000L});
     public static final BitSet FOLLOW_ruleYesNo_in_ruleSelfContained17872 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleShift_in_entryRuleShift17908 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleShift17918 = new BitSet(new long[]{0x0000000000000002L});
@@ -31972,11 +31858,11 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_STRING_in_ruleShortTimeFormat18843 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSortResources_in_entryRuleSortResources18886 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSortResources18896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_124_in_ruleSortResources18933 = new BitSet(new long[]{0x0027801004000010L,0x4000400444132800L,0x0002000200000001L,0x0000000FFFFFFFFCL});
+    public static final BitSet FOLLOW_124_in_ruleSortResources18933 = new BitSet(new long[]{0x0027801004000010L,0x4000400444132800L,0x8000400040000001L,0x00000001FFFFFFFFL});
     public static final BitSet FOLLOW_ruleSort_in_ruleSortResources18955 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSortTasks_in_entryRuleSortTasks18990 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSortTasks19000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_125_in_ruleSortTasks19037 = new BitSet(new long[]{0x0027801004000010L,0x4000400444132800L,0x0002000200000001L,0x0000000FFFFFFFFCL});
+    public static final BitSet FOLLOW_125_in_ruleSortTasks19037 = new BitSet(new long[]{0x0027801004000010L,0x4000400444132800L,0x8000400040000001L,0x00000001FFFFFFFFL});
     public static final BitSet FOLLOW_ruleSort_in_ruleSortTasks19059 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStart_in_entryRuleStart19094 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStart19104 = new BitSet(new long[]{0x0000000000000002L});
@@ -31988,7 +31874,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleXFloat_in_ruleStartCredit19267 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStatusStatusSheet_in_entryRuleStatusStatusSheet19303 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStatusStatusSheet19313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_128_in_ruleStatusStatusSheet19350 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000007000000000L});
+    public static final BitSet FOLLOW_128_in_ruleStatusStatusSheet19350 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000E00000000L});
     public static final BitSet FOLLOW_ruleAlertLevel_in_ruleStatusStatusSheet19371 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleStatusStatusSheet19388 = new BitSet(new long[]{0x0000000000010002L});
     public static final BitSet FOLLOW_16_in_ruleStatusStatusSheet19406 = new BitSet(new long[]{0x002040000C020000L,0x0000000000000000L,0x0000000000000002L});
@@ -32109,13 +31995,13 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleWork_in_entryRuleWork22350 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWork22360 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_146_in_ruleWork22397 = new BitSet(new long[]{0x0000000000000280L});
-    public static final BitSet FOLLOW_ruleXFloat_in_ruleWork22418 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000200L,0x0020060000000000L});
+    public static final BitSet FOLLOW_ruleXFloat_in_ruleWork22418 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000200L,0x000400C000000000L});
     public static final BitSet FOLLOW_ruleWorkQuantityUnit_in_ruleWork22439 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWorkingHours_in_entryRuleWorkingHours22475 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWorkingHours22485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_121_in_ruleWorkingHours22522 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x001FC00000000000L});
+    public static final BitSet FOLLOW_121_in_ruleWorkingHours22522 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0003F80000000000L});
     public static final BitSet FOLLOW_ruleWeekdays_in_ruleWorkingHours22544 = new BitSet(new long[]{0x0000000001000100L,0x0000000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_24_in_ruleWorkingHours22557 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x001FC00000000000L});
+    public static final BitSet FOLLOW_24_in_ruleWorkingHours22557 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0003F80000000000L});
     public static final BitSet FOLLOW_ruleWeekdays_in_ruleWorkingHours22578 = new BitSet(new long[]{0x0000000001000100L,0x0000000000000000L,0x0000000000080000L});
     public static final BitSet FOLLOW_147_in_ruleWorkingHours22600 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWorkHours_in_ruleWorkingHours22641 = new BitSet(new long[]{0x0000000001000002L});
@@ -32151,16 +32037,16 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleCriterion_in_entryRuleCriterion23461 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCriterion23471 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleCriterion23517 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_149_in_ruleCriterion23529 = new BitSet(new long[]{0x0027801004000010L,0x4000400444132800L,0x0002000200000001L,0x0000000FFFFFFFFCL});
+    public static final BitSet FOLLOW_149_in_ruleCriterion23529 = new BitSet(new long[]{0x0027801004000010L,0x4000400444132800L,0x8000400040000001L,0x00000001FFFFFFFFL});
     public static final BitSet FOLLOW_ruleCriterionId_in_ruleCriterion23552 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCriterionId_in_entryRuleCriterionId23588 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCriterionId23598 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleColumnId_in_ruleCriterionId23644 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_149_in_ruleCriterionId23657 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000C00000000000L});
+    public static final BitSet FOLLOW_149_in_ruleCriterionId23657 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000180000000000L});
     public static final BitSet FOLLOW_ruleCriterionDirection_in_ruleCriterionId23678 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDurationQuantity_in_entryRuleDurationQuantity23716 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDurationQuantity23726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXFloat_in_ruleDurationQuantity23772 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000200L,0x00003E0000000000L});
+    public static final BitSet FOLLOW_ruleXFloat_in_ruleDurationQuantity23772 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000200L,0x000007C000000000L});
     public static final BitSet FOLLOW_ruleTimeUnit_in_ruleDurationQuantity23793 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExtendAttribute_in_entryRuleExtendAttribute23829 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExtendAttribute23839 = new BitSet(new long[]{0x0000000000000002L});
@@ -32172,7 +32058,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_17_in_ruleExtendAttribute24096 = new BitSet(new long[]{0x0000000000010002L,0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_ruleLimit_in_entryRuleLimit24180 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLimit24190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXFloat_in_ruleLimit24236 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000200L,0x00003E0000000000L});
+    public static final BitSet FOLLOW_ruleXFloat_in_ruleLimit24236 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000200L,0x000007C000000000L});
     public static final BitSet FOLLOW_ruleTimeUnit_in_ruleLimit24257 = new BitSet(new long[]{0x0000000000010002L});
     public static final BitSet FOLLOW_16_in_ruleLimit24270 = new BitSet(new long[]{0x0004000000400000L,0x4000000000800000L});
     public static final BitSet FOLLOW_50_in_ruleLimit24328 = new BitSet(new long[]{0x0000000000000040L});
@@ -32203,15 +32089,15 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleSort25079 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleSort25122 = new BitSet(new long[]{0x0000000001000002L});
     public static final BitSet FOLLOW_ruleCriterion_in_ruleSort25154 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleSort25168 = new BitSet(new long[]{0x0027801004000010L,0x4000400444132800L,0x0002000200000001L,0x0000000FFFFFFFFCL});
+    public static final BitSet FOLLOW_24_in_ruleSort25168 = new BitSet(new long[]{0x0027801004000010L,0x4000400444132800L,0x8000400040000001L,0x00000001FFFFFFFFL});
     public static final BitSet FOLLOW_ruleCriterion_in_ruleSort25189 = new BitSet(new long[]{0x0000000001000002L});
     public static final BitSet FOLLOW_ruleTaskDependency_in_entryRuleTaskDependency25227 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTaskDependency25237 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleTaskDependency25282 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_16_in_ruleTaskDependency25295 = new BitSet(new long[]{0x0600000000020000L,0x0000000000000000L,0x0000000030000000L});
-    public static final BitSet FOLLOW_ruleGapDuration_in_ruleTaskDependency25361 = new BitSet(new long[]{0x0600000000020000L,0x0000000000000000L,0x0000000030000000L});
-    public static final BitSet FOLLOW_ruleGapLength_in_ruleTaskDependency25436 = new BitSet(new long[]{0x0600000000020000L,0x0000000000000000L,0x0000000030000000L});
-    public static final BitSet FOLLOW_ruleDependsPolicy_in_ruleTaskDependency25511 = new BitSet(new long[]{0x0600000000020000L,0x0000000000000000L,0x0000000030000000L});
+    public static final BitSet FOLLOW_16_in_ruleTaskDependency25295 = new BitSet(new long[]{0x0600000000020000L,0x0000000000000000L,0x0000000006000000L});
+    public static final BitSet FOLLOW_ruleGapDuration_in_ruleTaskDependency25361 = new BitSet(new long[]{0x0600000000020000L,0x0000000000000000L,0x0000000006000000L});
+    public static final BitSet FOLLOW_ruleGapLength_in_ruleTaskDependency25436 = new BitSet(new long[]{0x0600000000020000L,0x0000000000000000L,0x0000000006000000L});
+    public static final BitSet FOLLOW_ruleDependsPolicy_in_ruleTaskDependency25511 = new BitSet(new long[]{0x0600000000020000L,0x0000000000000000L,0x0000000006000000L});
     public static final BitSet FOLLOW_17_in_ruleTaskDependency25563 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTaskTimesheetAttribute_in_entryRuleTaskTimesheetAttribute25601 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTaskTimesheetAttribute25611 = new BitSet(new long[]{0x0000000000000002L});
@@ -32241,7 +32127,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleWeekdays_in_entryRuleWeekdays26311 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWeekdays26321 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWeekday_in_ruleWeekdays26367 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleWeekdays26380 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x001FC00000000000L});
+    public static final BitSet FOLLOW_65_in_ruleWeekdays26380 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0003F80000000000L});
     public static final BitSet FOLLOW_ruleWeekday_in_ruleWeekdays26401 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRelativeId_in_entryRuleRelativeId26442 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRelativeId26453 = new BitSet(new long[]{0x0000000000000002L});
@@ -32254,127 +32140,124 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleXFloat26629 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_FLOAT_in_ruleXFloat26669 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleXFloat26695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_153_in_ruleBookingRestriction26754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_154_in_ruleBookingRestriction26771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_155_in_ruleBookingRestriction26788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_156_in_ruleChargeApplies26833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_157_in_ruleChargeApplies26850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_158_in_ruleChargeApplies26867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_159_in_ruleChargeApplies26884 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_160_in_ruleChargeApplies26901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleJustification26946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleJustification26963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_100_in_ruleJustification26980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_161_in_ruleJournalModeValue27025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_162_in_ruleJournalModeValue27042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_163_in_ruleJournalModeValue27059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_164_in_ruleJournalModeValue27076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_165_in_ruleJournalModeValue27093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_166_in_ruleJournalEntrySortCriterion27138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_167_in_ruleJournalEntrySortCriterion27155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_168_in_ruleJournalEntrySortCriterion27172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_169_in_ruleJournalEntrySortCriterion27189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_170_in_ruleJournalEntrySortCriterion27206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_171_in_ruleListTypeValues27251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_172_in_ruleListTypeValues27268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_173_in_ruleListTypeValues27285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_174_in_ruleCriterionDirection27330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_175_in_ruleCriterionDirection27347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_176_in_ruleYesNo27392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_177_in_ruleYesNo27409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_178_in_ruleReportFormat27454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_179_in_ruleReportFormat27471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_180_in_ruleReportFormat27488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_181_in_ruleLoadDisplayUnit27533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_182_in_ruleLoadDisplayUnit27550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_183_in_ruleLoadDisplayUnit27567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_184_in_ruleLoadDisplayUnit27584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_185_in_ruleLoadDisplayUnit27601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_186_in_ruleLoadDisplayUnit27618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_187_in_ruleLoadDisplayUnit27635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_188_in_ruleLoadDisplayUnit27652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_189_in_ruleSelectArgument27699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_190_in_ruleSelectArgument27716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_191_in_ruleSelectArgument27733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_192_in_ruleSelectArgument27750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_193_in_ruleSelectArgument27767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleColumnId27812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_194_in_ruleColumnId27829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_195_in_ruleColumnId27846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_196_in_ruleColumnId27863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_197_in_ruleColumnId27880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleColumnId27897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_198_in_ruleColumnId27914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_199_in_ruleColumnId27931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_200_in_ruleColumnId27948 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_201_in_ruleColumnId27965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleColumnId27982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_202_in_ruleColumnId27999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleColumnId28016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleColumnId28033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_203_in_ruleColumnId28050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_204_in_ruleColumnId28067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_205_in_ruleColumnId28084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleColumnId28101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleColumnId28118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_206_in_ruleColumnId28135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_207_in_ruleColumnId28152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_208_in_ruleColumnId28169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_209_in_ruleColumnId28186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_210_in_ruleColumnId28203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_211_in_ruleColumnId28220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_212_in_ruleColumnId28237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_213_in_ruleColumnId28254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_214_in_ruleColumnId28271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_161_in_ruleColumnId28288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_215_in_ruleColumnId28305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleColumnId28322 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleColumnId28339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_ruleColumnId28356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_ruleColumnId28373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_216_in_ruleColumnId28390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_177_in_ruleColumnId28407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_217_in_ruleColumnId28424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_ruleColumnId28441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_218_in_ruleColumnId28458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_219_in_ruleColumnId28475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_ruleColumnId28492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_220_in_ruleColumnId28509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_ruleColumnId28526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_221_in_ruleColumnId28543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_ruleColumnId28560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_222_in_ruleColumnId28577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_110_in_ruleColumnId28594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_223_in_ruleColumnId28611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_126_in_ruleColumnId28628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_128_in_ruleColumnId28645 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_224_in_ruleColumnId28662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_225_in_ruleColumnId28679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_226_in_ruleColumnId28696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_227_in_ruleColumnId28713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_228_in_ruleAlertLevel28758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_229_in_ruleAlertLevel28775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_230_in_ruleAlertLevel28792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_157_in_ruleDependsPolicy28837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_156_in_ruleDependsPolicy28854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_231_in_ruleSchedulingPolicy28899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_232_in_ruleSchedulingPolicy28916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_137_in_ruleTimeUnit28961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_233_in_ruleTimeUnit28978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_234_in_ruleTimeUnit28995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_235_in_ruleTimeUnit29012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_236_in_ruleTimeUnit29029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_237_in_ruleTimeUnit29046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_238_in_ruleWeekday29091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_239_in_ruleWeekday29108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_240_in_ruleWeekday29125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_241_in_ruleWeekday29142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_242_in_ruleWeekday29159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_243_in_ruleWeekday29176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_244_in_ruleWeekday29193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_245_in_ruleWorkQuantityUnit29238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_137_in_ruleWorkQuantityUnit29255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_233_in_ruleWorkQuantityUnit29272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_234_in_ruleWorkQuantityUnit29289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_153_in_ruleChargeApplies26754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_154_in_ruleChargeApplies26771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_155_in_ruleChargeApplies26788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_156_in_ruleChargeApplies26805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_157_in_ruleChargeApplies26822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleJustification26867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleJustification26884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_100_in_ruleJustification26901 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_158_in_ruleJournalModeValue26946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_159_in_ruleJournalModeValue26963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_160_in_ruleJournalModeValue26980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_161_in_ruleJournalModeValue26997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_162_in_ruleJournalModeValue27014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_163_in_ruleJournalEntrySortCriterion27059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_164_in_ruleJournalEntrySortCriterion27076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_165_in_ruleJournalEntrySortCriterion27093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_166_in_ruleJournalEntrySortCriterion27110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_167_in_ruleJournalEntrySortCriterion27127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_168_in_ruleListTypeValues27172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_169_in_ruleListTypeValues27189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_170_in_ruleListTypeValues27206 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_171_in_ruleCriterionDirection27251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_172_in_ruleCriterionDirection27268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_173_in_ruleYesNo27313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_174_in_ruleYesNo27330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_175_in_ruleReportFormat27375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_176_in_ruleReportFormat27392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_177_in_ruleReportFormat27409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_178_in_ruleLoadDisplayUnit27454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_179_in_ruleLoadDisplayUnit27471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_180_in_ruleLoadDisplayUnit27488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_181_in_ruleLoadDisplayUnit27505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_182_in_ruleLoadDisplayUnit27522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_183_in_ruleLoadDisplayUnit27539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_184_in_ruleLoadDisplayUnit27556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_185_in_ruleLoadDisplayUnit27573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_186_in_ruleSelectArgument27620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_187_in_ruleSelectArgument27637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_188_in_ruleSelectArgument27654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_189_in_ruleSelectArgument27671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_190_in_ruleSelectArgument27688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleColumnId27733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_191_in_ruleColumnId27750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_192_in_ruleColumnId27767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_193_in_ruleColumnId27784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_194_in_ruleColumnId27801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleColumnId27818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_195_in_ruleColumnId27835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_196_in_ruleColumnId27852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_197_in_ruleColumnId27869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_198_in_ruleColumnId27886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleColumnId27903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_199_in_ruleColumnId27920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleColumnId27937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleColumnId27954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_200_in_ruleColumnId27971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_201_in_ruleColumnId27988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_202_in_ruleColumnId28005 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleColumnId28022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleColumnId28039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_203_in_ruleColumnId28056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_204_in_ruleColumnId28073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_205_in_ruleColumnId28090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_206_in_ruleColumnId28107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_207_in_ruleColumnId28124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_208_in_ruleColumnId28141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_209_in_ruleColumnId28158 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_210_in_ruleColumnId28175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_211_in_ruleColumnId28192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_158_in_ruleColumnId28209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_212_in_ruleColumnId28226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleColumnId28243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_ruleColumnId28260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_ruleColumnId28277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_ruleColumnId28294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_213_in_ruleColumnId28311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_174_in_ruleColumnId28328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_214_in_ruleColumnId28345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_ruleColumnId28362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_215_in_ruleColumnId28379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_216_in_ruleColumnId28396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_ruleColumnId28413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_217_in_ruleColumnId28430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_ruleColumnId28447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_218_in_ruleColumnId28464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_ruleColumnId28481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_219_in_ruleColumnId28498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_110_in_ruleColumnId28515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_220_in_ruleColumnId28532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_126_in_ruleColumnId28549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_128_in_ruleColumnId28566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_221_in_ruleColumnId28583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_222_in_ruleColumnId28600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_223_in_ruleColumnId28617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_224_in_ruleColumnId28634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_225_in_ruleAlertLevel28679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_226_in_ruleAlertLevel28696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_227_in_ruleAlertLevel28713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_154_in_ruleDependsPolicy28758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_153_in_ruleDependsPolicy28775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_228_in_ruleSchedulingPolicy28820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_229_in_ruleSchedulingPolicy28837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_137_in_ruleTimeUnit28882 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_230_in_ruleTimeUnit28899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_231_in_ruleTimeUnit28916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_232_in_ruleTimeUnit28933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_233_in_ruleTimeUnit28950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_234_in_ruleTimeUnit28967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_235_in_ruleWeekday29012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_236_in_ruleWeekday29029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_237_in_ruleWeekday29046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_238_in_ruleWeekday29063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_239_in_ruleWeekday29080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_240_in_ruleWeekday29097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_241_in_ruleWeekday29114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_242_in_ruleWorkQuantityUnit29159 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_137_in_ruleWorkQuantityUnit29176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_230_in_ruleWorkQuantityUnit29193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_231_in_ruleWorkQuantityUnit29210 = new BitSet(new long[]{0x0000000000000002L});
 
 }

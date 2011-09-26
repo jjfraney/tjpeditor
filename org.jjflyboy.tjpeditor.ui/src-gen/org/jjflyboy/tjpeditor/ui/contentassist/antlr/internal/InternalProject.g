@@ -4883,25 +4883,6 @@ finally {
 
 
 
-// Rule BookingRestriction
-ruleBookingRestriction
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBookingRestrictionAccess().getAlternatives()); }
-(rule__BookingRestriction__Alternatives)
-{ after(grammarAccess.getBookingRestrictionAccess().getAlternatives()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
 // Rule ChargeApplies
 ruleChargeApplies
     @init {
@@ -6546,37 +6527,6 @@ rule__XFloat__Alternatives
 { before(grammarAccess.getXFloatAccess().getINTTerminalRuleCall_1()); }
 	RULE_INT
 { after(grammarAccess.getXFloatAccess().getINTTerminalRuleCall_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BookingRestriction__Alternatives
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBookingRestrictionAccess().getWORKING_TIME_ONLYEnumLiteralDeclaration_0()); }
-(	'0' 
-)
-{ after(grammarAccess.getBookingRestrictionAccess().getWORKING_TIME_ONLYEnumLiteralDeclaration_0()); }
-)
-
-    |(
-{ before(grammarAccess.getBookingRestrictionAccess().getPLUS_OFF_DUTYEnumLiteralDeclaration_1()); }
-(	'1' 
-)
-{ after(grammarAccess.getBookingRestrictionAccess().getPLUS_OFF_DUTYEnumLiteralDeclaration_1()); }
-)
-
-    |(
-{ before(grammarAccess.getBookingRestrictionAccess().getPLUS_VACATIONEnumLiteralDeclaration_2()); }
-(	'2' 
-)
-{ after(grammarAccess.getBookingRestrictionAccess().getPLUS_VACATIONEnumLiteralDeclaration_2()); }
 )
 
 ;

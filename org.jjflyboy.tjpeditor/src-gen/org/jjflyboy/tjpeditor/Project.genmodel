@@ -9,11 +9,6 @@
     editorPluginID="org.jjflyboy.tjpeditor.editor">
   <genPackages prefix="Project" basePackage="org.jjflyboy.tjpeditor" disposableProviderFactory="true"
       loadInitialization="true" literalsInterface="false" ecorePackage="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingRestriction">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingRestriction/WORKING_TIME_ONLY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingRestriction/PLUS_OFF_DUTY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingRestriction/PLUS_VACATION"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies">
       <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/ONSTART"/>
       <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/ONEND"/>

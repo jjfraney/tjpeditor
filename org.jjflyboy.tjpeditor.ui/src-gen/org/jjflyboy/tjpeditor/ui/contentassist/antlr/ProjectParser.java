@@ -67,7 +67,6 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTimesheetAttributeAccess().getAlternatives(), "rule__TimesheetAttribute__Alternatives");
 					put(grammarAccess.getTimesheetReportAttributeAccess().getAlternatives(), "rule__TimesheetReportAttribute__Alternatives");
 					put(grammarAccess.getXFloatAccess().getAlternatives(), "rule__XFloat__Alternatives");
-					put(grammarAccess.getBookingRestrictionAccess().getAlternatives(), "rule__BookingRestriction__Alternatives");
 					put(grammarAccess.getChargeAppliesAccess().getAlternatives(), "rule__ChargeApplies__Alternatives");
 					put(grammarAccess.getJustificationAccess().getAlternatives(), "rule__Justification__Alternatives");
 					put(grammarAccess.getJournalModeValueAccess().getAlternatives(), "rule__JournalModeValue__Alternatives");

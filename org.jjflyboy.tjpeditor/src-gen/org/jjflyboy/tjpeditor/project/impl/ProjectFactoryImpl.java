@@ -269,8 +269,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case ProjectPackage.BOOKING_RESTRICTION:
-        return createBookingRestrictionFromString(eDataType, initialValue);
       case ProjectPackage.CHARGE_APPLIES:
         return createChargeAppliesFromString(eDataType, initialValue);
       case ProjectPackage.JUSTIFICATION:
@@ -322,8 +320,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case ProjectPackage.BOOKING_RESTRICTION:
-        return convertBookingRestrictionToString(eDataType, instanceValue);
       case ProjectPackage.CHARGE_APPLIES:
         return convertChargeAppliesToString(eDataType, instanceValue);
       case ProjectPackage.JUSTIFICATION:
@@ -2409,28 +2405,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     WeekdaysImpl weekdays = new WeekdaysImpl();
     return weekdays;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BookingRestriction createBookingRestrictionFromString(EDataType eDataType, String initialValue)
-  {
-    BookingRestriction result = BookingRestriction.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertBookingRestrictionToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

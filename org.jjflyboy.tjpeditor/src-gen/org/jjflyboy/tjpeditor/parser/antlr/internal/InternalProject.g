@@ -10842,31 +10842,6 @@ ruleXFloat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 
 
 
-// Rule BookingRestriction
-ruleBookingRestriction returns [Enumerator current=null] 
-    @init { enterRule(); }
-    @after { leaveRule(); }:
-((	enumLiteral_0='0' 
-	{
-        $current = grammarAccess.getBookingRestrictionAccess().getWORKING_TIME_ONLYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_0, grammarAccess.getBookingRestrictionAccess().getWORKING_TIME_ONLYEnumLiteralDeclaration_0()); 
-    }
-)
-    |(	enumLiteral_1='1' 
-	{
-        $current = grammarAccess.getBookingRestrictionAccess().getPLUS_OFF_DUTYEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getBookingRestrictionAccess().getPLUS_OFF_DUTYEnumLiteralDeclaration_1()); 
-    }
-)
-    |(	enumLiteral_2='2' 
-	{
-        $current = grammarAccess.getBookingRestrictionAccess().getPLUS_VACATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getBookingRestrictionAccess().getPLUS_VACATIONEnumLiteralDeclaration_2()); 
-    }
-));
-
-
-
 // Rule ChargeApplies
 ruleChargeApplies returns [Enumerator current=null] 
     @init { enterRule(); }

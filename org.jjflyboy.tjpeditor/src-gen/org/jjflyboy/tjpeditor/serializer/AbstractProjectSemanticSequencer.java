@@ -1352,7 +1352,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (task=[Task|ID] interval=Interval4 (overtime=BookingRestriction? sloppy=BookingRestriction?)?)
+	 *     (task=[Task|ID] interval=Interval4 (overtime=INT? sloppy=INT?)?)
 	 *
 	 * Features:
 	 *    interval[1, 1]
@@ -1367,7 +1367,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (resource=[Resource|ID] interval=Interval4 (overtime=BookingRestriction? sloppy=BookingRestriction?)?)
+	 *     (resource=[Resource|ID] interval=Interval4 (overtime=INT? sloppy=INT?)?)
 	 *
 	 * Features:
 	 *    interval[1, 1]

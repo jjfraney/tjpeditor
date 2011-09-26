@@ -1631,22 +1631,27 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_3_1_0 = (Group)cUnorderedGroup_3_1.eContents().get(0);
 		private final Keyword cOvertimeKeyword_3_1_0_0 = (Keyword)cGroup_3_1_0.eContents().get(0);
 		private final Assignment cOvertimeAssignment_3_1_0_1 = (Assignment)cGroup_3_1_0.eContents().get(1);
-		private final RuleCall cOvertimeBookingRestrictionEnumRuleCall_3_1_0_1_0 = (RuleCall)cOvertimeAssignment_3_1_0_1.eContents().get(0);
+		private final RuleCall cOvertimeINTTerminalRuleCall_3_1_0_1_0 = (RuleCall)cOvertimeAssignment_3_1_0_1.eContents().get(0);
 		private final Group cGroup_3_1_1 = (Group)cUnorderedGroup_3_1.eContents().get(1);
 		private final Keyword cSloppyKeyword_3_1_1_0 = (Keyword)cGroup_3_1_1.eContents().get(0);
 		private final Assignment cSloppyAssignment_3_1_1_1 = (Assignment)cGroup_3_1_1.eContents().get(1);
-		private final RuleCall cSloppyBookingRestrictionEnumRuleCall_3_1_1_1_0 = (RuleCall)cSloppyAssignment_3_1_1_1.eContents().get(0);
+		private final RuleCall cSloppyINTTerminalRuleCall_3_1_1_1_0 = (RuleCall)cSloppyAssignment_3_1_1_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/booking.html	
 		//// http://www.taskjuggler.org/tj3/manual/booking.task.html
+		//// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
+		//// http://www.taskjuggler.org/tj3/manual/overtime.booking.html
+		////	WORKING_TIME_ONLY = '0' |
+		////	PLUS_OFF_DUTY = '1' |
+		////	PLUS_VACATION = '2'
 		//Booking:
-		//	"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=BookingRestriction)? &
-		//	("sloppy" sloppy=BookingRestriction)?) "}")?;
+		//	"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy"
+		//	sloppy=INT)?) "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=BookingRestriction)? & ("sloppy"
-		//sloppy=BookingRestriction)?) "}")?
+		//"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?)
+		//"}")?
 		public Group getGroup() { return cGroup; }
 
 		//"booking"
@@ -1667,38 +1672,38 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Interval4
 		public RuleCall getIntervalInterval4ParserRuleCall_2_0() { return cIntervalInterval4ParserRuleCall_2_0; }
 
-		//("{" (("overtime" overtime=BookingRestriction)? & ("sloppy" sloppy=BookingRestriction)?) "}")?
+		//("{" (("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?) "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
 
-		//("overtime" overtime=BookingRestriction)? & ("sloppy" sloppy=BookingRestriction)?
+		//("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?
 		public UnorderedGroup getUnorderedGroup_3_1() { return cUnorderedGroup_3_1; }
 
-		//("overtime" overtime=BookingRestriction)?
+		//("overtime" overtime=INT)?
 		public Group getGroup_3_1_0() { return cGroup_3_1_0; }
 
 		//"overtime"
 		public Keyword getOvertimeKeyword_3_1_0_0() { return cOvertimeKeyword_3_1_0_0; }
 
-		//overtime=BookingRestriction
+		//overtime=INT
 		public Assignment getOvertimeAssignment_3_1_0_1() { return cOvertimeAssignment_3_1_0_1; }
 
-		//BookingRestriction
-		public RuleCall getOvertimeBookingRestrictionEnumRuleCall_3_1_0_1_0() { return cOvertimeBookingRestrictionEnumRuleCall_3_1_0_1_0; }
+		//INT
+		public RuleCall getOvertimeINTTerminalRuleCall_3_1_0_1_0() { return cOvertimeINTTerminalRuleCall_3_1_0_1_0; }
 
-		//("sloppy" sloppy=BookingRestriction)?
+		//("sloppy" sloppy=INT)?
 		public Group getGroup_3_1_1() { return cGroup_3_1_1; }
 
 		//"sloppy"
 		public Keyword getSloppyKeyword_3_1_1_0() { return cSloppyKeyword_3_1_1_0; }
 
-		//sloppy=BookingRestriction
+		//sloppy=INT
 		public Assignment getSloppyAssignment_3_1_1_1() { return cSloppyAssignment_3_1_1_1; }
 
-		//BookingRestriction
-		public RuleCall getSloppyBookingRestrictionEnumRuleCall_3_1_1_1_0() { return cSloppyBookingRestrictionEnumRuleCall_3_1_1_1_0; }
+		//INT
+		public RuleCall getSloppyINTTerminalRuleCall_3_1_1_1_0() { return cSloppyINTTerminalRuleCall_3_1_1_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
@@ -7577,44 +7582,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	public class BookingRestrictionElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "BookingRestriction");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cWORKING_TIME_ONLYEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cWORKING_TIME_ONLY0Keyword_0_0 = (Keyword)cWORKING_TIME_ONLYEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cPLUS_OFF_DUTYEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cPLUS_OFF_DUTY1Keyword_1_0 = (Keyword)cPLUS_OFF_DUTYEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cPLUS_VACATIONEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cPLUS_VACATION2Keyword_2_0 = (Keyword)cPLUS_VACATIONEnumLiteralDeclaration_2.eContents().get(0);
-		
-		//// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
-		//// http://www.taskjuggler.org/tj3/manual/overtime.booking.html
-		//enum BookingRestriction:
-		//	WORKING_TIME_ONLY="0" | PLUS_OFF_DUTY="1" | PLUS_VACATION="2";
-		public EnumRule getRule() { return rule; }
-
-		//WORKING_TIME_ONLY="0" | PLUS_OFF_DUTY="1" | PLUS_VACATION="2"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//WORKING_TIME_ONLY="0"
-		public EnumLiteralDeclaration getWORKING_TIME_ONLYEnumLiteralDeclaration_0() { return cWORKING_TIME_ONLYEnumLiteralDeclaration_0; }
-
-		//"0"
-		public Keyword getWORKING_TIME_ONLY0Keyword_0_0() { return cWORKING_TIME_ONLY0Keyword_0_0; }
-
-		//PLUS_OFF_DUTY="1"
-		public EnumLiteralDeclaration getPLUS_OFF_DUTYEnumLiteralDeclaration_1() { return cPLUS_OFF_DUTYEnumLiteralDeclaration_1; }
-
-		//"1"
-		public Keyword getPLUS_OFF_DUTY1Keyword_1_0() { return cPLUS_OFF_DUTY1Keyword_1_0; }
-
-		//PLUS_VACATION="2"
-		public EnumLiteralDeclaration getPLUS_VACATIONEnumLiteralDeclaration_2() { return cPLUS_VACATIONEnumLiteralDeclaration_2; }
-
-		//"2"
-		public Keyword getPLUS_VACATION2Keyword_2_0() { return cPLUS_VACATION2Keyword_2_0; }
-	}
-
 	public class ChargeAppliesElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ChargeApplies");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -9068,7 +9035,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private RichTextElements pRichText;
 	private WorkHoursElements pWorkHours;
 	private WeekdaysElements pWeekdays;
-	private BookingRestrictionElements unknownRuleBookingRestriction;
 	private ChargeAppliesElements unknownRuleChargeApplies;
 	private JustificationElements unknownRuleJustification;
 	private JournalModeValueElements unknownRuleJournalModeValue;
@@ -9488,9 +9454,14 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/booking.html	
 	//// http://www.taskjuggler.org/tj3/manual/booking.task.html
+	//// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
+	//// http://www.taskjuggler.org/tj3/manual/overtime.booking.html
+	////	WORKING_TIME_ONLY = '0' |
+	////	PLUS_OFF_DUTY = '1' |
+	////	PLUS_VACATION = '2'
 	//Booking:
-	//	"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=BookingRestriction)? &
-	//	("sloppy" sloppy=BookingRestriction)?) "}")?;
+	//	"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy"
+	//	sloppy=INT)?) "}")?;
 	public BookingElements getBookingAccess() {
 		return (pBooking != null) ? pBooking : (pBooking = new BookingElements());
 	}
@@ -11449,18 +11420,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getWeekdaysRule() {
 		return getWeekdaysAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
-	//// http://www.taskjuggler.org/tj3/manual/overtime.booking.html
-	//enum BookingRestriction:
-	//	WORKING_TIME_ONLY="0" | PLUS_OFF_DUTY="1" | PLUS_VACATION="2";
-	public BookingRestrictionElements getBookingRestrictionAccess() {
-		return (unknownRuleBookingRestriction != null) ? unknownRuleBookingRestriction : (unknownRuleBookingRestriction = new BookingRestrictionElements());
-	}
-	
-	public EnumRule getBookingRestrictionRule() {
-		return getBookingRestrictionAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/charge.html
