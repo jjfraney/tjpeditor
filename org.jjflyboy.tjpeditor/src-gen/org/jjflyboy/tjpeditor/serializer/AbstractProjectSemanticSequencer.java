@@ -2443,13 +2443,28 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (end=ISODATE period=Interval1 resources+=[Resource|ID] resources+=[Resource|ID]* start=ISODATE)
+	 *     (end=ISODATE | period=Interval1 | (resources+=[Resource|ID] resources+=[Resource|ID]*) | start=ISODATE)
 	 *
 	 * Features:
-	 *    end[1, 1]
-	 *    period[1, 1]
-	 *    resources[1, *]
-	 *    start[1, 1]
+	 *    end[0, 1]
+	 *         EXCLUDE_IF_SET period
+	 *         EXCLUDE_IF_SET resources
+	 *         EXCLUDE_IF_SET resources
+	 *         EXCLUDE_IF_SET start
+	 *    period[0, 1]
+	 *         EXCLUDE_IF_SET end
+	 *         EXCLUDE_IF_SET resources
+	 *         EXCLUDE_IF_SET resources
+	 *         EXCLUDE_IF_SET start
+	 *    resources[0, *]
+	 *         EXCLUDE_IF_SET end
+	 *         EXCLUDE_IF_SET period
+	 *         EXCLUDE_IF_SET start
+	 *    start[0, 1]
+	 *         EXCLUDE_IF_SET end
+	 *         EXCLUDE_IF_SET period
+	 *         EXCLUDE_IF_SET resources
+	 *         EXCLUDE_IF_SET resources
 	 */
 	protected void sequence_LimitAttribute(EObject context, LimitAttribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3137,17 +3152,13 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (id=ID name=STRING (active=YesNo scenario=Scenario)?)
+	 *     (id=ID name=STRING (active=YesNo? scenario=Scenario?)?)
 	 *
 	 * Features:
 	 *    id[1, 1]
 	 *    name[1, 1]
 	 *    active[0, 1]
-	 *         EXCLUDE_IF_UNSET scenario
-	 *         MANDATORY_IF_SET scenario
 	 *    scenario[0, 1]
-	 *         EXCLUDE_IF_UNSET active
-	 *         MANDATORY_IF_SET active
 	 */
 	protected void sequence_Scenario(EObject context, Scenario semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

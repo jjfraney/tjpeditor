@@ -63,6 +63,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getWeekStartsAccess().getAlternatives(), "rule__WeekStarts__Alternatives");
 					put(grammarAccess.getWorkingHoursAccess().getAlternatives_2(), "rule__WorkingHours__Alternatives_2");
 					put(grammarAccess.getColumnAttributeAccess().getAlternatives(), "rule__ColumnAttribute__Alternatives");
+					put(grammarAccess.getLimitAttributeAccess().getAlternatives(), "rule__LimitAttribute__Alternatives");
 					put(grammarAccess.getSortAccess().getAlternatives_0(), "rule__Sort__Alternatives_0");
 					put(grammarAccess.getTaskTimesheetAttributeAccess().getAlternatives(), "rule__TaskTimesheetAttribute__Alternatives");
 					put(grammarAccess.getTimesheetAttributeAccess().getAlternatives(), "rule__TimesheetAttribute__Alternatives");
@@ -233,7 +234,6 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getScenarioAccess().getGroup(), "rule__Scenario__Group__0");
 					put(grammarAccess.getScenarioAccess().getGroup_3(), "rule__Scenario__Group_3__0");
 					put(grammarAccess.getScenarioAccess().getGroup_3_1_0(), "rule__Scenario__Group_3_1_0__0");
-					put(grammarAccess.getScenarioAccess().getGroup_3_1_1(), "rule__Scenario__Group_3_1_1__0");
 					put(grammarAccess.getScenariosAccess().getGroup(), "rule__Scenarios__Group__0");
 					put(grammarAccess.getScenariosAccess().getGroup_2(), "rule__Scenarios__Group_2__0");
 					put(grammarAccess.getSchedulingAccess().getGroup(), "rule__Scheduling__Group__0");
@@ -499,7 +499,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getScenarioAccess().getIdAssignment_1(), "rule__Scenario__IdAssignment_1");
 					put(grammarAccess.getScenarioAccess().getNameAssignment_2(), "rule__Scenario__NameAssignment_2");
 					put(grammarAccess.getScenarioAccess().getActiveAssignment_3_1_0_1(), "rule__Scenario__ActiveAssignment_3_1_0_1");
-					put(grammarAccess.getScenarioAccess().getScenarioAssignment_3_1_1_1(), "rule__Scenario__ScenarioAssignment_3_1_1_1");
+					put(grammarAccess.getScenarioAccess().getScenarioAssignment_3_1_1(), "rule__Scenario__ScenarioAssignment_3_1_1");
 					put(grammarAccess.getScenariosAccess().getScenariosAssignment_1(), "rule__Scenarios__ScenariosAssignment_1");
 					put(grammarAccess.getScenariosAccess().getScenariosAssignment_2_1(), "rule__Scenarios__ScenariosAssignment_2_1");
 					put(grammarAccess.getScheduledAccess().getScheduledAssignment(), "rule__Scheduled__ScheduledAssignment");
@@ -638,7 +638,6 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTagFileAccess().getUnorderedGroup_2(), "rule__TagFile__UnorderedGroup_2");
 					put(grammarAccess.getTaskAttributesAccess().getUnorderedGroup_2(), "rule__TaskAttributes__UnorderedGroup_2");
 					put(grammarAccess.getExtendAttributeAccess().getUnorderedGroup_2(), "rule__ExtendAttribute__UnorderedGroup_2");
-					put(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), "rule__LimitAttribute__UnorderedGroup");
 					put(grammarAccess.getTaskDependencyAccess().getUnorderedGroup_1_1(), "rule__TaskDependency__UnorderedGroup_1_1");
 				}
 			};

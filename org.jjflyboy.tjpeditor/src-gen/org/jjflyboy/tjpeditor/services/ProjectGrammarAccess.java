@@ -4700,18 +4700,16 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cActiveKeyword_3_1_0_0 = (Keyword)cGroup_3_1_0.eContents().get(0);
 		private final Assignment cActiveAssignment_3_1_0_1 = (Assignment)cGroup_3_1_0.eContents().get(1);
 		private final RuleCall cActiveYesNoEnumRuleCall_3_1_0_1_0 = (RuleCall)cActiveAssignment_3_1_0_1.eContents().get(0);
-		private final Group cGroup_3_1_1 = (Group)cUnorderedGroup_3_1.eContents().get(1);
-		private final Keyword cScenarioKeyword_3_1_1_0 = (Keyword)cGroup_3_1_1.eContents().get(0);
-		private final Assignment cScenarioAssignment_3_1_1_1 = (Assignment)cGroup_3_1_1.eContents().get(1);
-		private final RuleCall cScenarioScenarioParserRuleCall_3_1_1_1_0 = (RuleCall)cScenarioAssignment_3_1_1_1.eContents().get(0);
+		private final Assignment cScenarioAssignment_3_1_1 = (Assignment)cUnorderedGroup_3_1.eContents().get(1);
+		private final RuleCall cScenarioScenarioParserRuleCall_3_1_1_0 = (RuleCall)cScenarioAssignment_3_1_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/scenario.html	
 		//Scenario:
-		//	"scenario" id=ID name=STRING ("{" ("active" active=YesNo & "scenario" scenario=Scenario) "}")?;
+		//	"scenario" id=ID name=STRING ("{" (("active" active=YesNo)? & scenario=Scenario?) "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"scenario" id=ID name=STRING ("{" ("active" active=YesNo & "scenario" scenario=Scenario) "}")?
+		//"scenario" id=ID name=STRING ("{" (("active" active=YesNo)? & scenario=Scenario?) "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"scenario"
@@ -4729,16 +4727,16 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 
-		//("{" ("active" active=YesNo & "scenario" scenario=Scenario) "}")?
+		//("{" (("active" active=YesNo)? & scenario=Scenario?) "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
 
-		//"active" active=YesNo & "scenario" scenario=Scenario
+		//("active" active=YesNo)? & scenario=Scenario?
 		public UnorderedGroup getUnorderedGroup_3_1() { return cUnorderedGroup_3_1; }
 
-		//"active" active=YesNo
+		//("active" active=YesNo)?
 		public Group getGroup_3_1_0() { return cGroup_3_1_0; }
 
 		//"active"
@@ -4750,17 +4748,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//YesNo
 		public RuleCall getActiveYesNoEnumRuleCall_3_1_0_1_0() { return cActiveYesNoEnumRuleCall_3_1_0_1_0; }
 
-		//"scenario" scenario=Scenario
-		public Group getGroup_3_1_1() { return cGroup_3_1_1; }
-
-		//"scenario"
-		public Keyword getScenarioKeyword_3_1_1_0() { return cScenarioKeyword_3_1_1_0; }
-
-		//scenario=Scenario
-		public Assignment getScenarioAssignment_3_1_1_1() { return cScenarioAssignment_3_1_1_1; }
+		//scenario=Scenario?
+		public Assignment getScenarioAssignment_3_1_1() { return cScenarioAssignment_3_1_1; }
 
 		//Scenario
-		public RuleCall getScenarioScenarioParserRuleCall_3_1_1_1_0() { return cScenarioScenarioParserRuleCall_3_1_1_1_0; }
+		public RuleCall getScenarioScenarioParserRuleCall_3_1_1_0() { return cScenarioScenarioParserRuleCall_3_1_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
@@ -6754,6 +6746,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAttributeColumnAttributeParserRuleCall_1_0 = (RuleCall)cAttributeAssignment_1.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/columns.html
+		//// TODO: extend column id to user defined column ids.
 		//Column:
 		//	id=ColumnId attribute=ColumnAttribute;
 		public ParserRule getRule() { return rule; }
@@ -7015,16 +7008,16 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class LimitAttributeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LimitAttribute");
-		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Keyword cEndKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
 		private final Assignment cEndAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
 		private final RuleCall cEndISODATETerminalRuleCall_0_1_0 = (RuleCall)cEndAssignment_0_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cUnorderedGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Keyword cPeriodKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cPeriodAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cPeriodInterval1ParserRuleCall_1_1_0 = (RuleCall)cPeriodAssignment_1_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cUnorderedGroup.eContents().get(2);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Keyword cResourcesKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cResourcesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final CrossReference cResourcesResourceCrossReference_2_1_0 = (CrossReference)cResourcesAssignment_2_1.eContents().get(0);
@@ -7034,19 +7027,19 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cResourcesAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
 		private final CrossReference cResourcesResourceCrossReference_2_2_1_0 = (CrossReference)cResourcesAssignment_2_2_1.eContents().get(0);
 		private final RuleCall cResourcesResourceIDTerminalRuleCall_2_2_1_0_1 = (RuleCall)cResourcesResourceCrossReference_2_2_1_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cUnorderedGroup.eContents().get(3);
+		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Keyword cStartKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cStartAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cStartISODATETerminalRuleCall_3_1_0 = (RuleCall)cStartAssignment_3_1.eContents().get(0);
 		
 		//LimitAttribute:
-		//	"end" end=ISODATE & "period" period=Interval1 & "resources" resources+=[Resource] ("," resources+=[Resource])* &
+		//	"end" end=ISODATE | "period" period=Interval1 | "resources" resources+=[Resource] ("," resources+=[Resource])* |
 		//	"start" start=ISODATE;
 		public ParserRule getRule() { return rule; }
 
-		//"end" end=ISODATE & "period" period=Interval1 & "resources" resources+=[Resource] ("," resources+=[Resource])* & "start"
+		//"end" end=ISODATE | "period" period=Interval1 | "resources" resources+=[Resource] ("," resources+=[Resource])* | "start"
 		//start=ISODATE
-		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//"end" end=ISODATE
 		public Group getGroup_0() { return cGroup_0; }
@@ -10624,7 +10617,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/scenario.html	
 	//Scenario:
-	//	"scenario" id=ID name=STRING ("{" ("active" active=YesNo & "scenario" scenario=Scenario) "}")?;
+	//	"scenario" id=ID name=STRING ("{" (("active" active=YesNo)? & scenario=Scenario?) "}")?;
 	public ScenarioElements getScenarioAccess() {
 		return (pScenario != null) ? pScenario : (pScenario = new ScenarioElements());
 	}
@@ -11253,6 +11246,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/columns.html
+	//// TODO: extend column id to user defined column ids.
 	//Column:
 	//	id=ColumnId attribute=ColumnAttribute;
 	public ColumnElements getColumnAccess() {
@@ -11337,7 +11331,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LimitAttribute:
-	//	"end" end=ISODATE & "period" period=Interval1 & "resources" resources+=[Resource] ("," resources+=[Resource])* &
+	//	"end" end=ISODATE | "period" period=Interval1 | "resources" resources+=[Resource] ("," resources+=[Resource])* |
 	//	"start" start=ISODATE;
 	public LimitAttributeElements getLimitAttributeAccess() {
 		return (pLimitAttribute != null) ? pLimitAttribute : (pLimitAttribute = new LimitAttributeElements());

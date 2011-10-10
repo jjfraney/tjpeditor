@@ -6792,46 +6792,41 @@ ruleScenario returns [EObject current=null]
 					{ 
 	 				  getUnorderedGroupHelper().select(grammarAccess.getScenarioAccess().getUnorderedGroup_3_1(), 1);
 	 				}
-					({true}?=>(	otherlv_7='scenario' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getScenarioAccess().getScenarioKeyword_3_1_1_0());
-    }
-(
+					({true}?=>(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getScenarioAccess().getScenarioScenarioParserRuleCall_3_1_1_1_0()); 
+	        newCompositeNode(grammarAccess.getScenarioAccess().getScenarioScenarioParserRuleCall_3_1_1_0()); 
 	    }
-		lv_scenario_8_0=ruleScenario		{
+		lv_scenario_7_0=ruleScenario		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getScenarioRule());
 	        }
        		set(
        			$current, 
        			"scenario",
-        		lv_scenario_8_0, 
+        		lv_scenario_7_0, 
         		"Scenario");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)))
+))
 					{ 
 	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getScenarioAccess().getUnorderedGroup_3_1());
 	 				}
  				)
 			)  
 
-		)+
-	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getScenarioAccess().getUnorderedGroup_3_1())}?	
+		)*	
 	)
 )
 	{ 
 	  getUnorderedGroupHelper().leave(grammarAccess.getScenarioAccess().getUnorderedGroup_3_1());
 	}
 
-)	otherlv_9='}' 
+)	otherlv_8='}' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getScenarioAccess().getRightCurlyBracketKeyword_3_2());
+    	newLeafNode(otherlv_8, grammarAccess.getScenarioAccess().getRightCurlyBracketKeyword_3_2());
     }
 )?)
 ;
@@ -9764,29 +9759,15 @@ ruleLimitAttribute returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-
-(
-	{ 
-	  getUnorderedGroupHelper().enter(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
-	}
-	(
-		(
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 0)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 0);
-	 				}
-					({true}?=>(	otherlv_1='end' 
+((	otherlv_0='end' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getLimitAttributeAccess().getEndKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getLimitAttributeAccess().getEndKeyword_0_0());
     }
 (
 (
-		lv_end_2_0=RULE_ISODATE
+		lv_end_1_0=RULE_ISODATE
 		{
-			newLeafNode(lv_end_2_0, grammarAccess.getLimitAttributeAccess().getEndISODATETerminalRuleCall_0_1_0()); 
+			newLeafNode(lv_end_1_0, grammarAccess.getLimitAttributeAccess().getEndISODATETerminalRuleCall_0_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -9795,60 +9776,38 @@ ruleLimitAttribute returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"end",
-        		lv_end_2_0, 
+        		lv_end_1_0, 
         		"ISODATE");
 	    }
 
 )
-)))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 1)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 1);
-	 				}
-					({true}?=>(	otherlv_3='period' 
+))
+    |(	otherlv_2='period' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getLimitAttributeAccess().getPeriodKeyword_1_0());
+    	newLeafNode(otherlv_2, grammarAccess.getLimitAttributeAccess().getPeriodKeyword_1_0());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getLimitAttributeAccess().getPeriodInterval1ParserRuleCall_1_1_0()); 
 	    }
-		lv_period_4_0=ruleInterval1		{
+		lv_period_3_0=ruleInterval1		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLimitAttributeRule());
 	        }
        		set(
        			$current, 
        			"period",
-        		lv_period_4_0, 
+        		lv_period_3_0, 
         		"Interval1");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 2)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 2);
-	 				}
-					({true}?=>(	otherlv_5='resources' 
+))
+    |(	otherlv_4='resources' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getLimitAttributeAccess().getResourcesKeyword_2_0());
+    	newLeafNode(otherlv_4, grammarAccess.getLimitAttributeAccess().getResourcesKeyword_2_0());
     }
 (
 (
@@ -9857,15 +9816,15 @@ ruleLimitAttribute returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getLimitAttributeRule());
 	        }
         }
-	otherlv_6=RULE_ID
+	otherlv_5=RULE_ID
 	{
-		newLeafNode(otherlv_6, grammarAccess.getLimitAttributeAccess().getResourcesResourceCrossReference_2_1_0()); 
+		newLeafNode(otherlv_5, grammarAccess.getLimitAttributeAccess().getResourcesResourceCrossReference_2_1_0()); 
 	}
 
 )
-)(	otherlv_7=',' 
+)(	otherlv_6=',' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getLimitAttributeAccess().getCommaKeyword_2_2_0());
+    	newLeafNode(otherlv_6, grammarAccess.getLimitAttributeAccess().getCommaKeyword_2_2_0());
     }
 (
 (
@@ -9874,33 +9833,22 @@ ruleLimitAttribute returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getLimitAttributeRule());
 	        }
         }
-	otherlv_8=RULE_ID
+	otherlv_7=RULE_ID
 	{
-		newLeafNode(otherlv_8, grammarAccess.getLimitAttributeAccess().getResourcesResourceCrossReference_2_2_1_0()); 
+		newLeafNode(otherlv_7, grammarAccess.getLimitAttributeAccess().getResourcesResourceCrossReference_2_2_1_0()); 
 	}
 
 )
-))*))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 3)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getLimitAttributeAccess().getUnorderedGroup(), 3);
-	 				}
-					({true}?=>(	otherlv_9='start' 
+))*)
+    |(	otherlv_8='start' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getLimitAttributeAccess().getStartKeyword_3_0());
+    	newLeafNode(otherlv_8, grammarAccess.getLimitAttributeAccess().getStartKeyword_3_0());
     }
 (
 (
-		lv_start_10_0=RULE_ISODATE
+		lv_start_9_0=RULE_ISODATE
 		{
-			newLeafNode(lv_start_10_0, grammarAccess.getLimitAttributeAccess().getStartISODATETerminalRuleCall_3_1_0()); 
+			newLeafNode(lv_start_9_0, grammarAccess.getLimitAttributeAccess().getStartISODATETerminalRuleCall_3_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -9909,27 +9857,12 @@ ruleLimitAttribute returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"start",
-        		lv_start_10_0, 
+        		lv_start_9_0, 
         		"ISODATE");
 	    }
 
 )
 )))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  
-
-		)+
-	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getLimitAttributeAccess().getUnorderedGroup())}?	
-	)
-)
-	{ 
-	  getUnorderedGroupHelper().leave(grammarAccess.getLimitAttributeAccess().getUnorderedGroup());
-	}
-
-)
 ;
 
 

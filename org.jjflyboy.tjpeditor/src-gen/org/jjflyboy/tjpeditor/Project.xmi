@@ -1935,17 +1935,14 @@
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="{"/>
           <elements xsi:type="xtext:UnorderedGroup">
-            <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Group" cardinality="?">
               <elements xsi:type="xtext:Keyword" value="active"/>
               <elements xsi:type="xtext:Assignment" feature="active" operator="=">
                 <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.208"/>
               </elements>
             </elements>
-            <elements xsi:type="xtext:Group">
-              <elements xsi:type="xtext:Keyword" value="scenario"/>
-              <elements xsi:type="xtext:Assignment" feature="scenario" operator="=">
-                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.131"/>
-              </elements>
+            <elements xsi:type="xtext:Assignment" cardinality="?" feature="scenario" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.131"/>
             </elements>
           </elements>
           <elements xsi:type="xtext:Keyword" value="}"/>
@@ -2904,7 +2901,7 @@
       <type metamodel="/0/@metamodelDeclarations.0">
         <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//LimitAttribute"/>
       </type>
-      <alternatives xsi:type="xtext:UnorderedGroup">
+      <alternatives xsi:type="xtext:Alternatives">
         <elements xsi:type="xtext:Group">
           <elements xsi:type="xtext:Keyword" value="end"/>
           <elements xsi:type="xtext:Assignment" feature="end" operator="=">

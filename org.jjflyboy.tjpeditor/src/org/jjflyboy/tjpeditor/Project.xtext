@@ -687,8 +687,8 @@ Scale: 'scale' scale=('hour' | 'day' |'week' | 'month' | 'quarter' | 'year');
 Scenario: 
 	'scenario' id=ID name=STRING ('{'
 		(
-			'active' active=YesNo &
-			'scenario' scenario=Scenario
+			('active' active=YesNo)? &
+			(scenario=Scenario)?
 		)
 	'}')?;
 
@@ -957,6 +957,7 @@ ColumnAttribute: CellColor
 ;
 
 // http://www.taskjuggler.org/tj3/manual/columns.html
+// TODO: extend column id to user defined column ids.
 Column: id=ColumnId attribute=ColumnAttribute;
 
 // http://www.taskjuggler.org/tj3/manual/sorttasks.html
