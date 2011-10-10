@@ -5333,7 +5333,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTagFile_File()
+  public EAttribute getTagFile_Id()
   {
         return (EAttribute)getTagFile().getEStructuralFeatures().get(0);
   }
@@ -5343,9 +5343,9 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTagFile_HideResource()
+  public EAttribute getTagFile_File()
   {
-        return (EReference)getTagFile().getEStructuralFeatures().get(1);
+        return (EAttribute)getTagFile().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -5353,7 +5353,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTagFile_HideTask()
+  public EReference getTagFile_HideResource()
   {
         return (EReference)getTagFile().getEStructuralFeatures().get(2);
   }
@@ -5363,7 +5363,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTagFile_RollupResource()
+  public EReference getTagFile_HideTask()
   {
         return (EReference)getTagFile().getEStructuralFeatures().get(3);
   }
@@ -5373,9 +5373,19 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTagFile_RollupTask()
+  public EReference getTagFile_RollupResource()
   {
         return (EReference)getTagFile().getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTagFile_RollupTask()
+  {
+        return (EReference)getTagFile().getEStructuralFeatures().get(5);
   }
 
   /**

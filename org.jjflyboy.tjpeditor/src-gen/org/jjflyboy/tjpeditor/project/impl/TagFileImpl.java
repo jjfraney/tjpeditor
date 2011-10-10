@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.HideResource;
 import org.jjflyboy.tjpeditor.project.HideTask;
@@ -28,6 +27,7 @@ import org.jjflyboy.tjpeditor.project.TagFile;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getFile <em>File</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getHideResource <em>Hide Resource</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getHideTask <em>Hide Task</em>}</li>
@@ -38,8 +38,28 @@ import org.jjflyboy.tjpeditor.project.TagFile;
  *
  * @generated
  */
-public class TagFileImpl extends MinimalEObjectImpl.Container implements TagFile
+public class TagFileImpl extends GlobalAttributeImpl implements TagFile
 {
+  /**
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected static final String ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected String id = ID_EDEFAULT;
+
   /**
    * The default value of the '{@link #getFile() <em>File</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -119,6 +139,29 @@ public class TagFileImpl extends MinimalEObjectImpl.Container implements TagFile
   protected EClass eStaticClass()
   {
     return ProjectPackage.eINSTANCE.getTagFile();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getId()
+  {
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setId(String newId)
+  {
+    String oldId = id;
+    id = newId;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.TAG_FILE__ID, oldId, id));
   }
 
   /**
@@ -368,6 +411,8 @@ public class TagFileImpl extends MinimalEObjectImpl.Container implements TagFile
   {
     switch (featureID)
     {
+      case ProjectPackage.TAG_FILE__ID:
+        return getId();
       case ProjectPackage.TAG_FILE__FILE:
         return getFile();
       case ProjectPackage.TAG_FILE__HIDE_RESOURCE:
@@ -392,6 +437,9 @@ public class TagFileImpl extends MinimalEObjectImpl.Container implements TagFile
   {
     switch (featureID)
     {
+      case ProjectPackage.TAG_FILE__ID:
+        setId((String)newValue);
+        return;
       case ProjectPackage.TAG_FILE__FILE:
         setFile((String)newValue);
         return;
@@ -421,6 +469,9 @@ public class TagFileImpl extends MinimalEObjectImpl.Container implements TagFile
   {
     switch (featureID)
     {
+      case ProjectPackage.TAG_FILE__ID:
+        setId(ID_EDEFAULT);
+        return;
       case ProjectPackage.TAG_FILE__FILE:
         setFile(FILE_EDEFAULT);
         return;
@@ -450,6 +501,8 @@ public class TagFileImpl extends MinimalEObjectImpl.Container implements TagFile
   {
     switch (featureID)
     {
+      case ProjectPackage.TAG_FILE__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
       case ProjectPackage.TAG_FILE__FILE:
         return FILE_EDEFAULT == null ? file != null : !FILE_EDEFAULT.equals(file);
       case ProjectPackage.TAG_FILE__HIDE_RESOURCE:
@@ -475,7 +528,9 @@ public class TagFileImpl extends MinimalEObjectImpl.Container implements TagFile
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (file: ");
+    result.append(" (id: ");
+    result.append(id);
+    result.append(", file: ");
     result.append(file);
     result.append(')');
     return result.toString();

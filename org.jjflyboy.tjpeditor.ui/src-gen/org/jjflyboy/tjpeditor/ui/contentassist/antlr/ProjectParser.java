@@ -261,8 +261,8 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatusSheetReportAccess().getGroup(), "rule__StatusSheetReport__Group__0");
 					put(grammarAccess.getSummaryAccess().getGroup(), "rule__Summary__Group__0");
 					put(grammarAccess.getTagFileAccess().getGroup(), "rule__TagFile__Group__0");
-					put(grammarAccess.getTagFileAccess().getGroup_2_0(), "rule__TagFile__Group_2_0__0");
-					put(grammarAccess.getTagFileAccess().getGroup_2_3(), "rule__TagFile__Group_2_3__0");
+					put(grammarAccess.getTagFileAccess().getGroup_3_0(), "rule__TagFile__Group_3_0__0");
+					put(grammarAccess.getTagFileAccess().getGroup_3_3(), "rule__TagFile__Group_3_3__0");
 					put(grammarAccess.getTaskStatusSheetAccess().getGroup(), "rule__TaskStatusSheet__Group__0");
 					put(grammarAccess.getTaskStatusSheetAccess().getGroup_2(), "rule__TaskStatusSheet__Group_2__0");
 					put(grammarAccess.getTaskTimesheetAccess().getGroup(), "rule__TaskTimesheet__Group__0");
@@ -524,11 +524,12 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatusStatusSheetAccess().getLevelAssignment_1(), "rule__StatusStatusSheet__LevelAssignment_1");
 					put(grammarAccess.getStatusStatusSheetAccess().getTextAssignment_2(), "rule__StatusStatusSheet__TextAssignment_2");
 					put(grammarAccess.getStatusStatusSheetAccess().getAttributesAssignment_3_1(), "rule__StatusStatusSheet__AttributesAssignment_3_1");
-					put(grammarAccess.getTagFileAccess().getFileAssignment_1(), "rule__TagFile__FileAssignment_1");
-					put(grammarAccess.getTagFileAccess().getHideResourceAssignment_2_0_1(), "rule__TagFile__HideResourceAssignment_2_0_1");
-					put(grammarAccess.getTagFileAccess().getHideTaskAssignment_2_1(), "rule__TagFile__HideTaskAssignment_2_1");
-					put(grammarAccess.getTagFileAccess().getRollupResourceAssignment_2_2(), "rule__TagFile__RollupResourceAssignment_2_2");
-					put(grammarAccess.getTagFileAccess().getRollupTaskAssignment_2_3_0(), "rule__TagFile__RollupTaskAssignment_2_3_0");
+					put(grammarAccess.getTagFileAccess().getIdAssignment_1(), "rule__TagFile__IdAssignment_1");
+					put(grammarAccess.getTagFileAccess().getFileAssignment_2(), "rule__TagFile__FileAssignment_2");
+					put(grammarAccess.getTagFileAccess().getHideResourceAssignment_3_0_1(), "rule__TagFile__HideResourceAssignment_3_0_1");
+					put(grammarAccess.getTagFileAccess().getHideTaskAssignment_3_1(), "rule__TagFile__HideTaskAssignment_3_1");
+					put(grammarAccess.getTagFileAccess().getRollupResourceAssignment_3_2(), "rule__TagFile__RollupResourceAssignment_3_2");
+					put(grammarAccess.getTagFileAccess().getRollupTaskAssignment_3_3_0(), "rule__TagFile__RollupTaskAssignment_3_3_0");
 					put(grammarAccess.getTaskStatusSheetAccess().getTaskAssignment_1(), "rule__TaskStatusSheet__TaskAssignment_1");
 					put(grammarAccess.getTaskStatusSheetAccess().getAttributesAssignment_2_1(), "rule__TaskStatusSheet__AttributesAssignment_2_1");
 					put(grammarAccess.getTaskTimesheetAccess().getTaskAssignment_1(), "rule__TaskTimesheet__TaskAssignment_1");
@@ -635,7 +636,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getResourceAttributesAccess().getUnorderedGroup_2(), "rule__ResourceAttributes__UnorderedGroup_2");
 					put(grammarAccess.getScenarioAccess().getUnorderedGroup_3_1(), "rule__Scenario__UnorderedGroup_3_1");
 					put(grammarAccess.getShiftAccess().getUnorderedGroup_3_1(), "rule__Shift__UnorderedGroup_3_1");
-					put(grammarAccess.getTagFileAccess().getUnorderedGroup_2(), "rule__TagFile__UnorderedGroup_2");
+					put(grammarAccess.getTagFileAccess().getUnorderedGroup_3(), "rule__TagFile__UnorderedGroup_3");
 					put(grammarAccess.getTaskAttributesAccess().getUnorderedGroup_2(), "rule__TaskAttributes__UnorderedGroup_2");
 					put(grammarAccess.getExtendAttributeAccess().getUnorderedGroup_2(), "rule__ExtendAttribute__UnorderedGroup_2");
 					put(grammarAccess.getTaskDependencyAccess().getUnorderedGroup_1_1(), "rule__TaskDependency__UnorderedGroup_1_1");

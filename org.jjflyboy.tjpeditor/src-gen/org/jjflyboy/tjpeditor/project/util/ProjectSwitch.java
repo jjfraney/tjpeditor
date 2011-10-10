@@ -1211,6 +1211,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TagFile tagFile = (TagFile)theEObject;
         T result = caseTagFile(tagFile);
+        if (result == null) result = caseGlobalAttribute(tagFile);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

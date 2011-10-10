@@ -4463,13 +4463,22 @@ public interface ProjectPackage extends EPackage
   int TAG_FILE = 141;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAG_FILE__ID = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>File</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TAG_FILE__FILE = 0;
+  int TAG_FILE__FILE = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Hide Resource</b></em>' containment reference.
@@ -4478,7 +4487,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TAG_FILE__HIDE_RESOURCE = 1;
+  int TAG_FILE__HIDE_RESOURCE = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Hide Task</b></em>' containment reference.
@@ -4487,7 +4496,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TAG_FILE__HIDE_TASK = 2;
+  int TAG_FILE__HIDE_TASK = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Rollup Resource</b></em>' containment reference.
@@ -4496,7 +4505,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TAG_FILE__ROLLUP_RESOURCE = 3;
+  int TAG_FILE__ROLLUP_RESOURCE = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Rollup Task</b></em>' containment reference.
@@ -4505,7 +4514,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TAG_FILE__ROLLUP_TASK = 4;
+  int TAG_FILE__ROLLUP_TASK = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Tag File</em>' class.
@@ -4514,7 +4523,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TAG_FILE_FEATURE_COUNT = 5;
+  int TAG_FILE_FEATURE_COUNT = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.TaskStatusSheetImpl <em>Task Status Sheet</em>}' class.
@@ -9721,6 +9730,17 @@ public interface ProjectPackage extends EPackage
    * @generated
    */
   EClass getTagFile();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.TagFile#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.jjflyboy.tjpeditor.project.TagFile#getId()
+   * @see #getTagFile()
+   * @generated
+   */
+  EAttribute getTagFile_Id();
 
   /**
    * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.TagFile#getFile <em>File</em>}'.

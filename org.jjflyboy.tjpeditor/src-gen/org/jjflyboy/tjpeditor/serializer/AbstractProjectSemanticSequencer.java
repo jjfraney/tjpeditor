@@ -995,7 +995,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TAG_FILE:
-				if(context == grammarAccess.getTagFileRule()) {
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getTagFileRule()) {
 					sequence_TagFile(context, (TagFile) semanticObject); 
 					return; 
 				}
@@ -3466,9 +3467,10 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (file=STRING (hideResource=HideResource? hideTask=HideTask? rollupResource=RollupResource? rollupTask=RollupTask?)?)
+	 *     (id=ID? file=STRING (hideResource=HideResource? hideTask=HideTask? rollupResource=RollupResource? rollupTask=RollupTask?)?)
 	 *
 	 * Features:
+	 *    id[0, 1]
 	 *    file[1, 1]
 	 *    hideResource[0, 1]
 	 *    hideTask[0, 1]

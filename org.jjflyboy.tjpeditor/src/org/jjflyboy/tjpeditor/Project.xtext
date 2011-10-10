@@ -40,6 +40,7 @@ GlobalAttribute:
 	| SupplementReport
 	| SupplementResource
 	| SupplementTask
+	| TagFile
 	| Task
 //	| Timesheet
 //	| TimesheetReport
@@ -799,7 +800,7 @@ Summary: 'summary' RichText;
 // TODO
 
 // http://www.taskjuggler.org/tj3/manual/tagfile.html
-TagFile: 'tagfile' file=STRING 
+TagFile: 'tagfile' (id=ID)? filename = STRING 
 	('{' hideResource = HideResource?
 		& hideTask = HideTask?
 		& rollupResource = RollupResource?
