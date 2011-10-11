@@ -15,7 +15,7 @@ public class BalanceTest  extends XtextTest {
 	
 	@Test 
 	public void testSimple() {
-				
+		ignoreFormattingDifferences();
 		testFile("simple.tjp");
 	}
 	
