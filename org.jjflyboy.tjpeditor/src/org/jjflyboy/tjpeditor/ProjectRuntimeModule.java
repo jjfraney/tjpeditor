@@ -3,9 +3,18 @@
  */
 package org.jjflyboy.tjpeditor;
 
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.jjflyboy.tjpeditor.scoping.ProjectQualifiedNameProvider;
+
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class ProjectRuntimeModule extends org.jjflyboy.tjpeditor.AbstractProjectRuntimeModule {
 
+	@Override
+	public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
+		return ProjectQualifiedNameProvider.class;
+	}
+
+	
 }
