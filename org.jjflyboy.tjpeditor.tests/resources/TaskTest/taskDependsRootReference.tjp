@@ -1,0 +1,10 @@
+project "test project" 2011-12-11 + 4 m { }
+
+task task1 "First Task" {
+}
+
+task task2 "Second Task" {
+	depends task1
+}
+
+

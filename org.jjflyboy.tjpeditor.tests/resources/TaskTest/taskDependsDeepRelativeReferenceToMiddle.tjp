@@ -1,0 +1,16 @@
+project "test project" 2011-12-11 + 4 m { }
+task top "Top Task" {
+	task middle1 "First SubTask" {
+		task bottom1 "First SubSubTask"
+	}
+	task middle2 "Second SubTask" {
+		task moreBottom "most bottom task" {
+			task mostBottom "real bottom task" {
+				depends !!!middle1.bottom1  # resolves to "First SubSubTask"
+			}
+		}
+	}
+}
+
+
+

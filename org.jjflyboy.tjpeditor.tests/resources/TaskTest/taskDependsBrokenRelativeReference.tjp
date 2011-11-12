@@ -1,0 +1,32 @@
+project "test project" 2011-12-11 + 4 m { }
+task middle1 "Top middle task" {
+   task bottom2 "top middle bottom" {
+   }
+}
+task top "Top Task" {
+	task middle1 "First SubTask" {
+		task bottom1 "First SubSubTask" { }
+	}
+	task middle2 "Second SubTask" {
+		#should link ok
+		precedes !middle3.bottom1
+		
+		task moreBottom "most bottom task" {
+		
+			# fails because unresolved absolute reference, there are no ! (bangs)
+			precedes middle1.bottom1
+			
+			task mostBottom "real bottom task" {
+				# fails because unresolved relative reference
+				# needs another !
+				depends !middle1.bottom1
+			}
+		}
+	}
+	task middle3 "Third SubTask" {
+		task bottom1 "First SubSubTask" { }
+	}
+}
+
+
+

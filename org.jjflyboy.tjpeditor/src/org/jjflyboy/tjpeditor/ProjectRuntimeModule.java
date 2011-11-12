@@ -3,7 +3,9 @@
  */
 package org.jjflyboy.tjpeditor;
 
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.jjflyboy.tjpeditor.scoping.ProjectImportedNamespaceAwareLocalScopeProvider;
 import org.jjflyboy.tjpeditor.scoping.ProjectQualifiedNameProvider;
 
 /**
@@ -15,6 +17,12 @@ public class ProjectRuntimeModule extends org.jjflyboy.tjpeditor.AbstractProject
 	public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
 		return ProjectQualifiedNameProvider.class;
 	}
+	public Class<? extends IQualifiedNameConverter> bindIQualifiedNameConverter() {
+		return ProjectQualifiedNameConverter.class;
+	}
 
-	
+	public void configureIScopeProviderDelegate(com.google.inject.Binder binder) {
+		binder.bind(org.eclipse.xtext.scoping.IScopeProvider.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider.NAMED_DELEGATE)).to(ProjectImportedNamespaceAwareLocalScopeProvider.class);
+	}
+
 }
