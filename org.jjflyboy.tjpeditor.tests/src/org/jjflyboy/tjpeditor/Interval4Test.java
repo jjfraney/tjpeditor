@@ -16,6 +16,15 @@ public class Interval4Test  extends XtextTest {
 		testParserRule("2010-01-16 + 4 m", "Interval4");
 	}
 	@Test 
+	public void testInterval4TimeOfDayDuration() {
+		testParserRule("2010-01-16-10:30 + 4 m", "Interval4");
+	}
+	@Test 
+	public void testInterval4TimeOfDayAndDuration() {
+		testParserRule("2010-01-16-3:00 + 4h", "Interval4");
+	}
+
+	@Test 
 	public void testInterval4End() {
 		testParserRule("2010-01-16 - 2011-01-16", "Interval4");
 	}

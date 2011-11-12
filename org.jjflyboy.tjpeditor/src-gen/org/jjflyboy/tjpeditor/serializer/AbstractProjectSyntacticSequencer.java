@@ -196,14 +196,14 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	/**
 	 * Syntax:
 	 *     (
-	     'left' | 
-	     'headline' | 
-	     'caption' | 
-	     'epilog' | 
-	     'prolog' | 
-	     'footer' | 
-	     'right' | 
 	     'center' | 
+	     'prolog' | 
+	     'right' | 
+	     'headline' | 
+	     'left' | 
+	     'epilog' | 
+	     'footer' | 
+	     'caption' | 
 	     'header'
 	 )
 	 */
@@ -222,14 +222,14 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	/**
 	 * Syntax:
 	 *     (
-	     'maximum' | 
-	     'weeklymin' | 
-	     'minimum' | 
 	     'monthlymin' | 
+	     'maximum' | 
+	     'weeklymax' | 
 	     'dailymin' | 
-	     'monthlymax' | 
+	     'weeklymin' | 
 	     'dailymax' | 
-	     'weeklymax'
+	     'minimum' | 
+	     'monthlymax'
 	 )
 	 */
 	protected void emit_DailyMax_DailyMin_Maximum_Minimum_MonthlyMax_MonthlyMin_WeeklyMax_WeeklyMin_DailymaxKeyword_0_or_DailyminKeyword_0_or_MaximumKeyword_0_or_MinimumKeyword_0_or_MonthlymaxKeyword_0_or_MonthlyminKeyword_0_or_WeeklymaxKeyword_0_or_WeeklyminKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -310,7 +310,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'taskreport' | 'resourcereport' | 'textreport'
+	 *     'taskreport' | 'textreport' | 'resourcereport'
 	 */
 	protected void emit_ResourceReport_TaskReport_TextReport_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

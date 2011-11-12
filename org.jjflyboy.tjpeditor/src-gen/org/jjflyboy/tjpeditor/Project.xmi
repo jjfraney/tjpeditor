@@ -3993,7 +3993,7 @@
           <elements xsi:type="xtext:Alternatives">
             <elements xsi:type="xtext:Group">
               <elements xsi:type="xtext:Alternatives">
-                <elements xsi:type="xtext:Keyword" value="0"/>
+                <elements xsi:type="xtext:Keyword" cardinality="?" value="0"/>
                 <elements xsi:type="xtext:Keyword" value="1"/>
               </elements>
               <elements xsi:type="xtext:CharacterRange">
