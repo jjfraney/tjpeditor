@@ -888,11 +888,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createVacationAdapter();
       }
       @Override
-      public Adapter caseVacationShift(VacationShift object)
-      {
-        return createVacationShiftAdapter();
-      }
-      @Override
       public Adapter caseWarn(Warn object)
       {
         return createWarnAdapter();
@@ -3475,21 +3470,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVacationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.VacationShift <em>Vacation Shift</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.VacationShift
-   * @generated
-   */
-  public Adapter createVacationShiftAdapter()
   {
     return null;
   }

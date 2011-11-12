@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.Shift;
-import org.jjflyboy.tjpeditor.project.VacationShift;
+import org.jjflyboy.tjpeditor.project.Vacation;
 import org.jjflyboy.tjpeditor.project.WorkingHours;
 
 /**
@@ -127,7 +127,7 @@ public class ShiftImpl extends GlobalAttributeImpl implements Shift
    * @generated
    * @ordered
    */
-  protected VacationShift vacation;
+  protected Vacation vacation;
 
   /**
    * The cached value of the '{@link #getShift() <em>Shift</em>}' containment reference.
@@ -267,7 +267,7 @@ public class ShiftImpl extends GlobalAttributeImpl implements Shift
    * <!-- end-user-doc -->
    * @generated
    */
-  public VacationShift getVacation()
+  public Vacation getVacation()
   {
     return vacation;
   }
@@ -277,9 +277,9 @@ public class ShiftImpl extends GlobalAttributeImpl implements Shift
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVacation(VacationShift newVacation, NotificationChain msgs)
+  public NotificationChain basicSetVacation(Vacation newVacation, NotificationChain msgs)
   {
-    VacationShift oldVacation = vacation;
+    Vacation oldVacation = vacation;
     vacation = newVacation;
     if (eNotificationRequired())
     {
@@ -294,7 +294,7 @@ public class ShiftImpl extends GlobalAttributeImpl implements Shift
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVacation(VacationShift newVacation)
+  public void setVacation(Vacation newVacation)
   {
     if (newVacation != vacation)
     {
@@ -477,7 +477,7 @@ public class ShiftImpl extends GlobalAttributeImpl implements Shift
         setTimezone((String)newValue);
         return;
       case ProjectPackage.SHIFT__VACATION:
-        setVacation((VacationShift)newValue);
+        setVacation((Vacation)newValue);
         return;
       case ProjectPackage.SHIFT__SHIFT:
         setShift((Shift)newValue);
@@ -512,7 +512,7 @@ public class ShiftImpl extends GlobalAttributeImpl implements Shift
         setTimezone(TIMEZONE_EDEFAULT);
         return;
       case ProjectPackage.SHIFT__VACATION:
-        setVacation((VacationShift)null);
+        setVacation((Vacation)null);
         return;
       case ProjectPackage.SHIFT__SHIFT:
         setShift((Shift)null);

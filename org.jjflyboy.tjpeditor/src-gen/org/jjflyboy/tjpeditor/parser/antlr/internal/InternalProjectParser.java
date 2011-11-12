@@ -22606,217 +22606,8 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleVacation"
 
 
-    // $ANTLR start "entryRuleVacationResource"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8922:1: entryRuleVacationResource returns [EObject current=null] : iv_ruleVacationResource= ruleVacationResource EOF ;
-    public final EObject entryRuleVacationResource() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleVacationResource = null;
-
-
-        try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8923:2: (iv_ruleVacationResource= ruleVacationResource EOF )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8924:2: iv_ruleVacationResource= ruleVacationResource EOF
-            {
-             newCompositeNode(grammarAccess.getVacationResourceRule()); 
-            pushFollow(FOLLOW_ruleVacationResource_in_entryRuleVacationResource22183);
-            iv_ruleVacationResource=ruleVacationResource();
-
-            state._fsp--;
-
-             current =iv_ruleVacationResource; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVacationResource22193); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleVacationResource"
-
-
-    // $ANTLR start "ruleVacationResource"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8931:1: ruleVacationResource returns [EObject current=null] : (otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )* ) ;
-    public final EObject ruleVacationResource() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        Token lv_name_1_0=null;
-        Token otherlv_3=null;
-        EObject lv_intervals_2_0 = null;
-
-        EObject lv_intervals_4_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8934:28: ( (otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )* ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8935:1: (otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )* )
-            {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8935:1: (otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )* )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8935:3: otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )*
-            {
-            otherlv_0=(Token)match(input,123,FOLLOW_123_in_ruleVacationResource22230); 
-
-                	newLeafNode(otherlv_0, grammarAccess.getVacationResourceAccess().getVacationKeyword_0());
-                
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8939:1: ( (lv_name_1_0= RULE_STRING ) )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
-
-            if ( (LA79_0==RULE_STRING) ) {
-                alt79=1;
-            }
-            switch (alt79) {
-                case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8940:1: (lv_name_1_0= RULE_STRING )
-                    {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8940:1: (lv_name_1_0= RULE_STRING )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8941:3: lv_name_1_0= RULE_STRING
-                    {
-                    lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVacationResource22247); 
-
-                    			newLeafNode(lv_name_1_0, grammarAccess.getVacationResourceAccess().getNameSTRINGTerminalRuleCall_1_0()); 
-                    		
-
-                    	        if (current==null) {
-                    	            current = createModelElement(grammarAccess.getVacationResourceRule());
-                    	        }
-                           		setWithLastConsumed(
-                           			current, 
-                           			"name",
-                            		lv_name_1_0, 
-                            		"STRING");
-                    	    
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8957:3: ( (lv_intervals_2_0= ruleInterval3 ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8958:1: (lv_intervals_2_0= ruleInterval3 )
-            {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8958:1: (lv_intervals_2_0= ruleInterval3 )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8959:3: lv_intervals_2_0= ruleInterval3
-            {
-             
-            	        newCompositeNode(grammarAccess.getVacationResourceAccess().getIntervalsInterval3ParserRuleCall_2_0()); 
-            	    
-            pushFollow(FOLLOW_ruleInterval3_in_ruleVacationResource22274);
-            lv_intervals_2_0=ruleInterval3();
-
-            state._fsp--;
-
-
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getVacationResourceRule());
-            	        }
-                   		add(
-                   			current, 
-                   			"intervals",
-                    		lv_intervals_2_0, 
-                    		"Interval3");
-            	        afterParserOrEnumRuleCall();
-            	    
-
-            }
-
-
-            }
-
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8975:2: (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )*
-            loop80:
-            do {
-                int alt80=2;
-                int LA80_0 = input.LA(1);
-
-                if ( (LA80_0==24) ) {
-                    alt80=1;
-                }
-
-
-                switch (alt80) {
-            	case 1 :
-            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8975:4: otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) )
-            	    {
-            	    otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleVacationResource22287); 
-
-            	        	newLeafNode(otherlv_3, grammarAccess.getVacationResourceAccess().getCommaKeyword_3_0());
-            	        
-            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8979:1: ( (lv_intervals_4_0= ruleInterval3 ) )
-            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8980:1: (lv_intervals_4_0= ruleInterval3 )
-            	    {
-            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8980:1: (lv_intervals_4_0= ruleInterval3 )
-            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8981:3: lv_intervals_4_0= ruleInterval3
-            	    {
-            	     
-            	    	        newCompositeNode(grammarAccess.getVacationResourceAccess().getIntervalsInterval3ParserRuleCall_3_1_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleInterval3_in_ruleVacationResource22308);
-            	    lv_intervals_4_0=ruleInterval3();
-
-            	    state._fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getVacationResourceRule());
-            	    	        }
-            	           		add(
-            	           			current, 
-            	           			"intervals",
-            	            		lv_intervals_4_0, 
-            	            		"Interval3");
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop80;
-                }
-            } while (true);
-
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleVacationResource"
-
-
     // $ANTLR start "entryRuleVacationShift"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9005:1: entryRuleVacationShift returns [EObject current=null] : iv_ruleVacationShift= ruleVacationShift EOF ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8922:1: entryRuleVacationShift returns [EObject current=null] : iv_ruleVacationShift= ruleVacationShift EOF ;
     public final EObject entryRuleVacationShift() throws RecognitionException {
         EObject current = null;
 
@@ -22824,17 +22615,17 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9006:2: (iv_ruleVacationShift= ruleVacationShift EOF )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9007:2: iv_ruleVacationShift= ruleVacationShift EOF
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8923:2: (iv_ruleVacationShift= ruleVacationShift EOF )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8924:2: iv_ruleVacationShift= ruleVacationShift EOF
             {
              newCompositeNode(grammarAccess.getVacationShiftRule()); 
-            pushFollow(FOLLOW_ruleVacationShift_in_entryRuleVacationShift22346);
+            pushFollow(FOLLOW_ruleVacationShift_in_entryRuleVacationShift22183);
             iv_ruleVacationShift=ruleVacationShift();
 
             state._fsp--;
 
              current =iv_ruleVacationShift; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVacationShift22356); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVacationShift22193); 
 
             }
 
@@ -22852,7 +22643,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVacationShift"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9014:1: ruleVacationShift returns [EObject current=null] : (otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )? ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8931:1: ruleVacationShift returns [EObject current=null] : (otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )? ) ;
     public final EObject ruleVacationShift() throws RecognitionException {
         EObject current = null;
 
@@ -22867,42 +22658,42 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9017:28: ( (otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )? ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9018:1: (otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )? )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8934:28: ( (otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )? ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8935:1: (otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )? )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9018:1: (otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )? )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9018:3: otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )?
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8935:1: (otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )? )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8935:3: otherlv_0= 'vacation' () ( (lv_name_2_0= RULE_STRING ) )? ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )?
             {
-            otherlv_0=(Token)match(input,123,FOLLOW_123_in_ruleVacationShift22393); 
+            otherlv_0=(Token)match(input,123,FOLLOW_123_in_ruleVacationShift22230); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getVacationShiftAccess().getVacationKeyword_0());
                 
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9022:1: ()
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9023:5: 
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8939:1: ()
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8940:5: 
             {
 
                     current = forceCreateModelElement(
-                        grammarAccess.getVacationShiftAccess().getVacationShiftAction_1(),
+                        grammarAccess.getVacationShiftAccess().getVacationAction_1(),
                         current);
                 
 
             }
 
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9028:2: ( (lv_name_2_0= RULE_STRING ) )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8945:2: ( (lv_name_2_0= RULE_STRING ) )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( (LA81_0==RULE_STRING) ) {
-                alt81=1;
+            if ( (LA79_0==RULE_STRING) ) {
+                alt79=1;
             }
-            switch (alt81) {
+            switch (alt79) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9029:1: (lv_name_2_0= RULE_STRING )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8946:1: (lv_name_2_0= RULE_STRING )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9029:1: (lv_name_2_0= RULE_STRING )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9030:3: lv_name_2_0= RULE_STRING
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8946:1: (lv_name_2_0= RULE_STRING )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8947:3: lv_name_2_0= RULE_STRING
                     {
-                    lv_name_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVacationShift22419); 
+                    lv_name_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVacationShift22256); 
 
                     			newLeafNode(lv_name_2_0, grammarAccess.getVacationShiftAccess().getNameSTRINGTerminalRuleCall_2_0()); 
                     		
@@ -22925,27 +22716,27 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9046:3: ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )?
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8963:3: ( ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )* )?
+            int alt81=2;
+            int LA81_0 = input.LA(1);
 
-            if ( (LA83_0==RULE_ISODATE) ) {
-                alt83=1;
+            if ( (LA81_0==RULE_ISODATE) ) {
+                alt81=1;
             }
-            switch (alt83) {
+            switch (alt81) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9046:4: ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )*
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8963:4: ( (lv_intervals_3_0= ruleInterval3 ) ) (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )*
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9046:4: ( (lv_intervals_3_0= ruleInterval3 ) )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9047:1: (lv_intervals_3_0= ruleInterval3 )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8963:4: ( (lv_intervals_3_0= ruleInterval3 ) )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8964:1: (lv_intervals_3_0= ruleInterval3 )
                     {
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9047:1: (lv_intervals_3_0= ruleInterval3 )
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9048:3: lv_intervals_3_0= ruleInterval3
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8964:1: (lv_intervals_3_0= ruleInterval3 )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8965:3: lv_intervals_3_0= ruleInterval3
                     {
                      
                     	        newCompositeNode(grammarAccess.getVacationShiftAccess().getIntervalsInterval3ParserRuleCall_3_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleInterval3_in_ruleVacationShift22447);
+                    pushFollow(FOLLOW_ruleInterval3_in_ruleVacationShift22284);
                     lv_intervals_3_0=ruleInterval3();
 
                     state._fsp--;
@@ -22967,35 +22758,35 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9064:2: (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )*
-                    loop82:
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8981:2: (otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) ) )*
+                    loop80:
                     do {
-                        int alt82=2;
-                        int LA82_0 = input.LA(1);
+                        int alt80=2;
+                        int LA80_0 = input.LA(1);
 
-                        if ( (LA82_0==24) ) {
-                            alt82=1;
+                        if ( (LA80_0==24) ) {
+                            alt80=1;
                         }
 
 
-                        switch (alt82) {
+                        switch (alt80) {
                     	case 1 :
-                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9064:4: otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) )
+                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8981:4: otherlv_4= ',' ( (lv_intervals_5_0= ruleInterval3 ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,24,FOLLOW_24_in_ruleVacationShift22460); 
+                    	    otherlv_4=(Token)match(input,24,FOLLOW_24_in_ruleVacationShift22297); 
 
                     	        	newLeafNode(otherlv_4, grammarAccess.getVacationShiftAccess().getCommaKeyword_3_1_0());
                     	        
-                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9068:1: ( (lv_intervals_5_0= ruleInterval3 ) )
-                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9069:1: (lv_intervals_5_0= ruleInterval3 )
+                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8985:1: ( (lv_intervals_5_0= ruleInterval3 ) )
+                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8986:1: (lv_intervals_5_0= ruleInterval3 )
                     	    {
-                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9069:1: (lv_intervals_5_0= ruleInterval3 )
-                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9070:3: lv_intervals_5_0= ruleInterval3
+                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8986:1: (lv_intervals_5_0= ruleInterval3 )
+                    	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:8987:3: lv_intervals_5_0= ruleInterval3
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getVacationShiftAccess().getIntervalsInterval3ParserRuleCall_3_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleInterval3_in_ruleVacationShift22481);
+                    	    pushFollow(FOLLOW_ruleInterval3_in_ruleVacationShift22318);
                     	    lv_intervals_5_0=ruleInterval3();
 
                     	    state._fsp--;
@@ -23022,7 +22813,7 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop82;
+                    	    break loop80;
                         }
                     } while (true);
 
@@ -23050,6 +22841,215 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end "ruleVacationShift"
+
+
+    // $ANTLR start "entryRuleVacationResource"
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9011:1: entryRuleVacationResource returns [EObject current=null] : iv_ruleVacationResource= ruleVacationResource EOF ;
+    public final EObject entryRuleVacationResource() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVacationResource = null;
+
+
+        try {
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9012:2: (iv_ruleVacationResource= ruleVacationResource EOF )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9013:2: iv_ruleVacationResource= ruleVacationResource EOF
+            {
+             newCompositeNode(grammarAccess.getVacationResourceRule()); 
+            pushFollow(FOLLOW_ruleVacationResource_in_entryRuleVacationResource22358);
+            iv_ruleVacationResource=ruleVacationResource();
+
+            state._fsp--;
+
+             current =iv_ruleVacationResource; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVacationResource22368); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVacationResource"
+
+
+    // $ANTLR start "ruleVacationResource"
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9020:1: ruleVacationResource returns [EObject current=null] : (otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )* ) ;
+    public final EObject ruleVacationResource() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token lv_name_1_0=null;
+        Token otherlv_3=null;
+        EObject lv_intervals_2_0 = null;
+
+        EObject lv_intervals_4_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9023:28: ( (otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )* ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9024:1: (otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )* )
+            {
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9024:1: (otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )* )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9024:3: otherlv_0= 'vacation' ( (lv_name_1_0= RULE_STRING ) )? ( (lv_intervals_2_0= ruleInterval3 ) ) (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )*
+            {
+            otherlv_0=(Token)match(input,123,FOLLOW_123_in_ruleVacationResource22405); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getVacationResourceAccess().getVacationKeyword_0());
+                
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9028:1: ( (lv_name_1_0= RULE_STRING ) )?
+            int alt82=2;
+            int LA82_0 = input.LA(1);
+
+            if ( (LA82_0==RULE_STRING) ) {
+                alt82=1;
+            }
+            switch (alt82) {
+                case 1 :
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9029:1: (lv_name_1_0= RULE_STRING )
+                    {
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9029:1: (lv_name_1_0= RULE_STRING )
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9030:3: lv_name_1_0= RULE_STRING
+                    {
+                    lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVacationResource22422); 
+
+                    			newLeafNode(lv_name_1_0, grammarAccess.getVacationResourceAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getVacationResourceRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"name",
+                            		lv_name_1_0, 
+                            		"STRING");
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9046:3: ( (lv_intervals_2_0= ruleInterval3 ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9047:1: (lv_intervals_2_0= ruleInterval3 )
+            {
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9047:1: (lv_intervals_2_0= ruleInterval3 )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9048:3: lv_intervals_2_0= ruleInterval3
+            {
+             
+            	        newCompositeNode(grammarAccess.getVacationResourceAccess().getIntervalsInterval3ParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleInterval3_in_ruleVacationResource22449);
+            lv_intervals_2_0=ruleInterval3();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getVacationResourceRule());
+            	        }
+                   		add(
+                   			current, 
+                   			"intervals",
+                    		lv_intervals_2_0, 
+                    		"Interval3");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9064:2: (otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) ) )*
+            loop83:
+            do {
+                int alt83=2;
+                int LA83_0 = input.LA(1);
+
+                if ( (LA83_0==24) ) {
+                    alt83=1;
+                }
+
+
+                switch (alt83) {
+            	case 1 :
+            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9064:4: otherlv_3= ',' ( (lv_intervals_4_0= ruleInterval3 ) )
+            	    {
+            	    otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleVacationResource22462); 
+
+            	        	newLeafNode(otherlv_3, grammarAccess.getVacationResourceAccess().getCommaKeyword_3_0());
+            	        
+            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9068:1: ( (lv_intervals_4_0= ruleInterval3 ) )
+            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9069:1: (lv_intervals_4_0= ruleInterval3 )
+            	    {
+            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9069:1: (lv_intervals_4_0= ruleInterval3 )
+            	    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:9070:3: lv_intervals_4_0= ruleInterval3
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getVacationResourceAccess().getIntervalsInterval3ParserRuleCall_3_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleInterval3_in_ruleVacationResource22483);
+            	    lv_intervals_4_0=ruleInterval3();
+
+            	    state._fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getVacationResourceRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"intervals",
+            	            		lv_intervals_4_0, 
+            	            		"Interval3");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop83;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVacationResource"
 
 
     // $ANTLR start "entryRuleWeekStarts"
@@ -32571,20 +32571,20 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleInterval3_in_ruleVacation22111 = new BitSet(new long[]{0x0000000001000002L});
     public static final BitSet FOLLOW_24_in_ruleVacation22124 = new BitSet(new long[]{0x0000000000000080L});
     public static final BitSet FOLLOW_ruleInterval3_in_ruleVacation22145 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_ruleVacationResource_in_entryRuleVacationResource22183 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVacationResource22193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_123_in_ruleVacationResource22230 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleVacationResource22247 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleInterval3_in_ruleVacationResource22274 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleVacationResource22287 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleInterval3_in_ruleVacationResource22308 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_ruleVacationShift_in_entryRuleVacationShift22346 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVacationShift22356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_123_in_ruleVacationShift22393 = new BitSet(new long[]{0x00000000000000A2L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleVacationShift22419 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_ruleInterval3_in_ruleVacationShift22447 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_24_in_ruleVacationShift22460 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleInterval3_in_ruleVacationShift22481 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_ruleVacationShift_in_entryRuleVacationShift22183 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVacationShift22193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_123_in_ruleVacationShift22230 = new BitSet(new long[]{0x00000000000000A2L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleVacationShift22256 = new BitSet(new long[]{0x0000000000000082L});
+    public static final BitSet FOLLOW_ruleInterval3_in_ruleVacationShift22284 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_24_in_ruleVacationShift22297 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_ruleInterval3_in_ruleVacationShift22318 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_ruleVacationResource_in_entryRuleVacationResource22358 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVacationResource22368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_123_in_ruleVacationResource22405 = new BitSet(new long[]{0x00000000000000A0L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleVacationResource22422 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_ruleInterval3_in_ruleVacationResource22449 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_24_in_ruleVacationResource22462 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_ruleInterval3_in_ruleVacationResource22483 = new BitSet(new long[]{0x0000000001000002L});
     public static final BitSet FOLLOW_ruleWeekStarts_in_entryRuleWeekStarts22523 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWeekStarts22533 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_145_in_ruleWeekStarts22576 = new BitSet(new long[]{0x0000000000000002L});

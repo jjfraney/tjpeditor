@@ -891,17 +891,17 @@ TrackingScenario: 'trackingscenario' scenario = [Scenario];
 TreeLevel: 'treelevel' level=STRING;
 
 // http://www.taskjuggler.org/tj3/manual/vacation.html
-Vacation: 'vacation' name=STRING intervals+=Interval3 (',' intervals+=Interval3)*;
+Vacation:
+	'vacation' name=STRING intervals+=Interval3 (',' intervals+=Interval3)*;
+
+// http://www.taskjuggler.org/tj3/manual/vacation.shift.html	
+VacationShift returns Vacation: 
+	'vacation' {Vacation} name=STRING?
+		(intervals+=Interval3 (',' intervals+=Interval3)*)?;
 
 // http://www.taskjuggler.org/tj3/manual/vacation.resource.html
 VacationResource returns Vacation:
 	'vacation' name=STRING? intervals+=Interval3 (',' intervals+=Interval3)*;
-
-// http://www.taskjuggler.org/tj3/manual/vacation.shift.html	
-VacationShift:
-	// TODO: both name and interval can be empty: explain
-	'vacation' {VacationShift} name=STRING?
-		(intervals+=Interval3 (',' intervals+=Interval3)*)?;
 
 // http://www.taskjuggler.org/tj3/manual/warn.html
 Warn: 'warn' expression=LogicalExpression;

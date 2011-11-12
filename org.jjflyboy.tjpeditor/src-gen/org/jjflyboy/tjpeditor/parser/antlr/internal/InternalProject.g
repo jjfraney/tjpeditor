@@ -8918,6 +8918,95 @@ ruleVacation returns [EObject current=null]
 
 
 
+// Entry rule entryRuleVacationShift
+entryRuleVacationShift returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getVacationShiftRule()); }
+	 iv_ruleVacationShift=ruleVacationShift 
+	 { $current=$iv_ruleVacationShift.current; } 
+	 EOF 
+;
+
+// Rule VacationShift
+ruleVacationShift returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='vacation' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getVacationShiftAccess().getVacationKeyword_0());
+    }
+(
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getVacationShiftAccess().getVacationAction_1(),
+            $current);
+    }
+)(
+(
+		lv_name_2_0=RULE_STRING
+		{
+			newLeafNode(lv_name_2_0, grammarAccess.getVacationShiftAccess().getNameSTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getVacationShiftRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_2_0, 
+        		"STRING");
+	    }
+
+)
+)?((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getVacationShiftAccess().getIntervalsInterval3ParserRuleCall_3_0_0()); 
+	    }
+		lv_intervals_3_0=ruleInterval3		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getVacationShiftRule());
+	        }
+       		add(
+       			$current, 
+       			"intervals",
+        		lv_intervals_3_0, 
+        		"Interval3");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_4=',' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getVacationShiftAccess().getCommaKeyword_3_1_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getVacationShiftAccess().getIntervalsInterval3ParserRuleCall_3_1_1_0()); 
+	    }
+		lv_intervals_5_0=ruleInterval3		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getVacationShiftRule());
+	        }
+       		add(
+       			$current, 
+       			"intervals",
+        		lv_intervals_5_0, 
+        		"Interval3");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?)
+;
+
+
+
+
+
 // Entry rule entryRuleVacationResource
 entryRuleVacationResource returns [EObject current=null] 
 	:
@@ -8995,95 +9084,6 @@ ruleVacationResource returns [EObject current=null]
 
 )
 ))*)
-;
-
-
-
-
-
-// Entry rule entryRuleVacationShift
-entryRuleVacationShift returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getVacationShiftRule()); }
-	 iv_ruleVacationShift=ruleVacationShift 
-	 { $current=$iv_ruleVacationShift.current; } 
-	 EOF 
-;
-
-// Rule VacationShift
-ruleVacationShift returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='vacation' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getVacationShiftAccess().getVacationKeyword_0());
-    }
-(
-    {
-        $current = forceCreateModelElement(
-            grammarAccess.getVacationShiftAccess().getVacationShiftAction_1(),
-            $current);
-    }
-)(
-(
-		lv_name_2_0=RULE_STRING
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getVacationShiftAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getVacationShiftRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"STRING");
-	    }
-
-)
-)?((
-(
-		{ 
-	        newCompositeNode(grammarAccess.getVacationShiftAccess().getIntervalsInterval3ParserRuleCall_3_0_0()); 
-	    }
-		lv_intervals_3_0=ruleInterval3		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getVacationShiftRule());
-	        }
-       		add(
-       			$current, 
-       			"intervals",
-        		lv_intervals_3_0, 
-        		"Interval3");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_4=',' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getVacationShiftAccess().getCommaKeyword_3_1_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getVacationShiftAccess().getIntervalsInterval3ParserRuleCall_3_1_1_0()); 
-	    }
-		lv_intervals_5_0=ruleInterval3		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getVacationShiftRule());
-	        }
-       		add(
-       			$current, 
-       			"intervals",
-        		lv_intervals_5_0, 
-        		"Interval3");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*)?)
 ;
 
 

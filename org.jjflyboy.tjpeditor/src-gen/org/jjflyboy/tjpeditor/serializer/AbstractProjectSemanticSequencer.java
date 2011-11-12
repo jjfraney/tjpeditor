@@ -143,7 +143,6 @@ import org.jjflyboy.tjpeditor.project.ToolTip;
 import org.jjflyboy.tjpeditor.project.TrackingScenario;
 import org.jjflyboy.tjpeditor.project.TreeLevel;
 import org.jjflyboy.tjpeditor.project.Vacation;
-import org.jjflyboy.tjpeditor.project.VacationShift;
 import org.jjflyboy.tjpeditor.project.Warn;
 import org.jjflyboy.tjpeditor.project.WeekStarts;
 import org.jjflyboy.tjpeditor.project.Weekdays;
@@ -1125,15 +1124,13 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					sequence_VacationResource(context, (Vacation) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getVacationShiftRule()) {
+					sequence_VacationShift(context, (Vacation) semanticObject); 
+					return; 
+				}
 				else if(context == grammarAccess.getGlobalAttributeRule() ||
 				   context == grammarAccess.getVacationRule()) {
 					sequence_Vacation(context, (Vacation) semanticObject); 
-					return; 
-				}
-				else break;
-			case ProjectPackage.VACATION_SHIFT:
-				if(context == grammarAccess.getVacationShiftRule()) {
-					sequence_VacationShift(context, (VacationShift) semanticObject); 
 					return; 
 				}
 				else break;
@@ -4095,7 +4092,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	 *    name[0, 1]
 	 *    intervals[0, *]
 	 */
-	protected void sequence_VacationShift(EObject context, VacationShift semanticObject) {
+	protected void sequence_VacationShift(EObject context, Vacation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

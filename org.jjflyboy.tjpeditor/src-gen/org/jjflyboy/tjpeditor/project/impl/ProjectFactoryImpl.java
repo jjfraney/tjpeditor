@@ -230,7 +230,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.TRACKING_SCENARIO: return createTrackingScenario();
       case ProjectPackage.TREE_LEVEL: return createTreeLevel();
       case ProjectPackage.VACATION: return createVacation();
-      case ProjectPackage.VACATION_SHIFT: return createVacationShift();
       case ProjectPackage.WARN: return createWarn();
       case ProjectPackage.WEEK_STARTS: return createWeekStarts();
       case ProjectPackage.WEEKLY_MAX: return createWeeklyMax();
@@ -2145,17 +2144,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     VacationImpl vacation = new VacationImpl();
     return vacation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VacationShift createVacationShift()
-  {
-    VacationShiftImpl vacationShift = new VacationShiftImpl();
-    return vacationShift;
   }
 
   /**

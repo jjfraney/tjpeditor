@@ -1640,10 +1640,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSloppyINTTerminalRuleCall_1_1_1_1_0 = (RuleCall)cSloppyAssignment_1_1_1_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
-		//// http://www.taskjuggler.org/tj3/manual/booking.html	
 		//// http://www.taskjuggler.org/tj3/manual/booking.task.html
+		//// http://www.taskjuggler.org/tj3/manual/booking.resource.html
 		//// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
 		//// http://www.taskjuggler.org/tj3/manual/overtime.booking.html
+		//// TODO: Validate these values in sloppy and overtime
 		////	WORKING_TIME_ONLY = '0' |
 		////	PLUS_OFF_DUTY = '1' |
 		////	PLUS_VACATION = '2'
@@ -6291,6 +6292,63 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getIntervalsInterval3ParserRuleCall_3_1_0() { return cIntervalsInterval3ParserRuleCall_3_1_0; }
 	}
 
+	public class VacationShiftElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VacationShift");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cVacationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Action cVacationAction_1 = (Action)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cIntervalsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cIntervalsInterval3ParserRuleCall_3_0_0 = (RuleCall)cIntervalsAssignment_3_0.eContents().get(0);
+		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
+		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
+		private final Assignment cIntervalsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
+		private final RuleCall cIntervalsInterval3ParserRuleCall_3_1_1_0 = (RuleCall)cIntervalsAssignment_3_1_1.eContents().get(0);
+		
+		//// http://www.taskjuggler.org/tj3/manual/vacation.shift.html	
+		//VacationShift returns Vacation:
+		//	"vacation" {Vacation} name=STRING? (intervals+=Interval3 ("," intervals+=Interval3)*)?;
+		public ParserRule getRule() { return rule; }
+
+		//"vacation" {Vacation} name=STRING? (intervals+=Interval3 ("," intervals+=Interval3)*)?
+		public Group getGroup() { return cGroup; }
+
+		//"vacation"
+		public Keyword getVacationKeyword_0() { return cVacationKeyword_0; }
+
+		//{Vacation}
+		public Action getVacationAction_1() { return cVacationAction_1; }
+
+		//name=STRING?
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+
+		//(intervals+=Interval3 ("," intervals+=Interval3)*)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//intervals+=Interval3
+		public Assignment getIntervalsAssignment_3_0() { return cIntervalsAssignment_3_0; }
+
+		//Interval3
+		public RuleCall getIntervalsInterval3ParserRuleCall_3_0_0() { return cIntervalsInterval3ParserRuleCall_3_0_0; }
+
+		//("," intervals+=Interval3)*
+		public Group getGroup_3_1() { return cGroup_3_1; }
+
+		//","
+		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
+
+		//intervals+=Interval3
+		public Assignment getIntervalsAssignment_3_1_1() { return cIntervalsAssignment_3_1_1; }
+
+		//Interval3
+		public RuleCall getIntervalsInterval3ParserRuleCall_3_1_1_0() { return cIntervalsInterval3ParserRuleCall_3_1_1_0; }
+	}
+
 	public class VacationResourceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VacationResource");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -6338,65 +6396,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Interval3
 		public RuleCall getIntervalsInterval3ParserRuleCall_3_1_0() { return cIntervalsInterval3ParserRuleCall_3_1_0; }
-	}
-
-	public class VacationShiftElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VacationShift");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cVacationKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Action cVacationShiftAction_1 = (Action)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cIntervalsAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final RuleCall cIntervalsInterval3ParserRuleCall_3_0_0 = (RuleCall)cIntervalsAssignment_3_0.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cIntervalsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cIntervalsInterval3ParserRuleCall_3_1_1_0 = (RuleCall)cIntervalsAssignment_3_1_1.eContents().get(0);
-		
-		//// http://www.taskjuggler.org/tj3/manual/vacation.shift.html	
-		//VacationShift: // TODO: both name and interval can be empty: explain
-		//	"vacation" {VacationShift} name=STRING? (intervals+=Interval3 ("," intervals+=Interval3)*)?;
-		public ParserRule getRule() { return rule; }
-
-		//// TODO: both name and interval can be empty: explain
-		//"vacation" {VacationShift} name=STRING? (intervals+=Interval3 ("," intervals+=Interval3)*)?
-		public Group getGroup() { return cGroup; }
-
-		//// TODO: both name and interval can be empty: explain
-		//"vacation"
-		public Keyword getVacationKeyword_0() { return cVacationKeyword_0; }
-
-		//{VacationShift}
-		public Action getVacationShiftAction_1() { return cVacationShiftAction_1; }
-
-		//name=STRING?
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-
-		//(intervals+=Interval3 ("," intervals+=Interval3)*)?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//intervals+=Interval3
-		public Assignment getIntervalsAssignment_3_0() { return cIntervalsAssignment_3_0; }
-
-		//Interval3
-		public RuleCall getIntervalsInterval3ParserRuleCall_3_0_0() { return cIntervalsInterval3ParserRuleCall_3_0_0; }
-
-		//("," intervals+=Interval3)*
-		public Group getGroup_3_1() { return cGroup_3_1; }
-
-		//","
-		public Keyword getCommaKeyword_3_1_0() { return cCommaKeyword_3_1_0; }
-
-		//intervals+=Interval3
-		public Assignment getIntervalsAssignment_3_1_1() { return cIntervalsAssignment_3_1_1; }
-
-		//Interval3
-		public RuleCall getIntervalsInterval3ParserRuleCall_3_1_1_0() { return cIntervalsInterval3ParserRuleCall_3_1_1_0; }
 	}
 
 	public class WarnElements extends AbstractParserRuleElementFinder {
@@ -9011,8 +9010,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private TrackingScenarioElements pTrackingScenario;
 	private TreeLevelElements pTreeLevel;
 	private VacationElements pVacation;
-	private VacationResourceElements pVacationResource;
 	private VacationShiftElements pVacationShift;
+	private VacationResourceElements pVacationResource;
 	private WarnElements pWarn;
 	private WeekStartsElements pWeekStarts;
 	private WeeklyMaxElements pWeeklyMax;
@@ -9457,10 +9456,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getBalanceAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/booking.html	
 	//// http://www.taskjuggler.org/tj3/manual/booking.task.html
+	//// http://www.taskjuggler.org/tj3/manual/booking.resource.html
 	//// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
 	//// http://www.taskjuggler.org/tj3/manual/overtime.booking.html
+	//// TODO: Validate these values in sloppy and overtime
 	////	WORKING_TIME_ONLY = '0' |
 	////	PLUS_OFF_DUTY = '1' |
 	////	PLUS_VACATION = '2'
@@ -11102,6 +11102,17 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getVacationAccess().getRule();
 	}
 
+	//// http://www.taskjuggler.org/tj3/manual/vacation.shift.html	
+	//VacationShift returns Vacation:
+	//	"vacation" {Vacation} name=STRING? (intervals+=Interval3 ("," intervals+=Interval3)*)?;
+	public VacationShiftElements getVacationShiftAccess() {
+		return (pVacationShift != null) ? pVacationShift : (pVacationShift = new VacationShiftElements());
+	}
+	
+	public ParserRule getVacationShiftRule() {
+		return getVacationShiftAccess().getRule();
+	}
+
 	//// http://www.taskjuggler.org/tj3/manual/vacation.resource.html
 	//VacationResource returns Vacation:
 	//	"vacation" name=STRING? intervals+=Interval3 ("," intervals+=Interval3)*;
@@ -11111,17 +11122,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVacationResourceRule() {
 		return getVacationResourceAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/vacation.shift.html	
-	//VacationShift: // TODO: both name and interval can be empty: explain
-	//	"vacation" {VacationShift} name=STRING? (intervals+=Interval3 ("," intervals+=Interval3)*)?;
-	public VacationShiftElements getVacationShiftAccess() {
-		return (pVacationShift != null) ? pVacationShift : (pVacationShift = new VacationShiftElements());
-	}
-	
-	public ParserRule getVacationShiftRule() {
-		return getVacationShiftAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/warn.html

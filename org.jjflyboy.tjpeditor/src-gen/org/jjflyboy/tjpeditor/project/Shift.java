@@ -143,12 +143,12 @@ public interface Shift extends GlobalAttribute
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Vacation</em>' containment reference.
-   * @see #setVacation(VacationShift)
+   * @see #setVacation(Vacation)
    * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getShift_Vacation()
    * @model containment="true"
    * @generated
    */
-  VacationShift getVacation();
+  Vacation getVacation();
 
   /**
    * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Shift#getVacation <em>Vacation</em>}' containment reference.
@@ -158,7 +158,7 @@ public interface Shift extends GlobalAttribute
    * @see #getVacation()
    * @generated
    */
-  void setVacation(VacationShift value);
+  void setVacation(Vacation value);
 
   /**
    * Returns the value of the '<em><b>Shift</b></em>' containment reference.

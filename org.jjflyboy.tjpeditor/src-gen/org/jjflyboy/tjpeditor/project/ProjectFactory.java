@@ -1484,15 +1484,6 @@ public interface ProjectFactory extends EFactory
   Vacation createVacation();
 
   /**
-   * Returns a new object of class '<em>Vacation Shift</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Vacation Shift</em>'.
-   * @generated
-   */
-  VacationShift createVacationShift();
-
-  /**
    * Returns a new object of class '<em>Warn</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

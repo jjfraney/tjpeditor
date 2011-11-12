@@ -377,7 +377,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//ResourceAttribute"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.173"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.174"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.33"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.181"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.54"/>
@@ -2058,7 +2058,7 @@
             <elements xsi:type="xtext:Group" cardinality="?">
               <elements xsi:type="xtext:Keyword" value="vacation"/>
               <elements xsi:type="xtext:Assignment" feature="vacation" operator="=">
-                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.174"/>
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.173"/>
               </elements>
             </elements>
             <elements xsi:type="xtext:Group" cardinality="?">
@@ -2600,6 +2600,33 @@
         </elements>
       </alternatives>
     </rules>
+    <rules xsi:type="xtext:ParserRule" name="VacationShift">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//Vacation"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="vacation"/>
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//Vacation"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.225"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" feature="intervals" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.80"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="intervals" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.80"/>
+            </elements>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
     <rules xsi:type="xtext:ParserRule" name="VacationResource">
       <type metamodel="/0/@metamodelDeclarations.0">
         <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//Vacation"/>
@@ -2616,33 +2643,6 @@
           <elements xsi:type="xtext:Keyword" value=","/>
           <elements xsi:type="xtext:Assignment" feature="intervals" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.80"/>
-          </elements>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="VacationShift">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//VacationShift"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="vacation"/>
-        <elements xsi:type="xtext:Action">
-          <type metamodel="/0/@metamodelDeclarations.0">
-            <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//VacationShift"/>
-          </type>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.225"/>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="?">
-          <elements xsi:type="xtext:Assignment" feature="intervals" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.80"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="*">
-            <elements xsi:type="xtext:Keyword" value=","/>
-            <elements xsi:type="xtext:Assignment" feature="intervals" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.80"/>
-            </elements>
           </elements>
         </elements>
       </alternatives>

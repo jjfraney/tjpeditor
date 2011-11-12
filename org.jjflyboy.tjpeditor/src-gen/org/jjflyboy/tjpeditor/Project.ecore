@@ -458,7 +458,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="replace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timezone" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vacation" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//VacationShift"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vacation" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Vacation"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="shift" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift"
         containment="true"/>
@@ -588,12 +588,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vacation" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" upperBound="-1"
-        eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval3"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VacationShift">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval3"

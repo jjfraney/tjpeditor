@@ -671,10 +671,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Vacation/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Vacation/intervals"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//VacationShift">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//VacationShift/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//VacationShift/intervals"/>
-    </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Warn">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Warn/expression"/>
     </genClasses>

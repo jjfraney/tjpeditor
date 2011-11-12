@@ -1371,13 +1371,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.VACATION_SHIFT:
-      {
-        VacationShift vacationShift = (VacationShift)theEObject;
-        T result = caseVacationShift(vacationShift);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ProjectPackage.WARN:
       {
         Warn warn = (Warn)theEObject;
@@ -4209,22 +4202,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVacation(Vacation object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Vacation Shift</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Vacation Shift</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseVacationShift(VacationShift object)
   {
     return null;
   }
