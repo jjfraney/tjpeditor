@@ -23,11 +23,11 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Shifts extends TaskAttribute, ResourceAttribute, AllocateResourceAttribute
+public interface Shifts extends ShiftsResource, ShiftsTask
 {
   /**
    * Returns the value of the '<em><b>Limits</b></em>' containment reference list.
-   * The list contents are of type {@link org.jjflyboy.tjpeditor.project.ShiftLimit}.
+   * The list contents are of type {@link org.jjflyboy.tjpeditor.project.ShiftsLimit}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Limits</em>' containment reference list isn't clear,
@@ -39,6 +39,6 @@ public interface Shifts extends TaskAttribute, ResourceAttribute, AllocateResour
    * @model containment="true"
    * @generated
    */
-  EList<ShiftLimit> getLimits();
+  EList<ShiftsLimit> getLimits();
 
 } // Shifts

@@ -502,6 +502,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Email email = (Email)theEObject;
         T result = caseEmail(email);
+        if (result == null) result = caseResourceAttribute(email);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -546,6 +547,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Fail fail = (Fail)theEObject;
         T result = caseFail(fail);
+        if (result == null) result = caseResourceAttribute(fail);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -700,6 +702,7 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = caseJournalEntry(journalEntry);
         if (result == null) result = caseProjectAttribute(journalEntry);
         if (result == null) result = caseTaskAttribute(journalEntry);
+        if (result == null) result = caseResourceAttribute(journalEntry);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -772,6 +775,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Managers managers = (Managers)theEObject;
         T result = caseManagers(managers);
+        if (result == null) result = caseResourceAttribute(managers);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1125,9 +1129,41 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Shifts shifts = (Shifts)theEObject;
         T result = caseShifts(shifts);
-        if (result == null) result = caseTaskAttribute(shifts);
+        if (result == null) result = caseShiftsResource(shifts);
+        if (result == null) result = caseShiftsTask(shifts);
         if (result == null) result = caseResourceAttribute(shifts);
-        if (result == null) result = caseAllocateResourceAttribute(shifts);
+        if (result == null) result = caseTaskAttribute(shifts);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SHIFTS_LIMIT:
+      {
+        ShiftsLimit shiftsLimit = (ShiftsLimit)theEObject;
+        T result = caseShiftsLimit(shiftsLimit);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SHIFTS_ALLOCATE:
+      {
+        ShiftsAllocate shiftsAllocate = (ShiftsAllocate)theEObject;
+        T result = caseShiftsAllocate(shiftsAllocate);
+        if (result == null) result = caseAllocateResourceAttribute(shiftsAllocate);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SHIFTS_RESOURCE:
+      {
+        ShiftsResource shiftsResource = (ShiftsResource)theEObject;
+        T result = caseShiftsResource(shiftsResource);
+        if (result == null) result = caseResourceAttribute(shiftsResource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SHIFTS_TASK:
+      {
+        ShiftsTask shiftsTask = (ShiftsTask)theEObject;
+        T result = caseShiftsTask(shiftsTask);
+        if (result == null) result = caseTaskAttribute(shiftsTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1375,6 +1411,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Warn warn = (Warn)theEObject;
         T result = caseWarn(warn);
+        if (result == null) result = caseResourceAttribute(warn);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1522,13 +1559,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseNumberFormat(realFormat);
         if (result == null) result = caseProjectAttribute(realFormat);
         if (result == null) result = caseNikuReportAttribute(realFormat);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ProjectPackage.SHIFT_LIMIT:
-      {
-        ShiftLimit shiftLimit = (ShiftLimit)theEObject;
-        T result = caseShiftLimit(shiftLimit);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -3727,6 +3757,70 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Shifts Limit</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Shifts Limit</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseShiftsLimit(ShiftsLimit object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Shifts Allocate</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Shifts Allocate</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseShiftsAllocate(ShiftsAllocate object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Shifts Resource</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Shifts Resource</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseShiftsResource(ShiftsResource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Shifts Task</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Shifts Task</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseShiftsTask(ShiftsTask object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Short Time Format</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -4490,22 +4584,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRealFormat(RealFormat object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Shift Limit</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Shift Limit</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseShiftLimit(ShiftLimit object)
   {
     return null;
   }

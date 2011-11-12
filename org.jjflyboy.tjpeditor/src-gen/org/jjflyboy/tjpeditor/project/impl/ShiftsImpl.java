@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
-import org.jjflyboy.tjpeditor.project.ShiftLimit;
 import org.jjflyboy.tjpeditor.project.Shifts;
+import org.jjflyboy.tjpeditor.project.ShiftsLimit;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ import org.jjflyboy.tjpeditor.project.Shifts;
  *
  * @generated
  */
-public class ShiftsImpl extends TaskAttributeImpl implements Shifts
+public class ShiftsImpl extends ShiftsResourceImpl implements Shifts
 {
   /**
    * The cached value of the '{@link #getLimits() <em>Limits</em>}' containment reference list.
@@ -44,7 +44,7 @@ public class ShiftsImpl extends TaskAttributeImpl implements Shifts
    * @generated
    * @ordered
    */
-  protected EList<ShiftLimit> limits;
+  protected EList<ShiftsLimit> limits;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,11 +72,11 @@ public class ShiftsImpl extends TaskAttributeImpl implements Shifts
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ShiftLimit> getLimits()
+  public EList<ShiftsLimit> getLimits()
   {
     if (limits == null)
     {
-      limits = new EObjectContainmentEList<ShiftLimit>(ShiftLimit.class, this, ProjectPackage.SHIFTS__LIMITS);
+      limits = new EObjectContainmentEList<ShiftsLimit>(ShiftsLimit.class, this, ProjectPackage.SHIFTS__LIMITS);
     }
     return limits;
   }
@@ -126,7 +126,7 @@ public class ShiftsImpl extends TaskAttributeImpl implements Shifts
     {
       case ProjectPackage.SHIFTS__LIMITS:
         getLimits().clear();
-        getLimits().addAll((Collection<? extends ShiftLimit>)newValue);
+        getLimits().addAll((Collection<? extends ShiftsLimit>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

@@ -738,6 +738,26 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createShiftsAdapter();
       }
       @Override
+      public Adapter caseShiftsLimit(ShiftsLimit object)
+      {
+        return createShiftsLimitAdapter();
+      }
+      @Override
+      public Adapter caseShiftsAllocate(ShiftsAllocate object)
+      {
+        return createShiftsAllocateAdapter();
+      }
+      @Override
+      public Adapter caseShiftsResource(ShiftsResource object)
+      {
+        return createShiftsResourceAdapter();
+      }
+      @Override
+      public Adapter caseShiftsTask(ShiftsTask object)
+      {
+        return createShiftsTaskAdapter();
+      }
+      @Override
       public Adapter caseShortTimeFormat(ShortTimeFormat object)
       {
         return createShortTimeFormatAdapter();
@@ -976,11 +996,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseRealFormat(RealFormat object)
       {
         return createRealFormatAdapter();
-      }
-      @Override
-      public Adapter caseShiftLimit(ShiftLimit object)
-      {
-        return createShiftLimitAdapter();
       }
       @Override
       public Adapter caseSort(Sort object)
@@ -3025,6 +3040,66 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ShiftsLimit <em>Shifts Limit</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ShiftsLimit
+   * @generated
+   */
+  public Adapter createShiftsLimitAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ShiftsAllocate <em>Shifts Allocate</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ShiftsAllocate
+   * @generated
+   */
+  public Adapter createShiftsAllocateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ShiftsResource <em>Shifts Resource</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ShiftsResource
+   * @generated
+   */
+  public Adapter createShiftsResourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ShiftsTask <em>Shifts Task</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ShiftsTask
+   * @generated
+   */
+  public Adapter createShiftsTaskAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ShortTimeFormat <em>Short Time Format</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -3740,21 +3815,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRealFormatAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ShiftLimit <em>Shift Limit</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.ShiftLimit
-   * @generated
-   */
-  public Adapter createShiftLimitAdapter()
   {
     return null;
   }

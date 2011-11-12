@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.Warn;
@@ -28,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.Warn;
  *
  * @generated
  */
-public class WarnImpl extends MinimalEObjectImpl.Container implements Warn
+public class WarnImpl extends ResourceAttributeImpl implements Warn
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.

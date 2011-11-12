@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Managers</b></em>'.
@@ -25,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Managers extends EObject
+public interface Managers extends ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Resources</b></em>' reference list.

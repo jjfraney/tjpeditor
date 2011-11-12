@@ -192,7 +192,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="effort" eType="#//DurationQuantity"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Email">
+  <eClassifiers xsi:type="ecore:EClass" name="Email" eSuperTypes="#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//TaskAttribute #//ReportAttribute #//NewTaskAttribute #//NikuReportAttribute #//ColumnAttribute #//TaskTimesheetAttribute #//TimesheetReportAttribute">
@@ -213,7 +213,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//TextExtend"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Fail">
+  <eClassifiers xsi:type="ecore:EClass" name="Fail" eSuperTypes="#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Flags" eSuperTypes="#//GlobalAttribute #//AccountAttribute #//TaskAttribute #//ReportAttribute #//ResourceAttribute #//StatusStatusSheetAttribute">
@@ -285,7 +285,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="summary" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JournalEntry" eSuperTypes="#//ProjectAttribute #//TaskAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="JournalEntry" eSuperTypes="#//ProjectAttribute #//TaskAttribute #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="headline" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="alert" eType="#//Alert"
@@ -317,7 +317,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="LoadUnit" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//LoadDisplayUnit"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Managers">
+  <eClassifiers xsi:type="ecore:EClass" name="Managers" eSuperTypes="#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resources" unique="false"
         upperBound="-1" eType="#//Resource"/>
   </eClassifiers>
@@ -450,10 +450,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="ShiftTimesheet" eSuperTypes="#//TimesheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="shift" eType="#//Shift"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shifts" eSuperTypes="#//TaskAttribute #//ResourceAttribute #//AllocateResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Shifts" eSuperTypes="#//ShiftsResource #//ShiftsTask">
     <eStructuralFeatures xsi:type="ecore:EReference" name="limits" upperBound="-1"
-        eType="#//ShiftLimit" containment="true"/>
+        eType="#//ShiftsLimit" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ShiftsLimit">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shift" eType="#//Shift"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="limit" eType="#//Interval2"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ShiftsAllocate" eSuperTypes="#//AllocateResourceAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shift" eType="#//Shift"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" upperBound="-1"
+        eType="#//Interval3" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ShiftsResource" eSuperTypes="#//ResourceAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ShiftsTask" eSuperTypes="#//TaskAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="ShortTimeFormat" eSuperTypes="#//ProjectAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortTimeFormat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -568,7 +580,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" upperBound="-1"
         eType="#//Interval3" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Warn">
+  <eClassifiers xsi:type="ecore:EClass" name="Warn" eSuperTypes="#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WeekStarts" eSuperTypes="#//ProjectAttribute">
@@ -643,11 +655,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="thousandsSeparator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fractionSeparator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fractionDigits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ShiftLimit">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="shift" eType="#//Shift"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" upperBound="-1"
-        eType="#//Interval3" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sort" eSuperTypes="#//SortResources #//SortTasks">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>

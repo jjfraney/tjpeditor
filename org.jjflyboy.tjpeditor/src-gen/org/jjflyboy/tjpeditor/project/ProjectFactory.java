@@ -1214,6 +1214,42 @@ public interface ProjectFactory extends EFactory
   Shifts createShifts();
 
   /**
+   * Returns a new object of class '<em>Shifts Limit</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Shifts Limit</em>'.
+   * @generated
+   */
+  ShiftsLimit createShiftsLimit();
+
+  /**
+   * Returns a new object of class '<em>Shifts Allocate</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Shifts Allocate</em>'.
+   * @generated
+   */
+  ShiftsAllocate createShiftsAllocate();
+
+  /**
+   * Returns a new object of class '<em>Shifts Resource</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Shifts Resource</em>'.
+   * @generated
+   */
+  ShiftsResource createShiftsResource();
+
+  /**
+   * Returns a new object of class '<em>Shifts Task</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Shifts Task</em>'.
+   * @generated
+   */
+  ShiftsTask createShiftsTask();
+
+  /**
    * Returns a new object of class '<em>Short Time Format</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1644,15 +1680,6 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   RealFormat createRealFormat();
-
-  /**
-   * Returns a new object of class '<em>Shift Limit</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Shift Limit</em>'.
-   * @generated
-   */
-  ShiftLimit createShiftLimit();
 
   /**
    * Returns a new object of class '<em>Sort</em>'.

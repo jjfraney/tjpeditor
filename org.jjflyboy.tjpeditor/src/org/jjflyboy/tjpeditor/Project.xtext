@@ -127,7 +127,7 @@ TaskAttribute:
 		| Responsible
 		| Scheduled
 		| Scheduling
-		| Shifts
+		| ShiftsTask
 		| Start
 		| StartCredit
 		| SupplementTask
@@ -199,17 +199,23 @@ SupplementResource:
 
 ResourceAttribute:
 	(
-		VacationResource
-		| BookingResource
-		| WorkingHours
+		BookingResource
 		| Efficiency
+		| Email
+		| Fail
 		| Flags
+		| JournalEntry
 		| Limits
+		| Managers
 		| Purge
 		| Rate
 		| Resource
-		| Shifts
+// 		| Shift // deprecated
+		| ShiftsResource
 		| SupplementResource
+	 	| VacationResource
+	 	| Warn
+	 	| WorkingHours
 	);
 
 // http://www.taskjuggler.org/tj3/manual/allocate.html
@@ -221,7 +227,7 @@ AllocateResourceAttribute:
 	| Mandatory
 	| Persistent
 	| Select
-	| Shifts
+	| ShiftsAllocate
 ;
 
 // http://www.taskjuggler.org/tj3/manual/navigator.html
@@ -626,8 +632,8 @@ ProjectIds: 'projectids' ids += ID (',' ids+= ID)*;
 Prolog: 'prolog' RichText;
 
 // http://www.taskjuggler.org/tj3/manual/purge.html
-// TODO: I wonder what a 'list attribute' is.
-Purge: 'purge' listAttribute=STRING;
+// TODO: there is a closed set of listAttributes, so, this can be validated
+Purge: 'purge' listAttribute=ID;
 
 
 
@@ -719,8 +725,6 @@ Select: 'select' argument=SelectArgument;
 SelfContained: 'selfcontained' selfcontained=YesNo;
 
 // http://www.taskjuggler.org/tj3/manual/shift.html
-// http://www.taskjuggler.org/tj3/manual/shift.resource.html
-// http://www.taskjuggler.org/tj3/manual/shifts.task.html
 Shift:
 	'shift' id=ID? name=STRING ( '{'
 		((replace='replace')? & 
@@ -730,13 +734,23 @@ Shift:
 		('workinghours' workingHours=WorkingHours)?)
 	'}')?;
 
+// http://www.taskjuggler.org/tj3/manual/shift.resource.html - deprecated
+// http://www.taskjuggler.org/tj3/manual/shifts.task.html - deprecated
+
 // http://www.taskjuggler.org/tj3/manual/shift.timesheet.html
 ShiftTimesheet: 'shift' shift=[Shift];
 
-// http://www.taskjuggler.org/tj3/manual/shifts.resource.html
-// http://www.taskjuggler.org/tj3/manual/shifts.task.html
+Shifts: 'shifts' limits+=ShiftsLimit (',' limits+=ShiftsLimit)*;
+ShiftsLimit: shift=[Shift] (limit=Interval2)?;
+
 // http://www.taskjuggler.org/tj3/manual/shifts.allocate.html
-Shifts: 'shifts' limits += ShiftLimit (',' limits+=ShiftLimit)*;
+ShiftsAllocate: 'shifts' shift=[Shift] ((intervals+=Interval3) (',' intervals+=Interval3)*)?;
+
+// http://www.taskjuggler.org/tj3/manual/shifts.resource.html
+ShiftsResource: Shifts;
+
+//http://www.taskjuggler.org/tj3/manual/shifts.task.html
+ShiftsTask: Shifts;
 
 // http://www.taskjuggler.org/tj3/manual/shorttimeformat.html
 ShortTimeFormat: 'shorttimeformat' shortTimeFormat=STRING;
@@ -1014,8 +1028,6 @@ LimitAttribute:
 RealFormat:
 	negativePrefix=STRING negativeSuffix=STRING thousandsSeparator=STRING fractionSeparator=STRING fractionDigits=INT;
 
-// supports Shifts
-ShiftLimit: shift=[Shift] ((intervals+=Interval3) (',' intervals+=Interval3)*)?;
 
 // http://www.taskjuggler.org/tj3/manual/sorttasks.html
 // http://www.taskjuggler.org/tj3/manual/sortresources.html

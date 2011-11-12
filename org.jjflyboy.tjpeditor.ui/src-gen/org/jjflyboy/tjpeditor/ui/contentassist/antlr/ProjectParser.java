@@ -249,6 +249,10 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getShiftTimesheetAccess().getGroup(), "rule__ShiftTimesheet__Group__0");
 					put(grammarAccess.getShiftsAccess().getGroup(), "rule__Shifts__Group__0");
 					put(grammarAccess.getShiftsAccess().getGroup_2(), "rule__Shifts__Group_2__0");
+					put(grammarAccess.getShiftsLimitAccess().getGroup(), "rule__ShiftsLimit__Group__0");
+					put(grammarAccess.getShiftsAllocateAccess().getGroup(), "rule__ShiftsAllocate__Group__0");
+					put(grammarAccess.getShiftsAllocateAccess().getGroup_2(), "rule__ShiftsAllocate__Group_2__0");
+					put(grammarAccess.getShiftsAllocateAccess().getGroup_2_1(), "rule__ShiftsAllocate__Group_2_1__0");
 					put(grammarAccess.getShortTimeFormatAccess().getGroup(), "rule__ShortTimeFormat__Group__0");
 					put(grammarAccess.getSortJournalEntriesAccess().getGroup(), "rule__SortJournalEntries__Group__0");
 					put(grammarAccess.getSortJournalEntriesAccess().getGroup_2(), "rule__SortJournalEntries__Group_2__0");
@@ -321,9 +325,6 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLimitAttributeAccess().getGroup_2_2(), "rule__LimitAttribute__Group_2_2__0");
 					put(grammarAccess.getLimitAttributeAccess().getGroup_3(), "rule__LimitAttribute__Group_3__0");
 					put(grammarAccess.getRealFormatAccess().getGroup(), "rule__RealFormat__Group__0");
-					put(grammarAccess.getShiftLimitAccess().getGroup(), "rule__ShiftLimit__Group__0");
-					put(grammarAccess.getShiftLimitAccess().getGroup_1(), "rule__ShiftLimit__Group_1__0");
-					put(grammarAccess.getShiftLimitAccess().getGroup_1_1(), "rule__ShiftLimit__Group_1_1__0");
 					put(grammarAccess.getSortAccess().getGroup(), "rule__Sort__Group__0");
 					put(grammarAccess.getSortAccess().getGroup_1(), "rule__Sort__Group_1__0");
 					put(grammarAccess.getTaskDependencyAccess().getGroup(), "rule__TaskDependency__Group__0");
@@ -517,6 +518,11 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getShiftTimesheetAccess().getShiftAssignment_1(), "rule__ShiftTimesheet__ShiftAssignment_1");
 					put(grammarAccess.getShiftsAccess().getLimitsAssignment_1(), "rule__Shifts__LimitsAssignment_1");
 					put(grammarAccess.getShiftsAccess().getLimitsAssignment_2_1(), "rule__Shifts__LimitsAssignment_2_1");
+					put(grammarAccess.getShiftsLimitAccess().getShiftAssignment_0(), "rule__ShiftsLimit__ShiftAssignment_0");
+					put(grammarAccess.getShiftsLimitAccess().getLimitAssignment_1(), "rule__ShiftsLimit__LimitAssignment_1");
+					put(grammarAccess.getShiftsAllocateAccess().getShiftAssignment_1(), "rule__ShiftsAllocate__ShiftAssignment_1");
+					put(grammarAccess.getShiftsAllocateAccess().getIntervalsAssignment_2_0(), "rule__ShiftsAllocate__IntervalsAssignment_2_0");
+					put(grammarAccess.getShiftsAllocateAccess().getIntervalsAssignment_2_1_1(), "rule__ShiftsAllocate__IntervalsAssignment_2_1_1");
 					put(grammarAccess.getShortTimeFormatAccess().getShortTimeFormatAssignment_1(), "rule__ShortTimeFormat__ShortTimeFormatAssignment_1");
 					put(grammarAccess.getSortJournalEntriesAccess().getCriteriaAssignment_1(), "rule__SortJournalEntries__CriteriaAssignment_1");
 					put(grammarAccess.getSortJournalEntriesAccess().getCriteriaAssignment_2_1(), "rule__SortJournalEntries__CriteriaAssignment_2_1");
@@ -614,9 +620,6 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRealFormatAccess().getThousandsSeparatorAssignment_2(), "rule__RealFormat__ThousandsSeparatorAssignment_2");
 					put(grammarAccess.getRealFormatAccess().getFractionSeparatorAssignment_3(), "rule__RealFormat__FractionSeparatorAssignment_3");
 					put(grammarAccess.getRealFormatAccess().getFractionDigitsAssignment_4(), "rule__RealFormat__FractionDigitsAssignment_4");
-					put(grammarAccess.getShiftLimitAccess().getShiftAssignment_0(), "rule__ShiftLimit__ShiftAssignment_0");
-					put(grammarAccess.getShiftLimitAccess().getIntervalsAssignment_1_0(), "rule__ShiftLimit__IntervalsAssignment_1_0");
-					put(grammarAccess.getShiftLimitAccess().getIntervalsAssignment_1_1_1(), "rule__ShiftLimit__IntervalsAssignment_1_1_1");
 					put(grammarAccess.getSortAccess().getIdAssignment_0_0(), "rule__Sort__IdAssignment_0_0");
 					put(grammarAccess.getSortAccess().getCriteriaAssignment_0_1(), "rule__Sort__CriteriaAssignment_0_1");
 					put(grammarAccess.getSortAccess().getCriteriaAssignment_1_1(), "rule__Sort__CriteriaAssignment_1_1");

@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.Email;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
@@ -28,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class EmailImpl extends MinimalEObjectImpl.Container implements Email
+public class EmailImpl extends ResourceAttributeImpl implements Email
 {
   /**
    * The default value of the '{@link #getAddress() <em>Address</em>}' attribute.

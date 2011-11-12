@@ -11,8 +11,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.jjflyboy.tjpeditor.project.Managers;
@@ -32,7 +30,7 @@ import org.jjflyboy.tjpeditor.project.Resource;
  *
  * @generated
  */
-public class ManagersImpl extends MinimalEObjectImpl.Container implements Managers
+public class ManagersImpl extends ResourceAttributeImpl implements Managers
 {
   /**
    * The cached value of the '{@link #getResources() <em>Resources</em>}' reference list.

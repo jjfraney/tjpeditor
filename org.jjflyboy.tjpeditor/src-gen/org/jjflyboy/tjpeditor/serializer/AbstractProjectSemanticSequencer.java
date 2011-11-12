@@ -111,9 +111,10 @@ import org.jjflyboy.tjpeditor.project.Scheduling;
 import org.jjflyboy.tjpeditor.project.Select;
 import org.jjflyboy.tjpeditor.project.SelfContained;
 import org.jjflyboy.tjpeditor.project.Shift;
-import org.jjflyboy.tjpeditor.project.ShiftLimit;
 import org.jjflyboy.tjpeditor.project.ShiftTimesheet;
 import org.jjflyboy.tjpeditor.project.Shifts;
+import org.jjflyboy.tjpeditor.project.ShiftsAllocate;
+import org.jjflyboy.tjpeditor.project.ShiftsLimit;
 import org.jjflyboy.tjpeditor.project.ShortTimeFormat;
 import org.jjflyboy.tjpeditor.project.Sort;
 import org.jjflyboy.tjpeditor.project.SortJournalEntries;
@@ -380,7 +381,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.EMAIL:
-				if(context == grammarAccess.getEmailRule()) {
+				if(context == grammarAccess.getEmailRule() ||
+				   context == grammarAccess.getResourceAttributeRule()) {
 					sequence_Email(context, (Email) semanticObject); 
 					return; 
 				}
@@ -422,7 +424,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.FAIL:
-				if(context == grammarAccess.getFailRule()) {
+				if(context == grammarAccess.getFailRule() ||
+				   context == grammarAccess.getResourceAttributeRule()) {
 					sequence_Fail(context, (Fail) semanticObject); 
 					return; 
 				}
@@ -529,6 +532,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.JOURNAL_ENTRY:
 				if(context == grammarAccess.getJournalEntryRule() ||
 				   context == grammarAccess.getProjectAttributeRule() ||
+				   context == grammarAccess.getResourceAttributeRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_JournalEntry(context, (JournalEntry) semanticObject); 
 					return; 
@@ -593,7 +597,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.MANAGERS:
-				if(context == grammarAccess.getManagersRule()) {
+				if(context == grammarAccess.getManagersRule() ||
+				   context == grammarAccess.getResourceAttributeRule()) {
 					sequence_Managers(context, (Managers) semanticObject); 
 					return; 
 				}
@@ -893,12 +898,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
-			case ProjectPackage.SHIFT_LIMIT:
-				if(context == grammarAccess.getShiftLimitRule()) {
-					sequence_ShiftLimit(context, (ShiftLimit) semanticObject); 
-					return; 
-				}
-				else break;
 			case ProjectPackage.SHIFT_TIMESHEET:
 				if(context == grammarAccess.getShiftTimesheetRule() ||
 				   context == grammarAccess.getTimesheetAttributeRule()) {
@@ -907,11 +906,25 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.SHIFTS:
-				if(context == grammarAccess.getAllocateResourceAttributeRule() ||
-				   context == grammarAccess.getResourceAttributeRule() ||
+				if(context == grammarAccess.getResourceAttributeRule() ||
 				   context == grammarAccess.getShiftsRule() ||
+				   context == grammarAccess.getShiftsResourceRule() ||
+				   context == grammarAccess.getShiftsTaskRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_Shifts(context, (Shifts) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.SHIFTS_ALLOCATE:
+				if(context == grammarAccess.getAllocateResourceAttributeRule() ||
+				   context == grammarAccess.getShiftsAllocateRule()) {
+					sequence_ShiftsAllocate(context, (ShiftsAllocate) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.SHIFTS_LIMIT:
+				if(context == grammarAccess.getShiftsLimitRule()) {
+					sequence_ShiftsLimit(context, (ShiftsLimit) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1135,7 +1148,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.WARN:
-				if(context == grammarAccess.getWarnRule()) {
+				if(context == grammarAccess.getResourceAttributeRule() ||
+				   context == grammarAccess.getWarnRule()) {
 					sequence_Warn(context, (Warn) semanticObject); 
 					return; 
 				}
@@ -2848,7 +2862,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     listAttribute=STRING
+	 *     listAttribute=ID
 	 *
 	 * Features:
 	 *    listAttribute[1, 1]
@@ -2860,7 +2874,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getPurgeAccess().getListAttributeSTRINGTerminalRuleCall_1_0(), semanticObject.getListAttribute());
+		feeder.accept(grammarAccess.getPurgeAccess().getListAttributeIDTerminalRuleCall_1_0(), semanticObject.getListAttribute());
 		feeder.finish();
 	}
 	
@@ -3258,19 +3272,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (shift=[Shift|ID] (intervals+=Interval3 intervals+=Interval3*)?)
-	 *
-	 * Features:
-	 *    shift[1, 1]
-	 *    intervals[0, *]
-	 */
-	protected void sequence_ShiftLimit(EObject context, ShiftLimit semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     shift=[Shift|ID]
 	 *
 	 * Features:
@@ -3308,7 +3309,33 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (limits+=ShiftLimit limits+=ShiftLimit*)
+	 *     (shift=[Shift|ID] (intervals+=Interval3 intervals+=Interval3*)?)
+	 *
+	 * Features:
+	 *    shift[1, 1]
+	 *    intervals[0, *]
+	 */
+	protected void sequence_ShiftsAllocate(EObject context, ShiftsAllocate semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (shift=[Shift|ID] limit=Interval2?)
+	 *
+	 * Features:
+	 *    shift[1, 1]
+	 *    limit[0, 1]
+	 */
+	protected void sequence_ShiftsLimit(EObject context, ShiftsLimit semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (limits+=ShiftsLimit limits+=ShiftsLimit*)
 	 *
 	 * Features:
 	 *    limits[1, *]

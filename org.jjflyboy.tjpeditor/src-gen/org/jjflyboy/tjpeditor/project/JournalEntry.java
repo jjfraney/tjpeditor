@@ -27,7 +27,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface JournalEntry extends ProjectAttribute, TaskAttribute
+public interface JournalEntry extends ProjectAttribute, TaskAttribute, ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Date</b></em>' attribute.

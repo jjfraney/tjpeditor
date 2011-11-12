@@ -5,7 +5,6 @@
  */
 package org.jjflyboy.tjpeditor.project;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Warn extends EObject
+public interface Warn extends ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' attribute.

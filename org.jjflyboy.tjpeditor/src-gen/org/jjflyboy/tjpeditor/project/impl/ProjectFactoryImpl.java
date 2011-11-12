@@ -200,6 +200,10 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.SHIFT: return createShift();
       case ProjectPackage.SHIFT_TIMESHEET: return createShiftTimesheet();
       case ProjectPackage.SHIFTS: return createShifts();
+      case ProjectPackage.SHIFTS_LIMIT: return createShiftsLimit();
+      case ProjectPackage.SHIFTS_ALLOCATE: return createShiftsAllocate();
+      case ProjectPackage.SHIFTS_RESOURCE: return createShiftsResource();
+      case ProjectPackage.SHIFTS_TASK: return createShiftsTask();
       case ProjectPackage.SHORT_TIME_FORMAT: return createShortTimeFormat();
       case ProjectPackage.SORT_JOURNAL_ENTRIES: return createSortJournalEntries();
       case ProjectPackage.SORT_RESOURCES: return createSortResources();
@@ -248,7 +252,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.LIMIT: return createLimit();
       case ProjectPackage.LIMIT_ATTRIBUTE: return createLimitAttribute();
       case ProjectPackage.REAL_FORMAT: return createRealFormat();
-      case ProjectPackage.SHIFT_LIMIT: return createShiftLimit();
       case ProjectPackage.SORT: return createSort();
       case ProjectPackage.TASK_DEPENDENCY: return createTaskDependency();
       case ProjectPackage.TASK_TIMESHEET_ATTRIBUTE: return createTaskTimesheetAttribute();
@@ -1821,6 +1824,50 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ShiftsLimit createShiftsLimit()
+  {
+    ShiftsLimitImpl shiftsLimit = new ShiftsLimitImpl();
+    return shiftsLimit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ShiftsAllocate createShiftsAllocate()
+  {
+    ShiftsAllocateImpl shiftsAllocate = new ShiftsAllocateImpl();
+    return shiftsAllocate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ShiftsResource createShiftsResource()
+  {
+    ShiftsResourceImpl shiftsResource = new ShiftsResourceImpl();
+    return shiftsResource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ShiftsTask createShiftsTask()
+  {
+    ShiftsTaskImpl shiftsTask = new ShiftsTaskImpl();
+    return shiftsTask;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ShortTimeFormat createShortTimeFormat()
   {
     ShortTimeFormatImpl shortTimeFormat = new ShortTimeFormatImpl();
@@ -2342,17 +2389,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     RealFormatImpl realFormat = new RealFormatImpl();
     return realFormat;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ShiftLimit createShiftLimit()
-  {
-    ShiftLimitImpl shiftLimit = new ShiftLimitImpl();
-    return shiftLimit;
   }
 
   /**
