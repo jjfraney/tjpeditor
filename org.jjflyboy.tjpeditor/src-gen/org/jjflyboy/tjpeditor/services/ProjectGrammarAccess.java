@@ -1625,24 +1625,20 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	public class BookingElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Booking");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cBookingKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final RuleCall cBookingTaskParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
-		private final RuleCall cBookingResourceParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
-		private final Assignment cIntervalAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIntervalInterval4ParserRuleCall_2_0 = (RuleCall)cIntervalAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_3_1 = (UnorderedGroup)cGroup_3.eContents().get(1);
-		private final Group cGroup_3_1_0 = (Group)cUnorderedGroup_3_1.eContents().get(0);
-		private final Keyword cOvertimeKeyword_3_1_0_0 = (Keyword)cGroup_3_1_0.eContents().get(0);
-		private final Assignment cOvertimeAssignment_3_1_0_1 = (Assignment)cGroup_3_1_0.eContents().get(1);
-		private final RuleCall cOvertimeINTTerminalRuleCall_3_1_0_1_0 = (RuleCall)cOvertimeAssignment_3_1_0_1.eContents().get(0);
-		private final Group cGroup_3_1_1 = (Group)cUnorderedGroup_3_1.eContents().get(1);
-		private final Keyword cSloppyKeyword_3_1_1_0 = (Keyword)cGroup_3_1_1.eContents().get(0);
-		private final Assignment cSloppyAssignment_3_1_1_1 = (Assignment)cGroup_3_1_1.eContents().get(1);
-		private final RuleCall cSloppyINTTerminalRuleCall_3_1_1_1_0 = (RuleCall)cSloppyAssignment_3_1_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Assignment cIntervalAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cIntervalInterval4ParserRuleCall_0_0 = (RuleCall)cIntervalAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1_1 = (UnorderedGroup)cGroup_1.eContents().get(1);
+		private final Group cGroup_1_1_0 = (Group)cUnorderedGroup_1_1.eContents().get(0);
+		private final Keyword cOvertimeKeyword_1_1_0_0 = (Keyword)cGroup_1_1_0.eContents().get(0);
+		private final Assignment cOvertimeAssignment_1_1_0_1 = (Assignment)cGroup_1_1_0.eContents().get(1);
+		private final RuleCall cOvertimeINTTerminalRuleCall_1_1_0_1_0 = (RuleCall)cOvertimeAssignment_1_1_0_1.eContents().get(0);
+		private final Group cGroup_1_1_1 = (Group)cUnorderedGroup_1_1.eContents().get(1);
+		private final Keyword cSloppyKeyword_1_1_1_0 = (Keyword)cGroup_1_1_1.eContents().get(0);
+		private final Assignment cSloppyAssignment_1_1_1_1 = (Assignment)cGroup_1_1_1.eContents().get(1);
+		private final RuleCall cSloppyINTTerminalRuleCall_1_1_1_1_0 = (RuleCall)cSloppyAssignment_1_1_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/booking.html	
 		//// http://www.taskjuggler.org/tj3/manual/booking.task.html
@@ -1652,107 +1648,125 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		////	PLUS_OFF_DUTY = '1' |
 		////	PLUS_VACATION = '2'
 		//Booking:
-		//	"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy"
-		//	sloppy=INT)?) "}")?;
+		//	interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?) "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?)
-		//"}")?
+		//interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?) "}")?
+		public Group getGroup() { return cGroup; }
+
+		//interval=Interval4
+		public Assignment getIntervalAssignment_0() { return cIntervalAssignment_0; }
+
+		//Interval4
+		public RuleCall getIntervalInterval4ParserRuleCall_0_0() { return cIntervalInterval4ParserRuleCall_0_0; }
+
+		//("{" (("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?) "}")?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1_0() { return cLeftCurlyBracketKeyword_1_0; }
+
+		//("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?
+		public UnorderedGroup getUnorderedGroup_1_1() { return cUnorderedGroup_1_1; }
+
+		//("overtime" overtime=INT)?
+		public Group getGroup_1_1_0() { return cGroup_1_1_0; }
+
+		//"overtime"
+		public Keyword getOvertimeKeyword_1_1_0_0() { return cOvertimeKeyword_1_1_0_0; }
+
+		//overtime=INT
+		public Assignment getOvertimeAssignment_1_1_0_1() { return cOvertimeAssignment_1_1_0_1; }
+
+		//INT
+		public RuleCall getOvertimeINTTerminalRuleCall_1_1_0_1_0() { return cOvertimeINTTerminalRuleCall_1_1_0_1_0; }
+
+		//("sloppy" sloppy=INT)?
+		public Group getGroup_1_1_1() { return cGroup_1_1_1; }
+
+		//"sloppy"
+		public Keyword getSloppyKeyword_1_1_1_0() { return cSloppyKeyword_1_1_1_0; }
+
+		//sloppy=INT
+		public Assignment getSloppyAssignment_1_1_1_1() { return cSloppyAssignment_1_1_1_1; }
+
+		//INT
+		public RuleCall getSloppyINTTerminalRuleCall_1_1_1_1_0() { return cSloppyINTTerminalRuleCall_1_1_1_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
+	}
+
+	public class BookingTaskElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BookingTask");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cBookingKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cResourceAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cResourceResourceCrossReference_1_0 = (CrossReference)cResourceAssignment_1.eContents().get(0);
+		private final RuleCall cResourceResourceIDTerminalRuleCall_1_0_1 = (RuleCall)cResourceResourceCrossReference_1_0.eContents().get(1);
+		private final Assignment cBookingAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cBookingBookingParserRuleCall_2_0 = (RuleCall)cBookingAssignment_2.eContents().get(0);
+		
+		//BookingTask:
+		//	"booking" resource=[Resource] booking=Booking;
+		public ParserRule getRule() { return rule; }
+
+		//"booking" resource=[Resource] booking=Booking
 		public Group getGroup() { return cGroup; }
 
 		//"booking"
 		public Keyword getBookingKeyword_0() { return cBookingKeyword_0; }
 
-		//BookingTask | BookingResource
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
-
-		//BookingTask
-		public RuleCall getBookingTaskParserRuleCall_1_0() { return cBookingTaskParserRuleCall_1_0; }
-
-		//BookingResource
-		public RuleCall getBookingResourceParserRuleCall_1_1() { return cBookingResourceParserRuleCall_1_1; }
-
-		//interval=Interval4
-		public Assignment getIntervalAssignment_2() { return cIntervalAssignment_2; }
-
-		//Interval4
-		public RuleCall getIntervalInterval4ParserRuleCall_2_0() { return cIntervalInterval4ParserRuleCall_2_0; }
-
-		//("{" (("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?) "}")?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
-
-		//("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?
-		public UnorderedGroup getUnorderedGroup_3_1() { return cUnorderedGroup_3_1; }
-
-		//("overtime" overtime=INT)?
-		public Group getGroup_3_1_0() { return cGroup_3_1_0; }
-
-		//"overtime"
-		public Keyword getOvertimeKeyword_3_1_0_0() { return cOvertimeKeyword_3_1_0_0; }
-
-		//overtime=INT
-		public Assignment getOvertimeAssignment_3_1_0_1() { return cOvertimeAssignment_3_1_0_1; }
-
-		//INT
-		public RuleCall getOvertimeINTTerminalRuleCall_3_1_0_1_0() { return cOvertimeINTTerminalRuleCall_3_1_0_1_0; }
-
-		//("sloppy" sloppy=INT)?
-		public Group getGroup_3_1_1() { return cGroup_3_1_1; }
-
-		//"sloppy"
-		public Keyword getSloppyKeyword_3_1_1_0() { return cSloppyKeyword_3_1_1_0; }
-
-		//sloppy=INT
-		public Assignment getSloppyAssignment_3_1_1_1() { return cSloppyAssignment_3_1_1_1; }
-
-		//INT
-		public RuleCall getSloppyINTTerminalRuleCall_3_1_1_1_0() { return cSloppyINTTerminalRuleCall_3_1_1_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
-	}
-
-	public class BookingTaskElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BookingTask");
-		private final Assignment cResourceAssignment = (Assignment)rule.eContents().get(1);
-		private final CrossReference cResourceResourceCrossReference_0 = (CrossReference)cResourceAssignment.eContents().get(0);
-		private final RuleCall cResourceResourceIDTerminalRuleCall_0_1 = (RuleCall)cResourceResourceCrossReference_0.eContents().get(1);
-		
-		//BookingTask:
-		//	resource=[Resource];
-		public ParserRule getRule() { return rule; }
-
 		//resource=[Resource]
-		public Assignment getResourceAssignment() { return cResourceAssignment; }
+		public Assignment getResourceAssignment_1() { return cResourceAssignment_1; }
 
 		//[Resource]
-		public CrossReference getResourceResourceCrossReference_0() { return cResourceResourceCrossReference_0; }
+		public CrossReference getResourceResourceCrossReference_1_0() { return cResourceResourceCrossReference_1_0; }
 
 		//ID
-		public RuleCall getResourceResourceIDTerminalRuleCall_0_1() { return cResourceResourceIDTerminalRuleCall_0_1; }
+		public RuleCall getResourceResourceIDTerminalRuleCall_1_0_1() { return cResourceResourceIDTerminalRuleCall_1_0_1; }
+
+		//booking=Booking
+		public Assignment getBookingAssignment_2() { return cBookingAssignment_2; }
+
+		//Booking
+		public RuleCall getBookingBookingParserRuleCall_2_0() { return cBookingBookingParserRuleCall_2_0; }
 	}
 
 	public class BookingResourceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BookingResource");
-		private final Assignment cTaskAssignment = (Assignment)rule.eContents().get(1);
-		private final CrossReference cTaskTaskCrossReference_0 = (CrossReference)cTaskAssignment.eContents().get(0);
-		private final RuleCall cTaskTaskIDTerminalRuleCall_0_1 = (RuleCall)cTaskTaskCrossReference_0.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cBookingKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cTaskAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cTaskTaskCrossReference_1_0 = (CrossReference)cTaskAssignment_1.eContents().get(0);
+		private final RuleCall cTaskTaskIDTerminalRuleCall_1_0_1 = (RuleCall)cTaskTaskCrossReference_1_0.eContents().get(1);
+		private final Assignment cBookingAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cBookingBookingParserRuleCall_2_0 = (RuleCall)cBookingAssignment_2.eContents().get(0);
 		
 		//BookingResource:
-		//	task=[Task];
+		//	"booking" task=[Task] booking=Booking;
 		public ParserRule getRule() { return rule; }
 
+		//"booking" task=[Task] booking=Booking
+		public Group getGroup() { return cGroup; }
+
+		//"booking"
+		public Keyword getBookingKeyword_0() { return cBookingKeyword_0; }
+
 		//task=[Task]
-		public Assignment getTaskAssignment() { return cTaskAssignment; }
+		public Assignment getTaskAssignment_1() { return cTaskAssignment_1; }
 
 		//[Task]
-		public CrossReference getTaskTaskCrossReference_0() { return cTaskTaskCrossReference_0; }
+		public CrossReference getTaskTaskCrossReference_1_0() { return cTaskTaskCrossReference_1_0; }
 
 		//ID
-		public RuleCall getTaskTaskIDTerminalRuleCall_0_1() { return cTaskTaskIDTerminalRuleCall_0_1; }
+		public RuleCall getTaskTaskIDTerminalRuleCall_1_0_1() { return cTaskTaskIDTerminalRuleCall_1_0_1; }
+
+		//booking=Booking
+		public Assignment getBookingAssignment_2() { return cBookingAssignment_2; }
+
+		//Booking
+		public RuleCall getBookingBookingParserRuleCall_2_0() { return cBookingBookingParserRuleCall_2_0; }
 	}
 
 	public class CaptionElements extends AbstractParserRuleElementFinder {
@@ -9451,8 +9465,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	////	PLUS_OFF_DUTY = '1' |
 	////	PLUS_VACATION = '2'
 	//Booking:
-	//	"booking" (BookingTask | BookingResource) interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy"
-	//	sloppy=INT)?) "}")?;
+	//	interval=Interval4 ("{" (("overtime" overtime=INT)? & ("sloppy" sloppy=INT)?) "}")?;
 	public BookingElements getBookingAccess() {
 		return (pBooking != null) ? pBooking : (pBooking = new BookingElements());
 	}
@@ -9462,7 +9475,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BookingTask:
-	//	resource=[Resource];
+	//	"booking" resource=[Resource] booking=Booking;
 	public BookingTaskElements getBookingTaskAccess() {
 		return (pBookingTask != null) ? pBookingTask : (pBookingTask = new BookingTaskElements());
 	}
@@ -9472,7 +9485,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BookingResource:
-	//	task=[Task];
+	//	"booking" task=[Task] booking=Booking;
 	public BookingResourceElements getBookingResourceAccess() {
 		return (pBookingResource != null) ? pBookingResource : (pBookingResource = new BookingResourceElements());
 	}

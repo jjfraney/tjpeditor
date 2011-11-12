@@ -1103,40 +1103,22 @@ public interface ProjectPackage extends EPackage
   int BOOKING_TASK = 30;
 
   /**
-   * The feature id for the '<em><b>Interval</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOKING_TASK__INTERVAL = TASK_ATTRIBUTE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Overtime</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOKING_TASK__OVERTIME = TASK_ATTRIBUTE_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Sloppy</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOKING_TASK__SLOPPY = TASK_ATTRIBUTE_FEATURE_COUNT + 2;
-
-  /**
    * The feature id for the '<em><b>Resource</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOKING_TASK__RESOURCE = TASK_ATTRIBUTE_FEATURE_COUNT + 3;
+  int BOOKING_TASK__RESOURCE = TASK_ATTRIBUTE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Booking</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOKING_TASK__BOOKING = TASK_ATTRIBUTE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Booking Task</em>' class.
@@ -1145,7 +1127,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BOOKING_TASK_FEATURE_COUNT = TASK_ATTRIBUTE_FEATURE_COUNT + 4;
+  int BOOKING_TASK_FEATURE_COUNT = TASK_ATTRIBUTE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.BookingResourceImpl <em>Booking Resource</em>}' class.
@@ -1158,40 +1140,22 @@ public interface ProjectPackage extends EPackage
   int BOOKING_RESOURCE = 31;
 
   /**
-   * The feature id for the '<em><b>Interval</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOKING_RESOURCE__INTERVAL = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Overtime</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOKING_RESOURCE__OVERTIME = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Sloppy</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOKING_RESOURCE__SLOPPY = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 2;
-
-  /**
    * The feature id for the '<em><b>Task</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOKING_RESOURCE__TASK = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 3;
+  int BOOKING_RESOURCE__TASK = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Booking</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOKING_RESOURCE__BOOKING = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Booking Resource</em>' class.
@@ -1200,7 +1164,7 @@ public interface ProjectPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BOOKING_RESOURCE_FEATURE_COUNT = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 4;
+  int BOOKING_RESOURCE_FEATURE_COUNT = RESOURCE_ATTRIBUTE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.jjflyboy.tjpeditor.project.impl.CaptionImpl <em>Caption</em>}' class.
@@ -7170,6 +7134,17 @@ public interface ProjectPackage extends EPackage
   EReference getBookingTask_Resource();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.BookingTask#getBooking <em>Booking</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Booking</em>'.
+   * @see org.jjflyboy.tjpeditor.project.BookingTask#getBooking()
+   * @see #getBookingTask()
+   * @generated
+   */
+  EReference getBookingTask_Booking();
+
+  /**
    * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.BookingResource <em>Booking Resource</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7189,6 +7164,17 @@ public interface ProjectPackage extends EPackage
    * @generated
    */
   EReference getBookingResource_Task();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.BookingResource#getBooking <em>Booking</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Booking</em>'.
+   * @see org.jjflyboy.tjpeditor.project.BookingResource#getBooking()
+   * @see #getBookingResource()
+   * @generated
+   */
+  EReference getBookingResource_Booking();
 
   /**
    * Returns the meta object for class '{@link org.jjflyboy.tjpeditor.project.Caption <em>Caption</em>}'.

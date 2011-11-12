@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.jjflyboy.tjpeditor.project.Booking;
 import org.jjflyboy.tjpeditor.project.BookingTask;
-import org.jjflyboy.tjpeditor.project.Interval4;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.Resource;
 
@@ -26,10 +25,8 @@ import org.jjflyboy.tjpeditor.project.Resource;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.BookingTaskImpl#getInterval <em>Interval</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.BookingTaskImpl#getOvertime <em>Overtime</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.BookingTaskImpl#getSloppy <em>Sloppy</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.BookingTaskImpl#getResource <em>Resource</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.BookingTaskImpl#getBooking <em>Booking</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,56 +34,6 @@ import org.jjflyboy.tjpeditor.project.Resource;
  */
 public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
 {
-  /**
-   * The cached value of the '{@link #getInterval() <em>Interval</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInterval()
-   * @generated
-   * @ordered
-   */
-  protected Interval4 interval;
-
-  /**
-   * The default value of the '{@link #getOvertime() <em>Overtime</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOvertime()
-   * @generated
-   * @ordered
-   */
-  protected static final int OVERTIME_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getOvertime() <em>Overtime</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOvertime()
-   * @generated
-   * @ordered
-   */
-  protected int overtime = OVERTIME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getSloppy() <em>Sloppy</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSloppy()
-   * @generated
-   * @ordered
-   */
-  protected static final int SLOPPY_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getSloppy() <em>Sloppy</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSloppy()
-   * @generated
-   * @ordered
-   */
-  protected int sloppy = SLOPPY_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
    * <!-- begin-user-doc -->
@@ -96,6 +43,16 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * @ordered
    */
   protected Resource resource;
+
+  /**
+   * The cached value of the '{@link #getBooking() <em>Booking</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBooking()
+   * @generated
+   * @ordered
+   */
+  protected Booking booking;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,100 +73,6 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
   protected EClass eStaticClass()
   {
     return ProjectPackage.eINSTANCE.getBookingTask();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Interval4 getInterval()
-  {
-    return interval;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetInterval(Interval4 newInterval, NotificationChain msgs)
-  {
-    Interval4 oldInterval = interval;
-    interval = newInterval;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.BOOKING_TASK__INTERVAL, oldInterval, newInterval);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setInterval(Interval4 newInterval)
-  {
-    if (newInterval != interval)
-    {
-      NotificationChain msgs = null;
-      if (interval != null)
-        msgs = ((InternalEObject)interval).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.BOOKING_TASK__INTERVAL, null, msgs);
-      if (newInterval != null)
-        msgs = ((InternalEObject)newInterval).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.BOOKING_TASK__INTERVAL, null, msgs);
-      msgs = basicSetInterval(newInterval, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.BOOKING_TASK__INTERVAL, newInterval, newInterval));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public int getOvertime()
-  {
-    return overtime;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOvertime(int newOvertime)
-  {
-    int oldOvertime = overtime;
-    overtime = newOvertime;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.BOOKING_TASK__OVERTIME, oldOvertime, overtime));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public int getSloppy()
-  {
-    return sloppy;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSloppy(int newSloppy)
-  {
-    int oldSloppy = sloppy;
-    sloppy = newSloppy;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.BOOKING_TASK__SLOPPY, oldSloppy, sloppy));
   }
 
   /**
@@ -260,13 +123,61 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
    * <!-- end-user-doc -->
    * @generated
    */
+  public Booking getBooking()
+  {
+    return booking;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBooking(Booking newBooking, NotificationChain msgs)
+  {
+    Booking oldBooking = booking;
+    booking = newBooking;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.BOOKING_TASK__BOOKING, oldBooking, newBooking);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBooking(Booking newBooking)
+  {
+    if (newBooking != booking)
+    {
+      NotificationChain msgs = null;
+      if (booking != null)
+        msgs = ((InternalEObject)booking).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.BOOKING_TASK__BOOKING, null, msgs);
+      if (newBooking != null)
+        msgs = ((InternalEObject)newBooking).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.BOOKING_TASK__BOOKING, null, msgs);
+      msgs = basicSetBooking(newBooking, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.BOOKING_TASK__BOOKING, newBooking, newBooking));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case ProjectPackage.BOOKING_TASK__INTERVAL:
-        return basicSetInterval(null, msgs);
+      case ProjectPackage.BOOKING_TASK__BOOKING:
+        return basicSetBooking(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -281,15 +192,11 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
   {
     switch (featureID)
     {
-      case ProjectPackage.BOOKING_TASK__INTERVAL:
-        return getInterval();
-      case ProjectPackage.BOOKING_TASK__OVERTIME:
-        return getOvertime();
-      case ProjectPackage.BOOKING_TASK__SLOPPY:
-        return getSloppy();
       case ProjectPackage.BOOKING_TASK__RESOURCE:
         if (resolve) return getResource();
         return basicGetResource();
+      case ProjectPackage.BOOKING_TASK__BOOKING:
+        return getBooking();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -304,17 +211,11 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
   {
     switch (featureID)
     {
-      case ProjectPackage.BOOKING_TASK__INTERVAL:
-        setInterval((Interval4)newValue);
-        return;
-      case ProjectPackage.BOOKING_TASK__OVERTIME:
-        setOvertime((Integer)newValue);
-        return;
-      case ProjectPackage.BOOKING_TASK__SLOPPY:
-        setSloppy((Integer)newValue);
-        return;
       case ProjectPackage.BOOKING_TASK__RESOURCE:
         setResource((Resource)newValue);
+        return;
+      case ProjectPackage.BOOKING_TASK__BOOKING:
+        setBooking((Booking)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -330,17 +231,11 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
   {
     switch (featureID)
     {
-      case ProjectPackage.BOOKING_TASK__INTERVAL:
-        setInterval((Interval4)null);
-        return;
-      case ProjectPackage.BOOKING_TASK__OVERTIME:
-        setOvertime(OVERTIME_EDEFAULT);
-        return;
-      case ProjectPackage.BOOKING_TASK__SLOPPY:
-        setSloppy(SLOPPY_EDEFAULT);
-        return;
       case ProjectPackage.BOOKING_TASK__RESOURCE:
         setResource((Resource)null);
+        return;
+      case ProjectPackage.BOOKING_TASK__BOOKING:
+        setBooking((Booking)null);
         return;
     }
     super.eUnset(featureID);
@@ -356,77 +251,12 @@ public class BookingTaskImpl extends TaskAttributeImpl implements BookingTask
   {
     switch (featureID)
     {
-      case ProjectPackage.BOOKING_TASK__INTERVAL:
-        return interval != null;
-      case ProjectPackage.BOOKING_TASK__OVERTIME:
-        return overtime != OVERTIME_EDEFAULT;
-      case ProjectPackage.BOOKING_TASK__SLOPPY:
-        return sloppy != SLOPPY_EDEFAULT;
       case ProjectPackage.BOOKING_TASK__RESOURCE:
         return resource != null;
+      case ProjectPackage.BOOKING_TASK__BOOKING:
+        return booking != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == Booking.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case ProjectPackage.BOOKING_TASK__INTERVAL: return ProjectPackage.BOOKING__INTERVAL;
-        case ProjectPackage.BOOKING_TASK__OVERTIME: return ProjectPackage.BOOKING__OVERTIME;
-        case ProjectPackage.BOOKING_TASK__SLOPPY: return ProjectPackage.BOOKING__SLOPPY;
-        default: return -1;
-      }
-    }
-    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == Booking.class)
-    {
-      switch (baseFeatureID)
-      {
-        case ProjectPackage.BOOKING__INTERVAL: return ProjectPackage.BOOKING_TASK__INTERVAL;
-        case ProjectPackage.BOOKING__OVERTIME: return ProjectPackage.BOOKING_TASK__OVERTIME;
-        case ProjectPackage.BOOKING__SLOPPY: return ProjectPackage.BOOKING_TASK__SLOPPY;
-        default: return -1;
-      }
-    }
-    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (overtime: ");
-    result.append(overtime);
-    result.append(", sloppy: ");
-    result.append(sloppy);
-    result.append(')');
-    return result.toString();
   }
 
 } //BookingTaskImpl

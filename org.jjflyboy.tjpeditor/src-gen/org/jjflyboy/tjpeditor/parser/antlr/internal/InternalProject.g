@@ -2743,6 +2743,135 @@ ruleBalance returns [EObject current=null]
 
 
 
+// Entry rule entryRuleBooking
+entryRuleBooking returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getBookingRule()); }
+	 iv_ruleBooking=ruleBooking 
+	 { $current=$iv_ruleBooking.current; } 
+	 EOF 
+;
+
+// Rule Booking
+ruleBooking returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBookingAccess().getIntervalInterval4ParserRuleCall_0_0()); 
+	    }
+		lv_interval_0_0=ruleInterval4		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBookingRule());
+	        }
+       		set(
+       			$current, 
+       			"interval",
+        		lv_interval_0_0, 
+        		"Interval4");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getBookingAccess().getLeftCurlyBracketKeyword_1_0());
+    }
+(
+
+(
+	{ 
+	  getUnorderedGroupHelper().enter(grammarAccess.getBookingAccess().getUnorderedGroup_1_1());
+	}
+	(
+		(
+
+			( 
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getBookingAccess().getUnorderedGroup_1_1(), 0)}?=>(
+					{ 
+	 				  getUnorderedGroupHelper().select(grammarAccess.getBookingAccess().getUnorderedGroup_1_1(), 0);
+	 				}
+					({true}?=>(	otherlv_3='overtime' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getBookingAccess().getOvertimeKeyword_1_1_0_0());
+    }
+(
+(
+		lv_overtime_4_0=RULE_INT
+		{
+			newLeafNode(lv_overtime_4_0, grammarAccess.getBookingAccess().getOvertimeINTTerminalRuleCall_1_1_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBookingRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"overtime",
+        		lv_overtime_4_0, 
+        		"INT");
+	    }
+
+)
+)))
+					{ 
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getBookingAccess().getUnorderedGroup_1_1());
+	 				}
+ 				)
+			)  |
+
+			( 
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getBookingAccess().getUnorderedGroup_1_1(), 1)}?=>(
+					{ 
+	 				  getUnorderedGroupHelper().select(grammarAccess.getBookingAccess().getUnorderedGroup_1_1(), 1);
+	 				}
+					({true}?=>(	otherlv_5='sloppy' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getBookingAccess().getSloppyKeyword_1_1_1_0());
+    }
+(
+(
+		lv_sloppy_6_0=RULE_INT
+		{
+			newLeafNode(lv_sloppy_6_0, grammarAccess.getBookingAccess().getSloppyINTTerminalRuleCall_1_1_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBookingRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"sloppy",
+        		lv_sloppy_6_0, 
+        		"INT");
+	    }
+
+)
+)))
+					{ 
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getBookingAccess().getUnorderedGroup_1_1());
+	 				}
+ 				)
+			)  
+
+		)*	
+	)
+)
+	{ 
+	  getUnorderedGroupHelper().leave(grammarAccess.getBookingAccess().getUnorderedGroup_1_1());
+	}
+
+)	otherlv_7='}' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getBookingAccess().getRightCurlyBracketKeyword_1_2());
+    }
+)?)
+;
+
+
+
 
 
 // Entry rule entryRuleBookingTask
@@ -2759,6 +2888,10 @@ ruleBookingTask returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+(	otherlv_0='booking' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getBookingTaskAccess().getBookingKeyword_0());
+    }
 (
 (
 		{
@@ -2766,13 +2899,31 @@ ruleBookingTask returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getBookingTaskRule());
 	        }
         }
-	otherlv_0=RULE_ID
+	otherlv_1=RULE_ID
 	{
-		newLeafNode(otherlv_0, grammarAccess.getBookingTaskAccess().getResourceResourceCrossReference_0()); 
+		newLeafNode(otherlv_1, grammarAccess.getBookingTaskAccess().getResourceResourceCrossReference_1_0()); 
 	}
 
 )
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBookingTaskAccess().getBookingBookingParserRuleCall_2_0()); 
+	    }
+		lv_booking_2_0=ruleBooking		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBookingTaskRule());
+	        }
+       		set(
+       			$current, 
+       			"booking",
+        		lv_booking_2_0, 
+        		"Booking");
+	        afterParserOrEnumRuleCall();
+	    }
+
 )
+))
 ;
 
 
@@ -2793,6 +2944,10 @@ ruleBookingResource returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+(	otherlv_0='booking' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getBookingResourceAccess().getBookingKeyword_0());
+    }
 (
 (
 		{
@@ -2800,13 +2955,31 @@ ruleBookingResource returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getBookingResourceRule());
 	        }
         }
-	otherlv_0=RULE_ID
+	otherlv_1=RULE_ID
 	{
-		newLeafNode(otherlv_0, grammarAccess.getBookingResourceAccess().getTaskTaskCrossReference_0()); 
+		newLeafNode(otherlv_1, grammarAccess.getBookingResourceAccess().getTaskTaskCrossReference_1_0()); 
 	}
 
 )
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBookingResourceAccess().getBookingBookingParserRuleCall_2_0()); 
+	    }
+		lv_booking_2_0=ruleBooking		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBookingResourceRule());
+	        }
+       		set(
+       			$current, 
+       			"booking",
+        		lv_booking_2_0, 
+        		"Booking");
+	        afterParserOrEnumRuleCall();
+	    }
+
 )
+))
 ;
 
 

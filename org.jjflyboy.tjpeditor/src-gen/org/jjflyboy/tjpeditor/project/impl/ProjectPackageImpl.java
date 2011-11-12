@@ -2459,6 +2459,16 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getBookingTask_Booking()
+  {
+        return (EReference)getBookingTask().getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getBookingResource()
   {
     if (bookingResourceEClass == null)
@@ -2476,6 +2486,16 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
   public EReference getBookingResource_Task()
   {
         return (EReference)getBookingResource().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBookingResource_Booking()
+  {
+        return (EReference)getBookingResource().getEStructuralFeatures().get(1);
   }
 
   /**

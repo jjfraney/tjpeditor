@@ -117,11 +117,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overtime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sloppy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BookingTask" eSuperTypes="#//TaskAttribute #//Booking">
+  <eClassifiers xsi:type="ecore:EClass" name="BookingTask" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="booking" eType="#//Booking"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BookingResource" eSuperTypes="#//ResourceAttribute #//Booking">
+  <eClassifiers xsi:type="ecore:EClass" name="BookingResource" eSuperTypes="#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="booking" eType="#//Booking"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Caption" eSuperTypes="#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="CellColor" eSuperTypes="#//ColumnAttribute">

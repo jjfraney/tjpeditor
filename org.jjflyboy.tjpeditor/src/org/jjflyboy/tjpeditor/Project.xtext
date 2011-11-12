@@ -269,23 +269,25 @@ Author: 'author' resource=[Resource];
 // http://www.taskjuggler.org/tj3/manual/balance.html
 Balance: 'balance' cost=[Account] revenue=[Account];
 
-// http://www.taskjuggler.org/tj3/manual/booking.html	
 // http://www.taskjuggler.org/tj3/manual/booking.task.html
+// http://www.taskjuggler.org/tj3/manual/booking.resource.html
 // http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
 // http://www.taskjuggler.org/tj3/manual/overtime.booking.html
+
+// TODO: Validate these values in sloppy and overtime
 //	WORKING_TIME_ONLY = '0' |
 //	PLUS_OFF_DUTY = '1' |
 //	PLUS_VACATION = '2'
 
-Booking:
-        'booking' (BookingTask | BookingResource) interval=Interval4 ('{'
-                (
-                        ('overtime' overtime=INT)? &
-                        ('sloppy' sloppy=INT)?
-                )
-        '}')?;
-BookingTask: resource=[Resource];
-BookingResource: task=[Task];
+Booking: interval=Interval4 ('{'
+		(
+			('overtime' overtime=INT)? &
+			('sloppy' sloppy=INT)?
+		)
+'}')?;
+
+BookingTask: 'booking' resource=[Resource] booking=Booking ;
+BookingResource:  'booking' task=[Task] booking=Booking;
 
 
 // http://www.taskjuggler.org/tj3/manual/caption.html

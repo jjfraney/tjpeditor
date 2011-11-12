@@ -313,7 +313,6 @@ public class ProjectSwitch<T> extends Switch<T>
         BookingTask bookingTask = (BookingTask)theEObject;
         T result = caseBookingTask(bookingTask);
         if (result == null) result = caseTaskAttribute(bookingTask);
-        if (result == null) result = caseBooking(bookingTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -322,7 +321,6 @@ public class ProjectSwitch<T> extends Switch<T>
         BookingResource bookingResource = (BookingResource)theEObject;
         T result = caseBookingResource(bookingResource);
         if (result == null) result = caseResourceAttribute(bookingResource);
-        if (result == null) result = caseBooking(bookingResource);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

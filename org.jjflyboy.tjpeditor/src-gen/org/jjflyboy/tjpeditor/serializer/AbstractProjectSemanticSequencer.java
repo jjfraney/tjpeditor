@@ -21,6 +21,7 @@ import org.jjflyboy.tjpeditor.project.AllocateResource;
 import org.jjflyboy.tjpeditor.project.Alternative;
 import org.jjflyboy.tjpeditor.project.Author;
 import org.jjflyboy.tjpeditor.project.Balance;
+import org.jjflyboy.tjpeditor.project.Booking;
 import org.jjflyboy.tjpeditor.project.BookingResource;
 import org.jjflyboy.tjpeditor.project.BookingTask;
 import org.jjflyboy.tjpeditor.project.CellColor;
@@ -236,14 +237,16 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
+			case ProjectPackage.BOOKING:
+				if(context == grammarAccess.getBookingRule()) {
+					sequence_Booking(context, (Booking) semanticObject); 
+					return; 
+				}
+				else break;
 			case ProjectPackage.BOOKING_RESOURCE:
 				if(context == grammarAccess.getBookingResourceRule() ||
 				   context == grammarAccess.getResourceAttributeRule()) {
 					sequence_BookingResource(context, (BookingResource) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getBookingRule()) {
-					sequence_Booking(context, (BookingResource) semanticObject); 
 					return; 
 				}
 				else break;
@@ -251,10 +254,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				if(context == grammarAccess.getBookingTaskRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_BookingTask(context, (BookingTask) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getBookingRule()) {
-					sequence_Booking(context, (BookingTask) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1334,54 +1333,60 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     task=[Task|ID]
+	 *     (task=[Task|ID] booking=Booking)
 	 *
 	 * Features:
 	 *    task[1, 1]
+	 *    booking[1, 1]
 	 */
 	protected void sequence_BookingResource(EObject context, BookingResource semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getBookingResource_Task()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getBookingResource_Task()));
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getBookingResource_Booking()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getBookingResource_Booking()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBookingResourceAccess().getTaskTaskIDTerminalRuleCall_1_0_1(), semanticObject.getTask());
+		feeder.accept(grammarAccess.getBookingResourceAccess().getBookingBookingParserRuleCall_2_0(), semanticObject.getBooking());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     resource=[Resource|ID]
+	 *     (resource=[Resource|ID] booking=Booking)
 	 *
 	 * Features:
 	 *    resource[1, 1]
+	 *    booking[1, 1]
 	 */
 	protected void sequence_BookingTask(EObject context, BookingTask semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getBookingTask_Resource()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getBookingTask_Resource()));
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getBookingTask_Booking()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getBookingTask_Booking()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBookingTaskAccess().getResourceResourceIDTerminalRuleCall_1_0_1(), semanticObject.getResource());
+		feeder.accept(grammarAccess.getBookingTaskAccess().getBookingBookingParserRuleCall_2_0(), semanticObject.getBooking());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (task=[Task|ID] interval=Interval4 (overtime=INT? sloppy=INT?)?)
+	 *     (interval=Interval4 (overtime=INT? sloppy=INT?)?)
 	 *
 	 * Features:
 	 *    interval[1, 1]
 	 *    overtime[0, 1]
 	 *    sloppy[0, 1]
-	 *    task[1, 1]
 	 */
-	protected void sequence_Booking(EObject context, BookingResource semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (resource=[Resource|ID] interval=Interval4 (overtime=INT? sloppy=INT?)?)
-	 *
-	 * Features:
-	 *    interval[1, 1]
-	 *    overtime[0, 1]
-	 *    sloppy[0, 1]
-	 *    resource[1, 1]
-	 */
-	protected void sequence_Booking(EObject context, BookingTask semanticObject) {
+	protected void sequence_Booking(EObject context, Booking semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
