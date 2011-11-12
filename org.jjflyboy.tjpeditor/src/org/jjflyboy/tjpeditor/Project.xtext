@@ -1021,14 +1021,16 @@ Sort:
         (id?=ID |criteria+=Criterion) (',' criteria+=Criterion)*;
 
 TaskDependency:
-	task=[Task] ('{'
+	task=[Task|TaskPath] ('{'
 		(
 			(gapDuration = GapDuration)? &
 			(gapLength = GapLength)? &
 			(policy=DependsPolicy)?
 		)
 	'}')?;
-	
+
+TaskPath:  '!'* ID ('.' ID)*;
+
 // http://www.taskjuggler.org/tj3/manual/task.timesheet.html
 TaskTimesheetAttribute: 
 	End
@@ -1241,9 +1243,7 @@ enum WorkQuantityUnit:
 ;
 // http://www.taskjuggler.org/tj3/manual/depends.html
 // http://www.taskjuggler.org/tj3/manual/The_TaskJuggler_Syntax.html#ABSOLUTEID
-AbsoluteId: ID ('.' ID)*;
-RelativeId: '!' (RelativeId)? ID ('.' ID)*;
-terminal ID  		: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal ID: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 
 // XFloat is permitting either an int or a float: eg: 4 and 4.0 are parsed as intended.

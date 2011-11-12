@@ -5442,8 +5442,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTagfileKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cIdIDTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
-		private final Assignment cFileAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cFileSTRINGTerminalRuleCall_2_0 = (RuleCall)cFileAssignment_2.eContents().get(0);
+		private final Assignment cFilenameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFilenameSTRINGTerminalRuleCall_2_0 = (RuleCall)cFilenameAssignment_2.eContents().get(0);
 		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
 		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
@@ -5464,11 +5464,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//// TODO
 		//// http://www.taskjuggler.org/tj3/manual/tagfile.html
 		//TagFile:
-		//	"tagfile" id=ID? file=STRING ("{" hideResource=HideResource? & hideTask=HideTask? & rollupResource=RollupResource? &
-		//	rollupTask=RollupTask? "}")?;
+		//	"tagfile" id=ID? filename=STRING ("{" hideResource=HideResource? & hideTask=HideTask? & rollupResource=RollupResource?
+		//	& rollupTask=RollupTask? "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"tagfile" id=ID? file=STRING ("{" hideResource=HideResource? & hideTask=HideTask? & rollupResource=RollupResource? &
+		//"tagfile" id=ID? filename=STRING ("{" hideResource=HideResource? & hideTask=HideTask? & rollupResource=RollupResource? &
 		//rollupTask=RollupTask? "}")?
 		public Group getGroup() { return cGroup; }
 
@@ -5481,11 +5481,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
 
-		//file=STRING
-		public Assignment getFileAssignment_2() { return cFileAssignment_2; }
+		//filename=STRING
+		public Assignment getFilenameAssignment_2() { return cFilenameAssignment_2; }
 
 		//STRING
-		public RuleCall getFileSTRINGTerminalRuleCall_2_0() { return cFileSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getFilenameSTRINGTerminalRuleCall_2_0() { return cFilenameSTRINGTerminalRuleCall_2_0; }
 
 		//("{" hideResource=HideResource? & hideTask=HideTask? & rollupResource=RollupResource? & rollupTask=RollupTask? "}")?
 		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
@@ -7284,7 +7284,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTaskAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cTaskTaskCrossReference_0_0 = (CrossReference)cTaskAssignment_0.eContents().get(0);
-		private final RuleCall cTaskTaskIDTerminalRuleCall_0_0_1 = (RuleCall)cTaskTaskCrossReference_0_0.eContents().get(1);
+		private final RuleCall cTaskTaskTaskPathParserRuleCall_0_0_1 = (RuleCall)cTaskTaskCrossReference_0_0.eContents().get(1);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final UnorderedGroup cUnorderedGroup_1_1 = (UnorderedGroup)cGroup_1.eContents().get(1);
@@ -7297,20 +7297,20 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//TaskDependency:
-		//	task=[Task] ("{" (gapDuration=GapDuration? & gapLength=GapLength? & policy=DependsPolicy?) "}")?;
+		//	task=[Task|TaskPath] ("{" (gapDuration=GapDuration? & gapLength=GapLength? & policy=DependsPolicy?) "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//task=[Task] ("{" (gapDuration=GapDuration? & gapLength=GapLength? & policy=DependsPolicy?) "}")?
+		//task=[Task|TaskPath] ("{" (gapDuration=GapDuration? & gapLength=GapLength? & policy=DependsPolicy?) "}")?
 		public Group getGroup() { return cGroup; }
 
-		//task=[Task]
+		//task=[Task|TaskPath]
 		public Assignment getTaskAssignment_0() { return cTaskAssignment_0; }
 
-		//[Task]
+		//[Task|TaskPath]
 		public CrossReference getTaskTaskCrossReference_0_0() { return cTaskTaskCrossReference_0_0; }
 
-		//ID
-		public RuleCall getTaskTaskIDTerminalRuleCall_0_0_1() { return cTaskTaskIDTerminalRuleCall_0_0_1; }
+		//TaskPath
+		public RuleCall getTaskTaskTaskPathParserRuleCall_0_0_1() { return cTaskTaskTaskPathParserRuleCall_0_0_1; }
 
 		//("{" (gapDuration=GapDuration? & gapLength=GapLength? & policy=DependsPolicy?) "}")?
 		public Group getGroup_1() { return cGroup_1; }
@@ -7341,6 +7341,38 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
+	}
+
+	public class TaskPathElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TaskPath");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cExclamationMarkKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cFullStopKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
+		
+		//TaskPath:
+		//	"!"* ID ("." ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//"!"* ID ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//"!"*
+		public Keyword getExclamationMarkKeyword_0() { return cExclamationMarkKeyword_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+
+		//("." ID)*
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"."
+		public Keyword getFullStopKeyword_2_0() { return cFullStopKeyword_2_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_2_1() { return cIDTerminalRuleCall_2_1; }
 	}
 
 	public class TaskTimesheetAttributeElements extends AbstractParserRuleElementFinder {
@@ -7513,72 +7545,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Weekday
 		public RuleCall getLastWeekdayEnumRuleCall_1_1_0() { return cLastWeekdayEnumRuleCall_1_1_0; }
-	}
-
-	public class AbsoluteIdElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AbsoluteId");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		
-		//// http://www.taskjuggler.org/tj3/manual/depends.html
-		//// http://www.taskjuggler.org/tj3/manual/The_TaskJuggler_Syntax.html#ABSOLUTEID
-		//AbsoluteId:
-		//	ID ("." ID)*;
-		public ParserRule getRule() { return rule; }
-
-		//ID ("." ID)*
-		public Group getGroup() { return cGroup; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
-
-		//("." ID)*
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"."
-		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
-	}
-
-	public class RelativeIdElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RelativeId");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cExclamationMarkKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cRelativeIdParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cFullStopKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
-		
-		//RelativeId:
-		//	"!" RelativeId? ID ("." ID)*;
-		public ParserRule getRule() { return rule; }
-
-		//"!" RelativeId? ID ("." ID)*
-		public Group getGroup() { return cGroup; }
-
-		//"!"
-		public Keyword getExclamationMarkKeyword_0() { return cExclamationMarkKeyword_0; }
-
-		//RelativeId?
-		public RuleCall getRelativeIdParserRuleCall_1() { return cRelativeIdParserRuleCall_1; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_2() { return cIDTerminalRuleCall_2; }
-
-		//("." ID)*
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"."
-		public Keyword getFullStopKeyword_3_0() { return cFullStopKeyword_3_0; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_3_1() { return cIDTerminalRuleCall_3_1; }
 	}
 
 	public class XFloatElements extends AbstractParserRuleElementFinder {
@@ -9054,6 +9020,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private ShiftLimitElements pShiftLimit;
 	private SortElements pSort;
 	private TaskDependencyElements pTaskDependency;
+	private TaskPathElements pTaskPath;
 	private TaskTimesheetAttributeElements pTaskTimesheetAttribute;
 	private TimesheetAttributeElements pTimesheetAttribute;
 	private TimesheetReportAttributeElements pTimesheetReportAttribute;
@@ -9078,8 +9045,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private TimeUnitElements unknownRuleTimeUnit;
 	private WeekdayElements unknownRuleWeekday;
 	private WorkQuantityUnitElements unknownRuleWorkQuantityUnit;
-	private AbsoluteIdElements pAbsoluteId;
-	private RelativeIdElements pRelativeId;
 	private TerminalRule tID;
 	private XFloatElements pXFloat;
 	private TerminalRule tFLOAT;
@@ -10888,8 +10853,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// TODO
 	//// http://www.taskjuggler.org/tj3/manual/tagfile.html
 	//TagFile:
-	//	"tagfile" id=ID? file=STRING ("{" hideResource=HideResource? & hideTask=HideTask? & rollupResource=RollupResource? &
-	//	rollupTask=RollupTask? "}")?;
+	//	"tagfile" id=ID? filename=STRING ("{" hideResource=HideResource? & hideTask=HideTask? & rollupResource=RollupResource?
+	//	& rollupTask=RollupTask? "}")?;
 	public TagFileElements getTagFileAccess() {
 		return (pTagFile != null) ? pTagFile : (pTagFile = new TagFileElements());
 	}
@@ -11392,13 +11357,23 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TaskDependency:
-	//	task=[Task] ("{" (gapDuration=GapDuration? & gapLength=GapLength? & policy=DependsPolicy?) "}")?;
+	//	task=[Task|TaskPath] ("{" (gapDuration=GapDuration? & gapLength=GapLength? & policy=DependsPolicy?) "}")?;
 	public TaskDependencyElements getTaskDependencyAccess() {
 		return (pTaskDependency != null) ? pTaskDependency : (pTaskDependency = new TaskDependencyElements());
 	}
 	
 	public ParserRule getTaskDependencyRule() {
 		return getTaskDependencyAccess().getRule();
+	}
+
+	//TaskPath:
+	//	"!"* ID ("." ID)*;
+	public TaskPathElements getTaskPathAccess() {
+		return (pTaskPath != null) ? pTaskPath : (pTaskPath = new TaskPathElements());
+	}
+	
+	public ParserRule getTaskPathRule() {
+		return getTaskPathAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
@@ -11676,26 +11651,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/depends.html
 	//// http://www.taskjuggler.org/tj3/manual/The_TaskJuggler_Syntax.html#ABSOLUTEID
-	//AbsoluteId:
-	//	ID ("." ID)*;
-	public AbsoluteIdElements getAbsoluteIdAccess() {
-		return (pAbsoluteId != null) ? pAbsoluteId : (pAbsoluteId = new AbsoluteIdElements());
-	}
-	
-	public ParserRule getAbsoluteIdRule() {
-		return getAbsoluteIdAccess().getRule();
-	}
-
-	//RelativeId:
-	//	"!" RelativeId? ID ("." ID)*;
-	public RelativeIdElements getRelativeIdAccess() {
-		return (pRelativeId != null) ? pRelativeId : (pRelativeId = new RelativeIdElements());
-	}
-	
-	public ParserRule getRelativeIdRule() {
-		return getRelativeIdAccess().getRule();
-	}
-
 	//terminal ID:
 	//	("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {

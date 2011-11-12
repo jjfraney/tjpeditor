@@ -5343,7 +5343,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTagFile_File()
+  public EAttribute getTagFile_Filename()
   {
         return (EAttribute)getTagFile().getEStructuralFeatures().get(1);
   }

@@ -3467,11 +3467,11 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (id=ID? file=STRING (hideResource=HideResource? hideTask=HideTask? rollupResource=RollupResource? rollupTask=RollupTask?)?)
+	 *     (id=ID? filename=STRING (hideResource=HideResource? hideTask=HideTask? rollupResource=RollupResource? rollupTask=RollupTask?)?)
 	 *
 	 * Features:
 	 *    id[0, 1]
-	 *    file[1, 1]
+	 *    filename[1, 1]
 	 *    hideResource[0, 1]
 	 *    hideTask[0, 1]
 	 *    rollupResource[0, 1]
@@ -3790,7 +3790,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (task=[Task|ID] (gapDuration=GapDuration? gapLength=GapLength? policy=DependsPolicy?)?)
+	 *     (task=[Task|TaskPath] (gapDuration=GapDuration? gapLength=GapLength? policy=DependsPolicy?)?)
 	 *
 	 * Features:
 	 *    task[1, 1]

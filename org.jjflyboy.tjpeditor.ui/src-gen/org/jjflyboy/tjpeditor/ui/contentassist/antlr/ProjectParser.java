@@ -327,13 +327,11 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSortAccess().getGroup_1(), "rule__Sort__Group_1__0");
 					put(grammarAccess.getTaskDependencyAccess().getGroup(), "rule__TaskDependency__Group__0");
 					put(grammarAccess.getTaskDependencyAccess().getGroup_1(), "rule__TaskDependency__Group_1__0");
+					put(grammarAccess.getTaskPathAccess().getGroup(), "rule__TaskPath__Group__0");
+					put(grammarAccess.getTaskPathAccess().getGroup_2(), "rule__TaskPath__Group_2__0");
 					put(grammarAccess.getWorkHoursAccess().getGroup(), "rule__WorkHours__Group__0");
 					put(grammarAccess.getWeekdaysAccess().getGroup(), "rule__Weekdays__Group__0");
 					put(grammarAccess.getWeekdaysAccess().getGroup_1(), "rule__Weekdays__Group_1__0");
-					put(grammarAccess.getAbsoluteIdAccess().getGroup(), "rule__AbsoluteId__Group__0");
-					put(grammarAccess.getAbsoluteIdAccess().getGroup_1(), "rule__AbsoluteId__Group_1__0");
-					put(grammarAccess.getRelativeIdAccess().getGroup(), "rule__RelativeId__Group__0");
-					put(grammarAccess.getRelativeIdAccess().getGroup_3(), "rule__RelativeId__Group_3__0");
 					put(grammarAccess.getGlobalAccess().getProjectAssignment_0(), "rule__Global__ProjectAssignment_0");
 					put(grammarAccess.getGlobalAccess().getAttributesAssignment_1(), "rule__Global__AttributesAssignment_1");
 					put(grammarAccess.getAccountAccess().getIdAssignment_1(), "rule__Account__IdAssignment_1");
@@ -525,7 +523,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatusStatusSheetAccess().getTextAssignment_2(), "rule__StatusStatusSheet__TextAssignment_2");
 					put(grammarAccess.getStatusStatusSheetAccess().getAttributesAssignment_3_1(), "rule__StatusStatusSheet__AttributesAssignment_3_1");
 					put(grammarAccess.getTagFileAccess().getIdAssignment_1(), "rule__TagFile__IdAssignment_1");
-					put(grammarAccess.getTagFileAccess().getFileAssignment_2(), "rule__TagFile__FileAssignment_2");
+					put(grammarAccess.getTagFileAccess().getFilenameAssignment_2(), "rule__TagFile__FilenameAssignment_2");
 					put(grammarAccess.getTagFileAccess().getHideResourceAssignment_3_0_1(), "rule__TagFile__HideResourceAssignment_3_0_1");
 					put(grammarAccess.getTagFileAccess().getHideTaskAssignment_3_1(), "rule__TagFile__HideTaskAssignment_3_1");
 					put(grammarAccess.getTagFileAccess().getRollupResourceAssignment_3_2(), "rule__TagFile__RollupResourceAssignment_3_2");

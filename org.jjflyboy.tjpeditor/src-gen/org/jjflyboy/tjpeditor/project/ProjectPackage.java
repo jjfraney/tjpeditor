@@ -4472,13 +4472,13 @@ public interface ProjectPackage extends EPackage
   int TAG_FILE__ID = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>File</b></em>' attribute.
+   * The feature id for the '<em><b>Filename</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TAG_FILE__FILE = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 1;
+  int TAG_FILE__FILENAME = GLOBAL_ATTRIBUTE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Hide Resource</b></em>' containment reference.
@@ -9743,15 +9743,15 @@ public interface ProjectPackage extends EPackage
   EAttribute getTagFile_Id();
 
   /**
-   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.TagFile#getFile <em>File</em>}'.
+   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.TagFile#getFilename <em>Filename</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>File</em>'.
-   * @see org.jjflyboy.tjpeditor.project.TagFile#getFile()
+   * @return the meta object for the attribute '<em>Filename</em>'.
+   * @see org.jjflyboy.tjpeditor.project.TagFile#getFilename()
    * @see #getTagFile()
    * @generated
    */
-  EAttribute getTagFile_File();
+  EAttribute getTagFile_Filename();
 
   /**
    * Returns the meta object for the containment reference '{@link org.jjflyboy.tjpeditor.project.TagFile#getHideResource <em>Hide Resource</em>}'.

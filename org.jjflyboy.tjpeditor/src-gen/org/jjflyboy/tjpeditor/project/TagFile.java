@@ -15,7 +15,7 @@ package org.jjflyboy.tjpeditor.project;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.jjflyboy.tjpeditor.project.TagFile#getId <em>Id</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.TagFile#getFile <em>File</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.TagFile#getFilename <em>Filename</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.TagFile#getHideResource <em>Hide Resource</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.TagFile#getHideTask <em>Hide Task</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.TagFile#getRollupResource <em>Rollup Resource</em>}</li>
@@ -56,30 +56,30 @@ public interface TagFile extends GlobalAttribute
   void setId(String value);
 
   /**
-   * Returns the value of the '<em><b>File</b></em>' attribute.
+   * Returns the value of the '<em><b>Filename</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>File</em>' attribute isn't clear,
+   * If the meaning of the '<em>Filename</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>File</em>' attribute.
-   * @see #setFile(String)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getTagFile_File()
+   * @return the value of the '<em>Filename</em>' attribute.
+   * @see #setFilename(String)
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getTagFile_Filename()
    * @model
    * @generated
    */
-  String getFile();
+  String getFilename();
 
   /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.TagFile#getFile <em>File</em>}' attribute.
+   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.TagFile#getFilename <em>Filename</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>File</em>' attribute.
-   * @see #getFile()
+   * @param value the new value of the '<em>Filename</em>' attribute.
+   * @see #getFilename()
    * @generated
    */
-  void setFile(String value);
+  void setFilename(String value);
 
   /**
    * Returns the value of the '<em><b>Hide Resource</b></em>' containment reference.

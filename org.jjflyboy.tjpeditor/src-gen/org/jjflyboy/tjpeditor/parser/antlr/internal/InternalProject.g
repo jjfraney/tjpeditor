@@ -7840,9 +7840,9 @@ ruleTagFile returns [EObject current=null]
 )
 )?(
 (
-		lv_file_2_0=RULE_STRING
+		lv_filename_2_0=RULE_STRING
 		{
-			newLeafNode(lv_file_2_0, grammarAccess.getTagFileAccess().getFileSTRINGTerminalRuleCall_2_0()); 
+			newLeafNode(lv_filename_2_0, grammarAccess.getTagFileAccess().getFilenameSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -7850,8 +7850,8 @@ ruleTagFile returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"file",
-        		lv_file_2_0, 
+       			"filename",
+        		lv_filename_2_0, 
         		"STRING");
 	    }
 
@@ -10369,10 +10369,12 @@ ruleTaskDependency returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getTaskDependencyRule());
 	        }
         }
-	otherlv_0=RULE_ID
-	{
-		newLeafNode(otherlv_0, grammarAccess.getTaskDependencyAccess().getTaskTaskCrossReference_0_0()); 
-	}
+		{ 
+	        newCompositeNode(grammarAccess.getTaskDependencyAccess().getTaskTaskCrossReference_0_0()); 
+	    }
+		ruleTaskPath		{ 
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 )(	otherlv_1='{' 
@@ -10491,6 +10493,53 @@ ruleTaskDependency returns [EObject current=null]
     }
 )?)
 ;
+
+
+
+
+
+// Entry rule entryRuleTaskPath
+entryRuleTaskPath returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTaskPathRule()); } 
+	 iv_ruleTaskPath=ruleTaskPath 
+	 { $current=$iv_ruleTaskPath.current.getText(); }  
+	 EOF 
+;
+
+// Rule TaskPath
+ruleTaskPath returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+	kw='!' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getTaskPathAccess().getExclamationMarkKeyword_0()); 
+    }
+)*    this_ID_1=RULE_ID    {
+		$current.merge(this_ID_1);
+    }
+
+    { 
+    newLeafNode(this_ID_1, grammarAccess.getTaskPathAccess().getIDTerminalRuleCall_1()); 
+    }
+(
+	kw='.' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getTaskPathAccess().getFullStopKeyword_2_0()); 
+    }
+    this_ID_3=RULE_ID    {
+		$current.merge(this_ID_3);
+    }
+
+    { 
+    newLeafNode(this_ID_3, grammarAccess.getTaskPathAccess().getIDTerminalRuleCall_2_1()); 
+    }
+)*)
+    ;
 
 
 
@@ -10822,66 +10871,6 @@ ruleWeekdays returns [EObject current=null]
 )
 ))?)
 ;
-
-
-
-
-
-
-
-// Entry rule entryRuleRelativeId
-entryRuleRelativeId returns [String current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getRelativeIdRule()); } 
-	 iv_ruleRelativeId=ruleRelativeId 
-	 { $current=$iv_ruleRelativeId.current.getText(); }  
-	 EOF 
-;
-
-// Rule RelativeId
-ruleRelativeId returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-	kw='!' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getRelativeIdAccess().getExclamationMarkKeyword_0()); 
-    }
-(
-    { 
-        newCompositeNode(grammarAccess.getRelativeIdAccess().getRelativeIdParserRuleCall_1()); 
-    }
-    this_RelativeId_1=ruleRelativeId    {
-		$current.merge(this_RelativeId_1);
-    }
-
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)?    this_ID_2=RULE_ID    {
-		$current.merge(this_ID_2);
-    }
-
-    { 
-    newLeafNode(this_ID_2, grammarAccess.getRelativeIdAccess().getIDTerminalRuleCall_2()); 
-    }
-(
-	kw='.' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getRelativeIdAccess().getFullStopKeyword_3_0()); 
-    }
-    this_ID_4=RULE_ID    {
-		$current.merge(this_ID_4);
-    }
-
-    { 
-    newLeafNode(this_ID_4, grammarAccess.getRelativeIdAccess().getIDTerminalRuleCall_3_1()); 
-    }
-)*)
-    ;
 
 
 

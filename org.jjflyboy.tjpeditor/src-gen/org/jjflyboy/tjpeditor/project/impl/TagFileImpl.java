@@ -28,7 +28,7 @@ import org.jjflyboy.tjpeditor.project.TagFile;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getId <em>Id</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getFile <em>File</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getFilename <em>Filename</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getHideResource <em>Hide Resource</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getHideTask <em>Hide Task</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TagFileImpl#getRollupResource <em>Rollup Resource</em>}</li>
@@ -61,24 +61,24 @@ public class TagFileImpl extends GlobalAttributeImpl implements TagFile
   protected String id = ID_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getFile() <em>File</em>}' attribute.
+   * The default value of the '{@link #getFilename() <em>Filename</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFile()
+   * @see #getFilename()
    * @generated
    * @ordered
    */
-  protected static final String FILE_EDEFAULT = null;
+  protected static final String FILENAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getFile() <em>File</em>}' attribute.
+   * The cached value of the '{@link #getFilename() <em>Filename</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFile()
+   * @see #getFilename()
    * @generated
    * @ordered
    */
-  protected String file = FILE_EDEFAULT;
+  protected String filename = FILENAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getHideResource() <em>Hide Resource</em>}' containment reference.
@@ -169,9 +169,9 @@ public class TagFileImpl extends GlobalAttributeImpl implements TagFile
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getFile()
+  public String getFilename()
   {
-    return file;
+    return filename;
   }
 
   /**
@@ -179,12 +179,12 @@ public class TagFileImpl extends GlobalAttributeImpl implements TagFile
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFile(String newFile)
+  public void setFilename(String newFilename)
   {
-    String oldFile = file;
-    file = newFile;
+    String oldFilename = filename;
+    filename = newFilename;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.TAG_FILE__FILE, oldFile, file));
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.TAG_FILE__FILENAME, oldFilename, filename));
   }
 
   /**
@@ -413,8 +413,8 @@ public class TagFileImpl extends GlobalAttributeImpl implements TagFile
     {
       case ProjectPackage.TAG_FILE__ID:
         return getId();
-      case ProjectPackage.TAG_FILE__FILE:
-        return getFile();
+      case ProjectPackage.TAG_FILE__FILENAME:
+        return getFilename();
       case ProjectPackage.TAG_FILE__HIDE_RESOURCE:
         return getHideResource();
       case ProjectPackage.TAG_FILE__HIDE_TASK:
@@ -440,8 +440,8 @@ public class TagFileImpl extends GlobalAttributeImpl implements TagFile
       case ProjectPackage.TAG_FILE__ID:
         setId((String)newValue);
         return;
-      case ProjectPackage.TAG_FILE__FILE:
-        setFile((String)newValue);
+      case ProjectPackage.TAG_FILE__FILENAME:
+        setFilename((String)newValue);
         return;
       case ProjectPackage.TAG_FILE__HIDE_RESOURCE:
         setHideResource((HideResource)newValue);
@@ -472,8 +472,8 @@ public class TagFileImpl extends GlobalAttributeImpl implements TagFile
       case ProjectPackage.TAG_FILE__ID:
         setId(ID_EDEFAULT);
         return;
-      case ProjectPackage.TAG_FILE__FILE:
-        setFile(FILE_EDEFAULT);
+      case ProjectPackage.TAG_FILE__FILENAME:
+        setFilename(FILENAME_EDEFAULT);
         return;
       case ProjectPackage.TAG_FILE__HIDE_RESOURCE:
         setHideResource((HideResource)null);
@@ -503,8 +503,8 @@ public class TagFileImpl extends GlobalAttributeImpl implements TagFile
     {
       case ProjectPackage.TAG_FILE__ID:
         return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-      case ProjectPackage.TAG_FILE__FILE:
-        return FILE_EDEFAULT == null ? file != null : !FILE_EDEFAULT.equals(file);
+      case ProjectPackage.TAG_FILE__FILENAME:
+        return FILENAME_EDEFAULT == null ? filename != null : !FILENAME_EDEFAULT.equals(filename);
       case ProjectPackage.TAG_FILE__HIDE_RESOURCE:
         return hideResource != null;
       case ProjectPackage.TAG_FILE__HIDE_TASK:
@@ -530,8 +530,8 @@ public class TagFileImpl extends GlobalAttributeImpl implements TagFile
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (id: ");
     result.append(id);
-    result.append(", file: ");
-    result.append(file);
+    result.append(", filename: ");
+    result.append(filename);
     result.append(')');
     return result.toString();
   }
