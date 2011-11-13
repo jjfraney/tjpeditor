@@ -24,7 +24,7 @@ public class IsodateTest extends XtextTest {
 	}
 	@Test
 	public void testIsoDateMinutesTimeZone() {
-		testTerminal("2010-01-16-12:20-0100", "ISODATE");
+		testTerminal("2010-01-16-12:20--0100", "ISODATE");
 	}
 	@Test
 	public void testIsoDateMinutesIllicitTimeZone() {

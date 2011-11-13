@@ -11825,7 +11825,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// YYYY-MM-DD-HH:mm[:ss][xNNNN]  (x being + or -, NNNN being utc timezone offset
 	//terminal ISODATE:
 	//	"20" "0".."9" "0".."9" "-" ("0" "1".."9" | "1" "0".."2") "-" ("0" "1".."9" | ("1" | "2") "0".."9" | "3" ("0" | "1"))
-	//	("-" (("0"? | "1") "0".."9" | "2" "0".."4") ":" "0".."5" "0".."9" (":" "0".."5" "0".."9")? (("+" | "-") "0".."5"
+	//	("-" (("0"? | "1") "0".."9" | "2" "0".."4") ":" "0".."5" "0".."9" (":" "0".."5" "0".."9")? ("-" ("+" | "-") "0".."5"
 	//	"0".."9" "0".."5" "0".."9")?)?;
 	public TerminalRule getISODATERule() {
 		return (tISODATE != null) ? tISODATE : (tISODATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ISODATE"));

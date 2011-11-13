@@ -5801,8 +5801,8 @@ public class InternalProjectLexer extends Lexer {
         try {
             int _type = RULE_ISODATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:14: ( '20' '0' .. '9' '0' .. '9' '-' ( '0' '1' .. '9' | '1' '0' .. '2' ) '-' ( '0' '1' .. '9' | ( '1' | '2' ) '0' .. '9' | '3' ( '0' | '1' ) ) ( '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )? )? )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:16: '20' '0' .. '9' '0' .. '9' '-' ( '0' '1' .. '9' | '1' '0' .. '2' ) '-' ( '0' '1' .. '9' | ( '1' | '2' ) '0' .. '9' | '3' ( '0' | '1' ) ) ( '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )? )?
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:14: ( '20' '0' .. '9' '0' .. '9' '-' ( '0' '1' .. '9' | '1' '0' .. '2' ) '-' ( '0' '1' .. '9' | ( '1' | '2' ) '0' .. '9' | '3' ( '0' | '1' ) ) ( '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )? )? )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:16: '20' '0' .. '9' '0' .. '9' '-' ( '0' '1' .. '9' | '1' '0' .. '2' ) '-' ( '0' '1' .. '9' | ( '1' | '2' ) '0' .. '9' | '3' ( '0' | '1' ) ) ( '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )? )?
             {
             match("20"); 
 
@@ -5916,7 +5916,7 @@ public class InternalProjectLexer extends Lexer {
 
             }
 
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:123: ( '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )? )?
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:123: ( '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )? )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -5925,7 +5925,7 @@ public class InternalProjectLexer extends Lexer {
             }
             switch (alt21) {
                 case 1 :
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:124: '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )?
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:124: '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )?
                     {
                     match('-'); 
                     // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:128: ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' )
@@ -6067,17 +6067,18 @@ public class InternalProjectLexer extends Lexer {
 
                     }
 
-                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:210: ( ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )?
+                    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:210: ( '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )?
                     int alt20=2;
                     int LA20_0 = input.LA(1);
 
-                    if ( (LA20_0=='+'||LA20_0=='-') ) {
+                    if ( (LA20_0=='-') ) {
                         alt20=1;
                     }
                     switch (alt20) {
                         case 1 :
-                            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:211: ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9'
+                            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:12275:211: '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9'
                             {
+                            match('-'); 
                             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                                 input.consume();
 
@@ -8083,21 +8084,21 @@ public class InternalProjectLexer extends Lexer {
     static final String DFA25_eotS =
         "\1\uffff\1\62\2\uffff\4\62\1\uffff\4\62\1\144\3\62\1\164\1\62\1"+
         "\170\1\uffff\2\62\1\u0081\1\u0087\1\62\1\u008a\1\62\2\uffff\1\u008f"+
-        "\1\62\1\uffff\1\62\1\u0095\1\uffff\2\54\3\u0095\1\uffff\1\54\2\uffff"+
+        "\1\62\1\uffff\1\62\1\u0094\1\uffff\2\54\3\u0094\1\uffff\1\54\2\uffff"+
         "\5\62\3\uffff\27\62\1\uffff\1\62\1\u00d0\25\62\1\uffff\17\62\1\uffff"+
         "\1\62\1\u0107\3\uffff\7\62\1\uffff\5\62\1\uffff\2\62\1\uffff\1\62"+
-        "\4\uffff\1\u0120\1\uffff\1\u0095\5\uffff\3\u0095\1\uffff\2\62\1"+
+        "\4\uffff\1\u0120\1\uffff\1\u0094\5\uffff\3\u0094\1\uffff\2\62\1"+
         "\uffff\7\62\1\u012c\12\62\1\u0139\16\62\1\u014f\1\u0150\5\62\1\u0158"+
         "\7\62\1\u0160\1\uffff\7\62\1\u0168\16\62\1\u0178\2\62\1\u017c\7"+
         "\62\1\u0186\10\62\1\u018f\1\u0190\12\62\1\uffff\13\62\1\u01b1\1"+
-        "\u01b3\1\62\1\u01b5\3\62\1\u01b9\2\62\1\u01bc\2\62\1\uffff\2\u0094"+
+        "\u01b3\1\62\1\u01b5\3\62\1\u01b9\2\62\1\u01bc\2\62\1\uffff\2\u0093"+
         "\4\62\1\u01c5\1\62\1\u01c7\2\62\1\uffff\14\62\1\uffff\14\62\1\u01e5"+
         "\5\62\1\u01ee\2\62\2\uffff\7\62\1\uffff\1\u01f8\5\62\1\u01fe\1\uffff"+
         "\1\62\1\u0200\1\u0201\4\62\1\uffff\13\62\1\u0213\3\62\1\uffff\1"+
         "\u0218\1\62\1\u021a\1\uffff\4\62\1\u021f\4\62\1\uffff\1\62\1\u0225"+
         "\6\62\2\uffff\6\62\1\u0238\1\u0239\4\62\1\u023e\3\62\1\u0243\17"+
         "\62\1\uffff\1\62\1\uffff\1\u0256\1\uffff\1\u0258\1\u0259\1\62\1"+
-        "\uffff\1\62\1\u025e\1\uffff\2\62\2\u0095\3\62\1\u0269\1\uffff\1"+
+        "\uffff\1\62\1\u025e\1\uffff\2\62\2\u0094\3\62\1\u0269\1\uffff\1"+
         "\62\1\uffff\3\62\1\u026e\4\62\1\u0273\1\u0275\3\62\1\u027b\14\62"+
         "\1\u0288\2\62\1\uffff\6\62\1\u0292\1\62\1\uffff\11\62\1\uffff\2"+
         "\62\1\u029f\2\62\1\uffff\1\62\2\uffff\5\62\1\u02a8\1\u02a9\5\62"+
@@ -8385,7 +8386,7 @@ public class InternalProjectLexer extends Lexer {
         "\1\u00f6\5\uffff\1\u00ec\1\2\1\3\27\uffff\1\12\27\uffff\1\u00e0"+
         "\17\uffff\1\u00df\2\uffff\1\u00ef\1\70\1\71\7\uffff\1\u00e2\5\uffff"+
         "\1\u00e1\2\uffff\1\u00e3\1\uffff\1\u008f\1\u0093\1\u009a\1\u00f5"+
-        "\1\uffff\1\u00eb\1\uffff\1\u00ed\1\u00f2\1\u00f3\1\u00f0\1\u00ee"+
+        "\1\uffff\1\u00eb\1\uffff\1\u00f2\1\u00f3\1\u00ed\1\u00f0\1\u00ee"+
         "\3\uffff\1\u00f4\2\uffff\1\u00ec\61\uffff\1\u00a9\66\uffff\1\u00cc"+
         "\30\uffff\1\u00a6\13\uffff\1\u00ea\14\uffff\1\u00e9\25\uffff\1\u00e5"+
         "\1\u00e7\7\uffff\1\u00da\7\uffff\1\115\7\uffff\1\u008d\17\uffff"+
@@ -8432,7 +8433,7 @@ public class InternalProjectLexer extends Lexer {
         "\1\u00d1\1\u0081\1\u0085\1\uffff\1\u0087\1\u0088\1\uffff\1\41\1"+
         "\u008e";
     static final String DFA25_specialS =
-        "\1\2\43\uffff\1\0\1\1\u0504\uffff}>";
+        "\1\0\43\uffff\1\1\1\2\u0504\uffff}>";
     static final String[] DFA25_transitionS = {
             "\11\54\2\53\2\54\1\53\22\54\1\36\1\35\1\44\1\43\1\54\1\40\1"+
             "\54\1\45\3\54\1\24\1\10\1\23\1\34\1\52\1\42\1\46\1\47\7\50\7"+
@@ -8484,17 +8485,17 @@ public class InternalProjectLexer extends Lexer {
             "\1\u0090",
             "",
             "\12\61\7\uffff\6\61\32\uffff\6\61",
-            "\1\u0093\1\uffff\12\u0092\1\u0096\6\uffff\6\u0094\32\uffff"+
-            "\6\u0094",
+            "\1\u0095\1\uffff\12\u0092\1\u0096\6\uffff\6\u0093\32\uffff"+
+            "\6\u0093",
             "",
             "\0\167",
             "\0\167",
-            "\1\u0093\1\uffff\12\u0092\1\u0096\6\uffff\6\u0094\32\uffff"+
-            "\6\u0094",
-            "\1\u0093\1\uffff\1\u0098\4\u0099\5\u009a\1\u0096\6\uffff\6"+
-            "\u0094\32\uffff\6\u0094",
-            "\1\u0093\1\uffff\12\u009a\1\u0096\6\uffff\6\u0094\32\uffff"+
-            "\6\u0094",
+            "\1\u0095\1\uffff\12\u0092\1\u0096\6\uffff\6\u0093\32\uffff"+
+            "\6\u0093",
+            "\1\u0095\1\uffff\1\u0098\4\u0099\5\u009a\1\u0096\6\uffff\6"+
+            "\u0093\32\uffff\6\u0093",
+            "\1\u0095\1\uffff\12\u009a\1\u0096\6\uffff\6\u0093\32\uffff"+
+            "\6\u0093",
             "",
             "\1\u009b",
             "",
@@ -8606,18 +8607,18 @@ public class InternalProjectLexer extends Lexer {
             "",
             "\12\62\7\uffff\32\62\4\uffff\1\62\1\uffff\32\62",
             "",
-            "\1\u0093\1\uffff\12\u0121\1\u0096\6\uffff\6\u0094\32\uffff"+
-            "\6\u0094",
+            "\1\u0095\1\uffff\12\u0121\1\u0096\6\uffff\6\u0093\32\uffff"+
+            "\6\u0093",
             "",
             "",
             "",
             "",
             "",
-            "\1\u0093\1\uffff\12\u0122\1\u0096\6\uffff\6\u0094\32\uffff"+
-            "\6\u0094",
-            "\1\u0093\1\uffff\12\u0121\1\u0096\6\uffff\6\u0094\32\uffff"+
-            "\6\u0094",
-            "\1\u0093\1\uffff\12\u0121\7\uffff\6\u0094\32\uffff\6\u0094",
+            "\1\u0095\1\uffff\12\u0122\1\u0096\6\uffff\6\u0093\32\uffff"+
+            "\6\u0093",
+            "\1\u0095\1\uffff\12\u0121\1\u0096\6\uffff\6\u0093\32\uffff"+
+            "\6\u0093",
+            "\1\u0095\1\uffff\12\u0121\7\uffff\6\u0093\32\uffff\6\u0093",
             "",
             "\1\u0123",
             "\1\u0124",
@@ -8754,8 +8755,8 @@ public class InternalProjectLexer extends Lexer {
             "\1\u01bd",
             "\1\u01be",
             "",
-            "\1\u0093\1\uffff\12\u01bf",
-            "\1\u0093\1\uffff\12\u01c0",
+            "\1\u0095\1\uffff\12\u01bf",
+            "\1\u0095\1\uffff\12\u01c0",
             "\1\u01c1",
             "\1\u01c2",
             "\1\u01c3",
@@ -8919,8 +8920,8 @@ public class InternalProjectLexer extends Lexer {
             "",
             "\1\u025f",
             "\1\u0260",
-            "\1\u0093\1\uffff\12\u01bf",
-            "\1\u0261\1\u0093\1\uffff\12\u01bf",
+            "\1\u0095\1\uffff\12\u01bf",
+            "\1\u0261\1\u0095\1\uffff\12\u01bf",
             "\1\u0262",
             "\1\u0263",
             "\1\u0264",
@@ -9843,26 +9844,6 @@ public class InternalProjectLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA25_36 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA25_36>='\u0000' && LA25_36<='\uFFFF')) ) {s = 119;}
-
-                        else s = 44;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA25_37 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA25_37>='\u0000' && LA25_37<='\uFFFF')) ) {s = 119;}
-
-                        else s = 44;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA25_0 = input.LA(1);
 
                         s = -1;
@@ -9953,6 +9934,26 @@ public class InternalProjectLexer extends Lexer {
                         else if ( ((LA25_0>='\t' && LA25_0<='\n')||LA25_0=='\r') ) {s = 43;}
 
                         else if ( ((LA25_0>='\u0000' && LA25_0<='\b')||(LA25_0>='\u000B' && LA25_0<='\f')||(LA25_0>='\u000E' && LA25_0<='\u001F')||LA25_0=='$'||LA25_0=='&'||(LA25_0>='(' && LA25_0<='*')||(LA25_0>=':' && LA25_0<='@')||(LA25_0>='[' && LA25_0<='^')||LA25_0=='`'||LA25_0=='|'||(LA25_0>='~' && LA25_0<='\uFFFF')) ) {s = 44;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA25_36 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA25_36>='\u0000' && LA25_36<='\uFFFF')) ) {s = 119;}
+
+                        else s = 44;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA25_37 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA25_37>='\u0000' && LA25_37<='\uFFFF')) ) {s = 119;}
+
+                        else s = 44;
 
                         if ( s>=0 ) return s;
                         break;
