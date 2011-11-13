@@ -14,6 +14,19 @@ public class ShiftsTest  extends XtextTest {
 		testParserRule("s1 2010-01-16-9:30 - 2011-01-16-20:59", "ShiftsLimit");
 	}
 	@Test
+	public void testShiftsAllocate() {
+		testParserRule("shifts s1", "ShiftsAllocate");
+	}
+	@Test
+	public void testShiftsAllocateWithInterval() {
+		testParserRule("shifts s1 2010-01-16 + 4 m", "ShiftsAllocate");
+	}
+	@Test
+	public void testShiftsAllocateWithTwoIntervals() {
+		testParserRule("shifts s1 2010-01-16 + 4 m, 2010-01-16 - 2011-01-16", "ShiftsAllocate");
+	}
+	
+	@Test
 	public void testShiftsResource() {
 		testParserRule("shifts s1 ", "ShiftsResource");
 	}

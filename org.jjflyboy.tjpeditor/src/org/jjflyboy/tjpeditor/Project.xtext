@@ -223,7 +223,7 @@ Allocate: 'allocate' resources+=AllocateResource (',' resources+=AllocateResourc
 AllocateResource: resource=[Resource] ('{' attributes += AllocateResourceAttribute* '}')?;
 AllocateResourceAttribute:
 	Alternative
-	| Limits
+//	| Limits -- deprecated
 	| Mandatory
 	| Persistent
 	| Select
