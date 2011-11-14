@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.ResourceAttributes;
@@ -32,7 +31,7 @@ import org.jjflyboy.tjpeditor.project.ResourceAttributes;
  *
  * @generated
  */
-public class ResourceAttributesImpl extends MinimalEObjectImpl.Container implements ResourceAttributes
+public class ResourceAttributesImpl extends ExportAttributeImpl implements ResourceAttributes
 {
   /**
    * The default value of the '{@link #isAll() <em>All</em>}' attribute.

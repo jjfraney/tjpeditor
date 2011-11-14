@@ -5,7 +5,6 @@
  */
 package org.jjflyboy.tjpeditor.project;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ResourceAttributes extends EObject
+public interface ResourceAttributes extends ExportAttribute
 {
   /**
    * Returns the value of the '<em><b>All</b></em>' attribute.

@@ -22,7 +22,7 @@ GlobalAttribute:
     Account
     | Balance
 	| Copyright
-//	| Export
+	| Export
 	| Flags
 	| Limits
 //	| Macro
@@ -192,7 +192,21 @@ IcalReport: STRING;
 
 // TODO: export report
 // http://www.taskjuggler.org/tj3/manual/export.html
-Export: 'export' STRING;
+Export: 'export' id=ID? filename=STRING ('{' attributes += ExportAttribute* '}')?;
+ExportAttribute: (
+	Definitions
+	| End
+	| HideResource
+	| HideTask
+	| Period
+	| ResourceAttributes
+	| RollupResource
+	| RollupTask
+	| Scenarios
+	| Start
+	| TaskAttributes
+	| Timezone
+	);
 
 // http://www.taskjuggler.org/tj3/manual/resource.html
 Resource:
@@ -353,13 +367,15 @@ DailyWorkingHours: 'dailyworkinghours' dailyWorkingHours=XFloat;
 // Date: see ISODATE below
 
 // http://www.taskjuggler.org/tj3/manual/definitions.html
-Definitions: (all ?= '*'  | none ?= '-' | 
-		(flags ?= 'flags' &
-			 resources ?= 'resources' &
-			 tasks ?= 'tasks' &
-			 project ?= 'project' &
-			 projectids ?= 'projectids')
-);
+Definitions: 'definitions' (all ?= '*'  | none ?= '-'
+	 | {Defintions}
+		(flags ?= 'flags'? &
+			 resources ?= 'resources'? &
+			 tasks ?= 'tasks'? &
+			 project ?= 'project'? &
+			 projectids ?= 'projectids'?)
+)
+;
 
 // http://www.taskjuggler.org/tj3/manual/depends.html
 Depends: 'depends' TaskDependency;
@@ -661,10 +677,11 @@ ReportPrefix: 'reportprefix' report=[Report];
 
 
 // http://www.taskjuggler.org/tj3/manual/resourceattributes.html
-ResourceAttributes: ((all ?= '*'  | none ?= '-' | 
-		(vacation ?= 'vacation' &
-			 booking ?= 'booking' &
-			 workingHours ?= 'workinghours')
+ResourceAttributes: 'resourceattributes' ((all ?= '*'  | none ?= '-' | 
+		{ResourceAttributes} 
+			(vacation ?= 'vacation'? &
+			 booking ?= 'booking'? &
+			 workingHours ?= 'workinghours'?)
 ));
 
 // http://www.taskjuggler.org/tj3/manual/resourceprefix.html
@@ -706,11 +723,11 @@ Scenario:
 		)
 	'}')?;
 
-
 // http://www.taskjuggler.org/tj3/manual/scenario.ical.html
 // TODO
 ScenarioIcal: STRING;
 
+// http://www.taskjuggler.org/tj3/manual/scenarios.export.html
 // http://www.taskjuggler.org/tj3/manual/scenarios.html
 Scenarios: 'scenarios' scenarios+=[Scenario] (',' scenarios+=[Scenario])*;
 
@@ -835,18 +852,18 @@ TaskStatusSheetAttribute: TaskStatusSheet | StatusStatusSheet;
 TaskTimesheet: 'task' task=[Task] ('{' attributes += TaskTimesheetAttribute* '}')?;
 
 // http://www.taskjuggler.org/tj3/manual/taskattributes.html
-TaskAttributes: (all ?= '*' | none ?= '-' | 
-		(responsible ?= 'responsible' &
-			 flags ?= 'flags' &
-			 maxstart ?= 'maxstart' &
-			 maxend ?= 'maxstart' &
-			 priority ?= 'priority' &
-			 booking ?= 'priority' &
-			 note ?= 'note' &
-			 minstart ?= 'minstart' &
-			 minend ?= 'minend' &
-			 complete ?= 'complete' &
-			 depends ?= 'depends')
+TaskAttributes: 'taskattributes' (all ?= '*' | none ?= '-' | 
+		{TaskAttributes} (responsible ?= 'responsible'? &
+			 flags ?= 'flags'? &
+			 maxstart ?= 'maxstart'? &
+			 maxend ?= 'maxend'? &
+			 priority ?= 'priority'? &
+			 booking ?= 'booking'? &
+			 note ?= 'note'? &
+			 minstart ?= 'minstart'? &
+			 minend ?= 'minend'? &
+			 complete ?= 'complete'? &
+			 depends ?= 'depends'?)
 );
 
 

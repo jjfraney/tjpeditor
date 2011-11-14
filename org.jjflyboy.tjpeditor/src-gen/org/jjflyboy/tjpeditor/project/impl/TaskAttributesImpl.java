@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.TaskAttributes;
@@ -40,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.TaskAttributes;
  *
  * @generated
  */
-public class TaskAttributesImpl extends MinimalEObjectImpl.Container implements TaskAttributes
+public class TaskAttributesImpl extends ExportAttributeImpl implements TaskAttributes
 {
   /**
    * The default value of the '{@link #isAll() <em>All</em>}' attribute.

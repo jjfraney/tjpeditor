@@ -81,6 +81,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.REPORT: return createReport();
       case ProjectPackage.SUPPLEMENT_REPORT: return createSupplementReport();
       case ProjectPackage.REPORT_ATTRIBUTE: return createReportAttribute();
+      case ProjectPackage.EXPORT: return createExport();
+      case ProjectPackage.EXPORT_ATTRIBUTE: return createExportAttribute();
       case ProjectPackage.RESOURCE: return createResource();
       case ProjectPackage.SUPPLEMENT_RESOURCE: return createSupplementResource();
       case ProjectPackage.RESOURCE_ATTRIBUTE: return createResourceAttribute();
@@ -259,6 +261,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.RICH_TEXT: return createRichText();
       case ProjectPackage.WORK_HOURS: return createWorkHours();
       case ProjectPackage.WEEKDAYS: return createWeekdays();
+      case ProjectPackage.DEFINTIONS: return createDefintions();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -507,6 +510,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ReportAttributeImpl reportAttribute = new ReportAttributeImpl();
     return reportAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Export createExport()
+  {
+    ExportImpl export = new ExportImpl();
+    return export;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExportAttribute createExportAttribute()
+  {
+    ExportAttributeImpl exportAttribute = new ExportAttributeImpl();
+    return exportAttribute;
   }
 
   /**
@@ -2465,6 +2490,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     WeekdaysImpl weekdays = new WeekdaysImpl();
     return weekdays;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Defintions createDefintions()
+  {
+    DefintionsImpl defintions = new DefintionsImpl();
+    return defintions;
   }
 
   /**

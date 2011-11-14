@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class HideResourceImpl extends NikuReportAttributeImpl implements HideResource
+public class HideResourceImpl extends ExportAttributeImpl implements HideResource
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.

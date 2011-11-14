@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.RollupResource;
@@ -28,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.RollupResource;
  *
  * @generated
  */
-public class RollupResourceImpl extends MinimalEObjectImpl.Container implements RollupResource
+public class RollupResourceImpl extends ExportAttributeImpl implements RollupResource
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.

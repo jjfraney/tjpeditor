@@ -5,7 +5,6 @@
  */
 package org.jjflyboy.tjpeditor.project;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface RollupResource extends EObject
+public interface RollupResource extends ExportAttribute
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' attribute.

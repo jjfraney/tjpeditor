@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Scenarios extends ReportAttribute
+public interface Scenarios extends ReportAttribute, ExportAttribute
 {
   /**
    * Returns the value of the '<em><b>Scenarios</b></em>' reference list.

@@ -63,46 +63,45 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAccountParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cBalanceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cCopyrightParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cFlagsParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cLimitsParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cRateParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cResourceReportParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cTaskReportParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cTextReportParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cResourceParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cShiftParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cSupplementAccountParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cSupplementReportParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cSupplementResourceParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cSupplementTaskParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cTagFileParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
-		private final RuleCall cTaskParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cTrackingScenarioParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
-		private final RuleCall cVacationParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cExportParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cFlagsParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cLimitsParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cRateParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cResourceReportParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cTaskReportParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cTextReportParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cResourceParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cShiftParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cSupplementAccountParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cSupplementReportParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cSupplementResourceParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cSupplementTaskParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cTagFileParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cTaskParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cTrackingScenarioParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cVacationParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
 		
 		//GlobalAttribute:
-		//	Account //	| Export
-		//	//	| Macro
+		//	Account //	| Macro
 		//	//	| Navigator
 		//	//	| NikuReport
 		//	//	| StatusSheet
 		//	//	| StatusSheetReport
 		//	//	| Timesheet
 		//	//	| TimesheetReport
-		//	| Balance | Copyright | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
+		//	| Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
 		//	SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario |
 		//	Vacation;
 		public ParserRule getRule() { return rule; }
 
-		//Account //	| Export
-		////	| Macro
+		//Account //	| Macro
 		////	| Navigator
 		////	| NikuReport
 		////	| StatusSheet
 		////	| StatusSheetReport
 		////	| Timesheet
 		////	| TimesheetReport
-		//| Balance | Copyright | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
+		//| Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
 		//SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario |
 		//Vacation
 		public Alternatives getAlternatives() { return cAlternatives; }
@@ -116,53 +115,56 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Copyright
 		public RuleCall getCopyrightParserRuleCall_2() { return cCopyrightParserRuleCall_2; }
 
+		//Export
+		public RuleCall getExportParserRuleCall_3() { return cExportParserRuleCall_3; }
+
 		//Flags
-		public RuleCall getFlagsParserRuleCall_3() { return cFlagsParserRuleCall_3; }
+		public RuleCall getFlagsParserRuleCall_4() { return cFlagsParserRuleCall_4; }
 
 		//Limits
-		public RuleCall getLimitsParserRuleCall_4() { return cLimitsParserRuleCall_4; }
+		public RuleCall getLimitsParserRuleCall_5() { return cLimitsParserRuleCall_5; }
 
 		//Rate
-		public RuleCall getRateParserRuleCall_5() { return cRateParserRuleCall_5; }
+		public RuleCall getRateParserRuleCall_6() { return cRateParserRuleCall_6; }
 
 		//ResourceReport
-		public RuleCall getResourceReportParserRuleCall_6() { return cResourceReportParserRuleCall_6; }
+		public RuleCall getResourceReportParserRuleCall_7() { return cResourceReportParserRuleCall_7; }
 
 		//TaskReport
-		public RuleCall getTaskReportParserRuleCall_7() { return cTaskReportParserRuleCall_7; }
+		public RuleCall getTaskReportParserRuleCall_8() { return cTaskReportParserRuleCall_8; }
 
 		//TextReport
-		public RuleCall getTextReportParserRuleCall_8() { return cTextReportParserRuleCall_8; }
+		public RuleCall getTextReportParserRuleCall_9() { return cTextReportParserRuleCall_9; }
 
 		//Resource
-		public RuleCall getResourceParserRuleCall_9() { return cResourceParserRuleCall_9; }
+		public RuleCall getResourceParserRuleCall_10() { return cResourceParserRuleCall_10; }
 
 		//Shift
-		public RuleCall getShiftParserRuleCall_10() { return cShiftParserRuleCall_10; }
+		public RuleCall getShiftParserRuleCall_11() { return cShiftParserRuleCall_11; }
 
 		//SupplementAccount
-		public RuleCall getSupplementAccountParserRuleCall_11() { return cSupplementAccountParserRuleCall_11; }
+		public RuleCall getSupplementAccountParserRuleCall_12() { return cSupplementAccountParserRuleCall_12; }
 
 		//SupplementReport
-		public RuleCall getSupplementReportParserRuleCall_12() { return cSupplementReportParserRuleCall_12; }
+		public RuleCall getSupplementReportParserRuleCall_13() { return cSupplementReportParserRuleCall_13; }
 
 		//SupplementResource
-		public RuleCall getSupplementResourceParserRuleCall_13() { return cSupplementResourceParserRuleCall_13; }
+		public RuleCall getSupplementResourceParserRuleCall_14() { return cSupplementResourceParserRuleCall_14; }
 
 		//SupplementTask
-		public RuleCall getSupplementTaskParserRuleCall_14() { return cSupplementTaskParserRuleCall_14; }
+		public RuleCall getSupplementTaskParserRuleCall_15() { return cSupplementTaskParserRuleCall_15; }
 
 		//TagFile
-		public RuleCall getTagFileParserRuleCall_15() { return cTagFileParserRuleCall_15; }
+		public RuleCall getTagFileParserRuleCall_16() { return cTagFileParserRuleCall_16; }
 
 		//Task
-		public RuleCall getTaskParserRuleCall_16() { return cTaskParserRuleCall_16; }
+		public RuleCall getTaskParserRuleCall_17() { return cTaskParserRuleCall_17; }
 
 		//TrackingScenario
-		public RuleCall getTrackingScenarioParserRuleCall_17() { return cTrackingScenarioParserRuleCall_17; }
+		public RuleCall getTrackingScenarioParserRuleCall_18() { return cTrackingScenarioParserRuleCall_18; }
 
 		//Vacation
-		public RuleCall getVacationParserRuleCall_18() { return cVacationParserRuleCall_18; }
+		public RuleCall getVacationParserRuleCall_19() { return cVacationParserRuleCall_19; }
 	}
 
 	public class AccountElements extends AbstractParserRuleElementFinder {
@@ -961,22 +963,116 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Export");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExportKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIdIDTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
+		private final Assignment cFilenameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFilenameSTRINGTerminalRuleCall_2_0 = (RuleCall)cFilenameAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cAttributesExportAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//// TODO: export report
 		//// http://www.taskjuggler.org/tj3/manual/export.html
 		//Export:
-		//	"export" STRING;
+		//	"export" id=ID? filename=STRING ("{" attributes+=ExportAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"export" STRING
+		//"export" id=ID? filename=STRING ("{" attributes+=ExportAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"export"
 		public Keyword getExportKeyword_0() { return cExportKeyword_0; }
 
+		//id=ID?
+		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
+
+		//ID
+		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
+
+		//filename=STRING
+		public Assignment getFilenameAssignment_2() { return cFilenameAssignment_2; }
+
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+		public RuleCall getFilenameSTRINGTerminalRuleCall_2_0() { return cFilenameSTRINGTerminalRuleCall_2_0; }
+
+		//("{" attributes+=ExportAttribute* "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//attributes+=ExportAttribute*
+		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
+
+		//ExportAttribute
+		public RuleCall getAttributesExportAttributeParserRuleCall_3_1_0() { return cAttributesExportAttributeParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class ExportAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExportAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cDefinitionsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cEndParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cHideResourceParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cHideTaskParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cPeriodParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cResourceAttributesParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cRollupResourceParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cRollupTaskParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cScenariosParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cStartParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cTaskAttributesParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cTimezoneParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		
+		//ExportAttribute:
+		//	Definitions | End | HideResource | HideTask | Period | ResourceAttributes | RollupResource | RollupTask | Scenarios |
+		//	Start | TaskAttributes | Timezone;
+		public ParserRule getRule() { return rule; }
+
+		//Definitions | End | HideResource | HideTask | Period | ResourceAttributes | RollupResource | RollupTask | Scenarios |
+		//Start | TaskAttributes | Timezone
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Definitions
+		public RuleCall getDefinitionsParserRuleCall_0() { return cDefinitionsParserRuleCall_0; }
+
+		//End
+		public RuleCall getEndParserRuleCall_1() { return cEndParserRuleCall_1; }
+
+		//HideResource
+		public RuleCall getHideResourceParserRuleCall_2() { return cHideResourceParserRuleCall_2; }
+
+		//HideTask
+		public RuleCall getHideTaskParserRuleCall_3() { return cHideTaskParserRuleCall_3; }
+
+		//Period
+		public RuleCall getPeriodParserRuleCall_4() { return cPeriodParserRuleCall_4; }
+
+		//ResourceAttributes
+		public RuleCall getResourceAttributesParserRuleCall_5() { return cResourceAttributesParserRuleCall_5; }
+
+		//RollupResource
+		public RuleCall getRollupResourceParserRuleCall_6() { return cRollupResourceParserRuleCall_6; }
+
+		//RollupTask
+		public RuleCall getRollupTaskParserRuleCall_7() { return cRollupTaskParserRuleCall_7; }
+
+		//Scenarios
+		public RuleCall getScenariosParserRuleCall_8() { return cScenariosParserRuleCall_8; }
+
+		//Start
+		public RuleCall getStartParserRuleCall_9() { return cStartParserRuleCall_9; }
+
+		//TaskAttributes
+		public RuleCall getTaskAttributesParserRuleCall_10() { return cTaskAttributesParserRuleCall_10; }
+
+		//Timezone
+		public RuleCall getTimezoneParserRuleCall_11() { return cTimezoneParserRuleCall_11; }
 	}
 
 	public class ResourceElements extends AbstractParserRuleElementFinder {
@@ -2254,80 +2350,98 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class DefinitionsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Definitions");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cAllAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Keyword cAllAsteriskKeyword_0_0 = (Keyword)cAllAssignment_0.eContents().get(0);
-		private final Assignment cNoneAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cNoneHyphenMinusKeyword_1_0 = (Keyword)cNoneAssignment_1.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cAlternatives.eContents().get(2);
-		private final Assignment cFlagsAssignment_2_0 = (Assignment)cUnorderedGroup_2.eContents().get(0);
-		private final Keyword cFlagsFlagsKeyword_2_0_0 = (Keyword)cFlagsAssignment_2_0.eContents().get(0);
-		private final Assignment cResourcesAssignment_2_1 = (Assignment)cUnorderedGroup_2.eContents().get(1);
-		private final Keyword cResourcesResourcesKeyword_2_1_0 = (Keyword)cResourcesAssignment_2_1.eContents().get(0);
-		private final Assignment cTasksAssignment_2_2 = (Assignment)cUnorderedGroup_2.eContents().get(2);
-		private final Keyword cTasksTasksKeyword_2_2_0 = (Keyword)cTasksAssignment_2_2.eContents().get(0);
-		private final Assignment cProjectAssignment_2_3 = (Assignment)cUnorderedGroup_2.eContents().get(3);
-		private final Keyword cProjectProjectKeyword_2_3_0 = (Keyword)cProjectAssignment_2_3.eContents().get(0);
-		private final Assignment cProjectidsAssignment_2_4 = (Assignment)cUnorderedGroup_2.eContents().get(4);
-		private final Keyword cProjectidsProjectidsKeyword_2_4_0 = (Keyword)cProjectidsAssignment_2_4.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDefinitionsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cAllAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final Keyword cAllAsteriskKeyword_1_0_0 = (Keyword)cAllAssignment_1_0.eContents().get(0);
+		private final Assignment cNoneAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final Keyword cNoneHyphenMinusKeyword_1_1_0 = (Keyword)cNoneAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cAlternatives_1.eContents().get(2);
+		private final Action cDefintionsAction_1_2_0 = (Action)cGroup_1_2.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1_2_1 = (UnorderedGroup)cGroup_1_2.eContents().get(1);
+		private final Assignment cFlagsAssignment_1_2_1_0 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(0);
+		private final Keyword cFlagsFlagsKeyword_1_2_1_0_0 = (Keyword)cFlagsAssignment_1_2_1_0.eContents().get(0);
+		private final Assignment cResourcesAssignment_1_2_1_1 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(1);
+		private final Keyword cResourcesResourcesKeyword_1_2_1_1_0 = (Keyword)cResourcesAssignment_1_2_1_1.eContents().get(0);
+		private final Assignment cTasksAssignment_1_2_1_2 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(2);
+		private final Keyword cTasksTasksKeyword_1_2_1_2_0 = (Keyword)cTasksAssignment_1_2_1_2.eContents().get(0);
+		private final Assignment cProjectAssignment_1_2_1_3 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(3);
+		private final Keyword cProjectProjectKeyword_1_2_1_3_0 = (Keyword)cProjectAssignment_1_2_1_3.eContents().get(0);
+		private final Assignment cProjectidsAssignment_1_2_1_4 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(4);
+		private final Keyword cProjectidsProjectidsKeyword_1_2_1_4_0 = (Keyword)cProjectidsAssignment_1_2_1_4.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/date.html
 		//// http://www.taskjuggler.org/tj3/manual/date.extend.html
 		//// Date: see ISODATE below
 		//// http://www.taskjuggler.org/tj3/manual/definitions.html
 		//Definitions:
-		//	all?="*" | none?="-" | flags?="flags" & resources?="resources" & tasks?="tasks" & project?="project" &
-		//	projectids?="projectids";
+		//	"definitions" (all?="*" | none?="-" | {Defintions} (flags?="flags"? & resources?="resources"? & tasks?="tasks"? &
+		//	project?="project"? & projectids?="projectids"?));
 		public ParserRule getRule() { return rule; }
 
-		//all?="*" | none?="-" | flags?="flags" & resources?="resources" & tasks?="tasks" & project?="project" &
-		//projectids?="projectids"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//"definitions" (all?="*" | none?="-" | {Defintions} (flags?="flags"? & resources?="resources"? & tasks?="tasks"? &
+		//project?="project"? & projectids?="projectids"?))
+		public Group getGroup() { return cGroup; }
+
+		//"definitions"
+		public Keyword getDefinitionsKeyword_0() { return cDefinitionsKeyword_0; }
+
+		//all?="*" | none?="-" | {Defintions} (flags?="flags"? & resources?="resources"? & tasks?="tasks"? & project?="project"? &
+		//projectids?="projectids"?)
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//all?="*"
-		public Assignment getAllAssignment_0() { return cAllAssignment_0; }
+		public Assignment getAllAssignment_1_0() { return cAllAssignment_1_0; }
 
 		//"*"
-		public Keyword getAllAsteriskKeyword_0_0() { return cAllAsteriskKeyword_0_0; }
+		public Keyword getAllAsteriskKeyword_1_0_0() { return cAllAsteriskKeyword_1_0_0; }
 
 		//none?="-"
-		public Assignment getNoneAssignment_1() { return cNoneAssignment_1; }
+		public Assignment getNoneAssignment_1_1() { return cNoneAssignment_1_1; }
 
 		//"-"
-		public Keyword getNoneHyphenMinusKeyword_1_0() { return cNoneHyphenMinusKeyword_1_0; }
+		public Keyword getNoneHyphenMinusKeyword_1_1_0() { return cNoneHyphenMinusKeyword_1_1_0; }
 
-		//flags?="flags" & resources?="resources" & tasks?="tasks" & project?="project" & projectids?="projectids"
-		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
+		//{Defintions} (flags?="flags"? & resources?="resources"? & tasks?="tasks"? & project?="project"? &
+		//projectids?="projectids"?)
+		public Group getGroup_1_2() { return cGroup_1_2; }
 
-		//flags?="flags"
-		public Assignment getFlagsAssignment_2_0() { return cFlagsAssignment_2_0; }
+		//{Defintions}
+		public Action getDefintionsAction_1_2_0() { return cDefintionsAction_1_2_0; }
+
+		//flags?="flags"? & resources?="resources"? & tasks?="tasks"? & project?="project"? & projectids?="projectids"?
+		public UnorderedGroup getUnorderedGroup_1_2_1() { return cUnorderedGroup_1_2_1; }
+
+		//flags?="flags"?
+		public Assignment getFlagsAssignment_1_2_1_0() { return cFlagsAssignment_1_2_1_0; }
 
 		//"flags"
-		public Keyword getFlagsFlagsKeyword_2_0_0() { return cFlagsFlagsKeyword_2_0_0; }
+		public Keyword getFlagsFlagsKeyword_1_2_1_0_0() { return cFlagsFlagsKeyword_1_2_1_0_0; }
 
-		//resources?="resources"
-		public Assignment getResourcesAssignment_2_1() { return cResourcesAssignment_2_1; }
+		//resources?="resources"?
+		public Assignment getResourcesAssignment_1_2_1_1() { return cResourcesAssignment_1_2_1_1; }
 
 		//"resources"
-		public Keyword getResourcesResourcesKeyword_2_1_0() { return cResourcesResourcesKeyword_2_1_0; }
+		public Keyword getResourcesResourcesKeyword_1_2_1_1_0() { return cResourcesResourcesKeyword_1_2_1_1_0; }
 
-		//tasks?="tasks"
-		public Assignment getTasksAssignment_2_2() { return cTasksAssignment_2_2; }
+		//tasks?="tasks"?
+		public Assignment getTasksAssignment_1_2_1_2() { return cTasksAssignment_1_2_1_2; }
 
 		//"tasks"
-		public Keyword getTasksTasksKeyword_2_2_0() { return cTasksTasksKeyword_2_2_0; }
+		public Keyword getTasksTasksKeyword_1_2_1_2_0() { return cTasksTasksKeyword_1_2_1_2_0; }
 
-		//project?="project"
-		public Assignment getProjectAssignment_2_3() { return cProjectAssignment_2_3; }
+		//project?="project"?
+		public Assignment getProjectAssignment_1_2_1_3() { return cProjectAssignment_1_2_1_3; }
 
 		//"project"
-		public Keyword getProjectProjectKeyword_2_3_0() { return cProjectProjectKeyword_2_3_0; }
+		public Keyword getProjectProjectKeyword_1_2_1_3_0() { return cProjectProjectKeyword_1_2_1_3_0; }
 
-		//projectids?="projectids"
-		public Assignment getProjectidsAssignment_2_4() { return cProjectidsAssignment_2_4; }
+		//projectids?="projectids"?
+		public Assignment getProjectidsAssignment_1_2_1_4() { return cProjectidsAssignment_1_2_1_4; }
 
 		//"projectids"
-		public Keyword getProjectidsProjectidsKeyword_2_4_0() { return cProjectidsProjectidsKeyword_2_4_0; }
+		public Keyword getProjectidsProjectidsKeyword_1_2_1_4_0() { return cProjectidsProjectidsKeyword_1_2_1_4_0; }
 	}
 
 	public class DependsElements extends AbstractParserRuleElementFinder {
@@ -4415,59 +4529,78 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ResourceAttributesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ResourceAttributes");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cAllAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Keyword cAllAsteriskKeyword_0_0 = (Keyword)cAllAssignment_0.eContents().get(0);
-		private final Assignment cNoneAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cNoneHyphenMinusKeyword_1_0 = (Keyword)cNoneAssignment_1.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cAlternatives.eContents().get(2);
-		private final Assignment cVacationAssignment_2_0 = (Assignment)cUnorderedGroup_2.eContents().get(0);
-		private final Keyword cVacationVacationKeyword_2_0_0 = (Keyword)cVacationAssignment_2_0.eContents().get(0);
-		private final Assignment cBookingAssignment_2_1 = (Assignment)cUnorderedGroup_2.eContents().get(1);
-		private final Keyword cBookingBookingKeyword_2_1_0 = (Keyword)cBookingAssignment_2_1.eContents().get(0);
-		private final Assignment cWorkingHoursAssignment_2_2 = (Assignment)cUnorderedGroup_2.eContents().get(2);
-		private final Keyword cWorkingHoursWorkinghoursKeyword_2_2_0 = (Keyword)cWorkingHoursAssignment_2_2.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cResourceattributesKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cAllAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final Keyword cAllAsteriskKeyword_1_0_0 = (Keyword)cAllAssignment_1_0.eContents().get(0);
+		private final Assignment cNoneAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final Keyword cNoneHyphenMinusKeyword_1_1_0 = (Keyword)cNoneAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cAlternatives_1.eContents().get(2);
+		private final Action cResourceAttributesAction_1_2_0 = (Action)cGroup_1_2.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1_2_1 = (UnorderedGroup)cGroup_1_2.eContents().get(1);
+		private final Assignment cVacationAssignment_1_2_1_0 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(0);
+		private final Keyword cVacationVacationKeyword_1_2_1_0_0 = (Keyword)cVacationAssignment_1_2_1_0.eContents().get(0);
+		private final Assignment cBookingAssignment_1_2_1_1 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(1);
+		private final Keyword cBookingBookingKeyword_1_2_1_1_0 = (Keyword)cBookingAssignment_1_2_1_1.eContents().get(0);
+		private final Assignment cWorkingHoursAssignment_1_2_1_2 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(2);
+		private final Keyword cWorkingHoursWorkinghoursKeyword_1_2_1_2_0 = (Keyword)cWorkingHoursAssignment_1_2_1_2.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/resourceattributes.html
 		//ResourceAttributes:
-		//	all?="*" | none?="-" | vacation?="vacation" & booking?="booking" & workingHours?="workinghours";
+		//	"resourceattributes" (all?="*" | none?="-" | {ResourceAttributes} (vacation?="vacation"? & booking?="booking"? &
+		//	workingHours?="workinghours"?));
 		public ParserRule getRule() { return rule; }
 
-		//all?="*" | none?="-" | vacation?="vacation" & booking?="booking" & workingHours?="workinghours"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//"resourceattributes" (all?="*" | none?="-" | {ResourceAttributes} (vacation?="vacation"? & booking?="booking"? &
+		//workingHours?="workinghours"?))
+		public Group getGroup() { return cGroup; }
+
+		//"resourceattributes"
+		public Keyword getResourceattributesKeyword_0() { return cResourceattributesKeyword_0; }
+
+		//all?="*" | none?="-" | {ResourceAttributes} (vacation?="vacation"? & booking?="booking"? &
+		//workingHours?="workinghours"?)
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//all?="*"
-		public Assignment getAllAssignment_0() { return cAllAssignment_0; }
+		public Assignment getAllAssignment_1_0() { return cAllAssignment_1_0; }
 
 		//"*"
-		public Keyword getAllAsteriskKeyword_0_0() { return cAllAsteriskKeyword_0_0; }
+		public Keyword getAllAsteriskKeyword_1_0_0() { return cAllAsteriskKeyword_1_0_0; }
 
 		//none?="-"
-		public Assignment getNoneAssignment_1() { return cNoneAssignment_1; }
+		public Assignment getNoneAssignment_1_1() { return cNoneAssignment_1_1; }
 
 		//"-"
-		public Keyword getNoneHyphenMinusKeyword_1_0() { return cNoneHyphenMinusKeyword_1_0; }
+		public Keyword getNoneHyphenMinusKeyword_1_1_0() { return cNoneHyphenMinusKeyword_1_1_0; }
 
-		//vacation?="vacation" & booking?="booking" & workingHours?="workinghours"
-		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
+		//{ResourceAttributes} (vacation?="vacation"? & booking?="booking"? & workingHours?="workinghours"?)
+		public Group getGroup_1_2() { return cGroup_1_2; }
 
-		//vacation?="vacation"
-		public Assignment getVacationAssignment_2_0() { return cVacationAssignment_2_0; }
+		//{ResourceAttributes}
+		public Action getResourceAttributesAction_1_2_0() { return cResourceAttributesAction_1_2_0; }
+
+		//vacation?="vacation"? & booking?="booking"? & workingHours?="workinghours"?
+		public UnorderedGroup getUnorderedGroup_1_2_1() { return cUnorderedGroup_1_2_1; }
+
+		//vacation?="vacation"?
+		public Assignment getVacationAssignment_1_2_1_0() { return cVacationAssignment_1_2_1_0; }
 
 		//"vacation"
-		public Keyword getVacationVacationKeyword_2_0_0() { return cVacationVacationKeyword_2_0_0; }
+		public Keyword getVacationVacationKeyword_1_2_1_0_0() { return cVacationVacationKeyword_1_2_1_0_0; }
 
-		//booking?="booking"
-		public Assignment getBookingAssignment_2_1() { return cBookingAssignment_2_1; }
+		//booking?="booking"?
+		public Assignment getBookingAssignment_1_2_1_1() { return cBookingAssignment_1_2_1_1; }
 
 		//"booking"
-		public Keyword getBookingBookingKeyword_2_1_0() { return cBookingBookingKeyword_2_1_0; }
+		public Keyword getBookingBookingKeyword_1_2_1_1_0() { return cBookingBookingKeyword_1_2_1_1_0; }
 
-		//workingHours?="workinghours"
-		public Assignment getWorkingHoursAssignment_2_2() { return cWorkingHoursAssignment_2_2; }
+		//workingHours?="workinghours"?
+		public Assignment getWorkingHoursAssignment_1_2_1_2() { return cWorkingHoursAssignment_1_2_1_2; }
 
 		//"workinghours"
-		public Keyword getWorkingHoursWorkinghoursKeyword_2_2_0() { return cWorkingHoursWorkinghoursKeyword_2_2_0; }
+		public Keyword getWorkingHoursWorkinghoursKeyword_1_2_1_2_0() { return cWorkingHoursWorkinghoursKeyword_1_2_1_2_0; }
 	}
 
 	public class ResourcePrefixElements extends AbstractParserRuleElementFinder {
@@ -4841,6 +4974,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cScenariosScenarioCrossReference_2_1_0 = (CrossReference)cScenariosAssignment_2_1.eContents().get(0);
 		private final RuleCall cScenariosScenarioIDTerminalRuleCall_2_1_0_1 = (RuleCall)cScenariosScenarioCrossReference_2_1_0.eContents().get(1);
 		
+		//// http://www.taskjuggler.org/tj3/manual/scenarios.export.html
 		//// http://www.taskjuggler.org/tj3/manual/scenarios.html
 		//Scenarios:
 		//	"scenarios" scenarios+=[Scenario] ("," scenarios+=[Scenario])*;
@@ -5784,129 +5918,149 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class TaskAttributesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TaskAttributes");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cAllAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Keyword cAllAsteriskKeyword_0_0 = (Keyword)cAllAssignment_0.eContents().get(0);
-		private final Assignment cNoneAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cNoneHyphenMinusKeyword_1_0 = (Keyword)cNoneAssignment_1.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cAlternatives.eContents().get(2);
-		private final Assignment cResponsibleAssignment_2_0 = (Assignment)cUnorderedGroup_2.eContents().get(0);
-		private final Keyword cResponsibleResponsibleKeyword_2_0_0 = (Keyword)cResponsibleAssignment_2_0.eContents().get(0);
-		private final Assignment cFlagsAssignment_2_1 = (Assignment)cUnorderedGroup_2.eContents().get(1);
-		private final Keyword cFlagsFlagsKeyword_2_1_0 = (Keyword)cFlagsAssignment_2_1.eContents().get(0);
-		private final Assignment cMaxstartAssignment_2_2 = (Assignment)cUnorderedGroup_2.eContents().get(2);
-		private final Keyword cMaxstartMaxstartKeyword_2_2_0 = (Keyword)cMaxstartAssignment_2_2.eContents().get(0);
-		private final Assignment cMaxendAssignment_2_3 = (Assignment)cUnorderedGroup_2.eContents().get(3);
-		private final Keyword cMaxendMaxstartKeyword_2_3_0 = (Keyword)cMaxendAssignment_2_3.eContents().get(0);
-		private final Assignment cPriorityAssignment_2_4 = (Assignment)cUnorderedGroup_2.eContents().get(4);
-		private final Keyword cPriorityPriorityKeyword_2_4_0 = (Keyword)cPriorityAssignment_2_4.eContents().get(0);
-		private final Assignment cBookingAssignment_2_5 = (Assignment)cUnorderedGroup_2.eContents().get(5);
-		private final Keyword cBookingPriorityKeyword_2_5_0 = (Keyword)cBookingAssignment_2_5.eContents().get(0);
-		private final Assignment cNoteAssignment_2_6 = (Assignment)cUnorderedGroup_2.eContents().get(6);
-		private final Keyword cNoteNoteKeyword_2_6_0 = (Keyword)cNoteAssignment_2_6.eContents().get(0);
-		private final Assignment cMinstartAssignment_2_7 = (Assignment)cUnorderedGroup_2.eContents().get(7);
-		private final Keyword cMinstartMinstartKeyword_2_7_0 = (Keyword)cMinstartAssignment_2_7.eContents().get(0);
-		private final Assignment cMinendAssignment_2_8 = (Assignment)cUnorderedGroup_2.eContents().get(8);
-		private final Keyword cMinendMinendKeyword_2_8_0 = (Keyword)cMinendAssignment_2_8.eContents().get(0);
-		private final Assignment cCompleteAssignment_2_9 = (Assignment)cUnorderedGroup_2.eContents().get(9);
-		private final Keyword cCompleteCompleteKeyword_2_9_0 = (Keyword)cCompleteAssignment_2_9.eContents().get(0);
-		private final Assignment cDependsAssignment_2_10 = (Assignment)cUnorderedGroup_2.eContents().get(10);
-		private final Keyword cDependsDependsKeyword_2_10_0 = (Keyword)cDependsAssignment_2_10.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTaskattributesKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cAllAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final Keyword cAllAsteriskKeyword_1_0_0 = (Keyword)cAllAssignment_1_0.eContents().get(0);
+		private final Assignment cNoneAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final Keyword cNoneHyphenMinusKeyword_1_1_0 = (Keyword)cNoneAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cAlternatives_1.eContents().get(2);
+		private final Action cTaskAttributesAction_1_2_0 = (Action)cGroup_1_2.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1_2_1 = (UnorderedGroup)cGroup_1_2.eContents().get(1);
+		private final Assignment cResponsibleAssignment_1_2_1_0 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(0);
+		private final Keyword cResponsibleResponsibleKeyword_1_2_1_0_0 = (Keyword)cResponsibleAssignment_1_2_1_0.eContents().get(0);
+		private final Assignment cFlagsAssignment_1_2_1_1 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(1);
+		private final Keyword cFlagsFlagsKeyword_1_2_1_1_0 = (Keyword)cFlagsAssignment_1_2_1_1.eContents().get(0);
+		private final Assignment cMaxstartAssignment_1_2_1_2 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(2);
+		private final Keyword cMaxstartMaxstartKeyword_1_2_1_2_0 = (Keyword)cMaxstartAssignment_1_2_1_2.eContents().get(0);
+		private final Assignment cMaxendAssignment_1_2_1_3 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(3);
+		private final Keyword cMaxendMaxendKeyword_1_2_1_3_0 = (Keyword)cMaxendAssignment_1_2_1_3.eContents().get(0);
+		private final Assignment cPriorityAssignment_1_2_1_4 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(4);
+		private final Keyword cPriorityPriorityKeyword_1_2_1_4_0 = (Keyword)cPriorityAssignment_1_2_1_4.eContents().get(0);
+		private final Assignment cBookingAssignment_1_2_1_5 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(5);
+		private final Keyword cBookingBookingKeyword_1_2_1_5_0 = (Keyword)cBookingAssignment_1_2_1_5.eContents().get(0);
+		private final Assignment cNoteAssignment_1_2_1_6 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(6);
+		private final Keyword cNoteNoteKeyword_1_2_1_6_0 = (Keyword)cNoteAssignment_1_2_1_6.eContents().get(0);
+		private final Assignment cMinstartAssignment_1_2_1_7 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(7);
+		private final Keyword cMinstartMinstartKeyword_1_2_1_7_0 = (Keyword)cMinstartAssignment_1_2_1_7.eContents().get(0);
+		private final Assignment cMinendAssignment_1_2_1_8 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(8);
+		private final Keyword cMinendMinendKeyword_1_2_1_8_0 = (Keyword)cMinendAssignment_1_2_1_8.eContents().get(0);
+		private final Assignment cCompleteAssignment_1_2_1_9 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(9);
+		private final Keyword cCompleteCompleteKeyword_1_2_1_9_0 = (Keyword)cCompleteAssignment_1_2_1_9.eContents().get(0);
+		private final Assignment cDependsAssignment_1_2_1_10 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(10);
+		private final Keyword cDependsDependsKeyword_1_2_1_10_0 = (Keyword)cDependsAssignment_1_2_1_10.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/taskattributes.html
 		//TaskAttributes:
-		//	all?="*" | none?="-" | responsible?="responsible" & flags?="flags" & maxstart?="maxstart" & maxend?="maxstart" &
-		//	priority?="priority" & booking?="priority" & note?="note" & minstart?="minstart" & minend?="minend" &
-		//	complete?="complete" & depends?="depends";
+		//	"taskattributes" (all?="*" | none?="-" | {TaskAttributes} (responsible?="responsible"? & flags?="flags"? &
+		//	maxstart?="maxstart"? & maxend?="maxend"? & priority?="priority"? & booking?="booking"? & note?="note"? &
+		//	minstart?="minstart"? & minend?="minend"? & complete?="complete"? & depends?="depends"?));
 		public ParserRule getRule() { return rule; }
 
-		//all?="*" | none?="-" | responsible?="responsible" & flags?="flags" & maxstart?="maxstart" & maxend?="maxstart" &
-		//priority?="priority" & booking?="priority" & note?="note" & minstart?="minstart" & minend?="minend" &
-		//complete?="complete" & depends?="depends"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//"taskattributes" (all?="*" | none?="-" | {TaskAttributes} (responsible?="responsible"? & flags?="flags"? &
+		//maxstart?="maxstart"? & maxend?="maxend"? & priority?="priority"? & booking?="booking"? & note?="note"? &
+		//minstart?="minstart"? & minend?="minend"? & complete?="complete"? & depends?="depends"?))
+		public Group getGroup() { return cGroup; }
+
+		//"taskattributes"
+		public Keyword getTaskattributesKeyword_0() { return cTaskattributesKeyword_0; }
+
+		//all?="*" | none?="-" | {TaskAttributes} (responsible?="responsible"? & flags?="flags"? & maxstart?="maxstart"? &
+		//maxend?="maxend"? & priority?="priority"? & booking?="booking"? & note?="note"? & minstart?="minstart"? &
+		//minend?="minend"? & complete?="complete"? & depends?="depends"?)
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//all?="*"
-		public Assignment getAllAssignment_0() { return cAllAssignment_0; }
+		public Assignment getAllAssignment_1_0() { return cAllAssignment_1_0; }
 
 		//"*"
-		public Keyword getAllAsteriskKeyword_0_0() { return cAllAsteriskKeyword_0_0; }
+		public Keyword getAllAsteriskKeyword_1_0_0() { return cAllAsteriskKeyword_1_0_0; }
 
 		//none?="-"
-		public Assignment getNoneAssignment_1() { return cNoneAssignment_1; }
+		public Assignment getNoneAssignment_1_1() { return cNoneAssignment_1_1; }
 
 		//"-"
-		public Keyword getNoneHyphenMinusKeyword_1_0() { return cNoneHyphenMinusKeyword_1_0; }
+		public Keyword getNoneHyphenMinusKeyword_1_1_0() { return cNoneHyphenMinusKeyword_1_1_0; }
 
-		//responsible?="responsible" & flags?="flags" & maxstart?="maxstart" & maxend?="maxstart" & priority?="priority" &
-		//booking?="priority" & note?="note" & minstart?="minstart" & minend?="minend" & complete?="complete" &
-		//depends?="depends"
-		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
+		//{TaskAttributes} (responsible?="responsible"? & flags?="flags"? & maxstart?="maxstart"? & maxend?="maxend"? &
+		//priority?="priority"? & booking?="booking"? & note?="note"? & minstart?="minstart"? & minend?="minend"? &
+		//complete?="complete"? & depends?="depends"?)
+		public Group getGroup_1_2() { return cGroup_1_2; }
 
-		//responsible?="responsible"
-		public Assignment getResponsibleAssignment_2_0() { return cResponsibleAssignment_2_0; }
+		//{TaskAttributes}
+		public Action getTaskAttributesAction_1_2_0() { return cTaskAttributesAction_1_2_0; }
+
+		//responsible?="responsible"? & flags?="flags"? & maxstart?="maxstart"? & maxend?="maxend"? & priority?="priority"? &
+		//booking?="booking"? & note?="note"? & minstart?="minstart"? & minend?="minend"? & complete?="complete"? &
+		//depends?="depends"?
+		public UnorderedGroup getUnorderedGroup_1_2_1() { return cUnorderedGroup_1_2_1; }
+
+		//responsible?="responsible"?
+		public Assignment getResponsibleAssignment_1_2_1_0() { return cResponsibleAssignment_1_2_1_0; }
 
 		//"responsible"
-		public Keyword getResponsibleResponsibleKeyword_2_0_0() { return cResponsibleResponsibleKeyword_2_0_0; }
+		public Keyword getResponsibleResponsibleKeyword_1_2_1_0_0() { return cResponsibleResponsibleKeyword_1_2_1_0_0; }
 
-		//flags?="flags"
-		public Assignment getFlagsAssignment_2_1() { return cFlagsAssignment_2_1; }
+		//flags?="flags"?
+		public Assignment getFlagsAssignment_1_2_1_1() { return cFlagsAssignment_1_2_1_1; }
 
 		//"flags"
-		public Keyword getFlagsFlagsKeyword_2_1_0() { return cFlagsFlagsKeyword_2_1_0; }
+		public Keyword getFlagsFlagsKeyword_1_2_1_1_0() { return cFlagsFlagsKeyword_1_2_1_1_0; }
 
-		//maxstart?="maxstart"
-		public Assignment getMaxstartAssignment_2_2() { return cMaxstartAssignment_2_2; }
-
-		//"maxstart"
-		public Keyword getMaxstartMaxstartKeyword_2_2_0() { return cMaxstartMaxstartKeyword_2_2_0; }
-
-		//maxend?="maxstart"
-		public Assignment getMaxendAssignment_2_3() { return cMaxendAssignment_2_3; }
+		//maxstart?="maxstart"?
+		public Assignment getMaxstartAssignment_1_2_1_2() { return cMaxstartAssignment_1_2_1_2; }
 
 		//"maxstart"
-		public Keyword getMaxendMaxstartKeyword_2_3_0() { return cMaxendMaxstartKeyword_2_3_0; }
+		public Keyword getMaxstartMaxstartKeyword_1_2_1_2_0() { return cMaxstartMaxstartKeyword_1_2_1_2_0; }
 
-		//priority?="priority"
-		public Assignment getPriorityAssignment_2_4() { return cPriorityAssignment_2_4; }
+		//maxend?="maxend"?
+		public Assignment getMaxendAssignment_1_2_1_3() { return cMaxendAssignment_1_2_1_3; }
+
+		//"maxend"
+		public Keyword getMaxendMaxendKeyword_1_2_1_3_0() { return cMaxendMaxendKeyword_1_2_1_3_0; }
+
+		//priority?="priority"?
+		public Assignment getPriorityAssignment_1_2_1_4() { return cPriorityAssignment_1_2_1_4; }
 
 		//"priority"
-		public Keyword getPriorityPriorityKeyword_2_4_0() { return cPriorityPriorityKeyword_2_4_0; }
+		public Keyword getPriorityPriorityKeyword_1_2_1_4_0() { return cPriorityPriorityKeyword_1_2_1_4_0; }
 
-		//booking?="priority"
-		public Assignment getBookingAssignment_2_5() { return cBookingAssignment_2_5; }
+		//booking?="booking"?
+		public Assignment getBookingAssignment_1_2_1_5() { return cBookingAssignment_1_2_1_5; }
 
-		//"priority"
-		public Keyword getBookingPriorityKeyword_2_5_0() { return cBookingPriorityKeyword_2_5_0; }
+		//"booking"
+		public Keyword getBookingBookingKeyword_1_2_1_5_0() { return cBookingBookingKeyword_1_2_1_5_0; }
 
-		//note?="note"
-		public Assignment getNoteAssignment_2_6() { return cNoteAssignment_2_6; }
+		//note?="note"?
+		public Assignment getNoteAssignment_1_2_1_6() { return cNoteAssignment_1_2_1_6; }
 
 		//"note"
-		public Keyword getNoteNoteKeyword_2_6_0() { return cNoteNoteKeyword_2_6_0; }
+		public Keyword getNoteNoteKeyword_1_2_1_6_0() { return cNoteNoteKeyword_1_2_1_6_0; }
 
-		//minstart?="minstart"
-		public Assignment getMinstartAssignment_2_7() { return cMinstartAssignment_2_7; }
+		//minstart?="minstart"?
+		public Assignment getMinstartAssignment_1_2_1_7() { return cMinstartAssignment_1_2_1_7; }
 
 		//"minstart"
-		public Keyword getMinstartMinstartKeyword_2_7_0() { return cMinstartMinstartKeyword_2_7_0; }
+		public Keyword getMinstartMinstartKeyword_1_2_1_7_0() { return cMinstartMinstartKeyword_1_2_1_7_0; }
 
-		//minend?="minend"
-		public Assignment getMinendAssignment_2_8() { return cMinendAssignment_2_8; }
+		//minend?="minend"?
+		public Assignment getMinendAssignment_1_2_1_8() { return cMinendAssignment_1_2_1_8; }
 
 		//"minend"
-		public Keyword getMinendMinendKeyword_2_8_0() { return cMinendMinendKeyword_2_8_0; }
+		public Keyword getMinendMinendKeyword_1_2_1_8_0() { return cMinendMinendKeyword_1_2_1_8_0; }
 
-		//complete?="complete"
-		public Assignment getCompleteAssignment_2_9() { return cCompleteAssignment_2_9; }
+		//complete?="complete"?
+		public Assignment getCompleteAssignment_1_2_1_9() { return cCompleteAssignment_1_2_1_9; }
 
 		//"complete"
-		public Keyword getCompleteCompleteKeyword_2_9_0() { return cCompleteCompleteKeyword_2_9_0; }
+		public Keyword getCompleteCompleteKeyword_1_2_1_9_0() { return cCompleteCompleteKeyword_1_2_1_9_0; }
 
-		//depends?="depends"
-		public Assignment getDependsAssignment_2_10() { return cDependsAssignment_2_10; }
+		//depends?="depends"?
+		public Assignment getDependsAssignment_1_2_1_10() { return cDependsAssignment_1_2_1_10; }
 
 		//"depends"
-		public Keyword getDependsDependsKeyword_2_10_0() { return cDependsDependsKeyword_2_10_0; }
+		public Keyword getDependsDependsKeyword_1_2_1_10_0() { return cDependsDependsKeyword_1_2_1_10_0; }
 	}
 
 	public class TaskPrefixElements extends AbstractParserRuleElementFinder {
@@ -8913,6 +9067,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private ReportAttributeElements pReportAttribute;
 	private IcalReportElements pIcalReport;
 	private ExportElements pExport;
+	private ExportAttributeElements pExportAttribute;
 	private ResourceElements pResource;
 	private SupplementResourceElements pSupplementResource;
 	private ResourceAttributeElements pResourceAttribute;
@@ -9173,15 +9328,14 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GlobalAttribute:
-	//	Account //	| Export
-	//	//	| Macro
+	//	Account //	| Macro
 	//	//	| Navigator
 	//	//	| NikuReport
 	//	//	| StatusSheet
 	//	//	| StatusSheetReport
 	//	//	| Timesheet
 	//	//	| TimesheetReport
-	//	| Balance | Copyright | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
+	//	| Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
 	//	SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario |
 	//	Vacation;
 	public GlobalAttributeElements getGlobalAttributeAccess() {
@@ -9340,13 +9494,24 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// TODO: export report
 	//// http://www.taskjuggler.org/tj3/manual/export.html
 	//Export:
-	//	"export" STRING;
+	//	"export" id=ID? filename=STRING ("{" attributes+=ExportAttribute* "}")?;
 	public ExportElements getExportAccess() {
 		return (pExport != null) ? pExport : (pExport = new ExportElements());
 	}
 	
 	public ParserRule getExportRule() {
 		return getExportAccess().getRule();
+	}
+
+	//ExportAttribute:
+	//	Definitions | End | HideResource | HideTask | Period | ResourceAttributes | RollupResource | RollupTask | Scenarios |
+	//	Start | TaskAttributes | Timezone;
+	public ExportAttributeElements getExportAttributeAccess() {
+		return (pExportAttribute != null) ? pExportAttribute : (pExportAttribute = new ExportAttributeElements());
+	}
+	
+	public ParserRule getExportAttributeRule() {
+		return getExportAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/resource.html
@@ -9741,8 +9906,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// Date: see ISODATE below
 	//// http://www.taskjuggler.org/tj3/manual/definitions.html
 	//Definitions:
-	//	all?="*" | none?="-" | flags?="flags" & resources?="resources" & tasks?="tasks" & project?="project" &
-	//	projectids?="projectids";
+	//	"definitions" (all?="*" | none?="-" | {Defintions} (flags?="flags"? & resources?="resources"? & tasks?="tasks"? &
+	//	project?="project"? & projectids?="projectids"?));
 	public DefinitionsElements getDefinitionsAccess() {
 		return (pDefinitions != null) ? pDefinitions : (pDefinitions = new DefinitionsElements());
 	}
@@ -10564,7 +10729,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/resourceattributes.html
 	//ResourceAttributes:
-	//	all?="*" | none?="-" | vacation?="vacation" & booking?="booking" & workingHours?="workinghours";
+	//	"resourceattributes" (all?="*" | none?="-" | {ResourceAttributes} (vacation?="vacation"? & booking?="booking"? &
+	//	workingHours?="workinghours"?));
 	public ResourceAttributesElements getResourceAttributesAccess() {
 		return (pResourceAttributes != null) ? pResourceAttributes : (pResourceAttributes = new ResourceAttributesElements());
 	}
@@ -10697,6 +10863,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getScenarioIcalAccess().getRule();
 	}
 
+	//// http://www.taskjuggler.org/tj3/manual/scenarios.export.html
 	//// http://www.taskjuggler.org/tj3/manual/scenarios.html
 	//Scenarios:
 	//	"scenarios" scenarios+=[Scenario] ("," scenarios+=[Scenario])*;
@@ -11005,9 +11172,9 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/taskattributes.html
 	//TaskAttributes:
-	//	all?="*" | none?="-" | responsible?="responsible" & flags?="flags" & maxstart?="maxstart" & maxend?="maxstart" &
-	//	priority?="priority" & booking?="priority" & note?="note" & minstart?="minstart" & minend?="minend" &
-	//	complete?="complete" & depends?="depends";
+	//	"taskattributes" (all?="*" | none?="-" | {TaskAttributes} (responsible?="responsible"? & flags?="flags"? &
+	//	maxstart?="maxstart"? & maxend?="maxend"? & priority?="priority"? & booking?="booking"? & note?="note"? &
+	//	minstart?="minstart"? & minend?="minend"? & complete?="complete"? & depends?="depends"?));
 	public TaskAttributesElements getTaskAttributesAccess() {
 		return (pTaskAttributes != null) ? pTaskAttributes : (pTaskAttributes = new TaskAttributesElements());
 	}

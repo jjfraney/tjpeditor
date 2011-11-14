@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface HideTask extends NikuReportAttribute
+public interface HideTask extends ExportAttribute, NikuReportAttribute
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' attribute.

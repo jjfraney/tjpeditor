@@ -143,6 +143,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createReportAttributeAdapter();
       }
       @Override
+      public Adapter caseExport(Export object)
+      {
+        return createExportAdapter();
+      }
+      @Override
+      public Adapter caseExportAttribute(ExportAttribute object)
+      {
+        return createExportAttributeAdapter();
+      }
+      @Override
       public Adapter caseResource(Resource object)
       {
         return createResourceAdapter();
@@ -1033,6 +1043,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createWeekdaysAdapter();
       }
       @Override
+      public Adapter caseDefintions(Defintions object)
+      {
+        return createDefintionsAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -1245,6 +1260,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createReportAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Export <em>Export</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.Export
+   * @generated
+   */
+  public Adapter createExportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ExportAttribute <em>Export Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ExportAttribute
+   * @generated
+   */
+  public Adapter createExportAttributeAdapter()
   {
     return null;
   }
@@ -3915,6 +3960,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createWeekdaysAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Defintions <em>Defintions</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.Defintions
+   * @generated
+   */
+  public Adapter createDefintionsAdapter()
   {
     return null;
   }

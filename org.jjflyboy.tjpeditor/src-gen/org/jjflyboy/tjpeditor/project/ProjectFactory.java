@@ -143,6 +143,24 @@ public interface ProjectFactory extends EFactory
   ReportAttribute createReportAttribute();
 
   /**
+   * Returns a new object of class '<em>Export</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Export</em>'.
+   * @generated
+   */
+  Export createExport();
+
+  /**
+   * Returns a new object of class '<em>Export Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Export Attribute</em>'.
+   * @generated
+   */
+  ExportAttribute createExportAttribute();
+
+  /**
    * Returns a new object of class '<em>Resource</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1743,6 +1761,15 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Weekdays createWeekdays();
+
+  /**
+   * Returns a new object of class '<em>Defintions</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Defintions</em>'.
+   * @generated
+   */
+  Defintions createDefintions();
 
   /**
    * Returns the package supported by this factory.

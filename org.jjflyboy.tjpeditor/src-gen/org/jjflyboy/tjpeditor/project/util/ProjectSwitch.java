@@ -179,6 +179,21 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.EXPORT:
+      {
+        Export export = (Export)theEObject;
+        T result = caseExport(export);
+        if (result == null) result = caseGlobalAttribute(export);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.EXPORT_ATTRIBUTE:
+      {
+        ExportAttribute exportAttribute = (ExportAttribute)theEObject;
+        T result = caseExportAttribute(exportAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.RESOURCE:
       {
         Resource resource = (Resource)theEObject;
@@ -455,6 +470,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Definitions definitions = (Definitions)theEObject;
         T result = caseDefinitions(definitions);
+        if (result == null) result = caseExportAttribute(definitions);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -512,6 +528,7 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = caseEnd(end);
         if (result == null) result = caseTaskAttribute(end);
         if (result == null) result = caseReportAttribute(end);
+        if (result == null) result = caseExportAttribute(end);
         if (result == null) result = caseNewTaskAttribute(end);
         if (result == null) result = caseNikuReportAttribute(end);
         if (result == null) result = caseColumnAttribute(end);
@@ -641,6 +658,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         HideResource hideResource = (HideResource)theEObject;
         T result = caseHideResource(hideResource);
+        if (result == null) result = caseExportAttribute(hideResource);
         if (result == null) result = caseNikuReportAttribute(hideResource);
         if (result == null) result = caseTimesheetReportAttribute(hideResource);
         if (result == null) result = defaultCase(theEObject);
@@ -650,6 +668,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         HideTask hideTask = (HideTask)theEObject;
         T result = caseHideTask(hideTask);
+        if (result == null) result = caseExportAttribute(hideTask);
         if (result == null) result = caseNikuReportAttribute(hideTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -891,6 +910,7 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = casePeriod(period);
         if (result == null) result = caseTaskAttribute(period);
         if (result == null) result = caseReportAttribute(period);
+        if (result == null) result = caseExportAttribute(period);
         if (result == null) result = caseNikuReportAttribute(period);
         if (result == null) result = caseColumnAttribute(period);
         if (result == null) result = caseTimesheetReportAttribute(period);
@@ -991,6 +1011,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         ResourceAttributes resourceAttributes = (ResourceAttributes)theEObject;
         T result = caseResourceAttributes(resourceAttributes);
+        if (result == null) result = caseExportAttribute(resourceAttributes);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1044,6 +1065,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         RollupResource rollupResource = (RollupResource)theEObject;
         T result = caseRollupResource(rollupResource);
+        if (result == null) result = caseExportAttribute(rollupResource);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1051,6 +1073,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         RollupTask rollupTask = (RollupTask)theEObject;
         T result = caseRollupTask(rollupTask);
+        if (result == null) result = caseExportAttribute(rollupTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1075,6 +1098,7 @@ public class ProjectSwitch<T> extends Switch<T>
         Scenarios scenarios = (Scenarios)theEObject;
         T result = caseScenarios(scenarios);
         if (result == null) result = caseReportAttribute(scenarios);
+        if (result == null) result = caseExportAttribute(scenarios);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1205,6 +1229,7 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = caseStart(start);
         if (result == null) result = caseTaskAttribute(start);
         if (result == null) result = caseReportAttribute(start);
+        if (result == null) result = caseExportAttribute(start);
         if (result == null) result = caseNikuReportAttribute(start);
         if (result == null) result = caseColumnAttribute(start);
         if (result == null) result = caseTimesheetReportAttribute(start);
@@ -1269,6 +1294,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TaskAttributes taskAttributes = (TaskAttributes)theEObject;
         T result = caseTaskAttributes(taskAttributes);
+        if (result == null) result = caseExportAttribute(taskAttributes);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1347,6 +1373,7 @@ public class ProjectSwitch<T> extends Switch<T>
         Timezone timezone = (Timezone)theEObject;
         T result = caseTimezone(timezone);
         if (result == null) result = caseProjectAttribute(timezone);
+        if (result == null) result = caseExportAttribute(timezone);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1634,6 +1661,15 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.DEFINTIONS:
+      {
+        Defintions defintions = (Defintions)theEObject;
+        T result = caseDefintions(defintions);
+        if (result == null) result = caseDefinitions(defintions);
+        if (result == null) result = caseExportAttribute(defintions);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -1842,6 +1878,38 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseReportAttribute(ReportAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Export</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Export</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExport(Export object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Export Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Export Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExportAttribute(ExportAttribute object)
   {
     return null;
   }
@@ -4690,6 +4758,22 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseWeekdays(Weekdays object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Defintions</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Defintions</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefintions(Defintions object)
   {
     return null;
   }

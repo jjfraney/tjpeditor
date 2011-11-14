@@ -38,6 +38,7 @@ import org.jjflyboy.tjpeditor.project.CriterionId;
 import org.jjflyboy.tjpeditor.project.Currency;
 import org.jjflyboy.tjpeditor.project.DailyWorkingHours;
 import org.jjflyboy.tjpeditor.project.Definitions;
+import org.jjflyboy.tjpeditor.project.Defintions;
 import org.jjflyboy.tjpeditor.project.Duration;
 import org.jjflyboy.tjpeditor.project.DurationQuantity;
 import org.jjflyboy.tjpeditor.project.Efficiency;
@@ -45,6 +46,7 @@ import org.jjflyboy.tjpeditor.project.Effort;
 import org.jjflyboy.tjpeditor.project.Email;
 import org.jjflyboy.tjpeditor.project.End;
 import org.jjflyboy.tjpeditor.project.EndCredit;
+import org.jjflyboy.tjpeditor.project.Export;
 import org.jjflyboy.tjpeditor.project.Extend;
 import org.jjflyboy.tjpeditor.project.ExtendAttribute;
 import org.jjflyboy.tjpeditor.project.Fail;
@@ -345,8 +347,16 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.DEFINITIONS:
-				if(context == grammarAccess.getDefinitionsRule()) {
+				if(context == grammarAccess.getDefinitionsRule() ||
+				   context == grammarAccess.getExportAttributeRule()) {
 					sequence_Definitions(context, (Definitions) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.DEFINTIONS:
+				if(context == grammarAccess.getDefinitionsRule() ||
+				   context == grammarAccess.getExportAttributeRule()) {
+					sequence_Definitions(context, (Defintions) semanticObject); 
 					return; 
 				}
 				else break;
@@ -389,6 +399,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.END:
 				if(context == grammarAccess.getColumnAttributeRule() ||
 				   context == grammarAccess.getEndRule() ||
+				   context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getNewTaskAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
@@ -403,6 +414,13 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				if(context == grammarAccess.getEndCreditRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_EndCredit(context, (EndCredit) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.EXPORT:
+				if(context == grammarAccess.getExportRule() ||
+				   context == grammarAccess.getGlobalAttributeRule()) {
+					sequence_Export(context, (Export) semanticObject); 
 					return; 
 				}
 				else break;
@@ -478,7 +496,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.HIDE_RESOURCE:
-				if(context == grammarAccess.getHideResourceRule() ||
+				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getHideResourceRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getTimesheetReportAttributeRule()) {
 					sequence_HideResource(context, (HideResource) semanticObject); 
@@ -486,7 +505,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.HIDE_TASK:
-				if(context == grammarAccess.getHideTaskRule() ||
+				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getHideTaskRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule()) {
 					sequence_HideTask(context, (HideTask) semanticObject); 
 					return; 
@@ -680,6 +700,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.PERIOD:
 				if(context == grammarAccess.getColumnAttributeRule() ||
+				   context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getPeriodRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
@@ -784,7 +805,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.RESOURCE_ATTRIBUTES:
-				if(context == grammarAccess.getResourceAttributesRule()) {
+				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getResourceAttributesRule()) {
 					sequence_ResourceAttributes(context, (ResourceAttributes) semanticObject); 
 					return; 
 				}
@@ -831,13 +853,15 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.ROLLUP_RESOURCE:
-				if(context == grammarAccess.getRollupResourceRule()) {
+				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getRollupResourceRule()) {
 					sequence_RollupResource(context, (RollupResource) semanticObject); 
 					return; 
 				}
 				else break;
 			case ProjectPackage.ROLLUP_TASK:
-				if(context == grammarAccess.getRollupTaskRule()) {
+				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getRollupTaskRule()) {
 					sequence_RollupTask(context, (RollupTask) semanticObject); 
 					return; 
 				}
@@ -857,7 +881,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.SCENARIOS:
-				if(context == grammarAccess.getReportAttributeRule() ||
+				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getScenariosRule()) {
 					sequence_Scenarios(context, (Scenarios) semanticObject); 
 					return; 
@@ -952,6 +977,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.START:
 				if(context == grammarAccess.getColumnAttributeRule() ||
+				   context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getStartRule() ||
@@ -1014,7 +1040,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TASK_ATTRIBUTES:
-				if(context == grammarAccess.getTaskAttributesRule()) {
+				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getTaskAttributesRule()) {
 					sequence_TaskAttributes(context, (TaskAttributes) semanticObject); 
 					return; 
 				}
@@ -1082,7 +1109,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TIMEZONE:
-				if(context == grammarAccess.getProjectAttributeRule() ||
+				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getProjectAttributeRule() ||
 				   context == grammarAccess.getTimezoneRule()) {
 					sequence_Timezone(context, (Timezone) semanticObject); 
 					return; 
@@ -1643,80 +1671,31 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (all?='*' | none?='-' | (flags?='flags' resources?='resources' tasks?='tasks' project?='project' projectids?='projectids'))
+	 *     (all?='*' | none?='-')
 	 *
 	 * Features:
 	 *    all[0, 1]
 	 *         EXCLUDE_IF_SET none
-	 *         EXCLUDE_IF_SET flags
-	 *         EXCLUDE_IF_SET resources
-	 *         EXCLUDE_IF_SET tasks
-	 *         EXCLUDE_IF_SET project
-	 *         EXCLUDE_IF_SET projectids
 	 *    none[0, 1]
 	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET flags
-	 *         EXCLUDE_IF_SET resources
-	 *         EXCLUDE_IF_SET tasks
-	 *         EXCLUDE_IF_SET project
-	 *         EXCLUDE_IF_SET projectids
-	 *    flags[0, 1]
-	 *         EXCLUDE_IF_UNSET resources
-	 *         MANDATORY_IF_SET resources
-	 *         EXCLUDE_IF_UNSET tasks
-	 *         MANDATORY_IF_SET tasks
-	 *         EXCLUDE_IF_UNSET project
-	 *         MANDATORY_IF_SET project
-	 *         EXCLUDE_IF_UNSET projectids
-	 *         MANDATORY_IF_SET projectids
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
-	 *    resources[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET tasks
-	 *         MANDATORY_IF_SET tasks
-	 *         EXCLUDE_IF_UNSET project
-	 *         MANDATORY_IF_SET project
-	 *         EXCLUDE_IF_UNSET projectids
-	 *         MANDATORY_IF_SET projectids
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
-	 *    tasks[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET resources
-	 *         MANDATORY_IF_SET resources
-	 *         EXCLUDE_IF_UNSET project
-	 *         MANDATORY_IF_SET project
-	 *         EXCLUDE_IF_UNSET projectids
-	 *         MANDATORY_IF_SET projectids
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
-	 *    project[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET resources
-	 *         MANDATORY_IF_SET resources
-	 *         EXCLUDE_IF_UNSET tasks
-	 *         MANDATORY_IF_SET tasks
-	 *         EXCLUDE_IF_UNSET projectids
-	 *         MANDATORY_IF_SET projectids
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
-	 *    projectids[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET resources
-	 *         MANDATORY_IF_SET resources
-	 *         EXCLUDE_IF_UNSET tasks
-	 *         MANDATORY_IF_SET tasks
-	 *         EXCLUDE_IF_UNSET project
-	 *         MANDATORY_IF_SET project
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 */
 	protected void sequence_Definitions(EObject context, Definitions semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (flags?='flags'? resources?='resources'? tasks?='tasks'? project?='project'? projectids?='projectids'?)
+	 *
+	 * Features:
+	 *    flags[0, 1]
+	 *    resources[0, 1]
+	 *    tasks[0, 1]
+	 *    project[0, 1]
+	 *    projectids[0, 1]
+	 */
+	protected void sequence_Definitions(EObject context, Defintions semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1855,6 +1834,20 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getEndAccess().getEndISODATETerminalRuleCall_1_0(), semanticObject.getEnd());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (id=ID? filename=STRING attributes+=ExportAttribute*)
+	 *
+	 * Features:
+	 *    id[0, 1]
+	 *    filename[1, 1]
+	 *    attributes[0, *]
+	 */
+	protected void sequence_Export(EObject context, Export semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -2956,40 +2949,12 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (all?='*' | none?='-' | (vacation?='vacation' booking?='booking' workingHours?='workinghours'))
+	 *     (vacation?='vacation'? booking?='booking'? workingHours?='workinghours'?)
 	 *
 	 * Features:
-	 *    all[0, 1]
-	 *         EXCLUDE_IF_SET none
-	 *         EXCLUDE_IF_SET vacation
-	 *         EXCLUDE_IF_SET booking
-	 *         EXCLUDE_IF_SET workingHours
-	 *    none[0, 1]
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET vacation
-	 *         EXCLUDE_IF_SET booking
-	 *         EXCLUDE_IF_SET workingHours
 	 *    vacation[0, 1]
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET workingHours
-	 *         MANDATORY_IF_SET workingHours
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    booking[0, 1]
-	 *         EXCLUDE_IF_UNSET vacation
-	 *         MANDATORY_IF_SET vacation
-	 *         EXCLUDE_IF_UNSET workingHours
-	 *         MANDATORY_IF_SET workingHours
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    workingHours[0, 1]
-	 *         EXCLUDE_IF_UNSET vacation
-	 *         MANDATORY_IF_SET vacation
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 */
 	protected void sequence_ResourceAttributes(EObject context, ResourceAttributes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3464,303 +3429,31 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (
-	 *         all?='*' | 
-	 *         none?='-' | 
-	 *         (
-	 *             responsible?='responsible' 
-	 *             flags?='flags' 
-	 *             maxstart?='maxstart' 
-	 *             maxend?='maxstart' 
-	 *             priority?='priority' 
-	 *             booking?='priority' 
-	 *             note?='note' 
-	 *             minstart?='minstart' 
-	 *             minend?='minend' 
-	 *             complete?='complete' 
-	 *             depends?='depends'
-	 *         )
+	 *         responsible?='responsible'? 
+	 *         flags?='flags'? 
+	 *         maxstart?='maxstart'? 
+	 *         maxend?='maxend'? 
+	 *         priority?='priority'? 
+	 *         booking?='booking'? 
+	 *         note?='note'? 
+	 *         minstart?='minstart'? 
+	 *         minend?='minend'? 
+	 *         complete?='complete'? 
+	 *         depends?='depends'?
 	 *     )
 	 *
 	 * Features:
-	 *    all[0, 1]
-	 *         EXCLUDE_IF_SET none
-	 *         EXCLUDE_IF_SET responsible
-	 *         EXCLUDE_IF_SET flags
-	 *         EXCLUDE_IF_SET maxstart
-	 *         EXCLUDE_IF_SET maxend
-	 *         EXCLUDE_IF_SET priority
-	 *         EXCLUDE_IF_SET booking
-	 *         EXCLUDE_IF_SET note
-	 *         EXCLUDE_IF_SET minstart
-	 *         EXCLUDE_IF_SET minend
-	 *         EXCLUDE_IF_SET complete
-	 *         EXCLUDE_IF_SET depends
-	 *    none[0, 1]
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET responsible
-	 *         EXCLUDE_IF_SET flags
-	 *         EXCLUDE_IF_SET maxstart
-	 *         EXCLUDE_IF_SET maxend
-	 *         EXCLUDE_IF_SET priority
-	 *         EXCLUDE_IF_SET booking
-	 *         EXCLUDE_IF_SET note
-	 *         EXCLUDE_IF_SET minstart
-	 *         EXCLUDE_IF_SET minend
-	 *         EXCLUDE_IF_SET complete
-	 *         EXCLUDE_IF_SET depends
 	 *    responsible[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    flags[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    maxstart[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    maxend[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    priority[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    booking[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    note[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    minstart[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    minend[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    complete[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET depends
-	 *         MANDATORY_IF_SET depends
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    depends[0, 1]
-	 *         EXCLUDE_IF_UNSET responsible
-	 *         MANDATORY_IF_SET responsible
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET maxstart
-	 *         MANDATORY_IF_SET maxstart
-	 *         EXCLUDE_IF_UNSET maxend
-	 *         MANDATORY_IF_SET maxend
-	 *         EXCLUDE_IF_UNSET priority
-	 *         MANDATORY_IF_SET priority
-	 *         EXCLUDE_IF_UNSET booking
-	 *         MANDATORY_IF_SET booking
-	 *         EXCLUDE_IF_UNSET note
-	 *         MANDATORY_IF_SET note
-	 *         EXCLUDE_IF_UNSET minstart
-	 *         MANDATORY_IF_SET minstart
-	 *         EXCLUDE_IF_UNSET minend
-	 *         MANDATORY_IF_SET minend
-	 *         EXCLUDE_IF_UNSET complete
-	 *         MANDATORY_IF_SET complete
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 */
 	protected void sequence_TaskAttributes(EObject context, TaskAttributes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

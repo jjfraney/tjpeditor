@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.RollupTask;
@@ -28,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.RollupTask;
  *
  * @generated
  */
-public class RollupTaskImpl extends MinimalEObjectImpl.Container implements RollupTask
+public class RollupTaskImpl extends ExportAttributeImpl implements RollupTask
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.
