@@ -20,5 +20,11 @@ public class LimitsTest extends XtextTest {
 		testParserRule("limits { maximum 4h { end 2011-10-10 start 2011-10-10 } weeklymax 6h }",
 				"Limits");
 	}
+	@Test
+	public void testMaxLimitsByDay() {
+		// This fails if grammar allows a hex literal for integer, e.g. 2d as a hex number.
+		// Here, 2d is intended to mean 2 days.
+		testParserRule("limits { dailymax 2d }", "Limits");
+	}
 	
 }

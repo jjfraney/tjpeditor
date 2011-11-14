@@ -1295,15 +1295,6 @@ public interface ProjectFactory extends EFactory
   Start createStart();
 
   /**
-   * Returns a new object of class '<em>Start Credit</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Start Credit</em>'.
-   * @generated
-   */
-  StartCredit createStartCredit();
-
-  /**
    * Returns a new object of class '<em>Status Status Sheet</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -547,6 +547,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Fail fail = (Fail)theEObject;
         T result = caseFail(fail);
+        if (result == null) result = caseTaskAttribute(fail);
         if (result == null) result = caseResourceAttribute(fail);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -710,6 +711,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         JournalMode journalMode = (JournalMode)theEObject;
         T result = caseJournalMode(journalMode);
+        if (result == null) result = caseReportAttribute(journalMode);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -736,7 +738,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseGlobalAttribute(limits);
         if (result == null) result = caseTaskAttribute(limits);
         if (result == null) result = caseResourceAttribute(limits);
-        if (result == null) result = caseAllocateResourceAttribute(limits);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1210,14 +1211,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.START_CREDIT:
-      {
-        StartCredit startCredit = (StartCredit)theEObject;
-        T result = caseStartCredit(startCredit);
-        if (result == null) result = caseTaskAttribute(startCredit);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ProjectPackage.STATUS_STATUS_SHEET:
       {
         StatusStatusSheet statusStatusSheet = (StatusStatusSheet)theEObject;
@@ -1411,6 +1404,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Warn warn = (Warn)theEObject;
         T result = caseWarn(warn);
+        if (result == null) result = caseTaskAttribute(warn);
         if (result == null) result = caseResourceAttribute(warn);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -3896,22 +3890,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStart(Start object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Start Credit</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Start Credit</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStartCredit(StartCredit object)
   {
     return null;
   }

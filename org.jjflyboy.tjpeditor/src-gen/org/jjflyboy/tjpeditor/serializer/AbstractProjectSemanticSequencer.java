@@ -119,7 +119,6 @@ import org.jjflyboy.tjpeditor.project.ShortTimeFormat;
 import org.jjflyboy.tjpeditor.project.Sort;
 import org.jjflyboy.tjpeditor.project.SortJournalEntries;
 import org.jjflyboy.tjpeditor.project.Start;
-import org.jjflyboy.tjpeditor.project.StartCredit;
 import org.jjflyboy.tjpeditor.project.StatusStatusSheet;
 import org.jjflyboy.tjpeditor.project.SupplementAccount;
 import org.jjflyboy.tjpeditor.project.SupplementReport;
@@ -425,7 +424,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.FAIL:
 				if(context == grammarAccess.getFailRule() ||
-				   context == grammarAccess.getResourceAttributeRule()) {
+				   context == grammarAccess.getResourceAttributeRule() ||
+				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_Fail(context, (Fail) semanticObject); 
 					return; 
 				}
@@ -539,7 +539,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.JOURNAL_MODE:
-				if(context == grammarAccess.getJournalModeRule()) {
+				if(context == grammarAccess.getJournalModeRule() ||
+				   context == grammarAccess.getReportAttributeRule()) {
 					sequence_JournalMode(context, (JournalMode) semanticObject); 
 					return; 
 				}
@@ -573,8 +574,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.LIMITS:
-				if(context == grammarAccess.getAllocateResourceAttributeRule() ||
-				   context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getGlobalAttributeRule() ||
 				   context == grammarAccess.getLimitsRule() ||
 				   context == grammarAccess.getResourceAttributeRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
@@ -961,13 +961,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
-			case ProjectPackage.START_CREDIT:
-				if(context == grammarAccess.getStartCreditRule() ||
-				   context == grammarAccess.getTaskAttributeRule()) {
-					sequence_StartCredit(context, (StartCredit) semanticObject); 
-					return; 
-				}
-				else break;
 			case ProjectPackage.STATUS_STATUS_SHEET:
 				if(context == grammarAccess.getStatusStatusSheetRule() ||
 				   context == grammarAccess.getTaskStatusSheetAttributeRule()) {
@@ -1149,6 +1142,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.WARN:
 				if(context == grammarAccess.getResourceAttributeRule() ||
+				   context == grammarAccess.getTaskAttributeRule() ||
 				   context == grammarAccess.getWarnRule()) {
 					sequence_Warn(context, (Warn) semanticObject); 
 					return; 
@@ -2381,39 +2375,15 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (date=ISODATE headline=STRING (alert=Alert author=Author details=Details summary=Summary)?)
+	 *     (date=ISODATE headline=STRING (alert=Alert? author=Author? details=Details? summary=Summary?)?)
 	 *
 	 * Features:
 	 *    date[1, 1]
 	 *    headline[1, 1]
 	 *    alert[0, 1]
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
 	 *    author[0, 1]
-	 *         EXCLUDE_IF_UNSET alert
-	 *         MANDATORY_IF_SET alert
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
 	 *    details[0, 1]
-	 *         EXCLUDE_IF_UNSET alert
-	 *         MANDATORY_IF_SET alert
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
 	 *    summary[0, 1]
-	 *         EXCLUDE_IF_UNSET alert
-	 *         MANDATORY_IF_SET alert
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
 	 */
 	protected void sequence_JournalEntry(EObject context, JournalEntry semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2490,11 +2460,10 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (value=XFloat unit=TimeUnit attributes+=LimitAttribute*)
+	 *     (duration=DurationQuantity attributes+=LimitAttribute*)
 	 *
 	 * Features:
-	 *    value[1, 1]
-	 *    unit[1, 1]
+	 *    duration[1, 1]
 	 *    attributes[0, *]
 	 */
 	protected void sequence_Limit(EObject context, Limit semanticObject) {
@@ -3392,25 +3361,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     startCredit=XFloat
-	 *
-	 * Features:
-	 *    startCredit[1, 1]
-	 */
-	protected void sequence_StartCredit(EObject context, StartCredit semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getStartCredit_StartCredit()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getStartCredit_StartCredit()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getStartCreditAccess().getStartCreditXFloatParserRuleCall_1_0(), semanticObject.getStartCredit());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     start=ISODATE
 	 *
 	 * Features:
@@ -3483,7 +3433,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (task=[Task|ID] attributes+=TaskAttribute*)
+	 *     (task=[Task|TaskPath] attributes+=TaskAttribute*)
 	 *
 	 * Features:
 	 *    task[1, 1]

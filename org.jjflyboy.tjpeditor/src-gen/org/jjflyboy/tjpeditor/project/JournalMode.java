@@ -5,7 +5,6 @@
  */
 package org.jjflyboy.tjpeditor.project;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface JournalMode extends EObject
+public interface JournalMode extends ReportAttribute
 {
   /**
    * Returns the value of the '<em><b>Mode</b></em>' attribute.

@@ -213,7 +213,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//TextExtend"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Fail" eSuperTypes="#//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Fail" eSuperTypes="#//TaskAttribute #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Flags" eSuperTypes="#//GlobalAttribute #//AccountAttribute #//TaskAttribute #//ReportAttribute #//ResourceAttribute #//StatusStatusSheetAttribute">
@@ -297,7 +297,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="summary" eType="#//Summary"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JournalMode">
+  <eClassifiers xsi:type="ecore:EClass" name="JournalMode" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//JournalModeValue"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Left" eSuperTypes="#//ReportAttribute"/>
@@ -305,7 +305,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="length" eType="#//DurationQuantity"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Limits" eSuperTypes="#//GlobalAttribute #//TaskAttribute #//ResourceAttribute #//AllocateResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Limits" eSuperTypes="#//GlobalAttribute #//TaskAttribute #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//LimitsAttribute" containment="true"/>
   </eClassifiers>
@@ -478,9 +478,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Start" eSuperTypes="#//TaskAttribute #//ReportAttribute #//NikuReportAttribute #//ColumnAttribute #//TimesheetReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StartCredit" eSuperTypes="#//TaskAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startCredit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusStatusSheet" eSuperTypes="#//TaskStatusSheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//AlertLevel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -580,7 +577,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" upperBound="-1"
         eType="#//Interval3" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Warn" eSuperTypes="#//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Warn" eSuperTypes="#//TaskAttribute #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WeekStarts" eSuperTypes="#//ProjectAttribute">
@@ -636,8 +633,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scenariospecific" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Limit" eSuperTypes="#//DailyMax #//DailyMin #//Maximum #//Minimum #//MonthlyMax #//MonthlyMin #//WeeklyMax #//WeeklyMin">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//TimeUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duration" eType="#//DurationQuantity"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//LimitAttribute" containment="true"/>
   </eClassifiers>
@@ -697,7 +694,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="JournalModeValue">
     <eLiterals name="JOURNAL" literal="journal"/>
-    <eLiterals name="JOURNAL_SUB" value="1" literal=" journal_sub"/>
+    <eLiterals name="JOURNAL_SUB" value="1" literal="journal_sub"/>
     <eLiterals name="STATUS_DOWN" value="2" literal="status_down"/>
     <eLiterals name="STATUS_UP" value="3" literal="status_up"/>
     <eLiterals name="ALERTS_DOWN" value="4" literal="alerts_down"/>

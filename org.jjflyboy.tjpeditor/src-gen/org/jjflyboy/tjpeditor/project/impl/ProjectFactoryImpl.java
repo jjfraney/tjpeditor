@@ -209,7 +209,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.SORT_RESOURCES: return createSortResources();
       case ProjectPackage.SORT_TASKS: return createSortTasks();
       case ProjectPackage.START: return createStart();
-      case ProjectPackage.START_CREDIT: return createStartCredit();
       case ProjectPackage.STATUS_STATUS_SHEET: return createStatusStatusSheet();
       case ProjectPackage.STATUS_STATUS_SHEET_ATTRIBUTE: return createStatusStatusSheetAttribute();
       case ProjectPackage.SUMMARY: return createSummary();
@@ -1916,17 +1915,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     StartImpl start = new StartImpl();
     return start;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StartCredit createStartCredit()
-  {
-    StartCreditImpl startCredit = new StartCreditImpl();
-    return startCredit;
   }
 
   /**

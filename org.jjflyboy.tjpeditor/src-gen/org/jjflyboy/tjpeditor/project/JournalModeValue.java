@@ -40,7 +40,7 @@ public enum JournalModeValue implements Enumerator
    * @generated
    * @ordered
    */
-  JOURNAL_SUB(1, "JOURNAL_SUB", " journal_sub"),
+  JOURNAL_SUB(1, "JOURNAL_SUB", "journal_sub"),
 
   /**
    * The '<em><b>STATUS DOWN</b></em>' literal object.
@@ -96,7 +96,7 @@ public enum JournalModeValue implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #JOURNAL_SUB
-   * @model literal=" journal_sub"
+   * @model literal="journal_sub"
    * @generated
    * @ordered
    */

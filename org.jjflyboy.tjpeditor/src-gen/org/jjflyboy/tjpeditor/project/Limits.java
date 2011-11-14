@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Limits extends GlobalAttribute, TaskAttribute, ResourceAttribute, AllocateResourceAttribute
+public interface Limits extends GlobalAttribute, TaskAttribute, ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.

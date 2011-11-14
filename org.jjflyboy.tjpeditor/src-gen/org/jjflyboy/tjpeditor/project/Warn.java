@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Warn extends ResourceAttribute
+public interface Warn extends TaskAttribute, ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' attribute.

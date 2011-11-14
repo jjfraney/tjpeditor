@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class FailImpl extends ResourceAttributeImpl implements Fail
+public class FailImpl extends TaskAttributeImpl implements Fail
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.

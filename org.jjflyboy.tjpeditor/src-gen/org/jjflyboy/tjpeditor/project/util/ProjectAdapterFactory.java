@@ -783,11 +783,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createStartAdapter();
       }
       @Override
-      public Adapter caseStartCredit(StartCredit object)
-      {
-        return createStartCreditAdapter();
-      }
-      @Override
       public Adapter caseStatusStatusSheet(StatusStatusSheet object)
       {
         return createStatusStatusSheetAdapter();
@@ -3170,21 +3165,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStartAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.StartCredit <em>Start Credit</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.StartCredit
-   * @generated
-   */
-  public Adapter createStartCreditAdapter()
   {
     return null;
   }

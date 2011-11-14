@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.JournalMode;
 import org.jjflyboy.tjpeditor.project.JournalModeValue;
@@ -29,7 +28,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class JournalModeImpl extends MinimalEObjectImpl.Container implements JournalMode
+public class JournalModeImpl extends ReportAttributeImpl implements JournalMode
 {
   /**
    * The default value of the '{@link #getMode() <em>Mode</em>}' attribute.

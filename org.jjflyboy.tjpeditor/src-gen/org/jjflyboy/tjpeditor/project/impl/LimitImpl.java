@@ -20,10 +20,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.jjflyboy.tjpeditor.project.DurationQuantity;
 import org.jjflyboy.tjpeditor.project.Limit;
 import org.jjflyboy.tjpeditor.project.LimitAttribute;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
-import org.jjflyboy.tjpeditor.project.TimeUnit;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,8 +32,7 @@ import org.jjflyboy.tjpeditor.project.TimeUnit;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.LimitImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
  * </p>
@@ -43,44 +42,14 @@ import org.jjflyboy.tjpeditor.project.TimeUnit;
 public class LimitImpl extends DailyMaxImpl implements Limit
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getDuration() <em>Duration</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getDuration()
    * @generated
    * @ordered
    */
-  protected static final float VALUE_EDEFAULT = 0.0F;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected float value = VALUE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getUnit()
-   * @generated
-   * @ordered
-   */
-  protected static final TimeUnit UNIT_EDEFAULT = TimeUnit.MINUTE;
-
-  /**
-   * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getUnit()
-   * @generated
-   * @ordered
-   */
-  protected TimeUnit unit = UNIT_EDEFAULT;
+  protected DurationQuantity duration;
 
   /**
    * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
@@ -118,9 +87,9 @@ public class LimitImpl extends DailyMaxImpl implements Limit
    * <!-- end-user-doc -->
    * @generated
    */
-  public float getValue()
+  public DurationQuantity getDuration()
   {
-    return value;
+    return duration;
   }
 
   /**
@@ -128,12 +97,16 @@ public class LimitImpl extends DailyMaxImpl implements Limit
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(float newValue)
+  public NotificationChain basicSetDuration(DurationQuantity newDuration, NotificationChain msgs)
   {
-    float oldValue = value;
-    value = newValue;
+    DurationQuantity oldDuration = duration;
+    duration = newDuration;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.LIMIT__VALUE, oldValue, value));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.LIMIT__DURATION, oldDuration, newDuration);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -141,22 +114,20 @@ public class LimitImpl extends DailyMaxImpl implements Limit
    * <!-- end-user-doc -->
    * @generated
    */
-  public TimeUnit getUnit()
+  public void setDuration(DurationQuantity newDuration)
   {
-    return unit;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setUnit(TimeUnit newUnit)
-  {
-    TimeUnit oldUnit = unit;
-    unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.LIMIT__UNIT, oldUnit, unit));
+    if (newDuration != duration)
+    {
+      NotificationChain msgs = null;
+      if (duration != null)
+        msgs = ((InternalEObject)duration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.LIMIT__DURATION, null, msgs);
+      if (newDuration != null)
+        msgs = ((InternalEObject)newDuration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.LIMIT__DURATION, null, msgs);
+      msgs = basicSetDuration(newDuration, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.LIMIT__DURATION, newDuration, newDuration));
   }
 
   /**
@@ -183,6 +154,8 @@ public class LimitImpl extends DailyMaxImpl implements Limit
   {
     switch (featureID)
     {
+      case ProjectPackage.LIMIT__DURATION:
+        return basicSetDuration(null, msgs);
       case ProjectPackage.LIMIT__ATTRIBUTES:
         return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
     }
@@ -199,10 +172,8 @@ public class LimitImpl extends DailyMaxImpl implements Limit
   {
     switch (featureID)
     {
-      case ProjectPackage.LIMIT__VALUE:
-        return getValue();
-      case ProjectPackage.LIMIT__UNIT:
-        return getUnit();
+      case ProjectPackage.LIMIT__DURATION:
+        return getDuration();
       case ProjectPackage.LIMIT__ATTRIBUTES:
         return getAttributes();
     }
@@ -220,11 +191,8 @@ public class LimitImpl extends DailyMaxImpl implements Limit
   {
     switch (featureID)
     {
-      case ProjectPackage.LIMIT__VALUE:
-        setValue((Float)newValue);
-        return;
-      case ProjectPackage.LIMIT__UNIT:
-        setUnit((TimeUnit)newValue);
+      case ProjectPackage.LIMIT__DURATION:
+        setDuration((DurationQuantity)newValue);
         return;
       case ProjectPackage.LIMIT__ATTRIBUTES:
         getAttributes().clear();
@@ -244,11 +212,8 @@ public class LimitImpl extends DailyMaxImpl implements Limit
   {
     switch (featureID)
     {
-      case ProjectPackage.LIMIT__VALUE:
-        setValue(VALUE_EDEFAULT);
-        return;
-      case ProjectPackage.LIMIT__UNIT:
-        setUnit(UNIT_EDEFAULT);
+      case ProjectPackage.LIMIT__DURATION:
+        setDuration((DurationQuantity)null);
         return;
       case ProjectPackage.LIMIT__ATTRIBUTES:
         getAttributes().clear();
@@ -267,33 +232,12 @@ public class LimitImpl extends DailyMaxImpl implements Limit
   {
     switch (featureID)
     {
-      case ProjectPackage.LIMIT__VALUE:
-        return value != VALUE_EDEFAULT;
-      case ProjectPackage.LIMIT__UNIT:
-        return unit != UNIT_EDEFAULT;
+      case ProjectPackage.LIMIT__DURATION:
+        return duration != null;
       case ProjectPackage.LIMIT__ATTRIBUTES:
         return attributes != null && !attributes.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (value: ");
-    result.append(value);
-    result.append(", unit: ");
-    result.append(unit);
-    result.append(')');
-    return result.toString();
   }
 
 } //LimitImpl

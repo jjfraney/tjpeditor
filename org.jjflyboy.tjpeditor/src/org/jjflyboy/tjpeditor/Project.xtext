@@ -95,11 +95,13 @@ Task:
 	
 // http://www.taskjuggler.org/tj3/manual/supplement.task.html
 SupplementTask:
-	'supplement' 'task' task=[Task] ( '{' attributes+=TaskAttribute*	'}'	)?;
+	'supplement' 'task' task=[Task|TaskPath] ( '{' attributes+=TaskAttribute*	'}'	)?;
 	
 TaskAttribute:
 	(
-		Allocate
+//		AccountTask -- deprecated
+//		 AdoptTask -- experimental
+		 Allocate
 		| BookingTask
 		| Charge
 		| ChargeSet
@@ -109,6 +111,7 @@ TaskAttribute:
 		| Effort
 		| End
 		| EndCredit
+		| Fail
 		| Flags
 		| JournalEntry
 		| Length
@@ -129,10 +132,10 @@ TaskAttribute:
 		| Scheduling
 		| ShiftsTask
 		| Start
-		| StartCredit
+// 		| StartCredit -- deprecated
 		| SupplementTask
 		| Task
-//		| Warn
+		| Warn
 	)
 ;
 
@@ -162,6 +165,7 @@ ReportAttribute:
 	| Headline
 //	| HideResource
 //	| HideTask
+	| JournalMode
 	| Left
 	| LoadUnit
 	| Period
@@ -496,22 +500,23 @@ JournalAttributes: (all ?= '*' | none ?= '-' |
 			 summary ?= 'summary')
 );
 
+
 // http://www.taskjuggler.org/tj3/manual/journalentry.html
 JournalEntry:
-	'journalentry' date=ISODATE headline=STRING ('{'
+	'journalentry' date=ISODATE headline=STRING
+	 ('{'
 		(
-			(alert = Alert) &
-			(author = Author) &
-			(details = Details) &
-			(summary = Summary)
+			alert = Alert?
+			& author = Author?
+			& details = Details?
+			& summary = Summary?
 		)
-	'}')?;
+	'}')?
+;
 
 // http://www.taskjuggler.org/tj3/manual/journalmode.html
 JournalMode: 'journalmode'  mode=JournalModeValue;
 	
-
-
 // http://www.taskjuggler.org/tj3/manual/left.html	
 Left: 'left' RichText;
 
@@ -777,9 +782,6 @@ SortTasks: 'sorttasks' Sort;
 // http://www.taskjuggler.org/tj3/manual/start.report.html
 Start: 'start' start=ISODATE;
 
-// http://www.taskjuggler.org/tj3/manual/startcredit.html
-StartCredit: 'startcredit' startCredit=XFloat;
-
 // http://www.taskjuggler.org/tj3/manual/status.statussheet.html
 StatusStatusSheet: 'status' level=AlertLevel text=STRING ( '{' attributes += StatusStatusSheetAttribute* '}' ) ?;
 
@@ -1014,7 +1016,7 @@ ExtendAttribute:
 // http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 // http://www.taskjuggler.org/tj3/manual/limits.html
 Limit:
-	    value=XFloat unit=TimeUnit ('{' attributes+=LimitAttribute*	'}')?;
+	    duration=DurationQuantity ('{' attributes+=LimitAttribute*	'}')?;
 
 LimitAttribute: 
 	    	('end' end=ISODATE) |
@@ -1092,7 +1094,7 @@ enum Justification:
 // http://www.taskjuggler.org/tj3/manual/journalmode.html
 enum JournalModeValue:
 	JOURNAL = 'journal'
-	| JOURNAL_SUB =' journal_sub'
+	| JOURNAL_SUB = 'journal_sub'
 	| STATUS_DOWN = 'status_down'
 	| STATUS_UP = 'status_up'
 	| ALERTS_DOWN = 'alerts_down'
@@ -1284,7 +1286,7 @@ terminal ISODATE : // YYYY-MM-DD-HH:mm[:ss][xNNNN]  (x being + or -, NNNN being 
 
 // commented out because conflict with enum TimeUnit example: 3d  TimUnit or RGB?
 // for example, color spec of: http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
-terminal RGB: ((('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')));
+//terminal RGB: ((('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')));
 
 /*
 terminal RRGGBB: (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 

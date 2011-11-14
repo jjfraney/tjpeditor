@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Fail extends ResourceAttribute
+public interface Fail extends TaskAttribute, ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' attribute.

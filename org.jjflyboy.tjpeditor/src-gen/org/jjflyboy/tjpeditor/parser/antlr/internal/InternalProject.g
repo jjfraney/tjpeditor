@@ -935,10 +935,12 @@ ruleSupplementTask returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getSupplementTaskRule());
 	        }
         }
-	otherlv_2=RULE_ID
-	{
-		newLeafNode(otherlv_2, grammarAccess.getSupplementTaskAccess().getTaskTaskCrossReference_2_0()); 
-	}
+		{ 
+	        newCompositeNode(grammarAccess.getSupplementTaskAccess().getTaskTaskCrossReference_2_0()); 
+	    }
+		ruleTaskPath		{ 
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 )(	otherlv_3='{' 
@@ -1090,211 +1092,211 @@ ruleTaskAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getFlagsParserRuleCall_10()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getFailParserRuleCall_10()); 
     }
-    this_Flags_10=ruleFlags
+    this_Fail_10=ruleFail
     { 
-        $current = $this_Flags_10.current; 
+        $current = $this_Fail_10.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getJournalEntryParserRuleCall_11()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getFlagsParserRuleCall_11()); 
     }
-    this_JournalEntry_11=ruleJournalEntry
+    this_Flags_11=ruleFlags
     { 
-        $current = $this_JournalEntry_11.current; 
+        $current = $this_Flags_11.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getLengthParserRuleCall_12()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getJournalEntryParserRuleCall_12()); 
     }
-    this_Length_12=ruleLength
+    this_JournalEntry_12=ruleJournalEntry
     { 
-        $current = $this_Length_12.current; 
+        $current = $this_JournalEntry_12.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getLimitsParserRuleCall_13()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getLengthParserRuleCall_13()); 
     }
-    this_Limits_13=ruleLimits
+    this_Length_13=ruleLength
     { 
-        $current = $this_Limits_13.current; 
+        $current = $this_Length_13.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMaxEndParserRuleCall_14()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getLimitsParserRuleCall_14()); 
     }
-    this_MaxEnd_14=ruleMaxEnd
+    this_Limits_14=ruleLimits
     { 
-        $current = $this_MaxEnd_14.current; 
+        $current = $this_Limits_14.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMaxStartParserRuleCall_15()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMaxEndParserRuleCall_15()); 
     }
-    this_MaxStart_15=ruleMaxStart
+    this_MaxEnd_15=ruleMaxEnd
     { 
-        $current = $this_MaxStart_15.current; 
+        $current = $this_MaxEnd_15.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMilestoneParserRuleCall_16()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMaxStartParserRuleCall_16()); 
     }
-    this_Milestone_16=ruleMilestone
+    this_MaxStart_16=ruleMaxStart
     { 
-        $current = $this_Milestone_16.current; 
+        $current = $this_MaxStart_16.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMinEndParserRuleCall_17()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMilestoneParserRuleCall_17()); 
     }
-    this_MinEnd_17=ruleMinEnd
+    this_Milestone_17=ruleMilestone
     { 
-        $current = $this_MinEnd_17.current; 
+        $current = $this_Milestone_17.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMinStartParserRuleCall_18()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMinEndParserRuleCall_18()); 
     }
-    this_MinStart_18=ruleMinStart
+    this_MinEnd_18=ruleMinEnd
     { 
-        $current = $this_MinStart_18.current; 
+        $current = $this_MinEnd_18.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getNoteParserRuleCall_19()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getMinStartParserRuleCall_19()); 
     }
-    this_Note_19=ruleNote
+    this_MinStart_19=ruleMinStart
     { 
-        $current = $this_Note_19.current; 
+        $current = $this_MinStart_19.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPeriodParserRuleCall_20()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getNoteParserRuleCall_20()); 
     }
-    this_Period_20=rulePeriod
+    this_Note_20=ruleNote
     { 
-        $current = $this_Period_20.current; 
+        $current = $this_Note_20.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPrecedesParserRuleCall_21()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPeriodParserRuleCall_21()); 
     }
-    this_Precedes_21=rulePrecedes
+    this_Period_21=rulePeriod
     { 
-        $current = $this_Precedes_21.current; 
+        $current = $this_Period_21.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPriorityParserRuleCall_22()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPrecedesParserRuleCall_22()); 
     }
-    this_Priority_22=rulePriority
+    this_Precedes_22=rulePrecedes
     { 
-        $current = $this_Priority_22.current; 
+        $current = $this_Precedes_22.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getProjectIdParserRuleCall_23()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPriorityParserRuleCall_23()); 
     }
-    this_ProjectId_23=ruleProjectId
+    this_Priority_23=rulePriority
     { 
-        $current = $this_ProjectId_23.current; 
+        $current = $this_Priority_23.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPurgeParserRuleCall_24()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getProjectIdParserRuleCall_24()); 
     }
-    this_Purge_24=rulePurge
+    this_ProjectId_24=ruleProjectId
     { 
-        $current = $this_Purge_24.current; 
+        $current = $this_ProjectId_24.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getResponsibleParserRuleCall_25()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPurgeParserRuleCall_25()); 
     }
-    this_Responsible_25=ruleResponsible
+    this_Purge_25=rulePurge
     { 
-        $current = $this_Responsible_25.current; 
+        $current = $this_Purge_25.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getScheduledParserRuleCall_26()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getResponsibleParserRuleCall_26()); 
     }
-    this_Scheduled_26=ruleScheduled
+    this_Responsible_26=ruleResponsible
     { 
-        $current = $this_Scheduled_26.current; 
+        $current = $this_Responsible_26.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getSchedulingParserRuleCall_27()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getScheduledParserRuleCall_27()); 
     }
-    this_Scheduling_27=ruleScheduling
+    this_Scheduled_27=ruleScheduled
     { 
-        $current = $this_Scheduling_27.current; 
+        $current = $this_Scheduled_27.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getShiftsTaskParserRuleCall_28()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getSchedulingParserRuleCall_28()); 
     }
-    this_ShiftsTask_28=ruleShiftsTask
+    this_Scheduling_28=ruleScheduling
     { 
-        $current = $this_ShiftsTask_28.current; 
+        $current = $this_Scheduling_28.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getStartParserRuleCall_29()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getShiftsTaskParserRuleCall_29()); 
     }
-    this_Start_29=ruleStart
+    this_ShiftsTask_29=ruleShiftsTask
     { 
-        $current = $this_Start_29.current; 
+        $current = $this_ShiftsTask_29.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getStartCreditParserRuleCall_30()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getStartParserRuleCall_30()); 
     }
-    this_StartCredit_30=ruleStartCredit
+    this_Start_30=ruleStart
     { 
-        $current = $this_StartCredit_30.current; 
+        $current = $this_Start_30.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1315,6 +1317,16 @@ ruleTaskAttribute returns [EObject current=null]
     this_Task_32=ruleTask
     { 
         $current = $this_Task_32.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getWarnParserRuleCall_33()); 
+    }
+    this_Warn_33=ruleWarn
+    { 
+        $current = $this_Warn_33.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -1601,161 +1613,171 @@ ruleReportAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getLeftParserRuleCall_11()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getJournalModeParserRuleCall_11()); 
     }
-    this_Left_11=ruleLeft
+    this_JournalMode_11=ruleJournalMode
     { 
-        $current = $this_Left_11.current; 
+        $current = $this_JournalMode_11.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getLoadUnitParserRuleCall_12()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getLeftParserRuleCall_12()); 
     }
-    this_LoadUnit_12=ruleLoadUnit
+    this_Left_12=ruleLeft
     { 
-        $current = $this_LoadUnit_12.current; 
+        $current = $this_Left_12.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getPeriodParserRuleCall_13()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getLoadUnitParserRuleCall_13()); 
     }
-    this_Period_13=rulePeriod
+    this_LoadUnit_13=ruleLoadUnit
     { 
-        $current = $this_Period_13.current; 
+        $current = $this_LoadUnit_13.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getPrologParserRuleCall_14()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getPeriodParserRuleCall_14()); 
     }
-    this_Prolog_14=ruleProlog
+    this_Period_14=rulePeriod
     { 
-        $current = $this_Prolog_14.current; 
+        $current = $this_Period_14.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getResourceReportParserRuleCall_15()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getPrologParserRuleCall_15()); 
     }
-    this_ResourceReport_15=ruleResourceReport
+    this_Prolog_15=ruleProlog
     { 
-        $current = $this_ResourceReport_15.current; 
+        $current = $this_Prolog_15.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getTaskReportParserRuleCall_16()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getResourceReportParserRuleCall_16()); 
     }
-    this_TaskReport_16=ruleTaskReport
+    this_ResourceReport_16=ruleResourceReport
     { 
-        $current = $this_TaskReport_16.current; 
+        $current = $this_ResourceReport_16.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getTextReportParserRuleCall_17()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getTaskReportParserRuleCall_17()); 
     }
-    this_TextReport_17=ruleTextReport
+    this_TaskReport_17=ruleTaskReport
     { 
-        $current = $this_TextReport_17.current; 
+        $current = $this_TaskReport_17.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getRightParserRuleCall_18()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getTextReportParserRuleCall_18()); 
     }
-    this_Right_18=ruleRight
+    this_TextReport_18=ruleTextReport
     { 
-        $current = $this_Right_18.current; 
+        $current = $this_TextReport_18.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getScenariosParserRuleCall_19()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getRightParserRuleCall_19()); 
     }
-    this_Scenarios_19=ruleScenarios
+    this_Right_19=ruleRight
     { 
-        $current = $this_Scenarios_19.current; 
+        $current = $this_Right_19.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getSelfContainedParserRuleCall_20()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getScenariosParserRuleCall_20()); 
     }
-    this_SelfContained_20=ruleSelfContained
+    this_Scenarios_20=ruleScenarios
     { 
-        $current = $this_SelfContained_20.current; 
+        $current = $this_Scenarios_20.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getSortResourcesParserRuleCall_21()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getSelfContainedParserRuleCall_21()); 
     }
-    this_SortResources_21=ruleSortResources
+    this_SelfContained_21=ruleSelfContained
     { 
-        $current = $this_SortResources_21.current; 
+        $current = $this_SelfContained_21.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getSortTasksParserRuleCall_22()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getSortResourcesParserRuleCall_22()); 
     }
-    this_SortTasks_22=ruleSortTasks
+    this_SortResources_22=ruleSortResources
     { 
-        $current = $this_SortTasks_22.current; 
+        $current = $this_SortResources_22.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getStartParserRuleCall_23()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getSortTasksParserRuleCall_23()); 
     }
-    this_Start_23=ruleStart
+    this_SortTasks_23=ruleSortTasks
     { 
-        $current = $this_Start_23.current; 
+        $current = $this_SortTasks_23.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getTaskRootParserRuleCall_24()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getStartParserRuleCall_24()); 
     }
-    this_TaskRoot_24=ruleTaskRoot
+    this_Start_24=ruleStart
     { 
-        $current = $this_TaskRoot_24.current; 
+        $current = $this_Start_24.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getTimeFormatParserRuleCall_25()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getTaskRootParserRuleCall_25()); 
     }
-    this_TimeFormat_25=ruleTimeFormat
+    this_TaskRoot_25=ruleTaskRoot
     { 
-        $current = $this_TimeFormat_25.current; 
+        $current = $this_TaskRoot_25.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getTitleParserRuleCall_26()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getTimeFormatParserRuleCall_26()); 
     }
-    this_Title_26=ruleTitle
+    this_TimeFormat_26=ruleTimeFormat
     { 
-        $current = $this_Title_26.current; 
+        $current = $this_TimeFormat_26.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getTitleParserRuleCall_27()); 
+    }
+    this_Title_27=ruleTitle
+    { 
+        $current = $this_Title_27.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -2255,51 +2277,41 @@ ruleAllocateResourceAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getLimitsParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getMandatoryParserRuleCall_1()); 
     }
-    this_Limits_1=ruleLimits
+    this_Mandatory_1=ruleMandatory
     { 
-        $current = $this_Limits_1.current; 
+        $current = $this_Mandatory_1.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getMandatoryParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getPersistentParserRuleCall_2()); 
     }
-    this_Mandatory_2=ruleMandatory
+    this_Persistent_2=rulePersistent
     { 
-        $current = $this_Mandatory_2.current; 
+        $current = $this_Persistent_2.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getPersistentParserRuleCall_3()); 
+        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getSelectParserRuleCall_3()); 
     }
-    this_Persistent_3=rulePersistent
+    this_Select_3=ruleSelect
     { 
-        $current = $this_Persistent_3.current; 
+        $current = $this_Select_3.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getSelectParserRuleCall_4()); 
+        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getShiftsAllocateParserRuleCall_4()); 
     }
-    this_Select_4=ruleSelect
+    this_ShiftsAllocate_4=ruleShiftsAllocate
     { 
-        $current = $this_Select_4.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getAllocateResourceAttributeAccess().getShiftsAllocateParserRuleCall_5()); 
-    }
-    this_ShiftsAllocate_5=ruleShiftsAllocate
-    { 
-        $current = $this_ShiftsAllocate_5.current; 
+        $current = $this_ShiftsAllocate_4.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -5314,8 +5326,7 @@ ruleJournalEntry returns [EObject current=null]
  				)
 			)  
 
-		)+
-	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getJournalEntryAccess().getUnorderedGroup_3_1())}?	
+		)*	
 	)
 )
 	{ 
@@ -5330,6 +5341,47 @@ ruleJournalEntry returns [EObject current=null]
 ;
 
 
+
+
+
+// Entry rule entryRuleJournalMode
+entryRuleJournalMode returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getJournalModeRule()); }
+	 iv_ruleJournalMode=ruleJournalMode 
+	 { $current=$iv_ruleJournalMode.current; } 
+	 EOF 
+;
+
+// Rule JournalMode
+ruleJournalMode returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='journalmode' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getJournalModeAccess().getJournalmodeKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getJournalModeAccess().getModeJournalModeValueEnumRuleCall_1_0()); 
+	    }
+		lv_mode_1_0=ruleJournalModeValue		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getJournalModeRule());
+	        }
+       		set(
+       			$current, 
+       			"mode",
+        		lv_mode_1_0, 
+        		"JournalModeValue");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
 
 
 
@@ -8122,49 +8174,6 @@ ruleStart returns [EObject current=null]
 
 
 
-// Entry rule entryRuleStartCredit
-entryRuleStartCredit returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getStartCreditRule()); }
-	 iv_ruleStartCredit=ruleStartCredit 
-	 { $current=$iv_ruleStartCredit.current; } 
-	 EOF 
-;
-
-// Rule StartCredit
-ruleStartCredit returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='startcredit' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getStartCreditAccess().getStartcreditKeyword_0());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getStartCreditAccess().getStartCreditXFloatParserRuleCall_1_0()); 
-	    }
-		lv_startCredit_1_0=ruleXFloat		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getStartCreditRule());
-	        }
-       		set(
-       			$current, 
-       			"startCredit",
-        		lv_startCredit_1_0, 
-        		"XFloat");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))
-;
-
-
-
-
-
 // Entry rule entryRuleStatusStatusSheet
 entryRuleStatusStatusSheet returns [EObject current=null] 
 	:
@@ -10482,64 +10491,46 @@ ruleLimit returns [EObject current=null]
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLimitAccess().getValueXFloatParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getLimitAccess().getDurationDurationQuantityParserRuleCall_0_0()); 
 	    }
-		lv_value_0_0=ruleXFloat		{
+		lv_duration_0_0=ruleDurationQuantity		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLimitRule());
 	        }
        		set(
        			$current, 
-       			"value",
-        		lv_value_0_0, 
-        		"XFloat");
+       			"duration",
+        		lv_duration_0_0, 
+        		"DurationQuantity");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLimitAccess().getUnitTimeUnitEnumRuleCall_1_0()); 
-	    }
-		lv_unit_1_0=ruleTimeUnit		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLimitRule());
-	        }
-       		set(
-       			$current, 
-       			"unit",
-        		lv_unit_1_0, 
-        		"TimeUnit");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_2='{' 
+)(	otherlv_1='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getLimitAccess().getLeftCurlyBracketKeyword_2_0());
+    	newLeafNode(otherlv_1, grammarAccess.getLimitAccess().getLeftCurlyBracketKeyword_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLimitAccess().getAttributesLimitAttributeParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getLimitAccess().getAttributesLimitAttributeParserRuleCall_1_1_0()); 
 	    }
-		lv_attributes_3_0=ruleLimitAttribute		{
+		lv_attributes_2_0=ruleLimitAttribute		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLimitRule());
 	        }
        		add(
        			$current, 
        			"attributes",
-        		lv_attributes_3_0, 
+        		lv_attributes_2_0, 
         		"LimitAttribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_4='}' 
+)*	otherlv_3='}' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getLimitAccess().getRightCurlyBracketKeyword_2_2());
+    	newLeafNode(otherlv_3, grammarAccess.getLimitAccess().getRightCurlyBracketKeyword_1_2());
     }
 )?)
 ;
@@ -11499,7 +11490,7 @@ ruleJournalModeValue returns [Enumerator current=null]
         newLeafNode(enumLiteral_0, grammarAccess.getJournalModeValueAccess().getJOURNALEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1=' journal_sub' 
+    |(	enumLiteral_1='journal_sub' 
 	{
         $current = grammarAccess.getJournalModeValueAccess().getJOURNAL_SUBEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_1, grammarAccess.getJournalModeValueAccess().getJOURNAL_SUBEnumLiteralDeclaration_1()); 
@@ -12273,8 +12264,6 @@ RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'
 RULE_TIME : (('0'?|'1') '0'..'9'|'2' '0'..'4') ':' '0'..'5' '0'..'9';
 
 RULE_ISODATE : '20' '0'..'9' '0'..'9' '-' ('0' '1'..'9'|'1' '0'..'2') '-' ('0' '1'..'9'|('1'|'2') '0'..'9'|'3' ('0'|'1')) ('-' (('0'?|'1') '0'..'9'|'2' '0'..'4') ':' '0'..'5' '0'..'9' (':' '0'..'5' '0'..'9')? ('-' ('+'|'-') '0'..'5' '0'..'9' '0'..'5' '0'..'9')?)?;
-
-RULE_RGB : ('0'..'9'|'a'..'f'|'A'..'F') ('0'..'9'|'a'..'f'|'A'..'F') ('0'..'9'|'a'..'f'|'A'..'F');
 
 RULE_INT : ('0'..'9')+;
 

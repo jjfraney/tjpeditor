@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.Warn;
  *
  * @generated
  */
-public class WarnImpl extends ResourceAttributeImpl implements Warn
+public class WarnImpl extends TaskAttributeImpl implements Warn
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.

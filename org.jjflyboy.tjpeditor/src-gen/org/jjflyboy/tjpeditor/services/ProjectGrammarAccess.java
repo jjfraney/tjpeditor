@@ -498,7 +498,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTaskKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTaskAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cTaskTaskCrossReference_2_0 = (CrossReference)cTaskAssignment_2.eContents().get(0);
-		private final RuleCall cTaskTaskIDTerminalRuleCall_2_0_1 = (RuleCall)cTaskTaskCrossReference_2_0.eContents().get(1);
+		private final RuleCall cTaskTaskTaskPathParserRuleCall_2_0_1 = (RuleCall)cTaskTaskCrossReference_2_0.eContents().get(1);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
@@ -507,10 +507,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// http://www.taskjuggler.org/tj3/manual/supplement.task.html
 		//SupplementTask:
-		//	"supplement" "task" task=[Task] ("{" attributes+=TaskAttribute* "}")?;
+		//	"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"supplement" "task" task=[Task] ("{" attributes+=TaskAttribute* "}")?
+		//"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"supplement"
@@ -519,14 +519,14 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//"task"
 		public Keyword getTaskKeyword_1() { return cTaskKeyword_1; }
 
-		//task=[Task]
+		//task=[Task|TaskPath]
 		public Assignment getTaskAssignment_2() { return cTaskAssignment_2; }
 
-		//[Task]
+		//[Task|TaskPath]
 		public CrossReference getTaskTaskCrossReference_2_0() { return cTaskTaskCrossReference_2_0; }
 
-		//ID
-		public RuleCall getTaskTaskIDTerminalRuleCall_2_0_1() { return cTaskTaskIDTerminalRuleCall_2_0_1; }
+		//TaskPath
+		public RuleCall getTaskTaskTaskPathParserRuleCall_2_0_1() { return cTaskTaskTaskPathParserRuleCall_2_0_1; }
 
 		//("{" attributes+=TaskAttribute* "}")?
 		public Group getGroup_3() { return cGroup_3; }
@@ -557,43 +557,50 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEffortParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cEndParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cEndCreditParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cFlagsParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cJournalEntryParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cLengthParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cLimitsParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cMaxEndParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cMaxStartParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
-		private final RuleCall cMilestoneParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cMinEndParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
-		private final RuleCall cMinStartParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
-		private final RuleCall cNoteParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
-		private final RuleCall cPeriodParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
-		private final RuleCall cPrecedesParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
-		private final RuleCall cPriorityParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
-		private final RuleCall cProjectIdParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
-		private final RuleCall cPurgeParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
-		private final RuleCall cResponsibleParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
-		private final RuleCall cScheduledParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
-		private final RuleCall cSchedulingParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
-		private final RuleCall cShiftsTaskParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
-		private final RuleCall cStartParserRuleCall_29 = (RuleCall)cAlternatives.eContents().get(29);
-		private final RuleCall cStartCreditParserRuleCall_30 = (RuleCall)cAlternatives.eContents().get(30);
+		private final RuleCall cFailParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cFlagsParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cJournalEntryParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cLengthParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cLimitsParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cMaxEndParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cMaxStartParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cMilestoneParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cMinEndParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cMinStartParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cNoteParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
+		private final RuleCall cPeriodParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
+		private final RuleCall cPrecedesParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
+		private final RuleCall cPriorityParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
+		private final RuleCall cProjectIdParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cPurgeParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cResponsibleParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
+		private final RuleCall cScheduledParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
+		private final RuleCall cSchedulingParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
+		private final RuleCall cShiftsTaskParserRuleCall_29 = (RuleCall)cAlternatives.eContents().get(29);
+		private final RuleCall cStartParserRuleCall_30 = (RuleCall)cAlternatives.eContents().get(30);
 		private final RuleCall cSupplementTaskParserRuleCall_31 = (RuleCall)cAlternatives.eContents().get(31);
 		private final RuleCall cTaskParserRuleCall_32 = (RuleCall)cAlternatives.eContents().get(32);
+		private final RuleCall cWarnParserRuleCall_33 = (RuleCall)cAlternatives.eContents().get(33);
 		
-		//TaskAttribute:
-		//	Allocate //		| Warn
-		//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Flags | JournalEntry |
-		//	Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes | Priority | ProjectId
-		//	| Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | StartCredit | SupplementTask | Task;
+		//TaskAttribute: //		AccountTask -- deprecated
+		////		 AdoptTask -- experimental
+		//	Allocate // 		| StartCredit -- deprecated
+		//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
+		//	JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
+		//	Priority | ProjectId | Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
+		//	Warn;
 		public ParserRule getRule() { return rule; }
 
-		//Allocate //		| Warn
-		//| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Flags | JournalEntry |
-		//Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes | Priority | ProjectId |
-		//Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | StartCredit | SupplementTask | Task
+		////		AccountTask -- deprecated
+		////		 AdoptTask -- experimental
+		//Allocate // 		| StartCredit -- deprecated
+		//| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
+		//JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
+		//Priority | ProjectId | Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task | Warn
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		////		AccountTask -- deprecated
+		////		 AdoptTask -- experimental
 		//Allocate
 		public RuleCall getAllocateParserRuleCall_0() { return cAllocateParserRuleCall_0; }
 
@@ -624,74 +631,77 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//EndCredit
 		public RuleCall getEndCreditParserRuleCall_9() { return cEndCreditParserRuleCall_9; }
 
+		//Fail
+		public RuleCall getFailParserRuleCall_10() { return cFailParserRuleCall_10; }
+
 		//Flags
-		public RuleCall getFlagsParserRuleCall_10() { return cFlagsParserRuleCall_10; }
+		public RuleCall getFlagsParserRuleCall_11() { return cFlagsParserRuleCall_11; }
 
 		//JournalEntry
-		public RuleCall getJournalEntryParserRuleCall_11() { return cJournalEntryParserRuleCall_11; }
+		public RuleCall getJournalEntryParserRuleCall_12() { return cJournalEntryParserRuleCall_12; }
 
 		//Length
-		public RuleCall getLengthParserRuleCall_12() { return cLengthParserRuleCall_12; }
+		public RuleCall getLengthParserRuleCall_13() { return cLengthParserRuleCall_13; }
 
 		//Limits
-		public RuleCall getLimitsParserRuleCall_13() { return cLimitsParserRuleCall_13; }
+		public RuleCall getLimitsParserRuleCall_14() { return cLimitsParserRuleCall_14; }
 
 		//MaxEnd
-		public RuleCall getMaxEndParserRuleCall_14() { return cMaxEndParserRuleCall_14; }
+		public RuleCall getMaxEndParserRuleCall_15() { return cMaxEndParserRuleCall_15; }
 
 		//MaxStart
-		public RuleCall getMaxStartParserRuleCall_15() { return cMaxStartParserRuleCall_15; }
+		public RuleCall getMaxStartParserRuleCall_16() { return cMaxStartParserRuleCall_16; }
 
 		//Milestone
-		public RuleCall getMilestoneParserRuleCall_16() { return cMilestoneParserRuleCall_16; }
+		public RuleCall getMilestoneParserRuleCall_17() { return cMilestoneParserRuleCall_17; }
 
 		//MinEnd
-		public RuleCall getMinEndParserRuleCall_17() { return cMinEndParserRuleCall_17; }
+		public RuleCall getMinEndParserRuleCall_18() { return cMinEndParserRuleCall_18; }
 
 		//MinStart
-		public RuleCall getMinStartParserRuleCall_18() { return cMinStartParserRuleCall_18; }
+		public RuleCall getMinStartParserRuleCall_19() { return cMinStartParserRuleCall_19; }
 
 		//Note
-		public RuleCall getNoteParserRuleCall_19() { return cNoteParserRuleCall_19; }
+		public RuleCall getNoteParserRuleCall_20() { return cNoteParserRuleCall_20; }
 
 		//Period
-		public RuleCall getPeriodParserRuleCall_20() { return cPeriodParserRuleCall_20; }
+		public RuleCall getPeriodParserRuleCall_21() { return cPeriodParserRuleCall_21; }
 
 		//Precedes
-		public RuleCall getPrecedesParserRuleCall_21() { return cPrecedesParserRuleCall_21; }
+		public RuleCall getPrecedesParserRuleCall_22() { return cPrecedesParserRuleCall_22; }
 
 		//Priority
-		public RuleCall getPriorityParserRuleCall_22() { return cPriorityParserRuleCall_22; }
+		public RuleCall getPriorityParserRuleCall_23() { return cPriorityParserRuleCall_23; }
 
 		//ProjectId
-		public RuleCall getProjectIdParserRuleCall_23() { return cProjectIdParserRuleCall_23; }
+		public RuleCall getProjectIdParserRuleCall_24() { return cProjectIdParserRuleCall_24; }
 
 		//Purge
-		public RuleCall getPurgeParserRuleCall_24() { return cPurgeParserRuleCall_24; }
+		public RuleCall getPurgeParserRuleCall_25() { return cPurgeParserRuleCall_25; }
 
 		//Responsible
-		public RuleCall getResponsibleParserRuleCall_25() { return cResponsibleParserRuleCall_25; }
+		public RuleCall getResponsibleParserRuleCall_26() { return cResponsibleParserRuleCall_26; }
 
 		//Scheduled
-		public RuleCall getScheduledParserRuleCall_26() { return cScheduledParserRuleCall_26; }
+		public RuleCall getScheduledParserRuleCall_27() { return cScheduledParserRuleCall_27; }
 
 		//Scheduling
-		public RuleCall getSchedulingParserRuleCall_27() { return cSchedulingParserRuleCall_27; }
+		public RuleCall getSchedulingParserRuleCall_28() { return cSchedulingParserRuleCall_28; }
 
 		//ShiftsTask
-		public RuleCall getShiftsTaskParserRuleCall_28() { return cShiftsTaskParserRuleCall_28; }
+		public RuleCall getShiftsTaskParserRuleCall_29() { return cShiftsTaskParserRuleCall_29; }
 
 		//Start
-		public RuleCall getStartParserRuleCall_29() { return cStartParserRuleCall_29; }
-
-		//StartCredit
-		public RuleCall getStartCreditParserRuleCall_30() { return cStartCreditParserRuleCall_30; }
+		public RuleCall getStartParserRuleCall_30() { return cStartParserRuleCall_30; }
 
 		//SupplementTask
 		public RuleCall getSupplementTaskParserRuleCall_31() { return cSupplementTaskParserRuleCall_31; }
 
 		//Task
 		public RuleCall getTaskParserRuleCall_32() { return cTaskParserRuleCall_32; }
+
+		//Warn
+		public RuleCall getWarnParserRuleCall_33() { return cWarnParserRuleCall_33; }
 	}
 
 	public class ReportElements extends AbstractParserRuleElementFinder {
@@ -813,38 +823,39 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFormatsParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cHeaderParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		private final RuleCall cHeadlineParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cLeftParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cLoadUnitParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cPeriodParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cPrologParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cResourceReportParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
-		private final RuleCall cTaskReportParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cTextReportParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
-		private final RuleCall cRightParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
-		private final RuleCall cScenariosParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
-		private final RuleCall cSelfContainedParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
-		private final RuleCall cSortResourcesParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
-		private final RuleCall cSortTasksParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
-		private final RuleCall cStartParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
-		private final RuleCall cTaskRootParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
-		private final RuleCall cTimeFormatParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
-		private final RuleCall cTitleParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
+		private final RuleCall cJournalModeParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cLeftParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cLoadUnitParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cPeriodParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cPrologParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cResourceReportParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cTaskReportParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cTextReportParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cRightParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cScenariosParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
+		private final RuleCall cSelfContainedParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
+		private final RuleCall cSortResourcesParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
+		private final RuleCall cSortTasksParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
+		private final RuleCall cStartParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cTaskRootParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cTimeFormatParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
+		private final RuleCall cTitleParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
 		
 		//ReportAttribute:
 		//	Balance //	| HideResource
 		//	//	| HideTask
 		//	//	| RollupTask
-		//	| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | Left | LoadUnit | Period |
-		//	Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained | SortResources | SortTasks |
-		//	Start | TaskRoot | TimeFormat | Title;
+		//	| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
+		//	LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained |
+		//	SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title;
 		public ParserRule getRule() { return rule; }
 
 		//Balance //	| HideResource
 		////	| HideTask
 		////	| RollupTask
-		//| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | Left | LoadUnit | Period |
-		//Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained | SortResources | SortTasks |
-		//Start | TaskRoot | TimeFormat | Title
+		//| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
+		//LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained |
+		//SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Balance
@@ -880,53 +891,56 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Headline
 		public RuleCall getHeadlineParserRuleCall_10() { return cHeadlineParserRuleCall_10; }
 
+		//JournalMode
+		public RuleCall getJournalModeParserRuleCall_11() { return cJournalModeParserRuleCall_11; }
+
 		//Left
-		public RuleCall getLeftParserRuleCall_11() { return cLeftParserRuleCall_11; }
+		public RuleCall getLeftParserRuleCall_12() { return cLeftParserRuleCall_12; }
 
 		//LoadUnit
-		public RuleCall getLoadUnitParserRuleCall_12() { return cLoadUnitParserRuleCall_12; }
+		public RuleCall getLoadUnitParserRuleCall_13() { return cLoadUnitParserRuleCall_13; }
 
 		//Period
-		public RuleCall getPeriodParserRuleCall_13() { return cPeriodParserRuleCall_13; }
+		public RuleCall getPeriodParserRuleCall_14() { return cPeriodParserRuleCall_14; }
 
 		//Prolog
-		public RuleCall getPrologParserRuleCall_14() { return cPrologParserRuleCall_14; }
+		public RuleCall getPrologParserRuleCall_15() { return cPrologParserRuleCall_15; }
 
 		//ResourceReport
-		public RuleCall getResourceReportParserRuleCall_15() { return cResourceReportParserRuleCall_15; }
+		public RuleCall getResourceReportParserRuleCall_16() { return cResourceReportParserRuleCall_16; }
 
 		//TaskReport
-		public RuleCall getTaskReportParserRuleCall_16() { return cTaskReportParserRuleCall_16; }
+		public RuleCall getTaskReportParserRuleCall_17() { return cTaskReportParserRuleCall_17; }
 
 		//TextReport
-		public RuleCall getTextReportParserRuleCall_17() { return cTextReportParserRuleCall_17; }
+		public RuleCall getTextReportParserRuleCall_18() { return cTextReportParserRuleCall_18; }
 
 		//Right
-		public RuleCall getRightParserRuleCall_18() { return cRightParserRuleCall_18; }
+		public RuleCall getRightParserRuleCall_19() { return cRightParserRuleCall_19; }
 
 		//Scenarios
-		public RuleCall getScenariosParserRuleCall_19() { return cScenariosParserRuleCall_19; }
+		public RuleCall getScenariosParserRuleCall_20() { return cScenariosParserRuleCall_20; }
 
 		//SelfContained
-		public RuleCall getSelfContainedParserRuleCall_20() { return cSelfContainedParserRuleCall_20; }
+		public RuleCall getSelfContainedParserRuleCall_21() { return cSelfContainedParserRuleCall_21; }
 
 		//SortResources
-		public RuleCall getSortResourcesParserRuleCall_21() { return cSortResourcesParserRuleCall_21; }
+		public RuleCall getSortResourcesParserRuleCall_22() { return cSortResourcesParserRuleCall_22; }
 
 		//SortTasks
-		public RuleCall getSortTasksParserRuleCall_22() { return cSortTasksParserRuleCall_22; }
+		public RuleCall getSortTasksParserRuleCall_23() { return cSortTasksParserRuleCall_23; }
 
 		//Start
-		public RuleCall getStartParserRuleCall_23() { return cStartParserRuleCall_23; }
+		public RuleCall getStartParserRuleCall_24() { return cStartParserRuleCall_24; }
 
 		//TaskRoot
-		public RuleCall getTaskRootParserRuleCall_24() { return cTaskRootParserRuleCall_24; }
+		public RuleCall getTaskRootParserRuleCall_25() { return cTaskRootParserRuleCall_25; }
 
 		//TimeFormat
-		public RuleCall getTimeFormatParserRuleCall_25() { return cTimeFormatParserRuleCall_25; }
+		public RuleCall getTimeFormatParserRuleCall_26() { return cTimeFormatParserRuleCall_26; }
 
 		//Title
-		public RuleCall getTitleParserRuleCall_26() { return cTitleParserRuleCall_26; }
+		public RuleCall getTitleParserRuleCall_27() { return cTitleParserRuleCall_27; }
 	}
 
 	public class IcalReportElements extends AbstractParserRuleElementFinder {
@@ -1239,36 +1253,34 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AllocateResourceAttribute");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cAlternativeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cLimitsParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cMandatoryParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cPersistentParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cSelectParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cShiftsAllocateParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cMandatoryParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cPersistentParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cSelectParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cShiftsAllocateParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
 		//AllocateResourceAttribute:
-		//	Alternative | Limits | Mandatory | Persistent | Select | ShiftsAllocate;
+		//	Alternative //	| Limits -- deprecated
+		//	| Mandatory | Persistent | Select | ShiftsAllocate;
 		public ParserRule getRule() { return rule; }
 
-		//Alternative | Limits | Mandatory | Persistent | Select | ShiftsAllocate
+		//Alternative //	| Limits -- deprecated
+		//| Mandatory | Persistent | Select | ShiftsAllocate
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Alternative
 		public RuleCall getAlternativeParserRuleCall_0() { return cAlternativeParserRuleCall_0; }
 
-		//Limits
-		public RuleCall getLimitsParserRuleCall_1() { return cLimitsParserRuleCall_1; }
-
 		//Mandatory
-		public RuleCall getMandatoryParserRuleCall_2() { return cMandatoryParserRuleCall_2; }
+		public RuleCall getMandatoryParserRuleCall_1() { return cMandatoryParserRuleCall_1; }
 
 		//Persistent
-		public RuleCall getPersistentParserRuleCall_3() { return cPersistentParserRuleCall_3; }
+		public RuleCall getPersistentParserRuleCall_2() { return cPersistentParserRuleCall_2; }
 
 		//Select
-		public RuleCall getSelectParserRuleCall_4() { return cSelectParserRuleCall_4; }
+		public RuleCall getSelectParserRuleCall_3() { return cSelectParserRuleCall_3; }
 
 		//ShiftsAllocate
-		public RuleCall getShiftsAllocateParserRuleCall_5() { return cShiftsAllocateParserRuleCall_5; }
+		public RuleCall getShiftsAllocateParserRuleCall_4() { return cShiftsAllocateParserRuleCall_4; }
 	}
 
 	public class NavigatorElements extends AbstractParserRuleElementFinder {
@@ -3413,11 +3425,12 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// http://www.taskjuggler.org/tj3/manual/journalentry.html
 		//JournalEntry:
-		//	"journalentry" date=ISODATE headline=STRING ("{" (alert=Alert & author=Author & details=Details & summary=Summary)
+		//	"journalentry" date=ISODATE headline=STRING ("{" (alert=Alert? & author=Author? & details=Details? & summary=Summary?)
 		//	"}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"journalentry" date=ISODATE headline=STRING ("{" (alert=Alert & author=Author & details=Details & summary=Summary) "}")?
+		//"journalentry" date=ISODATE headline=STRING ("{" (alert=Alert? & author=Author? & details=Details? & summary=Summary?)
+		//"}")?
 		public Group getGroup() { return cGroup; }
 
 		//"journalentry"
@@ -3435,34 +3448,34 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getHeadlineSTRINGTerminalRuleCall_2_0() { return cHeadlineSTRINGTerminalRuleCall_2_0; }
 
-		//("{" (alert=Alert & author=Author & details=Details & summary=Summary) "}")?
+		//("{" (alert=Alert? & author=Author? & details=Details? & summary=Summary?) "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
 
-		//alert=Alert & author=Author & details=Details & summary=Summary
+		//alert=Alert? & author=Author? & details=Details? & summary=Summary?
 		public UnorderedGroup getUnorderedGroup_3_1() { return cUnorderedGroup_3_1; }
 
-		//alert=Alert
+		//alert=Alert?
 		public Assignment getAlertAssignment_3_1_0() { return cAlertAssignment_3_1_0; }
 
 		//Alert
 		public RuleCall getAlertAlertParserRuleCall_3_1_0_0() { return cAlertAlertParserRuleCall_3_1_0_0; }
 
-		//author=Author
+		//author=Author?
 		public Assignment getAuthorAssignment_3_1_1() { return cAuthorAssignment_3_1_1; }
 
 		//Author
 		public RuleCall getAuthorAuthorParserRuleCall_3_1_1_0() { return cAuthorAuthorParserRuleCall_3_1_1_0; }
 
-		//details=Details
+		//details=Details?
 		public Assignment getDetailsAssignment_3_1_2() { return cDetailsAssignment_3_1_2; }
 
 		//Details
 		public RuleCall getDetailsDetailsParserRuleCall_3_1_2_0() { return cDetailsDetailsParserRuleCall_3_1_2_0; }
 
-		//summary=Summary
+		//summary=Summary?
 		public Assignment getSummaryAssignment_3_1_3() { return cSummaryAssignment_3_1_3; }
 
 		//Summary
@@ -5408,31 +5421,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getStartISODATETerminalRuleCall_1_0() { return cStartISODATETerminalRuleCall_1_0; }
 	}
 
-	public class StartCreditElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StartCredit");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cStartcreditKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cStartCreditAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cStartCreditXFloatParserRuleCall_1_0 = (RuleCall)cStartCreditAssignment_1.eContents().get(0);
-		
-		//// http://www.taskjuggler.org/tj3/manual/startcredit.html
-		//StartCredit:
-		//	"startcredit" startCredit=XFloat;
-		public ParserRule getRule() { return rule; }
-
-		//"startcredit" startCredit=XFloat
-		public Group getGroup() { return cGroup; }
-
-		//"startcredit"
-		public Keyword getStartcreditKeyword_0() { return cStartcreditKeyword_0; }
-
-		//startCredit=XFloat
-		public Assignment getStartCreditAssignment_1() { return cStartCreditAssignment_1; }
-
-		//XFloat
-		public RuleCall getStartCreditXFloatParserRuleCall_1_0() { return cStartCreditXFloatParserRuleCall_1_0; }
-	}
-
 	public class StatusStatusSheetElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StatusStatusSheet");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -7118,53 +7106,45 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	public class LimitElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Limit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cValueXFloatParserRuleCall_0_0 = (RuleCall)cValueAssignment_0.eContents().get(0);
-		private final Assignment cUnitAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cUnitTimeUnitEnumRuleCall_1_0 = (RuleCall)cUnitAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cAttributesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cAttributesLimitAttributeParserRuleCall_2_1_0 = (RuleCall)cAttributesAssignment_2_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cDurationAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cDurationDurationQuantityParserRuleCall_0_0 = (RuleCall)cDurationAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAttributesAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cAttributesLimitAttributeParserRuleCall_1_1_0 = (RuleCall)cAttributesAssignment_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/limits.task.html
 		//// http://www.taskjuggler.org/tj3/manual/limits.resource.html
 		//// http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 		//// http://www.taskjuggler.org/tj3/manual/limits.html
 		//Limit:
-		//	value=XFloat unit=TimeUnit ("{" attributes+=LimitAttribute* "}")?;
+		//	duration=DurationQuantity ("{" attributes+=LimitAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//value=XFloat unit=TimeUnit ("{" attributes+=LimitAttribute* "}")?
+		//duration=DurationQuantity ("{" attributes+=LimitAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
-		//value=XFloat
-		public Assignment getValueAssignment_0() { return cValueAssignment_0; }
+		//duration=DurationQuantity
+		public Assignment getDurationAssignment_0() { return cDurationAssignment_0; }
 
-		//XFloat
-		public RuleCall getValueXFloatParserRuleCall_0_0() { return cValueXFloatParserRuleCall_0_0; }
-
-		//unit=TimeUnit
-		public Assignment getUnitAssignment_1() { return cUnitAssignment_1; }
-
-		//TimeUnit
-		public RuleCall getUnitTimeUnitEnumRuleCall_1_0() { return cUnitTimeUnitEnumRuleCall_1_0; }
+		//DurationQuantity
+		public RuleCall getDurationDurationQuantityParserRuleCall_0_0() { return cDurationDurationQuantityParserRuleCall_0_0; }
 
 		//("{" attributes+=LimitAttribute* "}")?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_1() { return cGroup_1; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
+		public Keyword getLeftCurlyBracketKeyword_1_0() { return cLeftCurlyBracketKeyword_1_0; }
 
 		//attributes+=LimitAttribute*
-		public Assignment getAttributesAssignment_2_1() { return cAttributesAssignment_2_1; }
+		public Assignment getAttributesAssignment_1_1() { return cAttributesAssignment_1_1; }
 
 		//LimitAttribute
-		public RuleCall getAttributesLimitAttributeParserRuleCall_2_1_0() { return cAttributesLimitAttributeParserRuleCall_2_1_0; }
+		public RuleCall getAttributesLimitAttributeParserRuleCall_1_1_0() { return cAttributesLimitAttributeParserRuleCall_1_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
+		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
 	}
 
 	public class LimitAttributeElements extends AbstractParserRuleElementFinder {
@@ -7770,11 +7750,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// http://www.taskjuggler.org/tj3/manual/journalmode.html
 		//enum JournalModeValue:
-		//	JOURNAL="journal" | JOURNAL_SUB=" journal_sub" | STATUS_DOWN="status_down" | STATUS_UP="status_up" |
+		//	JOURNAL="journal" | JOURNAL_SUB="journal_sub" | STATUS_DOWN="status_down" | STATUS_UP="status_up" |
 		//	ALERTS_DOWN="alerts_down";
 		public EnumRule getRule() { return rule; }
 
-		//JOURNAL="journal" | JOURNAL_SUB=" journal_sub" | STATUS_DOWN="status_down" | STATUS_UP="status_up" |
+		//JOURNAL="journal" | JOURNAL_SUB="journal_sub" | STATUS_DOWN="status_down" | STATUS_UP="status_up" |
 		//ALERTS_DOWN="alerts_down"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
@@ -7784,10 +7764,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//"journal"
 		public Keyword getJOURNALJournalKeyword_0_0() { return cJOURNALJournalKeyword_0_0; }
 
-		//JOURNAL_SUB=" journal_sub"
+		//JOURNAL_SUB="journal_sub"
 		public EnumLiteralDeclaration getJOURNAL_SUBEnumLiteralDeclaration_1() { return cJOURNAL_SUBEnumLiteralDeclaration_1; }
 
-		//" journal_sub"
+		//"journal_sub"
 		public Keyword getJOURNAL_SUBJournal_subKeyword_1_0() { return cJOURNAL_SUBJournal_subKeyword_1_0; }
 
 		//STATUS_DOWN="status_down"
@@ -9068,7 +9048,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private SortResourcesElements pSortResources;
 	private SortTasksElements pSortTasks;
 	private StartElements pStart;
-	private StartCreditElements pStartCredit;
 	private StatusStatusSheetElements pStatusStatusSheet;
 	private StatusStatusSheetAttributeElements pStatusStatusSheetAttribute;
 	private StatusSheetElements pStatusSheet;
@@ -9149,7 +9128,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private TerminalRule tSTRING;
 	private TerminalRule tTIME;
 	private TerminalRule tISODATE;
-	private TerminalRule tRGB;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -9283,7 +9261,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/supplement.task.html
 	//SupplementTask:
-	//	"supplement" "task" task=[Task] ("{" attributes+=TaskAttribute* "}")?;
+	//	"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?;
 	public SupplementTaskElements getSupplementTaskAccess() {
 		return (pSupplementTask != null) ? pSupplementTask : (pSupplementTask = new SupplementTaskElements());
 	}
@@ -9292,11 +9270,13 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getSupplementTaskAccess().getRule();
 	}
 
-	//TaskAttribute:
-	//	Allocate //		| Warn
-	//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Flags | JournalEntry |
-	//	Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes | Priority | ProjectId
-	//	| Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | StartCredit | SupplementTask | Task;
+	//TaskAttribute: //		AccountTask -- deprecated
+	////		 AdoptTask -- experimental
+	//	Allocate // 		| StartCredit -- deprecated
+	//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
+	//	JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
+	//	Priority | ProjectId | Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
+	//	Warn;
 	public TaskAttributeElements getTaskAttributeAccess() {
 		return (pTaskAttribute != null) ? pTaskAttribute : (pTaskAttribute = new TaskAttributeElements());
 	}
@@ -9334,9 +9314,9 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//	Balance //	| HideResource
 	//	//	| HideTask
 	//	//	| RollupTask
-	//	| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | Left | LoadUnit | Period |
-	//	Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained | SortResources | SortTasks |
-	//	Start | TaskRoot | TimeFormat | Title;
+	//	| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
+	//	LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained |
+	//	SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title;
 	public ReportAttributeElements getReportAttributeAccess() {
 		return (pReportAttribute != null) ? pReportAttribute : (pReportAttribute = new ReportAttributeElements());
 	}
@@ -9424,7 +9404,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AllocateResourceAttribute:
-	//	Alternative | Limits | Mandatory | Persistent | Select | ShiftsAllocate;
+	//	Alternative //	| Limits -- deprecated
+	//	| Mandatory | Persistent | Select | ShiftsAllocate;
 	public AllocateResourceAttributeElements getAllocateResourceAttributeAccess() {
 		return (pAllocateResourceAttribute != null) ? pAllocateResourceAttribute : (pAllocateResourceAttribute = new AllocateResourceAttributeElements());
 	}
@@ -10149,7 +10130,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/journalentry.html
 	//JournalEntry:
-	//	"journalentry" date=ISODATE headline=STRING ("{" (alert=Alert & author=Author & details=Details & summary=Summary)
+	//	"journalentry" date=ISODATE headline=STRING ("{" (alert=Alert? & author=Author? & details=Details? & summary=Summary?)
 	//	"}")?;
 	public JournalEntryElements getJournalEntryAccess() {
 		return (pJournalEntry != null) ? pJournalEntry : (pJournalEntry = new JournalEntryElements());
@@ -10912,17 +10893,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getStartAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/startcredit.html
-	//StartCredit:
-	//	"startcredit" startCredit=XFloat;
-	public StartCreditElements getStartCreditAccess() {
-		return (pStartCredit != null) ? pStartCredit : (pStartCredit = new StartCreditElements());
-	}
-	
-	public ParserRule getStartCreditRule() {
-		return getStartCreditAccess().getRule();
-	}
-
 	//// http://www.taskjuggler.org/tj3/manual/status.statussheet.html
 	//StatusStatusSheet:
 	//	"status" level=AlertLevel text=STRING ("{" attributes+=StatusStatusSheetAttribute* "}")?;
@@ -11439,7 +11409,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// http://www.taskjuggler.org/tj3/manual/limits.allocate.html
 	//// http://www.taskjuggler.org/tj3/manual/limits.html
 	//Limit:
-	//	value=XFloat unit=TimeUnit ("{" attributes+=LimitAttribute* "}")?;
+	//	duration=DurationQuantity ("{" attributes+=LimitAttribute* "}")?;
 	public LimitElements getLimitAccess() {
 		return (pLimit != null) ? pLimit : (pLimit = new LimitElements());
 	}
@@ -11593,7 +11563,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/journalmode.html
 	//enum JournalModeValue:
-	//	JOURNAL="journal" | JOURNAL_SUB=" journal_sub" | STATUS_DOWN="status_down" | STATUS_UP="status_up" |
+	//	JOURNAL="journal" | JOURNAL_SUB="journal_sub" | STATUS_DOWN="status_down" | STATUS_UP="status_up" |
 	//	ALERTS_DOWN="alerts_down";
 	public JournalModeValueElements getJournalModeValueAccess() {
 		return (unknownRuleJournalModeValue != null) ? unknownRuleJournalModeValue : (unknownRuleJournalModeValue = new JournalModeValueElements());
@@ -11823,24 +11793,19 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//// YYYY-MM-DD-HH:mm[:ss][xNNNN]  (x being + or -, NNNN being utc timezone offset
-	//terminal ISODATE:
+	//// commented out because conflict with enum TimeUnit example: 3d  TimUnit or RGB?
+	//// for example, color spec of: http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
+	////terminal RGB: ((('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')));
+	/// *
+	//terminal RRGGBB: (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
+	//				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
+	//				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F'));
+	// * / terminal ISODATE:
 	//	"20" "0".."9" "0".."9" "-" ("0" "1".."9" | "1" "0".."2") "-" ("0" "1".."9" | ("1" | "2") "0".."9" | "3" ("0" | "1"))
 	//	("-" (("0"? | "1") "0".."9" | "2" "0".."4") ":" "0".."5" "0".."9" (":" "0".."5" "0".."9")? ("-" ("+" | "-") "0".."5"
 	//	"0".."9" "0".."5" "0".."9")?)?;
 	public TerminalRule getISODATERule() {
 		return (tISODATE != null) ? tISODATE : (tISODATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ISODATE"));
-	} 
-
-	//// commented out because conflict with enum TimeUnit example: 3d  TimUnit or RGB?
-	//// for example, color spec of: http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
-	/// *
-	//terminal RRGGBB: (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
-	//				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
-	//				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F'));
-	// * / terminal RGB:
-	//	("0".."9" | "a".."f" | "A".."F") ("0".."9" | "a".."f" | "A".."F") ("0".."9" | "a".."f" | "A".."F");
-	public TerminalRule getRGBRule() {
-		return (tRGB != null) ? tRGB : (tRGB = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "RGB"));
 	} 
 
 	//terminal INT returns ecore::EInt:
