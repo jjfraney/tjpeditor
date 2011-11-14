@@ -11,6 +11,11 @@ import org.junit.runner.RunWith;
 public class ResourceTest  extends XtextTest {
 	
 	
+	public ResourceTest() {
+		super("ResourceTest");
+	}
+
+
 	@Test 
 	public void testResource() {
 		testParserRule("resource res1 \"Test resource\"");
@@ -36,6 +41,12 @@ public class ResourceTest  extends XtextTest {
 	}
 	private void testParserRule(String textToParse) {
 		testParserRule(textToParse, "Resource");
+	}
+	
+	@Test
+	public void resourceManagerReference() {
+		ignoreFormattingDifferences();
+		testFile("resourceManagerReference.tjp");
 	}
 
 }

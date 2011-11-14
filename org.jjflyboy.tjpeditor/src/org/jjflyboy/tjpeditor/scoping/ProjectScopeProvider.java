@@ -3,15 +3,62 @@
  */
 package org.jjflyboy.tjpeditor.scoping;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import org.eclipse.xtext.util.SimpleAttributeResolver;
+import org.jjflyboy.tjpeditor.project.Global;
+import org.jjflyboy.tjpeditor.project.Managers;
+import org.jjflyboy.tjpeditor.project.Resource;
+
+import com.google.common.base.Function;
+import com.google.inject.Inject;
 
 /**
  * This class contains custom scoping description.
  * 
- * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#scoping
- * on how and when to use it 
- *
+ * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#scoping on
+ * how and when to use it
+ * 
  */
 public class ProjectScopeProvider extends AbstractDeclarativeScopeProvider {
 
+	@Inject
+	IQualifiedNameProvider qualifedNameProvider;
+
+	private static final Function<EObject, String> resolver = SimpleAttributeResolver
+			.newResolver(String.class, "id");
+
+	// TODO: be sure this works over included *.tji files.
+	public IScope scope_Resource(Managers managers, EReference ref) {
+		EObject top = goToTop(managers);
+		TreeIterator<EObject> iterator = top.eAllContents();
+		List<EObject> resources = new ArrayList<EObject>();
+		while (iterator.hasNext()) {
+			EObject eobject = iterator.next();
+			if (eobject instanceof Resource) {
+				resources.add(eobject);
+			}
+		}
+		IScope scope = Scopes.scopeFor(resources,
+				QualifiedName.wrapper(resolver), IScope.NULLSCOPE);
+		return scope;
+	}
+
+	private EObject goToTop(EObject ref) {
+		EObject result = null;
+		result = ref;
+		while (result.eContainer() != null) {
+			result = result.eContainer();
+		}
+		return result;
+	}
 }
