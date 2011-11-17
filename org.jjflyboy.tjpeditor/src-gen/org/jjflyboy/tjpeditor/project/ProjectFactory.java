@@ -1016,13 +1016,31 @@ public interface ProjectFactory extends EFactory
   Prolog createProlog();
 
   /**
-   * Returns a new object of class '<em>Purge</em>'.
+   * Returns a new object of class '<em>Purge Report</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Purge</em>'.
+   * @return a new object of class '<em>Purge Report</em>'.
    * @generated
    */
-  Purge createPurge();
+  PurgeReport createPurgeReport();
+
+  /**
+   * Returns a new object of class '<em>Purge Resource</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Purge Resource</em>'.
+   * @generated
+   */
+  PurgeResource createPurgeResource();
+
+  /**
+   * Returns a new object of class '<em>Purge Task</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Purge Task</em>'.
+   * @generated
+   */
+  PurgeTask createPurgeTask();
 
   /**
    * Returns a new object of class '<em>Rate</em>'.

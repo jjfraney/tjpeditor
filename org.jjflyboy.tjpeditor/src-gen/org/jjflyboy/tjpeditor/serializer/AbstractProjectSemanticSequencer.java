@@ -91,7 +91,9 @@ import org.jjflyboy.tjpeditor.project.Project;
 import org.jjflyboy.tjpeditor.project.ProjectId;
 import org.jjflyboy.tjpeditor.project.ProjectIds;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
-import org.jjflyboy.tjpeditor.project.Purge;
+import org.jjflyboy.tjpeditor.project.PurgeReport;
+import org.jjflyboy.tjpeditor.project.PurgeResource;
+import org.jjflyboy.tjpeditor.project.PurgeTask;
 import org.jjflyboy.tjpeditor.project.Rate;
 import org.jjflyboy.tjpeditor.project.RealFormat;
 import org.jjflyboy.tjpeditor.project.Remaining;
@@ -745,11 +747,24 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
-			case ProjectPackage.PURGE:
-				if(context == grammarAccess.getPurgeRule() ||
-				   context == grammarAccess.getResourceAttributeRule() ||
+			case ProjectPackage.PURGE_REPORT:
+				if(context == grammarAccess.getPurgeReportRule() ||
+				   context == grammarAccess.getReportAttributeRule()) {
+					sequence_PurgeReport(context, (PurgeReport) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.PURGE_RESOURCE:
+				if(context == grammarAccess.getPurgeResourceRule() ||
+				   context == grammarAccess.getResourceAttributeRule()) {
+					sequence_PurgeResource(context, (PurgeResource) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.PURGE_TASK:
+				if(context == grammarAccess.getPurgeTaskRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
-					sequence_Purge(context, (Purge) semanticObject); 
+					sequence_PurgeTask(context, (PurgeTask) semanticObject); 
 					return; 
 				}
 				else break;
@@ -2824,19 +2839,57 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     listAttribute=ID
+	 *     listAttribute=PurgeReportAttribute
 	 *
 	 * Features:
 	 *    listAttribute[1, 1]
 	 */
-	protected void sequence_Purge(EObject context, Purge semanticObject) {
+	protected void sequence_PurgeReport(EObject context, PurgeReport semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getPurge_ListAttribute()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getPurge_ListAttribute()));
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getPurgeReport_ListAttribute()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getPurgeReport_ListAttribute()));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getPurgeAccess().getListAttributeIDTerminalRuleCall_1_0(), semanticObject.getListAttribute());
+		feeder.accept(grammarAccess.getPurgeReportAccess().getListAttributePurgeReportAttributeEnumRuleCall_1_0(), semanticObject.getListAttribute());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     listAttribute=PurgeResourceAttribute
+	 *
+	 * Features:
+	 *    listAttribute[1, 1]
+	 */
+	protected void sequence_PurgeResource(EObject context, PurgeResource semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getPurgeResource_ListAttribute()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getPurgeResource_ListAttribute()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPurgeResourceAccess().getListAttributePurgeResourceAttributeEnumRuleCall_1_0(), semanticObject.getListAttribute());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     listAttribute=PurgeTaskAttribute
+	 *
+	 * Features:
+	 *    listAttribute[1, 1]
+	 */
+	protected void sequence_PurgeTask(EObject context, PurgeTask semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getPurgeTask_ListAttribute()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getPurgeTask_ListAttribute()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPurgeTaskAccess().getListAttributePurgeTaskAttributeEnumRuleCall_1_0(), semanticObject.getListAttribute());
 		feeder.finish();
 	}
 	

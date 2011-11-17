@@ -574,7 +574,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPrecedesParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
 		private final RuleCall cPriorityParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
 		private final RuleCall cProjectIdParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
-		private final RuleCall cPurgeParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cPurgeTaskParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
 		private final RuleCall cResponsibleParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
 		private final RuleCall cScheduledParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
 		private final RuleCall cSchedulingParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
@@ -589,7 +589,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//	Allocate // 		| StartCredit -- deprecated
 		//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
 		//	JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
-		//	Priority | ProjectId | Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
+		//	Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
 		//	Warn;
 		public ParserRule getRule() { return rule; }
 
@@ -598,7 +598,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Allocate // 		| StartCredit -- deprecated
 		//| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
 		//JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
-		//Priority | ProjectId | Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task | Warn
+		//Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
+		//Warn
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		////		AccountTask -- deprecated
@@ -678,8 +679,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//ProjectId
 		public RuleCall getProjectIdParserRuleCall_24() { return cProjectIdParserRuleCall_24; }
 
-		//Purge
-		public RuleCall getPurgeParserRuleCall_25() { return cPurgeParserRuleCall_25; }
+		//PurgeTask
+		public RuleCall getPurgeTaskParserRuleCall_25() { return cPurgeTaskParserRuleCall_25; }
 
 		//Responsible
 		public RuleCall getResponsibleParserRuleCall_26() { return cResponsibleParserRuleCall_26; }
@@ -833,31 +834,32 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cResourceReportParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
 		private final RuleCall cTaskReportParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
 		private final RuleCall cTextReportParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
-		private final RuleCall cRightParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
-		private final RuleCall cScenariosParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
-		private final RuleCall cSelfContainedParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
-		private final RuleCall cSortResourcesParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
-		private final RuleCall cSortTasksParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
-		private final RuleCall cStartParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
-		private final RuleCall cTaskRootParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
-		private final RuleCall cTimeFormatParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
-		private final RuleCall cTitleParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
+		private final RuleCall cPurgeReportParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cRightParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
+		private final RuleCall cScenariosParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
+		private final RuleCall cSelfContainedParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
+		private final RuleCall cSortResourcesParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
+		private final RuleCall cSortTasksParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cStartParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cTaskRootParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
+		private final RuleCall cTimeFormatParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
+		private final RuleCall cTitleParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
 		
 		//ReportAttribute:
 		//	Balance //	| HideResource
 		//	//	| HideTask
 		//	//	| RollupTask
 		//	| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
-		//	LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained |
-		//	SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title;
+		//	LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | PurgeReport | Right | Scenarios |
+		//	SelfContained | SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title;
 		public ParserRule getRule() { return rule; }
 
 		//Balance //	| HideResource
 		////	| HideTask
 		////	| RollupTask
 		//| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
-		//LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained |
-		//SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title
+		//LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | PurgeReport | Right | Scenarios | SelfContained
+		//| SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Balance
@@ -917,32 +919,35 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//TextReport
 		public RuleCall getTextReportParserRuleCall_18() { return cTextReportParserRuleCall_18; }
 
+		//PurgeReport
+		public RuleCall getPurgeReportParserRuleCall_19() { return cPurgeReportParserRuleCall_19; }
+
 		//Right
-		public RuleCall getRightParserRuleCall_19() { return cRightParserRuleCall_19; }
+		public RuleCall getRightParserRuleCall_20() { return cRightParserRuleCall_20; }
 
 		//Scenarios
-		public RuleCall getScenariosParserRuleCall_20() { return cScenariosParserRuleCall_20; }
+		public RuleCall getScenariosParserRuleCall_21() { return cScenariosParserRuleCall_21; }
 
 		//SelfContained
-		public RuleCall getSelfContainedParserRuleCall_21() { return cSelfContainedParserRuleCall_21; }
+		public RuleCall getSelfContainedParserRuleCall_22() { return cSelfContainedParserRuleCall_22; }
 
 		//SortResources
-		public RuleCall getSortResourcesParserRuleCall_22() { return cSortResourcesParserRuleCall_22; }
+		public RuleCall getSortResourcesParserRuleCall_23() { return cSortResourcesParserRuleCall_23; }
 
 		//SortTasks
-		public RuleCall getSortTasksParserRuleCall_23() { return cSortTasksParserRuleCall_23; }
+		public RuleCall getSortTasksParserRuleCall_24() { return cSortTasksParserRuleCall_24; }
 
 		//Start
-		public RuleCall getStartParserRuleCall_24() { return cStartParserRuleCall_24; }
+		public RuleCall getStartParserRuleCall_25() { return cStartParserRuleCall_25; }
 
 		//TaskRoot
-		public RuleCall getTaskRootParserRuleCall_25() { return cTaskRootParserRuleCall_25; }
+		public RuleCall getTaskRootParserRuleCall_26() { return cTaskRootParserRuleCall_26; }
 
 		//TimeFormat
-		public RuleCall getTimeFormatParserRuleCall_26() { return cTimeFormatParserRuleCall_26; }
+		public RuleCall getTimeFormatParserRuleCall_27() { return cTimeFormatParserRuleCall_27; }
 
 		//Title
-		public RuleCall getTitleParserRuleCall_27() { return cTitleParserRuleCall_27; }
+		public RuleCall getTitleParserRuleCall_28() { return cTitleParserRuleCall_28; }
 	}
 
 	public class IcalReportElements extends AbstractParserRuleElementFinder {
@@ -1191,7 +1196,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cJournalEntryParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cLimitsParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cManagersParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cPurgeParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cPurgeResourceParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cRateParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		private final RuleCall cResourceParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		private final RuleCall cShiftsResourceParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
@@ -1202,13 +1207,13 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ResourceAttribute:
 		//	BookingResource // 		| Shift // deprecated
-		//	| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | Purge | Rate | Resource | ShiftsResource |
-		//	SupplementResource | VacationResource | Warn | WorkingHours;
+		//	| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource | Rate | Resource |
+		//	ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours;
 		public ParserRule getRule() { return rule; }
 
 		//BookingResource // 		| Shift // deprecated
-		//| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | Purge | Rate | Resource | ShiftsResource |
-		//SupplementResource | VacationResource | Warn | WorkingHours
+		//| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource | Rate | Resource |
+		//ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//BookingResource
@@ -1235,8 +1240,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Managers
 		public RuleCall getManagersParserRuleCall_7() { return cManagersParserRuleCall_7; }
 
-		//Purge
-		public RuleCall getPurgeParserRuleCall_8() { return cPurgeParserRuleCall_8; }
+		//PurgeResource
+		public RuleCall getPurgeResourceParserRuleCall_8() { return cPurgeResourceParserRuleCall_8; }
 
 		//Rate
 		public RuleCall getRateParserRuleCall_9() { return cRateParserRuleCall_9; }
@@ -4399,30 +4404,77 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRichTextParserRuleCall_1() { return cRichTextParserRuleCall_1; }
 	}
 
-	public class PurgeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Purge");
+	public class PurgeReportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PurgeReport");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPurgeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cListAttributeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cListAttributeIDTerminalRuleCall_1_0 = (RuleCall)cListAttributeAssignment_1.eContents().get(0);
+		private final RuleCall cListAttributePurgeReportAttributeEnumRuleCall_1_0 = (RuleCall)cListAttributeAssignment_1.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/purge.html
-		//// TODO: there is a closed set of listAttributes, so, this can be validated
-		//Purge:
-		//	"purge" listAttribute=ID;
+		//PurgeReport:
+		//	"purge" listAttribute=PurgeReportAttribute;
 		public ParserRule getRule() { return rule; }
 
-		//"purge" listAttribute=ID
+		//"purge" listAttribute=PurgeReportAttribute
 		public Group getGroup() { return cGroup; }
 
 		//"purge"
 		public Keyword getPurgeKeyword_0() { return cPurgeKeyword_0; }
 
-		//listAttribute=ID
+		//listAttribute=PurgeReportAttribute
 		public Assignment getListAttributeAssignment_1() { return cListAttributeAssignment_1; }
 
-		//ID
-		public RuleCall getListAttributeIDTerminalRuleCall_1_0() { return cListAttributeIDTerminalRuleCall_1_0; }
+		//PurgeReportAttribute
+		public RuleCall getListAttributePurgeReportAttributeEnumRuleCall_1_0() { return cListAttributePurgeReportAttributeEnumRuleCall_1_0; }
+	}
+
+	public class PurgeResourceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PurgeResource");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPurgeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cListAttributeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cListAttributePurgeResourceAttributeEnumRuleCall_1_0 = (RuleCall)cListAttributeAssignment_1.eContents().get(0);
+		
+		//PurgeResource:
+		//	"purge" listAttribute=PurgeResourceAttribute;
+		public ParserRule getRule() { return rule; }
+
+		//"purge" listAttribute=PurgeResourceAttribute
+		public Group getGroup() { return cGroup; }
+
+		//"purge"
+		public Keyword getPurgeKeyword_0() { return cPurgeKeyword_0; }
+
+		//listAttribute=PurgeResourceAttribute
+		public Assignment getListAttributeAssignment_1() { return cListAttributeAssignment_1; }
+
+		//PurgeResourceAttribute
+		public RuleCall getListAttributePurgeResourceAttributeEnumRuleCall_1_0() { return cListAttributePurgeResourceAttributeEnumRuleCall_1_0; }
+	}
+
+	public class PurgeTaskElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PurgeTask");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPurgeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cListAttributeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cListAttributePurgeTaskAttributeEnumRuleCall_1_0 = (RuleCall)cListAttributeAssignment_1.eContents().get(0);
+		
+		//PurgeTask:
+		//	"purge" listAttribute=PurgeTaskAttribute;
+		public ParserRule getRule() { return rule; }
+
+		//"purge" listAttribute=PurgeTaskAttribute
+		public Group getGroup() { return cGroup; }
+
+		//"purge"
+		public Keyword getPurgeKeyword_0() { return cPurgeKeyword_0; }
+
+		//listAttribute=PurgeTaskAttribute
+		public Assignment getListAttributeAssignment_1() { return cListAttributeAssignment_1; }
+
+		//PurgeTaskAttribute
+		public RuleCall getListAttributePurgeTaskAttributeEnumRuleCall_1_0() { return cListAttributePurgeTaskAttributeEnumRuleCall_1_0; }
 	}
 
 	public class RateElements extends AbstractParserRuleElementFinder {
@@ -7799,6 +7851,240 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
+	public class PurgeReportAttributeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "PurgeReportAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cCOLUMNSEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cCOLUMNSColumnsKeyword_0_0 = (Keyword)cCOLUMNSEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cDEFINITIONSEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cDEFINITIONSDefinitionsKeyword_1_0 = (Keyword)cDEFINITIONSEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cFLAGSEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cFLAGSFlagsKeyword_2_0 = (Keyword)cFLAGSEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cFORMATSEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cFORMATSFormatsKeyword_3_0 = (Keyword)cFORMATSEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cJOURNALATTRIBUTESEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cJOURNALATTRIBUTESJournalAttributesKeyword_4_0 = (Keyword)cJOURNALATTRIBUTESEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cSCENARIOSEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cSCENARIOSScenariosKeyword_5_0 = (Keyword)cSCENARIOSEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cSORTACCOUNTSEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cSORTACCOUNTSSortaccountsKeyword_6_0 = (Keyword)cSORTACCOUNTSEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cSORTJOURNALENTRIESEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cSORTJOURNALENTRIESSortjournalentriesKeyword_7_0 = (Keyword)cSORTJOURNALENTRIESEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cSORTRESOURCESEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cSORTRESOURCESSortresourcesKeyword_8_0 = (Keyword)cSORTRESOURCESEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cSORTTASKSEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cSORTTASKSSorttasksKeyword_9_0 = (Keyword)cSORTTASKSEnumLiteralDeclaration_9.eContents().get(0);
+		
+		//enum PurgeReportAttribute:
+		//	COLUMNS="columns" | DEFINITIONS="definitions" | FLAGS="flags" | FORMATS="formats" |
+		//	JOURNALATTRIBUTES="journalAttributes" | SCENARIOS="scenarios" | SORTACCOUNTS="sortaccounts" |
+		//	SORTJOURNALENTRIES="sortjournalentries" | SORTRESOURCES="sortresources" | SORTTASKS="sorttasks";
+		public EnumRule getRule() { return rule; }
+
+		//COLUMNS="columns" | DEFINITIONS="definitions" | FLAGS="flags" | FORMATS="formats" |
+		//JOURNALATTRIBUTES="journalAttributes" | SCENARIOS="scenarios" | SORTACCOUNTS="sortaccounts" |
+		//SORTJOURNALENTRIES="sortjournalentries" | SORTRESOURCES="sortresources" | SORTTASKS="sorttasks"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//COLUMNS="columns"
+		public EnumLiteralDeclaration getCOLUMNSEnumLiteralDeclaration_0() { return cCOLUMNSEnumLiteralDeclaration_0; }
+
+		//"columns"
+		public Keyword getCOLUMNSColumnsKeyword_0_0() { return cCOLUMNSColumnsKeyword_0_0; }
+
+		//DEFINITIONS="definitions"
+		public EnumLiteralDeclaration getDEFINITIONSEnumLiteralDeclaration_1() { return cDEFINITIONSEnumLiteralDeclaration_1; }
+
+		//"definitions"
+		public Keyword getDEFINITIONSDefinitionsKeyword_1_0() { return cDEFINITIONSDefinitionsKeyword_1_0; }
+
+		//FLAGS="flags"
+		public EnumLiteralDeclaration getFLAGSEnumLiteralDeclaration_2() { return cFLAGSEnumLiteralDeclaration_2; }
+
+		//"flags"
+		public Keyword getFLAGSFlagsKeyword_2_0() { return cFLAGSFlagsKeyword_2_0; }
+
+		//FORMATS="formats"
+		public EnumLiteralDeclaration getFORMATSEnumLiteralDeclaration_3() { return cFORMATSEnumLiteralDeclaration_3; }
+
+		//"formats"
+		public Keyword getFORMATSFormatsKeyword_3_0() { return cFORMATSFormatsKeyword_3_0; }
+
+		//JOURNALATTRIBUTES="journalAttributes"
+		public EnumLiteralDeclaration getJOURNALATTRIBUTESEnumLiteralDeclaration_4() { return cJOURNALATTRIBUTESEnumLiteralDeclaration_4; }
+
+		//"journalAttributes"
+		public Keyword getJOURNALATTRIBUTESJournalAttributesKeyword_4_0() { return cJOURNALATTRIBUTESJournalAttributesKeyword_4_0; }
+
+		//SCENARIOS="scenarios"
+		public EnumLiteralDeclaration getSCENARIOSEnumLiteralDeclaration_5() { return cSCENARIOSEnumLiteralDeclaration_5; }
+
+		//"scenarios"
+		public Keyword getSCENARIOSScenariosKeyword_5_0() { return cSCENARIOSScenariosKeyword_5_0; }
+
+		//SORTACCOUNTS="sortaccounts"
+		public EnumLiteralDeclaration getSORTACCOUNTSEnumLiteralDeclaration_6() { return cSORTACCOUNTSEnumLiteralDeclaration_6; }
+
+		//"sortaccounts"
+		public Keyword getSORTACCOUNTSSortaccountsKeyword_6_0() { return cSORTACCOUNTSSortaccountsKeyword_6_0; }
+
+		//SORTJOURNALENTRIES="sortjournalentries"
+		public EnumLiteralDeclaration getSORTJOURNALENTRIESEnumLiteralDeclaration_7() { return cSORTJOURNALENTRIESEnumLiteralDeclaration_7; }
+
+		//"sortjournalentries"
+		public Keyword getSORTJOURNALENTRIESSortjournalentriesKeyword_7_0() { return cSORTJOURNALENTRIESSortjournalentriesKeyword_7_0; }
+
+		//SORTRESOURCES="sortresources"
+		public EnumLiteralDeclaration getSORTRESOURCESEnumLiteralDeclaration_8() { return cSORTRESOURCESEnumLiteralDeclaration_8; }
+
+		//"sortresources"
+		public Keyword getSORTRESOURCESSortresourcesKeyword_8_0() { return cSORTRESOURCESSortresourcesKeyword_8_0; }
+
+		//SORTTASKS="sorttasks"
+		public EnumLiteralDeclaration getSORTTASKSEnumLiteralDeclaration_9() { return cSORTTASKSEnumLiteralDeclaration_9; }
+
+		//"sorttasks"
+		public Keyword getSORTTASKSSorttasksKeyword_9_0() { return cSORTTASKSSorttasksKeyword_9_0; }
+	}
+
+	public class PurgeResourceAttributeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "PurgeResourceAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cFAILEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cFAILFailKeyword_0_0 = (Keyword)cFAILEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cFLAGSEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cFLAGSFlagsKeyword_1_0 = (Keyword)cFLAGSEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cMANAGERSEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cMANAGERSManagersKeyword_2_0 = (Keyword)cMANAGERSEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cREPORTSEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cREPORTSReportsKeyword_3_0 = (Keyword)cREPORTSEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cVACATIONSEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cVACATIONSVacationsKeyword_4_0 = (Keyword)cVACATIONSEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cWARNEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cWARNWarnKeyword_5_0 = (Keyword)cWARNEnumLiteralDeclaration_5.eContents().get(0);
+		
+		//enum PurgeResourceAttribute:
+		//	FAIL="fail" | FLAGS="flags" | MANAGERS="managers" | REPORTS="reports" | VACATIONS="vacations" | WARN="warn";
+		public EnumRule getRule() { return rule; }
+
+		//FAIL="fail" | FLAGS="flags" | MANAGERS="managers" | REPORTS="reports" | VACATIONS="vacations" | WARN="warn"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//FAIL="fail"
+		public EnumLiteralDeclaration getFAILEnumLiteralDeclaration_0() { return cFAILEnumLiteralDeclaration_0; }
+
+		//"fail"
+		public Keyword getFAILFailKeyword_0_0() { return cFAILFailKeyword_0_0; }
+
+		//FLAGS="flags"
+		public EnumLiteralDeclaration getFLAGSEnumLiteralDeclaration_1() { return cFLAGSEnumLiteralDeclaration_1; }
+
+		//"flags"
+		public Keyword getFLAGSFlagsKeyword_1_0() { return cFLAGSFlagsKeyword_1_0; }
+
+		//MANAGERS="managers"
+		public EnumLiteralDeclaration getMANAGERSEnumLiteralDeclaration_2() { return cMANAGERSEnumLiteralDeclaration_2; }
+
+		//"managers"
+		public Keyword getMANAGERSManagersKeyword_2_0() { return cMANAGERSManagersKeyword_2_0; }
+
+		//REPORTS="reports"
+		public EnumLiteralDeclaration getREPORTSEnumLiteralDeclaration_3() { return cREPORTSEnumLiteralDeclaration_3; }
+
+		//"reports"
+		public Keyword getREPORTSReportsKeyword_3_0() { return cREPORTSReportsKeyword_3_0; }
+
+		//VACATIONS="vacations"
+		public EnumLiteralDeclaration getVACATIONSEnumLiteralDeclaration_4() { return cVACATIONSEnumLiteralDeclaration_4; }
+
+		//"vacations"
+		public Keyword getVACATIONSVacationsKeyword_4_0() { return cVACATIONSVacationsKeyword_4_0; }
+
+		//WARN="warn"
+		public EnumLiteralDeclaration getWARNEnumLiteralDeclaration_5() { return cWARNEnumLiteralDeclaration_5; }
+
+		//"warn"
+		public Keyword getWARNWarnKeyword_5_0() { return cWARNWarnKeyword_5_0; }
+	}
+
+	public class PurgeTaskAttributeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "PurgeTaskAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cBOOKINGEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cBOOKINGBookingKeyword_0_0 = (Keyword)cBOOKINGEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cCHARGEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cCHARGEChargeKeyword_1_0 = (Keyword)cCHARGEEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cCHARGESETEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cCHARGESETChargesetKeyword_2_0 = (Keyword)cCHARGESETEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cDEPENDSEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cDEPENDSDependsKeyword_3_0 = (Keyword)cDEPENDSEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cFAILEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cFAILFailKeyword_4_0 = (Keyword)cFAILEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cFLAGSEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cFLAGSFlagsKeyword_5_0 = (Keyword)cFLAGSEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cPRECEDESEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cPRECEDESPrecedesKeyword_6_0 = (Keyword)cPRECEDESEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cWARNEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cWARNWarnKeyword_7_0 = (Keyword)cWARNEnumLiteralDeclaration_7.eContents().get(0);
+		
+		//enum PurgeTaskAttribute:
+		//	BOOKING="booking" | CHARGE="charge" | CHARGESET="chargeset" | DEPENDS="depends" | FAIL="fail" | FLAGS="flags" |
+		//	PRECEDES="precedes" | WARN="warn";
+		public EnumRule getRule() { return rule; }
+
+		//BOOKING="booking" | CHARGE="charge" | CHARGESET="chargeset" | DEPENDS="depends" | FAIL="fail" | FLAGS="flags" |
+		//PRECEDES="precedes" | WARN="warn"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//BOOKING="booking"
+		public EnumLiteralDeclaration getBOOKINGEnumLiteralDeclaration_0() { return cBOOKINGEnumLiteralDeclaration_0; }
+
+		//"booking"
+		public Keyword getBOOKINGBookingKeyword_0_0() { return cBOOKINGBookingKeyword_0_0; }
+
+		//CHARGE="charge"
+		public EnumLiteralDeclaration getCHARGEEnumLiteralDeclaration_1() { return cCHARGEEnumLiteralDeclaration_1; }
+
+		//"charge"
+		public Keyword getCHARGEChargeKeyword_1_0() { return cCHARGEChargeKeyword_1_0; }
+
+		//CHARGESET="chargeset"
+		public EnumLiteralDeclaration getCHARGESETEnumLiteralDeclaration_2() { return cCHARGESETEnumLiteralDeclaration_2; }
+
+		//"chargeset"
+		public Keyword getCHARGESETChargesetKeyword_2_0() { return cCHARGESETChargesetKeyword_2_0; }
+
+		//DEPENDS="depends"
+		public EnumLiteralDeclaration getDEPENDSEnumLiteralDeclaration_3() { return cDEPENDSEnumLiteralDeclaration_3; }
+
+		//"depends"
+		public Keyword getDEPENDSDependsKeyword_3_0() { return cDEPENDSDependsKeyword_3_0; }
+
+		//FAIL="fail"
+		public EnumLiteralDeclaration getFAILEnumLiteralDeclaration_4() { return cFAILEnumLiteralDeclaration_4; }
+
+		//"fail"
+		public Keyword getFAILFailKeyword_4_0() { return cFAILFailKeyword_4_0; }
+
+		//FLAGS="flags"
+		public EnumLiteralDeclaration getFLAGSEnumLiteralDeclaration_5() { return cFLAGSEnumLiteralDeclaration_5; }
+
+		//"flags"
+		public Keyword getFLAGSFlagsKeyword_5_0() { return cFLAGSFlagsKeyword_5_0; }
+
+		//PRECEDES="precedes"
+		public EnumLiteralDeclaration getPRECEDESEnumLiteralDeclaration_6() { return cPRECEDESEnumLiteralDeclaration_6; }
+
+		//"precedes"
+		public Keyword getPRECEDESPrecedesKeyword_6_0() { return cPRECEDESPrecedesKeyword_6_0; }
+
+		//WARN="warn"
+		public EnumLiteralDeclaration getWARNEnumLiteralDeclaration_7() { return cWARNEnumLiteralDeclaration_7; }
+
+		//"warn"
+		public Keyword getWARNWarnKeyword_7_0() { return cWARNWarnKeyword_7_0; }
+	}
+
 	public class ChargeAppliesElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ChargeApplies");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -9169,7 +9455,12 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private ProjectIdElements pProjectId;
 	private ProjectIdsElements pProjectIds;
 	private PrologElements pProlog;
-	private PurgeElements pPurge;
+	private PurgeReportElements pPurgeReport;
+	private PurgeReportAttributeElements unknownRulePurgeReportAttribute;
+	private PurgeResourceElements pPurgeResource;
+	private PurgeResourceAttributeElements unknownRulePurgeResourceAttribute;
+	private PurgeTaskElements pPurgeTask;
+	private PurgeTaskAttributeElements unknownRulePurgeTaskAttribute;
 	private RateElements pRate;
 	private ReferenceExtendElements pReferenceExtend;
 	private RemainingElements pRemaining;
@@ -9429,7 +9720,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//	Allocate // 		| StartCredit -- deprecated
 	//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
 	//	JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
-	//	Priority | ProjectId | Purge | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
+	//	Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
 	//	Warn;
 	public TaskAttributeElements getTaskAttributeAccess() {
 		return (pTaskAttribute != null) ? pTaskAttribute : (pTaskAttribute = new TaskAttributeElements());
@@ -9469,8 +9760,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//	//	| HideTask
 	//	//	| RollupTask
 	//	| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
-	//	LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | Right | Scenarios | SelfContained |
-	//	SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title;
+	//	LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | PurgeReport | Right | Scenarios |
+	//	SelfContained | SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title;
 	public ReportAttributeElements getReportAttributeAccess() {
 		return (pReportAttribute != null) ? pReportAttribute : (pReportAttribute = new ReportAttributeElements());
 	}
@@ -9537,8 +9828,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ResourceAttribute:
 	//	BookingResource // 		| Shift // deprecated
-	//	| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | Purge | Rate | Resource | ShiftsResource |
-	//	SupplementResource | VacationResource | Warn | WorkingHours;
+	//	| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource | Rate | Resource |
+	//	ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours;
 	public ResourceAttributeElements getResourceAttributeAccess() {
 		return (pResourceAttribute != null) ? pResourceAttribute : (pResourceAttribute = new ResourceAttributeElements());
 	}
@@ -10670,15 +10961,67 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/purge.html
-	//// TODO: there is a closed set of listAttributes, so, this can be validated
-	//Purge:
-	//	"purge" listAttribute=ID;
-	public PurgeElements getPurgeAccess() {
-		return (pPurge != null) ? pPurge : (pPurge = new PurgeElements());
+	//PurgeReport:
+	//	"purge" listAttribute=PurgeReportAttribute;
+	public PurgeReportElements getPurgeReportAccess() {
+		return (pPurgeReport != null) ? pPurgeReport : (pPurgeReport = new PurgeReportElements());
 	}
 	
-	public ParserRule getPurgeRule() {
-		return getPurgeAccess().getRule();
+	public ParserRule getPurgeReportRule() {
+		return getPurgeReportAccess().getRule();
+	}
+
+	//enum PurgeReportAttribute:
+	//	COLUMNS="columns" | DEFINITIONS="definitions" | FLAGS="flags" | FORMATS="formats" |
+	//	JOURNALATTRIBUTES="journalAttributes" | SCENARIOS="scenarios" | SORTACCOUNTS="sortaccounts" |
+	//	SORTJOURNALENTRIES="sortjournalentries" | SORTRESOURCES="sortresources" | SORTTASKS="sorttasks";
+	public PurgeReportAttributeElements getPurgeReportAttributeAccess() {
+		return (unknownRulePurgeReportAttribute != null) ? unknownRulePurgeReportAttribute : (unknownRulePurgeReportAttribute = new PurgeReportAttributeElements());
+	}
+	
+	public EnumRule getPurgeReportAttributeRule() {
+		return getPurgeReportAttributeAccess().getRule();
+	}
+
+	//PurgeResource:
+	//	"purge" listAttribute=PurgeResourceAttribute;
+	public PurgeResourceElements getPurgeResourceAccess() {
+		return (pPurgeResource != null) ? pPurgeResource : (pPurgeResource = new PurgeResourceElements());
+	}
+	
+	public ParserRule getPurgeResourceRule() {
+		return getPurgeResourceAccess().getRule();
+	}
+
+	//enum PurgeResourceAttribute:
+	//	FAIL="fail" | FLAGS="flags" | MANAGERS="managers" | REPORTS="reports" | VACATIONS="vacations" | WARN="warn";
+	public PurgeResourceAttributeElements getPurgeResourceAttributeAccess() {
+		return (unknownRulePurgeResourceAttribute != null) ? unknownRulePurgeResourceAttribute : (unknownRulePurgeResourceAttribute = new PurgeResourceAttributeElements());
+	}
+	
+	public EnumRule getPurgeResourceAttributeRule() {
+		return getPurgeResourceAttributeAccess().getRule();
+	}
+
+	//PurgeTask:
+	//	"purge" listAttribute=PurgeTaskAttribute;
+	public PurgeTaskElements getPurgeTaskAccess() {
+		return (pPurgeTask != null) ? pPurgeTask : (pPurgeTask = new PurgeTaskElements());
+	}
+	
+	public ParserRule getPurgeTaskRule() {
+		return getPurgeTaskAccess().getRule();
+	}
+
+	//enum PurgeTaskAttribute:
+	//	BOOKING="booking" | CHARGE="charge" | CHARGESET="chargeset" | DEPENDS="depends" | FAIL="fail" | FLAGS="flags" |
+	//	PRECEDES="precedes" | WARN="warn";
+	public PurgeTaskAttributeElements getPurgeTaskAttributeAccess() {
+		return (unknownRulePurgeTaskAttribute != null) ? unknownRulePurgeTaskAttribute : (unknownRulePurgeTaskAttribute = new PurgeTaskAttributeElements());
+	}
+	
+	public EnumRule getPurgeTaskAttributeRule() {
+		return getPurgeTaskAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/rate.html

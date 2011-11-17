@@ -966,12 +966,27 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.PURGE:
+      case ProjectPackage.PURGE_REPORT:
       {
-        Purge purge = (Purge)theEObject;
-        T result = casePurge(purge);
-        if (result == null) result = caseTaskAttribute(purge);
-        if (result == null) result = caseResourceAttribute(purge);
+        PurgeReport purgeReport = (PurgeReport)theEObject;
+        T result = casePurgeReport(purgeReport);
+        if (result == null) result = caseReportAttribute(purgeReport);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.PURGE_RESOURCE:
+      {
+        PurgeResource purgeResource = (PurgeResource)theEObject;
+        T result = casePurgeResource(purgeResource);
+        if (result == null) result = caseResourceAttribute(purgeResource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.PURGE_TASK:
+      {
+        PurgeTask purgeTask = (PurgeTask)theEObject;
+        T result = casePurgeTask(purgeTask);
+        if (result == null) result = caseTaskAttribute(purgeTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -3435,17 +3450,49 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Purge</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Purge Report</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Purge</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Purge Report</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePurge(Purge object)
+  public T casePurgeReport(PurgeReport object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Purge Resource</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Purge Resource</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePurgeResource(PurgeResource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Purge Task</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Purge Task</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePurgeTask(PurgeTask object)
   {
     return null;
   }

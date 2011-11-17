@@ -628,9 +628,19 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createPrologAdapter();
       }
       @Override
-      public Adapter casePurge(Purge object)
+      public Adapter casePurgeReport(PurgeReport object)
       {
-        return createPurgeAdapter();
+        return createPurgeReportAdapter();
+      }
+      @Override
+      public Adapter casePurgeResource(PurgeResource object)
+      {
+        return createPurgeResourceAdapter();
+      }
+      @Override
+      public Adapter casePurgeTask(PurgeTask object)
+      {
+        return createPurgeTaskAdapter();
       }
       @Override
       public Adapter caseRate(Rate object)
@@ -2720,16 +2730,46 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Purge <em>Purge</em>}'.
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.PurgeReport <em>Purge Report</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.Purge
+   * @see org.jjflyboy.tjpeditor.project.PurgeReport
    * @generated
    */
-  public Adapter createPurgeAdapter()
+  public Adapter createPurgeReportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.PurgeResource <em>Purge Resource</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.PurgeResource
+   * @generated
+   */
+  public Adapter createPurgeResourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.PurgeTask <em>Purge Task</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.PurgeTask
+   * @generated
+   */
+  public Adapter createPurgeTaskAdapter()
   {
     return null;
   }

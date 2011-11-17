@@ -9,6 +9,36 @@
     editorPluginID="org.jjflyboy.tjpeditor.editor">
   <genPackages prefix="Project" basePackage="org.jjflyboy.tjpeditor" disposableProviderFactory="true"
       loadInitialization="true" literalsInterface="false" ecorePackage="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute">
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/COLUMNS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/DEFINITIONS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/FLAGS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/FORMATS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/JOURNALATTRIBUTES"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SCENARIOS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SORTACCOUNTS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SORTJOURNALENTRIES"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SORTRESOURCES"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SORTTASKS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute">
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/FAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/FLAGS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/MANAGERS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/REPORTS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/VACATIONS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/WARN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute">
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/BOOKING"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/CHARGE"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/CHARGESET"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/DEPENDS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/FAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/FLAGS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/PRECEDES"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/WARN"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies">
       <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/ONSTART"/>
       <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/ONEND"/>
@@ -493,8 +523,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ProjectIds/ids"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Prolog"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Purge">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Purge/listAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReport/listAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResource/listAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTask/listAttribute"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Rate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Rate/rate"/>

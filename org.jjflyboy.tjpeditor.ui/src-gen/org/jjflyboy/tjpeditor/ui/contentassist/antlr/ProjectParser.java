@@ -69,6 +69,9 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTimesheetAttributeAccess().getAlternatives(), "rule__TimesheetAttribute__Alternatives");
 					put(grammarAccess.getTimesheetReportAttributeAccess().getAlternatives(), "rule__TimesheetReportAttribute__Alternatives");
 					put(grammarAccess.getXFloatAccess().getAlternatives(), "rule__XFloat__Alternatives");
+					put(grammarAccess.getPurgeReportAttributeAccess().getAlternatives(), "rule__PurgeReportAttribute__Alternatives");
+					put(grammarAccess.getPurgeResourceAttributeAccess().getAlternatives(), "rule__PurgeResourceAttribute__Alternatives");
+					put(grammarAccess.getPurgeTaskAttributeAccess().getAlternatives(), "rule__PurgeTaskAttribute__Alternatives");
 					put(grammarAccess.getChargeAppliesAccess().getAlternatives(), "rule__ChargeApplies__Alternatives");
 					put(grammarAccess.getJustificationAccess().getAlternatives(), "rule__Justification__Alternatives");
 					put(grammarAccess.getJournalModeValueAccess().getAlternatives(), "rule__JournalModeValue__Alternatives");
@@ -221,7 +224,9 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getProjectIdsAccess().getGroup(), "rule__ProjectIds__Group__0");
 					put(grammarAccess.getProjectIdsAccess().getGroup_2(), "rule__ProjectIds__Group_2__0");
 					put(grammarAccess.getPrologAccess().getGroup(), "rule__Prolog__Group__0");
-					put(grammarAccess.getPurgeAccess().getGroup(), "rule__Purge__Group__0");
+					put(grammarAccess.getPurgeReportAccess().getGroup(), "rule__PurgeReport__Group__0");
+					put(grammarAccess.getPurgeResourceAccess().getGroup(), "rule__PurgeResource__Group__0");
+					put(grammarAccess.getPurgeTaskAccess().getGroup(), "rule__PurgeTask__Group__0");
 					put(grammarAccess.getRateAccess().getGroup(), "rule__Rate__Group__0");
 					put(grammarAccess.getReferenceExtendAccess().getGroup(), "rule__ReferenceExtend__Group__0");
 					put(grammarAccess.getRemainingAccess().getGroup(), "rule__Remaining__Group__0");
@@ -492,7 +497,9 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getProjectIdAccess().getProjectIdAssignment_1(), "rule__ProjectId__ProjectIdAssignment_1");
 					put(grammarAccess.getProjectIdsAccess().getIdsAssignment_1(), "rule__ProjectIds__IdsAssignment_1");
 					put(grammarAccess.getProjectIdsAccess().getIdsAssignment_2_1(), "rule__ProjectIds__IdsAssignment_2_1");
-					put(grammarAccess.getPurgeAccess().getListAttributeAssignment_1(), "rule__Purge__ListAttributeAssignment_1");
+					put(grammarAccess.getPurgeReportAccess().getListAttributeAssignment_1(), "rule__PurgeReport__ListAttributeAssignment_1");
+					put(grammarAccess.getPurgeResourceAccess().getListAttributeAssignment_1(), "rule__PurgeResource__ListAttributeAssignment_1");
+					put(grammarAccess.getPurgeTaskAccess().getListAttributeAssignment_1(), "rule__PurgeTask__ListAttributeAssignment_1");
 					put(grammarAccess.getRateAccess().getRateAssignment_1(), "rule__Rate__RateAssignment_1");
 					put(grammarAccess.getRemainingAccess().getRemainingAssignment_1(), "rule__Remaining__RemainingAssignment_1");
 					put(grammarAccess.getReportPrefixAccess().getReportAssignment_1(), "rule__ReportPrefix__ReportAssignment_1");

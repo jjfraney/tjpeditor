@@ -126,7 +126,7 @@ TaskAttribute:
 		| Precedes
 		| Priority
 		| ProjectId
-		| Purge
+		| PurgeTask
 		| Responsible
 		| Scheduled
 		| Scheduling
@@ -173,6 +173,7 @@ ReportAttribute:
 	| ResourceReport
 	| TaskReport
 	| TextReport
+	| PurgeReport
 	| Right
 //	| RollupTask
 	| Scenarios
@@ -225,7 +226,7 @@ ResourceAttribute:
 		| JournalEntry
 		| Limits
 		| Managers
-		| Purge
+		| PurgeResource
 		| Rate
 		| Resource
 // 		| Shift // deprecated
@@ -235,6 +236,7 @@ ResourceAttribute:
 	 	| Warn
 	 	| WorkingHours
 	);
+
 
 // http://www.taskjuggler.org/tj3/manual/allocate.html
 Allocate: 'allocate' resources+=AllocateResource (',' resources+=AllocateResource)*;
@@ -653,9 +655,42 @@ ProjectIds: 'projectids' ids += ID (',' ids+= ID)*;
 Prolog: 'prolog' RichText;
 
 // http://www.taskjuggler.org/tj3/manual/purge.html
-// TODO: there is a closed set of listAttributes, so, this can be validated
-Purge: 'purge' listAttribute=ID;
+PurgeReport: 'purge' listAttribute=PurgeReportAttribute;
+enum PurgeReportAttribute:
+	COLUMNS = 'columns' |
+	DEFINITIONS = 'definitions' |
+	FLAGS = 'flags' |
+	FORMATS = 'formats' |
+	JOURNALATTRIBUTES = 'journalAttributes' |
+	SCENARIOS = 'scenarios' |
+	SORTACCOUNTS = 'sortaccounts' |
+	SORTJOURNALENTRIES = 'sortjournalentries' |
+	SORTRESOURCES = 'sortresources' |
+	SORTTASKS = 'sorttasks' 
+;
 
+PurgeResource: 'purge' listAttribute=PurgeResourceAttribute;
+enum PurgeResourceAttribute:
+	FAIL = 'fail' |
+	FLAGS  = 'flags' |
+	MANAGERS = 'managers' |
+	REPORTS  = 'reports' |
+	VACATIONS = 'vacations' |
+	WARN = 'warn'
+;
+
+
+PurgeTask: 'purge' listAttribute=PurgeTaskAttribute;
+enum PurgeTaskAttribute:
+	BOOKING = 'booking' |
+	CHARGE = 'charge' |
+	CHARGESET = 'chargeset' |
+	DEPENDS = 'depends' |
+	FAIL = 'fail' |
+	FLAGS = 'flags' |
+	PRECEDES = 'precedes' |
+	WARN = 'warn'
+;
 
 
 // http://www.taskjuggler.org/tj3/manual/rate.html

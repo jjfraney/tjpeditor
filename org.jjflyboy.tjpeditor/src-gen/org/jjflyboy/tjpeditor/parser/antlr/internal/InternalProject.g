@@ -1252,11 +1252,11 @@ ruleTaskAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPurgeParserRuleCall_25()); 
+        newCompositeNode(grammarAccess.getTaskAttributeAccess().getPurgeTaskParserRuleCall_25()); 
     }
-    this_Purge_25=rulePurge
+    this_PurgeTask_25=rulePurgeTask
     { 
-        $current = $this_Purge_25.current; 
+        $current = $this_PurgeTask_25.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1703,91 +1703,101 @@ ruleReportAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getRightParserRuleCall_19()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getPurgeReportParserRuleCall_19()); 
     }
-    this_Right_19=ruleRight
+    this_PurgeReport_19=rulePurgeReport
     { 
-        $current = $this_Right_19.current; 
+        $current = $this_PurgeReport_19.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getScenariosParserRuleCall_20()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getRightParserRuleCall_20()); 
     }
-    this_Scenarios_20=ruleScenarios
+    this_Right_20=ruleRight
     { 
-        $current = $this_Scenarios_20.current; 
+        $current = $this_Right_20.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getSelfContainedParserRuleCall_21()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getScenariosParserRuleCall_21()); 
     }
-    this_SelfContained_21=ruleSelfContained
+    this_Scenarios_21=ruleScenarios
     { 
-        $current = $this_SelfContained_21.current; 
+        $current = $this_Scenarios_21.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getSortResourcesParserRuleCall_22()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getSelfContainedParserRuleCall_22()); 
     }
-    this_SortResources_22=ruleSortResources
+    this_SelfContained_22=ruleSelfContained
     { 
-        $current = $this_SortResources_22.current; 
+        $current = $this_SelfContained_22.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getSortTasksParserRuleCall_23()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getSortResourcesParserRuleCall_23()); 
     }
-    this_SortTasks_23=ruleSortTasks
+    this_SortResources_23=ruleSortResources
     { 
-        $current = $this_SortTasks_23.current; 
+        $current = $this_SortResources_23.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getStartParserRuleCall_24()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getSortTasksParserRuleCall_24()); 
     }
-    this_Start_24=ruleStart
+    this_SortTasks_24=ruleSortTasks
     { 
-        $current = $this_Start_24.current; 
+        $current = $this_SortTasks_24.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getTaskRootParserRuleCall_25()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getStartParserRuleCall_25()); 
     }
-    this_TaskRoot_25=ruleTaskRoot
+    this_Start_25=ruleStart
     { 
-        $current = $this_TaskRoot_25.current; 
+        $current = $this_Start_25.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getTimeFormatParserRuleCall_26()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getTaskRootParserRuleCall_26()); 
     }
-    this_TimeFormat_26=ruleTimeFormat
+    this_TaskRoot_26=ruleTaskRoot
     { 
-        $current = $this_TimeFormat_26.current; 
+        $current = $this_TaskRoot_26.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getReportAttributeAccess().getTitleParserRuleCall_27()); 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getTimeFormatParserRuleCall_27()); 
     }
-    this_Title_27=ruleTitle
+    this_TimeFormat_27=ruleTimeFormat
     { 
-        $current = $this_Title_27.current; 
+        $current = $this_TimeFormat_27.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getReportAttributeAccess().getTitleParserRuleCall_28()); 
+    }
+    this_Title_28=ruleTitle
+    { 
+        $current = $this_Title_28.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -2277,11 +2287,11 @@ ruleResourceAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getResourceAttributeAccess().getPurgeParserRuleCall_8()); 
+        newCompositeNode(grammarAccess.getResourceAttributeAccess().getPurgeResourceParserRuleCall_8()); 
     }
-    this_Purge_8=rulePurge
+    this_PurgeResource_8=rulePurgeResource
     { 
-        $current = $this_Purge_8.current; 
+        $current = $this_PurgeResource_8.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -7036,39 +7046,125 @@ ruleProlog returns [EObject current=null]
 
 
 
-// Entry rule entryRulePurge
-entryRulePurge returns [EObject current=null] 
+// Entry rule entryRulePurgeReport
+entryRulePurgeReport returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getPurgeRule()); }
-	 iv_rulePurge=rulePurge 
-	 { $current=$iv_rulePurge.current; } 
+	{ newCompositeNode(grammarAccess.getPurgeReportRule()); }
+	 iv_rulePurgeReport=rulePurgeReport 
+	 { $current=$iv_rulePurgeReport.current; } 
 	 EOF 
 ;
 
-// Rule Purge
-rulePurge returns [EObject current=null] 
+// Rule PurgeReport
+rulePurgeReport returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (	otherlv_0='purge' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getPurgeAccess().getPurgeKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getPurgeReportAccess().getPurgeKeyword_0());
     }
 (
 (
-		lv_listAttribute_1_0=RULE_ID
-		{
-			newLeafNode(lv_listAttribute_1_0, grammarAccess.getPurgeAccess().getListAttributeIDTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getPurgeReportAccess().getListAttributePurgeReportAttributeEnumRuleCall_1_0()); 
+	    }
+		lv_listAttribute_1_0=rulePurgeReportAttribute		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getPurgeRule());
+	            $current = createModelElementForParent(grammarAccess.getPurgeReportRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"listAttribute",
         		lv_listAttribute_1_0, 
-        		"ID");
+        		"PurgeReportAttribute");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRulePurgeResource
+entryRulePurgeResource returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getPurgeResourceRule()); }
+	 iv_rulePurgeResource=rulePurgeResource 
+	 { $current=$iv_rulePurgeResource.current; } 
+	 EOF 
+;
+
+// Rule PurgeResource
+rulePurgeResource returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='purge' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getPurgeResourceAccess().getPurgeKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPurgeResourceAccess().getListAttributePurgeResourceAttributeEnumRuleCall_1_0()); 
+	    }
+		lv_listAttribute_1_0=rulePurgeResourceAttribute		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPurgeResourceRule());
+	        }
+       		set(
+       			$current, 
+       			"listAttribute",
+        		lv_listAttribute_1_0, 
+        		"PurgeResourceAttribute");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRulePurgeTask
+entryRulePurgeTask returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getPurgeTaskRule()); }
+	 iv_rulePurgeTask=rulePurgeTask 
+	 { $current=$iv_rulePurgeTask.current; } 
+	 EOF 
+;
+
+// Rule PurgeTask
+rulePurgeTask returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='purge' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getPurgeTaskAccess().getPurgeKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getPurgeTaskAccess().getListAttributePurgeTaskAttributeEnumRuleCall_1_0()); 
+	    }
+		lv_listAttribute_1_0=rulePurgeTaskAttribute		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPurgeTaskRule());
+	        }
+       		set(
+       			$current, 
+       			"listAttribute",
+        		lv_listAttribute_1_0, 
+        		"PurgeTaskAttribute");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -12394,6 +12490,171 @@ ruleXFloat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     ;
 
 
+
+
+
+// Rule PurgeReportAttribute
+rulePurgeReportAttribute returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='columns' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getCOLUMNSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getPurgeReportAttributeAccess().getCOLUMNSEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='definitions' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getDEFINITIONSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getPurgeReportAttributeAccess().getDEFINITIONSEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='flags' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getFLAGSEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getPurgeReportAttributeAccess().getFLAGSEnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='formats' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getFORMATSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getPurgeReportAttributeAccess().getFORMATSEnumLiteralDeclaration_3()); 
+    }
+)
+    |(	enumLiteral_4='journalAttributes' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getJOURNALATTRIBUTESEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getPurgeReportAttributeAccess().getJOURNALATTRIBUTESEnumLiteralDeclaration_4()); 
+    }
+)
+    |(	enumLiteral_5='scenarios' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getSCENARIOSEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getPurgeReportAttributeAccess().getSCENARIOSEnumLiteralDeclaration_5()); 
+    }
+)
+    |(	enumLiteral_6='sortaccounts' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getSORTACCOUNTSEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_6, grammarAccess.getPurgeReportAttributeAccess().getSORTACCOUNTSEnumLiteralDeclaration_6()); 
+    }
+)
+    |(	enumLiteral_7='sortjournalentries' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getSORTJOURNALENTRIESEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_7, grammarAccess.getPurgeReportAttributeAccess().getSORTJOURNALENTRIESEnumLiteralDeclaration_7()); 
+    }
+)
+    |(	enumLiteral_8='sortresources' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getSORTRESOURCESEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_8, grammarAccess.getPurgeReportAttributeAccess().getSORTRESOURCESEnumLiteralDeclaration_8()); 
+    }
+)
+    |(	enumLiteral_9='sorttasks' 
+	{
+        $current = grammarAccess.getPurgeReportAttributeAccess().getSORTTASKSEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_9, grammarAccess.getPurgeReportAttributeAccess().getSORTTASKSEnumLiteralDeclaration_9()); 
+    }
+));
+
+
+
+// Rule PurgeResourceAttribute
+rulePurgeResourceAttribute returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='fail' 
+	{
+        $current = grammarAccess.getPurgeResourceAttributeAccess().getFAILEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getPurgeResourceAttributeAccess().getFAILEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='flags' 
+	{
+        $current = grammarAccess.getPurgeResourceAttributeAccess().getFLAGSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getPurgeResourceAttributeAccess().getFLAGSEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='managers' 
+	{
+        $current = grammarAccess.getPurgeResourceAttributeAccess().getMANAGERSEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getPurgeResourceAttributeAccess().getMANAGERSEnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='reports' 
+	{
+        $current = grammarAccess.getPurgeResourceAttributeAccess().getREPORTSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getPurgeResourceAttributeAccess().getREPORTSEnumLiteralDeclaration_3()); 
+    }
+)
+    |(	enumLiteral_4='vacations' 
+	{
+        $current = grammarAccess.getPurgeResourceAttributeAccess().getVACATIONSEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getPurgeResourceAttributeAccess().getVACATIONSEnumLiteralDeclaration_4()); 
+    }
+)
+    |(	enumLiteral_5='warn' 
+	{
+        $current = grammarAccess.getPurgeResourceAttributeAccess().getWARNEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getPurgeResourceAttributeAccess().getWARNEnumLiteralDeclaration_5()); 
+    }
+));
+
+
+
+// Rule PurgeTaskAttribute
+rulePurgeTaskAttribute returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='booking' 
+	{
+        $current = grammarAccess.getPurgeTaskAttributeAccess().getBOOKINGEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getPurgeTaskAttributeAccess().getBOOKINGEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='charge' 
+	{
+        $current = grammarAccess.getPurgeTaskAttributeAccess().getCHARGEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getPurgeTaskAttributeAccess().getCHARGEEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='chargeset' 
+	{
+        $current = grammarAccess.getPurgeTaskAttributeAccess().getCHARGESETEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getPurgeTaskAttributeAccess().getCHARGESETEnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='depends' 
+	{
+        $current = grammarAccess.getPurgeTaskAttributeAccess().getDEPENDSEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getPurgeTaskAttributeAccess().getDEPENDSEnumLiteralDeclaration_3()); 
+    }
+)
+    |(	enumLiteral_4='fail' 
+	{
+        $current = grammarAccess.getPurgeTaskAttributeAccess().getFAILEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getPurgeTaskAttributeAccess().getFAILEnumLiteralDeclaration_4()); 
+    }
+)
+    |(	enumLiteral_5='flags' 
+	{
+        $current = grammarAccess.getPurgeTaskAttributeAccess().getFLAGSEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getPurgeTaskAttributeAccess().getFLAGSEnumLiteralDeclaration_5()); 
+    }
+)
+    |(	enumLiteral_6='precedes' 
+	{
+        $current = grammarAccess.getPurgeTaskAttributeAccess().getPRECEDESEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_6, grammarAccess.getPurgeTaskAttributeAccess().getPRECEDESEnumLiteralDeclaration_6()); 
+    }
+)
+    |(	enumLiteral_7='warn' 
+	{
+        $current = grammarAccess.getPurgeTaskAttributeAccess().getWARNEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_7, grammarAccess.getPurgeTaskAttributeAccess().getWARNEnumLiteralDeclaration_7()); 
+    }
+));
 
 
 

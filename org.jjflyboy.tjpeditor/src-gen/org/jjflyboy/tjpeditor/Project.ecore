@@ -390,8 +390,44 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prolog" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Purge" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listAttribute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PurgeReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listAttribute" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PurgeReportAttribute">
+    <eLiterals name="COLUMNS" literal="columns"/>
+    <eLiterals name="DEFINITIONS" value="1" literal="definitions"/>
+    <eLiterals name="FLAGS" value="2" literal="flags"/>
+    <eLiterals name="FORMATS" value="3" literal="formats"/>
+    <eLiterals name="JOURNALATTRIBUTES" value="4" literal="journalAttributes"/>
+    <eLiterals name="SCENARIOS" value="5" literal="scenarios"/>
+    <eLiterals name="SORTACCOUNTS" value="6" literal="sortaccounts"/>
+    <eLiterals name="SORTJOURNALENTRIES" value="7" literal="sortjournalentries"/>
+    <eLiterals name="SORTRESOURCES" value="8" literal="sortresources"/>
+    <eLiterals name="SORTTASKS" value="9" literal="sorttasks"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PurgeResource" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listAttribute" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PurgeResourceAttribute">
+    <eLiterals name="FAIL" literal="fail"/>
+    <eLiterals name="FLAGS" value="1" literal="flags"/>
+    <eLiterals name="MANAGERS" value="2" literal="managers"/>
+    <eLiterals name="REPORTS" value="3" literal="reports"/>
+    <eLiterals name="VACATIONS" value="4" literal="vacations"/>
+    <eLiterals name="WARN" value="5" literal="warn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PurgeTask" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listAttribute" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PurgeTaskAttribute">
+    <eLiterals name="BOOKING" literal="booking"/>
+    <eLiterals name="CHARGE" value="1" literal="charge"/>
+    <eLiterals name="CHARGESET" value="2" literal="chargeset"/>
+    <eLiterals name="DEPENDS" value="3" literal="depends"/>
+    <eLiterals name="FAIL" value="4" literal="fail"/>
+    <eLiterals name="FLAGS" value="5" literal="flags"/>
+    <eLiterals name="PRECEDES" value="6" literal="precedes"/>
+    <eLiterals name="WARN" value="7" literal="warn"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rate" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>

@@ -178,7 +178,9 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.PROJECT_ID: return createProjectId();
       case ProjectPackage.PROJECT_IDS: return createProjectIds();
       case ProjectPackage.PROLOG: return createProlog();
-      case ProjectPackage.PURGE: return createPurge();
+      case ProjectPackage.PURGE_REPORT: return createPurgeReport();
+      case ProjectPackage.PURGE_RESOURCE: return createPurgeResource();
+      case ProjectPackage.PURGE_TASK: return createPurgeTask();
       case ProjectPackage.RATE: return createRate();
       case ProjectPackage.REFERENCE_EXTEND: return createReferenceExtend();
       case ProjectPackage.REMAINING: return createRemaining();
@@ -277,6 +279,12 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case ProjectPackage.PURGE_REPORT_ATTRIBUTE:
+        return createPurgeReportAttributeFromString(eDataType, initialValue);
+      case ProjectPackage.PURGE_RESOURCE_ATTRIBUTE:
+        return createPurgeResourceAttributeFromString(eDataType, initialValue);
+      case ProjectPackage.PURGE_TASK_ATTRIBUTE:
+        return createPurgeTaskAttributeFromString(eDataType, initialValue);
       case ProjectPackage.CHARGE_APPLIES:
         return createChargeAppliesFromString(eDataType, initialValue);
       case ProjectPackage.JUSTIFICATION:
@@ -328,6 +336,12 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case ProjectPackage.PURGE_REPORT_ATTRIBUTE:
+        return convertPurgeReportAttributeToString(eDataType, instanceValue);
+      case ProjectPackage.PURGE_RESOURCE_ATTRIBUTE:
+        return convertPurgeResourceAttributeToString(eDataType, instanceValue);
+      case ProjectPackage.PURGE_TASK_ATTRIBUTE:
+        return convertPurgeTaskAttributeToString(eDataType, instanceValue);
       case ProjectPackage.CHARGE_APPLIES:
         return convertChargeAppliesToString(eDataType, instanceValue);
       case ProjectPackage.JUSTIFICATION:
@@ -1584,10 +1598,32 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Purge createPurge()
+  public PurgeReport createPurgeReport()
   {
-    PurgeImpl purge = new PurgeImpl();
-    return purge;
+    PurgeReportImpl purgeReport = new PurgeReportImpl();
+    return purgeReport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PurgeResource createPurgeResource()
+  {
+    PurgeResourceImpl purgeResource = new PurgeResourceImpl();
+    return purgeResource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PurgeTask createPurgeTask()
+  {
+    PurgeTaskImpl purgeTask = new PurgeTaskImpl();
+    return purgeTask;
   }
 
   /**
@@ -2501,6 +2537,72 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     DefintionsImpl defintions = new DefintionsImpl();
     return defintions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PurgeReportAttribute createPurgeReportAttributeFromString(EDataType eDataType, String initialValue)
+  {
+    PurgeReportAttribute result = PurgeReportAttribute.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertPurgeReportAttributeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PurgeResourceAttribute createPurgeResourceAttributeFromString(EDataType eDataType, String initialValue)
+  {
+    PurgeResourceAttribute result = PurgeResourceAttribute.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertPurgeResourceAttributeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PurgeTaskAttribute createPurgeTaskAttributeFromString(EDataType eDataType, String initialValue)
+  {
+    PurgeTaskAttribute result = PurgeTaskAttribute.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertPurgeTaskAttributeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**
