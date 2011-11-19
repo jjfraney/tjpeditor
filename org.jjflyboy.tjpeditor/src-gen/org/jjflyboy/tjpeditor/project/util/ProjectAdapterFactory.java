@@ -98,6 +98,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createAccountAttributeAdapter();
       }
       @Override
+      public Adapter caseAccountReport(AccountReport object)
+      {
+        return createAccountReportAdapter();
+      }
+      @Override
+      public Adapter caseAccountRoot(AccountRoot object)
+      {
+        return createAccountRootAdapter();
+      }
+      @Override
       public Adapter caseProject(Project object)
       {
         return createProjectAdapter();
@@ -428,6 +438,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createHeadlineAdapter();
       }
       @Override
+      public Adapter caseHideAccount(HideAccount object)
+      {
+        return createHideAccountAdapter();
+      }
+      @Override
+      public Adapter caseHideJournalEntry(HideJournalEntry object)
+      {
+        return createHideJournalEntryAdapter();
+      }
+      @Override
       public Adapter caseHideReport(HideReport object)
       {
         return createHideReportAdapter();
@@ -678,9 +698,19 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createResponsibleAdapter();
       }
       @Override
+      public Adapter caseRGB(RGB object)
+      {
+        return createRGBAdapter();
+      }
+      @Override
       public Adapter caseRight(Right object)
       {
         return createRightAdapter();
+      }
+      @Override
+      public Adapter caseRollupAccount(RollupAccount object)
+      {
+        return createRollupAccountAdapter();
       }
       @Override
       public Adapter caseRollupResource(RollupResource object)
@@ -766,6 +796,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseShortTimeFormat(ShortTimeFormat object)
       {
         return createShortTimeFormatAdapter();
+      }
+      @Override
+      public Adapter caseSort(Sort object)
+      {
+        return createSortAdapter();
+      }
+      @Override
+      public Adapter caseSortAccounts(SortAccounts object)
+      {
+        return createSortAccountsAdapter();
       }
       @Override
       public Adapter caseSortJournalEntries(SortJournalEntries object)
@@ -983,11 +1023,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createCriterionAdapter();
       }
       @Override
-      public Adapter caseCriterionId(CriterionId object)
-      {
-        return createCriterionIdAdapter();
-      }
-      @Override
       public Adapter caseDurationQuantity(DurationQuantity object)
       {
         return createDurationQuantityAdapter();
@@ -1006,11 +1041,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseRealFormat(RealFormat object)
       {
         return createRealFormatAdapter();
-      }
-      @Override
-      public Adapter caseSort(Sort object)
-      {
-        return createSortAdapter();
       }
       @Override
       public Adapter caseTaskDependency(TaskDependency object)
@@ -1130,6 +1160,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAccountAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.AccountReport <em>Account Report</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.AccountReport
+   * @generated
+   */
+  public Adapter createAccountReportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.AccountRoot <em>Account Root</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.AccountRoot
+   * @generated
+   */
+  public Adapter createAccountRootAdapter()
   {
     return null;
   }
@@ -2125,6 +2185,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.HideAccount <em>Hide Account</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.HideAccount
+   * @generated
+   */
+  public Adapter createHideAccountAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.HideJournalEntry <em>Hide Journal Entry</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.HideJournalEntry
+   * @generated
+   */
+  public Adapter createHideJournalEntryAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.HideReport <em>Hide Report</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -2875,6 +2965,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.RGB <em>RGB</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.RGB
+   * @generated
+   */
+  public Adapter createRGBAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Right <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -2885,6 +2990,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRightAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.RollupAccount <em>Rollup Account</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.RollupAccount
+   * @generated
+   */
+  public Adapter createRollupAccountAdapter()
   {
     return null;
   }
@@ -3140,6 +3260,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createShortTimeFormatAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Sort <em>Sort</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.Sort
+   * @generated
+   */
+  public Adapter createSortAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SortAccounts <em>Sort Accounts</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.SortAccounts
+   * @generated
+   */
+  public Adapter createSortAccountsAdapter()
   {
     return null;
   }
@@ -3790,21 +3940,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.CriterionId <em>Criterion Id</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.CriterionId
-   * @generated
-   */
-  public Adapter createCriterionIdAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.DurationQuantity <em>Duration Quantity</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -3860,21 +3995,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRealFormatAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Sort <em>Sort</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.Sort
-   * @generated
-   */
-  public Adapter createSortAdapter()
   {
     return null;
   }

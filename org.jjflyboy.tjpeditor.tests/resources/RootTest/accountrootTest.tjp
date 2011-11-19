@@ -1,0 +1,16 @@
+project "test project" 2011-12-11 + 4 m { }
+
+account topAccount "top account" {
+  account midAccount "Mid Account"
+}
+
+taskreport  "TR 2" {
+  accountroot topAccount
+}
+taskreport  "TR 3" {
+  accountroot topAccount.midAccount
+}
+
+taskreport  "TR 4" {
+  accountroot noaccount
+}

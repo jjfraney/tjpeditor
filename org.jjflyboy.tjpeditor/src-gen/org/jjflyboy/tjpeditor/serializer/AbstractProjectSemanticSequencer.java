@@ -14,6 +14,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.jjflyboy.tjpeditor.project.Account;
+import org.jjflyboy.tjpeditor.project.AccountRoot;
 import org.jjflyboy.tjpeditor.project.AccountShare;
 import org.jjflyboy.tjpeditor.project.Alert;
 import org.jjflyboy.tjpeditor.project.Allocate;
@@ -34,7 +35,6 @@ import org.jjflyboy.tjpeditor.project.Complete;
 import org.jjflyboy.tjpeditor.project.Copyright;
 import org.jjflyboy.tjpeditor.project.Credit;
 import org.jjflyboy.tjpeditor.project.Criterion;
-import org.jjflyboy.tjpeditor.project.CriterionId;
 import org.jjflyboy.tjpeditor.project.Currency;
 import org.jjflyboy.tjpeditor.project.DailyWorkingHours;
 import org.jjflyboy.tjpeditor.project.Definitions;
@@ -58,6 +58,8 @@ import org.jjflyboy.tjpeditor.project.FontColor;
 import org.jjflyboy.tjpeditor.project.Formats;
 import org.jjflyboy.tjpeditor.project.Global;
 import org.jjflyboy.tjpeditor.project.HAlign;
+import org.jjflyboy.tjpeditor.project.HideAccount;
+import org.jjflyboy.tjpeditor.project.HideJournalEntry;
 import org.jjflyboy.tjpeditor.project.HideReport;
 import org.jjflyboy.tjpeditor.project.HideResource;
 import org.jjflyboy.tjpeditor.project.HideTask;
@@ -97,6 +99,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.PurgeReport;
 import org.jjflyboy.tjpeditor.project.PurgeResource;
 import org.jjflyboy.tjpeditor.project.PurgeTask;
+import org.jjflyboy.tjpeditor.project.RGB;
 import org.jjflyboy.tjpeditor.project.Rate;
 import org.jjflyboy.tjpeditor.project.RealFormat;
 import org.jjflyboy.tjpeditor.project.Remaining;
@@ -108,6 +111,7 @@ import org.jjflyboy.tjpeditor.project.ResourcePrefix;
 import org.jjflyboy.tjpeditor.project.ResourceRoot;
 import org.jjflyboy.tjpeditor.project.Responsible;
 import org.jjflyboy.tjpeditor.project.RichText;
+import org.jjflyboy.tjpeditor.project.RollupAccount;
 import org.jjflyboy.tjpeditor.project.RollupResource;
 import org.jjflyboy.tjpeditor.project.RollupTask;
 import org.jjflyboy.tjpeditor.project.Scale;
@@ -124,7 +128,6 @@ import org.jjflyboy.tjpeditor.project.ShiftsAllocate;
 import org.jjflyboy.tjpeditor.project.ShiftsLimit;
 import org.jjflyboy.tjpeditor.project.ShortTimeFormat;
 import org.jjflyboy.tjpeditor.project.Sort;
-import org.jjflyboy.tjpeditor.project.SortJournalEntries;
 import org.jjflyboy.tjpeditor.project.Start;
 import org.jjflyboy.tjpeditor.project.StatusStatusSheet;
 import org.jjflyboy.tjpeditor.project.SupplementAccount;
@@ -193,6 +196,13 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getAccountAttributeRule() ||
 				   context == grammarAccess.getGlobalAttributeRule()) {
 					sequence_Account(context, (Account) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.ACCOUNT_ROOT:
+				if(context == grammarAccess.getAccountRootRule() ||
+				   context == grammarAccess.getReportAttributeRule()) {
+					sequence_AccountRoot(context, (AccountRoot) semanticObject); 
 					return; 
 				}
 				else break;
@@ -328,12 +338,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.CRITERION:
 				if(context == grammarAccess.getCriterionRule()) {
 					sequence_Criterion(context, (Criterion) semanticObject); 
-					return; 
-				}
-				else break;
-			case ProjectPackage.CRITERION_ID:
-				if(context == grammarAccess.getCriterionIdRule()) {
-					sequence_CriterionId(context, (CriterionId) semanticObject); 
 					return; 
 				}
 				else break;
@@ -511,6 +515,20 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
+			case ProjectPackage.HIDE_ACCOUNT:
+				if(context == grammarAccess.getHideAccountRule() ||
+				   context == grammarAccess.getReportAttributeRule()) {
+					sequence_HideAccount(context, (HideAccount) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.HIDE_JOURNAL_ENTRY:
+				if(context == grammarAccess.getHideJournalEntryRule() ||
+				   context == grammarAccess.getReportAttributeRule()) {
+					sequence_HideJournalEntry(context, (HideJournalEntry) semanticObject); 
+					return; 
+				}
+				else break;
 			case ProjectPackage.HIDE_REPORT:
 				if(context == grammarAccess.getHideReportRule() ||
 				   context == grammarAccess.getNavigatorAttributeRule()) {
@@ -522,6 +540,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				if(context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getHideResourceRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
+				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getTimesheetReportAttributeRule()) {
 					sequence_HideResource(context, (HideResource) semanticObject); 
 					return; 
@@ -530,7 +549,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.HIDE_TASK:
 				if(context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getHideTaskRule() ||
-				   context == grammarAccess.getNikuReportAttributeRule()) {
+				   context == grammarAccess.getNikuReportAttributeRule() ||
+				   context == grammarAccess.getReportAttributeRule()) {
 					sequence_HideTask(context, (HideTask) semanticObject); 
 					return; 
 				}
@@ -567,7 +587,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.JOURNAL_ATTRIBUTES:
-				if(context == grammarAccess.getJournalAttributesRule()) {
+				if(context == grammarAccess.getJournalAttributesRule() ||
+				   context == grammarAccess.getReportAttributeRule()) {
 					sequence_JournalAttributes(context, (JournalAttributes) semanticObject); 
 					return; 
 				}
@@ -789,6 +810,12 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
+			case ProjectPackage.RGB:
+				if(context == grammarAccess.getRGBRule()) {
+					sequence_RGB(context, (RGB) semanticObject); 
+					return; 
+				}
+				else break;
 			case ProjectPackage.RATE:
 				if(context == grammarAccess.getGlobalAttributeRule() ||
 				   context == grammarAccess.getRateRule() ||
@@ -802,7 +829,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getNumberFormatRule() ||
 				   context == grammarAccess.getProjectAttributeRule() ||
-				   context == grammarAccess.getRealFormatRule()) {
+				   context == grammarAccess.getRealFormatRule() ||
+				   context == grammarAccess.getReportAttributeRule()) {
 					sequence_RealFormat(context, (RealFormat) semanticObject); 
 					return; 
 				}
@@ -816,7 +844,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.REPORT:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getAccountReportRule() ||
+				   context == grammarAccess.getGlobalAttributeRule() ||
 				   context == grammarAccess.getReportRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getResourceReportRule() ||
@@ -854,7 +883,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.RESOURCE_ROOT:
-				if(context == grammarAccess.getResourceRootRule()) {
+				if(context == grammarAccess.getReportAttributeRule() ||
+				   context == grammarAccess.getResourceRootRule()) {
 					sequence_ResourceRoot(context, (ResourceRoot) semanticObject); 
 					return; 
 				}
@@ -888,8 +918,16 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
+			case ProjectPackage.ROLLUP_ACCOUNT:
+				if(context == grammarAccess.getReportAttributeRule() ||
+				   context == grammarAccess.getRollupAccountRule()) {
+					sequence_RollupAccount(context, (RollupAccount) semanticObject); 
+					return; 
+				}
+				else break;
 			case ProjectPackage.ROLLUP_RESOURCE:
 				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getRollupResourceRule()) {
 					sequence_RollupResource(context, (RollupResource) semanticObject); 
 					return; 
@@ -897,6 +935,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.ROLLUP_TASK:
 				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getRollupTaskRule()) {
 					sequence_RollupTask(context, (RollupTask) semanticObject); 
 					return; 
@@ -999,15 +1038,11 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.SORT:
 				if(context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getSortRule() ||
+				   context == grammarAccess.getSortAccountsRule() ||
+				   context == grammarAccess.getSortJournalEntriesRule() ||
 				   context == grammarAccess.getSortResourcesRule() ||
 				   context == grammarAccess.getSortTasksRule()) {
 					sequence_Sort(context, (Sort) semanticObject); 
-					return; 
-				}
-				else break;
-			case ProjectPackage.SORT_JOURNAL_ENTRIES:
-				if(context == grammarAccess.getSortJournalEntriesRule()) {
-					sequence_SortJournalEntries(context, (SortJournalEntries) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1147,6 +1182,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.TIMEZONE:
 				if(context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getProjectAttributeRule() ||
+				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getTimezoneRule()) {
 					sequence_Timezone(context, (Timezone) semanticObject); 
 					return; 
@@ -1264,6 +1300,25 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     account=[Account|AbsoluteId]
+	 *
+	 * Features:
+	 *    account[1, 1]
+	 */
+	protected void sequence_AccountRoot(EObject context, AccountRoot semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getAccountRoot_Account()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getAccountRoot_Account()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAccountRootAccess().getAccountAccountAbsoluteIdParserRuleCall_1_0_1(), semanticObject.getAccount());
+		feeder.finish();
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -1462,7 +1517,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (expression=LogicalExpression color=STRING)
+	 *     (expression=LogicalExpression color=RGB)
 	 *
 	 * Features:
 	 *    expression[1, 1]
@@ -1478,7 +1533,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getCellColorAccess().getExpressionLogicalExpressionParserRuleCall_1_0(), semanticObject.getExpression());
-		feeder.accept(grammarAccess.getCellColorAccess().getColorSTRINGTerminalRuleCall_2_0(), semanticObject.getColor());
+		feeder.accept(grammarAccess.getCellColorAccess().getColorRGBParserRuleCall_2_0(), semanticObject.getColor());
 		feeder.finish();
 	}
 	
@@ -1643,27 +1698,24 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (columnId=ColumnId direction=CriterionDirection?)
+	 *     (columnId=ColumnId direction=CriterionDirection)
 	 *
 	 * Features:
 	 *    columnId[1, 1]
-	 *    direction[0, 1]
-	 */
-	protected void sequence_CriterionId(EObject context, CriterionId semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (scenario=[Scenario|ID]? criterionId=CriterionId)
-	 *
-	 * Features:
-	 *    scenario[0, 1]
-	 *    criterionId[1, 1]
+	 *    direction[1, 1]
 	 */
 	protected void sequence_Criterion(EObject context, Criterion semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getCriterion_ColumnId()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getCriterion_ColumnId()));
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getCriterion_Direction()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getCriterion_Direction()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getCriterionAccess().getColumnIdColumnIdEnumRuleCall_0_0(), semanticObject.getColumnId());
+		feeder.accept(grammarAccess.getCriterionAccess().getDirectionCriterionDirectionEnumRuleCall_2_0(), semanticObject.getDirection());
+		feeder.finish();
 	}
 	
 	
@@ -2072,6 +2124,44 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
+	 *     expression=LogicalFlagExpression
+	 *
+	 * Features:
+	 *    expression[1, 1]
+	 */
+	protected void sequence_HideAccount(EObject context, HideAccount semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getHideAccount_Expression()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getHideAccount_Expression()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getHideAccountAccess().getExpressionLogicalFlagExpressionParserRuleCall_1_0(), semanticObject.getExpression());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     expression=LogicalFlagExpression
+	 *
+	 * Features:
+	 *    expression[1, 1]
+	 */
+	protected void sequence_HideJournalEntry(EObject context, HideJournalEntry semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getHideJournalEntry_Expression()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getHideJournalEntry_Expression()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getHideJournalEntryAccess().getExpressionLogicalFlagExpressionParserRuleCall_1_0(), semanticObject.getExpression());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     expression=LogicalExpression
 	 *
 	 * Features:
@@ -2213,215 +2303,27 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (
-	 *         all?='*' | 
-	 *         none?='-' | 
-	 *         (
-	 *             flags?='flags' 
-	 *             property?='property' 
-	 *             details?='details' 
-	 *             author?='author' 
-	 *             headline?='headline' 
-	 *             date?='date' 
-	 *             timesheet?='timesheet' 
-	 *             propertyid?='propertyid' 
-	 *             summary?='summary'
-	 *         )
+	 *         flags?='flags'? 
+	 *         property?='property'? 
+	 *         details?='details'? 
+	 *         author?='author'? 
+	 *         headline?='headline'? 
+	 *         date?='date'? 
+	 *         timesheet?='timesheet'? 
+	 *         propertyid?='propertyid'? 
+	 *         summary?='summary'?
 	 *     )
 	 *
 	 * Features:
-	 *    all[0, 1]
-	 *         EXCLUDE_IF_SET none
-	 *         EXCLUDE_IF_SET flags
-	 *         EXCLUDE_IF_SET property
-	 *         EXCLUDE_IF_SET details
-	 *         EXCLUDE_IF_SET author
-	 *         EXCLUDE_IF_SET headline
-	 *         EXCLUDE_IF_SET date
-	 *         EXCLUDE_IF_SET timesheet
-	 *         EXCLUDE_IF_SET propertyid
-	 *         EXCLUDE_IF_SET summary
-	 *    none[0, 1]
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET flags
-	 *         EXCLUDE_IF_SET property
-	 *         EXCLUDE_IF_SET details
-	 *         EXCLUDE_IF_SET author
-	 *         EXCLUDE_IF_SET headline
-	 *         EXCLUDE_IF_SET date
-	 *         EXCLUDE_IF_SET timesheet
-	 *         EXCLUDE_IF_SET propertyid
-	 *         EXCLUDE_IF_SET summary
 	 *    flags[0, 1]
-	 *         EXCLUDE_IF_UNSET property
-	 *         MANDATORY_IF_SET property
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET headline
-	 *         MANDATORY_IF_SET headline
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET timesheet
-	 *         MANDATORY_IF_SET timesheet
-	 *         EXCLUDE_IF_UNSET propertyid
-	 *         MANDATORY_IF_SET propertyid
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    property[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET headline
-	 *         MANDATORY_IF_SET headline
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET timesheet
-	 *         MANDATORY_IF_SET timesheet
-	 *         EXCLUDE_IF_UNSET propertyid
-	 *         MANDATORY_IF_SET propertyid
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    details[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET property
-	 *         MANDATORY_IF_SET property
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET headline
-	 *         MANDATORY_IF_SET headline
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET timesheet
-	 *         MANDATORY_IF_SET timesheet
-	 *         EXCLUDE_IF_UNSET propertyid
-	 *         MANDATORY_IF_SET propertyid
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    author[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET property
-	 *         MANDATORY_IF_SET property
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET headline
-	 *         MANDATORY_IF_SET headline
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET timesheet
-	 *         MANDATORY_IF_SET timesheet
-	 *         EXCLUDE_IF_UNSET propertyid
-	 *         MANDATORY_IF_SET propertyid
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    headline[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET property
-	 *         MANDATORY_IF_SET property
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET timesheet
-	 *         MANDATORY_IF_SET timesheet
-	 *         EXCLUDE_IF_UNSET propertyid
-	 *         MANDATORY_IF_SET propertyid
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    date[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET property
-	 *         MANDATORY_IF_SET property
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET headline
-	 *         MANDATORY_IF_SET headline
-	 *         EXCLUDE_IF_UNSET timesheet
-	 *         MANDATORY_IF_SET timesheet
-	 *         EXCLUDE_IF_UNSET propertyid
-	 *         MANDATORY_IF_SET propertyid
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    timesheet[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET property
-	 *         MANDATORY_IF_SET property
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET headline
-	 *         MANDATORY_IF_SET headline
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET propertyid
-	 *         MANDATORY_IF_SET propertyid
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    propertyid[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET property
-	 *         MANDATORY_IF_SET property
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET headline
-	 *         MANDATORY_IF_SET headline
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET timesheet
-	 *         MANDATORY_IF_SET timesheet
-	 *         EXCLUDE_IF_UNSET summary
-	 *         MANDATORY_IF_SET summary
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 *    summary[0, 1]
-	 *         EXCLUDE_IF_UNSET flags
-	 *         MANDATORY_IF_SET flags
-	 *         EXCLUDE_IF_UNSET property
-	 *         MANDATORY_IF_SET property
-	 *         EXCLUDE_IF_UNSET details
-	 *         MANDATORY_IF_SET details
-	 *         EXCLUDE_IF_UNSET author
-	 *         MANDATORY_IF_SET author
-	 *         EXCLUDE_IF_UNSET headline
-	 *         MANDATORY_IF_SET headline
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET timesheet
-	 *         MANDATORY_IF_SET timesheet
-	 *         EXCLUDE_IF_UNSET propertyid
-	 *         MANDATORY_IF_SET propertyid
-	 *         EXCLUDE_IF_SET all
-	 *         EXCLUDE_IF_SET none
 	 */
 	protected void sequence_JournalAttributes(EObject context, JournalAttributes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2943,6 +2845,25 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
+	 *     value=STRING
+	 *
+	 * Features:
+	 *    value[1, 1]
+	 */
+	protected void sequence_RGB(EObject context, RGB semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getRGB_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getRGB_Value()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getRGBAccess().getValueSTRINGTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     rate=XFloat
 	 *
 	 * Features:
@@ -3082,7 +3003,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     resource=[Resource|ID]
+	 *     resource=[Resource|AbsoluteId]
 	 *
 	 * Features:
 	 *    resource[1, 1]
@@ -3094,7 +3015,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getResourceRootAccess().getResourceResourceIDTerminalRuleCall_1_0_1(), semanticObject.getResource());
+		feeder.accept(grammarAccess.getResourceRootAccess().getResourceResourceAbsoluteIdParserRuleCall_1_0_1(), semanticObject.getResource());
 		feeder.finish();
 	}
 	
@@ -3140,6 +3061,25 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getRichTextAccess().getTextSTRINGTerminalRuleCall_0(), semanticObject.getText());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     expression=LogicalExpression
+	 *
+	 * Features:
+	 *    expression[1, 1]
+	 */
+	protected void sequence_RollupAccount(EObject context, RollupAccount semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getRollupAccount_Expression()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getRollupAccount_Expression()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getRollupAccountAccess().getExpressionLogicalExpressionParserRuleCall_1_0(), semanticObject.getExpression());
 		feeder.finish();
 	}
 	
@@ -3400,22 +3340,10 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (criteria+=JournalEntrySortCriterion criteria+=JournalEntrySortCriterion*)
+	 *     ((tree?='tree'? | criteria+=Criterion) criteria+=Criterion*)
 	 *
 	 * Features:
-	 *    criteria[1, *]
-	 */
-	protected void sequence_SortJournalEntries(EObject context, SortJournalEntries semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     ((id?=ID | criteria+=Criterion) criteria+=Criterion*)
-	 *
-	 * Features:
-	 *    id[0, 1]
+	 *    tree[0, 1]
 	 *         EXCLUDE_IF_SET criteria
 	 *    criteria[0, *]
 	 */
@@ -3596,7 +3524,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     task=[Task|ID]
+	 *     task=[Task|AbsoluteId]
 	 *
 	 * Features:
 	 *    task[1, 1]
@@ -3608,7 +3536,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTaskRootAccess().getTaskTaskIDTerminalRuleCall_1_0_1(), semanticObject.getTask());
+		feeder.accept(grammarAccess.getTaskRootAccess().getTaskTaskAbsoluteIdParserRuleCall_1_0_1(), semanticObject.getTask());
 		feeder.finish();
 	}
 	

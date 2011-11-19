@@ -31,34 +31,34 @@ import org.jjflyboy.tjpeditor.project.Sort;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.SortImpl#isId <em>Id</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.SortImpl#isTree <em>Tree</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.SortImpl#getCriteria <em>Criteria</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SortImpl extends SortResourcesImpl implements Sort
+public class SortImpl extends SortAccountsImpl implements Sort
 {
   /**
-   * The default value of the '{@link #isId() <em>Id</em>}' attribute.
+   * The default value of the '{@link #isTree() <em>Tree</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isId()
+   * @see #isTree()
    * @generated
    * @ordered
    */
-  protected static final boolean ID_EDEFAULT = false;
+  protected static final boolean TREE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isId() <em>Id</em>}' attribute.
+   * The cached value of the '{@link #isTree() <em>Tree</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isId()
+   * @see #isTree()
    * @generated
    * @ordered
    */
-  protected boolean id = ID_EDEFAULT;
+  protected boolean tree = TREE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getCriteria() <em>Criteria</em>}' containment reference list.
@@ -96,9 +96,9 @@ public class SortImpl extends SortResourcesImpl implements Sort
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isId()
+  public boolean isTree()
   {
-    return id;
+    return tree;
   }
 
   /**
@@ -106,12 +106,12 @@ public class SortImpl extends SortResourcesImpl implements Sort
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(boolean newId)
+  public void setTree(boolean newTree)
   {
-    boolean oldId = id;
-    id = newId;
+    boolean oldTree = tree;
+    tree = newTree;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.SORT__ID, oldId, id));
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.SORT__TREE, oldTree, tree));
   }
 
   /**
@@ -154,8 +154,8 @@ public class SortImpl extends SortResourcesImpl implements Sort
   {
     switch (featureID)
     {
-      case ProjectPackage.SORT__ID:
-        return isId();
+      case ProjectPackage.SORT__TREE:
+        return isTree();
       case ProjectPackage.SORT__CRITERIA:
         return getCriteria();
     }
@@ -173,8 +173,8 @@ public class SortImpl extends SortResourcesImpl implements Sort
   {
     switch (featureID)
     {
-      case ProjectPackage.SORT__ID:
-        setId((Boolean)newValue);
+      case ProjectPackage.SORT__TREE:
+        setTree((Boolean)newValue);
         return;
       case ProjectPackage.SORT__CRITERIA:
         getCriteria().clear();
@@ -194,8 +194,8 @@ public class SortImpl extends SortResourcesImpl implements Sort
   {
     switch (featureID)
     {
-      case ProjectPackage.SORT__ID:
-        setId(ID_EDEFAULT);
+      case ProjectPackage.SORT__TREE:
+        setTree(TREE_EDEFAULT);
         return;
       case ProjectPackage.SORT__CRITERIA:
         getCriteria().clear();
@@ -214,8 +214,8 @@ public class SortImpl extends SortResourcesImpl implements Sort
   {
     switch (featureID)
     {
-      case ProjectPackage.SORT__ID:
-        return id != ID_EDEFAULT;
+      case ProjectPackage.SORT__TREE:
+        return tree != TREE_EDEFAULT;
       case ProjectPackage.SORT__CRITERIA:
         return criteria != null && !criteria.isEmpty();
     }
@@ -233,8 +233,8 @@ public class SortImpl extends SortResourcesImpl implements Sort
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (id: ");
-    result.append(id);
+    result.append(" (tree: ");
+    result.append(tree);
     result.append(')');
     return result.toString();
   }

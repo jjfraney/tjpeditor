@@ -1,0 +1,16 @@
+project "test project" 2011-12-11 + 4 m { }
+
+task firstTask "First Task" {
+  task midTask "Mid Task" { }
+}
+
+taskreport  "TR 2" {
+  taskroot firstTask.midTask
+}
+taskreport  "TR 3" {
+  taskroot midTask
+}
+taskreport  "TR 3" {
+  taskroot notask
+}
+

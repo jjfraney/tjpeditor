@@ -5,7 +5,6 @@
  */
 package org.jjflyboy.tjpeditor.project;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ResourceRoot extends EObject
+public interface ResourceRoot extends ReportAttribute
 {
   /**
    * Returns the value of the '<em><b>Resource</b></em>' reference.

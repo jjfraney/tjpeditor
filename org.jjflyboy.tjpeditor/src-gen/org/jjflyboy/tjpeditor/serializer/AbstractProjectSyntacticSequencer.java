@@ -19,6 +19,7 @@ import org.jjflyboy.tjpeditor.services.ProjectGrammarAccess;
 public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected ProjectGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_AccountReport_ResourceReport_TaskReport_TextReport_AccountreportKeyword_0_or_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0;
 	protected AbstractElementAlias match_Account___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
 	protected AbstractElementAlias match_AllocateResource___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q;
 	protected AbstractElementAlias match_Booking___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q;
@@ -40,11 +41,10 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	protected AbstractElementAlias match_NikuReport___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q;
 	protected AbstractElementAlias match_Project___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q;
 	protected AbstractElementAlias match_Report___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q;
-	protected AbstractElementAlias match_ResourceReport_TaskReport_TextReport_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0;
 	protected AbstractElementAlias match_Resource___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
 	protected AbstractElementAlias match_Scenario___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
 	protected AbstractElementAlias match_Shift___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
-	protected AbstractElementAlias match_SortResources_SortTasks_SortresourcesKeyword_0_or_SorttasksKeyword_0;
+	protected AbstractElementAlias match_SortAccounts_SortJournalEntries_SortResources_SortTasks_SortaccountsKeyword_0_or_SortjournalentriesKeyword_0_or_SortresourcesKeyword_0_or_SorttasksKeyword_0;
 	protected AbstractElementAlias match_StatusStatusSheet___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
 	protected AbstractElementAlias match_SupplementAccount___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
 	protected AbstractElementAlias match_SupplementReport___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
@@ -61,6 +61,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (ProjectGrammarAccess) access;
+		match_AccountReport_ResourceReport_TaskReport_TextReport_AccountreportKeyword_0_or_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getAccountReportAccess().getAccountreportKeyword_0()), new TokenAlias(false, false, grammarAccess.getResourceReportAccess().getResourcereportKeyword_0()), new TokenAlias(false, false, grammarAccess.getTaskReportAccess().getTaskreportKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextReportAccess().getTextreportKeyword_0()));
 		match_Account___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getAccountAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getAccountAccess().getRightCurlyBracketKeyword_3_2()));
 		match_AllocateResource___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getAllocateResourceAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getAllocateResourceAccess().getRightCurlyBracketKeyword_1_2()));
 		match_Booking___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getBookingAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getBookingAccess().getRightCurlyBracketKeyword_1_2()));
@@ -82,11 +83,10 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 		match_NikuReport___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getNikuReportAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getNikuReportAccess().getRightCurlyBracketKeyword_1_2()));
 		match_Project___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getProjectAccess().getLeftCurlyBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getProjectAccess().getRightCurlyBracketKeyword_5_2()));
 		match_Report___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getReportAccess().getLeftCurlyBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getReportAccess().getRightCurlyBracketKeyword_2_2()));
-		match_ResourceReport_TaskReport_TextReport_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getResourceReportAccess().getResourcereportKeyword_0()), new TokenAlias(false, false, grammarAccess.getTaskReportAccess().getTaskreportKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextReportAccess().getTextreportKeyword_0()));
 		match_Resource___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getResourceAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getResourceAccess().getRightCurlyBracketKeyword_3_2()));
 		match_Scenario___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getScenarioAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getScenarioAccess().getRightCurlyBracketKeyword_3_2()));
 		match_Shift___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getShiftAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getShiftAccess().getRightCurlyBracketKeyword_3_2()));
-		match_SortResources_SortTasks_SortresourcesKeyword_0_or_SorttasksKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getSortResourcesAccess().getSortresourcesKeyword_0()), new TokenAlias(false, false, grammarAccess.getSortTasksAccess().getSorttasksKeyword_0()));
+		match_SortAccounts_SortJournalEntries_SortResources_SortTasks_SortaccountsKeyword_0_or_SortjournalentriesKeyword_0_or_SortresourcesKeyword_0_or_SorttasksKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getSortAccountsAccess().getSortaccountsKeyword_0()), new TokenAlias(false, false, grammarAccess.getSortJournalEntriesAccess().getSortjournalentriesKeyword_0()), new TokenAlias(false, false, grammarAccess.getSortResourcesAccess().getSortresourcesKeyword_0()), new TokenAlias(false, false, grammarAccess.getSortTasksAccess().getSorttasksKeyword_0()));
 		match_StatusStatusSheet___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getStatusStatusSheetAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getStatusStatusSheetAccess().getRightCurlyBracketKeyword_3_2()));
 		match_SupplementAccount___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSupplementAccountAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getSupplementAccountAccess().getRightCurlyBracketKeyword_3_2()));
 		match_SupplementReport___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getSupplementReportAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getSupplementReportAccess().getRightCurlyBracketKeyword_3_2()));
@@ -113,7 +113,9 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Account___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
+			if(match_AccountReport_ResourceReport_TaskReport_TextReport_AccountreportKeyword_0_or_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0.equals(syntax))
+				emit_AccountReport_ResourceReport_TaskReport_TextReport_AccountreportKeyword_0_or_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Account___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
 				emit_Account___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_AllocateResource___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q.equals(syntax))
 				emit_AllocateResource___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -155,16 +157,14 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 				emit_Project___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Report___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
 				emit_Report___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ResourceReport_TaskReport_TextReport_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0.equals(syntax))
-				emit_ResourceReport_TaskReport_TextReport_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Resource___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
 				emit_Resource___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Scenario___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
 				emit_Scenario___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Shift___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
 				emit_Shift___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_SortResources_SortTasks_SortresourcesKeyword_0_or_SorttasksKeyword_0.equals(syntax))
-				emit_SortResources_SortTasks_SortresourcesKeyword_0_or_SorttasksKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_SortAccounts_SortJournalEntries_SortResources_SortTasks_SortaccountsKeyword_0_or_SortjournalentriesKeyword_0_or_SortresourcesKeyword_0_or_SorttasksKeyword_0.equals(syntax))
+				emit_SortAccounts_SortJournalEntries_SortResources_SortTasks_SortaccountsKeyword_0_or_SortjournalentriesKeyword_0_or_SortresourcesKeyword_0_or_SorttasksKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_StatusStatusSheet___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
 				emit_StatusStatusSheet___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_SupplementAccount___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
@@ -195,6 +195,14 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 
 	/**
 	 * Syntax:
+	 *     'taskreport' | 'accountreport' | 'textreport' | 'resourcereport'
+	 */
+	protected void emit_AccountReport_ResourceReport_TaskReport_TextReport_AccountreportKeyword_0_or_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
 	 *     ('{' '}')?
 	 */
 	protected void emit_Account___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -223,12 +231,12 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	     'prolog' | 
 	     'footer' | 
 	     'left' | 
-	     'headline' | 
+	     'right' | 
+	     'epilog' | 
 	     'header' | 
 	     'center' | 
 	     'caption' | 
-	     'epilog' | 
-	     'right'
+	     'headline'
 	 )
 	 */
 	protected void emit_Caption_Center_Epilog_Footer_Header_Headline_Left_Prolog_Right_CaptionKeyword_0_or_CenterKeyword_0_or_EpilogKeyword_0_or_FooterKeyword_0_or_HeaderKeyword_0_or_HeadlineKeyword_0_or_LeftKeyword_0_or_PrologKeyword_0_or_RightKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -248,12 +256,12 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	 *     (
 	     'monthlymax' | 
 	     'weeklymin' | 
-	     'minimum' | 
-	     'monthlymin' | 
 	     'weeklymax' | 
+	     'monthlymin' | 
 	     'maximum' | 
 	     'dailymax' | 
-	     'dailymin'
+	     'dailymin' | 
+	     'minimum'
 	 )
 	 */
 	protected void emit_DailyMax_DailyMin_Maximum_Minimum_MonthlyMax_MonthlyMin_WeeklyMax_WeeklyMin_DailymaxKeyword_0_or_DailyminKeyword_0_or_MaximumKeyword_0_or_MinimumKeyword_0_or_MonthlymaxKeyword_0_or_MonthlyminKeyword_0_or_WeeklymaxKeyword_0_or_WeeklyminKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -262,7 +270,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'depends' | 'precedes'
+	 *     'precedes' | 'depends'
 	 */
 	protected void emit_Depends_Precedes_DependsKeyword_0_or_PrecedesKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -302,7 +310,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'richtext' | 'date' | 'reference' | 'text'
+	 *     'text' | 'richtext' | 'reference' | 'date'
 	 */
 	protected void emit_Extend_DateKeyword_0_1_or_ReferenceKeyword_0_0_or_RichtextKeyword_0_2_or_TextKeyword_0_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -382,14 +390,6 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'textreport' | 'taskreport' | 'resourcereport'
-	 */
-	protected void emit_ResourceReport_TaskReport_TextReport_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
 	 *     ('{' '}')?
 	 */
 	protected void emit_Resource___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -414,9 +414,9 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'sortresources' | 'sorttasks'
+	 *     'sortaccounts' | 'sortjournalentries' | 'sorttasks' | 'sortresources'
 	 */
-	protected void emit_SortResources_SortTasks_SortresourcesKeyword_0_or_SorttasksKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_SortAccounts_SortJournalEntries_SortResources_SortTasks_SortaccountsKeyword_0_or_SortjournalentriesKeyword_0_or_SortresourcesKeyword_0_or_SorttasksKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

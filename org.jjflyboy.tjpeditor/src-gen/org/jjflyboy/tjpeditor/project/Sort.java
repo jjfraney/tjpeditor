@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Sort#isId <em>Id</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.Sort#isTree <em>Tree</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.Sort#getCriteria <em>Criteria</em>}</li>
  * </ul>
  * </p>
@@ -24,33 +24,33 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Sort extends SortResources, SortTasks
+public interface Sort extends SortAccounts, SortJournalEntries, SortResources, SortTasks
 {
   /**
-   * Returns the value of the '<em><b>Id</b></em>' attribute.
+   * Returns the value of the '<em><b>Tree</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Id</em>' attribute isn't clear,
+   * If the meaning of the '<em>Tree</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Id</em>' attribute.
-   * @see #setId(boolean)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getSort_Id()
+   * @return the value of the '<em>Tree</em>' attribute.
+   * @see #setTree(boolean)
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getSort_Tree()
    * @model
    * @generated
    */
-  boolean isId();
+  boolean isTree();
 
   /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Sort#isId <em>Id</em>}' attribute.
+   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Sort#isTree <em>Tree</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Id</em>' attribute.
-   * @see #isId()
+   * @param value the new value of the '<em>Tree</em>' attribute.
+   * @see #isTree()
    * @generated
    */
-  void setId(boolean value);
+  void setTree(boolean value);
 
   /**
    * Returns the value of the '<em><b>Criteria</b></em>' containment reference list.

@@ -61,25 +61,26 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GlobalAttribute");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cAccountParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cBalanceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cCopyrightParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cExportParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cFlagsParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cLimitsParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cRateParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cResourceReportParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cTaskReportParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cTextReportParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cResourceParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cShiftParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cSupplementAccountParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cSupplementReportParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cSupplementResourceParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cSupplementTaskParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
-		private final RuleCall cTagFileParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cTaskParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
-		private final RuleCall cTrackingScenarioParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
-		private final RuleCall cVacationParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cAccountReportParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cBalanceParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cCopyrightParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cExportParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cFlagsParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cLimitsParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cRateParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cResourceReportParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cTaskReportParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cTextReportParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cResourceParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cShiftParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cSupplementAccountParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cSupplementReportParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cSupplementResourceParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cSupplementTaskParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cTagFileParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cTaskParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cTrackingScenarioParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cVacationParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
 		
 		//GlobalAttribute:
 		//	Account //	| Macro
@@ -89,9 +90,9 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//	//	| StatusSheetReport
 		//	//	| Timesheet
 		//	//	| TimesheetReport
-		//	| Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
-		//	SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario |
-		//	Vacation;
+		//	| AccountReport | Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport |
+		//	Resource | Shift | SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task |
+		//	TrackingScenario | Vacation;
 		public ParserRule getRule() { return rule; }
 
 		//Account //	| Macro
@@ -101,70 +102,101 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		////	| StatusSheetReport
 		////	| Timesheet
 		////	| TimesheetReport
-		//| Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
-		//SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario |
-		//Vacation
+		//| AccountReport | Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport |
+		//Resource | Shift | SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task |
+		//TrackingScenario | Vacation
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Account
 		public RuleCall getAccountParserRuleCall_0() { return cAccountParserRuleCall_0; }
 
+		//AccountReport
+		public RuleCall getAccountReportParserRuleCall_1() { return cAccountReportParserRuleCall_1; }
+
 		//Balance
-		public RuleCall getBalanceParserRuleCall_1() { return cBalanceParserRuleCall_1; }
+		public RuleCall getBalanceParserRuleCall_2() { return cBalanceParserRuleCall_2; }
 
 		//Copyright
-		public RuleCall getCopyrightParserRuleCall_2() { return cCopyrightParserRuleCall_2; }
+		public RuleCall getCopyrightParserRuleCall_3() { return cCopyrightParserRuleCall_3; }
 
 		//Export
-		public RuleCall getExportParserRuleCall_3() { return cExportParserRuleCall_3; }
+		public RuleCall getExportParserRuleCall_4() { return cExportParserRuleCall_4; }
 
 		//Flags
-		public RuleCall getFlagsParserRuleCall_4() { return cFlagsParserRuleCall_4; }
+		public RuleCall getFlagsParserRuleCall_5() { return cFlagsParserRuleCall_5; }
 
 		//Limits
-		public RuleCall getLimitsParserRuleCall_5() { return cLimitsParserRuleCall_5; }
+		public RuleCall getLimitsParserRuleCall_6() { return cLimitsParserRuleCall_6; }
 
 		//Rate
-		public RuleCall getRateParserRuleCall_6() { return cRateParserRuleCall_6; }
+		public RuleCall getRateParserRuleCall_7() { return cRateParserRuleCall_7; }
 
 		//ResourceReport
-		public RuleCall getResourceReportParserRuleCall_7() { return cResourceReportParserRuleCall_7; }
+		public RuleCall getResourceReportParserRuleCall_8() { return cResourceReportParserRuleCall_8; }
 
 		//TaskReport
-		public RuleCall getTaskReportParserRuleCall_8() { return cTaskReportParserRuleCall_8; }
+		public RuleCall getTaskReportParserRuleCall_9() { return cTaskReportParserRuleCall_9; }
 
 		//TextReport
-		public RuleCall getTextReportParserRuleCall_9() { return cTextReportParserRuleCall_9; }
+		public RuleCall getTextReportParserRuleCall_10() { return cTextReportParserRuleCall_10; }
 
 		//Resource
-		public RuleCall getResourceParserRuleCall_10() { return cResourceParserRuleCall_10; }
+		public RuleCall getResourceParserRuleCall_11() { return cResourceParserRuleCall_11; }
 
 		//Shift
-		public RuleCall getShiftParserRuleCall_11() { return cShiftParserRuleCall_11; }
+		public RuleCall getShiftParserRuleCall_12() { return cShiftParserRuleCall_12; }
 
 		//SupplementAccount
-		public RuleCall getSupplementAccountParserRuleCall_12() { return cSupplementAccountParserRuleCall_12; }
+		public RuleCall getSupplementAccountParserRuleCall_13() { return cSupplementAccountParserRuleCall_13; }
 
 		//SupplementReport
-		public RuleCall getSupplementReportParserRuleCall_13() { return cSupplementReportParserRuleCall_13; }
+		public RuleCall getSupplementReportParserRuleCall_14() { return cSupplementReportParserRuleCall_14; }
 
 		//SupplementResource
-		public RuleCall getSupplementResourceParserRuleCall_14() { return cSupplementResourceParserRuleCall_14; }
+		public RuleCall getSupplementResourceParserRuleCall_15() { return cSupplementResourceParserRuleCall_15; }
 
 		//SupplementTask
-		public RuleCall getSupplementTaskParserRuleCall_15() { return cSupplementTaskParserRuleCall_15; }
+		public RuleCall getSupplementTaskParserRuleCall_16() { return cSupplementTaskParserRuleCall_16; }
 
 		//TagFile
-		public RuleCall getTagFileParserRuleCall_16() { return cTagFileParserRuleCall_16; }
+		public RuleCall getTagFileParserRuleCall_17() { return cTagFileParserRuleCall_17; }
 
 		//Task
-		public RuleCall getTaskParserRuleCall_17() { return cTaskParserRuleCall_17; }
+		public RuleCall getTaskParserRuleCall_18() { return cTaskParserRuleCall_18; }
 
 		//TrackingScenario
-		public RuleCall getTrackingScenarioParserRuleCall_18() { return cTrackingScenarioParserRuleCall_18; }
+		public RuleCall getTrackingScenarioParserRuleCall_19() { return cTrackingScenarioParserRuleCall_19; }
 
 		//Vacation
-		public RuleCall getVacationParserRuleCall_19() { return cVacationParserRuleCall_19; }
+		public RuleCall getVacationParserRuleCall_20() { return cVacationParserRuleCall_20; }
+	}
+
+	public class AbsoluteIdElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AbsoluteId");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//AbsoluteId:
+		//	ID ("." ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//ID ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
 
 	public class AccountElements extends AbstractParserRuleElementFinder {
@@ -242,6 +274,54 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Flags
 		public RuleCall getFlagsParserRuleCall_2() { return cFlagsParserRuleCall_2; }
+	}
+
+	public class AccountReportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AccountReport");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAccountreportKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cReportParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		//AccountReport:
+		//	"accountreport" Report;
+		public ParserRule getRule() { return rule; }
+
+		//"accountreport" Report
+		public Group getGroup() { return cGroup; }
+
+		//"accountreport"
+		public Keyword getAccountreportKeyword_0() { return cAccountreportKeyword_0; }
+
+		//Report
+		public RuleCall getReportParserRuleCall_1() { return cReportParserRuleCall_1; }
+	}
+
+	public class AccountRootElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AccountRoot");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAccountrootKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cAccountAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cAccountAccountCrossReference_1_0 = (CrossReference)cAccountAssignment_1.eContents().get(0);
+		private final RuleCall cAccountAccountAbsoluteIdParserRuleCall_1_0_1 = (RuleCall)cAccountAccountCrossReference_1_0.eContents().get(1);
+		
+		//AccountRoot:
+		//	"accountroot" account=[Account|AbsoluteId];
+		public ParserRule getRule() { return rule; }
+
+		//"accountroot" account=[Account|AbsoluteId]
+		public Group getGroup() { return cGroup; }
+
+		//"accountroot"
+		public Keyword getAccountrootKeyword_0() { return cAccountrootKeyword_0; }
+
+		//account=[Account|AbsoluteId]
+		public Assignment getAccountAssignment_1() { return cAccountAssignment_1; }
+
+		//[Account|AbsoluteId]
+		public CrossReference getAccountAccountCrossReference_1_0() { return cAccountAccountCrossReference_1_0; }
+
+		//AbsoluteId
+		public RuleCall getAccountAccountAbsoluteIdParserRuleCall_1_0_1() { return cAccountAccountAbsoluteIdParserRuleCall_1_0_1; }
 	}
 
 	public class ProjectElements extends AbstractParserRuleElementFinder {
@@ -665,139 +745,201 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	public class ReportAttributeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ReportAttribute");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cBalanceParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cCaptionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cCenterParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cColumnsParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cEndParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cEpilogParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cFlagsParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cFooterParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cFormatsParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cHeaderParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cHeadlineParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cJournalModeParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cLeftParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cLoadUnitParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cPeriodParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cPrologParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
-		private final RuleCall cResourceReportParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cTaskReportParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
-		private final RuleCall cTextReportParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
-		private final RuleCall cPurgeReportParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
-		private final RuleCall cRightParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
-		private final RuleCall cScenariosParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
-		private final RuleCall cSelfContainedParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
-		private final RuleCall cSortResourcesParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
-		private final RuleCall cSortTasksParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
-		private final RuleCall cStartParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
-		private final RuleCall cTaskRootParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
-		private final RuleCall cTimeFormatParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
-		private final RuleCall cTitleParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
+		private final RuleCall cAccountRootParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cBalanceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cCaptionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cCenterParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cColumnsParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cCurrencyFormatParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cEndParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cEpilogParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cFlagsParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cFooterParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cFormatsParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cHeaderParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cHeadlineParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cHideAccountParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cHideJournalEntryParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cHideResourceParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cHideTaskParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cJournalAttributesParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cJournalModeParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cLeftParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cLoadUnitParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
+		private final RuleCall cNumberFormatParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
+		private final RuleCall cPeriodParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
+		private final RuleCall cPrologParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
+		private final RuleCall cAccountReportParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cResourceReportParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cTaskReportParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
+		private final RuleCall cTextReportParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
+		private final RuleCall cPurgeReportParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
+		private final RuleCall cResourceRootParserRuleCall_29 = (RuleCall)cAlternatives.eContents().get(29);
+		private final RuleCall cRightParserRuleCall_30 = (RuleCall)cAlternatives.eContents().get(30);
+		private final RuleCall cRollupAccountParserRuleCall_31 = (RuleCall)cAlternatives.eContents().get(31);
+		private final RuleCall cRollupResourceParserRuleCall_32 = (RuleCall)cAlternatives.eContents().get(32);
+		private final RuleCall cRollupTaskParserRuleCall_33 = (RuleCall)cAlternatives.eContents().get(33);
+		private final RuleCall cScenariosParserRuleCall_34 = (RuleCall)cAlternatives.eContents().get(34);
+		private final RuleCall cSelfContainedParserRuleCall_35 = (RuleCall)cAlternatives.eContents().get(35);
+		private final RuleCall cSortAccountsParserRuleCall_36 = (RuleCall)cAlternatives.eContents().get(36);
+		private final RuleCall cSortJournalEntriesParserRuleCall_37 = (RuleCall)cAlternatives.eContents().get(37);
+		private final RuleCall cSortResourcesParserRuleCall_38 = (RuleCall)cAlternatives.eContents().get(38);
+		private final RuleCall cSortTasksParserRuleCall_39 = (RuleCall)cAlternatives.eContents().get(39);
+		private final RuleCall cStartParserRuleCall_40 = (RuleCall)cAlternatives.eContents().get(40);
+		private final RuleCall cTaskRootParserRuleCall_41 = (RuleCall)cAlternatives.eContents().get(41);
+		private final RuleCall cTimeFormatParserRuleCall_42 = (RuleCall)cAlternatives.eContents().get(42);
+		private final RuleCall cTimezoneParserRuleCall_43 = (RuleCall)cAlternatives.eContents().get(43);
+		private final RuleCall cTitleParserRuleCall_44 = (RuleCall)cAlternatives.eContents().get(44);
 		
 		//ReportAttribute:
-		//	Balance //	| HideResource
-		//	//	| HideTask
-		//	//	| RollupTask
-		//	| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
-		//	LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | PurgeReport | Right | Scenarios |
-		//	SelfContained | SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title;
+		//	AccountRoot | Balance | Caption | Center | Columns | CurrencyFormat | End | Epilog | Flags | Footer | Formats | Header
+		//	| Headline | HideAccount | HideJournalEntry | HideResource | HideTask | JournalAttributes | JournalMode | Left |
+		//	LoadUnit | NumberFormat | Period | Prolog | AccountReport | ResourceReport | TaskReport | TextReport | PurgeReport |
+		//	ResourceRoot | Right | RollupAccount | RollupResource | RollupTask | Scenarios | SelfContained | SortAccounts |
+		//	SortJournalEntries | SortResources | SortTasks | Start | TaskRoot | TimeFormat | Timezone | Title;
 		public ParserRule getRule() { return rule; }
 
-		//Balance //	| HideResource
-		////	| HideTask
-		////	| RollupTask
-		//| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
-		//LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | PurgeReport | Right | Scenarios | SelfContained
-		//| SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title
+		//AccountRoot | Balance | Caption | Center | Columns | CurrencyFormat | End | Epilog | Flags | Footer | Formats | Header |
+		//Headline | HideAccount | HideJournalEntry | HideResource | HideTask | JournalAttributes | JournalMode | Left | LoadUnit
+		//| NumberFormat | Period | Prolog | AccountReport | ResourceReport | TaskReport | TextReport | PurgeReport |
+		//ResourceRoot | Right | RollupAccount | RollupResource | RollupTask | Scenarios | SelfContained | SortAccounts |
+		//SortJournalEntries | SortResources | SortTasks | Start | TaskRoot | TimeFormat | Timezone | Title
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//AccountRoot
+		public RuleCall getAccountRootParserRuleCall_0() { return cAccountRootParserRuleCall_0; }
+
 		//Balance
-		public RuleCall getBalanceParserRuleCall_0() { return cBalanceParserRuleCall_0; }
+		public RuleCall getBalanceParserRuleCall_1() { return cBalanceParserRuleCall_1; }
 
 		//Caption
-		public RuleCall getCaptionParserRuleCall_1() { return cCaptionParserRuleCall_1; }
+		public RuleCall getCaptionParserRuleCall_2() { return cCaptionParserRuleCall_2; }
 
 		//Center
-		public RuleCall getCenterParserRuleCall_2() { return cCenterParserRuleCall_2; }
+		public RuleCall getCenterParserRuleCall_3() { return cCenterParserRuleCall_3; }
 
 		//Columns
-		public RuleCall getColumnsParserRuleCall_3() { return cColumnsParserRuleCall_3; }
+		public RuleCall getColumnsParserRuleCall_4() { return cColumnsParserRuleCall_4; }
+
+		//CurrencyFormat
+		public RuleCall getCurrencyFormatParserRuleCall_5() { return cCurrencyFormatParserRuleCall_5; }
 
 		//End
-		public RuleCall getEndParserRuleCall_4() { return cEndParserRuleCall_4; }
+		public RuleCall getEndParserRuleCall_6() { return cEndParserRuleCall_6; }
 
 		//Epilog
-		public RuleCall getEpilogParserRuleCall_5() { return cEpilogParserRuleCall_5; }
+		public RuleCall getEpilogParserRuleCall_7() { return cEpilogParserRuleCall_7; }
 
 		//Flags
-		public RuleCall getFlagsParserRuleCall_6() { return cFlagsParserRuleCall_6; }
+		public RuleCall getFlagsParserRuleCall_8() { return cFlagsParserRuleCall_8; }
 
 		//Footer
-		public RuleCall getFooterParserRuleCall_7() { return cFooterParserRuleCall_7; }
+		public RuleCall getFooterParserRuleCall_9() { return cFooterParserRuleCall_9; }
 
 		//Formats
-		public RuleCall getFormatsParserRuleCall_8() { return cFormatsParserRuleCall_8; }
+		public RuleCall getFormatsParserRuleCall_10() { return cFormatsParserRuleCall_10; }
 
 		//Header
-		public RuleCall getHeaderParserRuleCall_9() { return cHeaderParserRuleCall_9; }
+		public RuleCall getHeaderParserRuleCall_11() { return cHeaderParserRuleCall_11; }
 
 		//Headline
-		public RuleCall getHeadlineParserRuleCall_10() { return cHeadlineParserRuleCall_10; }
+		public RuleCall getHeadlineParserRuleCall_12() { return cHeadlineParserRuleCall_12; }
+
+		//HideAccount
+		public RuleCall getHideAccountParserRuleCall_13() { return cHideAccountParserRuleCall_13; }
+
+		//HideJournalEntry
+		public RuleCall getHideJournalEntryParserRuleCall_14() { return cHideJournalEntryParserRuleCall_14; }
+
+		//HideResource
+		public RuleCall getHideResourceParserRuleCall_15() { return cHideResourceParserRuleCall_15; }
+
+		//HideTask
+		public RuleCall getHideTaskParserRuleCall_16() { return cHideTaskParserRuleCall_16; }
+
+		//JournalAttributes
+		public RuleCall getJournalAttributesParserRuleCall_17() { return cJournalAttributesParserRuleCall_17; }
 
 		//JournalMode
-		public RuleCall getJournalModeParserRuleCall_11() { return cJournalModeParserRuleCall_11; }
+		public RuleCall getJournalModeParserRuleCall_18() { return cJournalModeParserRuleCall_18; }
 
 		//Left
-		public RuleCall getLeftParserRuleCall_12() { return cLeftParserRuleCall_12; }
+		public RuleCall getLeftParserRuleCall_19() { return cLeftParserRuleCall_19; }
 
 		//LoadUnit
-		public RuleCall getLoadUnitParserRuleCall_13() { return cLoadUnitParserRuleCall_13; }
+		public RuleCall getLoadUnitParserRuleCall_20() { return cLoadUnitParserRuleCall_20; }
+
+		//NumberFormat
+		public RuleCall getNumberFormatParserRuleCall_21() { return cNumberFormatParserRuleCall_21; }
 
 		//Period
-		public RuleCall getPeriodParserRuleCall_14() { return cPeriodParserRuleCall_14; }
+		public RuleCall getPeriodParserRuleCall_22() { return cPeriodParserRuleCall_22; }
 
 		//Prolog
-		public RuleCall getPrologParserRuleCall_15() { return cPrologParserRuleCall_15; }
+		public RuleCall getPrologParserRuleCall_23() { return cPrologParserRuleCall_23; }
+
+		//AccountReport
+		public RuleCall getAccountReportParserRuleCall_24() { return cAccountReportParserRuleCall_24; }
 
 		//ResourceReport
-		public RuleCall getResourceReportParserRuleCall_16() { return cResourceReportParserRuleCall_16; }
+		public RuleCall getResourceReportParserRuleCall_25() { return cResourceReportParserRuleCall_25; }
 
 		//TaskReport
-		public RuleCall getTaskReportParserRuleCall_17() { return cTaskReportParserRuleCall_17; }
+		public RuleCall getTaskReportParserRuleCall_26() { return cTaskReportParserRuleCall_26; }
 
 		//TextReport
-		public RuleCall getTextReportParserRuleCall_18() { return cTextReportParserRuleCall_18; }
+		public RuleCall getTextReportParserRuleCall_27() { return cTextReportParserRuleCall_27; }
 
 		//PurgeReport
-		public RuleCall getPurgeReportParserRuleCall_19() { return cPurgeReportParserRuleCall_19; }
+		public RuleCall getPurgeReportParserRuleCall_28() { return cPurgeReportParserRuleCall_28; }
+
+		//ResourceRoot
+		public RuleCall getResourceRootParserRuleCall_29() { return cResourceRootParserRuleCall_29; }
 
 		//Right
-		public RuleCall getRightParserRuleCall_20() { return cRightParserRuleCall_20; }
+		public RuleCall getRightParserRuleCall_30() { return cRightParserRuleCall_30; }
+
+		//RollupAccount
+		public RuleCall getRollupAccountParserRuleCall_31() { return cRollupAccountParserRuleCall_31; }
+
+		//RollupResource
+		public RuleCall getRollupResourceParserRuleCall_32() { return cRollupResourceParserRuleCall_32; }
+
+		//RollupTask
+		public RuleCall getRollupTaskParserRuleCall_33() { return cRollupTaskParserRuleCall_33; }
 
 		//Scenarios
-		public RuleCall getScenariosParserRuleCall_21() { return cScenariosParserRuleCall_21; }
+		public RuleCall getScenariosParserRuleCall_34() { return cScenariosParserRuleCall_34; }
 
 		//SelfContained
-		public RuleCall getSelfContainedParserRuleCall_22() { return cSelfContainedParserRuleCall_22; }
+		public RuleCall getSelfContainedParserRuleCall_35() { return cSelfContainedParserRuleCall_35; }
+
+		//SortAccounts
+		public RuleCall getSortAccountsParserRuleCall_36() { return cSortAccountsParserRuleCall_36; }
+
+		//SortJournalEntries
+		public RuleCall getSortJournalEntriesParserRuleCall_37() { return cSortJournalEntriesParserRuleCall_37; }
 
 		//SortResources
-		public RuleCall getSortResourcesParserRuleCall_23() { return cSortResourcesParserRuleCall_23; }
+		public RuleCall getSortResourcesParserRuleCall_38() { return cSortResourcesParserRuleCall_38; }
 
 		//SortTasks
-		public RuleCall getSortTasksParserRuleCall_24() { return cSortTasksParserRuleCall_24; }
+		public RuleCall getSortTasksParserRuleCall_39() { return cSortTasksParserRuleCall_39; }
 
 		//Start
-		public RuleCall getStartParserRuleCall_25() { return cStartParserRuleCall_25; }
+		public RuleCall getStartParserRuleCall_40() { return cStartParserRuleCall_40; }
 
 		//TaskRoot
-		public RuleCall getTaskRootParserRuleCall_26() { return cTaskRootParserRuleCall_26; }
+		public RuleCall getTaskRootParserRuleCall_41() { return cTaskRootParserRuleCall_41; }
 
 		//TimeFormat
-		public RuleCall getTimeFormatParserRuleCall_27() { return cTimeFormatParserRuleCall_27; }
+		public RuleCall getTimeFormatParserRuleCall_42() { return cTimeFormatParserRuleCall_42; }
+
+		//Timezone
+		public RuleCall getTimezoneParserRuleCall_43() { return cTimezoneParserRuleCall_43; }
 
 		//Title
-		public RuleCall getTitleParserRuleCall_28() { return cTitleParserRuleCall_28; }
+		public RuleCall getTitleParserRuleCall_44() { return cTitleParserRuleCall_44; }
 	}
 
 	public class IcalReportElements extends AbstractParserRuleElementFinder {
@@ -1735,14 +1877,14 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cExpressionLogicalExpressionParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
 		private final Assignment cColorAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cColorSTRINGTerminalRuleCall_2_0 = (RuleCall)cColorAssignment_2.eContents().get(0);
+		private final RuleCall cColorRGBParserRuleCall_2_0 = (RuleCall)cColorAssignment_2.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
 		//CellColor:
-		//	"cellcolor" expression=LogicalExpression color=STRING;
+		//	"cellcolor" expression=LogicalExpression color=RGB;
 		public ParserRule getRule() { return rule; }
 
-		//"cellcolor" expression=LogicalExpression color=STRING
+		//"cellcolor" expression=LogicalExpression color=RGB
 		public Group getGroup() { return cGroup; }
 
 		//"cellcolor"
@@ -1754,11 +1896,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//LogicalExpression
 		public RuleCall getExpressionLogicalExpressionParserRuleCall_1_0() { return cExpressionLogicalExpressionParserRuleCall_1_0; }
 
-		//color=STRING
+		//color=RGB
 		public Assignment getColorAssignment_2() { return cColorAssignment_2; }
 
-		//STRING
-		public RuleCall getColorSTRINGTerminalRuleCall_2_0() { return cColorSTRINGTerminalRuleCall_2_0; }
+		//RGB
+		public RuleCall getColorRGBParserRuleCall_2_0() { return cColorRGBParserRuleCall_2_0; }
 	}
 
 	public class CellTextElements extends AbstractParserRuleElementFinder {
@@ -2982,25 +3124,54 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRichTextParserRuleCall_1() { return cRichTextParserRuleCall_1; }
 	}
 
+	public class HideAccountElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HideAccount");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHideaccountKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExpressionLogicalFlagExpressionParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
+		
+		//// http://www.taskjuggler.org/tj3/manual/hidejournalentry.html
+		//HideAccount:
+		//	"hideaccount" expression=LogicalFlagExpression;
+		public ParserRule getRule() { return rule; }
+
+		//"hideaccount" expression=LogicalFlagExpression
+		public Group getGroup() { return cGroup; }
+
+		//"hideaccount"
+		public Keyword getHideaccountKeyword_0() { return cHideaccountKeyword_0; }
+
+		//expression=LogicalFlagExpression
+		public Assignment getExpressionAssignment_1() { return cExpressionAssignment_1; }
+
+		//LogicalFlagExpression
+		public RuleCall getExpressionLogicalFlagExpressionParserRuleCall_1_0() { return cExpressionLogicalFlagExpressionParserRuleCall_1_0; }
+	}
+
 	public class HideJournalEntryElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HideJournalEntry");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHidejournalentryKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cLogicalFlagExpressionParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExpressionLogicalFlagExpressionParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/hidejournalentry.html
 		//HideJournalEntry:
-		//	"hidejournalentry" LogicalFlagExpression;
+		//	"hidejournalentry" expression=LogicalFlagExpression;
 		public ParserRule getRule() { return rule; }
 
-		//"hidejournalentry" LogicalFlagExpression
+		//"hidejournalentry" expression=LogicalFlagExpression
 		public Group getGroup() { return cGroup; }
 
 		//"hidejournalentry"
 		public Keyword getHidejournalentryKeyword_0() { return cHidejournalentryKeyword_0; }
 
+		//expression=LogicalFlagExpression
+		public Assignment getExpressionAssignment_1() { return cExpressionAssignment_1; }
+
 		//LogicalFlagExpression
-		public RuleCall getLogicalFlagExpressionParserRuleCall_1() { return cLogicalFlagExpressionParserRuleCall_1; }
+		public RuleCall getExpressionLogicalFlagExpressionParserRuleCall_1_0() { return cExpressionLogicalFlagExpressionParserRuleCall_1_0; }
 	}
 
 	public class HideReportElements extends AbstractParserRuleElementFinder {
@@ -3340,30 +3511,34 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class JournalAttributesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "JournalAttributes");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cAllAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Keyword cAllAsteriskKeyword_0_0 = (Keyword)cAllAssignment_0.eContents().get(0);
-		private final Assignment cNoneAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cNoneHyphenMinusKeyword_1_0 = (Keyword)cNoneAssignment_1.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cAlternatives.eContents().get(2);
-		private final Assignment cFlagsAssignment_2_0 = (Assignment)cUnorderedGroup_2.eContents().get(0);
-		private final Keyword cFlagsFlagsKeyword_2_0_0 = (Keyword)cFlagsAssignment_2_0.eContents().get(0);
-		private final Assignment cPropertyAssignment_2_1 = (Assignment)cUnorderedGroup_2.eContents().get(1);
-		private final Keyword cPropertyPropertyKeyword_2_1_0 = (Keyword)cPropertyAssignment_2_1.eContents().get(0);
-		private final Assignment cDetailsAssignment_2_2 = (Assignment)cUnorderedGroup_2.eContents().get(2);
-		private final Keyword cDetailsDetailsKeyword_2_2_0 = (Keyword)cDetailsAssignment_2_2.eContents().get(0);
-		private final Assignment cAuthorAssignment_2_3 = (Assignment)cUnorderedGroup_2.eContents().get(3);
-		private final Keyword cAuthorAuthorKeyword_2_3_0 = (Keyword)cAuthorAssignment_2_3.eContents().get(0);
-		private final Assignment cHeadlineAssignment_2_4 = (Assignment)cUnorderedGroup_2.eContents().get(4);
-		private final Keyword cHeadlineHeadlineKeyword_2_4_0 = (Keyword)cHeadlineAssignment_2_4.eContents().get(0);
-		private final Assignment cDateAssignment_2_5 = (Assignment)cUnorderedGroup_2.eContents().get(5);
-		private final Keyword cDateDateKeyword_2_5_0 = (Keyword)cDateAssignment_2_5.eContents().get(0);
-		private final Assignment cTimesheetAssignment_2_6 = (Assignment)cUnorderedGroup_2.eContents().get(6);
-		private final Keyword cTimesheetTimesheetKeyword_2_6_0 = (Keyword)cTimesheetAssignment_2_6.eContents().get(0);
-		private final Assignment cPropertyidAssignment_2_7 = (Assignment)cUnorderedGroup_2.eContents().get(7);
-		private final Keyword cPropertyidPropertyidKeyword_2_7_0 = (Keyword)cPropertyidAssignment_2_7.eContents().get(0);
-		private final Assignment cSummaryAssignment_2_8 = (Assignment)cUnorderedGroup_2.eContents().get(8);
-		private final Keyword cSummarySummaryKeyword_2_8_0 = (Keyword)cSummaryAssignment_2_8.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cJournalattributesKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cAllAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final Keyword cAllAsteriskKeyword_1_0_0 = (Keyword)cAllAssignment_1_0.eContents().get(0);
+		private final Assignment cNoneAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final Keyword cNoneHyphenMinusKeyword_1_1_0 = (Keyword)cNoneAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cAlternatives_1.eContents().get(2);
+		private final Action cJournalAttributesAction_1_2_0 = (Action)cGroup_1_2.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1_2_1 = (UnorderedGroup)cGroup_1_2.eContents().get(1);
+		private final Assignment cFlagsAssignment_1_2_1_0 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(0);
+		private final Keyword cFlagsFlagsKeyword_1_2_1_0_0 = (Keyword)cFlagsAssignment_1_2_1_0.eContents().get(0);
+		private final Assignment cPropertyAssignment_1_2_1_1 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(1);
+		private final Keyword cPropertyPropertyKeyword_1_2_1_1_0 = (Keyword)cPropertyAssignment_1_2_1_1.eContents().get(0);
+		private final Assignment cDetailsAssignment_1_2_1_2 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(2);
+		private final Keyword cDetailsDetailsKeyword_1_2_1_2_0 = (Keyword)cDetailsAssignment_1_2_1_2.eContents().get(0);
+		private final Assignment cAuthorAssignment_1_2_1_3 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(3);
+		private final Keyword cAuthorAuthorKeyword_1_2_1_3_0 = (Keyword)cAuthorAssignment_1_2_1_3.eContents().get(0);
+		private final Assignment cHeadlineAssignment_1_2_1_4 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(4);
+		private final Keyword cHeadlineHeadlineKeyword_1_2_1_4_0 = (Keyword)cHeadlineAssignment_1_2_1_4.eContents().get(0);
+		private final Assignment cDateAssignment_1_2_1_5 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(5);
+		private final Keyword cDateDateKeyword_1_2_1_5_0 = (Keyword)cDateAssignment_1_2_1_5.eContents().get(0);
+		private final Assignment cTimesheetAssignment_1_2_1_6 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(6);
+		private final Keyword cTimesheetTimesheetKeyword_1_2_1_6_0 = (Keyword)cTimesheetAssignment_1_2_1_6.eContents().get(0);
+		private final Assignment cPropertyidAssignment_1_2_1_7 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(7);
+		private final Keyword cPropertyidPropertyidKeyword_1_2_1_7_0 = (Keyword)cPropertyidAssignment_1_2_1_7.eContents().get(0);
+		private final Assignment cSummaryAssignment_1_2_1_8 = (Assignment)cUnorderedGroup_1_2_1.eContents().get(8);
+		private final Keyword cSummarySummaryKeyword_1_2_1_8_0 = (Keyword)cSummaryAssignment_1_2_1_8.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/isactive.html
 		//// http://www.taskjuggler.org/tj3/manual/ischildof.html
@@ -3378,83 +3553,100 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//// TODO
 		//// http://www.taskjuggler.org/tj3/manual/journalattributes.html
 		//JournalAttributes:
-		//	all?="*" | none?="-" | flags?="flags" & property?="property" & details?="details" & author?="author" &
-		//	headline?="headline" & date?="date" & timesheet?="timesheet" & propertyid?="propertyid" & summary?="summary";
+		//	"journalattributes" (all?="*" | none?="-" | {JournalAttributes} (flags?="flags"? & property?="property"? &
+		//	details?="details"? & author?="author"? & headline?="headline"? & date?="date"? & timesheet?="timesheet"? &
+		//	propertyid?="propertyid"? & summary?="summary"?));
 		public ParserRule getRule() { return rule; }
 
-		//all?="*" | none?="-" | flags?="flags" & property?="property" & details?="details" & author?="author" &
-		//headline?="headline" & date?="date" & timesheet?="timesheet" & propertyid?="propertyid" & summary?="summary"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//"journalattributes" (all?="*" | none?="-" | {JournalAttributes} (flags?="flags"? & property?="property"? &
+		//details?="details"? & author?="author"? & headline?="headline"? & date?="date"? & timesheet?="timesheet"? &
+		//propertyid?="propertyid"? & summary?="summary"?))
+		public Group getGroup() { return cGroup; }
+
+		//"journalattributes"
+		public Keyword getJournalattributesKeyword_0() { return cJournalattributesKeyword_0; }
+
+		//all?="*" | none?="-" | {JournalAttributes} (flags?="flags"? & property?="property"? & details?="details"? &
+		//author?="author"? & headline?="headline"? & date?="date"? & timesheet?="timesheet"? & propertyid?="propertyid"? &
+		//summary?="summary"?)
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//all?="*"
-		public Assignment getAllAssignment_0() { return cAllAssignment_0; }
+		public Assignment getAllAssignment_1_0() { return cAllAssignment_1_0; }
 
 		//"*"
-		public Keyword getAllAsteriskKeyword_0_0() { return cAllAsteriskKeyword_0_0; }
+		public Keyword getAllAsteriskKeyword_1_0_0() { return cAllAsteriskKeyword_1_0_0; }
 
 		//none?="-"
-		public Assignment getNoneAssignment_1() { return cNoneAssignment_1; }
+		public Assignment getNoneAssignment_1_1() { return cNoneAssignment_1_1; }
 
 		//"-"
-		public Keyword getNoneHyphenMinusKeyword_1_0() { return cNoneHyphenMinusKeyword_1_0; }
+		public Keyword getNoneHyphenMinusKeyword_1_1_0() { return cNoneHyphenMinusKeyword_1_1_0; }
 
-		//flags?="flags" & property?="property" & details?="details" & author?="author" & headline?="headline" & date?="date" &
-		//timesheet?="timesheet" & propertyid?="propertyid" & summary?="summary"
-		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
+		//{JournalAttributes} (flags?="flags"? & property?="property"? & details?="details"? & author?="author"? &
+		//headline?="headline"? & date?="date"? & timesheet?="timesheet"? & propertyid?="propertyid"? & summary?="summary"?)
+		public Group getGroup_1_2() { return cGroup_1_2; }
 
-		//flags?="flags"
-		public Assignment getFlagsAssignment_2_0() { return cFlagsAssignment_2_0; }
+		//{JournalAttributes}
+		public Action getJournalAttributesAction_1_2_0() { return cJournalAttributesAction_1_2_0; }
+
+		//flags?="flags"? & property?="property"? & details?="details"? & author?="author"? & headline?="headline"? &
+		//date?="date"? & timesheet?="timesheet"? & propertyid?="propertyid"? & summary?="summary"?
+		public UnorderedGroup getUnorderedGroup_1_2_1() { return cUnorderedGroup_1_2_1; }
+
+		//flags?="flags"?
+		public Assignment getFlagsAssignment_1_2_1_0() { return cFlagsAssignment_1_2_1_0; }
 
 		//"flags"
-		public Keyword getFlagsFlagsKeyword_2_0_0() { return cFlagsFlagsKeyword_2_0_0; }
+		public Keyword getFlagsFlagsKeyword_1_2_1_0_0() { return cFlagsFlagsKeyword_1_2_1_0_0; }
 
-		//property?="property"
-		public Assignment getPropertyAssignment_2_1() { return cPropertyAssignment_2_1; }
+		//property?="property"?
+		public Assignment getPropertyAssignment_1_2_1_1() { return cPropertyAssignment_1_2_1_1; }
 
 		//"property"
-		public Keyword getPropertyPropertyKeyword_2_1_0() { return cPropertyPropertyKeyword_2_1_0; }
+		public Keyword getPropertyPropertyKeyword_1_2_1_1_0() { return cPropertyPropertyKeyword_1_2_1_1_0; }
 
-		//details?="details"
-		public Assignment getDetailsAssignment_2_2() { return cDetailsAssignment_2_2; }
+		//details?="details"?
+		public Assignment getDetailsAssignment_1_2_1_2() { return cDetailsAssignment_1_2_1_2; }
 
 		//"details"
-		public Keyword getDetailsDetailsKeyword_2_2_0() { return cDetailsDetailsKeyword_2_2_0; }
+		public Keyword getDetailsDetailsKeyword_1_2_1_2_0() { return cDetailsDetailsKeyword_1_2_1_2_0; }
 
-		//author?="author"
-		public Assignment getAuthorAssignment_2_3() { return cAuthorAssignment_2_3; }
+		//author?="author"?
+		public Assignment getAuthorAssignment_1_2_1_3() { return cAuthorAssignment_1_2_1_3; }
 
 		//"author"
-		public Keyword getAuthorAuthorKeyword_2_3_0() { return cAuthorAuthorKeyword_2_3_0; }
+		public Keyword getAuthorAuthorKeyword_1_2_1_3_0() { return cAuthorAuthorKeyword_1_2_1_3_0; }
 
-		//headline?="headline"
-		public Assignment getHeadlineAssignment_2_4() { return cHeadlineAssignment_2_4; }
+		//headline?="headline"?
+		public Assignment getHeadlineAssignment_1_2_1_4() { return cHeadlineAssignment_1_2_1_4; }
 
 		//"headline"
-		public Keyword getHeadlineHeadlineKeyword_2_4_0() { return cHeadlineHeadlineKeyword_2_4_0; }
+		public Keyword getHeadlineHeadlineKeyword_1_2_1_4_0() { return cHeadlineHeadlineKeyword_1_2_1_4_0; }
 
-		//date?="date"
-		public Assignment getDateAssignment_2_5() { return cDateAssignment_2_5; }
+		//date?="date"?
+		public Assignment getDateAssignment_1_2_1_5() { return cDateAssignment_1_2_1_5; }
 
 		//"date"
-		public Keyword getDateDateKeyword_2_5_0() { return cDateDateKeyword_2_5_0; }
+		public Keyword getDateDateKeyword_1_2_1_5_0() { return cDateDateKeyword_1_2_1_5_0; }
 
-		//timesheet?="timesheet"
-		public Assignment getTimesheetAssignment_2_6() { return cTimesheetAssignment_2_6; }
+		//timesheet?="timesheet"?
+		public Assignment getTimesheetAssignment_1_2_1_6() { return cTimesheetAssignment_1_2_1_6; }
 
 		//"timesheet"
-		public Keyword getTimesheetTimesheetKeyword_2_6_0() { return cTimesheetTimesheetKeyword_2_6_0; }
+		public Keyword getTimesheetTimesheetKeyword_1_2_1_6_0() { return cTimesheetTimesheetKeyword_1_2_1_6_0; }
 
-		//propertyid?="propertyid"
-		public Assignment getPropertyidAssignment_2_7() { return cPropertyidAssignment_2_7; }
+		//propertyid?="propertyid"?
+		public Assignment getPropertyidAssignment_1_2_1_7() { return cPropertyidAssignment_1_2_1_7; }
 
 		//"propertyid"
-		public Keyword getPropertyidPropertyidKeyword_2_7_0() { return cPropertyidPropertyidKeyword_2_7_0; }
+		public Keyword getPropertyidPropertyidKeyword_1_2_1_7_0() { return cPropertyidPropertyidKeyword_1_2_1_7_0; }
 
-		//summary?="summary"
-		public Assignment getSummaryAssignment_2_8() { return cSummaryAssignment_2_8; }
+		//summary?="summary"?
+		public Assignment getSummaryAssignment_1_2_1_8() { return cSummaryAssignment_1_2_1_8; }
 
 		//"summary"
-		public Keyword getSummarySummaryKeyword_2_8_0() { return cSummarySummaryKeyword_2_8_0; }
+		public Keyword getSummarySummaryKeyword_1_2_1_8_0() { return cSummarySummaryKeyword_1_2_1_8_0; }
 	}
 
 	public class JournalEntryElements extends AbstractParserRuleElementFinder {
@@ -4626,27 +4818,27 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cResourcerootKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cResourceAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cResourceResourceCrossReference_1_0 = (CrossReference)cResourceAssignment_1.eContents().get(0);
-		private final RuleCall cResourceResourceIDTerminalRuleCall_1_0_1 = (RuleCall)cResourceResourceCrossReference_1_0.eContents().get(1);
+		private final RuleCall cResourceResourceAbsoluteIdParserRuleCall_1_0_1 = (RuleCall)cResourceResourceCrossReference_1_0.eContents().get(1);
 		
 		//// http://www.taskjuggler.org/tj3/manual/resourceroot.html
 		//ResourceRoot:
-		//	"resourceroot" resource=[Resource];
+		//	"resourceroot" resource=[Resource|AbsoluteId];
 		public ParserRule getRule() { return rule; }
 
-		//"resourceroot" resource=[Resource]
+		//"resourceroot" resource=[Resource|AbsoluteId]
 		public Group getGroup() { return cGroup; }
 
 		//"resourceroot"
 		public Keyword getResourcerootKeyword_0() { return cResourcerootKeyword_0; }
 
-		//resource=[Resource]
+		//resource=[Resource|AbsoluteId]
 		public Assignment getResourceAssignment_1() { return cResourceAssignment_1; }
 
-		//[Resource]
+		//[Resource|AbsoluteId]
 		public CrossReference getResourceResourceCrossReference_1_0() { return cResourceResourceCrossReference_1_0; }
 
-		//ID
-		public RuleCall getResourceResourceIDTerminalRuleCall_1_0_1() { return cResourceResourceIDTerminalRuleCall_1_0_1; }
+		//AbsoluteId
+		public RuleCall getResourceResourceAbsoluteIdParserRuleCall_1_0_1() { return cResourceResourceAbsoluteIdParserRuleCall_1_0_1; }
 	}
 
 	public class ResponsibleElements extends AbstractParserRuleElementFinder {
@@ -4700,6 +4892,23 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getResourcesResourceIDTerminalRuleCall_2_1_0_1() { return cResourcesResourceIDTerminalRuleCall_2_1_0_1; }
 	}
 
+	public class RGBElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RGB");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueSTRINGTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		////TODO validate rgb string
+		//RGB:
+		//	value=STRING;
+		public ParserRule getRule() { return rule; }
+
+		//value=STRING
+		public Assignment getValueAssignment() { return cValueAssignment; }
+
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_0() { return cValueSTRINGTerminalRuleCall_0; }
+	}
+
 	public class RightElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Right");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -4719,6 +4928,31 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//RichText
 		public RuleCall getRichTextParserRuleCall_1() { return cRichTextParserRuleCall_1; }
+	}
+
+	public class RollupAccountElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RollupAccount");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cRollupaccountKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExpressionLogicalExpressionParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
+		
+		//// http://www.taskjuggler.org/tj3/manual/rollupaccount.html
+		//RollupAccount:
+		//	"rollupaccount" expression=LogicalExpression;
+		public ParserRule getRule() { return rule; }
+
+		//"rollupaccount" expression=LogicalExpression
+		public Group getGroup() { return cGroup; }
+
+		//"rollupaccount"
+		public Keyword getRollupaccountKeyword_0() { return cRollupaccountKeyword_0; }
+
+		//expression=LogicalExpression
+		public Assignment getExpressionAssignment_1() { return cExpressionAssignment_1; }
+
+		//LogicalExpression
+		public RuleCall getExpressionLogicalExpressionParserRuleCall_1_0() { return cExpressionLogicalExpressionParserRuleCall_1_0; }
 	}
 
 	public class RollupResourceElements extends AbstractParserRuleElementFinder {
@@ -5387,48 +5621,103 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getShortTimeFormatSTRINGTerminalRuleCall_1_0() { return cShortTimeFormatSTRINGTerminalRuleCall_1_0; }
 	}
 
-	public class SortJournalEntriesElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SortJournalEntries");
+	public class SortElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Sort");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSortjournalentriesKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cCriteriaAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCriteriaJournalEntrySortCriterionEnumRuleCall_1_0 = (RuleCall)cCriteriaAssignment_1.eContents().get(0);
+		private final Action cSortAction_0 = (Action)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cTreeAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final Keyword cTreeTreeKeyword_1_0_0 = (Keyword)cTreeAssignment_1_0.eContents().get(0);
+		private final Assignment cCriteriaAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final RuleCall cCriteriaCriterionParserRuleCall_1_1_0 = (RuleCall)cCriteriaAssignment_1_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cCriteriaAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cCriteriaJournalEntrySortCriterionEnumRuleCall_2_1_0 = (RuleCall)cCriteriaAssignment_2_1.eContents().get(0);
+		private final RuleCall cCriteriaCriterionParserRuleCall_2_1_0 = (RuleCall)cCriteriaAssignment_2_1.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
 		//// http://www.taskjuggler.org/tj3/manual/sloppy.projection.html
 		//// see Booking
+		//// http://www.taskjuggler.org/tj3/manual/sortaccounts.html
 		//// http://www.taskjuggler.org/tj3/manual/sortjournalentries.html
-		//SortJournalEntries:
-		//	"sortjournalentries" criteria+=JournalEntrySortCriterion ("," criteria+=JournalEntrySortCriterion)*;
+		//// http://www.taskjuggler.org/tj3/manual/sortresources.html
+		//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
+		//Sort:
+		//	{Sort} (tree?="tree"? | criteria+=Criterion) ("," criteria+=Criterion)*;
 		public ParserRule getRule() { return rule; }
 
-		//"sortjournalentries" criteria+=JournalEntrySortCriterion ("," criteria+=JournalEntrySortCriterion)*
+		//{Sort} (tree?="tree"? | criteria+=Criterion) ("," criteria+=Criterion)*
 		public Group getGroup() { return cGroup; }
 
-		//"sortjournalentries"
-		public Keyword getSortjournalentriesKeyword_0() { return cSortjournalentriesKeyword_0; }
+		//{Sort}
+		public Action getSortAction_0() { return cSortAction_0; }
 
-		//criteria+=JournalEntrySortCriterion
-		public Assignment getCriteriaAssignment_1() { return cCriteriaAssignment_1; }
+		//tree?="tree"? | criteria+=Criterion
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//JournalEntrySortCriterion
-		public RuleCall getCriteriaJournalEntrySortCriterionEnumRuleCall_1_0() { return cCriteriaJournalEntrySortCriterionEnumRuleCall_1_0; }
+		//tree?="tree"?
+		public Assignment getTreeAssignment_1_0() { return cTreeAssignment_1_0; }
 
-		//("," criteria+=JournalEntrySortCriterion)*
+		//"tree"
+		public Keyword getTreeTreeKeyword_1_0_0() { return cTreeTreeKeyword_1_0_0; }
+
+		//criteria+=Criterion
+		public Assignment getCriteriaAssignment_1_1() { return cCriteriaAssignment_1_1; }
+
+		//Criterion
+		public RuleCall getCriteriaCriterionParserRuleCall_1_1_0() { return cCriteriaCriterionParserRuleCall_1_1_0; }
+
+		//("," criteria+=Criterion)*
 		public Group getGroup_2() { return cGroup_2; }
 
 		//","
 		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
 
-		//criteria+=JournalEntrySortCriterion
+		//criteria+=Criterion
 		public Assignment getCriteriaAssignment_2_1() { return cCriteriaAssignment_2_1; }
 
-		//JournalEntrySortCriterion
-		public RuleCall getCriteriaJournalEntrySortCriterionEnumRuleCall_2_1_0() { return cCriteriaJournalEntrySortCriterionEnumRuleCall_2_1_0; }
+		//Criterion
+		public RuleCall getCriteriaCriterionParserRuleCall_2_1_0() { return cCriteriaCriterionParserRuleCall_2_1_0; }
+	}
+
+	public class SortAccountsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SortAccounts");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSortaccountsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cSortParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		//SortAccounts:
+		//	"sortaccounts" Sort;
+		public ParserRule getRule() { return rule; }
+
+		//"sortaccounts" Sort
+		public Group getGroup() { return cGroup; }
+
+		//"sortaccounts"
+		public Keyword getSortaccountsKeyword_0() { return cSortaccountsKeyword_0; }
+
+		//Sort
+		public RuleCall getSortParserRuleCall_1() { return cSortParserRuleCall_1; }
+	}
+
+	public class SortJournalEntriesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SortJournalEntries");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSortjournalentriesKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cSortParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		//SortJournalEntries:
+		//	"sortjournalentries" Sort;
+		public ParserRule getRule() { return rule; }
+
+		//"sortjournalentries" Sort
+		public Group getGroup() { return cGroup; }
+
+		//"sortjournalentries"
+		public Keyword getSortjournalentriesKeyword_0() { return cSortjournalentriesKeyword_0; }
+
+		//Sort
+		public RuleCall getSortParserRuleCall_1() { return cSortParserRuleCall_1; }
 	}
 
 	public class SortResourcesElements extends AbstractParserRuleElementFinder {
@@ -5437,7 +5726,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSortresourcesKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cSortParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//// http://www.taskjuggler.org/tj3/manual/sortresources.html
 		//SortResources:
 		//	"sortresources" Sort;
 		public ParserRule getRule() { return rule; }
@@ -5458,7 +5746,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSorttasksKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final RuleCall cSortParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
 		//SortTasks:
 		//	"sorttasks" Sort;
 		public ParserRule getRule() { return rule; }
@@ -6276,27 +6563,27 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTaskrootKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cTaskAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cTaskTaskCrossReference_1_0 = (CrossReference)cTaskAssignment_1.eContents().get(0);
-		private final RuleCall cTaskTaskIDTerminalRuleCall_1_0_1 = (RuleCall)cTaskTaskCrossReference_1_0.eContents().get(1);
+		private final RuleCall cTaskTaskAbsoluteIdParserRuleCall_1_0_1 = (RuleCall)cTaskTaskCrossReference_1_0.eContents().get(1);
 		
 		//// http://www.taskjuggler.org/tj3/manual/taskroot.html
 		//TaskRoot:
-		//	"taskroot" task=[Task];
+		//	"taskroot" task=[Task|AbsoluteId];
 		public ParserRule getRule() { return rule; }
 
-		//"taskroot" task=[Task]
+		//"taskroot" task=[Task|AbsoluteId]
 		public Group getGroup() { return cGroup; }
 
 		//"taskroot"
 		public Keyword getTaskrootKeyword_0() { return cTaskrootKeyword_0; }
 
-		//task=[Task]
+		//task=[Task|AbsoluteId]
 		public Assignment getTaskAssignment_1() { return cTaskAssignment_1; }
 
-		//[Task]
+		//[Task|AbsoluteId]
 		public CrossReference getTaskTaskCrossReference_1_0() { return cTaskTaskCrossReference_1_0; }
 
-		//ID
-		public RuleCall getTaskTaskIDTerminalRuleCall_1_0_1() { return cTaskTaskIDTerminalRuleCall_1_0_1; }
+		//AbsoluteId
+		public RuleCall getTaskTaskAbsoluteIdParserRuleCall_1_0_1() { return cTaskTaskAbsoluteIdParserRuleCall_1_0_1; }
 	}
 
 	public class TextReportElements extends AbstractParserRuleElementFinder {
@@ -7209,62 +7496,19 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	public class CriterionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Criterion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Assignment cScenarioAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final CrossReference cScenarioScenarioCrossReference_0_0_0 = (CrossReference)cScenarioAssignment_0_0.eContents().get(0);
-		private final RuleCall cScenarioScenarioIDTerminalRuleCall_0_0_0_1 = (RuleCall)cScenarioScenarioCrossReference_0_0_0.eContents().get(1);
-		private final Keyword cFullStopKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cCriterionIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCriterionIdCriterionIdParserRuleCall_1_0 = (RuleCall)cCriterionIdAssignment_1.eContents().get(0);
+		private final Assignment cColumnIdAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cColumnIdColumnIdEnumRuleCall_0_0 = (RuleCall)cColumnIdAssignment_0.eContents().get(0);
+		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cDirectionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cDirectionCriterionDirectionEnumRuleCall_2_0 = (RuleCall)cDirectionAssignment_2.eContents().get(0);
 		
 		//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
 		//// http://www.taskjuggler.org/tj3/manual/sortresources.html
 		//Criterion:
-		//	(scenario=[Scenario] ".")? criterionId=CriterionId;
+		//	columnId=ColumnId "." direction=CriterionDirection;
 		public ParserRule getRule() { return rule; }
 
-		//(scenario=[Scenario] ".")? criterionId=CriterionId
-		public Group getGroup() { return cGroup; }
-
-		//(scenario=[Scenario] ".")?
-		public Group getGroup_0() { return cGroup_0; }
-
-		//scenario=[Scenario]
-		public Assignment getScenarioAssignment_0_0() { return cScenarioAssignment_0_0; }
-
-		//[Scenario]
-		public CrossReference getScenarioScenarioCrossReference_0_0_0() { return cScenarioScenarioCrossReference_0_0_0; }
-
-		//ID
-		public RuleCall getScenarioScenarioIDTerminalRuleCall_0_0_0_1() { return cScenarioScenarioIDTerminalRuleCall_0_0_0_1; }
-
-		//"."
-		public Keyword getFullStopKeyword_0_1() { return cFullStopKeyword_0_1; }
-
-		//criterionId=CriterionId
-		public Assignment getCriterionIdAssignment_1() { return cCriterionIdAssignment_1; }
-
-		//CriterionId
-		public RuleCall getCriterionIdCriterionIdParserRuleCall_1_0() { return cCriterionIdCriterionIdParserRuleCall_1_0; }
-	}
-
-	public class CriterionIdElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CriterionId");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cColumnIdAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cColumnIdColumnIdEnumRuleCall_0_0 = (RuleCall)cColumnIdAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cDirectionAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cDirectionCriterionDirectionEnumRuleCall_1_1_0 = (RuleCall)cDirectionAssignment_1_1.eContents().get(0);
-		
-		//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
-		//// http://www.taskjuggler.org/tj3/manual/sortresources.html
-		//CriterionId:
-		//	columnId=ColumnId ("." direction=CriterionDirection)?;
-		public ParserRule getRule() { return rule; }
-
-		//columnId=ColumnId ("." direction=CriterionDirection)?
+		//columnId=ColumnId "." direction=CriterionDirection
 		public Group getGroup() { return cGroup; }
 
 		//columnId=ColumnId
@@ -7273,17 +7517,14 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//ColumnId
 		public RuleCall getColumnIdColumnIdEnumRuleCall_0_0() { return cColumnIdColumnIdEnumRuleCall_0_0; }
 
-		//("." direction=CriterionDirection)?
-		public Group getGroup_1() { return cGroup_1; }
-
 		//"."
-		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
 
 		//direction=CriterionDirection
-		public Assignment getDirectionAssignment_1_1() { return cDirectionAssignment_1_1; }
+		public Assignment getDirectionAssignment_2() { return cDirectionAssignment_2; }
 
 		//CriterionDirection
-		public RuleCall getDirectionCriterionDirectionEnumRuleCall_1_1_0() { return cDirectionCriterionDirectionEnumRuleCall_1_1_0; }
+		public RuleCall getDirectionCriterionDirectionEnumRuleCall_2_0() { return cDirectionCriterionDirectionEnumRuleCall_2_0; }
 	}
 
 	public class DurationQuantityElements extends AbstractParserRuleElementFinder {
@@ -7522,56 +7763,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//INT
 		public RuleCall getFractionDigitsINTTerminalRuleCall_4_0() { return cFractionDigitsINTTerminalRuleCall_4_0; }
-	}
-
-	public class SortElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Sort");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Assignment cIdAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
-		private final RuleCall cIdIDTerminalRuleCall_0_0_0 = (RuleCall)cIdAssignment_0_0.eContents().get(0);
-		private final Assignment cCriteriaAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
-		private final RuleCall cCriteriaCriterionParserRuleCall_0_1_0 = (RuleCall)cCriteriaAssignment_0_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cCriteriaAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cCriteriaCriterionParserRuleCall_1_1_0 = (RuleCall)cCriteriaAssignment_1_1.eContents().get(0);
-		
-		//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
-		//// http://www.taskjuggler.org/tj3/manual/sortresources.html
-		//Sort:
-		//	(id?=ID | criteria+=Criterion) ("," criteria+=Criterion)*;
-		public ParserRule getRule() { return rule; }
-
-		//(id?=ID | criteria+=Criterion) ("," criteria+=Criterion)*
-		public Group getGroup() { return cGroup; }
-
-		//id?=ID | criteria+=Criterion
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
-
-		//id?=ID
-		public Assignment getIdAssignment_0_0() { return cIdAssignment_0_0; }
-
-		//ID
-		public RuleCall getIdIDTerminalRuleCall_0_0_0() { return cIdIDTerminalRuleCall_0_0_0; }
-
-		//criteria+=Criterion
-		public Assignment getCriteriaAssignment_0_1() { return cCriteriaAssignment_0_1; }
-
-		//Criterion
-		public RuleCall getCriteriaCriterionParserRuleCall_0_1_0() { return cCriteriaCriterionParserRuleCall_0_1_0; }
-
-		//("," criteria+=Criterion)*
-		public Group getGroup_1() { return cGroup_1; }
-
-		//","
-		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
-
-		//criteria+=Criterion
-		public Assignment getCriteriaAssignment_1_1() { return cCriteriaAssignment_1_1; }
-
-		//Criterion
-		public RuleCall getCriteriaCriterionParserRuleCall_1_1_0() { return cCriteriaCriterionParserRuleCall_1_1_0; }
 	}
 
 	public class TaskDependencyElements extends AbstractParserRuleElementFinder {
@@ -9355,8 +9546,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private GlobalElements pGlobal;
 	private GlobalAttributeElements pGlobalAttribute;
+	private AbsoluteIdElements pAbsoluteId;
 	private AccountElements pAccount;
 	private AccountAttributeElements pAccountAttribute;
+	private AccountReportElements pAccountReport;
+	private AccountRootElements pAccountRoot;
 	private ProjectElements pProject;
 	private ProjectAttributeElements pProjectAttribute;
 	private TaskElements pTask;
@@ -9426,6 +9620,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private HasAlertElements pHasAlert;
 	private HeaderElements pHeader;
 	private HeadlineElements pHeadline;
+	private HideAccountElements pHideAccount;
 	private HideJournalEntryElements pHideJournalEntry;
 	private HideReportElements pHideReport;
 	private HideResourceElements pHideResource;
@@ -9483,7 +9678,9 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private ResourceReportElements pResourceReport;
 	private ResourceRootElements pResourceRoot;
 	private ResponsibleElements pResponsible;
+	private RGBElements pRGB;
 	private RightElements pRight;
+	private RollupAccountElements pRollupAccount;
 	private RollupResourceElements pRollupResource;
 	private RollupTaskElements pRollupTask;
 	private ScaleElements pScale;
@@ -9502,6 +9699,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private ShiftsResourceElements pShiftsResource;
 	private ShiftsTaskElements pShiftsTask;
 	private ShortTimeFormatElements pShortTimeFormat;
+	private SortElements pSort;
+	private SortAccountsElements pSortAccounts;
 	private SortJournalEntriesElements pSortJournalEntries;
 	private SortResourcesElements pSortResources;
 	private SortTasksElements pSortTasks;
@@ -9549,12 +9748,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private ColumnAttributeElements pColumnAttribute;
 	private ColumnElements pColumn;
 	private CriterionElements pCriterion;
-	private CriterionIdElements pCriterionId;
 	private DurationQuantityElements pDurationQuantity;
 	private LimitElements pLimit;
 	private LimitAttributeElements pLimitAttribute;
 	private RealFormatElements pRealFormat;
-	private SortElements pSort;
 	private TaskDependencyElements pTaskDependency;
 	private TaskPathElements pTaskPath;
 	private TaskTimesheetAttributeElements pTaskTimesheetAttribute;
@@ -9640,15 +9837,25 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//	//	| StatusSheetReport
 	//	//	| Timesheet
 	//	//	| TimesheetReport
-	//	| Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport | Resource | Shift |
-	//	SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario |
-	//	Vacation;
+	//	| AccountReport | Balance | Copyright | Export | Flags | Limits | Rate | ResourceReport | TaskReport | TextReport |
+	//	Resource | Shift | SupplementAccount | SupplementReport | SupplementResource | SupplementTask | TagFile | Task |
+	//	TrackingScenario | Vacation;
 	public GlobalAttributeElements getGlobalAttributeAccess() {
 		return (pGlobalAttribute != null) ? pGlobalAttribute : (pGlobalAttribute = new GlobalAttributeElements());
 	}
 	
 	public ParserRule getGlobalAttributeRule() {
 		return getGlobalAttributeAccess().getRule();
+	}
+
+	//AbsoluteId:
+	//	ID ("." ID)*;
+	public AbsoluteIdElements getAbsoluteIdAccess() {
+		return (pAbsoluteId != null) ? pAbsoluteId : (pAbsoluteId = new AbsoluteIdElements());
+	}
+	
+	public ParserRule getAbsoluteIdRule() {
+		return getAbsoluteIdAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/account.html
@@ -9670,6 +9877,26 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getAccountAttributeRule() {
 		return getAccountAttributeAccess().getRule();
+	}
+
+	//AccountReport:
+	//	"accountreport" Report;
+	public AccountReportElements getAccountReportAccess() {
+		return (pAccountReport != null) ? pAccountReport : (pAccountReport = new AccountReportElements());
+	}
+	
+	public ParserRule getAccountReportRule() {
+		return getAccountReportAccess().getRule();
+	}
+
+	//AccountRoot:
+	//	"accountroot" account=[Account|AbsoluteId];
+	public AccountRootElements getAccountRootAccess() {
+		return (pAccountRoot != null) ? pAccountRoot : (pAccountRoot = new AccountRootElements());
+	}
+	
+	public ParserRule getAccountRootRule() {
+		return getAccountRootAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/project.html
@@ -9736,12 +9963,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ReportAttribute:
-	//	Balance //	| HideResource
-	//	//	| HideTask
-	//	//	| RollupTask
-	//	| Caption | Center | Columns | End | Epilog | Flags | Footer | Formats | Header | Headline | JournalMode | Left |
-	//	LoadUnit | Period | Prolog | ResourceReport | TaskReport | TextReport | PurgeReport | Right | Scenarios |
-	//	SelfContained | SortResources | SortTasks | Start | TaskRoot | TimeFormat | Title;
+	//	AccountRoot | Balance | Caption | Center | Columns | CurrencyFormat | End | Epilog | Flags | Footer | Formats | Header
+	//	| Headline | HideAccount | HideJournalEntry | HideResource | HideTask | JournalAttributes | JournalMode | Left |
+	//	LoadUnit | NumberFormat | Period | Prolog | AccountReport | ResourceReport | TaskReport | TextReport | PurgeReport |
+	//	ResourceRoot | Right | RollupAccount | RollupResource | RollupTask | Scenarios | SelfContained | SortAccounts |
+	//	SortJournalEntries | SortResources | SortTasks | Start | TaskRoot | TimeFormat | Timezone | Title;
 	public ReportAttributeElements getReportAttributeAccess() {
 		return (pReportAttribute != null) ? pReportAttribute : (pReportAttribute = new ReportAttributeElements());
 	}
@@ -9999,7 +10225,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
 	//CellColor:
-	//	"cellcolor" expression=LogicalExpression color=STRING;
+	//	"cellcolor" expression=LogicalExpression color=RGB;
 	public CellColorElements getCellColorAccess() {
 		return (pCellColor != null) ? pCellColor : (pCellColor = new CellColorElements());
 	}
@@ -10462,8 +10688,19 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/hidejournalentry.html
+	//HideAccount:
+	//	"hideaccount" expression=LogicalFlagExpression;
+	public HideAccountElements getHideAccountAccess() {
+		return (pHideAccount != null) ? pHideAccount : (pHideAccount = new HideAccountElements());
+	}
+	
+	public ParserRule getHideAccountRule() {
+		return getHideAccountAccess().getRule();
+	}
+
+	//// http://www.taskjuggler.org/tj3/manual/hidejournalentry.html
 	//HideJournalEntry:
-	//	"hidejournalentry" LogicalFlagExpression;
+	//	"hidejournalentry" expression=LogicalFlagExpression;
 	public HideJournalEntryElements getHideJournalEntryAccess() {
 		return (pHideJournalEntry != null) ? pHideJournalEntry : (pHideJournalEntry = new HideJournalEntryElements());
 	}
@@ -10580,8 +10817,9 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// TODO
 	//// http://www.taskjuggler.org/tj3/manual/journalattributes.html
 	//JournalAttributes:
-	//	all?="*" | none?="-" | flags?="flags" & property?="property" & details?="details" & author?="author" &
-	//	headline?="headline" & date?="date" & timesheet?="timesheet" & propertyid?="propertyid" & summary?="summary";
+	//	"journalattributes" (all?="*" | none?="-" | {JournalAttributes} (flags?="flags"? & property?="property"? &
+	//	details?="details"? & author?="author"? & headline?="headline"? & date?="date"? & timesheet?="timesheet"? &
+	//	propertyid?="propertyid"? & summary?="summary"?));
 	public JournalAttributesElements getJournalAttributesAccess() {
 		return (pJournalAttributes != null) ? pJournalAttributes : (pJournalAttributes = new JournalAttributesElements());
 	}
@@ -11101,7 +11339,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/resourceroot.html
 	//ResourceRoot:
-	//	"resourceroot" resource=[Resource];
+	//	"resourceroot" resource=[Resource|AbsoluteId];
 	public ResourceRootElements getResourceRootAccess() {
 		return (pResourceRoot != null) ? pResourceRoot : (pResourceRoot = new ResourceRootElements());
 	}
@@ -11123,6 +11361,17 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getResponsibleAccess().getRule();
 	}
 
+	////TODO validate rgb string
+	//RGB:
+	//	value=STRING;
+	public RGBElements getRGBAccess() {
+		return (pRGB != null) ? pRGB : (pRGB = new RGBElements());
+	}
+	
+	public ParserRule getRGBRule() {
+		return getRGBAccess().getRule();
+	}
+
 	//// http://www.taskjuggler.org/tj3/manual/right.html
 	//Right:
 	//	"right" RichText;
@@ -11132,6 +11381,17 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getRightRule() {
 		return getRightAccess().getRule();
+	}
+
+	//// http://www.taskjuggler.org/tj3/manual/rollupaccount.html
+	//RollupAccount:
+	//	"rollupaccount" expression=LogicalExpression;
+	public RollupAccountElements getRollupAccountAccess() {
+		return (pRollupAccount != null) ? pRollupAccount : (pRollupAccount = new RollupAccountElements());
+	}
+	
+	public ParserRule getRollupAccountRule() {
+		return getRollupAccountAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/rollupresource.html
@@ -11340,9 +11600,32 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// http://www.taskjuggler.org/tj3/manual/sloppy.booking.html
 	//// http://www.taskjuggler.org/tj3/manual/sloppy.projection.html
 	//// see Booking
+	//// http://www.taskjuggler.org/tj3/manual/sortaccounts.html
 	//// http://www.taskjuggler.org/tj3/manual/sortjournalentries.html
+	//// http://www.taskjuggler.org/tj3/manual/sortresources.html
+	//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
+	//Sort:
+	//	{Sort} (tree?="tree"? | criteria+=Criterion) ("," criteria+=Criterion)*;
+	public SortElements getSortAccess() {
+		return (pSort != null) ? pSort : (pSort = new SortElements());
+	}
+	
+	public ParserRule getSortRule() {
+		return getSortAccess().getRule();
+	}
+
+	//SortAccounts:
+	//	"sortaccounts" Sort;
+	public SortAccountsElements getSortAccountsAccess() {
+		return (pSortAccounts != null) ? pSortAccounts : (pSortAccounts = new SortAccountsElements());
+	}
+	
+	public ParserRule getSortAccountsRule() {
+		return getSortAccountsAccess().getRule();
+	}
+
 	//SortJournalEntries:
-	//	"sortjournalentries" criteria+=JournalEntrySortCriterion ("," criteria+=JournalEntrySortCriterion)*;
+	//	"sortjournalentries" Sort;
 	public SortJournalEntriesElements getSortJournalEntriesAccess() {
 		return (pSortJournalEntries != null) ? pSortJournalEntries : (pSortJournalEntries = new SortJournalEntriesElements());
 	}
@@ -11351,7 +11634,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getSortJournalEntriesAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/sortresources.html
 	//SortResources:
 	//	"sortresources" Sort;
 	public SortResourcesElements getSortResourcesAccess() {
@@ -11362,7 +11644,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getSortResourcesAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
 	//SortTasks:
 	//	"sorttasks" Sort;
 	public SortTasksElements getSortTasksAccess() {
@@ -11577,7 +11858,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/taskroot.html
 	//TaskRoot:
-	//	"taskroot" task=[Task];
+	//	"taskroot" task=[Task|AbsoluteId];
 	public TaskRootElements getTaskRootAccess() {
 		return (pTaskRoot != null) ? pTaskRoot : (pTaskRoot = new TaskRootElements());
 	}
@@ -11874,25 +12155,13 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
 	//// http://www.taskjuggler.org/tj3/manual/sortresources.html
 	//Criterion:
-	//	(scenario=[Scenario] ".")? criterionId=CriterionId;
+	//	columnId=ColumnId "." direction=CriterionDirection;
 	public CriterionElements getCriterionAccess() {
 		return (pCriterion != null) ? pCriterion : (pCriterion = new CriterionElements());
 	}
 	
 	public ParserRule getCriterionRule() {
 		return getCriterionAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
-	//// http://www.taskjuggler.org/tj3/manual/sortresources.html
-	//CriterionId:
-	//	columnId=ColumnId ("." direction=CriterionDirection)?;
-	public CriterionIdElements getCriterionIdAccess() {
-		return (pCriterionId != null) ? pCriterionId : (pCriterionId = new CriterionIdElements());
-	}
-	
-	public ParserRule getCriterionIdRule() {
-		return getCriterionIdAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/duration.html
@@ -11950,18 +12219,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getRealFormatRule() {
 		return getRealFormatAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/sorttasks.html
-	//// http://www.taskjuggler.org/tj3/manual/sortresources.html
-	//Sort:
-	//	(id?=ID | criteria+=Criterion) ("," criteria+=Criterion)*;
-	public SortElements getSortAccess() {
-		return (pSort != null) ? pSort : (pSort = new SortElements());
-	}
-	
-	public ParserRule getSortRule() {
-		return getSortAccess().getRule();
 	}
 
 	//TaskDependency:
@@ -12304,14 +12561,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//// YYYY-MM-DD-HH:mm[:ss][xNNNN]  (x being + or -, NNNN being utc timezone offset
-	//// commented out because conflict with enum TimeUnit example: 3d  TimUnit or RGB?
-	//// for example, color spec of: http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
-	////terminal RGB: ((('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')));
-	/// *
-	//terminal RRGGBB: (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
-	//				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
-	//				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F'));
-	// * / terminal ISODATE:
+	//terminal ISODATE:
 	//	"20" "0".."9" "0".."9" "-" ("0" "1".."9" | "1" "0".."2") "-" ("0" "1".."9" | ("1" | "2") "0".."9" | "3" ("0" | "1"))
 	//	("-" (("0"? | "1") "0".."9" | "2" "0".."4") ":" "0".."5" "0".."9" (":" "0".."5" "0".."9")? ("-" ("+" | "-") "0".."5"
 	//	"0".."9" "0".."5" "0".."9")?)?;

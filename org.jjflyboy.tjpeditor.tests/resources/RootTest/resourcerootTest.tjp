@@ -1,0 +1,16 @@
+project "test project" 2011-12-11 + 4 m { }
+
+resource top "top resource " {
+  resource mid "middle resource" { }
+ }
+
+taskreport  "TR 2" {
+  resourceroot top
+}
+taskreport  "TR 3" {
+  resourceroot top.mid
+}
+
+taskreport  "TR 4" {
+  resourceroot nonesuch
+}

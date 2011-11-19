@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.JournalAttributes;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
@@ -38,7 +37,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class JournalAttributesImpl extends MinimalEObjectImpl.Container implements JournalAttributes
+public class JournalAttributesImpl extends ReportAttributeImpl implements JournalAttributes
 {
   /**
    * The default value of the '{@link #isAll() <em>All</em>}' attribute.

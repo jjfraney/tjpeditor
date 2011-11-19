@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.ReportAttribute;
  *
  * @generated
  */
-public class ReportImpl extends ResourceReportImpl implements Report
+public class ReportImpl extends AccountReportImpl implements Report
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

@@ -20,6 +20,7 @@ Global: project=Project attributes+=GlobalAttribute*;
 
 GlobalAttribute:
     Account
+    | AccountReport
     | Balance
 	| Copyright
 	| Export
@@ -48,6 +49,8 @@ GlobalAttribute:
 	| Vacation
 ;
 
+AbsoluteId: ID ('.' ID)*;
+
 // http://www.taskjuggler.org/tj3/manual/account.html
 Account:
 	'account' id=ID? name=STRING ('{' attributes+=AccountAttribute* '}')?;
@@ -58,6 +61,9 @@ AccountAttribute:
 	| Flags
 ;
 
+AccountReport: 'accountreport' Report;
+
+AccountRoot: 'accountroot' account=[Account|AbsoluteId];
 
 
 // http://www.taskjuggler.org/tj3/manual/project.html
@@ -137,15 +143,16 @@ TaskAttribute:
 // http://www.taskjuggler.org/tj3/manual/resourcereport.html
 // http://www.taskjuggler.org/tj3/manual/taskreport.html
 // http://www.taskjuggler.org/tj3/manual/textreport.html
-Report:
-        id=ID? name=STRING ('{' attributes+=ReportAttribute* '}')?;
+Report: id=ID? name=STRING ('{' attributes+=ReportAttribute* '}')?;
 
         
 ReportAttribute:
-	Balance
+	AccountRoot
+	| Balance
 	| Caption
 	| Center
 	| Columns
+	| CurrencyFormat
 	| End
 	| Epilog
 	| Flags
@@ -153,26 +160,37 @@ ReportAttribute:
 	| Formats
 	| Header
 	| Headline
-//	| HideResource
-//	| HideTask
+	| HideAccount
+	| HideJournalEntry
+	| HideResource
+	| HideTask
+	| JournalAttributes
 	| JournalMode
 	| Left
 	| LoadUnit
+	| NumberFormat
 	| Period
 	| Prolog
+	| AccountReport
 	| ResourceReport
 	| TaskReport
 	| TextReport
 	| PurgeReport
+	| ResourceRoot
 	| Right
-//	| RollupTask
+	| RollupAccount
+	| RollupResource
+	| RollupTask
 	| Scenarios
 	| SelfContained
+	| SortAccounts
+	| SortJournalEntries
 	| SortResources
 	| SortTasks
 	| Start
 	| TaskRoot
 	| TimeFormat
+	| Timezone
 	| Title
 ;
 
@@ -308,7 +326,7 @@ BookingResource:  'booking' task=[Task] booking=Booking;
 Caption: 'caption' RichText;
 
 // http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
-CellColor: 'cellcolor' expression=LogicalExpression color=STRING;
+CellColor: 'cellcolor' expression=LogicalExpression color=RGB;
 
 // http://www.taskjuggler.org/tj3/manual/celltext.column.html
 CellText: 'celltext' text=STRING expresssion=LogicalExpression;
@@ -453,7 +471,10 @@ Header: 'header' RichText;
 Headline: 'headline' RichText;
 
 // http://www.taskjuggler.org/tj3/manual/hidejournalentry.html
-HideJournalEntry: 'hidejournalentry' LogicalFlagExpression;
+HideAccount: 'hideaccount' expression =  LogicalFlagExpression;
+
+// http://www.taskjuggler.org/tj3/manual/hidejournalentry.html
+HideJournalEntry: 'hidejournalentry' expression = LogicalFlagExpression;
 
 // http://www.taskjuggler.org/tj3/manual/hidereport.html
 HideReport: 'hidereport' expression = LogicalExpression;
@@ -502,18 +523,17 @@ Interval4: start = ISODATE (('-' end = ISODATE) | ('+' duration = DurationQuanti
 
 
 // http://www.taskjuggler.org/tj3/manual/journalattributes.html
-JournalAttributes: (all ?= '*' | none ?= '-' | 
-		(flags ?= 'flags' &
-			 property ?= 'property' &
-			 details ?= 'details' &
-			 author ?= 'author' &
-			 headline ?= 'headline' &
-			 date ?= 'date' &
-			 timesheet ?= 'timesheet' &
-			 propertyid ?= 'propertyid' &
-			 summary ?= 'summary')
-);
-
+JournalAttributes: 'journalattributes' ((all ?= '*' | none ?= '-' | 
+		{JournalAttributes} (flags ?= 'flags'? &
+			 property ?= 'property'? &
+			 details ?= 'details'? &
+			 author ?= 'author'? &
+			 headline ?= 'headline'? &
+			 date ?= 'date'? &
+			 timesheet ?= 'timesheet'? &
+			 propertyid ?= 'propertyid'? &
+			 summary ?= 'summary'?)
+));
 
 // http://www.taskjuggler.org/tj3/manual/journalentry.html
 JournalEntry:
@@ -719,7 +739,7 @@ ResourcePrefix: 'resourceprefix' resource=[Resource];
 ResourceReport: 'resourcereport' Report;
 
 // http://www.taskjuggler.org/tj3/manual/resourceroot.html
-ResourceRoot: 'resourceroot' resource = [Resource];
+ResourceRoot: 'resourceroot' resource = [Resource|AbsoluteId];
 
 // http://www.taskjuggler.org/tj3/manual/resources.limit.html
 // See Limit
@@ -727,8 +747,14 @@ ResourceRoot: 'resourceroot' resource = [Resource];
 // http://www.taskjuggler.org/tj3/manual/responsible.html
 Responsible: 'responsible' resources+=[Resource] (',' resources+=[Resource])*;
 
+//TODO validate rgb string
+RGB: value=STRING;
+
 // http://www.taskjuggler.org/tj3/manual/right.html
 Right: 'right' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/rollupaccount.html
+RollupAccount: 'rollupaccount' expression=LogicalExpression;
 
 // http://www.taskjuggler.org/tj3/manual/rollupresource.html
 RollupResource: 'rollupresource' expression=LogicalExpression;
@@ -806,16 +832,16 @@ ShortTimeFormat: 'shorttimeformat' shortTimeFormat=STRING;
 // http://www.taskjuggler.org/tj3/manual/sloppy.projection.html
 // see Booking
 
+// http://www.taskjuggler.org/tj3/manual/sortaccounts.html
 // http://www.taskjuggler.org/tj3/manual/sortjournalentries.html
-SortJournalEntries: 'sortjournalentries' 
-	criteria+=JournalEntrySortCriterion 
-	  (',' criteria+= JournalEntrySortCriterion)*;
-
-
 // http://www.taskjuggler.org/tj3/manual/sortresources.html
-SortResources: 'sortresources' Sort;
-
 // http://www.taskjuggler.org/tj3/manual/sorttasks.html
+Sort:
+      {Sort}  (tree?='tree'? | criteria+=Criterion) (',' criteria+=Criterion)*;
+
+SortAccounts: 'sortaccounts' Sort;
+SortJournalEntries: 'sortjournalentries' Sort;
+SortResources: 'sortresources' Sort;
 SortTasks: 'sorttasks' Sort;
 
 // http://www.taskjuggler.org/tj3/manual/start.html
@@ -915,7 +941,7 @@ TaskPrefix: 'taskprefix' task=[Task];
 TaskReport: 'taskreport' Report;
 
 // http://www.taskjuggler.org/tj3/manual/taskroot.html
-TaskRoot: 'taskroot' task=[Task];
+TaskRoot: 'taskroot' task=[Task|AbsoluteId];
 
 // http://www.taskjuggler.org/tj3/manual/textreport.html
 TextReport: 'textreport' Report;
@@ -1036,12 +1062,7 @@ Column: id=ColumnId attribute=ColumnAttribute;
 
 // http://www.taskjuggler.org/tj3/manual/sorttasks.html
 // http://www.taskjuggler.org/tj3/manual/sortresources.html
-Criterion:
-        (scenario=[Scenario] '.')? criterionId = CriterionId;
-
-// http://www.taskjuggler.org/tj3/manual/sorttasks.html
-// http://www.taskjuggler.org/tj3/manual/sortresources.html
-CriterionId: columnId=ColumnId ('.' direction=CriterionDirection)?;
+Criterion: columnId=ColumnId '.' direction=CriterionDirection;
 
 // http://www.taskjuggler.org/tj3/manual/duration.html
 // http://www.taskjuggler.org/tj3/manual/effort.html
@@ -1076,11 +1097,6 @@ RealFormat:
 	negativePrefix=STRING negativeSuffix=STRING thousandsSeparator=STRING fractionSeparator=STRING fractionDigits=INT;
 
 
-// http://www.taskjuggler.org/tj3/manual/sorttasks.html
-// http://www.taskjuggler.org/tj3/manual/sortresources.html
-Sort:
-        (id?=ID |criteria+=Criterion) (',' criteria+=Criterion)*;
-
 TaskDependency:
 	task=[Task|TaskPath] ('{'
 		(
@@ -1090,7 +1106,7 @@ TaskDependency:
 		)
 	'}')?;
 
-TaskPath:  '!'* ID ('.' ID)*;
+TaskPath: '!'* ID ('.' ID)*;
 
 // http://www.taskjuggler.org/tj3/manual/task.timesheet.html
 TaskTimesheetAttribute: 
@@ -1329,12 +1345,4 @@ terminal ISODATE : // YYYY-MM-DD-HH:mm[:ss][xNNNN]  (x being + or -, NNNN being 
   '20' '0'..'9' '0'..'9' '-' (('0' '1'..'9') | ('1' '0'..'2')) '-' (('0' '1'..'9') | (('1' | '2') '0'..'9') | ('3' ('0' | '1')))
     ('-' ((('0'? | '1') '0'..'9') | ('2' '0'..'4')) ':' '0'..'5' '0'..'9' (':' '0'..'5' '0'..'9')? ('-'('+' | '-') '0'..'5' '0'..'9' '0'..'5' '0'..'9')?)?;
 
-// commented out because conflict with enum TimeUnit example: 3d  TimUnit or RGB?
-// for example, color spec of: http://www.taskjuggler.org/tj3/manual/cellcolor.column.html
-//terminal RGB: ((('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')));
 
-/*
-terminal RRGGBB: (('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
-				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F')) 
-				(('0'..'9')|('a'..'f')|('A'..'F')) (('0'..'9')|('a'..'f')|('A'..'F'));
-*/

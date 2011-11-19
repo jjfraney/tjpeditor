@@ -16,6 +16,6 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface NumberFormat extends ProjectAttribute, NikuReportAttribute
+public interface NumberFormat extends ProjectAttribute, ReportAttribute, NikuReportAttribute
 {
 } // NumberFormat

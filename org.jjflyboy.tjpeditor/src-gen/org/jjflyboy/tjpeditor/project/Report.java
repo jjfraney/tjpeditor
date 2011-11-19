@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Report extends ResourceReport, TaskReport, TextReport
+public interface Report extends AccountReport, ResourceReport, TaskReport, TextReport
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.

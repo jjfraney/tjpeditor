@@ -6,13 +6,16 @@
 package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.jjflyboy.tjpeditor.project.CellColor;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
+import org.jjflyboy.tjpeditor.project.RGB;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,24 +54,14 @@ public class CellColorImpl extends ColumnAttributeImpl implements CellColor
   protected String expression = EXPRESSION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+   * The cached value of the '{@link #getColor() <em>Color</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getColor()
    * @generated
    * @ordered
    */
-  protected static final String COLOR_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getColor()
-   * @generated
-   * @ordered
-   */
-  protected String color = COLOR_EDEFAULT;
+  protected RGB color;
 
   /**
    * <!-- begin-user-doc -->
@@ -119,7 +112,7 @@ public class CellColorImpl extends ColumnAttributeImpl implements CellColor
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getColor()
+  public RGB getColor()
   {
     return color;
   }
@@ -129,12 +122,53 @@ public class CellColorImpl extends ColumnAttributeImpl implements CellColor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setColor(String newColor)
+  public NotificationChain basicSetColor(RGB newColor, NotificationChain msgs)
   {
-    String oldColor = color;
+    RGB oldColor = color;
     color = newColor;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.CELL_COLOR__COLOR, oldColor, color));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.CELL_COLOR__COLOR, oldColor, newColor);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setColor(RGB newColor)
+  {
+    if (newColor != color)
+    {
+      NotificationChain msgs = null;
+      if (color != null)
+        msgs = ((InternalEObject)color).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.CELL_COLOR__COLOR, null, msgs);
+      if (newColor != null)
+        msgs = ((InternalEObject)newColor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.CELL_COLOR__COLOR, null, msgs);
+      msgs = basicSetColor(newColor, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.CELL_COLOR__COLOR, newColor, newColor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ProjectPackage.CELL_COLOR__COLOR:
+        return basicSetColor(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -169,7 +203,7 @@ public class CellColorImpl extends ColumnAttributeImpl implements CellColor
         setExpression((String)newValue);
         return;
       case ProjectPackage.CELL_COLOR__COLOR:
-        setColor((String)newValue);
+        setColor((RGB)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -189,7 +223,7 @@ public class CellColorImpl extends ColumnAttributeImpl implements CellColor
         setExpression(EXPRESSION_EDEFAULT);
         return;
       case ProjectPackage.CELL_COLOR__COLOR:
-        setColor(COLOR_EDEFAULT);
+        setColor((RGB)null);
         return;
     }
     super.eUnset(featureID);
@@ -208,7 +242,7 @@ public class CellColorImpl extends ColumnAttributeImpl implements CellColor
       case ProjectPackage.CELL_COLOR__EXPRESSION:
         return EXPRESSION_EDEFAULT == null ? expression != null : !EXPRESSION_EDEFAULT.equals(expression);
       case ProjectPackage.CELL_COLOR__COLOR:
-        return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
+        return color != null;
     }
     return super.eIsSet(featureID);
   }
@@ -226,8 +260,6 @@ public class CellColorImpl extends ColumnAttributeImpl implements CellColor
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (expression: ");
     result.append(expression);
-    result.append(", color: ");
-    result.append(color);
     result.append(')');
     return result.toString();
   }

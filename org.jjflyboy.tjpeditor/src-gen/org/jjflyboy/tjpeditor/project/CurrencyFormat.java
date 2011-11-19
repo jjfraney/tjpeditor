@@ -16,6 +16,6 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface CurrencyFormat extends ProjectAttribute
+public interface CurrencyFormat extends ProjectAttribute, ReportAttribute
 {
 } // CurrencyFormat

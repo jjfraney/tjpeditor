@@ -15,5 +15,9 @@ public class ColumnsTest  extends XtextTest {
 	public void testOneColumn() {
 		testParserRule("columns alert width 10.1, daily celltext \"Daily\" \"if sponge\"", "Columns");
 	}
+	@Test 
+	public void testColumn() {
+		testParserRule("columns chart cellcolor \"logical expression\" \"hex\" ", "Columns");
+	}
 
 }

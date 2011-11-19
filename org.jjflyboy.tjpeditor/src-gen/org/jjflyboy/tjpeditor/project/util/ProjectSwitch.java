@@ -105,6 +105,23 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.ACCOUNT_REPORT:
+      {
+        AccountReport accountReport = (AccountReport)theEObject;
+        T result = caseAccountReport(accountReport);
+        if (result == null) result = caseGlobalAttribute(accountReport);
+        if (result == null) result = caseReportAttribute(accountReport);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.ACCOUNT_ROOT:
+      {
+        AccountRoot accountRoot = (AccountRoot)theEObject;
+        T result = caseAccountRoot(accountRoot);
+        if (result == null) result = caseReportAttribute(accountRoot);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.PROJECT:
       {
         Project project = (Project)theEObject;
@@ -139,6 +156,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Report report = (Report)theEObject;
         T result = caseReport(report);
+        if (result == null) result = caseAccountReport(report);
         if (result == null) result = caseResourceReport(report);
         if (result == null) result = caseTaskReport(report);
         if (result == null) result = caseTextReport(report);
@@ -398,6 +416,7 @@ public class ProjectSwitch<T> extends Switch<T>
         CurrencyFormat currencyFormat = (CurrencyFormat)theEObject;
         T result = caseCurrencyFormat(currencyFormat);
         if (result == null) result = caseProjectAttribute(currencyFormat);
+        if (result == null) result = caseReportAttribute(currencyFormat);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -637,6 +656,22 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.HIDE_ACCOUNT:
+      {
+        HideAccount hideAccount = (HideAccount)theEObject;
+        T result = caseHideAccount(hideAccount);
+        if (result == null) result = caseReportAttribute(hideAccount);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.HIDE_JOURNAL_ENTRY:
+      {
+        HideJournalEntry hideJournalEntry = (HideJournalEntry)theEObject;
+        T result = caseHideJournalEntry(hideJournalEntry);
+        if (result == null) result = caseReportAttribute(hideJournalEntry);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.HIDE_REPORT:
       {
         HideReport hideReport = (HideReport)theEObject;
@@ -649,6 +684,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         HideResource hideResource = (HideResource)theEObject;
         T result = caseHideResource(hideResource);
+        if (result == null) result = caseReportAttribute(hideResource);
         if (result == null) result = caseExportAttribute(hideResource);
         if (result == null) result = caseNikuReportAttribute(hideResource);
         if (result == null) result = caseTimesheetReportAttribute(hideResource);
@@ -659,6 +695,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         HideTask hideTask = (HideTask)theEObject;
         T result = caseHideTask(hideTask);
+        if (result == null) result = caseReportAttribute(hideTask);
         if (result == null) result = caseExportAttribute(hideTask);
         if (result == null) result = caseNikuReportAttribute(hideTask);
         if (result == null) result = defaultCase(theEObject);
@@ -704,6 +741,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         JournalAttributes journalAttributes = (JournalAttributes)theEObject;
         T result = caseJournalAttributes(journalAttributes);
+        if (result == null) result = caseReportAttribute(journalAttributes);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -891,6 +929,7 @@ public class ProjectSwitch<T> extends Switch<T>
         NumberFormat numberFormat = (NumberFormat)theEObject;
         T result = caseNumberFormat(numberFormat);
         if (result == null) result = caseProjectAttribute(numberFormat);
+        if (result == null) result = caseReportAttribute(numberFormat);
         if (result == null) result = caseNikuReportAttribute(numberFormat);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1034,6 +1073,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         ResourceRoot resourceRoot = (ResourceRoot)theEObject;
         T result = caseResourceRoot(resourceRoot);
+        if (result == null) result = caseReportAttribute(resourceRoot);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1045,6 +1085,13 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.RGB:
+      {
+        RGB rgb = (RGB)theEObject;
+        T result = caseRGB(rgb);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.RIGHT:
       {
         Right right = (Right)theEObject;
@@ -1053,10 +1100,19 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.ROLLUP_ACCOUNT:
+      {
+        RollupAccount rollupAccount = (RollupAccount)theEObject;
+        T result = caseRollupAccount(rollupAccount);
+        if (result == null) result = caseReportAttribute(rollupAccount);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.ROLLUP_RESOURCE:
       {
         RollupResource rollupResource = (RollupResource)theEObject;
         T result = caseRollupResource(rollupResource);
+        if (result == null) result = caseReportAttribute(rollupResource);
         if (result == null) result = caseExportAttribute(rollupResource);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1065,6 +1121,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         RollupTask rollupTask = (RollupTask)theEObject;
         T result = caseRollupTask(rollupTask);
+        if (result == null) result = caseReportAttribute(rollupTask);
         if (result == null) result = caseExportAttribute(rollupTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1192,10 +1249,31 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.SORT:
+      {
+        Sort sort = (Sort)theEObject;
+        T result = caseSort(sort);
+        if (result == null) result = caseSortAccounts(sort);
+        if (result == null) result = caseSortJournalEntries(sort);
+        if (result == null) result = caseSortResources(sort);
+        if (result == null) result = caseSortTasks(sort);
+        if (result == null) result = caseReportAttribute(sort);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SORT_ACCOUNTS:
+      {
+        SortAccounts sortAccounts = (SortAccounts)theEObject;
+        T result = caseSortAccounts(sortAccounts);
+        if (result == null) result = caseReportAttribute(sortAccounts);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.SORT_JOURNAL_ENTRIES:
       {
         SortJournalEntries sortJournalEntries = (SortJournalEntries)theEObject;
         T result = caseSortJournalEntries(sortJournalEntries);
+        if (result == null) result = caseReportAttribute(sortJournalEntries);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1392,6 +1470,7 @@ public class ProjectSwitch<T> extends Switch<T>
         Timezone timezone = (Timezone)theEObject;
         T result = caseTimezone(timezone);
         if (result == null) result = caseProjectAttribute(timezone);
+        if (result == null) result = caseReportAttribute(timezone);
         if (result == null) result = caseExportAttribute(timezone);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1541,13 +1620,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.CRITERION_ID:
-      {
-        CriterionId criterionId = (CriterionId)theEObject;
-        T result = caseCriterionId(criterionId);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ProjectPackage.DURATION_QUANTITY:
       {
         DurationQuantity durationQuantity = (DurationQuantity)theEObject;
@@ -1587,17 +1659,8 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseCurrencyFormat(realFormat);
         if (result == null) result = caseNumberFormat(realFormat);
         if (result == null) result = caseProjectAttribute(realFormat);
+        if (result == null) result = caseReportAttribute(realFormat);
         if (result == null) result = caseNikuReportAttribute(realFormat);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ProjectPackage.SORT:
-      {
-        Sort sort = (Sort)theEObject;
-        T result = caseSort(sort);
-        if (result == null) result = caseSortResources(sort);
-        if (result == null) result = caseSortTasks(sort);
-        if (result == null) result = caseReportAttribute(sort);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1742,6 +1805,38 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAccountAttribute(AccountAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Account Report</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Account Report</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAccountReport(AccountReport object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Account Root</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Account Root</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAccountRoot(AccountRoot object)
   {
     return null;
   }
@@ -2803,6 +2898,38 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Hide Account</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Hide Account</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHideAccount(HideAccount object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Hide Journal Entry</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Hide Journal Entry</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHideJournalEntry(HideJournalEntry object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Hide Report</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3603,6 +3730,22 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>RGB</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>RGB</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRGB(RGB object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Right</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3614,6 +3757,22 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRight(Right object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rollup Account</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rollup Account</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRollupAccount(RollupAccount object)
   {
     return null;
   }
@@ -3886,6 +4045,38 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseShortTimeFormat(ShortTimeFormat object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sort</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sort</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSort(Sort object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sort Accounts</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sort Accounts</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSortAccounts(SortAccounts object)
   {
     return null;
   }
@@ -4579,22 +4770,6 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Criterion Id</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Criterion Id</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCriterionId(CriterionId object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Duration Quantity</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -4654,22 +4829,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRealFormat(RealFormat object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Sort</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Sort</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSort(Sort object)
   {
     return null;
   }

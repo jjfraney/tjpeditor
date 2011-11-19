@@ -5,7 +5,6 @@
  */
 package org.jjflyboy.tjpeditor.project;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface JournalAttributes extends EObject
+public interface JournalAttributes extends ReportAttribute
 {
   /**
    * Returns the value of the '<em><b>All</b></em>' attribute.

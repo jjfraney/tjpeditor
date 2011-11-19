@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.RollupTask;
  *
  * @generated
  */
-public class RollupTaskImpl extends ExportAttributeImpl implements RollupTask
+public class RollupTaskImpl extends ReportAttributeImpl implements RollupTask
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.

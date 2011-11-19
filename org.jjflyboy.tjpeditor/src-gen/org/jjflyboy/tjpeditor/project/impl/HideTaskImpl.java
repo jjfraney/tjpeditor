@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class HideTaskImpl extends ExportAttributeImpl implements HideTask
+public class HideTaskImpl extends ReportAttributeImpl implements HideTask
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.

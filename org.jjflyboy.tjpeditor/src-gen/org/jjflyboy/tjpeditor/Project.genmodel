@@ -211,6 +211,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account/attributes"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountReport"/>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountRoot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountRoot/account"/>
+    </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project/name"/>
@@ -296,7 +300,7 @@
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Caption"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellColor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellColor/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellColor/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellColor/color"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellText">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellText/text"/>
@@ -399,6 +403,12 @@
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Header"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Headline"/>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideAccount">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideAccount/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideJournalEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideJournalEntry/expression"/>
+    </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideReport">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideReport/expression"/>
     </genClasses>
@@ -554,7 +564,13 @@
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Responsible">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Responsible/resources"/>
     </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RGB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RGB/value"/>
+    </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Right"/>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupAccount">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupAccount/expression"/>
+    </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupResource">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupResource/expression"/>
     </genClasses>
@@ -613,9 +629,12 @@
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShortTimeFormat">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShortTimeFormat/shortTimeFormat"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortJournalEntries">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortJournalEntries/criteria"/>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort/tree"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort/criteria"/>
     </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortAccounts"/>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortJournalEntries"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortResources"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortTasks"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Start">
@@ -758,12 +777,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Column/attribute"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Criterion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Criterion/scenario"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Criterion/criterionId"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CriterionId">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CriterionId/columnId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CriterionId/direction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Criterion/columnId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Criterion/direction"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DurationQuantity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DurationQuantity/value"/>
@@ -785,10 +800,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat/thousandsSeparator"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat/fractionSeparator"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat/fractionDigits"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort/criteria"/>
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskDependency">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskDependency/task"/>

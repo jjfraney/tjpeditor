@@ -62,6 +62,24 @@ public interface ProjectFactory extends EFactory
   AccountAttribute createAccountAttribute();
 
   /**
+   * Returns a new object of class '<em>Account Report</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Account Report</em>'.
+   * @generated
+   */
+  AccountReport createAccountReport();
+
+  /**
+   * Returns a new object of class '<em>Account Root</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Account Root</em>'.
+   * @generated
+   */
+  AccountRoot createAccountRoot();
+
+  /**
    * Returns a new object of class '<em>Project</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -656,6 +674,24 @@ public interface ProjectFactory extends EFactory
   Headline createHeadline();
 
   /**
+   * Returns a new object of class '<em>Hide Account</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Hide Account</em>'.
+   * @generated
+   */
+  HideAccount createHideAccount();
+
+  /**
+   * Returns a new object of class '<em>Hide Journal Entry</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Hide Journal Entry</em>'.
+   * @generated
+   */
+  HideJournalEntry createHideJournalEntry();
+
+  /**
    * Returns a new object of class '<em>Hide Report</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1106,6 +1142,15 @@ public interface ProjectFactory extends EFactory
   Responsible createResponsible();
 
   /**
+   * Returns a new object of class '<em>RGB</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RGB</em>'.
+   * @generated
+   */
+  RGB createRGB();
+
+  /**
    * Returns a new object of class '<em>Right</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1113,6 +1158,15 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Right createRight();
+
+  /**
+   * Returns a new object of class '<em>Rollup Account</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rollup Account</em>'.
+   * @generated
+   */
+  RollupAccount createRollupAccount();
 
   /**
    * Returns a new object of class '<em>Rollup Resource</em>'.
@@ -1266,6 +1320,24 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   ShortTimeFormat createShortTimeFormat();
+
+  /**
+   * Returns a new object of class '<em>Sort</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sort</em>'.
+   * @generated
+   */
+  Sort createSort();
+
+  /**
+   * Returns a new object of class '<em>Sort Accounts</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sort Accounts</em>'.
+   * @generated
+   */
+  SortAccounts createSortAccounts();
 
   /**
    * Returns a new object of class '<em>Sort Journal Entries</em>'.
@@ -1655,15 +1727,6 @@ public interface ProjectFactory extends EFactory
   Criterion createCriterion();
 
   /**
-   * Returns a new object of class '<em>Criterion Id</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Criterion Id</em>'.
-   * @generated
-   */
-  CriterionId createCriterionId();
-
-  /**
    * Returns a new object of class '<em>Duration Quantity</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1698,15 +1761,6 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   RealFormat createRealFormat();
-
-  /**
-   * Returns a new object of class '<em>Sort</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Sort</em>'.
-   * @generated
-   */
-  Sort createSort();
 
   /**
    * Returns a new object of class '<em>Task Dependency</em>'.

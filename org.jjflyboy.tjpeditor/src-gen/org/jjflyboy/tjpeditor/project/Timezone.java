@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Timezone extends ProjectAttribute, ExportAttribute
+public interface Timezone extends ProjectAttribute, ReportAttribute, ExportAttribute
 {
   /**
    * Returns the value of the '<em><b>Timezone</b></em>' attribute.

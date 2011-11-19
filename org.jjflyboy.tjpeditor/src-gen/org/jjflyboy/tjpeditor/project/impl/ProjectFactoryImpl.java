@@ -72,6 +72,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.GLOBAL_ATTRIBUTE: return createGlobalAttribute();
       case ProjectPackage.ACCOUNT: return createAccount();
       case ProjectPackage.ACCOUNT_ATTRIBUTE: return createAccountAttribute();
+      case ProjectPackage.ACCOUNT_REPORT: return createAccountReport();
+      case ProjectPackage.ACCOUNT_ROOT: return createAccountRoot();
       case ProjectPackage.PROJECT: return createProject();
       case ProjectPackage.PROJECT_ATTRIBUTE: return createProjectAttribute();
       case ProjectPackage.TASK: return createTask();
@@ -138,6 +140,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.HALIGN: return createHAlign();
       case ProjectPackage.HEADER: return createHeader();
       case ProjectPackage.HEADLINE: return createHeadline();
+      case ProjectPackage.HIDE_ACCOUNT: return createHideAccount();
+      case ProjectPackage.HIDE_JOURNAL_ENTRY: return createHideJournalEntry();
       case ProjectPackage.HIDE_REPORT: return createHideReport();
       case ProjectPackage.HIDE_RESOURCE: return createHideResource();
       case ProjectPackage.HIDE_TASK: return createHideTask();
@@ -188,7 +192,9 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.RESOURCE_REPORT: return createResourceReport();
       case ProjectPackage.RESOURCE_ROOT: return createResourceRoot();
       case ProjectPackage.RESPONSIBLE: return createResponsible();
+      case ProjectPackage.RGB: return createRGB();
       case ProjectPackage.RIGHT: return createRight();
+      case ProjectPackage.ROLLUP_ACCOUNT: return createRollupAccount();
       case ProjectPackage.ROLLUP_RESOURCE: return createRollupResource();
       case ProjectPackage.ROLLUP_TASK: return createRollupTask();
       case ProjectPackage.SCALE: return createScale();
@@ -206,6 +212,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.SHIFTS_RESOURCE: return createShiftsResource();
       case ProjectPackage.SHIFTS_TASK: return createShiftsTask();
       case ProjectPackage.SHORT_TIME_FORMAT: return createShortTimeFormat();
+      case ProjectPackage.SORT: return createSort();
+      case ProjectPackage.SORT_ACCOUNTS: return createSortAccounts();
       case ProjectPackage.SORT_JOURNAL_ENTRIES: return createSortJournalEntries();
       case ProjectPackage.SORT_RESOURCES: return createSortResources();
       case ProjectPackage.SORT_TASKS: return createSortTasks();
@@ -249,12 +257,10 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.COLUMN_ATTRIBUTE: return createColumnAttribute();
       case ProjectPackage.COLUMN: return createColumn();
       case ProjectPackage.CRITERION: return createCriterion();
-      case ProjectPackage.CRITERION_ID: return createCriterionId();
       case ProjectPackage.DURATION_QUANTITY: return createDurationQuantity();
       case ProjectPackage.LIMIT: return createLimit();
       case ProjectPackage.LIMIT_ATTRIBUTE: return createLimitAttribute();
       case ProjectPackage.REAL_FORMAT: return createRealFormat();
-      case ProjectPackage.SORT: return createSort();
       case ProjectPackage.TASK_DEPENDENCY: return createTaskDependency();
       case ProjectPackage.TASK_TIMESHEET_ATTRIBUTE: return createTaskTimesheetAttribute();
       case ProjectPackage.TIMESHEET_ATTRIBUTE: return createTimesheetAttribute();
@@ -424,6 +430,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     AccountAttributeImpl accountAttribute = new AccountAttributeImpl();
     return accountAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AccountReport createAccountReport()
+  {
+    AccountReportImpl accountReport = new AccountReportImpl();
+    return accountReport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AccountRoot createAccountRoot()
+  {
+    AccountRootImpl accountRoot = new AccountRootImpl();
+    return accountRoot;
   }
 
   /**
@@ -1157,6 +1185,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public HideAccount createHideAccount()
+  {
+    HideAccountImpl hideAccount = new HideAccountImpl();
+    return hideAccount;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HideJournalEntry createHideJournalEntry()
+  {
+    HideJournalEntryImpl hideJournalEntry = new HideJournalEntryImpl();
+    return hideJournalEntry;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public HideReport createHideReport()
   {
     HideReportImpl hideReport = new HideReportImpl();
@@ -1707,10 +1757,32 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public RGB createRGB()
+  {
+    RGBImpl rgb = new RGBImpl();
+    return rgb;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Right createRight()
   {
     RightImpl right = new RightImpl();
     return right;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RollupAccount createRollupAccount()
+  {
+    RollupAccountImpl rollupAccount = new RollupAccountImpl();
+    return rollupAccount;
   }
 
   /**
@@ -1898,6 +1970,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ShortTimeFormatImpl shortTimeFormat = new ShortTimeFormatImpl();
     return shortTimeFormat;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Sort createSort()
+  {
+    SortImpl sort = new SortImpl();
+    return sort;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SortAccounts createSortAccounts()
+  {
+    SortAccountsImpl sortAccounts = new SortAccountsImpl();
+    return sortAccounts;
   }
 
   /**
@@ -2378,17 +2472,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public CriterionId createCriterionId()
-  {
-    CriterionIdImpl criterionId = new CriterionIdImpl();
-    return criterionId;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public DurationQuantity createDurationQuantity()
   {
     DurationQuantityImpl durationQuantity = new DurationQuantityImpl();
@@ -2426,17 +2509,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     RealFormatImpl realFormat = new RealFormatImpl();
     return realFormat;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Sort createSort()
-  {
-    SortImpl sort = new SortImpl();
-    return sort;
   }
 
   /**

@@ -6,18 +6,16 @@
 package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.jjflyboy.tjpeditor.project.ColumnId;
 import org.jjflyboy.tjpeditor.project.Criterion;
-import org.jjflyboy.tjpeditor.project.CriterionId;
+import org.jjflyboy.tjpeditor.project.CriterionDirection;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
-import org.jjflyboy.tjpeditor.project.Scenario;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +24,8 @@ import org.jjflyboy.tjpeditor.project.Scenario;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.CriterionImpl#getScenario <em>Scenario</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.CriterionImpl#getCriterionId <em>Criterion Id</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.CriterionImpl#getColumnId <em>Column Id</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.CriterionImpl#getDirection <em>Direction</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,24 +34,44 @@ import org.jjflyboy.tjpeditor.project.Scenario;
 public class CriterionImpl extends MinimalEObjectImpl.Container implements Criterion
 {
   /**
-   * The cached value of the '{@link #getScenario() <em>Scenario</em>}' reference.
+   * The default value of the '{@link #getColumnId() <em>Column Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getScenario()
+   * @see #getColumnId()
    * @generated
    * @ordered
    */
-  protected Scenario scenario;
+  protected static final ColumnId COLUMN_ID_EDEFAULT = ColumnId.ALERT;
 
   /**
-   * The cached value of the '{@link #getCriterionId() <em>Criterion Id</em>}' containment reference.
+   * The cached value of the '{@link #getColumnId() <em>Column Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCriterionId()
+   * @see #getColumnId()
    * @generated
    * @ordered
    */
-  protected CriterionId criterionId;
+  protected ColumnId columnId = COLUMN_ID_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDirection()
+   * @generated
+   * @ordered
+   */
+  protected static final CriterionDirection DIRECTION_EDEFAULT = CriterionDirection.UP;
+
+  /**
+   * The cached value of the '{@link #getDirection() <em>Direction</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDirection()
+   * @generated
+   * @ordered
+   */
+  protected CriterionDirection direction = DIRECTION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -81,19 +99,9 @@ public class CriterionImpl extends MinimalEObjectImpl.Container implements Crite
    * <!-- end-user-doc -->
    * @generated
    */
-  public Scenario getScenario()
+  public ColumnId getColumnId()
   {
-    if (scenario != null && scenario.eIsProxy())
-    {
-      InternalEObject oldScenario = (InternalEObject)scenario;
-      scenario = (Scenario)eResolveProxy(oldScenario);
-      if (scenario != oldScenario)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProjectPackage.CRITERION__SCENARIO, oldScenario, scenario));
-      }
-    }
-    return scenario;
+    return columnId;
   }
 
   /**
@@ -101,22 +109,12 @@ public class CriterionImpl extends MinimalEObjectImpl.Container implements Crite
    * <!-- end-user-doc -->
    * @generated
    */
-  public Scenario basicGetScenario()
+  public void setColumnId(ColumnId newColumnId)
   {
-    return scenario;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setScenario(Scenario newScenario)
-  {
-    Scenario oldScenario = scenario;
-    scenario = newScenario;
+    ColumnId oldColumnId = columnId;
+    columnId = newColumnId == null ? COLUMN_ID_EDEFAULT : newColumnId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.CRITERION__SCENARIO, oldScenario, scenario));
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.CRITERION__COLUMN_ID, oldColumnId, columnId));
   }
 
   /**
@@ -124,9 +122,9 @@ public class CriterionImpl extends MinimalEObjectImpl.Container implements Crite
    * <!-- end-user-doc -->
    * @generated
    */
-  public CriterionId getCriterionId()
+  public CriterionDirection getDirection()
   {
-    return criterionId;
+    return direction;
   }
 
   /**
@@ -134,53 +132,12 @@ public class CriterionImpl extends MinimalEObjectImpl.Container implements Crite
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCriterionId(CriterionId newCriterionId, NotificationChain msgs)
+  public void setDirection(CriterionDirection newDirection)
   {
-    CriterionId oldCriterionId = criterionId;
-    criterionId = newCriterionId;
+    CriterionDirection oldDirection = direction;
+    direction = newDirection == null ? DIRECTION_EDEFAULT : newDirection;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.CRITERION__CRITERION_ID, oldCriterionId, newCriterionId);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCriterionId(CriterionId newCriterionId)
-  {
-    if (newCriterionId != criterionId)
-    {
-      NotificationChain msgs = null;
-      if (criterionId != null)
-        msgs = ((InternalEObject)criterionId).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.CRITERION__CRITERION_ID, null, msgs);
-      if (newCriterionId != null)
-        msgs = ((InternalEObject)newCriterionId).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.CRITERION__CRITERION_ID, null, msgs);
-      msgs = basicSetCriterionId(newCriterionId, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.CRITERION__CRITERION_ID, newCriterionId, newCriterionId));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case ProjectPackage.CRITERION__CRITERION_ID:
-        return basicSetCriterionId(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.CRITERION__DIRECTION, oldDirection, direction));
   }
 
   /**
@@ -193,11 +150,10 @@ public class CriterionImpl extends MinimalEObjectImpl.Container implements Crite
   {
     switch (featureID)
     {
-      case ProjectPackage.CRITERION__SCENARIO:
-        if (resolve) return getScenario();
-        return basicGetScenario();
-      case ProjectPackage.CRITERION__CRITERION_ID:
-        return getCriterionId();
+      case ProjectPackage.CRITERION__COLUMN_ID:
+        return getColumnId();
+      case ProjectPackage.CRITERION__DIRECTION:
+        return getDirection();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -212,11 +168,11 @@ public class CriterionImpl extends MinimalEObjectImpl.Container implements Crite
   {
     switch (featureID)
     {
-      case ProjectPackage.CRITERION__SCENARIO:
-        setScenario((Scenario)newValue);
+      case ProjectPackage.CRITERION__COLUMN_ID:
+        setColumnId((ColumnId)newValue);
         return;
-      case ProjectPackage.CRITERION__CRITERION_ID:
-        setCriterionId((CriterionId)newValue);
+      case ProjectPackage.CRITERION__DIRECTION:
+        setDirection((CriterionDirection)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -232,11 +188,11 @@ public class CriterionImpl extends MinimalEObjectImpl.Container implements Crite
   {
     switch (featureID)
     {
-      case ProjectPackage.CRITERION__SCENARIO:
-        setScenario((Scenario)null);
+      case ProjectPackage.CRITERION__COLUMN_ID:
+        setColumnId(COLUMN_ID_EDEFAULT);
         return;
-      case ProjectPackage.CRITERION__CRITERION_ID:
-        setCriterionId((CriterionId)null);
+      case ProjectPackage.CRITERION__DIRECTION:
+        setDirection(DIRECTION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -252,12 +208,31 @@ public class CriterionImpl extends MinimalEObjectImpl.Container implements Crite
   {
     switch (featureID)
     {
-      case ProjectPackage.CRITERION__SCENARIO:
-        return scenario != null;
-      case ProjectPackage.CRITERION__CRITERION_ID:
-        return criterionId != null;
+      case ProjectPackage.CRITERION__COLUMN_ID:
+        return columnId != COLUMN_ID_EDEFAULT;
+      case ProjectPackage.CRITERION__DIRECTION:
+        return direction != DIRECTION_EDEFAULT;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (columnId: ");
+    result.append(columnId);
+    result.append(", direction: ");
+    result.append(direction);
+    result.append(')');
+    return result.toString();
   }
 
 } //CriterionImpl

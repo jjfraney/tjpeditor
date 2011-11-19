@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.Resource;
@@ -30,7 +29,7 @@ import org.jjflyboy.tjpeditor.project.ResourceRoot;
  *
  * @generated
  */
-public class ResourceRootImpl extends MinimalEObjectImpl.Container implements ResourceRoot
+public class ResourceRootImpl extends ReportAttributeImpl implements ResourceRoot
 {
   /**
    * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
