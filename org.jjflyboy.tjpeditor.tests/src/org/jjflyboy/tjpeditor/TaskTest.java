@@ -45,7 +45,7 @@ public class TaskTest extends XtextTest {
 				"precedes junktask " +
 				"priority 10 " +
 				"projectid proj " +
-				"purge projected " +
+				"purge precedes " +
 				"responsible fred " +
 				"scheduled " +
 				"scheduling alap " +
