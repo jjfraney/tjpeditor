@@ -62,15 +62,6 @@ public interface ProjectFactory extends EFactory
   AccountAttribute createAccountAttribute();
 
   /**
-   * Returns a new object of class '<em>Supplement Account</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Supplement Account</em>'.
-   * @generated
-   */
-  SupplementAccount createSupplementAccount();
-
-  /**
    * Returns a new object of class '<em>Project</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -98,15 +89,6 @@ public interface ProjectFactory extends EFactory
   Task createTask();
 
   /**
-   * Returns a new object of class '<em>Supplement Task</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Supplement Task</em>'.
-   * @generated
-   */
-  SupplementTask createSupplementTask();
-
-  /**
    * Returns a new object of class '<em>Task Attribute</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -123,15 +105,6 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Report createReport();
-
-  /**
-   * Returns a new object of class '<em>Supplement Report</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Supplement Report</em>'.
-   * @generated
-   */
-  SupplementReport createSupplementReport();
 
   /**
    * Returns a new object of class '<em>Report Attribute</em>'.
@@ -168,15 +141,6 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Resource createResource();
-
-  /**
-   * Returns a new object of class '<em>Supplement Resource</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Supplement Resource</em>'.
-   * @generated
-   */
-  SupplementResource createSupplementResource();
 
   /**
    * Returns a new object of class '<em>Resource Attribute</em>'.
@@ -1365,6 +1329,42 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Summary createSummary();
+
+  /**
+   * Returns a new object of class '<em>Supplement Account</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Supplement Account</em>'.
+   * @generated
+   */
+  SupplementAccount createSupplementAccount();
+
+  /**
+   * Returns a new object of class '<em>Supplement Report</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Supplement Report</em>'.
+   * @generated
+   */
+  SupplementReport createSupplementReport();
+
+  /**
+   * Returns a new object of class '<em>Supplement Resource</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Supplement Resource</em>'.
+   * @generated
+   */
+  SupplementResource createSupplementResource();
+
+  /**
+   * Returns a new object of class '<em>Supplement Task</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Supplement Task</em>'.
+   * @generated
+   */
+  SupplementTask createSupplementTask();
 
   /**
    * Returns a new object of class '<em>Tag File</em>'.

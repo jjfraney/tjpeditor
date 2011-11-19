@@ -58,10 +58,6 @@ AccountAttribute:
 	| Flags
 ;
 
-// http://www.taskjuggler.org/tj3/manual/supplement.html
-SupplementAccount:
-	 'supplement' 'account' account=[Account] ('{' attributes+=AccountAttribute* '}')?;
-
 
 
 // http://www.taskjuggler.org/tj3/manual/project.html
@@ -93,9 +89,6 @@ ProjectAttribute:
 Task:
 	'task' id=ID? name=STRING ( '{' attributes+=TaskAttribute*	'}'	)?;
 	
-// http://www.taskjuggler.org/tj3/manual/supplement.task.html
-SupplementTask:
-	'supplement' 'task' task=[Task|TaskPath] ( '{' attributes+=TaskAttribute*	'}'	)?;
 	
 TaskAttribute:
 	(
@@ -146,10 +139,6 @@ TaskAttribute:
 // http://www.taskjuggler.org/tj3/manual/textreport.html
 Report:
         id=ID? name=STRING ('{' attributes+=ReportAttribute* '}')?;
-
-// http://www.taskjuggler.org/tj3/manual/supplement.html
-SupplementReport:
-        'supplement' 'report' report=[Report] ('{' attributes+=ReportAttribute* '}')?;
 
         
 ReportAttribute:
@@ -214,9 +203,6 @@ ExportAttribute: (
 Resource:
 	'resource' id=ID? name=STRING ( '{' attributes+=ResourceAttribute*	'}'	)?;
 	
-SupplementResource:
-        'supplement' 'resource' resource=[Resource] ( '{' attributes+=ResourceAttribute*	'}'	)?;
-
 ResourceAttribute:
 	(
 		BookingResource
@@ -866,6 +852,22 @@ StatusSheetReport: 'statussheetreport' STRING;
 // http://www.taskjuggler.org/tj3/manual/summary.html
 // TODO: limit to 240 characters
 Summary: 'summary' RichText;
+
+// http://www.taskjuggler.org/tj3/manual/supplement.html
+SupplementAccount:
+	 'supplement' 'account' account=[Account] ('{' attributes+=AccountAttribute* '}')?;
+
+// http://www.taskjuggler.org/tj3/manual/supplement.html
+SupplementReport:
+        'supplement' 'report' report=[Report] ('{' attributes+=ReportAttribute* '}')?;
+
+SupplementResource:
+        'supplement' 'resource' resource=[Resource] ( '{' attributes+=ResourceAttribute*	'}'	)?;
+
+// http://www.taskjuggler.org/tj3/manual/supplement.task.html
+SupplementTask:
+	'supplement' 'task' task=[Task|TaskPath] ( '{' attributes+=TaskAttribute*	'}'	)?;
+
 
 
 // http://www.taskjuggler.org/tj3/manual/supplement.html

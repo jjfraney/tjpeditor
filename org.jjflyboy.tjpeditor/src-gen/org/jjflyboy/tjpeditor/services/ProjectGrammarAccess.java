@@ -244,59 +244,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getFlagsParserRuleCall_2() { return cFlagsParserRuleCall_2; }
 	}
 
-	public class SupplementAccountElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SupplementAccount");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSupplementKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cAccountKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cAccountAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cAccountAccountCrossReference_2_0 = (CrossReference)cAccountAssignment_2.eContents().get(0);
-		private final RuleCall cAccountAccountIDTerminalRuleCall_2_0_1 = (RuleCall)cAccountAccountCrossReference_2_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cAttributesAccountAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		
-		//// http://www.taskjuggler.org/tj3/manual/supplement.html
-		//SupplementAccount:
-		//	"supplement" "account" account=[Account] ("{" attributes+=AccountAttribute* "}")?;
-		public ParserRule getRule() { return rule; }
-
-		//"supplement" "account" account=[Account] ("{" attributes+=AccountAttribute* "}")?
-		public Group getGroup() { return cGroup; }
-
-		//"supplement"
-		public Keyword getSupplementKeyword_0() { return cSupplementKeyword_0; }
-
-		//"account"
-		public Keyword getAccountKeyword_1() { return cAccountKeyword_1; }
-
-		//account=[Account]
-		public Assignment getAccountAssignment_2() { return cAccountAssignment_2; }
-
-		//[Account]
-		public CrossReference getAccountAccountCrossReference_2_0() { return cAccountAccountCrossReference_2_0; }
-
-		//ID
-		public RuleCall getAccountAccountIDTerminalRuleCall_2_0_1() { return cAccountAccountIDTerminalRuleCall_2_0_1; }
-
-		//("{" attributes+=AccountAttribute* "}")?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
-
-		//attributes+=AccountAttribute*
-		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
-
-		//AccountAttribute
-		public RuleCall getAttributesAccountAttributeParserRuleCall_3_1_0() { return cAttributesAccountAttributeParserRuleCall_3_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
-	}
-
 	public class ProjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Project");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -481,59 +428,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-
-		//("{" attributes+=TaskAttribute* "}")?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
-
-		//attributes+=TaskAttribute*
-		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
-
-		//TaskAttribute
-		public RuleCall getAttributesTaskAttributeParserRuleCall_3_1_0() { return cAttributesTaskAttributeParserRuleCall_3_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
-	}
-
-	public class SupplementTaskElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SupplementTask");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSupplementKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cTaskKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTaskAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cTaskTaskCrossReference_2_0 = (CrossReference)cTaskAssignment_2.eContents().get(0);
-		private final RuleCall cTaskTaskTaskPathParserRuleCall_2_0_1 = (RuleCall)cTaskTaskCrossReference_2_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cAttributesTaskAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		
-		//// http://www.taskjuggler.org/tj3/manual/supplement.task.html
-		//SupplementTask:
-		//	"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?;
-		public ParserRule getRule() { return rule; }
-
-		//"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?
-		public Group getGroup() { return cGroup; }
-
-		//"supplement"
-		public Keyword getSupplementKeyword_0() { return cSupplementKeyword_0; }
-
-		//"task"
-		public Keyword getTaskKeyword_1() { return cTaskKeyword_1; }
-
-		//task=[Task|TaskPath]
-		public Assignment getTaskAssignment_2() { return cTaskAssignment_2; }
-
-		//[Task|TaskPath]
-		public CrossReference getTaskTaskCrossReference_2_0() { return cTaskTaskCrossReference_2_0; }
-
-		//TaskPath
-		public RuleCall getTaskTaskTaskPathParserRuleCall_2_0_1() { return cTaskTaskTaskPathParserRuleCall_2_0_1; }
 
 		//("{" attributes+=TaskAttribute* "}")?
 		public Group getGroup_3() { return cGroup_3; }
@@ -766,59 +660,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
-	}
-
-	public class SupplementReportElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SupplementReport");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSupplementKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cReportKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cReportAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cReportReportCrossReference_2_0 = (CrossReference)cReportAssignment_2.eContents().get(0);
-		private final RuleCall cReportReportIDTerminalRuleCall_2_0_1 = (RuleCall)cReportReportCrossReference_2_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cAttributesReportAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		
-		//// http://www.taskjuggler.org/tj3/manual/supplement.html
-		//SupplementReport:
-		//	"supplement" "report" report=[Report] ("{" attributes+=ReportAttribute* "}")?;
-		public ParserRule getRule() { return rule; }
-
-		//"supplement" "report" report=[Report] ("{" attributes+=ReportAttribute* "}")?
-		public Group getGroup() { return cGroup; }
-
-		//"supplement"
-		public Keyword getSupplementKeyword_0() { return cSupplementKeyword_0; }
-
-		//"report"
-		public Keyword getReportKeyword_1() { return cReportKeyword_1; }
-
-		//report=[Report]
-		public Assignment getReportAssignment_2() { return cReportAssignment_2; }
-
-		//[Report]
-		public CrossReference getReportReportCrossReference_2_0() { return cReportReportCrossReference_2_0; }
-
-		//ID
-		public RuleCall getReportReportIDTerminalRuleCall_2_0_1() { return cReportReportIDTerminalRuleCall_2_0_1; }
-
-		//("{" attributes+=ReportAttribute* "}")?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
-
-		//attributes+=ReportAttribute*
-		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
-
-		//ReportAttribute
-		public RuleCall getAttributesReportAttributeParserRuleCall_3_1_0() { return cAttributesReportAttributeParserRuleCall_3_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
 	}
 
 	public class ReportAttributeElements extends AbstractParserRuleElementFinder {
@@ -1125,58 +966,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-
-		//("{" attributes+=ResourceAttribute* "}")?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
-
-		//attributes+=ResourceAttribute*
-		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
-
-		//ResourceAttribute
-		public RuleCall getAttributesResourceAttributeParserRuleCall_3_1_0() { return cAttributesResourceAttributeParserRuleCall_3_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
-	}
-
-	public class SupplementResourceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SupplementResource");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSupplementKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cResourceKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cResourceAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cResourceResourceCrossReference_2_0 = (CrossReference)cResourceAssignment_2.eContents().get(0);
-		private final RuleCall cResourceResourceIDTerminalRuleCall_2_0_1 = (RuleCall)cResourceResourceCrossReference_2_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cAttributesResourceAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		
-		//SupplementResource:
-		//	"supplement" "resource" resource=[Resource] ("{" attributes+=ResourceAttribute* "}")?;
-		public ParserRule getRule() { return rule; }
-
-		//"supplement" "resource" resource=[Resource] ("{" attributes+=ResourceAttribute* "}")?
-		public Group getGroup() { return cGroup; }
-
-		//"supplement"
-		public Keyword getSupplementKeyword_0() { return cSupplementKeyword_0; }
-
-		//"resource"
-		public Keyword getResourceKeyword_1() { return cResourceKeyword_1; }
-
-		//resource=[Resource]
-		public Assignment getResourceAssignment_2() { return cResourceAssignment_2; }
-
-		//[Resource]
-		public CrossReference getResourceResourceCrossReference_2_0() { return cResourceResourceCrossReference_2_0; }
-
-		//ID
-		public RuleCall getResourceResourceIDTerminalRuleCall_2_0_1() { return cResourceResourceIDTerminalRuleCall_2_0_1; }
 
 		//("{" attributes+=ResourceAttribute* "}")?
 		public Group getGroup_3() { return cGroup_3; }
@@ -5864,6 +5653,217 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRichTextParserRuleCall_1() { return cRichTextParserRuleCall_1; }
 	}
 
+	public class SupplementAccountElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SupplementAccount");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSupplementKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cAccountKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cAccountAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cAccountAccountCrossReference_2_0 = (CrossReference)cAccountAssignment_2.eContents().get(0);
+		private final RuleCall cAccountAccountIDTerminalRuleCall_2_0_1 = (RuleCall)cAccountAccountCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cAttributesAccountAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//// http://www.taskjuggler.org/tj3/manual/supplement.html
+		//SupplementAccount:
+		//	"supplement" "account" account=[Account] ("{" attributes+=AccountAttribute* "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//"supplement" "account" account=[Account] ("{" attributes+=AccountAttribute* "}")?
+		public Group getGroup() { return cGroup; }
+
+		//"supplement"
+		public Keyword getSupplementKeyword_0() { return cSupplementKeyword_0; }
+
+		//"account"
+		public Keyword getAccountKeyword_1() { return cAccountKeyword_1; }
+
+		//account=[Account]
+		public Assignment getAccountAssignment_2() { return cAccountAssignment_2; }
+
+		//[Account]
+		public CrossReference getAccountAccountCrossReference_2_0() { return cAccountAccountCrossReference_2_0; }
+
+		//ID
+		public RuleCall getAccountAccountIDTerminalRuleCall_2_0_1() { return cAccountAccountIDTerminalRuleCall_2_0_1; }
+
+		//("{" attributes+=AccountAttribute* "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//attributes+=AccountAttribute*
+		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
+
+		//AccountAttribute
+		public RuleCall getAttributesAccountAttributeParserRuleCall_3_1_0() { return cAttributesAccountAttributeParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class SupplementReportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SupplementReport");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSupplementKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cReportKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cReportAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cReportReportCrossReference_2_0 = (CrossReference)cReportAssignment_2.eContents().get(0);
+		private final RuleCall cReportReportIDTerminalRuleCall_2_0_1 = (RuleCall)cReportReportCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cAttributesReportAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//// http://www.taskjuggler.org/tj3/manual/supplement.html
+		//SupplementReport:
+		//	"supplement" "report" report=[Report] ("{" attributes+=ReportAttribute* "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//"supplement" "report" report=[Report] ("{" attributes+=ReportAttribute* "}")?
+		public Group getGroup() { return cGroup; }
+
+		//"supplement"
+		public Keyword getSupplementKeyword_0() { return cSupplementKeyword_0; }
+
+		//"report"
+		public Keyword getReportKeyword_1() { return cReportKeyword_1; }
+
+		//report=[Report]
+		public Assignment getReportAssignment_2() { return cReportAssignment_2; }
+
+		//[Report]
+		public CrossReference getReportReportCrossReference_2_0() { return cReportReportCrossReference_2_0; }
+
+		//ID
+		public RuleCall getReportReportIDTerminalRuleCall_2_0_1() { return cReportReportIDTerminalRuleCall_2_0_1; }
+
+		//("{" attributes+=ReportAttribute* "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//attributes+=ReportAttribute*
+		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
+
+		//ReportAttribute
+		public RuleCall getAttributesReportAttributeParserRuleCall_3_1_0() { return cAttributesReportAttributeParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class SupplementResourceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SupplementResource");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSupplementKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cResourceKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cResourceAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cResourceResourceCrossReference_2_0 = (CrossReference)cResourceAssignment_2.eContents().get(0);
+		private final RuleCall cResourceResourceIDTerminalRuleCall_2_0_1 = (RuleCall)cResourceResourceCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cAttributesResourceAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//SupplementResource:
+		//	"supplement" "resource" resource=[Resource] ("{" attributes+=ResourceAttribute* "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//"supplement" "resource" resource=[Resource] ("{" attributes+=ResourceAttribute* "}")?
+		public Group getGroup() { return cGroup; }
+
+		//"supplement"
+		public Keyword getSupplementKeyword_0() { return cSupplementKeyword_0; }
+
+		//"resource"
+		public Keyword getResourceKeyword_1() { return cResourceKeyword_1; }
+
+		//resource=[Resource]
+		public Assignment getResourceAssignment_2() { return cResourceAssignment_2; }
+
+		//[Resource]
+		public CrossReference getResourceResourceCrossReference_2_0() { return cResourceResourceCrossReference_2_0; }
+
+		//ID
+		public RuleCall getResourceResourceIDTerminalRuleCall_2_0_1() { return cResourceResourceIDTerminalRuleCall_2_0_1; }
+
+		//("{" attributes+=ResourceAttribute* "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//attributes+=ResourceAttribute*
+		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
+
+		//ResourceAttribute
+		public RuleCall getAttributesResourceAttributeParserRuleCall_3_1_0() { return cAttributesResourceAttributeParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class SupplementTaskElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SupplementTask");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSupplementKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cTaskKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTaskAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTaskTaskCrossReference_2_0 = (CrossReference)cTaskAssignment_2.eContents().get(0);
+		private final RuleCall cTaskTaskTaskPathParserRuleCall_2_0_1 = (RuleCall)cTaskTaskCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cAttributesTaskAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//// http://www.taskjuggler.org/tj3/manual/supplement.task.html
+		//SupplementTask:
+		//	"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?
+		public Group getGroup() { return cGroup; }
+
+		//"supplement"
+		public Keyword getSupplementKeyword_0() { return cSupplementKeyword_0; }
+
+		//"task"
+		public Keyword getTaskKeyword_1() { return cTaskKeyword_1; }
+
+		//task=[Task|TaskPath]
+		public Assignment getTaskAssignment_2() { return cTaskAssignment_2; }
+
+		//[Task|TaskPath]
+		public CrossReference getTaskTaskCrossReference_2_0() { return cTaskTaskCrossReference_2_0; }
+
+		//TaskPath
+		public RuleCall getTaskTaskTaskPathParserRuleCall_2_0_1() { return cTaskTaskTaskPathParserRuleCall_2_0_1; }
+
+		//("{" attributes+=TaskAttribute* "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//attributes+=TaskAttribute*
+		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
+
+		//TaskAttribute
+		public RuleCall getAttributesTaskAttributeParserRuleCall_3_1_0() { return cAttributesTaskAttributeParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
 	public class TagFileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TagFile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -9357,20 +9357,16 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private GlobalAttributeElements pGlobalAttribute;
 	private AccountElements pAccount;
 	private AccountAttributeElements pAccountAttribute;
-	private SupplementAccountElements pSupplementAccount;
 	private ProjectElements pProject;
 	private ProjectAttributeElements pProjectAttribute;
 	private TaskElements pTask;
-	private SupplementTaskElements pSupplementTask;
 	private TaskAttributeElements pTaskAttribute;
 	private ReportElements pReport;
-	private SupplementReportElements pSupplementReport;
 	private ReportAttributeElements pReportAttribute;
 	private IcalReportElements pIcalReport;
 	private ExportElements pExport;
 	private ExportAttributeElements pExportAttribute;
 	private ResourceElements pResource;
-	private SupplementResourceElements pSupplementResource;
 	private ResourceAttributeElements pResourceAttribute;
 	private AllocateElements pAllocate;
 	private AllocateResourceElements pAllocateResource;
@@ -9515,6 +9511,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private StatusSheetElements pStatusSheet;
 	private StatusSheetReportElements pStatusSheetReport;
 	private SummaryElements pSummary;
+	private SupplementAccountElements pSupplementAccount;
+	private SupplementReportElements pSupplementReport;
+	private SupplementResourceElements pSupplementResource;
+	private SupplementTaskElements pSupplementTask;
 	private TagFileElements pTagFile;
 	private TaskStatusSheetElements pTaskStatusSheet;
 	private TaskStatusSheetAttributeElements pTaskStatusSheetAttribute;
@@ -9672,17 +9672,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getAccountAttributeAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/supplement.html
-	//SupplementAccount:
-	//	"supplement" "account" account=[Account] ("{" attributes+=AccountAttribute* "}")?;
-	public SupplementAccountElements getSupplementAccountAccess() {
-		return (pSupplementAccount != null) ? pSupplementAccount : (pSupplementAccount = new SupplementAccountElements());
-	}
-	
-	public ParserRule getSupplementAccountRule() {
-		return getSupplementAccountAccess().getRule();
-	}
-
 	//// http://www.taskjuggler.org/tj3/manual/project.html
 	//Project:
 	//	"project" id=ID? name=STRING version=STRING? interval=Interval2 ("{" attributes+=ProjectAttribute* "}")?;
@@ -9717,17 +9706,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getTaskAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/supplement.task.html
-	//SupplementTask:
-	//	"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?;
-	public SupplementTaskElements getSupplementTaskAccess() {
-		return (pSupplementTask != null) ? pSupplementTask : (pSupplementTask = new SupplementTaskElements());
-	}
-	
-	public ParserRule getSupplementTaskRule() {
-		return getSupplementTaskAccess().getRule();
-	}
-
 	//TaskAttribute: //		AccountTask -- deprecated
 	////		 AdoptTask -- experimental
 	//	Allocate // 		| StartCredit -- deprecated
@@ -9755,17 +9733,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getReportRule() {
 		return getReportAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/supplement.html
-	//SupplementReport:
-	//	"supplement" "report" report=[Report] ("{" attributes+=ReportAttribute* "}")?;
-	public SupplementReportElements getSupplementReportAccess() {
-		return (pSupplementReport != null) ? pSupplementReport : (pSupplementReport = new SupplementReportElements());
-	}
-	
-	public ParserRule getSupplementReportRule() {
-		return getSupplementReportAccess().getRule();
 	}
 
 	//ReportAttribute:
@@ -9827,16 +9794,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getResourceRule() {
 		return getResourceAccess().getRule();
-	}
-
-	//SupplementResource:
-	//	"supplement" "resource" resource=[Resource] ("{" attributes+=ResourceAttribute* "}")?;
-	public SupplementResourceElements getSupplementResourceAccess() {
-		return (pSupplementResource != null) ? pSupplementResource : (pSupplementResource = new SupplementResourceElements());
-	}
-	
-	public ParserRule getSupplementResourceRule() {
-		return getSupplementResourceAccess().getRule();
 	}
 
 	//ResourceAttribute:
@@ -11490,6 +11447,49 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getSummaryRule() {
 		return getSummaryAccess().getRule();
+	}
+
+	//// http://www.taskjuggler.org/tj3/manual/supplement.html
+	//SupplementAccount:
+	//	"supplement" "account" account=[Account] ("{" attributes+=AccountAttribute* "}")?;
+	public SupplementAccountElements getSupplementAccountAccess() {
+		return (pSupplementAccount != null) ? pSupplementAccount : (pSupplementAccount = new SupplementAccountElements());
+	}
+	
+	public ParserRule getSupplementAccountRule() {
+		return getSupplementAccountAccess().getRule();
+	}
+
+	//// http://www.taskjuggler.org/tj3/manual/supplement.html
+	//SupplementReport:
+	//	"supplement" "report" report=[Report] ("{" attributes+=ReportAttribute* "}")?;
+	public SupplementReportElements getSupplementReportAccess() {
+		return (pSupplementReport != null) ? pSupplementReport : (pSupplementReport = new SupplementReportElements());
+	}
+	
+	public ParserRule getSupplementReportRule() {
+		return getSupplementReportAccess().getRule();
+	}
+
+	//SupplementResource:
+	//	"supplement" "resource" resource=[Resource] ("{" attributes+=ResourceAttribute* "}")?;
+	public SupplementResourceElements getSupplementResourceAccess() {
+		return (pSupplementResource != null) ? pSupplementResource : (pSupplementResource = new SupplementResourceElements());
+	}
+	
+	public ParserRule getSupplementResourceRule() {
+		return getSupplementResourceAccess().getRule();
+	}
+
+	//// http://www.taskjuggler.org/tj3/manual/supplement.task.html
+	//SupplementTask:
+	//	"supplement" "task" task=[Task|TaskPath] ("{" attributes+=TaskAttribute* "}")?;
+	public SupplementTaskElements getSupplementTaskAccess() {
+		return (pSupplementTask != null) ? pSupplementTask : (pSupplementTask = new SupplementTaskElements());
+	}
+	
+	public ParserRule getSupplementTaskRule() {
+		return getSupplementTaskAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/supplement.html

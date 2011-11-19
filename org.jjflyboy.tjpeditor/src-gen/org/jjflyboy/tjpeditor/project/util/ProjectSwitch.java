@@ -105,14 +105,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.SUPPLEMENT_ACCOUNT:
-      {
-        SupplementAccount supplementAccount = (SupplementAccount)theEObject;
-        T result = caseSupplementAccount(supplementAccount);
-        if (result == null) result = caseGlobalAttribute(supplementAccount);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ProjectPackage.PROJECT:
       {
         Project project = (Project)theEObject;
@@ -136,15 +128,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.SUPPLEMENT_TASK:
-      {
-        SupplementTask supplementTask = (SupplementTask)theEObject;
-        T result = caseSupplementTask(supplementTask);
-        if (result == null) result = caseGlobalAttribute(supplementTask);
-        if (result == null) result = caseTaskAttribute(supplementTask);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ProjectPackage.TASK_ATTRIBUTE:
       {
         TaskAttribute taskAttribute = (TaskAttribute)theEObject;
@@ -161,14 +144,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseTextReport(report);
         if (result == null) result = caseGlobalAttribute(report);
         if (result == null) result = caseReportAttribute(report);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ProjectPackage.SUPPLEMENT_REPORT:
-      {
-        SupplementReport supplementReport = (SupplementReport)theEObject;
-        T result = caseSupplementReport(supplementReport);
-        if (result == null) result = caseGlobalAttribute(supplementReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -200,15 +175,6 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = caseResource(resource);
         if (result == null) result = caseGlobalAttribute(resource);
         if (result == null) result = caseResourceAttribute(resource);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ProjectPackage.SUPPLEMENT_RESOURCE:
-      {
-        SupplementResource supplementResource = (SupplementResource)theEObject;
-        T result = caseSupplementResource(supplementResource);
-        if (result == null) result = caseGlobalAttribute(supplementResource);
-        if (result == null) result = caseResourceAttribute(supplementResource);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1285,6 +1251,40 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.SUPPLEMENT_ACCOUNT:
+      {
+        SupplementAccount supplementAccount = (SupplementAccount)theEObject;
+        T result = caseSupplementAccount(supplementAccount);
+        if (result == null) result = caseGlobalAttribute(supplementAccount);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SUPPLEMENT_REPORT:
+      {
+        SupplementReport supplementReport = (SupplementReport)theEObject;
+        T result = caseSupplementReport(supplementReport);
+        if (result == null) result = caseGlobalAttribute(supplementReport);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SUPPLEMENT_RESOURCE:
+      {
+        SupplementResource supplementResource = (SupplementResource)theEObject;
+        T result = caseSupplementResource(supplementResource);
+        if (result == null) result = caseGlobalAttribute(supplementResource);
+        if (result == null) result = caseResourceAttribute(supplementResource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SUPPLEMENT_TASK:
+      {
+        SupplementTask supplementTask = (SupplementTask)theEObject;
+        T result = caseSupplementTask(supplementTask);
+        if (result == null) result = caseGlobalAttribute(supplementTask);
+        if (result == null) result = caseTaskAttribute(supplementTask);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.TAG_FILE:
       {
         TagFile tagFile = (TagFile)theEObject;
@@ -1747,22 +1747,6 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Supplement Account</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Supplement Account</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSupplementAccount(SupplementAccount object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Project</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1811,22 +1795,6 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Supplement Task</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Supplement Task</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSupplementTask(SupplementTask object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Task Attribute</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1854,22 +1822,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseReport(Report object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Supplement Report</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Supplement Report</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSupplementReport(SupplementReport object)
   {
     return null;
   }
@@ -1934,22 +1886,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseResource(Resource object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Supplement Resource</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Supplement Resource</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSupplementResource(SupplementResource object)
   {
     return null;
   }
@@ -4062,6 +3998,70 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSummary(Summary object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Supplement Account</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Supplement Account</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSupplementAccount(SupplementAccount object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Supplement Report</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Supplement Report</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSupplementReport(SupplementReport object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Supplement Resource</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Supplement Resource</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSupplementResource(SupplementResource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Supplement Task</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Supplement Task</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSupplementTask(SupplementTask object)
   {
     return null;
   }

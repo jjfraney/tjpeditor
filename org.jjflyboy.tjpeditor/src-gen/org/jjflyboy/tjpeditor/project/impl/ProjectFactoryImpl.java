@@ -72,19 +72,15 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.GLOBAL_ATTRIBUTE: return createGlobalAttribute();
       case ProjectPackage.ACCOUNT: return createAccount();
       case ProjectPackage.ACCOUNT_ATTRIBUTE: return createAccountAttribute();
-      case ProjectPackage.SUPPLEMENT_ACCOUNT: return createSupplementAccount();
       case ProjectPackage.PROJECT: return createProject();
       case ProjectPackage.PROJECT_ATTRIBUTE: return createProjectAttribute();
       case ProjectPackage.TASK: return createTask();
-      case ProjectPackage.SUPPLEMENT_TASK: return createSupplementTask();
       case ProjectPackage.TASK_ATTRIBUTE: return createTaskAttribute();
       case ProjectPackage.REPORT: return createReport();
-      case ProjectPackage.SUPPLEMENT_REPORT: return createSupplementReport();
       case ProjectPackage.REPORT_ATTRIBUTE: return createReportAttribute();
       case ProjectPackage.EXPORT: return createExport();
       case ProjectPackage.EXPORT_ATTRIBUTE: return createExportAttribute();
       case ProjectPackage.RESOURCE: return createResource();
-      case ProjectPackage.SUPPLEMENT_RESOURCE: return createSupplementResource();
       case ProjectPackage.RESOURCE_ATTRIBUTE: return createResourceAttribute();
       case ProjectPackage.ALLOCATE: return createAllocate();
       case ProjectPackage.ALLOCATE_RESOURCE: return createAllocateResource();
@@ -217,6 +213,10 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.STATUS_STATUS_SHEET: return createStatusStatusSheet();
       case ProjectPackage.STATUS_STATUS_SHEET_ATTRIBUTE: return createStatusStatusSheetAttribute();
       case ProjectPackage.SUMMARY: return createSummary();
+      case ProjectPackage.SUPPLEMENT_ACCOUNT: return createSupplementAccount();
+      case ProjectPackage.SUPPLEMENT_REPORT: return createSupplementReport();
+      case ProjectPackage.SUPPLEMENT_RESOURCE: return createSupplementResource();
+      case ProjectPackage.SUPPLEMENT_TASK: return createSupplementTask();
       case ProjectPackage.TAG_FILE: return createTagFile();
       case ProjectPackage.TASK_STATUS_SHEET: return createTaskStatusSheet();
       case ProjectPackage.TASK_STATUS_SHEET_ATTRIBUTE: return createTaskStatusSheetAttribute();
@@ -431,17 +431,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SupplementAccount createSupplementAccount()
-  {
-    SupplementAccountImpl supplementAccount = new SupplementAccountImpl();
-    return supplementAccount;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Project createProject()
   {
     ProjectImpl project = new ProjectImpl();
@@ -475,17 +464,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SupplementTask createSupplementTask()
-  {
-    SupplementTaskImpl supplementTask = new SupplementTaskImpl();
-    return supplementTask;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public TaskAttribute createTaskAttribute()
   {
     TaskAttributeImpl taskAttribute = new TaskAttributeImpl();
@@ -501,17 +479,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ReportImpl report = new ReportImpl();
     return report;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SupplementReport createSupplementReport()
-  {
-    SupplementReportImpl supplementReport = new SupplementReportImpl();
-    return supplementReport;
   }
 
   /**
@@ -556,17 +523,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ResourceImpl resource = new ResourceImpl();
     return resource;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SupplementResource createSupplementResource()
-  {
-    SupplementResourceImpl supplementResource = new SupplementResourceImpl();
-    return supplementResource;
   }
 
   /**
@@ -2019,6 +1975,50 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     SummaryImpl summary = new SummaryImpl();
     return summary;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SupplementAccount createSupplementAccount()
+  {
+    SupplementAccountImpl supplementAccount = new SupplementAccountImpl();
+    return supplementAccount;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SupplementReport createSupplementReport()
+  {
+    SupplementReportImpl supplementReport = new SupplementReportImpl();
+    return supplementReport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SupplementResource createSupplementResource()
+  {
+    SupplementResourceImpl supplementResource = new SupplementResourceImpl();
+    return supplementResource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SupplementTask createSupplementTask()
+  {
+    SupplementTaskImpl supplementTask = new SupplementTaskImpl();
+    return supplementTask;
   }
 
   /**

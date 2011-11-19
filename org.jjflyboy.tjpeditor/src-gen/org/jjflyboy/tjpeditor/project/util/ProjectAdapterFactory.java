@@ -98,11 +98,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createAccountAttributeAdapter();
       }
       @Override
-      public Adapter caseSupplementAccount(SupplementAccount object)
-      {
-        return createSupplementAccountAdapter();
-      }
-      @Override
       public Adapter caseProject(Project object)
       {
         return createProjectAdapter();
@@ -118,11 +113,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createTaskAdapter();
       }
       @Override
-      public Adapter caseSupplementTask(SupplementTask object)
-      {
-        return createSupplementTaskAdapter();
-      }
-      @Override
       public Adapter caseTaskAttribute(TaskAttribute object)
       {
         return createTaskAttributeAdapter();
@@ -131,11 +121,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseReport(Report object)
       {
         return createReportAdapter();
-      }
-      @Override
-      public Adapter caseSupplementReport(SupplementReport object)
-      {
-        return createSupplementReportAdapter();
       }
       @Override
       public Adapter caseReportAttribute(ReportAttribute object)
@@ -156,11 +141,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseResource(Resource object)
       {
         return createResourceAdapter();
-      }
-      @Override
-      public Adapter caseSupplementResource(SupplementResource object)
-      {
-        return createSupplementResourceAdapter();
       }
       @Override
       public Adapter caseResourceAttribute(ResourceAttribute object)
@@ -823,6 +803,26 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createSummaryAdapter();
       }
       @Override
+      public Adapter caseSupplementAccount(SupplementAccount object)
+      {
+        return createSupplementAccountAdapter();
+      }
+      @Override
+      public Adapter caseSupplementReport(SupplementReport object)
+      {
+        return createSupplementReportAdapter();
+      }
+      @Override
+      public Adapter caseSupplementResource(SupplementResource object)
+      {
+        return createSupplementResourceAdapter();
+      }
+      @Override
+      public Adapter caseSupplementTask(SupplementTask object)
+      {
+        return createSupplementTaskAdapter();
+      }
+      @Override
       public Adapter caseTagFile(TagFile object)
       {
         return createTagFileAdapter();
@@ -1135,21 +1135,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SupplementAccount <em>Supplement Account</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.SupplementAccount
-   * @generated
-   */
-  public Adapter createSupplementAccountAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Project <em>Project</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1195,21 +1180,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SupplementTask <em>Supplement Task</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.SupplementTask
-   * @generated
-   */
-  public Adapter createSupplementTaskAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TaskAttribute <em>Task Attribute</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1235,21 +1205,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createReportAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SupplementReport <em>Supplement Report</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.SupplementReport
-   * @generated
-   */
-  public Adapter createSupplementReportAdapter()
   {
     return null;
   }
@@ -1310,21 +1265,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createResourceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SupplementResource <em>Supplement Resource</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.SupplementResource
-   * @generated
-   */
-  public Adapter createSupplementResourceAdapter()
   {
     return null;
   }
@@ -3305,6 +3245,66 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSummaryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SupplementAccount <em>Supplement Account</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.SupplementAccount
+   * @generated
+   */
+  public Adapter createSupplementAccountAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SupplementReport <em>Supplement Report</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.SupplementReport
+   * @generated
+   */
+  public Adapter createSupplementReportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SupplementResource <em>Supplement Resource</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.SupplementResource
+   * @generated
+   */
+  public Adapter createSupplementResourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.SupplementTask <em>Supplement Task</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.SupplementTask
+   * @generated
+   */
+  public Adapter createSupplementTaskAdapter()
   {
     return null;
   }
