@@ -15,7 +15,11 @@ public class AccountTest  extends XtextTest {
 	public void test() {
 		testParserRule("account \"test account\"", "Account");
 	}
-	
+	@Test 
+	public void testSupplement() {
+		testParserRule("supplement account ac1 {}", "SupplementAccount");
+	}
+
 	@Test 
 	public void testWithId() {
 		testParserRule("account acso \"test account\"", "Account");
