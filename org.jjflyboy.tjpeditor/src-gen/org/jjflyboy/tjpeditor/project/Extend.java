@@ -15,11 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#getType <em>Type</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#getReference <em>Reference</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#getDate <em>Date</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#getRichtext <em>Richtext</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#getText <em>Text</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#getId <em>Id</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#getName <em>Name</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#isInherit <em>Inherit</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.Extend#isScenariospecific <em>Scenariospecific</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,133 +29,107 @@ import org.eclipse.emf.ecore.EObject;
 public interface Extend extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * Returns the value of the '<em><b>Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Id</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Type()
+   * @return the value of the '<em>Id</em>' attribute.
+   * @see #setId(String)
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Id()
    * @model
    * @generated
    */
-  String getType();
+  String getId();
 
   /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#getId <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see #getType()
+   * @param value the new value of the '<em>Id</em>' attribute.
+   * @see #getId()
    * @generated
    */
-  void setType(String value);
+  void setId(String value);
 
   /**
-   * Returns the value of the '<em><b>Reference</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Reference</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Reference</em>' containment reference.
-   * @see #setReference(ReferenceExtend)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Reference()
-   * @model containment="true"
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Name()
+   * @model
    * @generated
    */
-  ReferenceExtend getReference();
+  String getName();
 
   /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#getReference <em>Reference</em>}' containment reference.
+   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Reference</em>' containment reference.
-   * @see #getReference()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setReference(ReferenceExtend value);
+  void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Date</b></em>' containment reference.
+   * Returns the value of the '<em><b>Inherit</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Date</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Inherit</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Date</em>' containment reference.
-   * @see #setDate(DateExtend)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Date()
-   * @model containment="true"
+   * @return the value of the '<em>Inherit</em>' attribute.
+   * @see #setInherit(boolean)
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Inherit()
+   * @model
    * @generated
    */
-  DateExtend getDate();
+  boolean isInherit();
 
   /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#getDate <em>Date</em>}' containment reference.
+   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#isInherit <em>Inherit</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Date</em>' containment reference.
-   * @see #getDate()
+   * @param value the new value of the '<em>Inherit</em>' attribute.
+   * @see #isInherit()
    * @generated
    */
-  void setDate(DateExtend value);
+  void setInherit(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Richtext</b></em>' containment reference.
+   * Returns the value of the '<em><b>Scenariospecific</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Richtext</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Scenariospecific</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Richtext</em>' containment reference.
-   * @see #setRichtext(RichTextExtend)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Richtext()
-   * @model containment="true"
+   * @return the value of the '<em>Scenariospecific</em>' attribute.
+   * @see #setScenariospecific(boolean)
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Scenariospecific()
+   * @model
    * @generated
    */
-  RichTextExtend getRichtext();
+  boolean isScenariospecific();
 
   /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#getRichtext <em>Richtext</em>}' containment reference.
+   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#isScenariospecific <em>Scenariospecific</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Richtext</em>' containment reference.
-   * @see #getRichtext()
+   * @param value the new value of the '<em>Scenariospecific</em>' attribute.
+   * @see #isScenariospecific()
    * @generated
    */
-  void setRichtext(RichTextExtend value);
-
-  /**
-   * Returns the value of the '<em><b>Text</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Text</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Text</em>' containment reference.
-   * @see #setText(TextExtend)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getExtend_Text()
-   * @model containment="true"
-   * @generated
-   */
-  TextExtend getText();
-
-  /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.Extend#getText <em>Text</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Text</em>' containment reference.
-   * @see #getText()
-   * @generated
-   */
-  void setText(TextExtend value);
+  void setScenariospecific(boolean value);
 
 } // Extend

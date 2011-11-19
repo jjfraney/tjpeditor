@@ -440,15 +440,6 @@ public interface ProjectFactory extends EFactory
   CurrencyFormat createCurrencyFormat();
 
   /**
-   * Returns a new object of class '<em>Date Extend</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Date Extend</em>'.
-   * @generated
-   */
-  DateExtend createDateExtend();
-
-  /**
    * Returns a new object of class '<em>Daily Max</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -573,6 +564,42 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Extend createExtend();
+
+  /**
+   * Returns a new object of class '<em>Extend Resource</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Extend Resource</em>'.
+   * @generated
+   */
+  ExtendResource createExtendResource();
+
+  /**
+   * Returns a new object of class '<em>Extended Resource Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Extended Resource Attribute</em>'.
+   * @generated
+   */
+  ExtendedResourceAttribute createExtendedResourceAttribute();
+
+  /**
+   * Returns a new object of class '<em>Extend Task</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Extend Task</em>'.
+   * @generated
+   */
+  ExtendTask createExtendTask();
+
+  /**
+   * Returns a new object of class '<em>Extended Task Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Extended Task Attribute</em>'.
+   * @generated
+   */
+  ExtendedTaskAttribute createExtendedTaskAttribute();
 
   /**
    * Returns a new object of class '<em>Fail</em>'.
@@ -1052,15 +1079,6 @@ public interface ProjectFactory extends EFactory
   Rate createRate();
 
   /**
-   * Returns a new object of class '<em>Reference Extend</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Reference Extend</em>'.
-   * @generated
-   */
-  ReferenceExtend createReferenceExtend();
-
-  /**
    * Returns a new object of class '<em>Remaining</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1122,15 +1140,6 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Responsible createResponsible();
-
-  /**
-   * Returns a new object of class '<em>Rich Text Extend</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Rich Text Extend</em>'.
-   * @generated
-   */
-  RichTextExtend createRichTextExtend();
 
   /**
    * Returns a new object of class '<em>Right</em>'.
@@ -1430,15 +1439,6 @@ public interface ProjectFactory extends EFactory
   TaskRoot createTaskRoot();
 
   /**
-   * Returns a new object of class '<em>Text Extend</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Text Extend</em>'.
-   * @generated
-   */
-  TextExtend createTextExtend();
-
-  /**
    * Returns a new object of class '<em>Text Report</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1671,15 +1671,6 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   DurationQuantity createDurationQuantity();
-
-  /**
-   * Returns a new object of class '<em>Extend Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Extend Attribute</em>'.
-   * @generated
-   */
-  ExtendAttribute createExtendAttribute();
 
   /**
    * Returns a new object of class '<em>Limit</em>'.

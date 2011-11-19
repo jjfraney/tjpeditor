@@ -171,7 +171,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currency" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CurrencyFormat" eSuperTypes="#//ProjectAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DateExtend"/>
   <eClassifiers xsi:type="ecore:EClass" name="DailyMax" eSuperTypes="#//LimitsAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="DailyMin" eSuperTypes="#//LimitsAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="DailyWorkingHours" eSuperTypes="#//ProjectAttribute">
@@ -205,15 +204,26 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Epilog" eSuperTypes="#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Extend">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//ReferenceExtend"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="date" eType="#//DateExtend"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="richtext" eType="#//RichTextExtend"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//TextExtend"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inherit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scenariospecific" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendResource" eSuperTypes="#//ProjectAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" upperBound="-1"
+        eType="#//Extend" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedResourceAttribute" eSuperTypes="#//ResourceAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extend" eType="#//Extend"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendTask" eSuperTypes="#//ProjectAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" upperBound="-1"
+        eType="#//Extend" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedTaskAttribute" eSuperTypes="#//TaskAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extend" eType="#//Extend"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fail" eSuperTypes="#//TaskAttribute #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -413,7 +423,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Rate" eSuperTypes="#//GlobalAttribute #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReferenceExtend"/>
   <eClassifiers xsi:type="ecore:EClass" name="Remaining" eSuperTypes="#//NewTaskAttribute #//TaskTimesheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="remaining" eType="#//DurationQuantity"
         containment="true"/>
@@ -439,7 +448,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="resources" unique="false"
         upperBound="-1" eType="#//Resource"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RichTextExtend"/>
   <eClassifiers xsi:type="ecore:EClass" name="Right" eSuperTypes="#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="RollupResource" eSuperTypes="#//ExportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -569,7 +577,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="TaskRoot" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//Task"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextExtend"/>
   <eClassifiers xsi:type="ecore:EClass" name="TextReport" eSuperTypes="#//GlobalAttribute #//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="TimeFormat" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeformat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -663,12 +670,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="DurationQuantity" eSuperTypes="#//GapDuration #//GapLength">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//TimeUnit"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExtendAttribute" eSuperTypes="#//DateExtend #//ReferenceExtend #//RichTextExtend #//TextExtend">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inherit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scenariospecific" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Limit" eSuperTypes="#//DailyMax #//DailyMin #//Maximum #//Minimum #//MonthlyMax #//MonthlyMin #//WeeklyMax #//WeeklyMin">
     <eStructuralFeatures xsi:type="ecore:EReference" name="duration" eType="#//DurationQuantity"

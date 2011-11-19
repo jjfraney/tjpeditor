@@ -73,8 +73,8 @@ ProjectAttribute:
 		Currency
 		| CurrencyFormat
 		| DailyWorkingHours
-//		| ExtendTask
-//		| ExtendResource
+		| ExtendTask
+		| ExtendResource
 		| Include
 		| JournalEntry
 		| Now
@@ -111,6 +111,7 @@ TaskAttribute:
 		| Effort
 		| End
 		| EndCredit
+		| ExtendedTaskAttribute
 		| Fail
 		| Flags
 		| JournalEntry
@@ -221,6 +222,7 @@ ResourceAttribute:
 		BookingResource
 		| Efficiency
 		| Email
+		| ExtendedResourceAttribute
 		| Fail
 		| Flags
 		| JournalEntry
@@ -352,9 +354,6 @@ Currency: 'currency' currency=STRING;
 // http://www.taskjuggler.org/tj3/manual/currencyformat.html
 CurrencyFormat: 'currencyformat' RealFormat;
 
-// http://www.taskjuggler.org/tj3/manual/date.extend.html
-DateExtend: 'date' ExtendAttribute;
-
 // http://www.taskjuggler.org/tj3/manual/dailymax.html
 DailyMax: 'dailymax' Limit;
 
@@ -407,13 +406,24 @@ EndCredit: 'endcredit' credit=XFloat;
 Epilog: 'epilog' RichText;
 
 // http://www.taskjuggler.org/tj3/manual/extend.html
-Extend: 'extend' type=('task' | 'reource') ('{'
-		reference = ReferenceExtend
-		& date = DateExtend
-		& richtext = RichTextExtend
-		& text = TextExtend 
-	'}')?	
+// http://www.taskjuggler.org/tj3/manual/date.extend.html
+// http://www.taskjuggler.org/tj3/manual/reference.extend.html
+// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
+// http://www.taskjuggler.org/tj3/manual/scenariospecific.extend.html
+// http://www.taskjuggler.org/tj3/manual/text.extend.html
+Extend: ('reference' | 'date' | 'richtext' | 'text') 
+		id=ID name=STRING
+		 ('{' (inherit?='inherit'? & scenariospecific?='scenariospecific'?) '}')?
 ;
+
+// TODO: handle date format with validator
+// TODO: handle reference w/ label with validator?
+ExtendResource: {ExtendResource} 'extend' 'resource' ('{' extends +=  Extend* '}')?;
+ExtendedResourceAttribute: extend=[Extend] value = STRING;
+
+ExtendTask: {ExtendTask} 'extend' 'task' ('{' extends +=  Extend* '}')?;
+ExtendedTaskAttribute: extend=[Extend] value=STRING;
+
 
 // http://www.taskjuggler.org/tj3/manual/fail.html
 Fail: 'fail' expression=LogicalExpression;
@@ -696,9 +706,6 @@ enum PurgeTaskAttribute:
 // http://www.taskjuggler.org/tj3/manual/rate.html
 Rate: 'rate' rate=XFloat;
 
-// http://www.taskjuggler.org/tj3/manual/reference.extend.html
-ReferenceExtend: 'reference' ExtendAttribute;
-
 // http://www.taskjuggler.org/tj3/manual/remaining.html
 Remaining: 'remaining' remaining=DurationQuantity;
 
@@ -733,9 +740,6 @@ ResourceRoot: 'resourceroot' resource = [Resource];
 
 // http://www.taskjuggler.org/tj3/manual/responsible.html
 Responsible: 'responsible' resources+=[Resource] (',' resources+=[Resource])*;
-
-// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
-RichTextExtend: 'richtext' ExtendAttribute;
 
 // http://www.taskjuggler.org/tj3/manual/right.html
 Right: 'right' RichText;
@@ -911,9 +915,6 @@ TaskReport: 'taskreport' Report;
 // http://www.taskjuggler.org/tj3/manual/taskroot.html
 TaskRoot: 'taskroot' task=[Task];
 
-// http://www.taskjuggler.org/tj3/manual/text.extend.html
-TextExtend: 'text' ExtendAttribute;
-
 // http://www.taskjuggler.org/tj3/manual/textreport.html
 TextReport: 'textreport' Report;
 
@@ -1052,16 +1053,6 @@ CriterionId: columnId=ColumnId ('.' direction=CriterionDirection)?;
 // http://www.taskjuggler.org/tj3/manual/remaining.html
 DurationQuantity: value=XFloat unit=TimeUnit;
 
-// http://www.taskjuggler.org/tj3/manual/date.extend.html
-// http://www.taskjuggler.org/tj3/manual/reference.extend.html
-// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
-// http://www.taskjuggler.org/tj3/manual/scenariospecific.extend.html
-// http://www.taskjuggler.org/tj3/manual/text.extend.html
-ExtendAttribute:
-	 id=ID name=STRING ('{'
-	 	inherit?='inherit'
-	 	& scenariospecific?='scenariospecific'
-	 '}')?;
 
 // http://www.taskjuggler.org/tj3/manual/limits.task.html
 // http://www.taskjuggler.org/tj3/manual/limits.resource.html

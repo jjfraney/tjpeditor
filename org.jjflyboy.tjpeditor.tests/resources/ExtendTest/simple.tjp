@@ -1,0 +1,20 @@
+project "test project" 2011-12-11 + 4 m { 
+	extend task {
+	    reference MyTLink "My Link"
+   		text MyTText "My Text"
+  	}
+  	extend resource {
+  		richtext MyRLink "My Resource Link"
+  		date MyRDate "My Resource Date"
+  	}
+}
+
+task "t1" {
+  MyTLink "http://www.taskjuggler.org"
+  MyTText "TaskJuggler is great!"
+}
+
+resource "r1" {
+  MyRLink "http://blah.org"
+  MyRDate "2011-07-07"
+}

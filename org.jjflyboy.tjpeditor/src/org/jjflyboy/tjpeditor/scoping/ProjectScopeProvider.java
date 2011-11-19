@@ -15,8 +15,15 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.eclipse.xtext.util.SimpleAttributeResolver;
+import org.jjflyboy.tjpeditor.project.Extend;
+import org.jjflyboy.tjpeditor.project.ExtendResource;
+import org.jjflyboy.tjpeditor.project.ExtendTask;
+import org.jjflyboy.tjpeditor.project.ExtendedResourceAttribute;
+import org.jjflyboy.tjpeditor.project.ExtendedTaskAttribute;
 import org.jjflyboy.tjpeditor.project.Global;
 import org.jjflyboy.tjpeditor.project.Managers;
+import org.jjflyboy.tjpeditor.project.Project;
+import org.jjflyboy.tjpeditor.project.ProjectAttribute;
 import org.jjflyboy.tjpeditor.project.Resource;
 
 import com.google.common.base.Function;
@@ -52,7 +59,58 @@ public class ProjectScopeProvider extends AbstractDeclarativeScopeProvider {
 				QualifiedName.wrapper(resolver), IScope.NULLSCOPE);
 		return scope;
 	}
+	public IScope scope_ExtendedResourceAttribute_extend(EObject extendedResourceAttribute, EReference extend) {
+		return scope_ExtendedAttribute_extend(extendedResourceAttribute);
+	}
+	public IScope scope_ExtendedTaskAttribute_extend(EObject extendedTaskAttribute, EReference extend) {
+		return scope_ExtendedAttribute_extend(extendedTaskAttribute);
+	}
+	
+	private IScope scope_ExtendedAttribute_extend(EObject extendedTaskAttribute) {
+		IScope result = null;
+		List<EObject> extnds = getExtends(extendedTaskAttribute);
+		if(extnds != null) {
+			result = Scopes.scopeFor(extnds,
+				QualifiedName.wrapper(resolver), IScope.NULLSCOPE);
+		}
+		return result;
+	}
+	
+	private List<EObject> getExtends(EObject extended) {
+		EObject top = goToTop(extended);
+		List<EObject> result = null;
+		if(top instanceof Global) {
+			Global global = (Global)top;
+			Project project = global.getProject();
+			if(extended instanceof ExtendedTaskAttribute) {
+				result = loadTaskExtends(project);
+			} else if(extended instanceof ExtendedResourceAttribute){
+				result = loadResourceExtends(project);
+			}
 
+		}
+		return result;
+	}
+	
+	private List<EObject> loadTaskExtends(Project project) {
+		List<EObject> result = new ArrayList<EObject>();
+		for(ProjectAttribute attribute: project.getAttributes()) {
+			if(attribute instanceof ExtendTask) {
+				result.addAll(((ExtendTask)attribute).getExtends());
+			}
+		}
+		return result;
+	}
+	private List<EObject> loadResourceExtends(Project project) {
+		List<EObject> result = new ArrayList<EObject>();
+		for(ProjectAttribute attribute: project.getAttributes()) {
+			if(attribute instanceof ExtendResource) {
+				result.addAll(((ExtendResource)attribute).getExtends());
+			}
+		}
+		return result;
+	}
+	
 	private EObject goToTop(EObject ref) {
 		EObject result = null;
 		result = ref;

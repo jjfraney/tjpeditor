@@ -372,29 +372,28 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCurrencyParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cCurrencyFormatParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cDailyWorkingHoursParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cIncludeParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cJournalEntryParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cNowParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cNumberFormatParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cScenarioParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cShortTimeFormatParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cTimezoneParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cTimingResolutionParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cWeekStartsParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cWorkingHoursParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cYearlyWorkingDaysParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cExtendTaskParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cExtendResourceParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cIncludeParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cJournalEntryParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cNowParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cNumberFormatParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cScenarioParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cShortTimeFormatParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cTimezoneParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cTimingResolutionParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cWeekStartsParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cWorkingHoursParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cYearlyWorkingDaysParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
 		
 		//ProjectAttribute:
-		//	Currency //		| ExtendTask
-		//	//		| ExtendResource
-		//	| CurrencyFormat | DailyWorkingHours | Include | JournalEntry | Now | NumberFormat | Scenario | ShortTimeFormat |
-		//	Timezone | TimingResolution | WeekStarts | WorkingHours | YearlyWorkingDays;
+		//	Currency | CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | Include | JournalEntry | Now |
+		//	NumberFormat | Scenario | ShortTimeFormat | Timezone | TimingResolution | WeekStarts | WorkingHours |
+		//	YearlyWorkingDays;
 		public ParserRule getRule() { return rule; }
 
-		//Currency //		| ExtendTask
-		////		| ExtendResource
-		//| CurrencyFormat | DailyWorkingHours | Include | JournalEntry | Now | NumberFormat | Scenario | ShortTimeFormat |
-		//Timezone | TimingResolution | WeekStarts | WorkingHours | YearlyWorkingDays
+		//Currency | CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | Include | JournalEntry | Now |
+		//NumberFormat | Scenario | ShortTimeFormat | Timezone | TimingResolution | WeekStarts | WorkingHours | YearlyWorkingDays
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Currency
@@ -406,38 +405,44 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//DailyWorkingHours
 		public RuleCall getDailyWorkingHoursParserRuleCall_2() { return cDailyWorkingHoursParserRuleCall_2; }
 
+		//ExtendTask
+		public RuleCall getExtendTaskParserRuleCall_3() { return cExtendTaskParserRuleCall_3; }
+
+		//ExtendResource
+		public RuleCall getExtendResourceParserRuleCall_4() { return cExtendResourceParserRuleCall_4; }
+
 		//Include
-		public RuleCall getIncludeParserRuleCall_3() { return cIncludeParserRuleCall_3; }
+		public RuleCall getIncludeParserRuleCall_5() { return cIncludeParserRuleCall_5; }
 
 		//JournalEntry
-		public RuleCall getJournalEntryParserRuleCall_4() { return cJournalEntryParserRuleCall_4; }
+		public RuleCall getJournalEntryParserRuleCall_6() { return cJournalEntryParserRuleCall_6; }
 
 		//Now
-		public RuleCall getNowParserRuleCall_5() { return cNowParserRuleCall_5; }
+		public RuleCall getNowParserRuleCall_7() { return cNowParserRuleCall_7; }
 
 		//NumberFormat
-		public RuleCall getNumberFormatParserRuleCall_6() { return cNumberFormatParserRuleCall_6; }
+		public RuleCall getNumberFormatParserRuleCall_8() { return cNumberFormatParserRuleCall_8; }
 
 		//Scenario
-		public RuleCall getScenarioParserRuleCall_7() { return cScenarioParserRuleCall_7; }
+		public RuleCall getScenarioParserRuleCall_9() { return cScenarioParserRuleCall_9; }
 
 		//ShortTimeFormat
-		public RuleCall getShortTimeFormatParserRuleCall_8() { return cShortTimeFormatParserRuleCall_8; }
+		public RuleCall getShortTimeFormatParserRuleCall_10() { return cShortTimeFormatParserRuleCall_10; }
 
 		//Timezone
-		public RuleCall getTimezoneParserRuleCall_9() { return cTimezoneParserRuleCall_9; }
+		public RuleCall getTimezoneParserRuleCall_11() { return cTimezoneParserRuleCall_11; }
 
 		//TimingResolution
-		public RuleCall getTimingResolutionParserRuleCall_10() { return cTimingResolutionParserRuleCall_10; }
+		public RuleCall getTimingResolutionParserRuleCall_12() { return cTimingResolutionParserRuleCall_12; }
 
 		//WeekStarts
-		public RuleCall getWeekStartsParserRuleCall_11() { return cWeekStartsParserRuleCall_11; }
+		public RuleCall getWeekStartsParserRuleCall_13() { return cWeekStartsParserRuleCall_13; }
 
 		//WorkingHours
-		public RuleCall getWorkingHoursParserRuleCall_12() { return cWorkingHoursParserRuleCall_12; }
+		public RuleCall getWorkingHoursParserRuleCall_14() { return cWorkingHoursParserRuleCall_14; }
 
 		//YearlyWorkingDays
-		public RuleCall getYearlyWorkingDaysParserRuleCall_13() { return cYearlyWorkingDaysParserRuleCall_13; }
+		public RuleCall getYearlyWorkingDaysParserRuleCall_15() { return cYearlyWorkingDaysParserRuleCall_15; }
 	}
 
 	public class TaskElements extends AbstractParserRuleElementFinder {
@@ -559,47 +564,48 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEffortParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cEndParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cEndCreditParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cFailParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cFlagsParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cJournalEntryParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cLengthParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cLimitsParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cMaxEndParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
-		private final RuleCall cMaxStartParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cMilestoneParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
-		private final RuleCall cMinEndParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
-		private final RuleCall cMinStartParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
-		private final RuleCall cNoteParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
-		private final RuleCall cPeriodParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
-		private final RuleCall cPrecedesParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
-		private final RuleCall cPriorityParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
-		private final RuleCall cProjectIdParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
-		private final RuleCall cPurgeTaskParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
-		private final RuleCall cResponsibleParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
-		private final RuleCall cScheduledParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
-		private final RuleCall cSchedulingParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
-		private final RuleCall cShiftsTaskParserRuleCall_29 = (RuleCall)cAlternatives.eContents().get(29);
-		private final RuleCall cStartParserRuleCall_30 = (RuleCall)cAlternatives.eContents().get(30);
-		private final RuleCall cSupplementTaskParserRuleCall_31 = (RuleCall)cAlternatives.eContents().get(31);
-		private final RuleCall cTaskParserRuleCall_32 = (RuleCall)cAlternatives.eContents().get(32);
-		private final RuleCall cWarnParserRuleCall_33 = (RuleCall)cAlternatives.eContents().get(33);
+		private final RuleCall cExtendedTaskAttributeParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cFailParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cFlagsParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cJournalEntryParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cLengthParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cLimitsParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cMaxEndParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cMaxStartParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cMilestoneParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cMinEndParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cMinStartParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
+		private final RuleCall cNoteParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
+		private final RuleCall cPeriodParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
+		private final RuleCall cPrecedesParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
+		private final RuleCall cPriorityParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cProjectIdParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cPurgeTaskParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
+		private final RuleCall cResponsibleParserRuleCall_27 = (RuleCall)cAlternatives.eContents().get(27);
+		private final RuleCall cScheduledParserRuleCall_28 = (RuleCall)cAlternatives.eContents().get(28);
+		private final RuleCall cSchedulingParserRuleCall_29 = (RuleCall)cAlternatives.eContents().get(29);
+		private final RuleCall cShiftsTaskParserRuleCall_30 = (RuleCall)cAlternatives.eContents().get(30);
+		private final RuleCall cStartParserRuleCall_31 = (RuleCall)cAlternatives.eContents().get(31);
+		private final RuleCall cSupplementTaskParserRuleCall_32 = (RuleCall)cAlternatives.eContents().get(32);
+		private final RuleCall cTaskParserRuleCall_33 = (RuleCall)cAlternatives.eContents().get(33);
+		private final RuleCall cWarnParserRuleCall_34 = (RuleCall)cAlternatives.eContents().get(34);
 		
 		//TaskAttribute: //		AccountTask -- deprecated
 		////		 AdoptTask -- experimental
 		//	Allocate // 		| StartCredit -- deprecated
-		//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
-		//	JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
-		//	Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
-		//	Warn;
+		//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | ExtendedTaskAttribute |
+		//	Fail | Flags | JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period |
+		//	Precedes | Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start |
+		//	SupplementTask | Task | Warn;
 		public ParserRule getRule() { return rule; }
 
 		////		AccountTask -- deprecated
 		////		 AdoptTask -- experimental
 		//Allocate // 		| StartCredit -- deprecated
-		//| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
-		//JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
-		//Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
-		//Warn
+		//| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | ExtendedTaskAttribute |
+		//Fail | Flags | JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period |
+		//Precedes | Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start |
+		//SupplementTask | Task | Warn
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		////		AccountTask -- deprecated
@@ -634,77 +640,80 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//EndCredit
 		public RuleCall getEndCreditParserRuleCall_9() { return cEndCreditParserRuleCall_9; }
 
+		//ExtendedTaskAttribute
+		public RuleCall getExtendedTaskAttributeParserRuleCall_10() { return cExtendedTaskAttributeParserRuleCall_10; }
+
 		//Fail
-		public RuleCall getFailParserRuleCall_10() { return cFailParserRuleCall_10; }
+		public RuleCall getFailParserRuleCall_11() { return cFailParserRuleCall_11; }
 
 		//Flags
-		public RuleCall getFlagsParserRuleCall_11() { return cFlagsParserRuleCall_11; }
+		public RuleCall getFlagsParserRuleCall_12() { return cFlagsParserRuleCall_12; }
 
 		//JournalEntry
-		public RuleCall getJournalEntryParserRuleCall_12() { return cJournalEntryParserRuleCall_12; }
+		public RuleCall getJournalEntryParserRuleCall_13() { return cJournalEntryParserRuleCall_13; }
 
 		//Length
-		public RuleCall getLengthParserRuleCall_13() { return cLengthParserRuleCall_13; }
+		public RuleCall getLengthParserRuleCall_14() { return cLengthParserRuleCall_14; }
 
 		//Limits
-		public RuleCall getLimitsParserRuleCall_14() { return cLimitsParserRuleCall_14; }
+		public RuleCall getLimitsParserRuleCall_15() { return cLimitsParserRuleCall_15; }
 
 		//MaxEnd
-		public RuleCall getMaxEndParserRuleCall_15() { return cMaxEndParserRuleCall_15; }
+		public RuleCall getMaxEndParserRuleCall_16() { return cMaxEndParserRuleCall_16; }
 
 		//MaxStart
-		public RuleCall getMaxStartParserRuleCall_16() { return cMaxStartParserRuleCall_16; }
+		public RuleCall getMaxStartParserRuleCall_17() { return cMaxStartParserRuleCall_17; }
 
 		//Milestone
-		public RuleCall getMilestoneParserRuleCall_17() { return cMilestoneParserRuleCall_17; }
+		public RuleCall getMilestoneParserRuleCall_18() { return cMilestoneParserRuleCall_18; }
 
 		//MinEnd
-		public RuleCall getMinEndParserRuleCall_18() { return cMinEndParserRuleCall_18; }
+		public RuleCall getMinEndParserRuleCall_19() { return cMinEndParserRuleCall_19; }
 
 		//MinStart
-		public RuleCall getMinStartParserRuleCall_19() { return cMinStartParserRuleCall_19; }
+		public RuleCall getMinStartParserRuleCall_20() { return cMinStartParserRuleCall_20; }
 
 		//Note
-		public RuleCall getNoteParserRuleCall_20() { return cNoteParserRuleCall_20; }
+		public RuleCall getNoteParserRuleCall_21() { return cNoteParserRuleCall_21; }
 
 		//Period
-		public RuleCall getPeriodParserRuleCall_21() { return cPeriodParserRuleCall_21; }
+		public RuleCall getPeriodParserRuleCall_22() { return cPeriodParserRuleCall_22; }
 
 		//Precedes
-		public RuleCall getPrecedesParserRuleCall_22() { return cPrecedesParserRuleCall_22; }
+		public RuleCall getPrecedesParserRuleCall_23() { return cPrecedesParserRuleCall_23; }
 
 		//Priority
-		public RuleCall getPriorityParserRuleCall_23() { return cPriorityParserRuleCall_23; }
+		public RuleCall getPriorityParserRuleCall_24() { return cPriorityParserRuleCall_24; }
 
 		//ProjectId
-		public RuleCall getProjectIdParserRuleCall_24() { return cProjectIdParserRuleCall_24; }
+		public RuleCall getProjectIdParserRuleCall_25() { return cProjectIdParserRuleCall_25; }
 
 		//PurgeTask
-		public RuleCall getPurgeTaskParserRuleCall_25() { return cPurgeTaskParserRuleCall_25; }
+		public RuleCall getPurgeTaskParserRuleCall_26() { return cPurgeTaskParserRuleCall_26; }
 
 		//Responsible
-		public RuleCall getResponsibleParserRuleCall_26() { return cResponsibleParserRuleCall_26; }
+		public RuleCall getResponsibleParserRuleCall_27() { return cResponsibleParserRuleCall_27; }
 
 		//Scheduled
-		public RuleCall getScheduledParserRuleCall_27() { return cScheduledParserRuleCall_27; }
+		public RuleCall getScheduledParserRuleCall_28() { return cScheduledParserRuleCall_28; }
 
 		//Scheduling
-		public RuleCall getSchedulingParserRuleCall_28() { return cSchedulingParserRuleCall_28; }
+		public RuleCall getSchedulingParserRuleCall_29() { return cSchedulingParserRuleCall_29; }
 
 		//ShiftsTask
-		public RuleCall getShiftsTaskParserRuleCall_29() { return cShiftsTaskParserRuleCall_29; }
+		public RuleCall getShiftsTaskParserRuleCall_30() { return cShiftsTaskParserRuleCall_30; }
 
 		//Start
-		public RuleCall getStartParserRuleCall_30() { return cStartParserRuleCall_30; }
+		public RuleCall getStartParserRuleCall_31() { return cStartParserRuleCall_31; }
 
 		//SupplementTask
-		public RuleCall getSupplementTaskParserRuleCall_31() { return cSupplementTaskParserRuleCall_31; }
+		public RuleCall getSupplementTaskParserRuleCall_32() { return cSupplementTaskParserRuleCall_32; }
 
 		//Task
-		public RuleCall getTaskParserRuleCall_32() { return cTaskParserRuleCall_32; }
+		public RuleCall getTaskParserRuleCall_33() { return cTaskParserRuleCall_33; }
 
 		//Warn
-		public RuleCall getWarnParserRuleCall_33() { return cWarnParserRuleCall_33; }
+		public RuleCall getWarnParserRuleCall_34() { return cWarnParserRuleCall_34; }
 	}
 
 	public class ReportElements extends AbstractParserRuleElementFinder {
@@ -1191,29 +1200,30 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBookingResourceParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cEfficiencyParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cEmailParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cFailParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cFlagsParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cJournalEntryParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cLimitsParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cManagersParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cPurgeResourceParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cRateParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cResourceParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cShiftsResourceParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cSupplementResourceParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cVacationResourceParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cWarnParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cWorkingHoursParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cExtendedResourceAttributeParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cFailParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cFlagsParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cJournalEntryParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cLimitsParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cManagersParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cPurgeResourceParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cRateParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cResourceParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cShiftsResourceParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cSupplementResourceParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cVacationResourceParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cWarnParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cWorkingHoursParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
 		
 		//ResourceAttribute:
 		//	BookingResource // 		| Shift // deprecated
-		//	| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource | Rate | Resource |
-		//	ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours;
+		//	| Efficiency | Email | ExtendedResourceAttribute | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource |
+		//	Rate | Resource | ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours;
 		public ParserRule getRule() { return rule; }
 
 		//BookingResource // 		| Shift // deprecated
-		//| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource | Rate | Resource |
-		//ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours
+		//| Efficiency | Email | ExtendedResourceAttribute | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource |
+		//Rate | Resource | ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//BookingResource
@@ -1225,44 +1235,47 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Email
 		public RuleCall getEmailParserRuleCall_2() { return cEmailParserRuleCall_2; }
 
+		//ExtendedResourceAttribute
+		public RuleCall getExtendedResourceAttributeParserRuleCall_3() { return cExtendedResourceAttributeParserRuleCall_3; }
+
 		//Fail
-		public RuleCall getFailParserRuleCall_3() { return cFailParserRuleCall_3; }
+		public RuleCall getFailParserRuleCall_4() { return cFailParserRuleCall_4; }
 
 		//Flags
-		public RuleCall getFlagsParserRuleCall_4() { return cFlagsParserRuleCall_4; }
+		public RuleCall getFlagsParserRuleCall_5() { return cFlagsParserRuleCall_5; }
 
 		//JournalEntry
-		public RuleCall getJournalEntryParserRuleCall_5() { return cJournalEntryParserRuleCall_5; }
+		public RuleCall getJournalEntryParserRuleCall_6() { return cJournalEntryParserRuleCall_6; }
 
 		//Limits
-		public RuleCall getLimitsParserRuleCall_6() { return cLimitsParserRuleCall_6; }
+		public RuleCall getLimitsParserRuleCall_7() { return cLimitsParserRuleCall_7; }
 
 		//Managers
-		public RuleCall getManagersParserRuleCall_7() { return cManagersParserRuleCall_7; }
+		public RuleCall getManagersParserRuleCall_8() { return cManagersParserRuleCall_8; }
 
 		//PurgeResource
-		public RuleCall getPurgeResourceParserRuleCall_8() { return cPurgeResourceParserRuleCall_8; }
+		public RuleCall getPurgeResourceParserRuleCall_9() { return cPurgeResourceParserRuleCall_9; }
 
 		//Rate
-		public RuleCall getRateParserRuleCall_9() { return cRateParserRuleCall_9; }
+		public RuleCall getRateParserRuleCall_10() { return cRateParserRuleCall_10; }
 
 		//Resource
-		public RuleCall getResourceParserRuleCall_10() { return cResourceParserRuleCall_10; }
+		public RuleCall getResourceParserRuleCall_11() { return cResourceParserRuleCall_11; }
 
 		//ShiftsResource
-		public RuleCall getShiftsResourceParserRuleCall_11() { return cShiftsResourceParserRuleCall_11; }
+		public RuleCall getShiftsResourceParserRuleCall_12() { return cShiftsResourceParserRuleCall_12; }
 
 		//SupplementResource
-		public RuleCall getSupplementResourceParserRuleCall_12() { return cSupplementResourceParserRuleCall_12; }
+		public RuleCall getSupplementResourceParserRuleCall_13() { return cSupplementResourceParserRuleCall_13; }
 
 		//VacationResource
-		public RuleCall getVacationResourceParserRuleCall_13() { return cVacationResourceParserRuleCall_13; }
+		public RuleCall getVacationResourceParserRuleCall_14() { return cVacationResourceParserRuleCall_14; }
 
 		//Warn
-		public RuleCall getWarnParserRuleCall_14() { return cWarnParserRuleCall_14; }
+		public RuleCall getWarnParserRuleCall_15() { return cWarnParserRuleCall_15; }
 
 		//WorkingHours
-		public RuleCall getWorkingHoursParserRuleCall_15() { return cWorkingHoursParserRuleCall_15; }
+		public RuleCall getWorkingHoursParserRuleCall_16() { return cWorkingHoursParserRuleCall_16; }
 	}
 
 	public class AllocateElements extends AbstractParserRuleElementFinder {
@@ -2265,27 +2278,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRealFormatParserRuleCall_1() { return cRealFormatParserRuleCall_1; }
 	}
 
-	public class DateExtendElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DateExtend");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cExtendAttributeParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//// http://www.taskjuggler.org/tj3/manual/date.extend.html
-		//DateExtend:
-		//	"date" ExtendAttribute;
-		public ParserRule getRule() { return rule; }
-
-		//"date" ExtendAttribute
-		public Group getGroup() { return cGroup; }
-
-		//"date"
-		public Keyword getDateKeyword_0() { return cDateKeyword_0; }
-
-		//ExtendAttribute
-		public RuleCall getExtendAttributeParserRuleCall_1() { return cExtendAttributeParserRuleCall_1; }
-	}
-
 	public class DailyMaxElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DailyMax");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -2665,88 +2657,243 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	public class ExtendElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Extend");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cExtendKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Alternatives cTypeAlternatives_1_0 = (Alternatives)cTypeAssignment_1.eContents().get(0);
-		private final Keyword cTypeTaskKeyword_1_0_0 = (Keyword)cTypeAlternatives_1_0.eContents().get(0);
-		private final Keyword cTypeReourceKeyword_1_0_1 = (Keyword)cTypeAlternatives_1_0.eContents().get(1);
-		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
-		private final Group cGroup_2_0 = (Group)cUnorderedGroup_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
-		private final Assignment cReferenceAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
-		private final RuleCall cReferenceReferenceExtendParserRuleCall_2_0_1_0 = (RuleCall)cReferenceAssignment_2_0_1.eContents().get(0);
-		private final Assignment cDateAssignment_2_1 = (Assignment)cUnorderedGroup_2.eContents().get(1);
-		private final RuleCall cDateDateExtendParserRuleCall_2_1_0 = (RuleCall)cDateAssignment_2_1.eContents().get(0);
-		private final Assignment cRichtextAssignment_2_2 = (Assignment)cUnorderedGroup_2.eContents().get(2);
-		private final RuleCall cRichtextRichTextExtendParserRuleCall_2_2_0 = (RuleCall)cRichtextAssignment_2_2.eContents().get(0);
-		private final Group cGroup_2_3 = (Group)cUnorderedGroup_2.eContents().get(3);
-		private final Assignment cTextAssignment_2_3_0 = (Assignment)cGroup_2_3.eContents().get(0);
-		private final RuleCall cTextTextExtendParserRuleCall_2_3_0_0 = (RuleCall)cTextAssignment_2_3_0.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2_3_1 = (Keyword)cGroup_2_3.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Keyword cReferenceKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
+		private final Keyword cDateKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
+		private final Keyword cRichtextKeyword_0_2 = (Keyword)cAlternatives_0.eContents().get(2);
+		private final Keyword cTextKeyword_0_3 = (Keyword)cAlternatives_0.eContents().get(3);
+		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIdIDTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_3_1 = (UnorderedGroup)cGroup_3.eContents().get(1);
+		private final Assignment cInheritAssignment_3_1_0 = (Assignment)cUnorderedGroup_3_1.eContents().get(0);
+		private final Keyword cInheritInheritKeyword_3_1_0_0 = (Keyword)cInheritAssignment_3_1_0.eContents().get(0);
+		private final Assignment cScenariospecificAssignment_3_1_1 = (Assignment)cUnorderedGroup_3_1.eContents().get(1);
+		private final Keyword cScenariospecificScenariospecificKeyword_3_1_1_0 = (Keyword)cScenariospecificAssignment_3_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/extend.html
+		//// http://www.taskjuggler.org/tj3/manual/date.extend.html
+		//// http://www.taskjuggler.org/tj3/manual/reference.extend.html
+		//// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
+		//// http://www.taskjuggler.org/tj3/manual/scenariospecific.extend.html
+		//// http://www.taskjuggler.org/tj3/manual/text.extend.html
 		//Extend:
-		//	"extend" type=("task" | "reource") ("{" reference=ReferenceExtend & date=DateExtend & richtext=RichTextExtend &
-		//	text=TextExtend "}")?;
+		//	("reference" | "date" | "richtext" | "text") id=ID name=STRING ("{" (inherit?="inherit"? &
+		//	scenariospecific?="scenariospecific"?) "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"extend" type=("task" | "reource") ("{" reference=ReferenceExtend & date=DateExtend & richtext=RichTextExtend &
-		//text=TextExtend "}")?
+		//("reference" | "date" | "richtext" | "text") id=ID name=STRING ("{" (inherit?="inherit"? &
+		//scenariospecific?="scenariospecific"?) "}")?
 		public Group getGroup() { return cGroup; }
 
-		//"extend"
-		public Keyword getExtendKeyword_0() { return cExtendKeyword_0; }
+		//"reference" | "date" | "richtext" | "text"
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
-		//type=("task" | "reource")
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+		//"reference"
+		public Keyword getReferenceKeyword_0_0() { return cReferenceKeyword_0_0; }
 
-		//"task" | "reource"
-		public Alternatives getTypeAlternatives_1_0() { return cTypeAlternatives_1_0; }
+		//"date"
+		public Keyword getDateKeyword_0_1() { return cDateKeyword_0_1; }
 
-		//"task"
-		public Keyword getTypeTaskKeyword_1_0_0() { return cTypeTaskKeyword_1_0_0; }
+		//"richtext"
+		public Keyword getRichtextKeyword_0_2() { return cRichtextKeyword_0_2; }
 
-		//"reource"
-		public Keyword getTypeReourceKeyword_1_0_1() { return cTypeReourceKeyword_1_0_1; }
+		//"text"
+		public Keyword getTextKeyword_0_3() { return cTextKeyword_0_3; }
 
-		//("{" reference=ReferenceExtend & date=DateExtend & richtext=RichTextExtend & text=TextExtend "}")?
-		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
+		//id=ID
+		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
 
-		//"{" reference=ReferenceExtend
-		public Group getGroup_2_0() { return cGroup_2_0; }
+		//ID
+		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
+
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+
+		//("{" (inherit?="inherit"? & scenariospecific?="scenariospecific"?) "}")?
+		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2_0_0() { return cLeftCurlyBracketKeyword_2_0_0; }
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
 
-		//reference=ReferenceExtend
-		public Assignment getReferenceAssignment_2_0_1() { return cReferenceAssignment_2_0_1; }
+		//inherit?="inherit"? & scenariospecific?="scenariospecific"?
+		public UnorderedGroup getUnorderedGroup_3_1() { return cUnorderedGroup_3_1; }
 
-		//ReferenceExtend
-		public RuleCall getReferenceReferenceExtendParserRuleCall_2_0_1_0() { return cReferenceReferenceExtendParserRuleCall_2_0_1_0; }
+		//inherit?="inherit"?
+		public Assignment getInheritAssignment_3_1_0() { return cInheritAssignment_3_1_0; }
 
-		//date=DateExtend
-		public Assignment getDateAssignment_2_1() { return cDateAssignment_2_1; }
+		//"inherit"
+		public Keyword getInheritInheritKeyword_3_1_0_0() { return cInheritInheritKeyword_3_1_0_0; }
 
-		//DateExtend
-		public RuleCall getDateDateExtendParserRuleCall_2_1_0() { return cDateDateExtendParserRuleCall_2_1_0; }
+		//scenariospecific?="scenariospecific"?
+		public Assignment getScenariospecificAssignment_3_1_1() { return cScenariospecificAssignment_3_1_1; }
 
-		//richtext=RichTextExtend
-		public Assignment getRichtextAssignment_2_2() { return cRichtextAssignment_2_2; }
-
-		//RichTextExtend
-		public RuleCall getRichtextRichTextExtendParserRuleCall_2_2_0() { return cRichtextRichTextExtendParserRuleCall_2_2_0; }
-
-		//text=TextExtend "}"
-		public Group getGroup_2_3() { return cGroup_2_3; }
-
-		//text=TextExtend
-		public Assignment getTextAssignment_2_3_0() { return cTextAssignment_2_3_0; }
-
-		//TextExtend
-		public RuleCall getTextTextExtendParserRuleCall_2_3_0_0() { return cTextTextExtendParserRuleCall_2_3_0_0; }
+		//"scenariospecific"
+		public Keyword getScenariospecificScenariospecificKeyword_3_1_1_0() { return cScenariospecificScenariospecificKeyword_3_1_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_3_1() { return cRightCurlyBracketKeyword_2_3_1; }
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class ExtendResourceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExtendResource");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cExtendResourceAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cExtendKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cResourceKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cExtendsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cExtendsExtendParserRuleCall_3_1_0 = (RuleCall)cExtendsAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//// TODO: handle date format with validator
+		//// TODO: handle reference w/ label with validator?
+		//ExtendResource:
+		//	{ExtendResource} "extend" "resource" ("{" extends+=Extend* "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//{ExtendResource} "extend" "resource" ("{" extends+=Extend* "}")?
+		public Group getGroup() { return cGroup; }
+
+		//{ExtendResource}
+		public Action getExtendResourceAction_0() { return cExtendResourceAction_0; }
+
+		//"extend"
+		public Keyword getExtendKeyword_1() { return cExtendKeyword_1; }
+
+		//"resource"
+		public Keyword getResourceKeyword_2() { return cResourceKeyword_2; }
+
+		//("{" extends+=Extend* "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//extends+=Extend*
+		public Assignment getExtendsAssignment_3_1() { return cExtendsAssignment_3_1; }
+
+		//Extend
+		public RuleCall getExtendsExtendParserRuleCall_3_1_0() { return cExtendsExtendParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class ExtendedResourceAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExtendedResourceAttribute");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cExtendAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cExtendExtendCrossReference_0_0 = (CrossReference)cExtendAssignment_0.eContents().get(0);
+		private final RuleCall cExtendExtendIDTerminalRuleCall_0_0_1 = (RuleCall)cExtendExtendCrossReference_0_0.eContents().get(1);
+		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cValueSTRINGTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		
+		//ExtendedResourceAttribute:
+		//	extend=[Extend] value=STRING;
+		public ParserRule getRule() { return rule; }
+
+		//extend=[Extend] value=STRING
+		public Group getGroup() { return cGroup; }
+
+		//extend=[Extend]
+		public Assignment getExtendAssignment_0() { return cExtendAssignment_0; }
+
+		//[Extend]
+		public CrossReference getExtendExtendCrossReference_0_0() { return cExtendExtendCrossReference_0_0; }
+
+		//ID
+		public RuleCall getExtendExtendIDTerminalRuleCall_0_0_1() { return cExtendExtendIDTerminalRuleCall_0_0_1; }
+
+		//value=STRING
+		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_1_0() { return cValueSTRINGTerminalRuleCall_1_0; }
+	}
+
+	public class ExtendTaskElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExtendTask");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cExtendTaskAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cExtendKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cTaskKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cExtendsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cExtendsExtendParserRuleCall_3_1_0 = (RuleCall)cExtendsAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//ExtendTask:
+		//	{ExtendTask} "extend" "task" ("{" extends+=Extend* "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//{ExtendTask} "extend" "task" ("{" extends+=Extend* "}")?
+		public Group getGroup() { return cGroup; }
+
+		//{ExtendTask}
+		public Action getExtendTaskAction_0() { return cExtendTaskAction_0; }
+
+		//"extend"
+		public Keyword getExtendKeyword_1() { return cExtendKeyword_1; }
+
+		//"task"
+		public Keyword getTaskKeyword_2() { return cTaskKeyword_2; }
+
+		//("{" extends+=Extend* "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//extends+=Extend*
+		public Assignment getExtendsAssignment_3_1() { return cExtendsAssignment_3_1; }
+
+		//Extend
+		public RuleCall getExtendsExtendParserRuleCall_3_1_0() { return cExtendsExtendParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class ExtendedTaskAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExtendedTaskAttribute");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cExtendAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cExtendExtendCrossReference_0_0 = (CrossReference)cExtendAssignment_0.eContents().get(0);
+		private final RuleCall cExtendExtendIDTerminalRuleCall_0_0_1 = (RuleCall)cExtendExtendCrossReference_0_0.eContents().get(1);
+		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cValueSTRINGTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		
+		//ExtendedTaskAttribute:
+		//	extend=[Extend] value=STRING;
+		public ParserRule getRule() { return rule; }
+
+		//extend=[Extend] value=STRING
+		public Group getGroup() { return cGroup; }
+
+		//extend=[Extend]
+		public Assignment getExtendAssignment_0() { return cExtendAssignment_0; }
+
+		//[Extend]
+		public CrossReference getExtendExtendCrossReference_0_0() { return cExtendExtendCrossReference_0_0; }
+
+		//ID
+		public RuleCall getExtendExtendIDTerminalRuleCall_0_0_1() { return cExtendExtendIDTerminalRuleCall_0_0_1; }
+
+		//value=STRING
+		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_1_0() { return cValueSTRINGTerminalRuleCall_1_0; }
 	}
 
 	public class FailElements extends AbstractParserRuleElementFinder {
@@ -4502,27 +4649,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRateXFloatParserRuleCall_1_0() { return cRateXFloatParserRuleCall_1_0; }
 	}
 
-	public class ReferenceExtendElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ReferenceExtend");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cReferenceKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cExtendAttributeParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//// http://www.taskjuggler.org/tj3/manual/reference.extend.html
-		//ReferenceExtend:
-		//	"reference" ExtendAttribute;
-		public ParserRule getRule() { return rule; }
-
-		//"reference" ExtendAttribute
-		public Group getGroup() { return cGroup; }
-
-		//"reference"
-		public Keyword getReferenceKeyword_0() { return cReferenceKeyword_0; }
-
-		//ExtendAttribute
-		public RuleCall getExtendAttributeParserRuleCall_1() { return cExtendAttributeParserRuleCall_1; }
-	}
-
 	public class RemainingElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Remaining");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -4783,27 +4909,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getResourcesResourceIDTerminalRuleCall_2_1_0_1() { return cResourcesResourceIDTerminalRuleCall_2_1_0_1; }
-	}
-
-	public class RichTextExtendElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RichTextExtend");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cRichtextKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cExtendAttributeParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
-		//RichTextExtend:
-		//	"richtext" ExtendAttribute;
-		public ParserRule getRule() { return rule; }
-
-		//"richtext" ExtendAttribute
-		public Group getGroup() { return cGroup; }
-
-		//"richtext"
-		public Keyword getRichtextKeyword_0() { return cRichtextKeyword_0; }
-
-		//ExtendAttribute
-		public RuleCall getExtendAttributeParserRuleCall_1() { return cExtendAttributeParserRuleCall_1; }
 	}
 
 	public class RightElements extends AbstractParserRuleElementFinder {
@@ -6194,27 +6299,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getTaskTaskIDTerminalRuleCall_1_0_1() { return cTaskTaskIDTerminalRuleCall_1_0_1; }
 	}
 
-	public class TextExtendElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextExtend");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cTextKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cExtendAttributeParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//// http://www.taskjuggler.org/tj3/manual/text.extend.html
-		//TextExtend:
-		//	"text" ExtendAttribute;
-		public ParserRule getRule() { return rule; }
-
-		//"text" ExtendAttribute
-		public Group getGroup() { return cGroup; }
-
-		//"text"
-		public Keyword getTextKeyword_0() { return cTextKeyword_0; }
-
-		//ExtendAttribute
-		public RuleCall getExtendAttributeParserRuleCall_1() { return cExtendAttributeParserRuleCall_1; }
-	}
-
 	public class TextReportElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextReport");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -7238,75 +7322,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//TimeUnit
 		public RuleCall getUnitTimeUnitEnumRuleCall_1_0() { return cUnitTimeUnitEnumRuleCall_1_0; }
-	}
-
-	public class ExtendAttributeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExtendAttribute");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cIdAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cIdIDTerminalRuleCall_0_0 = (RuleCall)cIdAssignment_0.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
-		private final Group cGroup_2_0 = (Group)cUnorderedGroup_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
-		private final Assignment cInheritAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
-		private final Keyword cInheritInheritKeyword_2_0_1_0 = (Keyword)cInheritAssignment_2_0_1.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cUnorderedGroup_2.eContents().get(1);
-		private final Assignment cScenariospecificAssignment_2_1_0 = (Assignment)cGroup_2_1.eContents().get(0);
-		private final Keyword cScenariospecificScenariospecificKeyword_2_1_0_0 = (Keyword)cScenariospecificAssignment_2_1_0.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_2_1_1 = (Keyword)cGroup_2_1.eContents().get(1);
-		
-		//// http://www.taskjuggler.org/tj3/manual/date.extend.html
-		//// http://www.taskjuggler.org/tj3/manual/reference.extend.html
-		//// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
-		//// http://www.taskjuggler.org/tj3/manual/scenariospecific.extend.html
-		//// http://www.taskjuggler.org/tj3/manual/text.extend.html
-		//ExtendAttribute:
-		//	id=ID name=STRING ("{" inherit?="inherit" & scenariospecific?="scenariospecific" "}")?;
-		public ParserRule getRule() { return rule; }
-
-		//id=ID name=STRING ("{" inherit?="inherit" & scenariospecific?="scenariospecific" "}")?
-		public Group getGroup() { return cGroup; }
-
-		//id=ID
-		public Assignment getIdAssignment_0() { return cIdAssignment_0; }
-
-		//ID
-		public RuleCall getIdIDTerminalRuleCall_0_0() { return cIdIDTerminalRuleCall_0_0; }
-
-		//name=STRING
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
-
-		//("{" inherit?="inherit" & scenariospecific?="scenariospecific" "}")?
-		public UnorderedGroup getUnorderedGroup_2() { return cUnorderedGroup_2; }
-
-		//"{" inherit?="inherit"
-		public Group getGroup_2_0() { return cGroup_2_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2_0_0() { return cLeftCurlyBracketKeyword_2_0_0; }
-
-		//inherit?="inherit"
-		public Assignment getInheritAssignment_2_0_1() { return cInheritAssignment_2_0_1; }
-
-		//"inherit"
-		public Keyword getInheritInheritKeyword_2_0_1_0() { return cInheritInheritKeyword_2_0_1_0; }
-
-		//scenariospecific?="scenariospecific" "}"
-		public Group getGroup_2_1() { return cGroup_2_1; }
-
-		//scenariospecific?="scenariospecific"
-		public Assignment getScenariospecificAssignment_2_1_0() { return cScenariospecificAssignment_2_1_0; }
-
-		//"scenariospecific"
-		public Keyword getScenariospecificScenariospecificKeyword_2_1_0_0() { return cScenariospecificScenariospecificKeyword_2_1_0_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_1_1() { return cRightCurlyBracketKeyword_2_1_1; }
 	}
 
 	public class LimitElements extends AbstractParserRuleElementFinder {
@@ -9385,7 +9400,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private CreditElements pCredit;
 	private CurrencyElements pCurrency;
 	private CurrencyFormatElements pCurrencyFormat;
-	private DateExtendElements pDateExtend;
 	private DailyMaxElements pDailyMax;
 	private DailyMinElements pDailyMin;
 	private DailyWorkingHoursElements pDailyWorkingHours;
@@ -9400,6 +9414,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private EndCreditElements pEndCredit;
 	private EpilogElements pEpilog;
 	private ExtendElements pExtend;
+	private ExtendResourceElements pExtendResource;
+	private ExtendedResourceAttributeElements pExtendedResourceAttribute;
+	private ExtendTaskElements pExtendTask;
+	private ExtendedTaskAttributeElements pExtendedTaskAttribute;
 	private FailElements pFail;
 	private FlagsElements pFlags;
 	private FontColorElements pFontColor;
@@ -9462,7 +9480,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private PurgeTaskElements pPurgeTask;
 	private PurgeTaskAttributeElements unknownRulePurgeTaskAttribute;
 	private RateElements pRate;
-	private ReferenceExtendElements pReferenceExtend;
 	private RemainingElements pRemaining;
 	private ReportPrefixElements pReportPrefix;
 	private ResourceAttributesElements pResourceAttributes;
@@ -9470,7 +9487,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private ResourceReportElements pResourceReport;
 	private ResourceRootElements pResourceRoot;
 	private ResponsibleElements pResponsible;
-	private RichTextExtendElements pRichTextExtend;
 	private RightElements pRight;
 	private RollupResourceElements pRollupResource;
 	private RollupTaskElements pRollupTask;
@@ -9507,7 +9523,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private TaskPrefixElements pTaskPrefix;
 	private TaskReportElements pTaskReport;
 	private TaskRootElements pTaskRoot;
-	private TextExtendElements pTextExtend;
 	private TextReportElements pTextReport;
 	private TimeFormatElements pTimeFormat;
 	private TimeoffElements pTimeoff;
@@ -9536,7 +9551,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private CriterionElements pCriterion;
 	private CriterionIdElements pCriterionId;
 	private DurationQuantityElements pDurationQuantity;
-	private ExtendAttributeElements pExtendAttribute;
 	private LimitElements pLimit;
 	private LimitAttributeElements pLimitAttribute;
 	private RealFormatElements pRealFormat;
@@ -9681,10 +9695,9 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ProjectAttribute:
-	//	Currency //		| ExtendTask
-	//	//		| ExtendResource
-	//	| CurrencyFormat | DailyWorkingHours | Include | JournalEntry | Now | NumberFormat | Scenario | ShortTimeFormat |
-	//	Timezone | TimingResolution | WeekStarts | WorkingHours | YearlyWorkingDays;
+	//	Currency | CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | Include | JournalEntry | Now |
+	//	NumberFormat | Scenario | ShortTimeFormat | Timezone | TimingResolution | WeekStarts | WorkingHours |
+	//	YearlyWorkingDays;
 	public ProjectAttributeElements getProjectAttributeAccess() {
 		return (pProjectAttribute != null) ? pProjectAttribute : (pProjectAttribute = new ProjectAttributeElements());
 	}
@@ -9718,10 +9731,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//TaskAttribute: //		AccountTask -- deprecated
 	////		 AdoptTask -- experimental
 	//	Allocate // 		| StartCredit -- deprecated
-	//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | Fail | Flags |
-	//	JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period | Precedes |
-	//	Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start | SupplementTask | Task |
-	//	Warn;
+	//	| BookingTask | Charge | ChargeSet | Complete | Depends | Duration | Effort | End | EndCredit | ExtendedTaskAttribute |
+	//	Fail | Flags | JournalEntry | Length | Limits | MaxEnd | MaxStart | Milestone | MinEnd | MinStart | Note | Period |
+	//	Precedes | Priority | ProjectId | PurgeTask | Responsible | Scheduled | Scheduling | ShiftsTask | Start |
+	//	SupplementTask | Task | Warn;
 	public TaskAttributeElements getTaskAttributeAccess() {
 		return (pTaskAttribute != null) ? pTaskAttribute : (pTaskAttribute = new TaskAttributeElements());
 	}
@@ -9828,8 +9841,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ResourceAttribute:
 	//	BookingResource // 		| Shift // deprecated
-	//	| Efficiency | Email | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource | Rate | Resource |
-	//	ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours;
+	//	| Efficiency | Email | ExtendedResourceAttribute | Fail | Flags | JournalEntry | Limits | Managers | PurgeResource |
+	//	Rate | Resource | ShiftsResource | SupplementResource | VacationResource | Warn | WorkingHours;
 	public ResourceAttributeElements getResourceAttributeAccess() {
 		return (pResourceAttribute != null) ? pResourceAttribute : (pResourceAttribute = new ResourceAttributeElements());
 	}
@@ -10148,17 +10161,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getCurrencyFormatAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/date.extend.html
-	//DateExtend:
-	//	"date" ExtendAttribute;
-	public DateExtendElements getDateExtendAccess() {
-		return (pDateExtend != null) ? pDateExtend : (pDateExtend = new DateExtendElements());
-	}
-	
-	public ParserRule getDateExtendRule() {
-		return getDateExtendAccess().getRule();
-	}
-
 	//// http://www.taskjuggler.org/tj3/manual/dailymax.html
 	//DailyMax:
 	//	"dailymax" Limit;
@@ -10307,15 +10309,62 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/extend.html
+	//// http://www.taskjuggler.org/tj3/manual/date.extend.html
+	//// http://www.taskjuggler.org/tj3/manual/reference.extend.html
+	//// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
+	//// http://www.taskjuggler.org/tj3/manual/scenariospecific.extend.html
+	//// http://www.taskjuggler.org/tj3/manual/text.extend.html
 	//Extend:
-	//	"extend" type=("task" | "reource") ("{" reference=ReferenceExtend & date=DateExtend & richtext=RichTextExtend &
-	//	text=TextExtend "}")?;
+	//	("reference" | "date" | "richtext" | "text") id=ID name=STRING ("{" (inherit?="inherit"? &
+	//	scenariospecific?="scenariospecific"?) "}")?;
 	public ExtendElements getExtendAccess() {
 		return (pExtend != null) ? pExtend : (pExtend = new ExtendElements());
 	}
 	
 	public ParserRule getExtendRule() {
 		return getExtendAccess().getRule();
+	}
+
+	//// TODO: handle date format with validator
+	//// TODO: handle reference w/ label with validator?
+	//ExtendResource:
+	//	{ExtendResource} "extend" "resource" ("{" extends+=Extend* "}")?;
+	public ExtendResourceElements getExtendResourceAccess() {
+		return (pExtendResource != null) ? pExtendResource : (pExtendResource = new ExtendResourceElements());
+	}
+	
+	public ParserRule getExtendResourceRule() {
+		return getExtendResourceAccess().getRule();
+	}
+
+	//ExtendedResourceAttribute:
+	//	extend=[Extend] value=STRING;
+	public ExtendedResourceAttributeElements getExtendedResourceAttributeAccess() {
+		return (pExtendedResourceAttribute != null) ? pExtendedResourceAttribute : (pExtendedResourceAttribute = new ExtendedResourceAttributeElements());
+	}
+	
+	public ParserRule getExtendedResourceAttributeRule() {
+		return getExtendedResourceAttributeAccess().getRule();
+	}
+
+	//ExtendTask:
+	//	{ExtendTask} "extend" "task" ("{" extends+=Extend* "}")?;
+	public ExtendTaskElements getExtendTaskAccess() {
+		return (pExtendTask != null) ? pExtendTask : (pExtendTask = new ExtendTaskElements());
+	}
+	
+	public ParserRule getExtendTaskRule() {
+		return getExtendTaskAccess().getRule();
+	}
+
+	//ExtendedTaskAttribute:
+	//	extend=[Extend] value=STRING;
+	public ExtendedTaskAttributeElements getExtendedTaskAttributeAccess() {
+		return (pExtendedTaskAttribute != null) ? pExtendedTaskAttribute : (pExtendedTaskAttribute = new ExtendedTaskAttributeElements());
+	}
+	
+	public ParserRule getExtendedTaskAttributeRule() {
+		return getExtendedTaskAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/fail.html
@@ -11035,17 +11084,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getRateAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/reference.extend.html
-	//ReferenceExtend:
-	//	"reference" ExtendAttribute;
-	public ReferenceExtendElements getReferenceExtendAccess() {
-		return (pReferenceExtend != null) ? pReferenceExtend : (pReferenceExtend = new ReferenceExtendElements());
-	}
-	
-	public ParserRule getReferenceExtendRule() {
-		return getReferenceExtendAccess().getRule();
-	}
-
 	//// http://www.taskjuggler.org/tj3/manual/remaining.html
 	//Remaining:
 	//	"remaining" remaining=DurationQuantity;
@@ -11126,17 +11164,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getResponsibleRule() {
 		return getResponsibleAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
-	//RichTextExtend:
-	//	"richtext" ExtendAttribute;
-	public RichTextExtendElements getRichTextExtendAccess() {
-		return (pRichTextExtend != null) ? pRichTextExtend : (pRichTextExtend = new RichTextExtendElements());
-	}
-	
-	public ParserRule getRichTextExtendRule() {
-		return getRichTextExtendAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/right.html
@@ -11559,17 +11586,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getTaskRootAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/text.extend.html
-	//TextExtend:
-	//	"text" ExtendAttribute;
-	public TextExtendElements getTextExtendAccess() {
-		return (pTextExtend != null) ? pTextExtend : (pTextExtend = new TextExtendElements());
-	}
-	
-	public ParserRule getTextExtendRule() {
-		return getTextExtendAccess().getRule();
-	}
-
 	//// http://www.taskjuggler.org/tj3/manual/textreport.html
 	//TextReport:
 	//	"textreport" Report;
@@ -11897,21 +11913,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getDurationQuantityRule() {
 		return getDurationQuantityAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/date.extend.html
-	//// http://www.taskjuggler.org/tj3/manual/reference.extend.html
-	//// http://www.taskjuggler.org/tj3/manual/richtext.extend.html
-	//// http://www.taskjuggler.org/tj3/manual/scenariospecific.extend.html
-	//// http://www.taskjuggler.org/tj3/manual/text.extend.html
-	//ExtendAttribute:
-	//	id=ID name=STRING ("{" inherit?="inherit" & scenariospecific?="scenariospecific" "}")?;
-	public ExtendAttributeElements getExtendAttributeAccess() {
-		return (pExtendAttribute != null) ? pExtendAttribute : (pExtendAttribute = new ExtendAttributeElements());
-	}
-	
-	public ParserRule getExtendAttributeRule() {
-		return getExtendAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/limits.task.html

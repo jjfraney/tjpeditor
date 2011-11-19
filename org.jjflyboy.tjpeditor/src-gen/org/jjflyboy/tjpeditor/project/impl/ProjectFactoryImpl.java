@@ -114,7 +114,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.CREDIT: return createCredit();
       case ProjectPackage.CURRENCY: return createCurrency();
       case ProjectPackage.CURRENCY_FORMAT: return createCurrencyFormat();
-      case ProjectPackage.DATE_EXTEND: return createDateExtend();
       case ProjectPackage.DAILY_MAX: return createDailyMax();
       case ProjectPackage.DAILY_MIN: return createDailyMin();
       case ProjectPackage.DAILY_WORKING_HOURS: return createDailyWorkingHours();
@@ -129,6 +128,10 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.END_CREDIT: return createEndCredit();
       case ProjectPackage.EPILOG: return createEpilog();
       case ProjectPackage.EXTEND: return createExtend();
+      case ProjectPackage.EXTEND_RESOURCE: return createExtendResource();
+      case ProjectPackage.EXTENDED_RESOURCE_ATTRIBUTE: return createExtendedResourceAttribute();
+      case ProjectPackage.EXTEND_TASK: return createExtendTask();
+      case ProjectPackage.EXTENDED_TASK_ATTRIBUTE: return createExtendedTaskAttribute();
       case ProjectPackage.FAIL: return createFail();
       case ProjectPackage.FLAGS: return createFlags();
       case ProjectPackage.FONT_COLOR: return createFontColor();
@@ -182,7 +185,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.PURGE_RESOURCE: return createPurgeResource();
       case ProjectPackage.PURGE_TASK: return createPurgeTask();
       case ProjectPackage.RATE: return createRate();
-      case ProjectPackage.REFERENCE_EXTEND: return createReferenceExtend();
       case ProjectPackage.REMAINING: return createRemaining();
       case ProjectPackage.REPORT_PREFIX: return createReportPrefix();
       case ProjectPackage.RESOURCE_ATTRIBUTES: return createResourceAttributes();
@@ -190,7 +192,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.RESOURCE_REPORT: return createResourceReport();
       case ProjectPackage.RESOURCE_ROOT: return createResourceRoot();
       case ProjectPackage.RESPONSIBLE: return createResponsible();
-      case ProjectPackage.RICH_TEXT_EXTEND: return createRichTextExtend();
       case ProjectPackage.RIGHT: return createRight();
       case ProjectPackage.ROLLUP_RESOURCE: return createRollupResource();
       case ProjectPackage.ROLLUP_TASK: return createRollupTask();
@@ -224,7 +225,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.TASK_PREFIX: return createTaskPrefix();
       case ProjectPackage.TASK_REPORT: return createTaskReport();
       case ProjectPackage.TASK_ROOT: return createTaskRoot();
-      case ProjectPackage.TEXT_EXTEND: return createTextExtend();
       case ProjectPackage.TEXT_REPORT: return createTextReport();
       case ProjectPackage.TIME_FORMAT: return createTimeFormat();
       case ProjectPackage.TIMEOFF: return createTimeoff();
@@ -251,7 +251,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.CRITERION: return createCriterion();
       case ProjectPackage.CRITERION_ID: return createCriterionId();
       case ProjectPackage.DURATION_QUANTITY: return createDurationQuantity();
-      case ProjectPackage.EXTEND_ATTRIBUTE: return createExtendAttribute();
       case ProjectPackage.LIMIT: return createLimit();
       case ProjectPackage.LIMIT_ATTRIBUTE: return createLimitAttribute();
       case ProjectPackage.REAL_FORMAT: return createRealFormat();
@@ -894,17 +893,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DateExtend createDateExtend()
-  {
-    DateExtendImpl dateExtend = new DateExtendImpl();
-    return dateExtend;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public DailyMax createDailyMax()
   {
     DailyMaxImpl dailyMax = new DailyMaxImpl();
@@ -1052,6 +1040,50 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ExtendImpl extend = new ExtendImpl();
     return extend;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExtendResource createExtendResource()
+  {
+    ExtendResourceImpl extendResource = new ExtendResourceImpl();
+    return extendResource;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExtendedResourceAttribute createExtendedResourceAttribute()
+  {
+    ExtendedResourceAttributeImpl extendedResourceAttribute = new ExtendedResourceAttributeImpl();
+    return extendedResourceAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExtendTask createExtendTask()
+  {
+    ExtendTaskImpl extendTask = new ExtendTaskImpl();
+    return extendTask;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExtendedTaskAttribute createExtendedTaskAttribute()
+  {
+    ExtendedTaskAttributeImpl extendedTaskAttribute = new ExtendedTaskAttributeImpl();
+    return extendedTaskAttribute;
   }
 
   /**
@@ -1642,17 +1674,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReferenceExtend createReferenceExtend()
-  {
-    ReferenceExtendImpl referenceExtend = new ReferenceExtendImpl();
-    return referenceExtend;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Remaining createRemaining()
   {
     RemainingImpl remaining = new RemainingImpl();
@@ -1723,17 +1744,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ResponsibleImpl responsible = new ResponsibleImpl();
     return responsible;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RichTextExtend createRichTextExtend()
-  {
-    RichTextExtendImpl richTextExtend = new RichTextExtendImpl();
-    return richTextExtend;
   }
 
   /**
@@ -2104,17 +2114,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TextExtend createTextExtend()
-  {
-    TextExtendImpl textExtend = new TextExtendImpl();
-    return textExtend;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public TextReport createTextReport()
   {
     TextReportImpl textReport = new TextReportImpl();
@@ -2394,17 +2393,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     DurationQuantityImpl durationQuantity = new DurationQuantityImpl();
     return durationQuantity;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ExtendAttribute createExtendAttribute()
-  {
-    ExtendAttributeImpl extendAttribute = new ExtendAttributeImpl();
-    return extendAttribute;
   }
 
   /**

@@ -6,20 +6,14 @@
 package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.jjflyboy.tjpeditor.project.DateExtend;
 import org.jjflyboy.tjpeditor.project.Extend;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
-import org.jjflyboy.tjpeditor.project.ReferenceExtend;
-import org.jjflyboy.tjpeditor.project.RichTextExtend;
-import org.jjflyboy.tjpeditor.project.TextExtend;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,11 +22,10 @@ import org.jjflyboy.tjpeditor.project.TextExtend;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#getReference <em>Reference</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#getDate <em>Date</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#getRichtext <em>Richtext</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#getText <em>Text</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#isInherit <em>Inherit</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.ExtendImpl#isScenariospecific <em>Scenariospecific</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,64 +34,84 @@ import org.jjflyboy.tjpeditor.project.TextExtend;
 public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected static final String ID_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected String id = ID_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getReference() <em>Reference</em>}' containment reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReference()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected ReferenceExtend reference;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDate() <em>Date</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDate()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected DateExtend date;
+  protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getRichtext() <em>Richtext</em>}' containment reference.
+   * The default value of the '{@link #isInherit() <em>Inherit</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRichtext()
+   * @see #isInherit()
    * @generated
    * @ordered
    */
-  protected RichTextExtend richtext;
+  protected static final boolean INHERIT_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getText() <em>Text</em>}' containment reference.
+   * The cached value of the '{@link #isInherit() <em>Inherit</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getText()
+   * @see #isInherit()
    * @generated
    * @ordered
    */
-  protected TextExtend text;
+  protected boolean inherit = INHERIT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isScenariospecific() <em>Scenariospecific</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isScenariospecific()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean SCENARIOSPECIFIC_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isScenariospecific() <em>Scenariospecific</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isScenariospecific()
+   * @generated
+   * @ordered
+   */
+  protected boolean scenariospecific = SCENARIOSPECIFIC_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,9 +139,9 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
+  public String getId()
   {
-    return type;
+    return id;
   }
 
   /**
@@ -136,12 +149,12 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(String newType)
+  public void setId(String newId)
   {
-    String oldType = type;
-    type = newType;
+    String oldId = id;
+    id = newId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__ID, oldId, id));
   }
 
   /**
@@ -149,9 +162,9 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
    * <!-- end-user-doc -->
    * @generated
    */
-  public ReferenceExtend getReference()
+  public String getName()
   {
-    return reference;
+    return name;
   }
 
   /**
@@ -159,16 +172,12 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetReference(ReferenceExtend newReference, NotificationChain msgs)
+  public void setName(String newName)
   {
-    ReferenceExtend oldReference = reference;
-    reference = newReference;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__REFERENCE, oldReference, newReference);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__NAME, oldName, name));
   }
 
   /**
@@ -176,20 +185,9 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReference(ReferenceExtend newReference)
+  public boolean isInherit()
   {
-    if (newReference != reference)
-    {
-      NotificationChain msgs = null;
-      if (reference != null)
-        msgs = ((InternalEObject)reference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.EXTEND__REFERENCE, null, msgs);
-      if (newReference != null)
-        msgs = ((InternalEObject)newReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.EXTEND__REFERENCE, null, msgs);
-      msgs = basicSetReference(newReference, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__REFERENCE, newReference, newReference));
+    return inherit;
   }
 
   /**
@@ -197,26 +195,12 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
    * <!-- end-user-doc -->
    * @generated
    */
-  public DateExtend getDate()
+  public void setInherit(boolean newInherit)
   {
-    return date;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetDate(DateExtend newDate, NotificationChain msgs)
-  {
-    DateExtend oldDate = date;
-    date = newDate;
+    boolean oldInherit = inherit;
+    inherit = newInherit;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__DATE, oldDate, newDate);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__INHERIT, oldInherit, inherit));
   }
 
   /**
@@ -224,20 +208,9 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDate(DateExtend newDate)
+  public boolean isScenariospecific()
   {
-    if (newDate != date)
-    {
-      NotificationChain msgs = null;
-      if (date != null)
-        msgs = ((InternalEObject)date).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.EXTEND__DATE, null, msgs);
-      if (newDate != null)
-        msgs = ((InternalEObject)newDate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.EXTEND__DATE, null, msgs);
-      msgs = basicSetDate(newDate, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__DATE, newDate, newDate));
+    return scenariospecific;
   }
 
   /**
@@ -245,117 +218,12 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
    * <!-- end-user-doc -->
    * @generated
    */
-  public RichTextExtend getRichtext()
+  public void setScenariospecific(boolean newScenariospecific)
   {
-    return richtext;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetRichtext(RichTextExtend newRichtext, NotificationChain msgs)
-  {
-    RichTextExtend oldRichtext = richtext;
-    richtext = newRichtext;
+    boolean oldScenariospecific = scenariospecific;
+    scenariospecific = newScenariospecific;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__RICHTEXT, oldRichtext, newRichtext);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRichtext(RichTextExtend newRichtext)
-  {
-    if (newRichtext != richtext)
-    {
-      NotificationChain msgs = null;
-      if (richtext != null)
-        msgs = ((InternalEObject)richtext).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.EXTEND__RICHTEXT, null, msgs);
-      if (newRichtext != null)
-        msgs = ((InternalEObject)newRichtext).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.EXTEND__RICHTEXT, null, msgs);
-      msgs = basicSetRichtext(newRichtext, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__RICHTEXT, newRichtext, newRichtext));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TextExtend getText()
-  {
-    return text;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetText(TextExtend newText, NotificationChain msgs)
-  {
-    TextExtend oldText = text;
-    text = newText;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__TEXT, oldText, newText);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setText(TextExtend newText)
-  {
-    if (newText != text)
-    {
-      NotificationChain msgs = null;
-      if (text != null)
-        msgs = ((InternalEObject)text).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.EXTEND__TEXT, null, msgs);
-      if (newText != null)
-        msgs = ((InternalEObject)newText).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.EXTEND__TEXT, null, msgs);
-      msgs = basicSetText(newText, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__TEXT, newText, newText));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case ProjectPackage.EXTEND__REFERENCE:
-        return basicSetReference(null, msgs);
-      case ProjectPackage.EXTEND__DATE:
-        return basicSetDate(null, msgs);
-      case ProjectPackage.EXTEND__RICHTEXT:
-        return basicSetRichtext(null, msgs);
-      case ProjectPackage.EXTEND__TEXT:
-        return basicSetText(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.EXTEND__SCENARIOSPECIFIC, oldScenariospecific, scenariospecific));
   }
 
   /**
@@ -368,16 +236,14 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
   {
     switch (featureID)
     {
-      case ProjectPackage.EXTEND__TYPE:
-        return getType();
-      case ProjectPackage.EXTEND__REFERENCE:
-        return getReference();
-      case ProjectPackage.EXTEND__DATE:
-        return getDate();
-      case ProjectPackage.EXTEND__RICHTEXT:
-        return getRichtext();
-      case ProjectPackage.EXTEND__TEXT:
-        return getText();
+      case ProjectPackage.EXTEND__ID:
+        return getId();
+      case ProjectPackage.EXTEND__NAME:
+        return getName();
+      case ProjectPackage.EXTEND__INHERIT:
+        return isInherit();
+      case ProjectPackage.EXTEND__SCENARIOSPECIFIC:
+        return isScenariospecific();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -392,20 +258,17 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
   {
     switch (featureID)
     {
-      case ProjectPackage.EXTEND__TYPE:
-        setType((String)newValue);
+      case ProjectPackage.EXTEND__ID:
+        setId((String)newValue);
         return;
-      case ProjectPackage.EXTEND__REFERENCE:
-        setReference((ReferenceExtend)newValue);
+      case ProjectPackage.EXTEND__NAME:
+        setName((String)newValue);
         return;
-      case ProjectPackage.EXTEND__DATE:
-        setDate((DateExtend)newValue);
+      case ProjectPackage.EXTEND__INHERIT:
+        setInherit((Boolean)newValue);
         return;
-      case ProjectPackage.EXTEND__RICHTEXT:
-        setRichtext((RichTextExtend)newValue);
-        return;
-      case ProjectPackage.EXTEND__TEXT:
-        setText((TextExtend)newValue);
+      case ProjectPackage.EXTEND__SCENARIOSPECIFIC:
+        setScenariospecific((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -421,20 +284,17 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
   {
     switch (featureID)
     {
-      case ProjectPackage.EXTEND__TYPE:
-        setType(TYPE_EDEFAULT);
+      case ProjectPackage.EXTEND__ID:
+        setId(ID_EDEFAULT);
         return;
-      case ProjectPackage.EXTEND__REFERENCE:
-        setReference((ReferenceExtend)null);
+      case ProjectPackage.EXTEND__NAME:
+        setName(NAME_EDEFAULT);
         return;
-      case ProjectPackage.EXTEND__DATE:
-        setDate((DateExtend)null);
+      case ProjectPackage.EXTEND__INHERIT:
+        setInherit(INHERIT_EDEFAULT);
         return;
-      case ProjectPackage.EXTEND__RICHTEXT:
-        setRichtext((RichTextExtend)null);
-        return;
-      case ProjectPackage.EXTEND__TEXT:
-        setText((TextExtend)null);
+      case ProjectPackage.EXTEND__SCENARIOSPECIFIC:
+        setScenariospecific(SCENARIOSPECIFIC_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -450,16 +310,14 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
   {
     switch (featureID)
     {
-      case ProjectPackage.EXTEND__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case ProjectPackage.EXTEND__REFERENCE:
-        return reference != null;
-      case ProjectPackage.EXTEND__DATE:
-        return date != null;
-      case ProjectPackage.EXTEND__RICHTEXT:
-        return richtext != null;
-      case ProjectPackage.EXTEND__TEXT:
-        return text != null;
+      case ProjectPackage.EXTEND__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+      case ProjectPackage.EXTEND__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case ProjectPackage.EXTEND__INHERIT:
+        return inherit != INHERIT_EDEFAULT;
+      case ProjectPackage.EXTEND__SCENARIOSPECIFIC:
+        return scenariospecific != SCENARIOSPECIFIC_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -475,8 +333,14 @@ public class ExtendImpl extends MinimalEObjectImpl.Container implements Extend
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
+    result.append(" (id: ");
+    result.append(id);
+    result.append(", name: ");
+    result.append(name);
+    result.append(", inherit: ");
+    result.append(inherit);
+    result.append(", scenariospecific: ");
+    result.append(scenariospecific);
     result.append(')');
     return result.toString();
   }

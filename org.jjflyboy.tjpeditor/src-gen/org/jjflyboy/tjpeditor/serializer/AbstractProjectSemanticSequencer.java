@@ -48,7 +48,10 @@ import org.jjflyboy.tjpeditor.project.End;
 import org.jjflyboy.tjpeditor.project.EndCredit;
 import org.jjflyboy.tjpeditor.project.Export;
 import org.jjflyboy.tjpeditor.project.Extend;
-import org.jjflyboy.tjpeditor.project.ExtendAttribute;
+import org.jjflyboy.tjpeditor.project.ExtendResource;
+import org.jjflyboy.tjpeditor.project.ExtendTask;
+import org.jjflyboy.tjpeditor.project.ExtendedResourceAttribute;
+import org.jjflyboy.tjpeditor.project.ExtendedTaskAttribute;
 import org.jjflyboy.tjpeditor.project.Fail;
 import org.jjflyboy.tjpeditor.project.Flags;
 import org.jjflyboy.tjpeditor.project.FontColor;
@@ -432,13 +435,31 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
-			case ProjectPackage.EXTEND_ATTRIBUTE:
-				if(context == grammarAccess.getDateExtendRule() ||
-				   context == grammarAccess.getExtendAttributeRule() ||
-				   context == grammarAccess.getReferenceExtendRule() ||
-				   context == grammarAccess.getRichTextExtendRule() ||
-				   context == grammarAccess.getTextExtendRule()) {
-					sequence_ExtendAttribute(context, (ExtendAttribute) semanticObject); 
+			case ProjectPackage.EXTEND_RESOURCE:
+				if(context == grammarAccess.getExtendResourceRule() ||
+				   context == grammarAccess.getProjectAttributeRule()) {
+					sequence_ExtendResource(context, (ExtendResource) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.EXTEND_TASK:
+				if(context == grammarAccess.getExtendTaskRule() ||
+				   context == grammarAccess.getProjectAttributeRule()) {
+					sequence_ExtendTask(context, (ExtendTask) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.EXTENDED_RESOURCE_ATTRIBUTE:
+				if(context == grammarAccess.getExtendedResourceAttributeRule() ||
+				   context == grammarAccess.getResourceAttributeRule()) {
+					sequence_ExtendedResourceAttribute(context, (ExtendedResourceAttribute) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.EXTENDED_TASK_ATTRIBUTE:
+				if(context == grammarAccess.getExtendedTaskAttributeRule() ||
+				   context == grammarAccess.getTaskAttributeRule()) {
+					sequence_ExtendedTaskAttribute(context, (ExtendedTaskAttribute) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1868,60 +1889,86 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (id=ID name=STRING (inherit?='inherit' scenariospecific?='scenariospecific')?)
+	 *     (extends+=Extend*)
 	 *
 	 * Features:
-	 *    id[1, 1]
-	 *    name[1, 1]
-	 *    inherit[0, 1]
-	 *         EXCLUDE_IF_UNSET scenariospecific
-	 *         MANDATORY_IF_SET scenariospecific
-	 *    scenariospecific[0, 1]
-	 *         EXCLUDE_IF_UNSET inherit
-	 *         MANDATORY_IF_SET inherit
+	 *    extends[0, *]
 	 */
-	protected void sequence_ExtendAttribute(EObject context, ExtendAttribute semanticObject) {
+	protected void sequence_ExtendResource(EObject context, ExtendResource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((type='task' | type='reource') (reference=ReferenceExtend date=DateExtend richtext=RichTextExtend text=TextExtend)?)
+	 *     (extends+=Extend*)
 	 *
 	 * Features:
-	 *    type[0, 2]
-	 *    reference[0, 1]
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET richtext
-	 *         MANDATORY_IF_SET richtext
-	 *         EXCLUDE_IF_UNSET text
-	 *         MANDATORY_IF_SET text
-	 *    date[0, 1]
-	 *         EXCLUDE_IF_UNSET reference
-	 *         MANDATORY_IF_SET reference
-	 *         EXCLUDE_IF_UNSET richtext
-	 *         MANDATORY_IF_SET richtext
-	 *         EXCLUDE_IF_UNSET text
-	 *         MANDATORY_IF_SET text
-	 *    richtext[0, 1]
-	 *         EXCLUDE_IF_UNSET reference
-	 *         MANDATORY_IF_SET reference
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET text
-	 *         MANDATORY_IF_SET text
-	 *    text[0, 1]
-	 *         EXCLUDE_IF_UNSET reference
-	 *         MANDATORY_IF_SET reference
-	 *         EXCLUDE_IF_UNSET date
-	 *         MANDATORY_IF_SET date
-	 *         EXCLUDE_IF_UNSET richtext
-	 *         MANDATORY_IF_SET richtext
+	 *    extends[0, *]
+	 */
+	protected void sequence_ExtendTask(EObject context, ExtendTask semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (id=ID name=STRING (inherit?='inherit'? scenariospecific?='scenariospecific'?)?)
+	 *
+	 * Features:
+	 *    id[1, 1]
+	 *    name[1, 1]
+	 *    inherit[0, 1]
+	 *    scenariospecific[0, 1]
 	 */
 	protected void sequence_Extend(EObject context, Extend semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (extend=[Extend|ID] value=STRING)
+	 *
+	 * Features:
+	 *    extend[1, 1]
+	 *    value[1, 1]
+	 */
+	protected void sequence_ExtendedResourceAttribute(EObject context, ExtendedResourceAttribute semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getExtendedResourceAttribute_Extend()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getExtendedResourceAttribute_Extend()));
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getExtendedResourceAttribute_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getExtendedResourceAttribute_Value()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getExtendedResourceAttributeAccess().getExtendExtendIDTerminalRuleCall_0_0_1(), semanticObject.getExtend());
+		feeder.accept(grammarAccess.getExtendedResourceAttributeAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (extend=[Extend|ID] value=STRING)
+	 *
+	 * Features:
+	 *    extend[1, 1]
+	 *    value[1, 1]
+	 */
+	protected void sequence_ExtendedTaskAttribute(EObject context, ExtendedTaskAttribute semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getExtendedTaskAttribute_Extend()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getExtendedTaskAttribute_Extend()));
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getExtendedTaskAttribute_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getExtendedTaskAttribute_Value()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getExtendedTaskAttributeAccess().getExtendExtendIDTerminalRuleCall_0_0_1(), semanticObject.getExtend());
+		feeder.accept(grammarAccess.getExtendedTaskAttributeAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	

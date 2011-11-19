@@ -308,11 +308,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createCurrencyFormatAdapter();
       }
       @Override
-      public Adapter caseDateExtend(DateExtend object)
-      {
-        return createDateExtendAdapter();
-      }
-      @Override
       public Adapter caseDailyMax(DailyMax object)
       {
         return createDailyMaxAdapter();
@@ -381,6 +376,26 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseExtend(Extend object)
       {
         return createExtendAdapter();
+      }
+      @Override
+      public Adapter caseExtendResource(ExtendResource object)
+      {
+        return createExtendResourceAdapter();
+      }
+      @Override
+      public Adapter caseExtendedResourceAttribute(ExtendedResourceAttribute object)
+      {
+        return createExtendedResourceAttributeAdapter();
+      }
+      @Override
+      public Adapter caseExtendTask(ExtendTask object)
+      {
+        return createExtendTaskAdapter();
+      }
+      @Override
+      public Adapter caseExtendedTaskAttribute(ExtendedTaskAttribute object)
+      {
+        return createExtendedTaskAttributeAdapter();
       }
       @Override
       public Adapter caseFail(Fail object)
@@ -648,11 +663,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createRateAdapter();
       }
       @Override
-      public Adapter caseReferenceExtend(ReferenceExtend object)
-      {
-        return createReferenceExtendAdapter();
-      }
-      @Override
       public Adapter caseRemaining(Remaining object)
       {
         return createRemainingAdapter();
@@ -686,11 +696,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseResponsible(Responsible object)
       {
         return createResponsibleAdapter();
-      }
-      @Override
-      public Adapter caseRichTextExtend(RichTextExtend object)
-      {
-        return createRichTextExtendAdapter();
       }
       @Override
       public Adapter caseRight(Right object)
@@ -858,11 +863,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createTaskRootAdapter();
       }
       @Override
-      public Adapter caseTextExtend(TextExtend object)
-      {
-        return createTextExtendAdapter();
-      }
-      @Override
       public Adapter caseTextReport(TextReport object)
       {
         return createTextReportAdapter();
@@ -991,11 +991,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDurationQuantity(DurationQuantity object)
       {
         return createDurationQuantityAdapter();
-      }
-      @Override
-      public Adapter caseExtendAttribute(ExtendAttribute object)
-      {
-        return createExtendAttributeAdapter();
       }
       @Override
       public Adapter caseLimit(Limit object)
@@ -1770,21 +1765,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.DateExtend <em>Date Extend</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.DateExtend
-   * @generated
-   */
-  public Adapter createDateExtendAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.DailyMax <em>Daily Max</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1990,6 +1970,66 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExtendAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ExtendResource <em>Extend Resource</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ExtendResource
+   * @generated
+   */
+  public Adapter createExtendResourceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ExtendedResourceAttribute <em>Extended Resource Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ExtendedResourceAttribute
+   * @generated
+   */
+  public Adapter createExtendedResourceAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ExtendTask <em>Extend Task</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ExtendTask
+   * @generated
+   */
+  public Adapter createExtendTaskAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ExtendedTaskAttribute <em>Extended Task Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ExtendedTaskAttribute
+   * @generated
+   */
+  public Adapter createExtendedTaskAttributeAdapter()
   {
     return null;
   }
@@ -2790,21 +2830,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ReferenceExtend <em>Reference Extend</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.ReferenceExtend
-   * @generated
-   */
-  public Adapter createReferenceExtendAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Remaining <em>Remaining</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -2905,21 +2930,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createResponsibleAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.RichTextExtend <em>Rich Text Extend</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.RichTextExtend
-   * @generated
-   */
-  public Adapter createRichTextExtendAdapter()
   {
     return null;
   }
@@ -3420,21 +3430,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TextExtend <em>Text Extend</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.TextExtend
-   * @generated
-   */
-  public Adapter createTextExtendAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TextReport <em>Text Report</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -3820,21 +3815,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDurationQuantityAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ExtendAttribute <em>Extend Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.ExtendAttribute
-   * @generated
-   */
-  public Adapter createExtendAttributeAdapter()
   {
     return null;
   }

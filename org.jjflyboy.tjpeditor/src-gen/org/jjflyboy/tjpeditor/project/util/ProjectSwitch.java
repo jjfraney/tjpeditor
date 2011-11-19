@@ -435,13 +435,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.DATE_EXTEND:
-      {
-        DateExtend dateExtend = (DateExtend)theEObject;
-        T result = caseDateExtend(dateExtend);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ProjectPackage.DAILY_MAX:
       {
         DailyMax dailyMax = (DailyMax)theEObject;
@@ -557,6 +550,38 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Extend extend = (Extend)theEObject;
         T result = caseExtend(extend);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.EXTEND_RESOURCE:
+      {
+        ExtendResource extendResource = (ExtendResource)theEObject;
+        T result = caseExtendResource(extendResource);
+        if (result == null) result = caseProjectAttribute(extendResource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.EXTENDED_RESOURCE_ATTRIBUTE:
+      {
+        ExtendedResourceAttribute extendedResourceAttribute = (ExtendedResourceAttribute)theEObject;
+        T result = caseExtendedResourceAttribute(extendedResourceAttribute);
+        if (result == null) result = caseResourceAttribute(extendedResourceAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.EXTEND_TASK:
+      {
+        ExtendTask extendTask = (ExtendTask)theEObject;
+        T result = caseExtendTask(extendTask);
+        if (result == null) result = caseProjectAttribute(extendTask);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.EXTENDED_TASK_ATTRIBUTE:
+      {
+        ExtendedTaskAttribute extendedTaskAttribute = (ExtendedTaskAttribute)theEObject;
+        T result = caseExtendedTaskAttribute(extendedTaskAttribute);
+        if (result == null) result = caseTaskAttribute(extendedTaskAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -999,13 +1024,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.REFERENCE_EXTEND:
-      {
-        ReferenceExtend referenceExtend = (ReferenceExtend)theEObject;
-        T result = caseReferenceExtend(referenceExtend);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ProjectPackage.REMAINING:
       {
         Remaining remaining = (Remaining)theEObject;
@@ -1058,13 +1076,6 @@ public class ProjectSwitch<T> extends Switch<T>
         Responsible responsible = (Responsible)theEObject;
         T result = caseResponsible(responsible);
         if (result == null) result = caseTaskAttribute(responsible);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ProjectPackage.RICH_TEXT_EXTEND:
-      {
-        RichTextExtend richTextExtend = (RichTextExtend)theEObject;
-        T result = caseRichTextExtend(richTextExtend);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1337,13 +1348,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.TEXT_EXTEND:
-      {
-        TextExtend textExtend = (TextExtend)theEObject;
-        T result = caseTextExtend(textExtend);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ProjectPackage.TEXT_REPORT:
       {
         TextReport textReport = (TextReport)theEObject;
@@ -1550,17 +1554,6 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = caseDurationQuantity(durationQuantity);
         if (result == null) result = caseGapDuration(durationQuantity);
         if (result == null) result = caseGapLength(durationQuantity);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ProjectPackage.EXTEND_ATTRIBUTE:
-      {
-        ExtendAttribute extendAttribute = (ExtendAttribute)theEObject;
-        T result = caseExtendAttribute(extendAttribute);
-        if (result == null) result = caseDateExtend(extendAttribute);
-        if (result == null) result = caseReferenceExtend(extendAttribute);
-        if (result == null) result = caseRichTextExtend(extendAttribute);
-        if (result == null) result = caseTextExtend(extendAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -2426,22 +2419,6 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Date Extend</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Date Extend</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDateExtend(DateExtend object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Daily Max</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -2661,6 +2638,70 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExtend(Extend object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Extend Resource</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Extend Resource</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExtendResource(ExtendResource object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Extended Resource Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Extended Resource Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExtendedResourceAttribute(ExtendedResourceAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Extend Task</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Extend Task</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExtendTask(ExtendTask object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Extended Task Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Extended Task Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExtendedTaskAttribute(ExtendedTaskAttribute object)
   {
     return null;
   }
@@ -3514,22 +3555,6 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Reference Extend</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Reference Extend</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseReferenceExtend(ReferenceExtend object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Remaining</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3637,22 +3662,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseResponsible(Responsible object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Rich Text Extend</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Rich Text Extend</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRichTextExtend(RichTextExtend object)
   {
     return null;
   }
@@ -4186,22 +4195,6 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Text Extend</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Text Extend</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTextExtend(TextExtend object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Text Report</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -4613,22 +4606,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDurationQuantity(DurationQuantity object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Extend Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Extend Attribute</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExtendAttribute(ExtendAttribute object)
   {
     return null;
   }
