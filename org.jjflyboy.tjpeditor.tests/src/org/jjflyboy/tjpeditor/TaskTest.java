@@ -1,9 +1,9 @@
 package org.jjflyboy.tjpeditor;
 
 import org.eclipse.xtext.junit4.InjectWith;
-import org.eclipselabs.xtext.utils.unittesting.FluentIssueCollection;
 import org.eclipselabs.xtext.utils.unittesting.XtextRunner2;
 import org.eclipselabs.xtext.utils.unittesting.XtextTest;
+import org.jjflyboy.tjpeditor.project.SupplementTask;
 import org.jjflyboy.tjpeditor.project.Task;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -57,6 +57,13 @@ public class TaskTest extends XtextTest {
 				"}";
 		testParserRule(text, Task.class.getSimpleName());
 	}
+	
+	@Test
+	public void testSupplement() {
+		String text = "supplement task t1 { allocate res1 }";
+		testParserRule(text, SupplementTask.class.getSimpleName());
+	}
+	
 	@Test
 	public void taskDependsRootReferenceTest() {
 		ignoreFormattingDifferences();
