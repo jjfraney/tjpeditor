@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Niku Report</b></em>'.
@@ -26,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface NikuReport extends EObject
+public interface NikuReport extends GlobalAttribute
 {
   /**
    * Returns the value of the '<em><b>Filename</b></em>' attribute.

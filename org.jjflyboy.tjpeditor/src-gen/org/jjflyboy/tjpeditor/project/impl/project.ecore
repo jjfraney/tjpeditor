@@ -69,7 +69,7 @@
         eType="#//AllocateResourceAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AllocateResourceAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Navigator">
+  <eClassifiers xsi:type="ecore:EClass" name="Navigator" eSuperTypes="#//GlobalAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//NavigatorAttribute" containment="true"/>
@@ -82,7 +82,7 @@
         eType="#//NewTaskAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NewTaskAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NikuReport">
+  <eClassifiers xsi:type="ecore:EClass" name="NikuReport" eSuperTypes="#//GlobalAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//NikuReportAttribute" containment="true"/>
@@ -319,6 +319,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="LoadUnit" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//LoadDisplayUnit"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Macro" eSuperTypes="#//GlobalAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Managers" eSuperTypes="#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resources" unique="false"
         upperBound="-1" eType="#//Resource"/>
@@ -530,6 +533,12 @@
         eType="#//StatusStatusSheetAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusStatusSheetAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReport">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Summary" eSuperTypes="#//StatusStatusSheetAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="SupplementAccount" eSuperTypes="#//GlobalAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" eType="#//Account"/>

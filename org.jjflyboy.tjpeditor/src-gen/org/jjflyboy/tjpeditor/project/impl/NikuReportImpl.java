@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -39,7 +38,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class NikuReportImpl extends MinimalEObjectImpl.Container implements NikuReport
+public class NikuReportImpl extends GlobalAttributeImpl implements NikuReport
 {
   /**
    * The default value of the '{@link #getFilename() <em>Filename</em>}' attribute.

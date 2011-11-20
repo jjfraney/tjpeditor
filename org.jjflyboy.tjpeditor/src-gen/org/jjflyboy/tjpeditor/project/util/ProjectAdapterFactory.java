@@ -538,6 +538,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createLoadUnitAdapter();
       }
       @Override
+      public Adapter caseMacro(Macro object)
+      {
+        return createMacroAdapter();
+      }
+      @Override
       public Adapter caseManagers(Managers object)
       {
         return createManagersAdapter();
@@ -836,6 +841,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseStatusStatusSheetAttribute(StatusStatusSheetAttribute object)
       {
         return createStatusStatusSheetAttributeAdapter();
+      }
+      @Override
+      public Adapter caseStatusSheet(StatusSheet object)
+      {
+        return createStatusSheetAdapter();
+      }
+      @Override
+      public Adapter caseStatusSheetReport(StatusSheetReport object)
+      {
+        return createStatusSheetReportAdapter();
       }
       @Override
       public Adapter caseSummary(Summary object)
@@ -2485,6 +2500,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Macro <em>Macro</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.Macro
+   * @generated
+   */
+  public Adapter createMacroAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Managers <em>Managers</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -3380,6 +3410,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStatusStatusSheetAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.StatusSheet <em>Status Sheet</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.StatusSheet
+   * @generated
+   */
+  public Adapter createStatusSheetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.StatusSheetReport <em>Status Sheet Report</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.StatusSheetReport
+   * @generated
+   */
+  public Adapter createStatusSheetReportAdapter()
   {
     return null;
   }

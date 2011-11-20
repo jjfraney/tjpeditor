@@ -77,6 +77,7 @@ import org.jjflyboy.tjpeditor.project.LimitAttribute;
 import org.jjflyboy.tjpeditor.project.Limits;
 import org.jjflyboy.tjpeditor.project.ListType;
 import org.jjflyboy.tjpeditor.project.LoadUnit;
+import org.jjflyboy.tjpeditor.project.Macro;
 import org.jjflyboy.tjpeditor.project.Managers;
 import org.jjflyboy.tjpeditor.project.Mandatory;
 import org.jjflyboy.tjpeditor.project.MaxEnd;
@@ -129,6 +130,8 @@ import org.jjflyboy.tjpeditor.project.ShiftsLimit;
 import org.jjflyboy.tjpeditor.project.ShortTimeFormat;
 import org.jjflyboy.tjpeditor.project.Sort;
 import org.jjflyboy.tjpeditor.project.Start;
+import org.jjflyboy.tjpeditor.project.StatusSheet;
+import org.jjflyboy.tjpeditor.project.StatusSheetReport;
 import org.jjflyboy.tjpeditor.project.StatusStatusSheet;
 import org.jjflyboy.tjpeditor.project.SupplementAccount;
 import org.jjflyboy.tjpeditor.project.SupplementReport;
@@ -660,6 +663,13 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
+			case ProjectPackage.MACRO:
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getMacroRule()) {
+					sequence_Macro(context, (Macro) semanticObject); 
+					return; 
+				}
+				else break;
 			case ProjectPackage.MANAGERS:
 				if(context == grammarAccess.getManagersRule() ||
 				   context == grammarAccess.getResourceAttributeRule()) {
@@ -710,7 +720,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.NAVIGATOR:
-				if(context == grammarAccess.getNavigatorRule()) {
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getNavigatorRule()) {
 					sequence_Navigator(context, (Navigator) semanticObject); 
 					return; 
 				}
@@ -723,7 +734,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.NIKU_REPORT:
-				if(context == grammarAccess.getNikuReportRule()) {
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getNikuReportRule()) {
 					sequence_NikuReport(context, (NikuReport) semanticObject); 
 					return; 
 				}
@@ -1055,6 +1067,18 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getTaskAttributeRule() ||
 				   context == grammarAccess.getTimesheetReportAttributeRule()) {
 					sequence_Start(context, (Start) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.STATUS_SHEET:
+				if(context == grammarAccess.getStatusSheetRule()) {
+					sequence_StatusSheet(context, (StatusSheet) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.STATUS_SHEET_REPORT:
+				if(context == grammarAccess.getStatusSheetReportRule()) {
+					sequence_StatusSheetReport(context, (StatusSheetReport) semanticObject); 
 					return; 
 				}
 				else break;
@@ -2480,6 +2504,25 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
+	 *     value=STRING
+	 *
+	 * Features:
+	 *    value[1, 1]
+	 */
+	protected void sequence_Macro(EObject context, Macro semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getMacro_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getMacro_Value()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getMacroAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (resources+=[Resource|ID] resources+=[Resource|ID]*)
 	 *
 	 * Features:
@@ -3367,6 +3410,44 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getStartAccess().getStartISODATETerminalRuleCall_1_0(), semanticObject.getStart());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     value=STRING
+	 *
+	 * Features:
+	 *    value[1, 1]
+	 */
+	protected void sequence_StatusSheetReport(EObject context, StatusSheetReport semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getStatusSheetReport_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getStatusSheetReport_Value()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getStatusSheetReportAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     value=STRING
+	 *
+	 * Features:
+	 *    value[1, 1]
+	 */
+	protected void sequence_StatusSheet(EObject context, StatusSheet semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getStatusSheet_Value()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getStatusSheet_Value()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getStatusSheetAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	

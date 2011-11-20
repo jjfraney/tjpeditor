@@ -854,6 +854,15 @@ public interface ProjectFactory extends EFactory
   LoadUnit createLoadUnit();
 
   /**
+   * Returns a new object of class '<em>Macro</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Macro</em>'.
+   * @generated
+   */
+  Macro createMacro();
+
+  /**
    * Returns a new object of class '<em>Managers</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1392,6 +1401,24 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   StatusStatusSheetAttribute createStatusStatusSheetAttribute();
+
+  /**
+   * Returns a new object of class '<em>Status Sheet</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Status Sheet</em>'.
+   * @generated
+   */
+  StatusSheet createStatusSheet();
+
+  /**
+   * Returns a new object of class '<em>Status Sheet Report</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Status Sheet Report</em>'.
+   * @generated
+   */
+  StatusSheetReport createStatusSheetReport();
 
   /**
    * Returns a new object of class '<em>Summary</em>'.

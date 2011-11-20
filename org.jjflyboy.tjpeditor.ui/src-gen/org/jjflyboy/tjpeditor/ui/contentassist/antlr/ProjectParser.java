@@ -116,7 +116,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNewTaskAccess().getGroup(), "rule__NewTask__Group__0");
 					put(grammarAccess.getNewTaskAccess().getGroup_3(), "rule__NewTask__Group_3__0");
 					put(grammarAccess.getNikuReportAccess().getGroup(), "rule__NikuReport__Group__0");
-					put(grammarAccess.getNikuReportAccess().getGroup_1(), "rule__NikuReport__Group_1__0");
+					put(grammarAccess.getNikuReportAccess().getGroup_2(), "rule__NikuReport__Group_2__0");
 					put(grammarAccess.getAlertAccess().getGroup(), "rule__Alert__Group__0");
 					put(grammarAccess.getAlternativeAccess().getGroup(), "rule__Alternative__Group__0");
 					put(grammarAccess.getAlternativeAccess().getGroup_1(), "rule__Alternative__Group_1__0");
@@ -381,8 +381,8 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNewTaskAccess().getIdAssignment_1(), "rule__NewTask__IdAssignment_1");
 					put(grammarAccess.getNewTaskAccess().getTextAssignment_2(), "rule__NewTask__TextAssignment_2");
 					put(grammarAccess.getNewTaskAccess().getAttributesAssignment_3_1(), "rule__NewTask__AttributesAssignment_3_1");
-					put(grammarAccess.getNikuReportAccess().getFilenameAssignment_0(), "rule__NikuReport__FilenameAssignment_0");
-					put(grammarAccess.getNikuReportAccess().getAttributesAssignment_1_1(), "rule__NikuReport__AttributesAssignment_1_1");
+					put(grammarAccess.getNikuReportAccess().getFilenameAssignment_1(), "rule__NikuReport__FilenameAssignment_1");
+					put(grammarAccess.getNikuReportAccess().getAttributesAssignment_2_1(), "rule__NikuReport__AttributesAssignment_2_1");
 					put(grammarAccess.getAlertAccess().getLevelAssignment_1(), "rule__Alert__LevelAssignment_1");
 					put(grammarAccess.getAlternativeAccess().getResourcesAssignment_0(), "rule__Alternative__ResourcesAssignment_0");
 					put(grammarAccess.getAlternativeAccess().getResourcesAssignment_1_1(), "rule__Alternative__ResourcesAssignment_1_1");
@@ -484,6 +484,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLimitsAccess().getAttributesAssignment_2_1(), "rule__Limits__AttributesAssignment_2_1");
 					put(grammarAccess.getListTypeAccess().getTypeAssignment_1(), "rule__ListType__TypeAssignment_1");
 					put(grammarAccess.getLoadUnitAccess().getUnitAssignment_1(), "rule__LoadUnit__UnitAssignment_1");
+					put(grammarAccess.getMacroAccess().getValueAssignment_1(), "rule__Macro__ValueAssignment_1");
 					put(grammarAccess.getManagersAccess().getResourcesAssignment_1(), "rule__Managers__ResourcesAssignment_1");
 					put(grammarAccess.getManagersAccess().getResourcesAssignment_2_1(), "rule__Managers__ResourcesAssignment_2_1");
 					put(grammarAccess.getMandatoryAccess().getMandatoryAssignment(), "rule__Mandatory__MandatoryAssignment");
@@ -553,6 +554,8 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatusStatusSheetAccess().getLevelAssignment_1(), "rule__StatusStatusSheet__LevelAssignment_1");
 					put(grammarAccess.getStatusStatusSheetAccess().getTextAssignment_2(), "rule__StatusStatusSheet__TextAssignment_2");
 					put(grammarAccess.getStatusStatusSheetAccess().getAttributesAssignment_3_1(), "rule__StatusStatusSheet__AttributesAssignment_3_1");
+					put(grammarAccess.getStatusSheetAccess().getValueAssignment_1(), "rule__StatusSheet__ValueAssignment_1");
+					put(grammarAccess.getStatusSheetReportAccess().getValueAssignment_1(), "rule__StatusSheetReport__ValueAssignment_1");
 					put(grammarAccess.getSupplementAccountAccess().getAccountAssignment_2(), "rule__SupplementAccount__AccountAssignment_2");
 					put(grammarAccess.getSupplementAccountAccess().getAttributesAssignment_3_1(), "rule__SupplementAccount__AttributesAssignment_3_1");
 					put(grammarAccess.getSupplementReportAccess().getReportAssignment_2(), "rule__SupplementReport__ReportAssignment_2");

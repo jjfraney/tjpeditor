@@ -160,6 +160,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.LIST_ITEM: return createListItem();
       case ProjectPackage.LIST_TYPE: return createListType();
       case ProjectPackage.LOAD_UNIT: return createLoadUnit();
+      case ProjectPackage.MACRO: return createMacro();
       case ProjectPackage.MANAGERS: return createManagers();
       case ProjectPackage.MANDATORY: return createMandatory();
       case ProjectPackage.MAX_END: return createMaxEnd();
@@ -220,6 +221,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.START: return createStart();
       case ProjectPackage.STATUS_STATUS_SHEET: return createStatusStatusSheet();
       case ProjectPackage.STATUS_STATUS_SHEET_ATTRIBUTE: return createStatusStatusSheetAttribute();
+      case ProjectPackage.STATUS_SHEET: return createStatusSheet();
+      case ProjectPackage.STATUS_SHEET_REPORT: return createStatusSheetReport();
       case ProjectPackage.SUMMARY: return createSummary();
       case ProjectPackage.SUPPLEMENT_ACCOUNT: return createSupplementAccount();
       case ProjectPackage.SUPPLEMENT_REPORT: return createSupplementReport();
@@ -1405,6 +1408,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Macro createMacro()
+  {
+    MacroImpl macro = new MacroImpl();
+    return macro;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Managers createManagers()
   {
     ManagersImpl managers = new ManagersImpl();
@@ -2058,6 +2072,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     StatusStatusSheetAttributeImpl statusStatusSheetAttribute = new StatusStatusSheetAttributeImpl();
     return statusStatusSheetAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StatusSheet createStatusSheet()
+  {
+    StatusSheetImpl statusSheet = new StatusSheetImpl();
+    return statusSheet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StatusSheetReport createStatusSheetReport()
+  {
+    StatusSheetReportImpl statusSheetReport = new StatusSheetReportImpl();
+    return statusSheetReport;
   }
 
   /**

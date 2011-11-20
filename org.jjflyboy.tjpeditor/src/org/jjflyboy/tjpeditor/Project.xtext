@@ -26,9 +26,9 @@ GlobalAttribute:
 	| Export
 	| Flags
 	| Limits
-//	| Macro
-//	| Navigator
-//	| NikuReport
+	| Macro
+	| Navigator
+	| NikuReport
 	| Rate
 	| ResourceReport
 	| TaskReport
@@ -275,7 +275,7 @@ NewTaskAttribute:
 ;
 
 // http://www.taskjuggler.org/tj3/manual/nikureport.html
-NikuReport: filename = STRING ('{' attributes += NikuReportAttribute* '}')?;
+NikuReport: 'nikureport' filename = STRING ('{' attributes += NikuReportAttribute* '}')?;
 
 NikuReportAttribute:
 	End
@@ -590,7 +590,7 @@ LogicalFlagExpression: STRING;
 
 // http://www.taskjuggler.org/tj3/manual/macro.html
 // TODO
-Macro: 'macro' STRING;
+Macro: 'macro' value=STRING;
 
 // http://www.taskjuggler.org/tj3/manual/managers.html
 Managers: 'managers' resources += [Resource] (',' resources += [Resource])*;
@@ -866,11 +866,11 @@ StatusStatusSheetAttribute:
 
 // http://www.taskjuggler.org/tj3/manual/statussheet.html
 // TODO
-StatusSheet: 'statussheet' STRING;
+StatusSheet: 'statussheet' value=STRING;
 
 // http://www.taskjuggler.org/tj3/manual/statussheetreport.html
 // TODO
-StatusSheetReport: 'statussheetreport' STRING;
+StatusSheetReport: 'statussheetreport' value=STRING;
 
 // http://www.taskjuggler.org/tj3/manual/strict.projection.html
 // deprecated.

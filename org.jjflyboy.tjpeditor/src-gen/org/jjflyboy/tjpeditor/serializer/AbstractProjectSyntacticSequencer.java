@@ -38,7 +38,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	protected AbstractElementAlias match_Limits___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q;
 	protected AbstractElementAlias match_Navigator___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q;
 	protected AbstractElementAlias match_NewTask___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
-	protected AbstractElementAlias match_NikuReport___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q;
+	protected AbstractElementAlias match_NikuReport___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q;
 	protected AbstractElementAlias match_Project___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q;
 	protected AbstractElementAlias match_Report___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q;
 	protected AbstractElementAlias match_Resource___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
@@ -80,7 +80,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 		match_Limits___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getLimitsAccess().getLeftCurlyBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getLimitsAccess().getRightCurlyBracketKeyword_2_2()));
 		match_Navigator___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getNavigatorAccess().getLeftCurlyBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getNavigatorAccess().getRightCurlyBracketKeyword_2_2()));
 		match_NewTask___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getNewTaskAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getNewTaskAccess().getRightCurlyBracketKeyword_3_2()));
-		match_NikuReport___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getNikuReportAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getNikuReportAccess().getRightCurlyBracketKeyword_1_2()));
+		match_NikuReport___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getNikuReportAccess().getLeftCurlyBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getNikuReportAccess().getRightCurlyBracketKeyword_2_2()));
 		match_Project___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getProjectAccess().getLeftCurlyBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getProjectAccess().getRightCurlyBracketKeyword_5_2()));
 		match_Report___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getReportAccess().getLeftCurlyBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getReportAccess().getRightCurlyBracketKeyword_2_2()));
 		match_Resource___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getResourceAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getResourceAccess().getRightCurlyBracketKeyword_3_2()));
@@ -151,8 +151,8 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 				emit_Navigator___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_NewTask___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
 				emit_NewTask___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_NikuReport___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q.equals(syntax))
-				emit_NikuReport___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_NikuReport___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
+				emit_NikuReport___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Project___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q.equals(syntax))
 				emit_Project___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Report___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
@@ -195,7 +195,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 
 	/**
 	 * Syntax:
-	 *     'taskreport' | 'accountreport' | 'textreport' | 'resourcereport'
+	 *     'taskreport' | 'resourcereport' | 'accountreport' | 'textreport'
 	 */
 	protected void emit_AccountReport_ResourceReport_TaskReport_TextReport_AccountreportKeyword_0_or_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -228,15 +228,15 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	/**
 	 * Syntax:
 	 *     (
-	     'prolog' | 
 	     'footer' | 
+	     'prolog' | 
+	     'headline' | 
 	     'left' | 
-	     'right' | 
 	     'epilog' | 
-	     'header' | 
-	     'center' | 
 	     'caption' | 
-	     'headline'
+	     'right' | 
+	     'center' | 
+	     'header'
 	 )
 	 */
 	protected void emit_Caption_Center_Epilog_Footer_Header_Headline_Left_Prolog_Right_CaptionKeyword_0_or_CenterKeyword_0_or_EpilogKeyword_0_or_FooterKeyword_0_or_HeaderKeyword_0_or_HeadlineKeyword_0_or_LeftKeyword_0_or_PrologKeyword_0_or_RightKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -245,7 +245,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'currencyformat' | 'numberformat'
+	 *     'numberformat' | 'currencyformat'
 	 */
 	protected void emit_CurrencyFormat_NumberFormat_CurrencyformatKeyword_0_or_NumberformatKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -254,14 +254,14 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	/**
 	 * Syntax:
 	 *     (
-	     'monthlymax' | 
+	     'maximum' | 
+	     'dailymin' | 
+	     'dailymax' | 
+	     'monthlymin' | 
+	     'minimum' | 
 	     'weeklymin' | 
 	     'weeklymax' | 
-	     'monthlymin' | 
-	     'maximum' | 
-	     'dailymax' | 
-	     'dailymin' | 
-	     'minimum'
+	     'monthlymax'
 	 )
 	 */
 	protected void emit_DailyMax_DailyMin_Maximum_Minimum_MonthlyMax_MonthlyMin_WeeklyMax_WeeklyMin_DailymaxKeyword_0_or_DailyminKeyword_0_or_MaximumKeyword_0_or_MinimumKeyword_0_or_MonthlymaxKeyword_0_or_MonthlyminKeyword_0_or_WeeklymaxKeyword_0_or_WeeklyminKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -270,7 +270,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'precedes' | 'depends'
+	 *     'depends' | 'precedes'
 	 */
 	protected void emit_Depends_Precedes_DependsKeyword_0_or_PrecedesKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -310,7 +310,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'text' | 'richtext' | 'reference' | 'date'
+	 *     'date' | 'text' | 'richtext' | 'reference'
 	 */
 	protected void emit_Extend_DateKeyword_0_1_or_ReferenceKeyword_0_0_or_RichtextKeyword_0_2_or_TextKeyword_0_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -368,7 +368,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	 * Syntax:
 	 *     ('{' '}')?
 	 */
-	protected void emit_NikuReport___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_NikuReport___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -414,7 +414,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'sortaccounts' | 'sortjournalentries' | 'sorttasks' | 'sortresources'
+	 *     'sortjournalentries' | 'sortaccounts' | 'sortresources' | 'sorttasks'
 	 */
 	protected void emit_SortAccounts_SortJournalEntries_SortResources_SortTasks_SortaccountsKeyword_0_or_SortjournalentriesKeyword_0_or_SortresourcesKeyword_0_or_SorttasksKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

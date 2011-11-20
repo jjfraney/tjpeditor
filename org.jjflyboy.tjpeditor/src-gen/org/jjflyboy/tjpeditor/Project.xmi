@@ -32,6 +32,9 @@
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.65"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.91"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.98"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.126"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.131"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.176"/>
@@ -504,6 +507,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//NikuReport"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="nikureport"/>
         <elements xsi:type="xtext:Assignment" feature="filename" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.238"/>
         </elements>
@@ -1582,12 +1586,14 @@
       <alternatives xsi:type="xtext:RuleCall" rule="/0/@rules.238"/>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Macro">
-      <type metamodel="/0/@metamodelDeclarations.1">
-        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//Macro"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="macro"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.238"/>
+        <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.238"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Managers">
@@ -2535,21 +2541,25 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="StatusSheet">
-      <type metamodel="/0/@metamodelDeclarations.1">
-        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//StatusSheet"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="statussheet"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.238"/>
+        <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.238"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="StatusSheetReport">
-      <type metamodel="/0/@metamodelDeclarations.1">
-        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.jjflyboy.org/tjpeditor/Project#//StatusSheetReport"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="statussheetreport"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.238"/>
+        <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.238"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Summary">

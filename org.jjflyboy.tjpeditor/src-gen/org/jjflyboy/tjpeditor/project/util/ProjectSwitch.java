@@ -229,6 +229,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Navigator navigator = (Navigator)theEObject;
         T result = caseNavigator(navigator);
+        if (result == null) result = caseGlobalAttribute(navigator);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -258,6 +259,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         NikuReport nikuReport = (NikuReport)theEObject;
         T result = caseNikuReport(nikuReport);
+        if (result == null) result = caseGlobalAttribute(nikuReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -820,6 +822,14 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.MACRO:
+      {
+        Macro macro = (Macro)theEObject;
+        T result = caseMacro(macro);
+        if (result == null) result = caseGlobalAttribute(macro);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.MANAGERS:
       {
         Managers managers = (Managers)theEObject;
@@ -1318,6 +1328,20 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         StatusStatusSheetAttribute statusStatusSheetAttribute = (StatusStatusSheetAttribute)theEObject;
         T result = caseStatusStatusSheetAttribute(statusStatusSheetAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.STATUS_SHEET:
+      {
+        StatusSheet statusSheet = (StatusSheet)theEObject;
+        T result = caseStatusSheet(statusSheet);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.STATUS_SHEET_REPORT:
+      {
+        StatusSheetReport statusSheetReport = (StatusSheetReport)theEObject;
+        T result = caseStatusSheetReport(statusSheetReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -3218,6 +3242,22 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Macro</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Macro</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMacro(Macro object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Managers</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -4173,6 +4213,38 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStatusStatusSheetAttribute(StatusStatusSheetAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Status Sheet</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Status Sheet</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStatusSheet(StatusSheet object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Status Sheet Report</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Status Sheet Report</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStatusSheetReport(StatusSheetReport object)
   {
     return null;
   }
