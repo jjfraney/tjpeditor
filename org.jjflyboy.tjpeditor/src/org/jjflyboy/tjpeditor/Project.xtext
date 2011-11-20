@@ -35,7 +35,7 @@ GlobalAttribute:
 	| TextReport
 	| Resource
 	| Shift
-//	| StatusSheet
+	| StatusSheet
 //	| StatusSheetReport
 	| SupplementAccount
 	| SupplementReport
@@ -865,8 +865,12 @@ StatusStatusSheetAttribute:
 
 
 // http://www.taskjuggler.org/tj3/manual/statussheet.html
-// TODO
-StatusSheet: 'statussheet' value=STRING;
+StatusSheet: 'statussheet' resource=[Resource] 
+	interval=Interval4 ('{' (attributes += StatusSheetAttribute*) '}')? ;
+	
+StatusSheetAttribute:
+	TaskStatusSheet
+	;
 
 // http://www.taskjuggler.org/tj3/manual/statussheetreport.html
 // TODO
@@ -911,7 +915,7 @@ TagFile: 'tagfile' (id=ID)? filename = STRING
 	)?;
 
 // http://www.taskjuggler.org/tj3/manual/task.statussheet.html
-TaskStatusSheet: 'task' task=[Task] ('{' attributes += TaskStatusSheetAttribute* '}')?;
+TaskStatusSheet: 'task' task=[Task|AbsoluteId] ('{' attributes += TaskStatusSheetAttribute* '}')?;
 
 TaskStatusSheetAttribute: TaskStatusSheet | StatusStatusSheet;
 

@@ -533,9 +533,14 @@
         eType="#//StatusStatusSheetAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusStatusSheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet" eSuperTypes="#//GlobalAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interval" eType="#//Interval4"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//StatusSheetAttribute" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheetAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReport">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -572,7 +577,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="rollupTask" eType="#//RollupTask"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskStatusSheet" eSuperTypes="#//TaskStatusSheetAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TaskStatusSheet" eSuperTypes="#//StatusSheetAttribute #//TaskStatusSheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//Task"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//TaskStatusSheetAttribute" containment="true"/>

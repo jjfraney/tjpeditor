@@ -1335,6 +1335,14 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         StatusSheet statusSheet = (StatusSheet)theEObject;
         T result = caseStatusSheet(statusSheet);
+        if (result == null) result = caseGlobalAttribute(statusSheet);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.STATUS_SHEET_ATTRIBUTE:
+      {
+        StatusSheetAttribute statusSheetAttribute = (StatusSheetAttribute)theEObject;
+        T result = caseStatusSheetAttribute(statusSheetAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1399,6 +1407,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TaskStatusSheet taskStatusSheet = (TaskStatusSheet)theEObject;
         T result = caseTaskStatusSheet(taskStatusSheet);
+        if (result == null) result = caseStatusSheetAttribute(taskStatusSheet);
         if (result == null) result = caseTaskStatusSheetAttribute(taskStatusSheet);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -4229,6 +4238,22 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStatusSheet(StatusSheet object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Status Sheet Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Status Sheet Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStatusSheetAttribute(StatusSheetAttribute object)
   {
     return null;
   }

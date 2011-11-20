@@ -277,6 +277,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatusStatusSheetAccess().getGroup(), "rule__StatusStatusSheet__Group__0");
 					put(grammarAccess.getStatusStatusSheetAccess().getGroup_3(), "rule__StatusStatusSheet__Group_3__0");
 					put(grammarAccess.getStatusSheetAccess().getGroup(), "rule__StatusSheet__Group__0");
+					put(grammarAccess.getStatusSheetAccess().getGroup_3(), "rule__StatusSheet__Group_3__0");
 					put(grammarAccess.getStatusSheetReportAccess().getGroup(), "rule__StatusSheetReport__Group__0");
 					put(grammarAccess.getSummaryAccess().getGroup(), "rule__Summary__Group__0");
 					put(grammarAccess.getSupplementAccountAccess().getGroup(), "rule__SupplementAccount__Group__0");
@@ -554,7 +555,9 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatusStatusSheetAccess().getLevelAssignment_1(), "rule__StatusStatusSheet__LevelAssignment_1");
 					put(grammarAccess.getStatusStatusSheetAccess().getTextAssignment_2(), "rule__StatusStatusSheet__TextAssignment_2");
 					put(grammarAccess.getStatusStatusSheetAccess().getAttributesAssignment_3_1(), "rule__StatusStatusSheet__AttributesAssignment_3_1");
-					put(grammarAccess.getStatusSheetAccess().getValueAssignment_1(), "rule__StatusSheet__ValueAssignment_1");
+					put(grammarAccess.getStatusSheetAccess().getResourceAssignment_1(), "rule__StatusSheet__ResourceAssignment_1");
+					put(grammarAccess.getStatusSheetAccess().getIntervalAssignment_2(), "rule__StatusSheet__IntervalAssignment_2");
+					put(grammarAccess.getStatusSheetAccess().getAttributesAssignment_3_1(), "rule__StatusSheet__AttributesAssignment_3_1");
 					put(grammarAccess.getStatusSheetReportAccess().getValueAssignment_1(), "rule__StatusSheetReport__ValueAssignment_1");
 					put(grammarAccess.getSupplementAccountAccess().getAccountAssignment_2(), "rule__SupplementAccount__AccountAssignment_2");
 					put(grammarAccess.getSupplementAccountAccess().getAttributesAssignment_3_1(), "rule__SupplementAccount__AttributesAssignment_3_1");

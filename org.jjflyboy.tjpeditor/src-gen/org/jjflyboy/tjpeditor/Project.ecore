@@ -555,9 +555,15 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusStatusSheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interval" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval4"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetAttribute"
+        containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheetAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReport">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -598,7 +604,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="rollupTask" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupTask"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskStatusSheet" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskStatusSheetAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TaskStatusSheet" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskStatusSheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Task"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskStatusSheetAttribute"

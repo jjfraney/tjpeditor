@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.TaskStatusSheetAttribute;
  *
  * @generated
  */
-public class TaskStatusSheetImpl extends TaskStatusSheetAttributeImpl implements TaskStatusSheet
+public class TaskStatusSheetImpl extends StatusSheetAttributeImpl implements TaskStatusSheet
 {
   /**
    * The cached value of the '{@link #getTask() <em>Task</em>}' reference.

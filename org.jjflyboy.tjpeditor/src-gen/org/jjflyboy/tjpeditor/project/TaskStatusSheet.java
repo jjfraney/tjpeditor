@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface TaskStatusSheet extends TaskStatusSheetAttribute
+public interface TaskStatusSheet extends StatusSheetAttribute, TaskStatusSheetAttribute
 {
   /**
    * Returns the value of the '<em><b>Task</b></em>' reference.

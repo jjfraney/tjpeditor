@@ -1071,7 +1071,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.STATUS_SHEET:
-				if(context == grammarAccess.getStatusSheetRule()) {
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getStatusSheetRule()) {
 					sequence_StatusSheet(context, (StatusSheet) semanticObject); 
 					return; 
 				}
@@ -1164,7 +1165,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TASK_STATUS_SHEET:
-				if(context == grammarAccess.getTaskStatusSheetRule() ||
+				if(context == grammarAccess.getStatusSheetAttributeRule() ||
+				   context == grammarAccess.getTaskStatusSheetRule() ||
 				   context == grammarAccess.getTaskStatusSheetAttributeRule()) {
 					sequence_TaskStatusSheet(context, (TaskStatusSheet) semanticObject); 
 					return; 
@@ -3435,20 +3437,15 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     value=STRING
+	 *     (resource=[Resource|ID] interval=Interval4 attributes+=StatusSheetAttribute*)
 	 *
 	 * Features:
-	 *    value[1, 1]
+	 *    resource[1, 1]
+	 *    interval[1, 1]
+	 *    attributes[0, *]
 	 */
 	protected void sequence_StatusSheet(EObject context, StatusSheet semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getStatusSheet_Value()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getStatusSheet_Value()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getStatusSheetAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3624,7 +3621,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (task=[Task|ID] attributes+=TaskStatusSheetAttribute*)
+	 *     (task=[Task|AbsoluteId] attributes+=TaskStatusSheetAttribute*)
 	 *
 	 * Features:
 	 *    task[1, 1]
