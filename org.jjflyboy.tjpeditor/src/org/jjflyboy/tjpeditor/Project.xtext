@@ -36,7 +36,7 @@ GlobalAttribute:
 	| Resource
 	| Shift
 	| StatusSheet
-//	| StatusSheetReport
+	| StatusSheetReport
 	| SupplementAccount
 	| SupplementReport
 	| SupplementResource
@@ -873,8 +873,18 @@ StatusSheetAttribute:
 	;
 
 // http://www.taskjuggler.org/tj3/manual/statussheetreport.html
-// TODO
-StatusSheetReport: 'statussheetreport' value=STRING;
+StatusSheetReport: 'statussheetreport' filename=STRING 
+		('{' (attributes+=StatusSheetReportAttribute*) '}' )?;
+		
+StatusSheetReportAttribute:
+		End
+		| HideResource
+		| HideTask
+		| Period
+		| SortResources
+		| SortTasks
+		| Start
+;
 
 // http://www.taskjuggler.org/tj3/manual/strict.projection.html
 // deprecated.

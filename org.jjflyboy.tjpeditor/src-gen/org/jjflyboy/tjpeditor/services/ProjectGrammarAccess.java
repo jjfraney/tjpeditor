@@ -77,30 +77,29 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cResourceParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
 		private final RuleCall cShiftParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
 		private final RuleCall cStatusSheetParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cSupplementAccountParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
-		private final RuleCall cSupplementReportParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
-		private final RuleCall cSupplementResourceParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
-		private final RuleCall cSupplementTaskParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
-		private final RuleCall cTagFileParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
-		private final RuleCall cTaskParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
-		private final RuleCall cTrackingScenarioParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
-		private final RuleCall cVacationParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cStatusSheetReportParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cSupplementAccountParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
+		private final RuleCall cSupplementReportParserRuleCall_19 = (RuleCall)cAlternatives.eContents().get(19);
+		private final RuleCall cSupplementResourceParserRuleCall_20 = (RuleCall)cAlternatives.eContents().get(20);
+		private final RuleCall cSupplementTaskParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
+		private final RuleCall cTagFileParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
+		private final RuleCall cTaskParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
+		private final RuleCall cTrackingScenarioParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cVacationParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
 		
 		//GlobalAttribute:
-		//	Account //	| StatusSheetReport
-		//	//	| Timesheet
+		//	Account //	| Timesheet
 		//	//	| TimesheetReport
 		//	| AccountReport | Balance | Copyright | Export | Flags | Limits | Macro | Navigator | NikuReport | Rate |
-		//	ResourceReport | TaskReport | TextReport | Resource | Shift | StatusSheet | SupplementAccount | SupplementReport |
-		//	SupplementResource | SupplementTask | TagFile | Task | TrackingScenario | Vacation;
+		//	ResourceReport | TaskReport | TextReport | Resource | Shift | StatusSheet | StatusSheetReport | SupplementAccount |
+		//	SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario | Vacation;
 		public ParserRule getRule() { return rule; }
 
-		//Account //	| StatusSheetReport
-		////	| Timesheet
+		//Account //	| Timesheet
 		////	| TimesheetReport
 		//| AccountReport | Balance | Copyright | Export | Flags | Limits | Macro | Navigator | NikuReport | Rate | ResourceReport
-		//| TaskReport | TextReport | Resource | Shift | StatusSheet | SupplementAccount | SupplementReport | SupplementResource
-		//| SupplementTask | TagFile | Task | TrackingScenario | Vacation
+		//| TaskReport | TextReport | Resource | Shift | StatusSheet | StatusSheetReport | SupplementAccount | SupplementReport |
+		//SupplementResource | SupplementTask | TagFile | Task | TrackingScenario | Vacation
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Account
@@ -154,29 +153,32 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//StatusSheet
 		public RuleCall getStatusSheetParserRuleCall_16() { return cStatusSheetParserRuleCall_16; }
 
+		//StatusSheetReport
+		public RuleCall getStatusSheetReportParserRuleCall_17() { return cStatusSheetReportParserRuleCall_17; }
+
 		//SupplementAccount
-		public RuleCall getSupplementAccountParserRuleCall_17() { return cSupplementAccountParserRuleCall_17; }
+		public RuleCall getSupplementAccountParserRuleCall_18() { return cSupplementAccountParserRuleCall_18; }
 
 		//SupplementReport
-		public RuleCall getSupplementReportParserRuleCall_18() { return cSupplementReportParserRuleCall_18; }
+		public RuleCall getSupplementReportParserRuleCall_19() { return cSupplementReportParserRuleCall_19; }
 
 		//SupplementResource
-		public RuleCall getSupplementResourceParserRuleCall_19() { return cSupplementResourceParserRuleCall_19; }
+		public RuleCall getSupplementResourceParserRuleCall_20() { return cSupplementResourceParserRuleCall_20; }
 
 		//SupplementTask
-		public RuleCall getSupplementTaskParserRuleCall_20() { return cSupplementTaskParserRuleCall_20; }
+		public RuleCall getSupplementTaskParserRuleCall_21() { return cSupplementTaskParserRuleCall_21; }
 
 		//TagFile
-		public RuleCall getTagFileParserRuleCall_21() { return cTagFileParserRuleCall_21; }
+		public RuleCall getTagFileParserRuleCall_22() { return cTagFileParserRuleCall_22; }
 
 		//Task
-		public RuleCall getTaskParserRuleCall_22() { return cTaskParserRuleCall_22; }
+		public RuleCall getTaskParserRuleCall_23() { return cTaskParserRuleCall_23; }
 
 		//TrackingScenario
-		public RuleCall getTrackingScenarioParserRuleCall_23() { return cTrackingScenarioParserRuleCall_23; }
+		public RuleCall getTrackingScenarioParserRuleCall_24() { return cTrackingScenarioParserRuleCall_24; }
 
 		//Vacation
-		public RuleCall getVacationParserRuleCall_24() { return cVacationParserRuleCall_24; }
+		public RuleCall getVacationParserRuleCall_25() { return cVacationParserRuleCall_25; }
 	}
 
 	public class AbsoluteIdElements extends AbstractParserRuleElementFinder {
@@ -5961,26 +5963,85 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StatusSheetReport");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cStatussheetreportKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueSTRINGTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final Assignment cFilenameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFilenameSTRINGTerminalRuleCall_1_0 = (RuleCall)cFilenameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cAttributesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cAttributesStatusSheetReportAttributeParserRuleCall_2_1_0 = (RuleCall)cAttributesAssignment_2_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/statussheetreport.html
-		//// TODO
 		//StatusSheetReport:
-		//	"statussheetreport" value=STRING;
+		//	"statussheetreport" filename=STRING ("{" attributes+=StatusSheetReportAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"statussheetreport" value=STRING
+		//"statussheetreport" filename=STRING ("{" attributes+=StatusSheetReportAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"statussheetreport"
 		public Keyword getStatussheetreportKeyword_0() { return cStatussheetreportKeyword_0; }
 
-		//value=STRING
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+		//filename=STRING
+		public Assignment getFilenameAssignment_1() { return cFilenameAssignment_1; }
 
 		//STRING
-		public RuleCall getValueSTRINGTerminalRuleCall_1_0() { return cValueSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getFilenameSTRINGTerminalRuleCall_1_0() { return cFilenameSTRINGTerminalRuleCall_1_0; }
+
+		//("{" attributes+=StatusSheetReportAttribute* "}")?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
+
+		//attributes+=StatusSheetReportAttribute*
+		public Assignment getAttributesAssignment_2_1() { return cAttributesAssignment_2_1; }
+
+		//StatusSheetReportAttribute
+		public RuleCall getAttributesStatusSheetReportAttributeParserRuleCall_2_1_0() { return cAttributesStatusSheetReportAttributeParserRuleCall_2_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
+	}
+
+	public class StatusSheetReportAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StatusSheetReportAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cEndParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cHideResourceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cHideTaskParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cPeriodParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cSortResourcesParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cSortTasksParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cStartParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		
+		//StatusSheetReportAttribute:
+		//	End | HideResource | HideTask | Period | SortResources | SortTasks | Start;
+		public ParserRule getRule() { return rule; }
+
+		//End | HideResource | HideTask | Period | SortResources | SortTasks | Start
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//End
+		public RuleCall getEndParserRuleCall_0() { return cEndParserRuleCall_0; }
+
+		//HideResource
+		public RuleCall getHideResourceParserRuleCall_1() { return cHideResourceParserRuleCall_1; }
+
+		//HideTask
+		public RuleCall getHideTaskParserRuleCall_2() { return cHideTaskParserRuleCall_2; }
+
+		//Period
+		public RuleCall getPeriodParserRuleCall_3() { return cPeriodParserRuleCall_3; }
+
+		//SortResources
+		public RuleCall getSortResourcesParserRuleCall_4() { return cSortResourcesParserRuleCall_4; }
+
+		//SortTasks
+		public RuleCall getSortTasksParserRuleCall_5() { return cSortTasksParserRuleCall_5; }
+
+		//Start
+		public RuleCall getStartParserRuleCall_6() { return cStartParserRuleCall_6; }
 	}
 
 	public class SummaryElements extends AbstractParserRuleElementFinder {
@@ -9777,6 +9838,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private StatusSheetElements pStatusSheet;
 	private StatusSheetAttributeElements pStatusSheetAttribute;
 	private StatusSheetReportElements pStatusSheetReport;
+	private StatusSheetReportAttributeElements pStatusSheetReportAttribute;
 	private SummaryElements pSummary;
 	private SupplementAccountElements pSupplementAccount;
 	private SupplementReportElements pSupplementReport;
@@ -9898,12 +9960,11 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GlobalAttribute:
-	//	Account //	| StatusSheetReport
-	//	//	| Timesheet
+	//	Account //	| Timesheet
 	//	//	| TimesheetReport
 	//	| AccountReport | Balance | Copyright | Export | Flags | Limits | Macro | Navigator | NikuReport | Rate |
-	//	ResourceReport | TaskReport | TextReport | Resource | Shift | StatusSheet | SupplementAccount | SupplementReport |
-	//	SupplementResource | SupplementTask | TagFile | Task | TrackingScenario | Vacation;
+	//	ResourceReport | TaskReport | TextReport | Resource | Shift | StatusSheet | StatusSheetReport | SupplementAccount |
+	//	SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario | Vacation;
 	public GlobalAttributeElements getGlobalAttributeAccess() {
 		return (pGlobalAttribute != null) ? pGlobalAttribute : (pGlobalAttribute = new GlobalAttributeElements());
 	}
@@ -11778,15 +11839,24 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/statussheetreport.html
-	//// TODO
 	//StatusSheetReport:
-	//	"statussheetreport" value=STRING;
+	//	"statussheetreport" filename=STRING ("{" attributes+=StatusSheetReportAttribute* "}")?;
 	public StatusSheetReportElements getStatusSheetReportAccess() {
 		return (pStatusSheetReport != null) ? pStatusSheetReport : (pStatusSheetReport = new StatusSheetReportElements());
 	}
 	
 	public ParserRule getStatusSheetReportRule() {
 		return getStatusSheetReportAccess().getRule();
+	}
+
+	//StatusSheetReportAttribute:
+	//	End | HideResource | HideTask | Period | SortResources | SortTasks | Start;
+	public StatusSheetReportAttributeElements getStatusSheetReportAttributeAccess() {
+		return (pStatusSheetReportAttribute != null) ? pStatusSheetReportAttribute : (pStatusSheetReportAttribute = new StatusSheetReportAttributeElements());
+	}
+	
+	public ParserRule getStatusSheetReportAttributeRule() {
+		return getStatusSheetReportAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/strict.projection.html

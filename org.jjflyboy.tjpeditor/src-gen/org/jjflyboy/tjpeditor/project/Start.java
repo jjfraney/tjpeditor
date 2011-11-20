@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Start extends TaskAttribute, ReportAttribute, ExportAttribute, NikuReportAttribute, ColumnAttribute, TimesheetReportAttribute
+public interface Start extends TaskAttribute, ReportAttribute, ExportAttribute, NikuReportAttribute, StatusSheetReportAttribute, ColumnAttribute, TimesheetReportAttribute
 {
   /**
    * Returns the value of the '<em><b>Start</b></em>' attribute.

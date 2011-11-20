@@ -1430,6 +1430,15 @@ public interface ProjectFactory extends EFactory
   StatusSheetReport createStatusSheetReport();
 
   /**
+   * Returns a new object of class '<em>Status Sheet Report Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Status Sheet Report Attribute</em>'.
+   * @generated
+   */
+  StatusSheetReportAttribute createStatusSheetReportAttribute();
+
+  /**
    * Returns a new object of class '<em>Summary</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -224,6 +224,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.STATUS_SHEET: return createStatusSheet();
       case ProjectPackage.STATUS_SHEET_ATTRIBUTE: return createStatusSheetAttribute();
       case ProjectPackage.STATUS_SHEET_REPORT: return createStatusSheetReport();
+      case ProjectPackage.STATUS_SHEET_REPORT_ATTRIBUTE: return createStatusSheetReportAttribute();
       case ProjectPackage.SUMMARY: return createSummary();
       case ProjectPackage.SUPPLEMENT_ACCOUNT: return createSupplementAccount();
       case ProjectPackage.SUPPLEMENT_REPORT: return createSupplementReport();
@@ -2106,6 +2107,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     StatusSheetReportImpl statusSheetReport = new StatusSheetReportImpl();
     return statusSheetReport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StatusSheetReportAttribute createStatusSheetReportAttribute()
+  {
+    StatusSheetReportAttributeImpl statusSheetReportAttribute = new StatusSheetReportAttributeImpl();
+    return statusSheetReportAttribute;
   }
 
   /**

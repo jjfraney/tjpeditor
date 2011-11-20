@@ -858,6 +858,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createStatusSheetReportAdapter();
       }
       @Override
+      public Adapter caseStatusSheetReportAttribute(StatusSheetReportAttribute object)
+      {
+        return createStatusSheetReportAttributeAdapter();
+      }
+      @Override
       public Adapter caseSummary(Summary object)
       {
         return createSummaryAdapter();
@@ -3460,6 +3465,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStatusSheetReportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.StatusSheetReportAttribute <em>Status Sheet Report Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.StatusSheetReportAttribute
+   * @generated
+   */
+  public Adapter createStatusSheetReportAttributeAdapter()
   {
     return null;
   }

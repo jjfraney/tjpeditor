@@ -511,6 +511,7 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseExportAttribute(end);
         if (result == null) result = caseNewTaskAttribute(end);
         if (result == null) result = caseNikuReportAttribute(end);
+        if (result == null) result = caseStatusSheetReportAttribute(end);
         if (result == null) result = caseColumnAttribute(end);
         if (result == null) result = caseTaskTimesheetAttribute(end);
         if (result == null) result = caseTimesheetReportAttribute(end);
@@ -689,6 +690,7 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseReportAttribute(hideResource);
         if (result == null) result = caseExportAttribute(hideResource);
         if (result == null) result = caseNikuReportAttribute(hideResource);
+        if (result == null) result = caseStatusSheetReportAttribute(hideResource);
         if (result == null) result = caseTimesheetReportAttribute(hideResource);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -700,6 +702,7 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseReportAttribute(hideTask);
         if (result == null) result = caseExportAttribute(hideTask);
         if (result == null) result = caseNikuReportAttribute(hideTask);
+        if (result == null) result = caseStatusSheetReportAttribute(hideTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -952,6 +955,7 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseReportAttribute(period);
         if (result == null) result = caseExportAttribute(period);
         if (result == null) result = caseNikuReportAttribute(period);
+        if (result == null) result = caseStatusSheetReportAttribute(period);
         if (result == null) result = caseColumnAttribute(period);
         if (result == null) result = caseTimesheetReportAttribute(period);
         if (result == null) result = defaultCase(theEObject);
@@ -1268,6 +1272,7 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseSortResources(sort);
         if (result == null) result = caseSortTasks(sort);
         if (result == null) result = caseReportAttribute(sort);
+        if (result == null) result = caseStatusSheetReportAttribute(sort);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1292,6 +1297,7 @@ public class ProjectSwitch<T> extends Switch<T>
         SortResources sortResources = (SortResources)theEObject;
         T result = caseSortResources(sortResources);
         if (result == null) result = caseReportAttribute(sortResources);
+        if (result == null) result = caseStatusSheetReportAttribute(sortResources);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1300,6 +1306,7 @@ public class ProjectSwitch<T> extends Switch<T>
         SortTasks sortTasks = (SortTasks)theEObject;
         T result = caseSortTasks(sortTasks);
         if (result == null) result = caseReportAttribute(sortTasks);
+        if (result == null) result = caseStatusSheetReportAttribute(sortTasks);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1311,6 +1318,7 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseReportAttribute(start);
         if (result == null) result = caseExportAttribute(start);
         if (result == null) result = caseNikuReportAttribute(start);
+        if (result == null) result = caseStatusSheetReportAttribute(start);
         if (result == null) result = caseColumnAttribute(start);
         if (result == null) result = caseTimesheetReportAttribute(start);
         if (result == null) result = defaultCase(theEObject);
@@ -1350,6 +1358,14 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         StatusSheetReport statusSheetReport = (StatusSheetReport)theEObject;
         T result = caseStatusSheetReport(statusSheetReport);
+        if (result == null) result = caseGlobalAttribute(statusSheetReport);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.STATUS_SHEET_REPORT_ATTRIBUTE:
+      {
+        StatusSheetReportAttribute statusSheetReportAttribute = (StatusSheetReportAttribute)theEObject;
+        T result = caseStatusSheetReportAttribute(statusSheetReportAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -4270,6 +4286,22 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStatusSheetReport(StatusSheetReport object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Status Sheet Report Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Status Sheet Report Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStatusSheetReportAttribute(StatusSheetReportAttribute object)
   {
     return null;
   }

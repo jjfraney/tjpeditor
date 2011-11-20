@@ -656,8 +656,10 @@
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetAttribute"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReport/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReport/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReport/attributes"/>
     </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReportAttribute"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Summary"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementAccount">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementAccount/account"/>

@@ -59,6 +59,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getScaleAccess().getScaleAlternatives_1_0(), "rule__Scale__ScaleAlternatives_1_0");
 					put(grammarAccess.getSortAccess().getAlternatives_1(), "rule__Sort__Alternatives_1");
 					put(grammarAccess.getStatusStatusSheetAttributeAccess().getAlternatives(), "rule__StatusStatusSheetAttribute__Alternatives");
+					put(grammarAccess.getStatusSheetReportAttributeAccess().getAlternatives(), "rule__StatusSheetReportAttribute__Alternatives");
 					put(grammarAccess.getTaskStatusSheetAttributeAccess().getAlternatives(), "rule__TaskStatusSheetAttribute__Alternatives");
 					put(grammarAccess.getTaskAttributesAccess().getAlternatives_1(), "rule__TaskAttributes__Alternatives_1");
 					put(grammarAccess.getWeekStartsAccess().getAlternatives(), "rule__WeekStarts__Alternatives");
@@ -279,6 +280,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatusSheetAccess().getGroup(), "rule__StatusSheet__Group__0");
 					put(grammarAccess.getStatusSheetAccess().getGroup_3(), "rule__StatusSheet__Group_3__0");
 					put(grammarAccess.getStatusSheetReportAccess().getGroup(), "rule__StatusSheetReport__Group__0");
+					put(grammarAccess.getStatusSheetReportAccess().getGroup_2(), "rule__StatusSheetReport__Group_2__0");
 					put(grammarAccess.getSummaryAccess().getGroup(), "rule__Summary__Group__0");
 					put(grammarAccess.getSupplementAccountAccess().getGroup(), "rule__SupplementAccount__Group__0");
 					put(grammarAccess.getSupplementAccountAccess().getGroup_3(), "rule__SupplementAccount__Group_3__0");
@@ -558,7 +560,8 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStatusSheetAccess().getResourceAssignment_1(), "rule__StatusSheet__ResourceAssignment_1");
 					put(grammarAccess.getStatusSheetAccess().getIntervalAssignment_2(), "rule__StatusSheet__IntervalAssignment_2");
 					put(grammarAccess.getStatusSheetAccess().getAttributesAssignment_3_1(), "rule__StatusSheet__AttributesAssignment_3_1");
-					put(grammarAccess.getStatusSheetReportAccess().getValueAssignment_1(), "rule__StatusSheetReport__ValueAssignment_1");
+					put(grammarAccess.getStatusSheetReportAccess().getFilenameAssignment_1(), "rule__StatusSheetReport__FilenameAssignment_1");
+					put(grammarAccess.getStatusSheetReportAccess().getAttributesAssignment_2_1(), "rule__StatusSheetReport__AttributesAssignment_2_1");
 					put(grammarAccess.getSupplementAccountAccess().getAccountAssignment_2(), "rule__SupplementAccount__AccountAssignment_2");
 					put(grammarAccess.getSupplementAccountAccess().getAttributesAssignment_3_1(), "rule__SupplementAccount__AttributesAssignment_3_1");
 					put(grammarAccess.getSupplementReportAccess().getReportAssignment_2(), "rule__SupplementReport__ReportAssignment_2");

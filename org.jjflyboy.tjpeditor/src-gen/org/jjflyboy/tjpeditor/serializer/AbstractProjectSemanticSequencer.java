@@ -415,6 +415,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getNewTaskAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
+				   context == grammarAccess.getStatusSheetReportAttributeRule() ||
 				   context == grammarAccess.getTaskAttributeRule() ||
 				   context == grammarAccess.getTaskTimesheetAttributeRule() ||
 				   context == grammarAccess.getTimesheetReportAttributeRule()) {
@@ -544,6 +545,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getHideResourceRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
+				   context == grammarAccess.getStatusSheetReportAttributeRule() ||
 				   context == grammarAccess.getTimesheetReportAttributeRule()) {
 					sequence_HideResource(context, (HideResource) semanticObject); 
 					return; 
@@ -553,7 +555,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				if(context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getHideTaskRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
-				   context == grammarAccess.getReportAttributeRule()) {
+				   context == grammarAccess.getReportAttributeRule() ||
+				   context == grammarAccess.getStatusSheetReportAttributeRule()) {
 					sequence_HideTask(context, (HideTask) semanticObject); 
 					return; 
 				}
@@ -760,6 +763,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getPeriodRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
+				   context == grammarAccess.getStatusSheetReportAttributeRule() ||
 				   context == grammarAccess.getTaskAttributeRule() ||
 				   context == grammarAccess.getTimesheetReportAttributeRule()) {
 					sequence_Period(context, (Period) semanticObject); 
@@ -1053,7 +1057,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getSortAccountsRule() ||
 				   context == grammarAccess.getSortJournalEntriesRule() ||
 				   context == grammarAccess.getSortResourcesRule() ||
-				   context == grammarAccess.getSortTasksRule()) {
+				   context == grammarAccess.getSortTasksRule() ||
+				   context == grammarAccess.getStatusSheetReportAttributeRule()) {
 					sequence_Sort(context, (Sort) semanticObject); 
 					return; 
 				}
@@ -1064,6 +1069,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getStartRule() ||
+				   context == grammarAccess.getStatusSheetReportAttributeRule() ||
 				   context == grammarAccess.getTaskAttributeRule() ||
 				   context == grammarAccess.getTimesheetReportAttributeRule()) {
 					sequence_Start(context, (Start) semanticObject); 
@@ -1078,7 +1084,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.STATUS_SHEET_REPORT:
-				if(context == grammarAccess.getStatusSheetReportRule()) {
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getStatusSheetReportRule()) {
 					sequence_StatusSheetReport(context, (StatusSheetReport) semanticObject); 
 					return; 
 				}
@@ -3418,20 +3425,14 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     value=STRING
+	 *     (filename=STRING attributes+=StatusSheetReportAttribute*)
 	 *
 	 * Features:
-	 *    value[1, 1]
+	 *    filename[1, 1]
+	 *    attributes[0, *]
 	 */
 	protected void sequence_StatusSheetReport(EObject context, StatusSheetReport semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getStatusSheetReport_Value()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getStatusSheetReport_Value()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getStatusSheetReportAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

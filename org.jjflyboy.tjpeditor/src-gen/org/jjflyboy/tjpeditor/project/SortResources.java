@@ -16,6 +16,6 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface SortResources extends ReportAttribute
+public interface SortResources extends ReportAttribute, StatusSheetReportAttribute
 {
 } // SortResources
