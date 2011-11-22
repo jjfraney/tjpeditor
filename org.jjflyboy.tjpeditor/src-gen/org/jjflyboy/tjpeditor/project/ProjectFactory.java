@@ -1637,6 +1637,15 @@ public interface ProjectFactory extends EFactory
   TimesheetReport createTimesheetReport();
 
   /**
+   * Returns a new object of class '<em>Timesheet Report Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Timesheet Report Attribute</em>'.
+   * @generated
+   */
+  TimesheetReportAttribute createTimesheetReportAttribute();
+
+  /**
    * Returns a new object of class '<em>Timezone</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1851,15 +1860,6 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   TaskDependency createTaskDependency();
-
-  /**
-   * Returns a new object of class '<em>Timesheet Report Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Timesheet Report Attribute</em>'.
-   * @generated
-   */
-  TimesheetReportAttribute createTimesheetReportAttribute();
 
   /**
    * Returns a new object of class '<em>Rich Text</em>'.

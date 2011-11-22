@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Timesheet Report</b></em>'.
@@ -18,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.jjflyboy.tjpeditor.project.TimesheetReport#getFilename <em>Filename</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.TimesheetReport#getComnent <em>Comnent</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.TimesheetReport#getAttributes <em>Attributes</em>}</li>
  * </ul>
  * </p>
@@ -27,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface TimesheetReport extends EObject
+public interface TimesheetReport extends GlobalAttribute
 {
   /**
    * Returns the value of the '<em><b>Filename</b></em>' attribute.
@@ -54,32 +51,6 @@ public interface TimesheetReport extends EObject
    * @generated
    */
   void setFilename(String value);
-
-  /**
-   * Returns the value of the '<em><b>Comnent</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Comnent</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Comnent</em>' attribute.
-   * @see #setComnent(String)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getTimesheetReport_Comnent()
-   * @model
-   * @generated
-   */
-  String getComnent();
-
-  /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.TimesheetReport#getComnent <em>Comnent</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Comnent</em>' attribute.
-   * @see #getComnent()
-   * @generated
-   */
-  void setComnent(String value);
 
   /**
    * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.

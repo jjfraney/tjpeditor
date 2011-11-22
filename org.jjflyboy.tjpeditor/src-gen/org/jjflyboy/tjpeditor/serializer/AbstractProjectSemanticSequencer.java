@@ -1219,7 +1219,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TIMESHEET_REPORT:
-				if(context == grammarAccess.getTimesheetReportRule()) {
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getTimesheetReportRule()) {
 					sequence_TimesheetReport(context, (TimesheetReport) semanticObject); 
 					return; 
 				}
@@ -3730,11 +3731,10 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (filename=STRING comnent=STRING attributes+=TimesheetReportAttribute*)
+	 *     (filename=STRING attributes+=TimesheetReportAttribute*)
 	 *
 	 * Features:
 	 *    filename[1, 1]
-	 *    comnent[1, 1]
 	 *    attributes[0, *]
 	 */
 	protected void sequence_TimesheetReport(EObject context, TimesheetReport semanticObject) {

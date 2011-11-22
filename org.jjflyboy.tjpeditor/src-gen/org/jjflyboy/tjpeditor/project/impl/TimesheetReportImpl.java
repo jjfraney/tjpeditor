@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -33,14 +32,13 @@ import org.jjflyboy.tjpeditor.project.TimesheetReportAttribute;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TimesheetReportImpl#getFilename <em>Filename</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TimesheetReportImpl#getComnent <em>Comnent</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.TimesheetReportImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TimesheetReportImpl extends MinimalEObjectImpl.Container implements TimesheetReport
+public class TimesheetReportImpl extends GlobalAttributeImpl implements TimesheetReport
 {
   /**
    * The default value of the '{@link #getFilename() <em>Filename</em>}' attribute.
@@ -61,26 +59,6 @@ public class TimesheetReportImpl extends MinimalEObjectImpl.Container implements
    * @ordered
    */
   protected String filename = FILENAME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getComnent() <em>Comnent</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getComnent()
-   * @generated
-   * @ordered
-   */
-  protected static final String COMNENT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getComnent() <em>Comnent</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getComnent()
-   * @generated
-   * @ordered
-   */
-  protected String comnent = COMNENT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
@@ -141,29 +119,6 @@ public class TimesheetReportImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getComnent()
-  {
-    return comnent;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setComnent(String newComnent)
-  {
-    String oldComnent = comnent;
-    comnent = newComnent;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.TIMESHEET_REPORT__COMNENT, oldComnent, comnent));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<TimesheetReportAttribute> getAttributes()
   {
     if (attributes == null)
@@ -201,8 +156,6 @@ public class TimesheetReportImpl extends MinimalEObjectImpl.Container implements
     {
       case ProjectPackage.TIMESHEET_REPORT__FILENAME:
         return getFilename();
-      case ProjectPackage.TIMESHEET_REPORT__COMNENT:
-        return getComnent();
       case ProjectPackage.TIMESHEET_REPORT__ATTRIBUTES:
         return getAttributes();
     }
@@ -222,9 +175,6 @@ public class TimesheetReportImpl extends MinimalEObjectImpl.Container implements
     {
       case ProjectPackage.TIMESHEET_REPORT__FILENAME:
         setFilename((String)newValue);
-        return;
-      case ProjectPackage.TIMESHEET_REPORT__COMNENT:
-        setComnent((String)newValue);
         return;
       case ProjectPackage.TIMESHEET_REPORT__ATTRIBUTES:
         getAttributes().clear();
@@ -247,9 +197,6 @@ public class TimesheetReportImpl extends MinimalEObjectImpl.Container implements
       case ProjectPackage.TIMESHEET_REPORT__FILENAME:
         setFilename(FILENAME_EDEFAULT);
         return;
-      case ProjectPackage.TIMESHEET_REPORT__COMNENT:
-        setComnent(COMNENT_EDEFAULT);
-        return;
       case ProjectPackage.TIMESHEET_REPORT__ATTRIBUTES:
         getAttributes().clear();
         return;
@@ -269,8 +216,6 @@ public class TimesheetReportImpl extends MinimalEObjectImpl.Container implements
     {
       case ProjectPackage.TIMESHEET_REPORT__FILENAME:
         return FILENAME_EDEFAULT == null ? filename != null : !FILENAME_EDEFAULT.equals(filename);
-      case ProjectPackage.TIMESHEET_REPORT__COMNENT:
-        return COMNENT_EDEFAULT == null ? comnent != null : !COMNENT_EDEFAULT.equals(comnent);
       case ProjectPackage.TIMESHEET_REPORT__ATTRIBUTES:
         return attributes != null && !attributes.isEmpty();
     }
@@ -290,8 +235,6 @@ public class TimesheetReportImpl extends MinimalEObjectImpl.Container implements
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (filename: ");
     result.append(filename);
-    result.append(", comnent: ");
-    result.append(comnent);
     result.append(')');
     return result.toString();
   }

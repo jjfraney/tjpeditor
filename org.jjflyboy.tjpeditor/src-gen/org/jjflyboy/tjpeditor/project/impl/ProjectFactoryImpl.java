@@ -247,6 +247,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.TIMESHEET: return createTimesheet();
       case ProjectPackage.TIMESHEET_ATTRIBUTE: return createTimesheetAttribute();
       case ProjectPackage.TIMESHEET_REPORT: return createTimesheetReport();
+      case ProjectPackage.TIMESHEET_REPORT_ATTRIBUTE: return createTimesheetReportAttribute();
       case ProjectPackage.TIMEZONE: return createTimezone();
       case ProjectPackage.TIMING_RESOLUTION: return createTimingResolution();
       case ProjectPackage.TITLE: return createTitle();
@@ -271,7 +272,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.LIMIT_ATTRIBUTE: return createLimitAttribute();
       case ProjectPackage.REAL_FORMAT: return createRealFormat();
       case ProjectPackage.TASK_DEPENDENCY: return createTaskDependency();
-      case ProjectPackage.TIMESHEET_REPORT_ATTRIBUTE: return createTimesheetReportAttribute();
       case ProjectPackage.RICH_TEXT: return createRichText();
       case ProjectPackage.WORK_HOURS: return createWorkHours();
       case ProjectPackage.WEEKDAYS: return createWeekdays();
@@ -2369,6 +2369,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public TimesheetReportAttribute createTimesheetReportAttribute()
+  {
+    TimesheetReportAttributeImpl timesheetReportAttribute = new TimesheetReportAttributeImpl();
+    return timesheetReportAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Timezone createTimezone()
   {
     TimezoneImpl timezone = new TimezoneImpl();
@@ -2626,17 +2637,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     TaskDependencyImpl taskDependency = new TaskDependencyImpl();
     return taskDependency;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TimesheetReportAttribute createTimesheetReportAttribute()
-  {
-    TimesheetReportAttributeImpl timesheetReportAttribute = new TimesheetReportAttributeImpl();
-    return timesheetReportAttribute;
   }
 
   /**

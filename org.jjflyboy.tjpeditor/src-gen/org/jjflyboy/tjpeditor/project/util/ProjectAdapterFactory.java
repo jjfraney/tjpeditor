@@ -973,6 +973,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createTimesheetReportAdapter();
       }
       @Override
+      public Adapter caseTimesheetReportAttribute(TimesheetReportAttribute object)
+      {
+        return createTimesheetReportAttributeAdapter();
+      }
+      @Override
       public Adapter caseTimezone(Timezone object)
       {
         return createTimezoneAdapter();
@@ -1091,11 +1096,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseTaskDependency(TaskDependency object)
       {
         return createTaskDependencyAdapter();
-      }
-      @Override
-      public Adapter caseTimesheetReportAttribute(TimesheetReportAttribute object)
-      {
-        return createTimesheetReportAttributeAdapter();
       }
       @Override
       public Adapter caseRichText(RichText object)
@@ -3825,6 +3825,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TimesheetReportAttribute <em>Timesheet Report Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.TimesheetReportAttribute
+   * @generated
+   */
+  public Adapter createTimesheetReportAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Timezone <em>Timezone</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -4180,21 +4195,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTaskDependencyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TimesheetReportAttribute <em>Timesheet Report Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.TimesheetReportAttribute
-   * @generated
-   */
-  public Adapter createTimesheetReportAttributeAdapter()
   {
     return null;
   }

@@ -44,7 +44,7 @@ GlobalAttribute:
 	| TagFile
 	| Task
 	| Timesheet
-//	| TimesheetReport
+	| TimesheetReport
 	| TrackingScenario
 	| Vacation
 ;
@@ -987,8 +987,12 @@ TimesheetAttribute:
 
 
 // http://www.taskjuggler.org/tj3/manual/timesheetreport.html
-TimesheetReport: 'timesheetreport' filename=STRING comnent=STRING
+TimesheetReport: 'timesheetreport' filename=STRING
 	 ('{' attributes+=TimesheetReportAttribute* '}')?;
+
+TimesheetReportAttribute:
+	End | HideResource | Period | Start;
+	
 
 // http://www.taskjuggler.org/tj3/manual/timezone.export.html
 // http://www.taskjuggler.org/tj3/manual/timezone.html
@@ -1136,11 +1140,6 @@ TaskDependency:
 
 TaskPath: '!'* ID ('.' ID)*;
 
-	
-// http://www.taskjuggler.org/tj3/manual/timesheetreport.html
-TimesheetReportAttribute:
-	End | HideResource | Period | Start;
-	
 
 RichText: text=STRING;
 

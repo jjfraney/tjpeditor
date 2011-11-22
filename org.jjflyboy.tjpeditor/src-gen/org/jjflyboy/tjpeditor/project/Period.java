@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Period extends TaskAttribute, ReportAttribute, ExportAttribute, NikuReportAttribute, StatusSheetReportAttribute, ColumnAttribute, TimesheetReportAttribute
+public interface Period extends TaskAttribute, ReportAttribute, ExportAttribute, NikuReportAttribute, StatusSheetReportAttribute, TimesheetReportAttribute, ColumnAttribute
 {
   /**
    * Returns the value of the '<em><b>Period</b></em>' containment reference.

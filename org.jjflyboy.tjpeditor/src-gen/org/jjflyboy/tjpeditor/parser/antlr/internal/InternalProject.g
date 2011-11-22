@@ -387,21 +387,31 @@ ruleGlobalAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getTrackingScenarioParserRuleCall_25()); 
+        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getTimesheetReportParserRuleCall_25()); 
     }
-    this_TrackingScenario_25=ruleTrackingScenario
+    this_TimesheetReport_25=ruleTimesheetReport
     { 
-        $current = $this_TrackingScenario_25.current; 
+        $current = $this_TimesheetReport_25.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getVacationParserRuleCall_26()); 
+        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getTrackingScenarioParserRuleCall_26()); 
     }
-    this_Vacation_26=ruleVacation
+    this_TrackingScenario_26=ruleTrackingScenario
     { 
-        $current = $this_Vacation_26.current; 
+        $current = $this_TrackingScenario_26.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getVacationParserRuleCall_27()); 
+    }
+    this_Vacation_27=ruleVacation
+    { 
+        $current = $this_Vacation_27.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -12151,6 +12161,133 @@ ruleTimesheetAttribute returns [EObject current=null]
 
 
 
+// Entry rule entryRuleTimesheetReport
+entryRuleTimesheetReport returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTimesheetReportRule()); }
+	 iv_ruleTimesheetReport=ruleTimesheetReport 
+	 { $current=$iv_ruleTimesheetReport.current; } 
+	 EOF 
+;
+
+// Rule TimesheetReport
+ruleTimesheetReport returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='timesheetreport' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getTimesheetReportAccess().getTimesheetreportKeyword_0());
+    }
+(
+(
+		lv_filename_1_0=RULE_STRING
+		{
+			newLeafNode(lv_filename_1_0, grammarAccess.getTimesheetReportAccess().getFilenameSTRINGTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTimesheetReportRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"filename",
+        		lv_filename_1_0, 
+        		"STRING");
+	    }
+
+)
+)(	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getTimesheetReportAccess().getLeftCurlyBracketKeyword_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTimesheetReportAccess().getAttributesTimesheetReportAttributeParserRuleCall_2_1_0()); 
+	    }
+		lv_attributes_3_0=ruleTimesheetReportAttribute		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTimesheetReportRule());
+	        }
+       		add(
+       			$current, 
+       			"attributes",
+        		lv_attributes_3_0, 
+        		"TimesheetReportAttribute");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_4='}' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getTimesheetReportAccess().getRightCurlyBracketKeyword_2_2());
+    }
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleTimesheetReportAttribute
+entryRuleTimesheetReportAttribute returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTimesheetReportAttributeRule()); }
+	 iv_ruleTimesheetReportAttribute=ruleTimesheetReportAttribute 
+	 { $current=$iv_ruleTimesheetReportAttribute.current; } 
+	 EOF 
+;
+
+// Rule TimesheetReportAttribute
+ruleTimesheetReportAttribute returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getTimesheetReportAttributeAccess().getEndParserRuleCall_0()); 
+    }
+    this_End_0=ruleEnd
+    { 
+        $current = $this_End_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTimesheetReportAttributeAccess().getHideResourceParserRuleCall_1()); 
+    }
+    this_HideResource_1=ruleHideResource
+    { 
+        $current = $this_HideResource_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTimesheetReportAttributeAccess().getPeriodParserRuleCall_2()); 
+    }
+    this_Period_2=rulePeriod
+    { 
+        $current = $this_Period_2.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTimesheetReportAttributeAccess().getStartParserRuleCall_3()); 
+    }
+    this_Start_3=ruleStart
+    { 
+        $current = $this_Start_3.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
 
 
 // Entry rule entryRuleTimezone
@@ -13942,66 +14079,6 @@ ruleTaskPath returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
     }
 )*)
     ;
-
-
-
-
-
-// Entry rule entryRuleTimesheetReportAttribute
-entryRuleTimesheetReportAttribute returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getTimesheetReportAttributeRule()); }
-	 iv_ruleTimesheetReportAttribute=ruleTimesheetReportAttribute 
-	 { $current=$iv_ruleTimesheetReportAttribute.current; } 
-	 EOF 
-;
-
-// Rule TimesheetReportAttribute
-ruleTimesheetReportAttribute returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getTimesheetReportAttributeAccess().getEndParserRuleCall_0()); 
-    }
-    this_End_0=ruleEnd
-    { 
-        $current = $this_End_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getTimesheetReportAttributeAccess().getHideResourceParserRuleCall_1()); 
-    }
-    this_HideResource_1=ruleHideResource
-    { 
-        $current = $this_HideResource_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getTimesheetReportAttributeAccess().getPeriodParserRuleCall_2()); 
-    }
-    this_Period_2=rulePeriod
-    { 
-        $current = $this_Period_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getTimesheetReportAttributeAccess().getStartParserRuleCall_3()); 
-    }
-    this_Start_3=ruleStart
-    { 
-        $current = $this_Start_3.current; 
-        afterParserOrEnumRuleCall();
-    }
-)
-;
 
 
 

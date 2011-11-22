@@ -65,11 +65,11 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTaskTimesheetAttributeAccess().getAlternatives(), "rule__TaskTimesheetAttribute__Alternatives");
 					put(grammarAccess.getTaskAttributesAccess().getAlternatives_1(), "rule__TaskAttributes__Alternatives_1");
 					put(grammarAccess.getTimesheetAttributeAccess().getAlternatives(), "rule__TimesheetAttribute__Alternatives");
+					put(grammarAccess.getTimesheetReportAttributeAccess().getAlternatives(), "rule__TimesheetReportAttribute__Alternatives");
 					put(grammarAccess.getWeekStartsAccess().getAlternatives(), "rule__WeekStarts__Alternatives");
 					put(grammarAccess.getWorkingHoursAccess().getAlternatives_2(), "rule__WorkingHours__Alternatives_2");
 					put(grammarAccess.getColumnAttributeAccess().getAlternatives(), "rule__ColumnAttribute__Alternatives");
 					put(grammarAccess.getLimitAttributeAccess().getAlternatives(), "rule__LimitAttribute__Alternatives");
-					put(grammarAccess.getTimesheetReportAttributeAccess().getAlternatives(), "rule__TimesheetReportAttribute__Alternatives");
 					put(grammarAccess.getXFloatAccess().getAlternatives(), "rule__XFloat__Alternatives");
 					put(grammarAccess.getPurgeReportAttributeAccess().getAlternatives(), "rule__PurgeReportAttribute__Alternatives");
 					put(grammarAccess.getPurgeResourceAttributeAccess().getAlternatives(), "rule__PurgeResourceAttribute__Alternatives");
@@ -311,7 +311,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTimesheetAccess().getGroup(), "rule__Timesheet__Group__0");
 					put(grammarAccess.getTimesheetAccess().getGroup_3(), "rule__Timesheet__Group_3__0");
 					put(grammarAccess.getTimesheetReportAccess().getGroup(), "rule__TimesheetReport__Group__0");
-					put(grammarAccess.getTimesheetReportAccess().getGroup_3(), "rule__TimesheetReport__Group_3__0");
+					put(grammarAccess.getTimesheetReportAccess().getGroup_2(), "rule__TimesheetReport__Group_2__0");
 					put(grammarAccess.getTimezoneAccess().getGroup(), "rule__Timezone__Group__0");
 					put(grammarAccess.getTimingResolutionAccess().getGroup(), "rule__TimingResolution__Group__0");
 					put(grammarAccess.getTitleAccess().getGroup(), "rule__Title__Group__0");
@@ -608,8 +608,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTimesheetAccess().getIntervalAssignment_2(), "rule__Timesheet__IntervalAssignment_2");
 					put(grammarAccess.getTimesheetAccess().getAttributesAssignment_3_1(), "rule__Timesheet__AttributesAssignment_3_1");
 					put(grammarAccess.getTimesheetReportAccess().getFilenameAssignment_1(), "rule__TimesheetReport__FilenameAssignment_1");
-					put(grammarAccess.getTimesheetReportAccess().getComnentAssignment_2(), "rule__TimesheetReport__ComnentAssignment_2");
-					put(grammarAccess.getTimesheetReportAccess().getAttributesAssignment_3_1(), "rule__TimesheetReport__AttributesAssignment_3_1");
+					put(grammarAccess.getTimesheetReportAccess().getAttributesAssignment_2_1(), "rule__TimesheetReport__AttributesAssignment_2_1");
 					put(grammarAccess.getTimezoneAccess().getTimezoneAssignment_1(), "rule__Timezone__TimezoneAssignment_1");
 					put(grammarAccess.getTimingResolutionAccess().getTimingResolutionAssignment_1(), "rule__TimingResolution__TimingResolutionAssignment_1");
 					put(grammarAccess.getTitleAccess().getTitleAssignment_1(), "rule__Title__TitleAssignment_1");

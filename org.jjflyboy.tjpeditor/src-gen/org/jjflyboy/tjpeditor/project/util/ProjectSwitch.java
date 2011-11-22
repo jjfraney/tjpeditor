@@ -514,8 +514,8 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseNikuReportAttribute(end);
         if (result == null) result = caseStatusSheetReportAttribute(end);
         if (result == null) result = caseTaskTimesheetAttribute(end);
-        if (result == null) result = caseColumnAttribute(end);
         if (result == null) result = caseTimesheetReportAttribute(end);
+        if (result == null) result = caseColumnAttribute(end);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -958,8 +958,8 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseExportAttribute(period);
         if (result == null) result = caseNikuReportAttribute(period);
         if (result == null) result = caseStatusSheetReportAttribute(period);
-        if (result == null) result = caseColumnAttribute(period);
         if (result == null) result = caseTimesheetReportAttribute(period);
+        if (result == null) result = caseColumnAttribute(period);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1321,8 +1321,8 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseExportAttribute(start);
         if (result == null) result = caseNikuReportAttribute(start);
         if (result == null) result = caseStatusSheetReportAttribute(start);
-        if (result == null) result = caseColumnAttribute(start);
         if (result == null) result = caseTimesheetReportAttribute(start);
+        if (result == null) result = caseColumnAttribute(start);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1545,6 +1545,14 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TimesheetReport timesheetReport = (TimesheetReport)theEObject;
         T result = caseTimesheetReport(timesheetReport);
+        if (result == null) result = caseGlobalAttribute(timesheetReport);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.TIMESHEET_REPORT_ATTRIBUTE:
+      {
+        TimesheetReportAttribute timesheetReportAttribute = (TimesheetReportAttribute)theEObject;
+        T result = caseTimesheetReportAttribute(timesheetReportAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1754,13 +1762,6 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseDepends(taskDependency);
         if (result == null) result = casePrecedes(taskDependency);
         if (result == null) result = caseTaskAttribute(taskDependency);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ProjectPackage.TIMESHEET_REPORT_ATTRIBUTE:
-      {
-        TimesheetReportAttribute timesheetReportAttribute = (TimesheetReportAttribute)theEObject;
-        T result = caseTimesheetReportAttribute(timesheetReportAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -4680,6 +4681,22 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Timesheet Report Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Timesheet Report Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTimesheetReportAttribute(TimesheetReportAttribute object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Timezone</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -5059,22 +5076,6 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTaskDependency(TaskDependency object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Timesheet Report Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Timesheet Report Attribute</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTimesheetReportAttribute(TimesheetReportAttribute object)
   {
     return null;
   }
