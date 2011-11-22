@@ -61,9 +61,13 @@ Workflow {
 
             // The antlr parser generator fragment.
             fragment = parser.antlr.XtextAntlrGeneratorFragment {
-            //  options = {
-            //      backtrack = true
-            //  }
+//            	antlrParam = "-Xmaxinlinedfastates" antlrParam = "100000"
+//            	antlrParam = "-Xmaxswitchcaselabels" antlrParam = "30000"
+//            	antlrParam = "-Xminswitchalts" antlrParam="1"
+//             options = {
+//                 backtrack = true
+//                  classSplitting = true
+//              }
             }
 
             // java-based API for validation
@@ -104,7 +108,11 @@ Workflow {
             fragment = contentAssist.JavaBasedContentAssistFragment {}
 
             // generates a more lightweight Antlr parser and lexer tailored for content assist
-            fragment = parser.antlr.XtextAntlrUiGeneratorFragment {}
+          	fragment = parser.antlr.XtextAntlrUiGeneratorFragment {
+            	antlrParam = "-Xmaxinlinedfastates" antlrParam = "100000"
+            	antlrParam = "-Xmaxswitchcaselabels" antlrParam = "30000"
+            	antlrParam = "-Xminswitchalts" antlrParam="1"
+			}
 
             // generates junit test support classes into Generator#pathTestProject
             fragment = junit.Junit4Fragment {}
