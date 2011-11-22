@@ -221,6 +221,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.START: return createStart();
       case ProjectPackage.STATUS_STATUS_SHEET: return createStatusStatusSheet();
       case ProjectPackage.STATUS_STATUS_SHEET_ATTRIBUTE: return createStatusStatusSheetAttribute();
+      case ProjectPackage.STATUS_TIMESHEET: return createStatusTimesheet();
+      case ProjectPackage.STATUS_TIMESHEET_ATTRIBUTE: return createStatusTimesheetAttribute();
       case ProjectPackage.STATUS_SHEET: return createStatusSheet();
       case ProjectPackage.STATUS_SHEET_ATTRIBUTE: return createStatusSheetAttribute();
       case ProjectPackage.STATUS_SHEET_REPORT: return createStatusSheetReport();
@@ -234,6 +236,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.TASK_STATUS_SHEET: return createTaskStatusSheet();
       case ProjectPackage.TASK_STATUS_SHEET_ATTRIBUTE: return createTaskStatusSheetAttribute();
       case ProjectPackage.TASK_TIMESHEET: return createTaskTimesheet();
+      case ProjectPackage.TASK_TIMESHEET_ATTRIBUTE: return createTaskTimesheetAttribute();
       case ProjectPackage.TASK_ATTRIBUTES: return createTaskAttributes();
       case ProjectPackage.TASK_PREFIX: return createTaskPrefix();
       case ProjectPackage.TASK_REPORT: return createTaskReport();
@@ -242,6 +245,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.TIME_FORMAT: return createTimeFormat();
       case ProjectPackage.TIMEOFF: return createTimeoff();
       case ProjectPackage.TIMESHEET: return createTimesheet();
+      case ProjectPackage.TIMESHEET_ATTRIBUTE: return createTimesheetAttribute();
       case ProjectPackage.TIMESHEET_REPORT: return createTimesheetReport();
       case ProjectPackage.TIMEZONE: return createTimezone();
       case ProjectPackage.TIMING_RESOLUTION: return createTimingResolution();
@@ -267,8 +271,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.LIMIT_ATTRIBUTE: return createLimitAttribute();
       case ProjectPackage.REAL_FORMAT: return createRealFormat();
       case ProjectPackage.TASK_DEPENDENCY: return createTaskDependency();
-      case ProjectPackage.TASK_TIMESHEET_ATTRIBUTE: return createTaskTimesheetAttribute();
-      case ProjectPackage.TIMESHEET_ATTRIBUTE: return createTimesheetAttribute();
       case ProjectPackage.TIMESHEET_REPORT_ATTRIBUTE: return createTimesheetReportAttribute();
       case ProjectPackage.RICH_TEXT: return createRichText();
       case ProjectPackage.WORK_HOURS: return createWorkHours();
@@ -2081,6 +2083,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public StatusTimesheet createStatusTimesheet()
+  {
+    StatusTimesheetImpl statusTimesheet = new StatusTimesheetImpl();
+    return statusTimesheet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StatusTimesheetAttribute createStatusTimesheetAttribute()
+  {
+    StatusTimesheetAttributeImpl statusTimesheetAttribute = new StatusTimesheetAttributeImpl();
+    return statusTimesheetAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public StatusSheet createStatusSheet()
   {
     StatusSheetImpl statusSheet = new StatusSheetImpl();
@@ -2224,6 +2248,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public TaskTimesheetAttribute createTaskTimesheetAttribute()
+  {
+    TaskTimesheetAttributeImpl taskTimesheetAttribute = new TaskTimesheetAttributeImpl();
+    return taskTimesheetAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TaskAttributes createTaskAttributes()
   {
     TaskAttributesImpl taskAttributes = new TaskAttributesImpl();
@@ -2305,6 +2340,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     TimesheetImpl timesheet = new TimesheetImpl();
     return timesheet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TimesheetAttribute createTimesheetAttribute()
+  {
+    TimesheetAttributeImpl timesheetAttribute = new TimesheetAttributeImpl();
+    return timesheetAttribute;
   }
 
   /**
@@ -2580,28 +2626,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     TaskDependencyImpl taskDependency = new TaskDependencyImpl();
     return taskDependency;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TaskTimesheetAttribute createTaskTimesheetAttribute()
-  {
-    TaskTimesheetAttributeImpl taskTimesheetAttribute = new TaskTimesheetAttributeImpl();
-    return taskTimesheetAttribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TimesheetAttribute createTimesheetAttribute()
-  {
-    TimesheetAttributeImpl timesheetAttribute = new TimesheetAttributeImpl();
-    return timesheetAttribute;
   }
 
   /**

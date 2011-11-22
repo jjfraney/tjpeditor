@@ -84,22 +84,21 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSupplementTaskParserRuleCall_21 = (RuleCall)cAlternatives.eContents().get(21);
 		private final RuleCall cTagFileParserRuleCall_22 = (RuleCall)cAlternatives.eContents().get(22);
 		private final RuleCall cTaskParserRuleCall_23 = (RuleCall)cAlternatives.eContents().get(23);
-		private final RuleCall cTrackingScenarioParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
-		private final RuleCall cVacationParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cTimesheetParserRuleCall_24 = (RuleCall)cAlternatives.eContents().get(24);
+		private final RuleCall cTrackingScenarioParserRuleCall_25 = (RuleCall)cAlternatives.eContents().get(25);
+		private final RuleCall cVacationParserRuleCall_26 = (RuleCall)cAlternatives.eContents().get(26);
 		
 		//GlobalAttribute:
-		//	Account //	| Timesheet
-		//	//	| TimesheetReport
+		//	Account //	| TimesheetReport
 		//	| AccountReport | Balance | Copyright | Export | Flags | Limits | Macro | Navigator | NikuReport | Rate |
 		//	ResourceReport | TaskReport | TextReport | Resource | Shift | StatusSheet | StatusSheetReport | SupplementAccount |
-		//	SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario | Vacation;
+		//	SupplementReport | SupplementResource | SupplementTask | TagFile | Task | Timesheet | TrackingScenario | Vacation;
 		public ParserRule getRule() { return rule; }
 
-		//Account //	| Timesheet
-		////	| TimesheetReport
+		//Account //	| TimesheetReport
 		//| AccountReport | Balance | Copyright | Export | Flags | Limits | Macro | Navigator | NikuReport | Rate | ResourceReport
 		//| TaskReport | TextReport | Resource | Shift | StatusSheet | StatusSheetReport | SupplementAccount | SupplementReport |
-		//SupplementResource | SupplementTask | TagFile | Task | TrackingScenario | Vacation
+		//SupplementResource | SupplementTask | TagFile | Task | Timesheet | TrackingScenario | Vacation
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Account
@@ -174,11 +173,14 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Task
 		public RuleCall getTaskParserRuleCall_23() { return cTaskParserRuleCall_23; }
 
+		//Timesheet
+		public RuleCall getTimesheetParserRuleCall_24() { return cTimesheetParserRuleCall_24; }
+
 		//TrackingScenario
-		public RuleCall getTrackingScenarioParserRuleCall_24() { return cTrackingScenarioParserRuleCall_24; }
+		public RuleCall getTrackingScenarioParserRuleCall_25() { return cTrackingScenarioParserRuleCall_25; }
 
 		//Vacation
-		public RuleCall getVacationParserRuleCall_25() { return cVacationParserRuleCall_25; }
+		public RuleCall getVacationParserRuleCall_26() { return cVacationParserRuleCall_26; }
 	}
 
 	public class AbsoluteIdElements extends AbstractParserRuleElementFinder {
@@ -5887,6 +5889,83 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getSummaryParserRuleCall_3() { return cSummaryParserRuleCall_3; }
 	}
 
+	public class StatusTimesheetElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StatusTimesheet");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cStatusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cLevelAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cLevelAlertLevelEnumRuleCall_1_0 = (RuleCall)cLevelAssignment_1.eContents().get(0);
+		private final Assignment cTextAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTextSTRINGTerminalRuleCall_2_0 = (RuleCall)cTextAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cAttributesStatusTimesheetAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//// http://www.taskjuggler.org/tj3/manual/status.timesheet.html
+		//StatusTimesheet:
+		//	"status" level=AlertLevel text=STRING ("{" attributes+=StatusTimesheetAttribute* "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//"status" level=AlertLevel text=STRING ("{" attributes+=StatusTimesheetAttribute* "}")?
+		public Group getGroup() { return cGroup; }
+
+		//"status"
+		public Keyword getStatusKeyword_0() { return cStatusKeyword_0; }
+
+		//level=AlertLevel
+		public Assignment getLevelAssignment_1() { return cLevelAssignment_1; }
+
+		//AlertLevel
+		public RuleCall getLevelAlertLevelEnumRuleCall_1_0() { return cLevelAlertLevelEnumRuleCall_1_0; }
+
+		//text=STRING
+		public Assignment getTextAssignment_2() { return cTextAssignment_2; }
+
+		//STRING
+		public RuleCall getTextSTRINGTerminalRuleCall_2_0() { return cTextSTRINGTerminalRuleCall_2_0; }
+
+		//("{" attributes+=StatusTimesheetAttribute* "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//attributes+=StatusTimesheetAttribute*
+		public Assignment getAttributesAssignment_3_1() { return cAttributesAssignment_3_1; }
+
+		//StatusTimesheetAttribute
+		public RuleCall getAttributesStatusTimesheetAttributeParserRuleCall_3_1_0() { return cAttributesStatusTimesheetAttributeParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class StatusTimesheetAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StatusTimesheetAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cDetailsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cFlagsParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cSummaryParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//StatusTimesheetAttribute:
+		//	Details | Flags | Summary;
+		public ParserRule getRule() { return rule; }
+
+		//Details | Flags | Summary
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Details
+		public RuleCall getDetailsParserRuleCall_0() { return cDetailsParserRuleCall_0; }
+
+		//Flags
+		public RuleCall getFlagsParserRuleCall_1() { return cFlagsParserRuleCall_1; }
+
+		//Summary
+		public RuleCall getSummaryParserRuleCall_2() { return cSummaryParserRuleCall_2; }
+	}
+
 	public class StatusSheetElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StatusSheet");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -5902,9 +5981,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAttributesStatusSheetAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
-		//// http://www.taskjuggler.org/tj3/manual/status.timesheet.html
-		////StatusTimesheet: 'statusB' level=AlertLevel text=STRING 
-		////	(details = Details & flags = Flags & summary = Summary);
 		//// http://www.taskjuggler.org/tj3/manual/statussheet.html
 		//StatusSheet:
 		//	"statussheet" resource=[Resource] interval=Interval4 ("{" attributes+=StatusSheetAttribute* "}")?;
@@ -6488,6 +6564,39 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
 	}
 
+	public class TaskTimesheetAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TaskTimesheetAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cEndParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cPriorityParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cRemainingParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cStatusTimesheetParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cWorkParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		
+		//// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
+		//TaskTimesheetAttribute:
+		//	End | Priority | Remaining | StatusTimesheet | Work;
+		public ParserRule getRule() { return rule; }
+
+		//End | Priority | Remaining | StatusTimesheet | Work
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//End
+		public RuleCall getEndParserRuleCall_0() { return cEndParserRuleCall_0; }
+
+		//Priority
+		public RuleCall getPriorityParserRuleCall_1() { return cPriorityParserRuleCall_1; }
+
+		//Remaining
+		public RuleCall getRemainingParserRuleCall_2() { return cRemainingParserRuleCall_2; }
+
+		//StatusTimesheet
+		public RuleCall getStatusTimesheetParserRuleCall_3() { return cStatusTimesheetParserRuleCall_3; }
+
+		//Work
+		public RuleCall getWorkParserRuleCall_4() { return cWorkParserRuleCall_4; }
+	}
+
 	public class TaskAttributesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TaskAttributes");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -6807,13 +6916,14 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cAttributesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cAttributesTimesheetAttributeParserRuleCall_3_1_0 = (RuleCall)cAttributesAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//// http://www.taskjuggler.org/tj3/manual/timesheet.html
 		//Timesheet:
-		//	"timesheet" resource=[Resource] interval=Interval4 ("{" attributes+=TimesheetAttribute*)?;
+		//	"timesheet" resource=[Resource] interval=Interval4 ("{" attributes+=TimesheetAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"timesheet" resource=[Resource] interval=Interval4 ("{" attributes+=TimesheetAttribute*)?
+		//"timesheet" resource=[Resource] interval=Interval4 ("{" attributes+=TimesheetAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"timesheet"
@@ -6834,7 +6944,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Interval4
 		public RuleCall getIntervalInterval4ParserRuleCall_2_0() { return cIntervalInterval4ParserRuleCall_2_0; }
 
-		//("{" attributes+=TimesheetAttribute*)?
+		//("{" attributes+=TimesheetAttribute* "}")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"{"
@@ -6845,6 +6955,38 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//TimesheetAttribute
 		public RuleCall getAttributesTimesheetAttributeParserRuleCall_3_1_0() { return cAttributesTimesheetAttributeParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
+	public class TimesheetAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TimesheetAttribute");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cNewTaskParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cShiftTimesheetParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cStatusTimesheetParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cTaskTimesheetParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//// http://www.taskjuggler.org/tj3/manual/timesheet.html
+		//TimesheetAttribute:
+		//	NewTask | ShiftTimesheet | StatusTimesheet | TaskTimesheet;
+		public ParserRule getRule() { return rule; }
+
+		//NewTask | ShiftTimesheet | StatusTimesheet | TaskTimesheet
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//NewTask
+		public RuleCall getNewTaskParserRuleCall_0() { return cNewTaskParserRuleCall_0; }
+
+		//ShiftTimesheet
+		public RuleCall getShiftTimesheetParserRuleCall_1() { return cShiftTimesheetParserRuleCall_1; }
+
+		//StatusTimesheet
+		public RuleCall getStatusTimesheetParserRuleCall_2() { return cStatusTimesheetParserRuleCall_2; }
+
+		//TaskTimesheet
+		public RuleCall getTaskTimesheetParserRuleCall_3() { return cTaskTimesheetParserRuleCall_3; }
 	}
 
 	public class TimesheetReportElements extends AbstractParserRuleElementFinder {
@@ -7987,62 +8129,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_2_1() { return cIDTerminalRuleCall_2_1; }
-	}
-
-	public class TaskTimesheetAttributeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TaskTimesheetAttribute");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cEndParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cPriorityParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cRemainingParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cWorkParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		
-		//// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
-		//TaskTimesheetAttribute:
-		//	End //	| StatusTimesheet
-		//	| Priority | Remaining | Work;
-		public ParserRule getRule() { return rule; }
-
-		//End //	| StatusTimesheet
-		//| Priority | Remaining | Work
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//End
-		public RuleCall getEndParserRuleCall_0() { return cEndParserRuleCall_0; }
-
-		//Priority
-		public RuleCall getPriorityParserRuleCall_1() { return cPriorityParserRuleCall_1; }
-
-		//Remaining
-		public RuleCall getRemainingParserRuleCall_2() { return cRemainingParserRuleCall_2; }
-
-		//Work
-		public RuleCall getWorkParserRuleCall_3() { return cWorkParserRuleCall_3; }
-	}
-
-	public class TimesheetAttributeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TimesheetAttribute");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cNewTaskParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cShiftTimesheetParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cTaskTimesheetParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		
-		//// http://www.taskjuggler.org/tj3/manual/timesheet.html
-		//TimesheetAttribute:
-		//	NewTask | ShiftTimesheet | / *StatusTimesheet | * / TaskTimesheet;
-		public ParserRule getRule() { return rule; }
-
-		//NewTask | ShiftTimesheet | / *StatusTimesheet | * / TaskTimesheet
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//NewTask
-		public RuleCall getNewTaskParserRuleCall_0() { return cNewTaskParserRuleCall_0; }
-
-		//ShiftTimesheet
-		public RuleCall getShiftTimesheetParserRuleCall_1() { return cShiftTimesheetParserRuleCall_1; }
-
-		/// *StatusTimesheet | * / TaskTimesheet
-		public RuleCall getTaskTimesheetParserRuleCall_2() { return cTaskTimesheetParserRuleCall_2; }
 	}
 
 	public class TimesheetReportAttributeElements extends AbstractParserRuleElementFinder {
@@ -9835,6 +9921,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private StartElements pStart;
 	private StatusStatusSheetElements pStatusStatusSheet;
 	private StatusStatusSheetAttributeElements pStatusStatusSheetAttribute;
+	private StatusTimesheetElements pStatusTimesheet;
+	private StatusTimesheetAttributeElements pStatusTimesheetAttribute;
 	private StatusSheetElements pStatusSheet;
 	private StatusSheetAttributeElements pStatusSheetAttribute;
 	private StatusSheetReportElements pStatusSheetReport;
@@ -9848,6 +9936,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private TaskStatusSheetElements pTaskStatusSheet;
 	private TaskStatusSheetAttributeElements pTaskStatusSheetAttribute;
 	private TaskTimesheetElements pTaskTimesheet;
+	private TaskTimesheetAttributeElements pTaskTimesheetAttribute;
 	private TaskAttributesElements pTaskAttributes;
 	private TaskPrefixElements pTaskPrefix;
 	private TaskReportElements pTaskReport;
@@ -9856,6 +9945,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private TimeFormatElements pTimeFormat;
 	private TimeoffElements pTimeoff;
 	private TimesheetElements pTimesheet;
+	private TimesheetAttributeElements pTimesheetAttribute;
 	private TimesheetReportElements pTimesheetReport;
 	private TimezoneElements pTimezone;
 	private TimingResolutionElements pTimingResolution;
@@ -9884,8 +9974,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private RealFormatElements pRealFormat;
 	private TaskDependencyElements pTaskDependency;
 	private TaskPathElements pTaskPath;
-	private TaskTimesheetAttributeElements pTaskTimesheetAttribute;
-	private TimesheetAttributeElements pTimesheetAttribute;
 	private TimesheetReportAttributeElements pTimesheetReportAttribute;
 	private RichTextElements pRichText;
 	private WorkHoursElements pWorkHours;
@@ -9960,11 +10048,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GlobalAttribute:
-	//	Account //	| Timesheet
-	//	//	| TimesheetReport
+	//	Account //	| TimesheetReport
 	//	| AccountReport | Balance | Copyright | Export | Flags | Limits | Macro | Navigator | NikuReport | Rate |
 	//	ResourceReport | TaskReport | TextReport | Resource | Shift | StatusSheet | StatusSheetReport | SupplementAccount |
-	//	SupplementReport | SupplementResource | SupplementTask | TagFile | Task | TrackingScenario | Vacation;
+	//	SupplementReport | SupplementResource | SupplementTask | TagFile | Task | Timesheet | TrackingScenario | Vacation;
 	public GlobalAttributeElements getGlobalAttributeAccess() {
 		return (pGlobalAttribute != null) ? pGlobalAttribute : (pGlobalAttribute = new GlobalAttributeElements());
 	}
@@ -11815,8 +11902,26 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/status.timesheet.html
-	////StatusTimesheet: 'statusB' level=AlertLevel text=STRING 
-	////	(details = Details & flags = Flags & summary = Summary);
+	//StatusTimesheet:
+	//	"status" level=AlertLevel text=STRING ("{" attributes+=StatusTimesheetAttribute* "}")?;
+	public StatusTimesheetElements getStatusTimesheetAccess() {
+		return (pStatusTimesheet != null) ? pStatusTimesheet : (pStatusTimesheet = new StatusTimesheetElements());
+	}
+	
+	public ParserRule getStatusTimesheetRule() {
+		return getStatusTimesheetAccess().getRule();
+	}
+
+	//StatusTimesheetAttribute:
+	//	Details | Flags | Summary;
+	public StatusTimesheetAttributeElements getStatusTimesheetAttributeAccess() {
+		return (pStatusTimesheetAttribute != null) ? pStatusTimesheetAttribute : (pStatusTimesheetAttribute = new StatusTimesheetAttributeElements());
+	}
+	
+	public ParserRule getStatusTimesheetAttributeRule() {
+		return getStatusTimesheetAttributeAccess().getRule();
+	}
+
 	//// http://www.taskjuggler.org/tj3/manual/statussheet.html
 	//StatusSheet:
 	//	"statussheet" resource=[Resource] interval=Interval4 ("{" attributes+=StatusSheetAttribute* "}")?;
@@ -11964,6 +12069,17 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getTaskTimesheetAccess().getRule();
 	}
 
+	//// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
+	//TaskTimesheetAttribute:
+	//	End | Priority | Remaining | StatusTimesheet | Work;
+	public TaskTimesheetAttributeElements getTaskTimesheetAttributeAccess() {
+		return (pTaskTimesheetAttribute != null) ? pTaskTimesheetAttribute : (pTaskTimesheetAttribute = new TaskTimesheetAttributeElements());
+	}
+	
+	public ParserRule getTaskTimesheetAttributeRule() {
+		return getTaskTimesheetAttributeAccess().getRule();
+	}
+
 	//// http://www.taskjuggler.org/tj3/manual/taskattributes.html
 	//TaskAttributes:
 	//	"taskattributes" (all?="*" | none?="-" | {TaskAttributes} (responsible?="responsible"? & flags?="flags"? &
@@ -12046,13 +12162,24 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/timesheet.html
 	//Timesheet:
-	//	"timesheet" resource=[Resource] interval=Interval4 ("{" attributes+=TimesheetAttribute*)?;
+	//	"timesheet" resource=[Resource] interval=Interval4 ("{" attributes+=TimesheetAttribute* "}")?;
 	public TimesheetElements getTimesheetAccess() {
 		return (pTimesheet != null) ? pTimesheet : (pTimesheet = new TimesheetElements());
 	}
 	
 	public ParserRule getTimesheetRule() {
 		return getTimesheetAccess().getRule();
+	}
+
+	//// http://www.taskjuggler.org/tj3/manual/timesheet.html
+	//TimesheetAttribute:
+	//	NewTask | ShiftTimesheet | StatusTimesheet | TaskTimesheet;
+	public TimesheetAttributeElements getTimesheetAttributeAccess() {
+		return (pTimesheetAttribute != null) ? pTimesheetAttribute : (pTimesheetAttribute = new TimesheetAttributeElements());
+	}
+	
+	public ParserRule getTimesheetAttributeRule() {
+		return getTimesheetAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/timesheetreport.html
@@ -12382,29 +12509,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getTaskPathRule() {
 		return getTaskPathAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
-	//TaskTimesheetAttribute:
-	//	End //	| StatusTimesheet
-	//	| Priority | Remaining | Work;
-	public TaskTimesheetAttributeElements getTaskTimesheetAttributeAccess() {
-		return (pTaskTimesheetAttribute != null) ? pTaskTimesheetAttribute : (pTaskTimesheetAttribute = new TaskTimesheetAttributeElements());
-	}
-	
-	public ParserRule getTaskTimesheetAttributeRule() {
-		return getTaskTimesheetAttributeAccess().getRule();
-	}
-
-	//// http://www.taskjuggler.org/tj3/manual/timesheet.html
-	//TimesheetAttribute:
-	//	NewTask | ShiftTimesheet | / *StatusTimesheet | * / TaskTimesheet;
-	public TimesheetAttributeElements getTimesheetAttributeAccess() {
-		return (pTimesheetAttribute != null) ? pTimesheetAttribute : (pTimesheetAttribute = new TimesheetAttributeElements());
-	}
-	
-	public ParserRule getTimesheetAttributeRule() {
-		return getTimesheetAttributeAccess().getRule();
 	}
 
 	//// http://www.taskjuggler.org/tj3/manual/timesheetreport.html

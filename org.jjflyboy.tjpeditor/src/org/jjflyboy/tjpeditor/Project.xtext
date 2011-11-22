@@ -43,7 +43,7 @@ GlobalAttribute:
 	| SupplementTask
 	| TagFile
 	| Task
-//	| Timesheet
+	| Timesheet
 //	| TimesheetReport
 	| TrackingScenario
 	| Vacation
@@ -860,9 +860,8 @@ StatusStatusSheetAttribute:
 	Summary;
 	
 // http://www.taskjuggler.org/tj3/manual/status.timesheet.html
-//StatusTimesheet: 'statusB' level=AlertLevel text=STRING 
-//	(details = Details & flags = Flags & summary = Summary);
-
+StatusTimesheet: 'status' level=AlertLevel text=STRING ( '{' attributes += StatusTimesheetAttribute* '}' ) ?;
+StatusTimesheetAttribute: Details | Flags | Summary;
 
 // http://www.taskjuggler.org/tj3/manual/statussheet.html
 StatusSheet: 'statussheet' resource=[Resource] 
@@ -932,6 +931,16 @@ TaskStatusSheetAttribute: TaskStatusSheet | StatusStatusSheet;
 // http://www.taskjuggler.org/tj3/manual/task.timesheet.html
 TaskTimesheet: 'task' task=[Task] ('{' attributes += TaskTimesheetAttribute* '}')?;
 
+// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
+TaskTimesheetAttribute: 
+	End
+	| Priority
+	| Remaining
+	| StatusTimesheet
+	| Work
+;
+
+
 // http://www.taskjuggler.org/tj3/manual/taskattributes.html
 TaskAttributes: 'taskattributes' (all ?= '*' | none ?= '-' | 
 		{TaskAttributes} (responsible ?= 'responsible'? &
@@ -969,8 +978,13 @@ Timeoff: 'timeoff' id = STRING name = STRING;
 
 // http://www.taskjuggler.org/tj3/manual/timesheet.html
 Timesheet: 'timesheet' resource=[Resource] interval=Interval4
-	('{' attributes+=TimesheetAttribute*)?
+	('{' attributes+=TimesheetAttribute* '}')?
 ;
+
+// http://www.taskjuggler.org/tj3/manual/timesheet.html
+TimesheetAttribute: 
+	NewTask | ShiftTimesheet | StatusTimesheet | TaskTimesheet;
+
 
 // http://www.taskjuggler.org/tj3/manual/timesheetreport.html
 TimesheetReport: 'timesheetreport' filename=STRING comnent=STRING
@@ -1122,18 +1136,6 @@ TaskDependency:
 
 TaskPath: '!'* ID ('.' ID)*;
 
-// http://www.taskjuggler.org/tj3/manual/task.timesheet.html
-TaskTimesheetAttribute: 
-	End
-	| Priority
-	| Remaining
-//	| StatusTimesheet
-	| Work
-;
-
-// http://www.taskjuggler.org/tj3/manual/timesheet.html
-TimesheetAttribute: 
-	NewTask | ShiftTimesheet | /*StatusTimesheet | */TaskTimesheet;
 	
 // http://www.taskjuggler.org/tj3/manual/timesheetreport.html
 TimesheetReportAttribute:

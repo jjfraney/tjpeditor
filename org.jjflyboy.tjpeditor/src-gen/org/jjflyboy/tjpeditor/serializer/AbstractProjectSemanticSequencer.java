@@ -133,6 +133,7 @@ import org.jjflyboy.tjpeditor.project.Start;
 import org.jjflyboy.tjpeditor.project.StatusSheet;
 import org.jjflyboy.tjpeditor.project.StatusSheetReport;
 import org.jjflyboy.tjpeditor.project.StatusStatusSheet;
+import org.jjflyboy.tjpeditor.project.StatusTimesheet;
 import org.jjflyboy.tjpeditor.project.SupplementAccount;
 import org.jjflyboy.tjpeditor.project.SupplementReport;
 import org.jjflyboy.tjpeditor.project.SupplementResource;
@@ -486,6 +487,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getResourceAttributeRule() ||
 				   context == grammarAccess.getStatusStatusSheetAttributeRule() ||
+				   context == grammarAccess.getStatusTimesheetAttributeRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_Flags(context, (Flags) semanticObject); 
 					return; 
@@ -929,6 +931,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getRichTextRule() ||
 				   context == grammarAccess.getRightRule() ||
 				   context == grammarAccess.getStatusStatusSheetAttributeRule() ||
+				   context == grammarAccess.getStatusTimesheetAttributeRule() ||
 				   context == grammarAccess.getSummaryRule()) {
 					sequence_RichText(context, (RichText) semanticObject); 
 					return; 
@@ -1097,6 +1100,14 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
+			case ProjectPackage.STATUS_TIMESHEET:
+				if(context == grammarAccess.getStatusTimesheetRule() ||
+				   context == grammarAccess.getTaskTimesheetAttributeRule() ||
+				   context == grammarAccess.getTimesheetAttributeRule()) {
+					sequence_StatusTimesheet(context, (StatusTimesheet) semanticObject); 
+					return; 
+				}
+				else break;
 			case ProjectPackage.SUPPLEMENT_ACCOUNT:
 				if(context == grammarAccess.getGlobalAttributeRule() ||
 				   context == grammarAccess.getSupplementAccountRule()) {
@@ -1201,7 +1212,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TIMESHEET:
-				if(context == grammarAccess.getTimesheetRule()) {
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getTimesheetRule()) {
 					sequence_Timesheet(context, (Timesheet) semanticObject); 
 					return; 
 				}
@@ -3460,6 +3472,20 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	 *    attributes[0, *]
 	 */
 	protected void sequence_StatusStatusSheet(EObject context, StatusStatusSheet semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (level=AlertLevel text=STRING attributes+=StatusTimesheetAttribute*)
+	 *
+	 * Features:
+	 *    level[1, 1]
+	 *    text[1, 1]
+	 *    attributes[0, *]
+	 */
+	protected void sequence_StatusTimesheet(EObject context, StatusTimesheet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

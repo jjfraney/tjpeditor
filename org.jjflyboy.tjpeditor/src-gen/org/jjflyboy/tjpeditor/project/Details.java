@@ -16,6 +16,6 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Details extends StatusStatusSheetAttribute
+public interface Details extends StatusStatusSheetAttribute, StatusTimesheetAttribute
 {
 } // Details

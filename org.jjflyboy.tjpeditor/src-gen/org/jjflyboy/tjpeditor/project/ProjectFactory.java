@@ -1403,6 +1403,24 @@ public interface ProjectFactory extends EFactory
   StatusStatusSheetAttribute createStatusStatusSheetAttribute();
 
   /**
+   * Returns a new object of class '<em>Status Timesheet</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Status Timesheet</em>'.
+   * @generated
+   */
+  StatusTimesheet createStatusTimesheet();
+
+  /**
+   * Returns a new object of class '<em>Status Timesheet Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Status Timesheet Attribute</em>'.
+   * @generated
+   */
+  StatusTimesheetAttribute createStatusTimesheetAttribute();
+
+  /**
    * Returns a new object of class '<em>Status Sheet</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1520,6 +1538,15 @@ public interface ProjectFactory extends EFactory
   TaskTimesheet createTaskTimesheet();
 
   /**
+   * Returns a new object of class '<em>Task Timesheet Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task Timesheet Attribute</em>'.
+   * @generated
+   */
+  TaskTimesheetAttribute createTaskTimesheetAttribute();
+
+  /**
    * Returns a new object of class '<em>Task Attributes</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1590,6 +1617,15 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Timesheet createTimesheet();
+
+  /**
+   * Returns a new object of class '<em>Timesheet Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Timesheet Attribute</em>'.
+   * @generated
+   */
+  TimesheetAttribute createTimesheetAttribute();
 
   /**
    * Returns a new object of class '<em>Timesheet Report</em>'.
@@ -1815,24 +1851,6 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   TaskDependency createTaskDependency();
-
-  /**
-   * Returns a new object of class '<em>Task Timesheet Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Task Timesheet Attribute</em>'.
-   * @generated
-   */
-  TaskTimesheetAttribute createTaskTimesheetAttribute();
-
-  /**
-   * Returns a new object of class '<em>Timesheet Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Timesheet Attribute</em>'.
-   * @generated
-   */
-  TimesheetAttribute createTimesheetAttribute();
 
   /**
    * Returns a new object of class '<em>Timesheet Report Attribute</em>'.

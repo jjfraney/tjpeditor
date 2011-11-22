@@ -7,8 +7,6 @@ package org.jjflyboy.tjpeditor.project;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Timesheet</b></em>'.
@@ -27,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Timesheet extends EObject
+public interface Timesheet extends GlobalAttribute
 {
   /**
    * Returns the value of the '<em><b>Resource</b></em>' reference.

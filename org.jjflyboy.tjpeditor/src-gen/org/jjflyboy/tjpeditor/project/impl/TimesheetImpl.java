@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -42,7 +41,7 @@ import org.jjflyboy.tjpeditor.project.TimesheetAttribute;
  *
  * @generated
  */
-public class TimesheetImpl extends MinimalEObjectImpl.Container implements Timesheet
+public class TimesheetImpl extends GlobalAttributeImpl implements Timesheet
 {
   /**
    * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.

@@ -843,6 +843,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createStatusStatusSheetAttributeAdapter();
       }
       @Override
+      public Adapter caseStatusTimesheet(StatusTimesheet object)
+      {
+        return createStatusTimesheetAdapter();
+      }
+      @Override
+      public Adapter caseStatusTimesheetAttribute(StatusTimesheetAttribute object)
+      {
+        return createStatusTimesheetAttributeAdapter();
+      }
+      @Override
       public Adapter caseStatusSheet(StatusSheet object)
       {
         return createStatusSheetAdapter();
@@ -908,6 +918,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createTaskTimesheetAdapter();
       }
       @Override
+      public Adapter caseTaskTimesheetAttribute(TaskTimesheetAttribute object)
+      {
+        return createTaskTimesheetAttributeAdapter();
+      }
+      @Override
       public Adapter caseTaskAttributes(TaskAttributes object)
       {
         return createTaskAttributesAdapter();
@@ -946,6 +961,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseTimesheet(Timesheet object)
       {
         return createTimesheetAdapter();
+      }
+      @Override
+      public Adapter caseTimesheetAttribute(TimesheetAttribute object)
+      {
+        return createTimesheetAttributeAdapter();
       }
       @Override
       public Adapter caseTimesheetReport(TimesheetReport object)
@@ -1071,16 +1091,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseTaskDependency(TaskDependency object)
       {
         return createTaskDependencyAdapter();
-      }
-      @Override
-      public Adapter caseTaskTimesheetAttribute(TaskTimesheetAttribute object)
-      {
-        return createTaskTimesheetAttributeAdapter();
-      }
-      @Override
-      public Adapter caseTimesheetAttribute(TimesheetAttribute object)
-      {
-        return createTimesheetAttributeAdapter();
       }
       @Override
       public Adapter caseTimesheetReportAttribute(TimesheetReportAttribute object)
@@ -3425,6 +3435,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.StatusTimesheet <em>Status Timesheet</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.StatusTimesheet
+   * @generated
+   */
+  public Adapter createStatusTimesheetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.StatusTimesheetAttribute <em>Status Timesheet Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.StatusTimesheetAttribute
+   * @generated
+   */
+  public Adapter createStatusTimesheetAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.StatusSheet <em>Status Sheet</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -3620,6 +3660,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TaskTimesheetAttribute <em>Task Timesheet Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.TaskTimesheetAttribute
+   * @generated
+   */
+  public Adapter createTaskTimesheetAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TaskAttributes <em>Task Attributes</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -3735,6 +3790,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTimesheetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TimesheetAttribute <em>Timesheet Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.TimesheetAttribute
+   * @generated
+   */
+  public Adapter createTimesheetAttributeAdapter()
   {
     return null;
   }
@@ -4110,36 +4180,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTaskDependencyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TaskTimesheetAttribute <em>Task Timesheet Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.TaskTimesheetAttribute
-   * @generated
-   */
-  public Adapter createTaskTimesheetAttributeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.TimesheetAttribute <em>Timesheet Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.TimesheetAttribute
-   * @generated
-   */
-  public Adapter createTimesheetAttributeAdapter()
   {
     return null;
   }

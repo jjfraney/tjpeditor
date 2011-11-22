@@ -377,21 +377,31 @@ ruleGlobalAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getTrackingScenarioParserRuleCall_24()); 
+        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getTimesheetParserRuleCall_24()); 
     }
-    this_TrackingScenario_24=ruleTrackingScenario
+    this_Timesheet_24=ruleTimesheet
     { 
-        $current = $this_TrackingScenario_24.current; 
+        $current = $this_Timesheet_24.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getVacationParserRuleCall_25()); 
+        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getTrackingScenarioParserRuleCall_25()); 
     }
-    this_Vacation_25=ruleVacation
+    this_TrackingScenario_25=ruleTrackingScenario
     { 
-        $current = $this_Vacation_25.current; 
+        $current = $this_TrackingScenario_25.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getGlobalAttributeAccess().getVacationParserRuleCall_26()); 
+    }
+    this_Vacation_26=ruleVacation
+    { 
+        $current = $this_Vacation_26.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -10247,6 +10257,143 @@ ruleStatusStatusSheetAttribute returns [EObject current=null]
 
 
 
+// Entry rule entryRuleStatusTimesheet
+entryRuleStatusTimesheet returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getStatusTimesheetRule()); }
+	 iv_ruleStatusTimesheet=ruleStatusTimesheet 
+	 { $current=$iv_ruleStatusTimesheet.current; } 
+	 EOF 
+;
+
+// Rule StatusTimesheet
+ruleStatusTimesheet returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='status' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getStatusTimesheetAccess().getStatusKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getStatusTimesheetAccess().getLevelAlertLevelEnumRuleCall_1_0()); 
+	    }
+		lv_level_1_0=ruleAlertLevel		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getStatusTimesheetRule());
+	        }
+       		set(
+       			$current, 
+       			"level",
+        		lv_level_1_0, 
+        		"AlertLevel");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		lv_text_2_0=RULE_STRING
+		{
+			newLeafNode(lv_text_2_0, grammarAccess.getStatusTimesheetAccess().getTextSTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getStatusTimesheetRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"text",
+        		lv_text_2_0, 
+        		"STRING");
+	    }
+
+)
+)(	otherlv_3='{' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getStatusTimesheetAccess().getLeftCurlyBracketKeyword_3_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getStatusTimesheetAccess().getAttributesStatusTimesheetAttributeParserRuleCall_3_1_0()); 
+	    }
+		lv_attributes_4_0=ruleStatusTimesheetAttribute		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getStatusTimesheetRule());
+	        }
+       		add(
+       			$current, 
+       			"attributes",
+        		lv_attributes_4_0, 
+        		"StatusTimesheetAttribute");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_5='}' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getStatusTimesheetAccess().getRightCurlyBracketKeyword_3_2());
+    }
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleStatusTimesheetAttribute
+entryRuleStatusTimesheetAttribute returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getStatusTimesheetAttributeRule()); }
+	 iv_ruleStatusTimesheetAttribute=ruleStatusTimesheetAttribute 
+	 { $current=$iv_ruleStatusTimesheetAttribute.current; } 
+	 EOF 
+;
+
+// Rule StatusTimesheetAttribute
+ruleStatusTimesheetAttribute returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getStatusTimesheetAttributeAccess().getDetailsParserRuleCall_0()); 
+    }
+    this_Details_0=ruleDetails
+    { 
+        $current = $this_Details_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getStatusTimesheetAttributeAccess().getFlagsParserRuleCall_1()); 
+    }
+    this_Flags_1=ruleFlags
+    { 
+        $current = $this_Flags_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getStatusTimesheetAttributeAccess().getSummaryParserRuleCall_2()); 
+    }
+    this_Summary_2=ruleSummary
+    { 
+        $current = $this_Summary_2.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
 // Entry rule entryRuleStatusSheet
 entryRuleStatusSheet returns [EObject current=null] 
 	:
@@ -11202,6 +11349,76 @@ ruleTaskTimesheet returns [EObject current=null]
 
 
 
+// Entry rule entryRuleTaskTimesheetAttribute
+entryRuleTaskTimesheetAttribute returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTaskTimesheetAttributeRule()); }
+	 iv_ruleTaskTimesheetAttribute=ruleTaskTimesheetAttribute 
+	 { $current=$iv_ruleTaskTimesheetAttribute.current; } 
+	 EOF 
+;
+
+// Rule TaskTimesheetAttribute
+ruleTaskTimesheetAttribute returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getEndParserRuleCall_0()); 
+    }
+    this_End_0=ruleEnd
+    { 
+        $current = $this_End_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getPriorityParserRuleCall_1()); 
+    }
+    this_Priority_1=rulePriority
+    { 
+        $current = $this_Priority_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getRemainingParserRuleCall_2()); 
+    }
+    this_Remaining_2=ruleRemaining
+    { 
+        $current = $this_Remaining_2.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getStatusTimesheetParserRuleCall_3()); 
+    }
+    this_StatusTimesheet_3=ruleStatusTimesheet
+    { 
+        $current = $this_StatusTimesheet_3.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getWorkParserRuleCall_4()); 
+    }
+    this_Work_4=ruleWork
+    { 
+        $current = $this_Work_4.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
 // Entry rule entryRuleTaskAttributes
 entryRuleTaskAttributes returns [EObject current=null] 
 	:
@@ -11789,6 +12006,146 @@ ruleTimeoff returns [EObject current=null]
 ;
 
 
+
+
+
+// Entry rule entryRuleTimesheet
+entryRuleTimesheet returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTimesheetRule()); }
+	 iv_ruleTimesheet=ruleTimesheet 
+	 { $current=$iv_ruleTimesheet.current; } 
+	 EOF 
+;
+
+// Rule Timesheet
+ruleTimesheet returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='timesheet' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getTimesheetAccess().getTimesheetKeyword_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTimesheetRule());
+	        }
+        }
+	otherlv_1=RULE_ID
+	{
+		newLeafNode(otherlv_1, grammarAccess.getTimesheetAccess().getResourceResourceCrossReference_1_0()); 
+	}
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTimesheetAccess().getIntervalInterval4ParserRuleCall_2_0()); 
+	    }
+		lv_interval_2_0=ruleInterval4		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTimesheetRule());
+	        }
+       		set(
+       			$current, 
+       			"interval",
+        		lv_interval_2_0, 
+        		"Interval4");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_3='{' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getTimesheetAccess().getLeftCurlyBracketKeyword_3_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTimesheetAccess().getAttributesTimesheetAttributeParserRuleCall_3_1_0()); 
+	    }
+		lv_attributes_4_0=ruleTimesheetAttribute		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTimesheetRule());
+	        }
+       		add(
+       			$current, 
+       			"attributes",
+        		lv_attributes_4_0, 
+        		"TimesheetAttribute");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_5='}' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getTimesheetAccess().getRightCurlyBracketKeyword_3_2());
+    }
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleTimesheetAttribute
+entryRuleTimesheetAttribute returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getTimesheetAttributeRule()); }
+	 iv_ruleTimesheetAttribute=ruleTimesheetAttribute 
+	 { $current=$iv_ruleTimesheetAttribute.current; } 
+	 EOF 
+;
+
+// Rule TimesheetAttribute
+ruleTimesheetAttribute returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getTimesheetAttributeAccess().getNewTaskParserRuleCall_0()); 
+    }
+    this_NewTask_0=ruleNewTask
+    { 
+        $current = $this_NewTask_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTimesheetAttributeAccess().getShiftTimesheetParserRuleCall_1()); 
+    }
+    this_ShiftTimesheet_1=ruleShiftTimesheet
+    { 
+        $current = $this_ShiftTimesheet_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTimesheetAttributeAccess().getStatusTimesheetParserRuleCall_2()); 
+    }
+    this_StatusTimesheet_2=ruleStatusTimesheet
+    { 
+        $current = $this_StatusTimesheet_2.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getTimesheetAttributeAccess().getTaskTimesheetParserRuleCall_3()); 
+    }
+    this_TaskTimesheet_3=ruleTaskTimesheet
+    { 
+        $current = $this_TaskTimesheet_3.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
 
 
 
@@ -13585,116 +13942,6 @@ ruleTaskPath returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
     }
 )*)
     ;
-
-
-
-
-
-// Entry rule entryRuleTaskTimesheetAttribute
-entryRuleTaskTimesheetAttribute returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getTaskTimesheetAttributeRule()); }
-	 iv_ruleTaskTimesheetAttribute=ruleTaskTimesheetAttribute 
-	 { $current=$iv_ruleTaskTimesheetAttribute.current; } 
-	 EOF 
-;
-
-// Rule TaskTimesheetAttribute
-ruleTaskTimesheetAttribute returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getEndParserRuleCall_0()); 
-    }
-    this_End_0=ruleEnd
-    { 
-        $current = $this_End_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getPriorityParserRuleCall_1()); 
-    }
-    this_Priority_1=rulePriority
-    { 
-        $current = $this_Priority_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getRemainingParserRuleCall_2()); 
-    }
-    this_Remaining_2=ruleRemaining
-    { 
-        $current = $this_Remaining_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getTaskTimesheetAttributeAccess().getWorkParserRuleCall_3()); 
-    }
-    this_Work_3=ruleWork
-    { 
-        $current = $this_Work_3.current; 
-        afterParserOrEnumRuleCall();
-    }
-)
-;
-
-
-
-
-
-// Entry rule entryRuleTimesheetAttribute
-entryRuleTimesheetAttribute returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getTimesheetAttributeRule()); }
-	 iv_ruleTimesheetAttribute=ruleTimesheetAttribute 
-	 { $current=$iv_ruleTimesheetAttribute.current; } 
-	 EOF 
-;
-
-// Rule TimesheetAttribute
-ruleTimesheetAttribute returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getTimesheetAttributeAccess().getNewTaskParserRuleCall_0()); 
-    }
-    this_NewTask_0=ruleNewTask
-    { 
-        $current = $this_NewTask_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getTimesheetAttributeAccess().getShiftTimesheetParserRuleCall_1()); 
-    }
-    this_ShiftTimesheet_1=ruleShiftTimesheet
-    { 
-        $current = $this_ShiftTimesheet_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getTimesheetAttributeAccess().getTaskTimesheetParserRuleCall_2()); 
-    }
-    this_TaskTimesheet_2=ruleTaskTimesheet
-    { 
-        $current = $this_TaskTimesheet_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-)
-;
 
 
 
