@@ -1,9 +1,12 @@
 
 This project aims to build a TaskJuggler editor.
 
-TaskJuggler III: http://www.taskjuggler.org/tj3/manual/index.html
+TaskJuggler III:
+ home page: http://www.taskjuggler.org/
+ github: https://github.com/taskjuggler/TaskJuggler
+ manual: http://www.taskjuggler.org/tj3/manual/index.html
 
-The editor is based on Eclipse (http://www.eclipse.org) technogies.
+The editor is based on Eclipse (http://www.eclipse.org) technologies.
 
 Language parser and editor is based on Xtext: http://www.eclipse.org/Xtext/
 
@@ -12,20 +15,27 @@ to acheive beta:
 1) demonstrate context sensitive help
 2) significantly more unit test coverage
 3) resolve references
-4) support of 'macro' and 'extend' keywords
+4) prove these language features
+ *) 'macro' keywords and functionality
+ *) 'extend' keywords (completed)
+ *) 'include' keyword and functionality
+ *) 'functions'
+ *) 'logical expressions'
 5) post a video demo
+
 
 TaskJuggler III grammar is in the file:
 org.jjflyboy.tjpeditor/src/org/jjflyboy/tjpeditor/Project.xtext
 
 
-Currently, building this plugin can be done only with eclipse IDE.
+Currently, building this plugin can be done only with eclipse IDE. 
 Build requirements:
  http://www.eclipse.org (plugin development environment required)
  http://www.eclipse.org/Xtext/
  http://code.google.com/a/eclipselabs.org/p/xtext-utils/wiki/Unit_Testing
 
 TODO: supply build instructions targetted to developers uninitiated in eclipse plugin development.
+TODO: build project under maven/tycho.
 
 
 
