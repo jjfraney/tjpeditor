@@ -10714,7 +10714,7 @@ public class InternalProjectLexer extends Lexer {
         }
     }
 
-    class DFA25 extends DFA {
+    static class DFA25 extends DFA {
 
         public DFA25(BaseRecognizer recognizer) {
             this.recognizer = recognizer;

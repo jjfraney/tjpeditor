@@ -5764,76 +5764,12 @@ public class InternalProjectLexer extends Lexer {
             loop1:
             do {
                 int alt1=2;
-                switch ( input.LA(1) ) {
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
-                case '9':
-                case 'A':
-                case 'B':
-                case 'C':
-                case 'D':
-                case 'E':
-                case 'F':
-                case 'G':
-                case 'H':
-                case 'I':
-                case 'J':
-                case 'K':
-                case 'L':
-                case 'M':
-                case 'N':
-                case 'O':
-                case 'P':
-                case 'Q':
-                case 'R':
-                case 'S':
-                case 'T':
-                case 'U':
-                case 'V':
-                case 'W':
-                case 'X':
-                case 'Y':
-                case 'Z':
-                case '_':
-                case 'a':
-                case 'b':
-                case 'c':
-                case 'd':
-                case 'e':
-                case 'f':
-                case 'g':
-                case 'h':
-                case 'i':
-                case 'j':
-                case 'k':
-                case 'l':
-                case 'm':
-                case 'n':
-                case 'o':
-                case 'p':
-                case 'q':
-                case 'r':
-                case 's':
-                case 't':
-                case 'u':
-                case 'v':
-                case 'w':
-                case 'x':
-                case 'y':
-                case 'z':
-                    {
-                    alt1=1;
-                    }
-                    break;
+                int LA1_0 = input.LA(1);
 
+                if ( ((LA1_0>='0' && LA1_0<='9')||(LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
+                    alt1=1;
                 }
+
 
                 switch (alt1) {
             	case 1 :
@@ -5881,23 +5817,12 @@ public class InternalProjectLexer extends Lexer {
             loop2:
             do {
                 int alt2=2;
-                switch ( input.LA(1) ) {
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
-                case '9':
-                    {
-                    alt2=1;
-                    }
-                    break;
+                int LA2_0 = input.LA(1);
 
+                if ( ((LA2_0>='0' && LA2_0<='9')) ) {
+                    alt2=1;
                 }
+
 
                 switch (alt2) {
             	case 1 :
@@ -5923,23 +5848,12 @@ public class InternalProjectLexer extends Lexer {
             loop3:
             do {
                 int alt3=2;
-                switch ( input.LA(1) ) {
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
-                case '9':
-                    {
-                    alt3=1;
-                    }
-                    break;
+                int LA3_0 = input.LA(1);
 
+                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
+                    alt3=1;
                 }
+
 
                 switch (alt3) {
             	case 1 :
@@ -6014,29 +5928,22 @@ public class InternalProjectLexer extends Lexer {
 
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37015:39: ( ( '\\r' )? '\\n' )?
             int alt6=2;
-            switch ( input.LA(1) ) {
-                case '\n':
-                case '\r':
-                    {
-                    alt6=1;
-                    }
-                    break;
-            }
+            int LA6_0 = input.LA(1);
 
+            if ( (LA6_0=='\n'||LA6_0=='\r') ) {
+                alt6=1;
+            }
             switch (alt6) {
                 case 1 :
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37015:40: ( '\\r' )? '\\n'
                     {
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37015:40: ( '\\r' )?
                     int alt5=2;
-                    switch ( input.LA(1) ) {
-                        case '\r':
-                            {
-                            alt5=1;
-                            }
-                            break;
-                    }
+                    int LA5_0 = input.LA(1);
 
+                    if ( (LA5_0=='\r') ) {
+                        alt5=1;
+                    }
                     switch (alt5) {
                         case 1 :
                             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37015:40: '\\r'
@@ -6309,141 +6216,81 @@ public class InternalProjectLexer extends Lexer {
             {
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37019:13: ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' )
             int alt13=2;
-            switch ( input.LA(1) ) {
-            case '0':
-            case '1':
-            case '3':
-            case '4':
-            case '5':
-            case '6':
-            case '7':
-            case '8':
-            case '9':
-                {
+            int LA13_0 = input.LA(1);
+
+            if ( ((LA13_0>='0' && LA13_0<='1')||(LA13_0>='3' && LA13_0<='9')) ) {
                 alt13=1;
-                }
-                break;
-            case '2':
-                {
-                switch ( input.LA(2) ) {
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                    {
+            }
+            else if ( (LA13_0=='2') ) {
+                int LA13_2 = input.LA(2);
+
+                if ( ((LA13_2>='0' && LA13_2<='4')) ) {
                     alt13=2;
-                    }
-                    break;
-                case ':':
-                    {
+                }
+                else if ( (LA13_2==':') ) {
                     alt13=1;
-                    }
-                    break;
-                default:
+                }
+                else {
                     NoViableAltException nvae =
                         new NoViableAltException("", 13, 2, input);
 
                     throw nvae;
                 }
-
-                }
-                break;
-            default:
+            }
+            else {
                 NoViableAltException nvae =
                     new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-
             switch (alt13) {
                 case 1 :
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37019:14: ( ( '0' )? | '1' ) '0' .. '9'
                     {
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37019:14: ( ( '0' )? | '1' )
                     int alt12=2;
-                    switch ( input.LA(1) ) {
-                    case '0':
-                    case '2':
-                    case '3':
-                    case '4':
-                    case '5':
-                    case '6':
-                    case '7':
-                    case '8':
-                    case '9':
-                        {
+                    int LA12_0 = input.LA(1);
+
+                    if ( (LA12_0=='0'||(LA12_0>='2' && LA12_0<='9')) ) {
                         alt12=1;
-                        }
-                        break;
-                    case '1':
-                        {
-                        switch ( input.LA(2) ) {
-                        case ':':
-                            {
+                    }
+                    else if ( (LA12_0=='1') ) {
+                        int LA12_2 = input.LA(2);
+
+                        if ( (LA12_2==':') ) {
                             alt12=1;
-                            }
-                            break;
-                        case '0':
-                        case '1':
-                        case '2':
-                        case '3':
-                        case '4':
-                        case '5':
-                        case '6':
-                        case '7':
-                        case '8':
-                        case '9':
-                            {
+                        }
+                        else if ( ((LA12_2>='0' && LA12_2<='9')) ) {
                             alt12=2;
-                            }
-                            break;
-                        default:
+                        }
+                        else {
                             NoViableAltException nvae =
                                 new NoViableAltException("", 12, 2, input);
 
                             throw nvae;
                         }
-
-                        }
-                        break;
-                    default:
+                    }
+                    else {
                         NoViableAltException nvae =
                             new NoViableAltException("", 12, 0, input);
 
                         throw nvae;
                     }
-
                     switch (alt12) {
                         case 1 :
                             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37019:15: ( '0' )?
                             {
                             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37019:15: ( '0' )?
                             int alt11=2;
-                            switch ( input.LA(1) ) {
-                                case '0':
-                                    {
-                                    switch ( input.LA(2) ) {
-                                        case '0':
-                                        case '1':
-                                        case '2':
-                                        case '3':
-                                        case '4':
-                                        case '5':
-                                        case '6':
-                                        case '7':
-                                        case '8':
-                                        case '9':
-                                            {
-                                            alt11=1;
-                                            }
-                                            break;
-                                    }
+                            int LA11_0 = input.LA(1);
 
-                                    }
-                                    break;
+                            if ( (LA11_0=='0') ) {
+                                int LA11_1 = input.LA(2);
+
+                                if ( ((LA11_1>='0' && LA11_1<='9')) ) {
+                                    alt11=1;
+                                }
                             }
-
                             switch (alt11) {
                                 case 1 :
                                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37019:15: '0'
@@ -6512,24 +6359,20 @@ public class InternalProjectLexer extends Lexer {
             match('-'); 
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:43: ( '0' '1' .. '9' | '1' '0' .. '2' )
             int alt14=2;
-            switch ( input.LA(1) ) {
-            case '0':
-                {
+            int LA14_0 = input.LA(1);
+
+            if ( (LA14_0=='0') ) {
                 alt14=1;
-                }
-                break;
-            case '1':
-                {
+            }
+            else if ( (LA14_0=='1') ) {
                 alt14=2;
-                }
-                break;
-            default:
+            }
+            else {
                 NoViableAltException nvae =
                     new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
-
             switch (alt14) {
                 case 1 :
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:44: '0' '1' .. '9'
@@ -6623,14 +6466,11 @@ public class InternalProjectLexer extends Lexer {
 
             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:123: ( '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )? )?
             int alt21=2;
-            switch ( input.LA(1) ) {
-                case '-':
-                    {
-                    alt21=1;
-                    }
-                    break;
-            }
+            int LA21_0 = input.LA(1);
 
+            if ( (LA21_0=='-') ) {
+                alt21=1;
+            }
             switch (alt21) {
                 case 1 :
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:124: '-' ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' ) ':' '0' .. '5' '0' .. '9' ( ':' '0' .. '5' '0' .. '9' )? ( '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )?
@@ -6638,141 +6478,81 @@ public class InternalProjectLexer extends Lexer {
                     match('-'); 
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:128: ( ( ( '0' )? | '1' ) '0' .. '9' | '2' '0' .. '4' )
                     int alt18=2;
-                    switch ( input.LA(1) ) {
-                    case '0':
-                    case '1':
-                    case '3':
-                    case '4':
-                    case '5':
-                    case '6':
-                    case '7':
-                    case '8':
-                    case '9':
-                        {
+                    int LA18_0 = input.LA(1);
+
+                    if ( ((LA18_0>='0' && LA18_0<='1')||(LA18_0>='3' && LA18_0<='9')) ) {
                         alt18=1;
-                        }
-                        break;
-                    case '2':
-                        {
-                        switch ( input.LA(2) ) {
-                        case '0':
-                        case '1':
-                        case '2':
-                        case '3':
-                        case '4':
-                            {
+                    }
+                    else if ( (LA18_0=='2') ) {
+                        int LA18_2 = input.LA(2);
+
+                        if ( ((LA18_2>='0' && LA18_2<='4')) ) {
                             alt18=2;
-                            }
-                            break;
-                        case ':':
-                            {
+                        }
+                        else if ( (LA18_2==':') ) {
                             alt18=1;
-                            }
-                            break;
-                        default:
+                        }
+                        else {
                             NoViableAltException nvae =
                                 new NoViableAltException("", 18, 2, input);
 
                             throw nvae;
                         }
-
-                        }
-                        break;
-                    default:
+                    }
+                    else {
                         NoViableAltException nvae =
                             new NoViableAltException("", 18, 0, input);
 
                         throw nvae;
                     }
-
                     switch (alt18) {
                         case 1 :
                             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:129: ( ( '0' )? | '1' ) '0' .. '9'
                             {
                             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:129: ( ( '0' )? | '1' )
                             int alt17=2;
-                            switch ( input.LA(1) ) {
-                            case '0':
-                            case '2':
-                            case '3':
-                            case '4':
-                            case '5':
-                            case '6':
-                            case '7':
-                            case '8':
-                            case '9':
-                                {
+                            int LA17_0 = input.LA(1);
+
+                            if ( (LA17_0=='0'||(LA17_0>='2' && LA17_0<='9')) ) {
                                 alt17=1;
-                                }
-                                break;
-                            case '1':
-                                {
-                                switch ( input.LA(2) ) {
-                                case ':':
-                                    {
+                            }
+                            else if ( (LA17_0=='1') ) {
+                                int LA17_2 = input.LA(2);
+
+                                if ( (LA17_2==':') ) {
                                     alt17=1;
-                                    }
-                                    break;
-                                case '0':
-                                case '1':
-                                case '2':
-                                case '3':
-                                case '4':
-                                case '5':
-                                case '6':
-                                case '7':
-                                case '8':
-                                case '9':
-                                    {
+                                }
+                                else if ( ((LA17_2>='0' && LA17_2<='9')) ) {
                                     alt17=2;
-                                    }
-                                    break;
-                                default:
+                                }
+                                else {
                                     NoViableAltException nvae =
                                         new NoViableAltException("", 17, 2, input);
 
                                     throw nvae;
                                 }
-
-                                }
-                                break;
-                            default:
+                            }
+                            else {
                                 NoViableAltException nvae =
                                     new NoViableAltException("", 17, 0, input);
 
                                 throw nvae;
                             }
-
                             switch (alt17) {
                                 case 1 :
                                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:130: ( '0' )?
                                     {
                                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:130: ( '0' )?
                                     int alt16=2;
-                                    switch ( input.LA(1) ) {
-                                        case '0':
-                                            {
-                                            switch ( input.LA(2) ) {
-                                                case '0':
-                                                case '1':
-                                                case '2':
-                                                case '3':
-                                                case '4':
-                                                case '5':
-                                                case '6':
-                                                case '7':
-                                                case '8':
-                                                case '9':
-                                                    {
-                                                    alt16=1;
-                                                    }
-                                                    break;
-                                            }
+                                    int LA16_0 = input.LA(1);
 
-                                            }
-                                            break;
+                                    if ( (LA16_0=='0') ) {
+                                        int LA16_1 = input.LA(2);
+
+                                        if ( ((LA16_1>='0' && LA16_1<='9')) ) {
+                                            alt16=1;
+                                        }
                                     }
-
                                     switch (alt16) {
                                         case 1 :
                                             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:130: '0'
@@ -6817,14 +6597,11 @@ public class InternalProjectLexer extends Lexer {
                     matchRange('0','9'); 
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:185: ( ':' '0' .. '5' '0' .. '9' )?
                     int alt19=2;
-                    switch ( input.LA(1) ) {
-                        case ':':
-                            {
-                            alt19=1;
-                            }
-                            break;
-                    }
+                    int LA19_0 = input.LA(1);
 
+                    if ( (LA19_0==':') ) {
+                        alt19=1;
+                    }
                     switch (alt19) {
                         case 1 :
                             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:186: ':' '0' .. '5' '0' .. '9'
@@ -6840,14 +6617,11 @@ public class InternalProjectLexer extends Lexer {
 
                     // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:210: ( '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9' )?
                     int alt20=2;
-                    switch ( input.LA(1) ) {
-                        case '-':
-                            {
-                            alt20=1;
-                            }
-                            break;
-                    }
+                    int LA20_0 = input.LA(1);
 
+                    if ( (LA20_0=='-') ) {
+                        alt20=1;
+                    }
                     switch (alt20) {
                         case 1 :
                             // ../org.jjflyboy.tjpeditor.ui/src-gen/org/jjflyboy/tjpeditor/ui/contentassist/antlr/internal/InternalProject.g:37021:211: '-' ( '+' | '-' ) '0' .. '5' '0' .. '9' '0' .. '5' '0' .. '9'
@@ -6902,23 +6676,12 @@ public class InternalProjectLexer extends Lexer {
             loop22:
             do {
                 int alt22=2;
-                switch ( input.LA(1) ) {
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
-                case '9':
-                    {
-                    alt22=1;
-                    }
-                    break;
+                int LA22_0 = input.LA(1);
 
+                if ( ((LA22_0>='0' && LA22_0<='9')) ) {
+                    alt22=1;
                 }
+
 
                 switch (alt22) {
             	case 1 :
@@ -7022,17 +6785,12 @@ public class InternalProjectLexer extends Lexer {
             loop24:
             do {
                 int alt24=2;
-                switch ( input.LA(1) ) {
-                case '\t':
-                case '\n':
-                case '\r':
-                case ' ':
-                    {
-                    alt24=1;
-                    }
-                    break;
+                int LA24_0 = input.LA(1);
 
+                if ( ((LA24_0>='\t' && LA24_0<='\n')||LA24_0=='\r'||LA24_0==' ') ) {
+                    alt24=1;
                 }
+
 
                 switch (alt24) {
             	case 1 :
@@ -10958,7 +10716,7 @@ public class InternalProjectLexer extends Lexer {
         }
     }
 
-    class DFA25 extends DFA {
+    static class DFA25 extends DFA {
 
         public DFA25(BaseRecognizer recognizer) {
             this.recognizer = recognizer;

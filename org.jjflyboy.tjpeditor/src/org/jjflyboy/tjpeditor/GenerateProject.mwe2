@@ -64,10 +64,10 @@ Workflow {
 //            	antlrParam = "-Xmaxinlinedfastates" antlrParam = "100000"
 //            	antlrParam = "-Xmaxswitchcaselabels" antlrParam = "30000"
 //            	antlrParam = "-Xminswitchalts" antlrParam="1"
-//             options = {
+             	options = {
 //                 backtrack = true
-//                  classSplitting = true
-//              }
+                   classSplitting = true
+              }
             }
 
             // java-based API for validation
@@ -109,9 +109,13 @@ Workflow {
 
             // generates a more lightweight Antlr parser and lexer tailored for content assist
           	fragment = parser.antlr.XtextAntlrUiGeneratorFragment {
-            	antlrParam = "-Xmaxinlinedfastates" antlrParam = "100000"
-            	antlrParam = "-Xmaxswitchcaselabels" antlrParam = "30000"
-            	antlrParam = "-Xminswitchalts" antlrParam="1"
+ //           	antlrParam = "-Xmaxinlinedfastates" antlrParam = "100000"
+//            	antlrParam = "-Xmaxswitchcaselabels" antlrParam = "30000"
+//            	antlrParam = "-Xminswitchalts" antlrParam="1"
+            	options = {
+//                 backtrack = true
+                   classSplitting = true
+              }
 			}
 
             // generates junit test support classes into Generator#pathTestProject
