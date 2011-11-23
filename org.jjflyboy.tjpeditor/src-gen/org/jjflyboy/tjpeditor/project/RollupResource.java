@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface RollupResource extends ReportAttribute, ExportAttribute
+public interface RollupResource extends ReportAttribute, IcalReportAttribute, ExportAttribute
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' attribute.

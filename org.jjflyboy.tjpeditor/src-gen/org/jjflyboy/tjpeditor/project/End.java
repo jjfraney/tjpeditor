@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface End extends TaskAttribute, ReportAttribute, ExportAttribute, NewTaskAttribute, NikuReportAttribute, StatusSheetReportAttribute, TaskTimesheetAttribute, TimesheetReportAttribute, ColumnAttribute
+public interface End extends TaskAttribute, ReportAttribute, IcalReportAttribute, ExportAttribute, NewTaskAttribute, NikuReportAttribute, StatusSheetReportAttribute, TaskTimesheetAttribute, TimesheetReportAttribute, ColumnAttribute
 {
   /**
    * Returns the value of the '<em><b>End</b></em>' attribute.

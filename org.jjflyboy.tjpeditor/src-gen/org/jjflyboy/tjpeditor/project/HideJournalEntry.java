@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface HideJournalEntry extends ReportAttribute
+public interface HideJournalEntry extends ReportAttribute, IcalReportAttribute
 {
   /**
    * Returns the value of the '<em><b>Expression</b></em>' attribute.

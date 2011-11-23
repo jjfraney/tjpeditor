@@ -72,6 +72,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.GLOBAL_ATTRIBUTE: return createGlobalAttribute();
       case ProjectPackage.ACCOUNT: return createAccount();
       case ProjectPackage.ACCOUNT_ATTRIBUTE: return createAccountAttribute();
+      case ProjectPackage.ACCOUNT_PREFIX: return createAccountPrefix();
       case ProjectPackage.ACCOUNT_REPORT: return createAccountReport();
       case ProjectPackage.ACCOUNT_ROOT: return createAccountRoot();
       case ProjectPackage.PROJECT: return createProject();
@@ -80,6 +81,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.TASK_ATTRIBUTE: return createTaskAttribute();
       case ProjectPackage.REPORT: return createReport();
       case ProjectPackage.REPORT_ATTRIBUTE: return createReportAttribute();
+      case ProjectPackage.ICAL_REPORT: return createIcalReport();
+      case ProjectPackage.ICAL_REPORT_ATTRIBUTE: return createIcalReportAttribute();
       case ProjectPackage.EXPORT: return createExport();
       case ProjectPackage.EXPORT_ATTRIBUTE: return createExportAttribute();
       case ProjectPackage.RESOURCE: return createResource();
@@ -145,7 +148,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.HIDE_REPORT: return createHideReport();
       case ProjectPackage.HIDE_RESOURCE: return createHideResource();
       case ProjectPackage.HIDE_TASK: return createHideTask();
-      case ProjectPackage.INCLUDE: return createInclude();
       case ProjectPackage.INTERVAL1: return createInterval1();
       case ProjectPackage.INTERVAL2: return createInterval2();
       case ProjectPackage.INTERVAL3: return createInterval3();
@@ -200,6 +202,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.ROLLUP_TASK: return createRollupTask();
       case ProjectPackage.SCALE: return createScale();
       case ProjectPackage.SCENARIO: return createScenario();
+      case ProjectPackage.SCENARIO_ICAL: return createScenarioIcal();
       case ProjectPackage.SCENARIOS: return createScenarios();
       case ProjectPackage.SCHEDULED: return createScheduled();
       case ProjectPackage.SCHEDULING: return createScheduling();
@@ -444,6 +447,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public AccountPrefix createAccountPrefix()
+  {
+    AccountPrefixImpl accountPrefix = new AccountPrefixImpl();
+    return accountPrefix;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public AccountReport createAccountReport()
   {
     AccountReportImpl accountReport = new AccountReportImpl();
@@ -525,6 +539,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ReportAttributeImpl reportAttribute = new ReportAttributeImpl();
     return reportAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IcalReport createIcalReport()
+  {
+    IcalReportImpl icalReport = new IcalReportImpl();
+    return icalReport;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IcalReportAttribute createIcalReportAttribute()
+  {
+    IcalReportAttributeImpl icalReportAttribute = new IcalReportAttributeImpl();
+    return icalReportAttribute;
   }
 
   /**
@@ -1247,17 +1283,6 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Include createInclude()
-  {
-    IncludeImpl include = new IncludeImpl();
-    return include;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Interval1 createInterval1()
   {
     Interval1Impl interval1 = new Interval1Impl();
@@ -1845,6 +1870,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     ScenarioImpl scenario = new ScenarioImpl();
     return scenario;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ScenarioIcal createScenarioIcal()
+  {
+    ScenarioIcalImpl scenarioIcal = new ScenarioIcalImpl();
+    return scenarioIcal;
   }
 
   /**

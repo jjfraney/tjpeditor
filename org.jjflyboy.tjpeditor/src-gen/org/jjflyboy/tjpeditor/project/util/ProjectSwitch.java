@@ -105,6 +105,13 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.ACCOUNT_PREFIX:
+      {
+        AccountPrefix accountPrefix = (AccountPrefix)theEObject;
+        T result = caseAccountPrefix(accountPrefix);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.ACCOUNT_REPORT:
       {
         AccountReport accountReport = (AccountReport)theEObject;
@@ -169,6 +176,21 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         ReportAttribute reportAttribute = (ReportAttribute)theEObject;
         T result = caseReportAttribute(reportAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.ICAL_REPORT:
+      {
+        IcalReport icalReport = (IcalReport)theEObject;
+        T result = caseIcalReport(icalReport);
+        if (result == null) result = caseGlobalAttribute(icalReport);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.ICAL_REPORT_ATTRIBUTE:
+      {
+        IcalReportAttribute icalReportAttribute = (IcalReportAttribute)theEObject;
+        T result = caseIcalReportAttribute(icalReportAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -509,6 +531,7 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = caseEnd(end);
         if (result == null) result = caseTaskAttribute(end);
         if (result == null) result = caseReportAttribute(end);
+        if (result == null) result = caseIcalReportAttribute(end);
         if (result == null) result = caseExportAttribute(end);
         if (result == null) result = caseNewTaskAttribute(end);
         if (result == null) result = caseNikuReportAttribute(end);
@@ -674,6 +697,7 @@ public class ProjectSwitch<T> extends Switch<T>
         HideJournalEntry hideJournalEntry = (HideJournalEntry)theEObject;
         T result = caseHideJournalEntry(hideJournalEntry);
         if (result == null) result = caseReportAttribute(hideJournalEntry);
+        if (result == null) result = caseIcalReportAttribute(hideJournalEntry);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -690,6 +714,7 @@ public class ProjectSwitch<T> extends Switch<T>
         HideResource hideResource = (HideResource)theEObject;
         T result = caseHideResource(hideResource);
         if (result == null) result = caseReportAttribute(hideResource);
+        if (result == null) result = caseIcalReportAttribute(hideResource);
         if (result == null) result = caseExportAttribute(hideResource);
         if (result == null) result = caseNikuReportAttribute(hideResource);
         if (result == null) result = caseStatusSheetReportAttribute(hideResource);
@@ -702,17 +727,10 @@ public class ProjectSwitch<T> extends Switch<T>
         HideTask hideTask = (HideTask)theEObject;
         T result = caseHideTask(hideTask);
         if (result == null) result = caseReportAttribute(hideTask);
+        if (result == null) result = caseIcalReportAttribute(hideTask);
         if (result == null) result = caseExportAttribute(hideTask);
         if (result == null) result = caseNikuReportAttribute(hideTask);
         if (result == null) result = caseStatusSheetReportAttribute(hideTask);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ProjectPackage.INCLUDE:
-      {
-        Include include = (Include)theEObject;
-        T result = caseInclude(include);
-        if (result == null) result = caseProjectAttribute(include);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -955,6 +973,7 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = casePeriod(period);
         if (result == null) result = caseTaskAttribute(period);
         if (result == null) result = caseReportAttribute(period);
+        if (result == null) result = caseIcalReportAttribute(period);
         if (result == null) result = caseExportAttribute(period);
         if (result == null) result = caseNikuReportAttribute(period);
         if (result == null) result = caseStatusSheetReportAttribute(period);
@@ -1001,6 +1020,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         ProjectIds projectIds = (ProjectIds)theEObject;
         T result = caseProjectIds(projectIds);
+        if (result == null) result = caseGlobalAttribute(projectIds);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1129,6 +1149,7 @@ public class ProjectSwitch<T> extends Switch<T>
         RollupResource rollupResource = (RollupResource)theEObject;
         T result = caseRollupResource(rollupResource);
         if (result == null) result = caseReportAttribute(rollupResource);
+        if (result == null) result = caseIcalReportAttribute(rollupResource);
         if (result == null) result = caseExportAttribute(rollupResource);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1138,6 +1159,7 @@ public class ProjectSwitch<T> extends Switch<T>
         RollupTask rollupTask = (RollupTask)theEObject;
         T result = caseRollupTask(rollupTask);
         if (result == null) result = caseReportAttribute(rollupTask);
+        if (result == null) result = caseIcalReportAttribute(rollupTask);
         if (result == null) result = caseExportAttribute(rollupTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1155,6 +1177,14 @@ public class ProjectSwitch<T> extends Switch<T>
         Scenario scenario = (Scenario)theEObject;
         T result = caseScenario(scenario);
         if (result == null) result = caseProjectAttribute(scenario);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.SCENARIO_ICAL:
+      {
+        ScenarioIcal scenarioIcal = (ScenarioIcal)theEObject;
+        T result = caseScenarioIcal(scenarioIcal);
+        if (result == null) result = caseIcalReportAttribute(scenarioIcal);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1318,6 +1348,7 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = caseStart(start);
         if (result == null) result = caseTaskAttribute(start);
         if (result == null) result = caseReportAttribute(start);
+        if (result == null) result = caseIcalReportAttribute(start);
         if (result == null) result = caseExportAttribute(start);
         if (result == null) result = caseNikuReportAttribute(start);
         if (result == null) result = caseStatusSheetReportAttribute(start);
@@ -1881,6 +1912,22 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Account Prefix</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Account Prefix</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAccountPrefix(AccountPrefix object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Account Report</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -2004,6 +2051,38 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseReportAttribute(ReportAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ical Report</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ical Report</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIcalReport(IcalReport object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ical Report Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ical Report Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIcalReportAttribute(IcalReportAttribute object)
   {
     return null;
   }
@@ -3049,22 +3128,6 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Include</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Include</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInclude(Include object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Interval1</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3924,6 +3987,22 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseScenario(Scenario object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Scenario Ical</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Scenario Ical</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseScenarioIcal(ScenarioIcal object)
   {
     return null;
   }

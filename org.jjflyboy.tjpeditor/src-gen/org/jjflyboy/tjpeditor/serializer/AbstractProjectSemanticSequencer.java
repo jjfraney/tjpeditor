@@ -14,6 +14,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.jjflyboy.tjpeditor.project.Account;
+import org.jjflyboy.tjpeditor.project.AccountPrefix;
 import org.jjflyboy.tjpeditor.project.AccountRoot;
 import org.jjflyboy.tjpeditor.project.AccountShare;
 import org.jjflyboy.tjpeditor.project.Alert;
@@ -63,7 +64,7 @@ import org.jjflyboy.tjpeditor.project.HideJournalEntry;
 import org.jjflyboy.tjpeditor.project.HideReport;
 import org.jjflyboy.tjpeditor.project.HideResource;
 import org.jjflyboy.tjpeditor.project.HideTask;
-import org.jjflyboy.tjpeditor.project.Include;
+import org.jjflyboy.tjpeditor.project.IcalReport;
 import org.jjflyboy.tjpeditor.project.Interval1;
 import org.jjflyboy.tjpeditor.project.Interval2;
 import org.jjflyboy.tjpeditor.project.Interval3;
@@ -117,6 +118,7 @@ import org.jjflyboy.tjpeditor.project.RollupResource;
 import org.jjflyboy.tjpeditor.project.RollupTask;
 import org.jjflyboy.tjpeditor.project.Scale;
 import org.jjflyboy.tjpeditor.project.Scenario;
+import org.jjflyboy.tjpeditor.project.ScenarioIcal;
 import org.jjflyboy.tjpeditor.project.Scenarios;
 import org.jjflyboy.tjpeditor.project.Scheduled;
 import org.jjflyboy.tjpeditor.project.Scheduling;
@@ -200,6 +202,12 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				   context == grammarAccess.getAccountAttributeRule() ||
 				   context == grammarAccess.getGlobalAttributeRule()) {
 					sequence_Account(context, (Account) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.ACCOUNT_PREFIX:
+				if(context == grammarAccess.getAccountPrefixRule()) {
+					sequence_AccountPrefix(context, (AccountPrefix) semanticObject); 
 					return; 
 				}
 				else break;
@@ -413,6 +421,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				if(context == grammarAccess.getColumnAttributeRule() ||
 				   context == grammarAccess.getEndRule() ||
 				   context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getIcalReportAttributeRule() ||
 				   context == grammarAccess.getNewTaskAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
@@ -530,6 +539,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.HIDE_JOURNAL_ENTRY:
 				if(context == grammarAccess.getHideJournalEntryRule() ||
+				   context == grammarAccess.getIcalReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule()) {
 					sequence_HideJournalEntry(context, (HideJournalEntry) semanticObject); 
 					return; 
@@ -545,6 +555,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.HIDE_RESOURCE:
 				if(context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getHideResourceRule() ||
+				   context == grammarAccess.getIcalReportAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getStatusSheetReportAttributeRule() ||
@@ -556,6 +567,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.HIDE_TASK:
 				if(context == grammarAccess.getExportAttributeRule() ||
 				   context == grammarAccess.getHideTaskRule() ||
+				   context == grammarAccess.getIcalReportAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getStatusSheetReportAttributeRule()) {
@@ -563,10 +575,10 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					return; 
 				}
 				else break;
-			case ProjectPackage.INCLUDE:
-				if(context == grammarAccess.getIncludeRule() ||
-				   context == grammarAccess.getProjectAttributeRule()) {
-					sequence_Include(context, (Include) semanticObject); 
+			case ProjectPackage.ICAL_REPORT:
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getIcalReportRule()) {
+					sequence_IcalReport(context, (IcalReport) semanticObject); 
 					return; 
 				}
 				else break;
@@ -762,6 +774,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.PERIOD:
 				if(context == grammarAccess.getColumnAttributeRule() ||
 				   context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getIcalReportAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getPeriodRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
@@ -802,7 +815,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.PROJECT_IDS:
-				if(context == grammarAccess.getProjectIdsRule()) {
+				if(context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getProjectIdsRule()) {
 					sequence_ProjectIds(context, (ProjectIds) semanticObject); 
 					return; 
 				}
@@ -946,6 +960,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.ROLLUP_RESOURCE:
 				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getIcalReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getRollupResourceRule()) {
 					sequence_RollupResource(context, (RollupResource) semanticObject); 
@@ -954,6 +969,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.ROLLUP_TASK:
 				if(context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getIcalReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getRollupTaskRule()) {
 					sequence_RollupTask(context, (RollupTask) semanticObject); 
@@ -971,6 +987,13 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				if(context == grammarAccess.getProjectAttributeRule() ||
 				   context == grammarAccess.getScenarioRule()) {
 					sequence_Scenario(context, (Scenario) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.SCENARIO_ICAL:
+				if(context == grammarAccess.getIcalReportAttributeRule() ||
+				   context == grammarAccess.getScenarioIcalRule()) {
+					sequence_ScenarioIcal(context, (ScenarioIcal) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1069,6 +1092,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.START:
 				if(context == grammarAccess.getColumnAttributeRule() ||
 				   context == grammarAccess.getExportAttributeRule() ||
+				   context == grammarAccess.getIcalReportAttributeRule() ||
 				   context == grammarAccess.getNikuReportAttributeRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getStartRule() ||
@@ -1346,6 +1370,25 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     account=[Account|ID]
+	 *
+	 * Features:
+	 *    account[1, 1]
+	 */
+	protected void sequence_AccountPrefix(EObject context, AccountPrefix semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getAccountPrefix_Account()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getAccountPrefix_Account()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAccountPrefixAccess().getAccountAccountIDTerminalRuleCall_1_0_1(), semanticObject.getAccount());
+		feeder.finish();
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -2265,20 +2308,14 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     filename=STRING
+	 *     (filename=STRING attributes+=IcalReportAttribute*)
 	 *
 	 * Features:
 	 *    filename[1, 1]
+	 *    attributes[0, *]
 	 */
-	protected void sequence_Include(EObject context, Include semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getInclude_Filename()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getInclude_Filename()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getIncludeAccess().getFilenameSTRINGTerminalRuleCall_1_0(), semanticObject.getFilename());
-		feeder.finish();
+	protected void sequence_IcalReport(EObject context, IcalReport semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -3203,6 +3240,25 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	 */
 	protected void sequence_Scale(EObject context, Scale semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     scenario=[Scenario|ID]
+	 *
+	 * Features:
+	 *    scenario[1, 1]
+	 */
+	protected void sequence_ScenarioIcal(EObject context, ScenarioIcal semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getScenarioIcal_Scenario()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getScenarioIcal_Scenario()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getScenarioIcalAccess().getScenarioScenarioIDTerminalRuleCall_1_0_1(), semanticObject.getScenario());
+		feeder.finish();
 	}
 	
 	

@@ -11,8 +11,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.jjflyboy.tjpeditor.project.ProjectIds;
@@ -31,7 +29,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class ProjectIdsImpl extends MinimalEObjectImpl.Container implements ProjectIds
+public class ProjectIdsImpl extends GlobalAttributeImpl implements ProjectIds
 {
   /**
    * The cached value of the '{@link #getIds() <em>Ids</em>}' attribute list.

@@ -98,6 +98,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createAccountAttributeAdapter();
       }
       @Override
+      public Adapter caseAccountPrefix(AccountPrefix object)
+      {
+        return createAccountPrefixAdapter();
+      }
+      @Override
       public Adapter caseAccountReport(AccountReport object)
       {
         return createAccountReportAdapter();
@@ -136,6 +141,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseReportAttribute(ReportAttribute object)
       {
         return createReportAttributeAdapter();
+      }
+      @Override
+      public Adapter caseIcalReport(IcalReport object)
+      {
+        return createIcalReportAdapter();
+      }
+      @Override
+      public Adapter caseIcalReportAttribute(IcalReportAttribute object)
+      {
+        return createIcalReportAttributeAdapter();
       }
       @Override
       public Adapter caseExport(Export object)
@@ -463,11 +478,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createHideTaskAdapter();
       }
       @Override
-      public Adapter caseInclude(Include object)
-      {
-        return createIncludeAdapter();
-      }
-      @Override
       public Adapter caseInterval1(Interval1 object)
       {
         return createInterval1Adapter();
@@ -736,6 +746,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseScenario(Scenario object)
       {
         return createScenarioAdapter();
+      }
+      @Override
+      public Adapter caseScenarioIcal(ScenarioIcal object)
+      {
+        return createScenarioIcalAdapter();
       }
       @Override
       public Adapter caseScenarios(Scenarios object)
@@ -1200,6 +1215,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.AccountPrefix <em>Account Prefix</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.AccountPrefix
+   * @generated
+   */
+  public Adapter createAccountPrefixAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.AccountReport <em>Account Report</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1315,6 +1345,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createReportAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.IcalReport <em>Ical Report</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.IcalReport
+   * @generated
+   */
+  public Adapter createIcalReportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.IcalReportAttribute <em>Ical Report Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.IcalReportAttribute
+   * @generated
+   */
+  public Adapter createIcalReportAttributeAdapter()
   {
     return null;
   }
@@ -2295,21 +2355,6 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Include <em>Include</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.Include
-   * @generated
-   */
-  public Adapter createIncludeAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Interval1 <em>Interval1</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -3115,6 +3160,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createScenarioAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.ScenarioIcal <em>Scenario Ical</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.ScenarioIcal
+   * @generated
+   */
+  public Adapter createScenarioIcalAdapter()
   {
     return null;
   }

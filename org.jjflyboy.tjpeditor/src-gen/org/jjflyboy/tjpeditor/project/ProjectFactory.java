@@ -62,6 +62,15 @@ public interface ProjectFactory extends EFactory
   AccountAttribute createAccountAttribute();
 
   /**
+   * Returns a new object of class '<em>Account Prefix</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Account Prefix</em>'.
+   * @generated
+   */
+  AccountPrefix createAccountPrefix();
+
+  /**
    * Returns a new object of class '<em>Account Report</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -132,6 +141,24 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   ReportAttribute createReportAttribute();
+
+  /**
+   * Returns a new object of class '<em>Ical Report</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ical Report</em>'.
+   * @generated
+   */
+  IcalReport createIcalReport();
+
+  /**
+   * Returns a new object of class '<em>Ical Report Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ical Report Attribute</em>'.
+   * @generated
+   */
+  IcalReportAttribute createIcalReportAttribute();
 
   /**
    * Returns a new object of class '<em>Export</em>'.
@@ -719,15 +746,6 @@ public interface ProjectFactory extends EFactory
   HideTask createHideTask();
 
   /**
-   * Returns a new object of class '<em>Include</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Include</em>'.
-   * @generated
-   */
-  Include createInclude();
-
-  /**
    * Returns a new object of class '<em>Interval1</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1212,6 +1230,15 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Scenario createScenario();
+
+  /**
+   * Returns a new object of class '<em>Scenario Ical</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Scenario Ical</em>'.
+   * @generated
+   */
+  ScenarioIcal createScenarioIcal();
 
   /**
    * Returns a new object of class '<em>Scenarios</em>'.
