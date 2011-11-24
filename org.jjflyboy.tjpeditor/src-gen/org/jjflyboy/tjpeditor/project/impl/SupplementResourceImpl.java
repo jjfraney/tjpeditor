@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.SupplementResource;
  *
  * @generated
  */
-public class SupplementResourceImpl extends GlobalAttributeImpl implements SupplementResource
+public class SupplementResourceImpl extends PropertyImpl implements SupplementResource
 {
   /**
    * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.

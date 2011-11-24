@@ -69,7 +69,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
     switch (eClass.getClassifierID())
     {
       case ProjectPackage.GLOBAL: return createGlobal();
-      case ProjectPackage.GLOBAL_ATTRIBUTE: return createGlobalAttribute();
+      case ProjectPackage.PROPERTY: return createProperty();
       case ProjectPackage.ACCOUNT: return createAccount();
       case ProjectPackage.ACCOUNT_ATTRIBUTE: return createAccountAttribute();
       case ProjectPackage.ACCOUNT_PREFIX: return createAccountPrefix();
@@ -148,6 +148,8 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.HIDE_REPORT: return createHideReport();
       case ProjectPackage.HIDE_RESOURCE: return createHideResource();
       case ProjectPackage.HIDE_TASK: return createHideTask();
+      case ProjectPackage.INCLUDE_PROPERTIES: return createIncludeProperties();
+      case ProjectPackage.INCLUDE_PROPERTIES_ATTRIBUTE: return createIncludePropertiesAttribute();
       case ProjectPackage.INTERVAL1: return createInterval1();
       case ProjectPackage.INTERVAL2: return createInterval2();
       case ProjectPackage.INTERVAL3: return createInterval3();
@@ -414,10 +416,10 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public GlobalAttribute createGlobalAttribute()
+  public Property createProperty()
   {
-    GlobalAttributeImpl globalAttribute = new GlobalAttributeImpl();
-    return globalAttribute;
+    PropertyImpl property = new PropertyImpl();
+    return property;
   }
 
   /**
@@ -1276,6 +1278,28 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     HideTaskImpl hideTask = new HideTaskImpl();
     return hideTask;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IncludeProperties createIncludeProperties()
+  {
+    IncludePropertiesImpl includeProperties = new IncludePropertiesImpl();
+    return includeProperties;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IncludePropertiesAttribute createIncludePropertiesAttribute()
+  {
+    IncludePropertiesAttributeImpl includePropertiesAttribute = new IncludePropertiesAttributeImpl();
+    return includePropertiesAttribute;
   }
 
   /**

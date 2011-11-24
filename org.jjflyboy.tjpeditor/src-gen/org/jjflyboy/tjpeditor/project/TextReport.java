@@ -16,6 +16,6 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface TextReport extends GlobalAttribute, ReportAttribute
+public interface TextReport extends Property, ReportAttribute
 {
 } // TextReport

@@ -19,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class AccountReportImpl extends GlobalAttributeImpl implements AccountReport
+public class AccountReportImpl extends PropertyImpl implements AccountReport
 {
   /**
    * <!-- begin-user-doc -->

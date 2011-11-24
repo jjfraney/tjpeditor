@@ -37,7 +37,7 @@ import org.jjflyboy.tjpeditor.project.WorkingHours;
  *
  * @generated
  */
-public class ShiftImpl extends GlobalAttributeImpl implements Shift
+public class ShiftImpl extends PropertyImpl implements Shift
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

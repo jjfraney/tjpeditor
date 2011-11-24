@@ -19,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.TaskReport;
  *
  * @generated
  */
-public class TaskReportImpl extends GlobalAttributeImpl implements TaskReport
+public class TaskReportImpl extends PropertyImpl implements TaskReport
 {
   /**
    * <!-- begin-user-doc -->

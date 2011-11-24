@@ -6,21 +6,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="Global">
     <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="#//Project"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="#//GlobalAttribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Property" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GlobalAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Account" eSuperTypes="#//GlobalAttribute #//AccountAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Account" eSuperTypes="#//Property #//AccountAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//AccountAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AccountAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AccountPrefix">
+  <eClassifiers xsi:type="ecore:EClass" name="AccountPrefix" eSuperTypes="#//IncludePropertiesAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" eType="#//Account"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AccountReport" eSuperTypes="#//GlobalAttribute #//ReportAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AccountReport" eSuperTypes="#//Property #//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="AccountRoot" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" eType="#//Account"/>
   </eClassifiers>
@@ -34,7 +34,7 @@
         eType="#//ProjectAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProjectAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//GlobalAttribute #//TaskAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//Property #//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -48,20 +48,20 @@
         eType="#//ReportAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReportAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IcalReport" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="IcalReport" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//IcalReportAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IcalReportAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Export" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Export" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//ExportAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExportAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//GlobalAttribute #//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//Property #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -78,7 +78,7 @@
         eType="#//AllocateResourceAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AllocateResourceAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Navigator" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Navigator" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//NavigatorAttribute" containment="true"/>
@@ -91,7 +91,7 @@
         eType="#//NewTaskAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NewTaskAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NikuReport" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="NikuReport" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//NikuReportAttribute" containment="true"/>
@@ -107,7 +107,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Author" eSuperTypes="#//StatusStatusSheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Balance" eSuperTypes="#//GlobalAttribute #//ReportAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Balance" eSuperTypes="#//Property #//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cost" eType="#//Account"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="revenue" eType="#//Account"/>
   </eClassifiers>
@@ -152,7 +152,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Complete" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="complete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Copyright" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Copyright" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Credit" eSuperTypes="#//AccountAttribute">
@@ -221,7 +221,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Fail" eSuperTypes="#//TaskAttribute #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Flags" eSuperTypes="#//GlobalAttribute #//AccountAttribute #//TaskAttribute #//ReportAttribute #//ResourceAttribute #//StatusStatusSheetAttribute #//StatusTimesheetAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Flags" eSuperTypes="#//Property #//AccountAttribute #//TaskAttribute #//ReportAttribute #//ResourceAttribute #//StatusStatusSheetAttribute #//StatusTimesheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="flags" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -256,6 +256,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="HideTask" eSuperTypes="#//ReportAttribute #//IcalReportAttribute #//ExportAttribute #//NikuReportAttribute #//StatusSheetReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IncludeProperties" eSuperTypes="#//Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//IncludePropertiesAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IncludePropertiesAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Interval1">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -313,7 +319,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="length" eType="#//DurationQuantity"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Limits" eSuperTypes="#//GlobalAttribute #//TaskAttribute #//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Limits" eSuperTypes="#//Property #//TaskAttribute #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//LimitsAttribute" containment="true"/>
   </eClassifiers>
@@ -325,7 +331,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="LoadUnit" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//LoadDisplayUnit"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Macro" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Macro" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Managers" eSuperTypes="#//ResourceAttribute">
@@ -375,7 +381,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ProjectId" eSuperTypes="#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProjectIds" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectIds" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ids" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -419,14 +425,14 @@
     <eLiterals name="PRECEDES" value="6" literal="precedes"/>
     <eLiterals name="WARN" value="7" literal="warn"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Rate" eSuperTypes="#//GlobalAttribute #//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Rate" eSuperTypes="#//Property #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Remaining" eSuperTypes="#//NewTaskAttribute #//TaskTimesheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="remaining" eType="#//DurationQuantity"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReportPrefix">
+  <eClassifiers xsi:type="ecore:EClass" name="ReportPrefix" eSuperTypes="#//IncludePropertiesAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="report" eType="#//Report"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceAttributes" eSuperTypes="#//ExportAttribute">
@@ -436,10 +442,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="booking" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="workingHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourcePrefix">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcePrefix" eSuperTypes="#//IncludePropertiesAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceReport" eSuperTypes="#//GlobalAttribute #//ReportAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceReport" eSuperTypes="#//Property #//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceRoot" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
   </eClassifiers>
@@ -489,7 +495,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SelfContained" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selfcontained" eType="#//YesNo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shift" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Shift" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="replace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -549,7 +555,7 @@
         eType="#//StatusTimesheetAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusTimesheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interval" eType="#//Interval4"
         containment="true"/>
@@ -557,34 +563,34 @@
         eType="#//StatusSheetAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusSheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReport" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReport" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//StatusSheetReportAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Summary" eSuperTypes="#//StatusStatusSheetAttribute #//StatusTimesheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplementAccount" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementAccount" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" eType="#//Account"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//AccountAttribute" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplementReport" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementReport" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="report" eType="#//Report"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//ReportAttribute" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplementResource" eSuperTypes="#//GlobalAttribute #//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementResource" eSuperTypes="#//Property #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//ResourceAttribute" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplementTask" eSuperTypes="#//GlobalAttribute #//TaskAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementTask" eSuperTypes="#//Property #//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//Task"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//TaskAttribute" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TagFile" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TagFile" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hideResource" eType="#//HideResource"
@@ -623,14 +629,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="complete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="depends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskPrefix">
+  <eClassifiers xsi:type="ecore:EClass" name="TaskPrefix" eSuperTypes="#//IncludePropertiesAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//Task"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskReport" eSuperTypes="#//GlobalAttribute #//ReportAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskReport" eSuperTypes="#//Property #//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="TaskRoot" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//Task"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextReport" eSuperTypes="#//GlobalAttribute #//ReportAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextReport" eSuperTypes="#//Property #//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="TimeFormat" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeformat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -638,7 +644,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Timesheet" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Timesheet" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interval" eType="#//Interval4"
         containment="true"/>
@@ -646,7 +652,7 @@
         eType="#//TimesheetAttribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimesheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TimesheetReport" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TimesheetReport" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//TimesheetReportAttribute" containment="true"/>
@@ -665,13 +671,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TrackingScenario" eSuperTypes="#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TrackingScenario" eSuperTypes="#//ProjectAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" eType="#//Scenario"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TreeLevel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Vacation" eSuperTypes="#//GlobalAttribute #//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Vacation" eSuperTypes="#//Property #//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" upperBound="-1"
         eType="#//Interval3" containment="true"/>

@@ -22,9 +22,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.jjflyboy.tjpeditor.project.Global;
-import org.jjflyboy.tjpeditor.project.GlobalAttribute;
 import org.jjflyboy.tjpeditor.project.Project;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
+import org.jjflyboy.tjpeditor.project.Property;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.GlobalImpl#getProject <em>Project</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.GlobalImpl#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.GlobalImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,14 +53,14 @@ public class GlobalImpl extends MinimalEObjectImpl.Container implements Global
   protected Project project;
 
   /**
-   * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
+   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttributes()
+   * @see #getProperties()
    * @generated
    * @ordered
    */
-  protected EList<GlobalAttribute> attributes;
+  protected EList<Property> properties;
 
   /**
    * <!-- begin-user-doc -->
@@ -136,13 +136,13 @@ public class GlobalImpl extends MinimalEObjectImpl.Container implements Global
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<GlobalAttribute> getAttributes()
+  public EList<Property> getProperties()
   {
-    if (attributes == null)
+    if (properties == null)
     {
-      attributes = new EObjectContainmentEList<GlobalAttribute>(GlobalAttribute.class, this, ProjectPackage.GLOBAL__ATTRIBUTES);
+      properties = new EObjectContainmentEList<Property>(Property.class, this, ProjectPackage.GLOBAL__PROPERTIES);
     }
-    return attributes;
+    return properties;
   }
 
   /**
@@ -157,8 +157,8 @@ public class GlobalImpl extends MinimalEObjectImpl.Container implements Global
     {
       case ProjectPackage.GLOBAL__PROJECT:
         return basicSetProject(null, msgs);
-      case ProjectPackage.GLOBAL__ATTRIBUTES:
-        return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+      case ProjectPackage.GLOBAL__PROPERTIES:
+        return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -175,8 +175,8 @@ public class GlobalImpl extends MinimalEObjectImpl.Container implements Global
     {
       case ProjectPackage.GLOBAL__PROJECT:
         return getProject();
-      case ProjectPackage.GLOBAL__ATTRIBUTES:
-        return getAttributes();
+      case ProjectPackage.GLOBAL__PROPERTIES:
+        return getProperties();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -195,9 +195,9 @@ public class GlobalImpl extends MinimalEObjectImpl.Container implements Global
       case ProjectPackage.GLOBAL__PROJECT:
         setProject((Project)newValue);
         return;
-      case ProjectPackage.GLOBAL__ATTRIBUTES:
-        getAttributes().clear();
-        getAttributes().addAll((Collection<? extends GlobalAttribute>)newValue);
+      case ProjectPackage.GLOBAL__PROPERTIES:
+        getProperties().clear();
+        getProperties().addAll((Collection<? extends Property>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -216,8 +216,8 @@ public class GlobalImpl extends MinimalEObjectImpl.Container implements Global
       case ProjectPackage.GLOBAL__PROJECT:
         setProject((Project)null);
         return;
-      case ProjectPackage.GLOBAL__ATTRIBUTES:
-        getAttributes().clear();
+      case ProjectPackage.GLOBAL__PROPERTIES:
+        getProperties().clear();
         return;
     }
     super.eUnset(featureID);
@@ -235,8 +235,8 @@ public class GlobalImpl extends MinimalEObjectImpl.Container implements Global
     {
       case ProjectPackage.GLOBAL__PROJECT:
         return project != null;
-      case ProjectPackage.GLOBAL__ATTRIBUTES:
-        return attributes != null && !attributes.isEmpty();
+      case ProjectPackage.GLOBAL__PROPERTIES:
+        return properties != null && !properties.isEmpty();
     }
     return super.eIsSet(featureID);
   }

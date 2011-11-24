@@ -202,9 +202,9 @@
     </genEnums>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Global">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Global/project"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Global/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Global/properties"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute"/>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account/name"/>
@@ -426,6 +426,11 @@
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideTask">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideTask/expression"/>
     </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludePropertiesAttribute"/>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval1/start"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval1/end"/>

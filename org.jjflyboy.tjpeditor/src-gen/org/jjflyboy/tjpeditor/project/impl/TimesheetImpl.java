@@ -41,7 +41,7 @@ import org.jjflyboy.tjpeditor.project.TimesheetAttribute;
  *
  * @generated
  */
-public class TimesheetImpl extends GlobalAttributeImpl implements Timesheet
+public class TimesheetImpl extends PropertyImpl implements Timesheet
 {
   /**
    * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.

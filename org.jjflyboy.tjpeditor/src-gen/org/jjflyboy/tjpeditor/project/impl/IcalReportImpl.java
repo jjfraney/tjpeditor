@@ -38,7 +38,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class IcalReportImpl extends GlobalAttributeImpl implements IcalReport
+public class IcalReportImpl extends PropertyImpl implements IcalReport
 {
   /**
    * The default value of the '{@link #getFilename() <em>Filename</em>}' attribute.

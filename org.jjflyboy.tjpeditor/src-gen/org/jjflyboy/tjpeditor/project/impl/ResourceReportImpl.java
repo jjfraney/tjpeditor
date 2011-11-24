@@ -19,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.ResourceReport;
  *
  * @generated
  */
-public class ResourceReportImpl extends GlobalAttributeImpl implements ResourceReport
+public class ResourceReportImpl extends PropertyImpl implements ResourceReport
 {
   /**
    * <!-- begin-user-doc -->

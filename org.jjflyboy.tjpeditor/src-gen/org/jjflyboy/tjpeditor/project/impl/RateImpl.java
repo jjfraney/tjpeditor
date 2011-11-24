@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.Rate;
  *
  * @generated
  */
-public class RateImpl extends GlobalAttributeImpl implements Rate
+public class RateImpl extends PropertyImpl implements Rate
 {
   /**
    * The default value of the '{@link #getRate() <em>Rate</em>}' attribute.

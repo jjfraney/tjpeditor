@@ -38,7 +38,7 @@ import org.jjflyboy.tjpeditor.project.TagFile;
  *
  * @generated
  */
-public class TagFileImpl extends GlobalAttributeImpl implements TagFile
+public class TagFileImpl extends PropertyImpl implements TagFile
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

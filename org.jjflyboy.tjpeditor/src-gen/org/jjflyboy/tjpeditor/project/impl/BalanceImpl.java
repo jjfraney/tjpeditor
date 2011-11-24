@@ -30,7 +30,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class BalanceImpl extends GlobalAttributeImpl implements Balance
+public class BalanceImpl extends PropertyImpl implements Balance
 {
   /**
    * The cached value of the '{@link #getCost() <em>Cost</em>}' reference.

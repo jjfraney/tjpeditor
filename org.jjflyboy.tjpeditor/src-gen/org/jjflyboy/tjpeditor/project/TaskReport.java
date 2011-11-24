@@ -16,6 +16,6 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface TaskReport extends GlobalAttribute, ReportAttribute
+public interface TaskReport extends Property, ReportAttribute
 {
 } // TaskReport

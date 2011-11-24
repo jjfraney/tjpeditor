@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Vacation extends GlobalAttribute, ResourceAttribute
+public interface Vacation extends Property, ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

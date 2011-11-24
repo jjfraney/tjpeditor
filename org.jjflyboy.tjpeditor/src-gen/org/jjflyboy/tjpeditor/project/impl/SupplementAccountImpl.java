@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.SupplementAccount;
  *
  * @generated
  */
-public class SupplementAccountImpl extends GlobalAttributeImpl implements SupplementAccount
+public class SupplementAccountImpl extends PropertyImpl implements SupplementAccount
 {
   /**
    * The cached value of the '{@link #getAccount() <em>Account</em>}' reference.

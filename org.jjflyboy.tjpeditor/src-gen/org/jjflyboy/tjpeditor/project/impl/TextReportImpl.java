@@ -19,7 +19,7 @@ import org.jjflyboy.tjpeditor.project.TextReport;
  *
  * @generated
  */
-public class TextReportImpl extends GlobalAttributeImpl implements TextReport
+public class TextReportImpl extends PropertyImpl implements TextReport
 {
   /**
    * <!-- begin-user-doc -->

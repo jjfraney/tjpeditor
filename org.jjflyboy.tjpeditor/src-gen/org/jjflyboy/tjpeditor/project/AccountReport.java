@@ -16,6 +16,6 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface AccountReport extends GlobalAttribute, ReportAttribute
+public interface AccountReport extends Property, ReportAttribute
 {
 } // AccountReport

@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface TrackingScenario extends GlobalAttribute
+public interface TrackingScenario extends ProjectAttribute
 {
   /**
    * Returns the value of the '<em><b>Scenario</b></em>' reference.

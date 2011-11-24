@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Flags extends GlobalAttribute, AccountAttribute, TaskAttribute, ReportAttribute, ResourceAttribute, StatusStatusSheetAttribute, StatusTimesheetAttribute
+public interface Flags extends Property, AccountAttribute, TaskAttribute, ReportAttribute, ResourceAttribute, StatusStatusSheetAttribute, StatusTimesheetAttribute
 {
   /**
    * Returns the value of the '<em><b>Flags</b></em>' attribute list.

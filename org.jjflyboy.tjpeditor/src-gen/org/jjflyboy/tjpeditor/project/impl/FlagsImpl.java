@@ -29,7 +29,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class FlagsImpl extends GlobalAttributeImpl implements Flags
+public class FlagsImpl extends PropertyImpl implements Flags
 {
   /**
    * The cached value of the '{@link #getFlags() <em>Flags</em>}' attribute list.

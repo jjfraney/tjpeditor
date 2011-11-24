@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Task extends GlobalAttribute, TaskAttribute
+public interface Task extends Property, TaskAttribute
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.

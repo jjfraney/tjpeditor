@@ -41,7 +41,7 @@ import org.jjflyboy.tjpeditor.project.StatusSheetAttribute;
  *
  * @generated
  */
-public class StatusSheetImpl extends GlobalAttributeImpl implements StatusSheet
+public class StatusSheetImpl extends PropertyImpl implements StatusSheet
 {
   /**
    * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.

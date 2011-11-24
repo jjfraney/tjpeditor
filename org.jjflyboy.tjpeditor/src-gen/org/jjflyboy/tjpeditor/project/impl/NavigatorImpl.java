@@ -38,7 +38,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class NavigatorImpl extends GlobalAttributeImpl implements Navigator
+public class NavigatorImpl extends PropertyImpl implements Navigator
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

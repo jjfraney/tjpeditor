@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class AccountImpl extends GlobalAttributeImpl implements Account
+public class AccountImpl extends PropertyImpl implements Account
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

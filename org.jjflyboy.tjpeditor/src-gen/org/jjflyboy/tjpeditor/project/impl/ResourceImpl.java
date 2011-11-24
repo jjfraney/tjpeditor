@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.ResourceAttribute;
  *
  * @generated
  */
-public class ResourceImpl extends GlobalAttributeImpl implements Resource
+public class ResourceImpl extends PropertyImpl implements Resource
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

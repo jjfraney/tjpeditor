@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Timesheet extends GlobalAttribute
+public interface Timesheet extends Property
 {
   /**
    * Returns the value of the '<em><b>Resource</b></em>' reference.

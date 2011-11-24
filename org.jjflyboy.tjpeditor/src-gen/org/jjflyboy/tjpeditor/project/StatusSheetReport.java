@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface StatusSheetReport extends GlobalAttribute
+public interface StatusSheetReport extends Property
 {
   /**
    * Returns the value of the '<em><b>Filename</b></em>' attribute.

@@ -65,6 +65,7 @@ import org.jjflyboy.tjpeditor.project.HideReport;
 import org.jjflyboy.tjpeditor.project.HideResource;
 import org.jjflyboy.tjpeditor.project.HideTask;
 import org.jjflyboy.tjpeditor.project.IcalReport;
+import org.jjflyboy.tjpeditor.project.IncludeProperties;
 import org.jjflyboy.tjpeditor.project.Interval1;
 import org.jjflyboy.tjpeditor.project.Interval2;
 import org.jjflyboy.tjpeditor.project.Interval3;
@@ -200,13 +201,14 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.ACCOUNT:
 				if(context == grammarAccess.getAccountRule() ||
 				   context == grammarAccess.getAccountAttributeRule() ||
-				   context == grammarAccess.getGlobalAttributeRule()) {
+				   context == grammarAccess.getPropertyRule()) {
 					sequence_Account(context, (Account) semanticObject); 
 					return; 
 				}
 				else break;
 			case ProjectPackage.ACCOUNT_PREFIX:
-				if(context == grammarAccess.getAccountPrefixRule()) {
+				if(context == grammarAccess.getAccountPrefixRule() ||
+				   context == grammarAccess.getIncludePropertiesAttributeRule()) {
 					sequence_AccountPrefix(context, (AccountPrefix) semanticObject); 
 					return; 
 				}
@@ -259,7 +261,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.BALANCE:
 				if(context == grammarAccess.getBalanceRule() ||
-				   context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getReportAttributeRule()) {
 					sequence_Balance(context, (Balance) semanticObject); 
 					return; 
@@ -335,7 +337,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.COPYRIGHT:
 				if(context == grammarAccess.getCopyrightRule() ||
-				   context == grammarAccess.getGlobalAttributeRule()) {
+				   context == grammarAccess.getPropertyRule()) {
 					sequence_Copyright(context, (Copyright) semanticObject); 
 					return; 
 				}
@@ -442,7 +444,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.EXPORT:
 				if(context == grammarAccess.getExportRule() ||
-				   context == grammarAccess.getGlobalAttributeRule()) {
+				   context == grammarAccess.getPropertyRule()) {
 					sequence_Export(context, (Export) semanticObject); 
 					return; 
 				}
@@ -492,7 +494,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 			case ProjectPackage.FLAGS:
 				if(context == grammarAccess.getAccountAttributeRule() ||
 				   context == grammarAccess.getFlagsRule() ||
-				   context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getResourceAttributeRule() ||
 				   context == grammarAccess.getStatusStatusSheetAttributeRule() ||
@@ -576,9 +578,16 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.ICAL_REPORT:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
-				   context == grammarAccess.getIcalReportRule()) {
+				if(context == grammarAccess.getIcalReportRule() ||
+				   context == grammarAccess.getPropertyRule()) {
 					sequence_IcalReport(context, (IcalReport) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.INCLUDE_PROPERTIES:
+				if(context == grammarAccess.getIncludePropertiesRule() ||
+				   context == grammarAccess.getPropertyRule()) {
+					sequence_IncludeProperties(context, (IncludeProperties) semanticObject); 
 					return; 
 				}
 				else break;
@@ -658,8 +667,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.LIMITS:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
-				   context == grammarAccess.getLimitsRule() ||
+				if(context == grammarAccess.getLimitsRule() ||
+				   context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getResourceAttributeRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_Limits(context, (Limits) semanticObject); 
@@ -681,8 +690,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.MACRO:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
-				   context == grammarAccess.getMacroRule()) {
+				if(context == grammarAccess.getMacroRule() ||
+				   context == grammarAccess.getPropertyRule()) {
 					sequence_Macro(context, (Macro) semanticObject); 
 					return; 
 				}
@@ -737,8 +746,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.NAVIGATOR:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
-				   context == grammarAccess.getNavigatorRule()) {
+				if(context == grammarAccess.getNavigatorRule() ||
+				   context == grammarAccess.getPropertyRule()) {
 					sequence_Navigator(context, (Navigator) semanticObject); 
 					return; 
 				}
@@ -751,8 +760,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.NIKU_REPORT:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
-				   context == grammarAccess.getNikuReportRule()) {
+				if(context == grammarAccess.getNikuReportRule() ||
+				   context == grammarAccess.getPropertyRule()) {
 					sequence_NikuReport(context, (NikuReport) semanticObject); 
 					return; 
 				}
@@ -815,8 +824,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.PROJECT_IDS:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
-				   context == grammarAccess.getProjectIdsRule()) {
+				if(context == grammarAccess.getProjectIdsRule() ||
+				   context == grammarAccess.getPropertyRule()) {
 					sequence_ProjectIds(context, (ProjectIds) semanticObject); 
 					return; 
 				}
@@ -849,7 +858,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.RATE:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getRateRule() ||
 				   context == grammarAccess.getResourceAttributeRule()) {
 					sequence_Rate(context, (Rate) semanticObject); 
@@ -877,7 +886,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				else break;
 			case ProjectPackage.REPORT:
 				if(context == grammarAccess.getAccountReportRule() ||
-				   context == grammarAccess.getGlobalAttributeRule() ||
+				   context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getReportRule() ||
 				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getResourceReportRule() ||
@@ -888,13 +897,14 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.REPORT_PREFIX:
-				if(context == grammarAccess.getReportPrefixRule()) {
+				if(context == grammarAccess.getIncludePropertiesAttributeRule() ||
+				   context == grammarAccess.getReportPrefixRule()) {
 					sequence_ReportPrefix(context, (ReportPrefix) semanticObject); 
 					return; 
 				}
 				else break;
 			case ProjectPackage.RESOURCE:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getResourceRule() ||
 				   context == grammarAccess.getResourceAttributeRule()) {
 					sequence_Resource(context, (Resource) semanticObject); 
@@ -909,7 +919,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.RESOURCE_PREFIX:
-				if(context == grammarAccess.getResourcePrefixRule()) {
+				if(context == grammarAccess.getIncludePropertiesAttributeRule() ||
+				   context == grammarAccess.getResourcePrefixRule()) {
 					sequence_ResourcePrefix(context, (ResourcePrefix) semanticObject); 
 					return; 
 				}
@@ -1034,7 +1045,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.SHIFT:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getShiftRule()) {
 					sequence_Shift(context, (Shift) semanticObject); 
 					return; 
@@ -1104,14 +1115,14 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.STATUS_SHEET:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getStatusSheetRule()) {
 					sequence_StatusSheet(context, (StatusSheet) semanticObject); 
 					return; 
 				}
 				else break;
 			case ProjectPackage.STATUS_SHEET_REPORT:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getStatusSheetReportRule()) {
 					sequence_StatusSheetReport(context, (StatusSheetReport) semanticObject); 
 					return; 
@@ -1133,21 +1144,21 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.SUPPLEMENT_ACCOUNT:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getSupplementAccountRule()) {
 					sequence_SupplementAccount(context, (SupplementAccount) semanticObject); 
 					return; 
 				}
 				else break;
 			case ProjectPackage.SUPPLEMENT_REPORT:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getSupplementReportRule()) {
 					sequence_SupplementReport(context, (SupplementReport) semanticObject); 
 					return; 
 				}
 				else break;
 			case ProjectPackage.SUPPLEMENT_RESOURCE:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getResourceAttributeRule() ||
 				   context == grammarAccess.getSupplementResourceRule()) {
 					sequence_SupplementResource(context, (SupplementResource) semanticObject); 
@@ -1155,7 +1166,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.SUPPLEMENT_TASK:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getSupplementTaskRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_SupplementTask(context, (SupplementTask) semanticObject); 
@@ -1163,14 +1174,14 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TAG_FILE:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getTagFileRule()) {
 					sequence_TagFile(context, (TagFile) semanticObject); 
 					return; 
 				}
 				else break;
 			case ProjectPackage.TASK:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getTaskRule() ||
 				   context == grammarAccess.getTaskAttributeRule()) {
 					sequence_Task(context, (Task) semanticObject); 
@@ -1194,7 +1205,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TASK_PREFIX:
-				if(context == grammarAccess.getTaskPrefixRule()) {
+				if(context == grammarAccess.getIncludePropertiesAttributeRule() ||
+				   context == grammarAccess.getTaskPrefixRule()) {
 					sequence_TaskPrefix(context, (TaskPrefix) semanticObject); 
 					return; 
 				}
@@ -1236,14 +1248,14 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TIMESHEET:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getTimesheetRule()) {
 					sequence_Timesheet(context, (Timesheet) semanticObject); 
 					return; 
 				}
 				else break;
 			case ProjectPackage.TIMESHEET_REPORT:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getTimesheetReportRule()) {
 					sequence_TimesheetReport(context, (TimesheetReport) semanticObject); 
 					return; 
@@ -1282,7 +1294,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TRACKING_SCENARIO:
-				if(context == grammarAccess.getGlobalAttributeRule() ||
+				if(context == grammarAccess.getProjectAttributeRule() ||
 				   context == grammarAccess.getTrackingScenarioRule()) {
 					sequence_TrackingScenario(context, (TrackingScenario) semanticObject); 
 					return; 
@@ -1304,7 +1316,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 					sequence_VacationShift(context, (Vacation) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getGlobalAttributeRule() ||
+				else if(context == grammarAccess.getPropertyRule() ||
 				   context == grammarAccess.getVacationRule()) {
 					sequence_Vacation(context, (Vacation) semanticObject); 
 					return; 
@@ -2177,11 +2189,11 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (project=Project attributes+=GlobalAttribute*)
+	 *     (project=Project properties+=Property*)
 	 *
 	 * Features:
 	 *    project[1, 1]
-	 *    attributes[0, *]
+	 *    properties[0, *]
 	 */
 	protected void sequence_Global(EObject context, Global semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2315,6 +2327,19 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	 *    attributes[0, *]
 	 */
 	protected void sequence_IcalReport(EObject context, IcalReport semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (filename=STRING attributes+=IncludePropertiesAttribute*)
+	 *
+	 * Features:
+	 *    filename[1, 1]
+	 *    attributes[0, *]
+	 */
+	protected void sequence_IncludeProperties(EObject context, IncludeProperties semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

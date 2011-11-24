@@ -23,7 +23,7 @@ public class GlobalTest extends XtextTest {
 				"export ex1 \"exportfile.tji\" " +
 				"flags s3, s4 " +
 				"icalreport \"ical.tji\" " +
-				// TODO: "include \"incl.tji\" " +
+				"include \"incl.tji\" " +  // TODO: include.properties
 				"limits " +
 				// TODO: "macro FOO [ text for FOO ] " +
 				"navigator n1 " +

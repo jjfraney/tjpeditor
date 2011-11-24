@@ -38,7 +38,7 @@ import org.jjflyboy.tjpeditor.project.TimesheetReportAttribute;
  *
  * @generated
  */
-public class TimesheetReportImpl extends GlobalAttributeImpl implements TimesheetReport
+public class TimesheetReportImpl extends PropertyImpl implements TimesheetReport
 {
   /**
    * The default value of the '{@link #getFilename() <em>Filename</em>}' attribute.

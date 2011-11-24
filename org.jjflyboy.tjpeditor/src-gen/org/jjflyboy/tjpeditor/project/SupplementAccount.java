@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SupplementAccount extends GlobalAttribute
+public interface SupplementAccount extends Property
 {
   /**
    * Returns the value of the '<em><b>Account</b></em>' reference.

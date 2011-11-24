@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Account extends GlobalAttribute, AccountAttribute
+public interface Account extends Property, AccountAttribute
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.

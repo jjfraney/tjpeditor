@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class CopyrightImpl extends GlobalAttributeImpl implements Copyright
+public class CopyrightImpl extends PropertyImpl implements Copyright
 {
   /**
    * The default value of the '{@link #getText() <em>Text</em>}' attribute.

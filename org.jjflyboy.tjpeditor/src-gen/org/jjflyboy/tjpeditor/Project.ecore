@@ -6,12 +6,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="Global">
     <eStructuralFeatures xsi:type="ecore:EReference" name="project" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
-        eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GlobalAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Account" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Account" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -19,10 +19,10 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AccountAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AccountPrefix">
+  <eClassifiers xsi:type="ecore:EClass" name="AccountPrefix" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludePropertiesAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AccountReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AccountReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="AccountRoot" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account"/>
   </eClassifiers>
@@ -37,7 +37,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProjectAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -53,14 +53,14 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReportAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IcalReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="IcalReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IcalReportAttribute"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IcalReportAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Export" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Export" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -68,7 +68,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExportAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -88,7 +88,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AllocateResourceAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Navigator" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Navigator" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NavigatorAttribute"
@@ -103,7 +103,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NewTaskAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NikuReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="NikuReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NikuReportAttribute"
@@ -120,7 +120,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Author" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Balance" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Balance" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cost" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="revenue" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account"/>
   </eClassifiers>
@@ -168,7 +168,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Complete" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="complete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Copyright" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Copyright" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Credit" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountAttribute">
@@ -239,7 +239,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Fail" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Flags" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheetAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusTimesheetAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Flags" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheetAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusTimesheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="flags" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -274,6 +274,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="HideTask" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IcalReportAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExportAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NikuReportAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IncludeProperties" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludePropertiesAttribute"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IncludePropertiesAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Interval1">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -331,7 +338,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="length" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DurationQuantity"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Limits" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Limits" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LimitsAttribute"
         containment="true"/>
@@ -344,7 +351,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="LoadUnit" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Macro" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Macro" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Managers" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
@@ -394,7 +401,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ProjectId" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProjectIds" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectIds" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ids" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -438,14 +445,14 @@
     <eLiterals name="PRECEDES" value="6" literal="precedes"/>
     <eLiterals name="WARN" value="7" literal="warn"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Rate" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Rate" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Remaining" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NewTaskAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskTimesheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="remaining" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DurationQuantity"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReportPrefix">
+  <eClassifiers xsi:type="ecore:EClass" name="ReportPrefix" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludePropertiesAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="report" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Report"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceAttributes" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExportAttribute">
@@ -455,10 +462,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="booking" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="workingHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourcePrefix">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcePrefix" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludePropertiesAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceRoot" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource"/>
   </eClassifiers>
@@ -508,7 +515,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SelfContained" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selfcontained" eType="ecore:EEnum platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//YesNo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shift" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Shift" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="replace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -573,7 +580,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusTimesheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheet" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interval" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval4"
         containment="true"/>
@@ -582,7 +589,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusSheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReportAttribute"
@@ -590,31 +597,31 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusSheetReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Summary" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheetAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusTimesheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplementAccount" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementAccount" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="account" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountAttribute"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplementReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="report" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Report"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplementResource" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementResource" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplementTask" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementTask" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Task"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TagFile" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TagFile" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hideResource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideResource"
@@ -655,14 +662,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="complete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="depends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskPrefix">
+  <eClassifiers xsi:type="ecore:EClass" name="TaskPrefix" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludePropertiesAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Task"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="TaskRoot" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Task"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="TimeFormat" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeformat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -670,7 +677,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Timesheet" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Timesheet" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interval" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval4"
         containment="true"/>
@@ -679,7 +686,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimesheetAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TimesheetReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TimesheetReport" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimesheetReportAttribute"
@@ -699,13 +706,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TrackingScenario" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TrackingScenario" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ProjectAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scenario"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TreeLevel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Vacation" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GlobalAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Vacation" eSuperTypes="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="intervals" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval3"

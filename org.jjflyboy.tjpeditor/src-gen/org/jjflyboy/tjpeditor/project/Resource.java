@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Resource extends GlobalAttribute, ResourceAttribute
+public interface Resource extends Property, ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.

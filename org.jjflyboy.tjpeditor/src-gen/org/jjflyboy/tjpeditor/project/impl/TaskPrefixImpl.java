@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.Task;
@@ -30,7 +29,7 @@ import org.jjflyboy.tjpeditor.project.TaskPrefix;
  *
  * @generated
  */
-public class TaskPrefixImpl extends MinimalEObjectImpl.Container implements TaskPrefix
+public class TaskPrefixImpl extends IncludePropertiesAttributeImpl implements TaskPrefix
 {
   /**
    * The cached value of the '{@link #getTask() <em>Task</em>}' reference.

@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class ExportImpl extends GlobalAttributeImpl implements Export
+public class ExportImpl extends PropertyImpl implements Export
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

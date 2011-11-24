@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SupplementReport extends GlobalAttribute
+public interface SupplementReport extends Property
 {
   /**
    * Returns the value of the '<em><b>Report</b></em>' reference.

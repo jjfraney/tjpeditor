@@ -82,10 +82,10 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ProjectPackage.GLOBAL_ATTRIBUTE:
+      case ProjectPackage.PROPERTY:
       {
-        GlobalAttribute globalAttribute = (GlobalAttribute)theEObject;
-        T result = caseGlobalAttribute(globalAttribute);
+        Property property = (Property)theEObject;
+        T result = caseProperty(property);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -93,7 +93,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Account account = (Account)theEObject;
         T result = caseAccount(account);
-        if (result == null) result = caseGlobalAttribute(account);
+        if (result == null) result = caseProperty(account);
         if (result == null) result = caseAccountAttribute(account);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -109,6 +109,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         AccountPrefix accountPrefix = (AccountPrefix)theEObject;
         T result = caseAccountPrefix(accountPrefix);
+        if (result == null) result = caseIncludePropertiesAttribute(accountPrefix);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -116,7 +117,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         AccountReport accountReport = (AccountReport)theEObject;
         T result = caseAccountReport(accountReport);
-        if (result == null) result = caseGlobalAttribute(accountReport);
+        if (result == null) result = caseProperty(accountReport);
         if (result == null) result = caseReportAttribute(accountReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -147,7 +148,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Task task = (Task)theEObject;
         T result = caseTask(task);
-        if (result == null) result = caseGlobalAttribute(task);
+        if (result == null) result = caseProperty(task);
         if (result == null) result = caseTaskAttribute(task);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -167,7 +168,7 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = caseResourceReport(report);
         if (result == null) result = caseTaskReport(report);
         if (result == null) result = caseTextReport(report);
-        if (result == null) result = caseGlobalAttribute(report);
+        if (result == null) result = caseProperty(report);
         if (result == null) result = caseReportAttribute(report);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -183,7 +184,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         IcalReport icalReport = (IcalReport)theEObject;
         T result = caseIcalReport(icalReport);
-        if (result == null) result = caseGlobalAttribute(icalReport);
+        if (result == null) result = caseProperty(icalReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -198,7 +199,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Export export = (Export)theEObject;
         T result = caseExport(export);
-        if (result == null) result = caseGlobalAttribute(export);
+        if (result == null) result = caseProperty(export);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -213,7 +214,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Resource resource = (Resource)theEObject;
         T result = caseResource(resource);
-        if (result == null) result = caseGlobalAttribute(resource);
+        if (result == null) result = caseProperty(resource);
         if (result == null) result = caseResourceAttribute(resource);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -251,7 +252,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Navigator navigator = (Navigator)theEObject;
         T result = caseNavigator(navigator);
-        if (result == null) result = caseGlobalAttribute(navigator);
+        if (result == null) result = caseProperty(navigator);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -281,7 +282,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         NikuReport nikuReport = (NikuReport)theEObject;
         T result = caseNikuReport(nikuReport);
-        if (result == null) result = caseGlobalAttribute(nikuReport);
+        if (result == null) result = caseProperty(nikuReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -319,7 +320,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Balance balance = (Balance)theEObject;
         T result = caseBalance(balance);
-        if (result == null) result = caseGlobalAttribute(balance);
+        if (result == null) result = caseProperty(balance);
         if (result == null) result = caseReportAttribute(balance);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -415,7 +416,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Copyright copyright = (Copyright)theEObject;
         T result = caseCopyright(copyright);
-        if (result == null) result = caseGlobalAttribute(copyright);
+        if (result == null) result = caseProperty(copyright);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -610,7 +611,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Flags flags = (Flags)theEObject;
         T result = caseFlags(flags);
-        if (result == null) result = caseGlobalAttribute(flags);
+        if (result == null) result = caseProperty(flags);
         if (result == null) result = caseAccountAttribute(flags);
         if (result == null) result = caseTaskAttribute(flags);
         if (result == null) result = caseReportAttribute(flags);
@@ -734,6 +735,21 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.INCLUDE_PROPERTIES:
+      {
+        IncludeProperties includeProperties = (IncludeProperties)theEObject;
+        T result = caseIncludeProperties(includeProperties);
+        if (result == null) result = caseProperty(includeProperties);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.INCLUDE_PROPERTIES_ATTRIBUTE:
+      {
+        IncludePropertiesAttribute includePropertiesAttribute = (IncludePropertiesAttribute)theEObject;
+        T result = caseIncludePropertiesAttribute(includePropertiesAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.INTERVAL1:
       {
         Interval1 interval1 = (Interval1)theEObject;
@@ -808,7 +824,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Limits limits = (Limits)theEObject;
         T result = caseLimits(limits);
-        if (result == null) result = caseGlobalAttribute(limits);
+        if (result == null) result = caseProperty(limits);
         if (result == null) result = caseTaskAttribute(limits);
         if (result == null) result = caseResourceAttribute(limits);
         if (result == null) result = defaultCase(theEObject);
@@ -849,7 +865,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Macro macro = (Macro)theEObject;
         T result = caseMacro(macro);
-        if (result == null) result = caseGlobalAttribute(macro);
+        if (result == null) result = caseProperty(macro);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1020,7 +1036,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         ProjectIds projectIds = (ProjectIds)theEObject;
         T result = caseProjectIds(projectIds);
-        if (result == null) result = caseGlobalAttribute(projectIds);
+        if (result == null) result = caseProperty(projectIds);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1060,7 +1076,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Rate rate = (Rate)theEObject;
         T result = caseRate(rate);
-        if (result == null) result = caseGlobalAttribute(rate);
+        if (result == null) result = caseProperty(rate);
         if (result == null) result = caseResourceAttribute(rate);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1078,6 +1094,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         ReportPrefix reportPrefix = (ReportPrefix)theEObject;
         T result = caseReportPrefix(reportPrefix);
+        if (result == null) result = caseIncludePropertiesAttribute(reportPrefix);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1093,6 +1110,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         ResourcePrefix resourcePrefix = (ResourcePrefix)theEObject;
         T result = caseResourcePrefix(resourcePrefix);
+        if (result == null) result = caseIncludePropertiesAttribute(resourcePrefix);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1100,7 +1118,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         ResourceReport resourceReport = (ResourceReport)theEObject;
         T result = caseResourceReport(resourceReport);
-        if (result == null) result = caseGlobalAttribute(resourceReport);
+        if (result == null) result = caseProperty(resourceReport);
         if (result == null) result = caseReportAttribute(resourceReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1233,7 +1251,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Shift shift = (Shift)theEObject;
         T result = caseShift(shift);
-        if (result == null) result = caseGlobalAttribute(shift);
+        if (result == null) result = caseProperty(shift);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1392,7 +1410,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         StatusSheet statusSheet = (StatusSheet)theEObject;
         T result = caseStatusSheet(statusSheet);
-        if (result == null) result = caseGlobalAttribute(statusSheet);
+        if (result == null) result = caseProperty(statusSheet);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1407,7 +1425,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         StatusSheetReport statusSheetReport = (StatusSheetReport)theEObject;
         T result = caseStatusSheetReport(statusSheetReport);
-        if (result == null) result = caseGlobalAttribute(statusSheetReport);
+        if (result == null) result = caseProperty(statusSheetReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1431,7 +1449,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         SupplementAccount supplementAccount = (SupplementAccount)theEObject;
         T result = caseSupplementAccount(supplementAccount);
-        if (result == null) result = caseGlobalAttribute(supplementAccount);
+        if (result == null) result = caseProperty(supplementAccount);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1439,7 +1457,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         SupplementReport supplementReport = (SupplementReport)theEObject;
         T result = caseSupplementReport(supplementReport);
-        if (result == null) result = caseGlobalAttribute(supplementReport);
+        if (result == null) result = caseProperty(supplementReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1447,7 +1465,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         SupplementResource supplementResource = (SupplementResource)theEObject;
         T result = caseSupplementResource(supplementResource);
-        if (result == null) result = caseGlobalAttribute(supplementResource);
+        if (result == null) result = caseProperty(supplementResource);
         if (result == null) result = caseResourceAttribute(supplementResource);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1456,7 +1474,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         SupplementTask supplementTask = (SupplementTask)theEObject;
         T result = caseSupplementTask(supplementTask);
-        if (result == null) result = caseGlobalAttribute(supplementTask);
+        if (result == null) result = caseProperty(supplementTask);
         if (result == null) result = caseTaskAttribute(supplementTask);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1465,7 +1483,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TagFile tagFile = (TagFile)theEObject;
         T result = caseTagFile(tagFile);
-        if (result == null) result = caseGlobalAttribute(tagFile);
+        if (result == null) result = caseProperty(tagFile);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1512,6 +1530,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TaskPrefix taskPrefix = (TaskPrefix)theEObject;
         T result = caseTaskPrefix(taskPrefix);
+        if (result == null) result = caseIncludePropertiesAttribute(taskPrefix);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1519,7 +1538,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TaskReport taskReport = (TaskReport)theEObject;
         T result = caseTaskReport(taskReport);
-        if (result == null) result = caseGlobalAttribute(taskReport);
+        if (result == null) result = caseProperty(taskReport);
         if (result == null) result = caseReportAttribute(taskReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1536,7 +1555,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TextReport textReport = (TextReport)theEObject;
         T result = caseTextReport(textReport);
-        if (result == null) result = caseGlobalAttribute(textReport);
+        if (result == null) result = caseProperty(textReport);
         if (result == null) result = caseReportAttribute(textReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1561,7 +1580,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Timesheet timesheet = (Timesheet)theEObject;
         T result = caseTimesheet(timesheet);
-        if (result == null) result = caseGlobalAttribute(timesheet);
+        if (result == null) result = caseProperty(timesheet);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1576,7 +1595,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TimesheetReport timesheetReport = (TimesheetReport)theEObject;
         T result = caseTimesheetReport(timesheetReport);
-        if (result == null) result = caseGlobalAttribute(timesheetReport);
+        if (result == null) result = caseProperty(timesheetReport);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1627,7 +1646,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TrackingScenario trackingScenario = (TrackingScenario)theEObject;
         T result = caseTrackingScenario(trackingScenario);
-        if (result == null) result = caseGlobalAttribute(trackingScenario);
+        if (result == null) result = caseProjectAttribute(trackingScenario);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1642,7 +1661,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         Vacation vacation = (Vacation)theEObject;
         T result = caseVacation(vacation);
-        if (result == null) result = caseGlobalAttribute(vacation);
+        if (result == null) result = caseProperty(vacation);
         if (result == null) result = caseResourceAttribute(vacation);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -1864,17 +1883,17 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Global Attribute</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Global Attribute</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Property</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGlobalAttribute(GlobalAttribute object)
+  public T caseProperty(Property object)
   {
     return null;
   }
@@ -3123,6 +3142,38 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseHideTask(HideTask object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Include Properties</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Include Properties</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIncludeProperties(IncludeProperties object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Include Properties Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Include Properties Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIncludePropertiesAttribute(IncludePropertiesAttribute object)
   {
     return null;
   }

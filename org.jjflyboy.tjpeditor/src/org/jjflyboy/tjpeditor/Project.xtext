@@ -18,9 +18,9 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 // TODO: Include
 
-Global: project=Project attributes+=GlobalAttribute*;
+Global: project=Project properties+=Property*;
 
-GlobalAttribute:
+Property:
     Account
     | AccountReport
     | Balance
@@ -28,7 +28,7 @@ GlobalAttribute:
 	| Export
 	| Flags
 	| IcalReport
-// TODO	| IncludeProperties
+	| IncludeProperties
 	| Limits
 	| Macro
 	| Navigator
@@ -50,7 +50,6 @@ GlobalAttribute:
 	| Task
 	| Timesheet
 	| TimesheetReport
-	| TrackingScenario
 	| Vacation
 ;
 
@@ -92,6 +91,7 @@ ProjectAttribute:
 		| ShortTimeFormat
 		| Timezone
 		| TimingResolution
+		| TrackingScenario
 		| WeekStarts
 		| WorkingHours
 		| YearlyWorkingDays
@@ -507,52 +507,17 @@ HideTask: 'hidetask' expression = LogicalExpression;
 // http://www.taskjuggler.org/tj3/manual/include.macro.html
 // http://www.taskjuggler.org/tj3/manual/include.project.html
 // http://www.taskjuggler.org/tj3/manual/include.properties.html
-//IncludeProperties: 'include' filename=STRING
-//	('{' attributes+=IncludeAttribute* '}')? argument=IncludeArgument?;
-//
-//IncludeAttribute: 
-//	AccountPrefix
-//	| ReportPrefix
-//	| ResourcePrefix
-//	| TaskPrefix;
-//	
-//IncludeArgument:
-//	Account
-//	| AccountReport
-//	| Copyright
-//	| Balance
-//	| Flags
-//	| IncludeProperties
-//	| Limits
-//	| Macro
-//	| Navigator
-//	| ProjectId
-//	| ProjectIds
-//	| Rate
-//	| Export
-//	| IcalReport
-//	| NikuReport 
-//	| ResourceReport
-//	| TaskReport
-//	| TextReport
-//	| TagFile
-//	| StatusSheetReport
-//	| TimesheetReport
-//	| Resource
-//	| Shift
-//	| StatusSheet
-//	| SupplementAccount
-//	| SupplementReport
-//	| SupplementResource
-//	| SupplementTask
-//	| Task
-//	| Timesheet
-//	| Vacation
-//;
+IncludeProperties: 'include' filename=STRING
+	('{' attributes+=IncludePropertiesAttribute* '}')? 
+	// TODO: property=Property? , waiting for syntax clarification from tjIII developer
+;
 
-// http://www.taskjuggler.org/tj3/manual/include.properties.html
-// TODO
-// not sure how this include and the above include can be differentiated by parser
+IncludePropertiesAttribute: 
+	AccountPrefix
+	| ReportPrefix
+	| ResourcePrefix
+	| TaskPrefix;
+	
 
 // http://www.taskjuggler.org/tj3/manual/inherit.extend.html
 // do not implement.

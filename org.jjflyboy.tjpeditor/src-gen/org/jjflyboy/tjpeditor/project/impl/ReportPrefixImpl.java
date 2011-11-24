@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 import org.jjflyboy.tjpeditor.project.Report;
@@ -30,7 +29,7 @@ import org.jjflyboy.tjpeditor.project.ReportPrefix;
  *
  * @generated
  */
-public class ReportPrefixImpl extends MinimalEObjectImpl.Container implements ReportPrefix
+public class ReportPrefixImpl extends IncludePropertiesAttributeImpl implements ReportPrefix
 {
   /**
    * The cached value of the '{@link #getReport() <em>Report</em>}' reference.

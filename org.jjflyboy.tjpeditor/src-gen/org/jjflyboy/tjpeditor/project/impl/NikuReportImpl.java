@@ -38,7 +38,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class NikuReportImpl extends GlobalAttributeImpl implements NikuReport
+public class NikuReportImpl extends PropertyImpl implements NikuReport
 {
   /**
    * The default value of the '{@link #getFilename() <em>Filename</em>}' attribute.

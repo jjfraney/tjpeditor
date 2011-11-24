@@ -29,7 +29,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class ProjectIdsImpl extends GlobalAttributeImpl implements ProjectIds
+public class ProjectIdsImpl extends PropertyImpl implements ProjectIds
 {
   /**
    * The cached value of the '{@link #getIds() <em>Ids</em>}' attribute list.

@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Rate extends GlobalAttribute, ResourceAttribute
+public interface Rate extends Property, ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Rate</b></em>' attribute.

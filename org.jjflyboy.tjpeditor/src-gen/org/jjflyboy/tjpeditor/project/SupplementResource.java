@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SupplementResource extends GlobalAttribute, ResourceAttribute
+public interface SupplementResource extends Property, ResourceAttribute
 {
   /**
    * Returns the value of the '<em><b>Resource</b></em>' reference.

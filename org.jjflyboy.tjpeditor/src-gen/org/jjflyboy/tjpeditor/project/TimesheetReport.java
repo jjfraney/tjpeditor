@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface TimesheetReport extends GlobalAttribute
+public interface TimesheetReport extends Property
 {
   /**
    * Returns the value of the '<em><b>Filename</b></em>' attribute.

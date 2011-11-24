@@ -28,7 +28,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Shift extends GlobalAttribute
+public interface Shift extends Property
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.

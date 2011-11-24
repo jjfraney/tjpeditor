@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Macro extends GlobalAttribute
+public interface Macro extends Property
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

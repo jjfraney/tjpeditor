@@ -29,7 +29,7 @@ import org.jjflyboy.tjpeditor.project.TrackingScenario;
  *
  * @generated
  */
-public class TrackingScenarioImpl extends GlobalAttributeImpl implements TrackingScenario
+public class TrackingScenarioImpl extends ProjectAttributeImpl implements TrackingScenario
 {
   /**
    * The cached value of the '{@link #getScenario() <em>Scenario</em>}' reference.

@@ -38,7 +38,7 @@ import org.jjflyboy.tjpeditor.project.StatusSheetReportAttribute;
  *
  * @generated
  */
-public class StatusSheetReportImpl extends GlobalAttributeImpl implements StatusSheetReport
+public class StatusSheetReportImpl extends PropertyImpl implements StatusSheetReport
 {
   /**
    * The default value of the '{@link #getFilename() <em>Filename</em>}' attribute.

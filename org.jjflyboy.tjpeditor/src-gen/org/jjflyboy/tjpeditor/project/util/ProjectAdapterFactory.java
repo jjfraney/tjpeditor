@@ -83,9 +83,9 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createGlobalAdapter();
       }
       @Override
-      public Adapter caseGlobalAttribute(GlobalAttribute object)
+      public Adapter caseProperty(Property object)
       {
-        return createGlobalAttributeAdapter();
+        return createPropertyAdapter();
       }
       @Override
       public Adapter caseAccount(Account object)
@@ -476,6 +476,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseHideTask(HideTask object)
       {
         return createHideTaskAdapter();
+      }
+      @Override
+      public Adapter caseIncludeProperties(IncludeProperties object)
+      {
+        return createIncludePropertiesAdapter();
+      }
+      @Override
+      public Adapter caseIncludePropertiesAttribute(IncludePropertiesAttribute object)
+      {
+        return createIncludePropertiesAttributeAdapter();
       }
       @Override
       public Adapter caseInterval1(Interval1 object)
@@ -1170,16 +1180,16 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.GlobalAttribute <em>Global Attribute</em>}'.
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Property <em>Property</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.jjflyboy.tjpeditor.project.GlobalAttribute
+   * @see org.jjflyboy.tjpeditor.project.Property
    * @generated
    */
-  public Adapter createGlobalAttributeAdapter()
+  public Adapter createPropertyAdapter()
   {
     return null;
   }
@@ -2350,6 +2360,36 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createHideTaskAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.IncludeProperties <em>Include Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.IncludeProperties
+   * @generated
+   */
+  public Adapter createIncludePropertiesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.IncludePropertiesAttribute <em>Include Properties Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.IncludePropertiesAttribute
+   * @generated
+   */
+  public Adapter createIncludePropertiesAttributeAdapter()
   {
     return null;
   }

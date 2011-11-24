@@ -37,7 +37,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getGlobalAttributeAccess().getAlternatives(), "rule__GlobalAttribute__Alternatives");
+					put(grammarAccess.getPropertyAccess().getAlternatives(), "rule__Property__Alternatives");
 					put(grammarAccess.getAccountAttributeAccess().getAlternatives(), "rule__AccountAttribute__Alternatives");
 					put(grammarAccess.getProjectAttributeAccess().getAlternatives(), "rule__ProjectAttribute__Alternatives");
 					put(grammarAccess.getTaskAttributeAccess().getAlternatives(), "rule__TaskAttribute__Alternatives");
@@ -50,6 +50,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNikuReportAttributeAccess().getAlternatives(), "rule__NikuReportAttribute__Alternatives");
 					put(grammarAccess.getDefinitionsAccess().getAlternatives_1(), "rule__Definitions__Alternatives_1");
 					put(grammarAccess.getExtendAccess().getAlternatives_0(), "rule__Extend__Alternatives_0");
+					put(grammarAccess.getIncludePropertiesAttributeAccess().getAlternatives(), "rule__IncludePropertiesAttribute__Alternatives");
 					put(grammarAccess.getInterval1Access().getAlternatives_1(), "rule__Interval1__Alternatives_1");
 					put(grammarAccess.getInterval2Access().getAlternatives_1(), "rule__Interval2__Alternatives_1");
 					put(grammarAccess.getInterval3Access().getAlternatives_1(), "rule__Interval3__Alternatives_1");
@@ -187,6 +188,8 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHideReportAccess().getGroup(), "rule__HideReport__Group__0");
 					put(grammarAccess.getHideResourceAccess().getGroup(), "rule__HideResource__Group__0");
 					put(grammarAccess.getHideTaskAccess().getGroup(), "rule__HideTask__Group__0");
+					put(grammarAccess.getIncludePropertiesAccess().getGroup(), "rule__IncludeProperties__Group__0");
+					put(grammarAccess.getIncludePropertiesAccess().getGroup_2(), "rule__IncludeProperties__Group_2__0");
 					put(grammarAccess.getInterval1Access().getGroup(), "rule__Interval1__Group__0");
 					put(grammarAccess.getInterval1Access().getGroup_1_0(), "rule__Interval1__Group_1_0__0");
 					put(grammarAccess.getInterval1Access().getGroup_1_1(), "rule__Interval1__Group_1_1__0");
@@ -360,7 +363,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getWeekdaysAccess().getGroup(), "rule__Weekdays__Group__0");
 					put(grammarAccess.getWeekdaysAccess().getGroup_1(), "rule__Weekdays__Group_1__0");
 					put(grammarAccess.getGlobalAccess().getProjectAssignment_0(), "rule__Global__ProjectAssignment_0");
-					put(grammarAccess.getGlobalAccess().getAttributesAssignment_1(), "rule__Global__AttributesAssignment_1");
+					put(grammarAccess.getGlobalAccess().getPropertiesAssignment_1(), "rule__Global__PropertiesAssignment_1");
 					put(grammarAccess.getAccountAccess().getIdAssignment_1(), "rule__Account__IdAssignment_1");
 					put(grammarAccess.getAccountAccess().getNameAssignment_2(), "rule__Account__NameAssignment_2");
 					put(grammarAccess.getAccountAccess().getAttributesAssignment_3_1(), "rule__Account__AttributesAssignment_3_1");
@@ -462,6 +465,8 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHideReportAccess().getExpressionAssignment_1(), "rule__HideReport__ExpressionAssignment_1");
 					put(grammarAccess.getHideResourceAccess().getExpressionAssignment_1(), "rule__HideResource__ExpressionAssignment_1");
 					put(grammarAccess.getHideTaskAccess().getExpressionAssignment_1(), "rule__HideTask__ExpressionAssignment_1");
+					put(grammarAccess.getIncludePropertiesAccess().getFilenameAssignment_1(), "rule__IncludeProperties__FilenameAssignment_1");
+					put(grammarAccess.getIncludePropertiesAccess().getAttributesAssignment_2_1(), "rule__IncludeProperties__AttributesAssignment_2_1");
 					put(grammarAccess.getInterval1Access().getStartAssignment_0(), "rule__Interval1__StartAssignment_0");
 					put(grammarAccess.getInterval1Access().getEndAssignment_1_0_1(), "rule__Interval1__EndAssignment_1_0_1");
 					put(grammarAccess.getInterval1Access().getDurationAssignment_1_1_1(), "rule__Interval1__DurationAssignment_1_1_1");

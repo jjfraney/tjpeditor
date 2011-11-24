@@ -35,13 +35,13 @@ public interface ProjectFactory extends EFactory
   Global createGlobal();
 
   /**
-   * Returns a new object of class '<em>Global Attribute</em>'.
+   * Returns a new object of class '<em>Property</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Global Attribute</em>'.
+   * @return a new object of class '<em>Property</em>'.
    * @generated
    */
-  GlobalAttribute createGlobalAttribute();
+  Property createProperty();
 
   /**
    * Returns a new object of class '<em>Account</em>'.
@@ -744,6 +744,24 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   HideTask createHideTask();
+
+  /**
+   * Returns a new object of class '<em>Include Properties</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Include Properties</em>'.
+   * @generated
+   */
+  IncludeProperties createIncludeProperties();
+
+  /**
+   * Returns a new object of class '<em>Include Properties Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Include Properties Attribute</em>'.
+   * @generated
+   */
+  IncludePropertiesAttribute createIncludePropertiesAttribute();
 
   /**
    * Returns a new object of class '<em>Interval1</em>'.

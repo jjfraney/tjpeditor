@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Export extends GlobalAttribute
+public interface Export extends Property
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.

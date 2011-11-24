@@ -34,7 +34,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class LimitsImpl extends GlobalAttributeImpl implements Limits
+public class LimitsImpl extends PropertyImpl implements Limits
 {
   /**
    * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.

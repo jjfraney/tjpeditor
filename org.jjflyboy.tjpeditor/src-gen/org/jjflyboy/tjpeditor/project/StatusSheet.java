@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface StatusSheet extends GlobalAttribute
+public interface StatusSheet extends Property
 {
   /**
    * Returns the value of the '<em><b>Resource</b></em>' reference.

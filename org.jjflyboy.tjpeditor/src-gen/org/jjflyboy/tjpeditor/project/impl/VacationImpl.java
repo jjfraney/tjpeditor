@@ -38,7 +38,7 @@ import org.jjflyboy.tjpeditor.project.Vacation;
  *
  * @generated
  */
-public class VacationImpl extends GlobalAttributeImpl implements Vacation
+public class VacationImpl extends PropertyImpl implements Vacation
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

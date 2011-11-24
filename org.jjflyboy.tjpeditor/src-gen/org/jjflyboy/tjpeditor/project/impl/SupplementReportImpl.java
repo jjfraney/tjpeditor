@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.SupplementReport;
  *
  * @generated
  */
-public class SupplementReportImpl extends GlobalAttributeImpl implements SupplementReport
+public class SupplementReportImpl extends PropertyImpl implements SupplementReport
 {
   /**
    * The cached value of the '{@link #getReport() <em>Report</em>}' reference.

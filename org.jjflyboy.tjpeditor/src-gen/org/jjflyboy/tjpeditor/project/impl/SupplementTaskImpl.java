@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.TaskAttribute;
  *
  * @generated
  */
-public class SupplementTaskImpl extends GlobalAttributeImpl implements SupplementTask
+public class SupplementTaskImpl extends PropertyImpl implements SupplementTask
 {
   /**
    * The cached value of the '{@link #getTask() <em>Task</em>}' reference.

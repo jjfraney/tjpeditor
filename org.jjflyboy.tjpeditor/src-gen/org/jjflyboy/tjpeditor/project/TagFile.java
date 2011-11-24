@@ -27,7 +27,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface TagFile extends GlobalAttribute
+public interface TagFile extends Property
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.

@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ProjectIds extends GlobalAttribute
+public interface ProjectIds extends Property
 {
   /**
    * Returns the value of the '<em><b>Ids</b></em>' attribute list.

@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class MacroImpl extends GlobalAttributeImpl implements Macro
+public class MacroImpl extends PropertyImpl implements Macro
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

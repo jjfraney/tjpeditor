@@ -39,7 +39,7 @@ import org.jjflyboy.tjpeditor.project.TaskAttribute;
  *
  * @generated
  */
-public class TaskImpl extends GlobalAttributeImpl implements Task
+public class TaskImpl extends PropertyImpl implements Task
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

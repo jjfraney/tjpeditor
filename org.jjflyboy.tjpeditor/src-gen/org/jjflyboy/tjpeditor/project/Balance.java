@@ -23,7 +23,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Balance extends GlobalAttribute, ReportAttribute
+public interface Balance extends Property, ReportAttribute
 {
   /**
    * Returns the value of the '<em><b>Cost</b></em>' reference.

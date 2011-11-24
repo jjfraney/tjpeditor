@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.jjflyboy.tjpeditor.project.Global#getProject <em>Project</em>}</li>
- *   <li>{@link org.jjflyboy.tjpeditor.project.Global#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.Global#getProperties <em>Properties</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,19 +55,19 @@ public interface Global extends EObject
   void setProject(Project value);
 
   /**
-   * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
-   * The list contents are of type {@link org.jjflyboy.tjpeditor.project.GlobalAttribute}.
+   * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
+   * The list contents are of type {@link org.jjflyboy.tjpeditor.project.Property}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Attributes</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Attributes</em>' containment reference list.
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getGlobal_Attributes()
+   * @return the value of the '<em>Properties</em>' containment reference list.
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getGlobal_Properties()
    * @model containment="true"
    * @generated
    */
-  EList<GlobalAttribute> getAttributes();
+  EList<Property> getProperties();
 
 } // Global

@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface Copyright extends GlobalAttribute
+public interface Copyright extends Property
 {
   /**
    * Returns the value of the '<em><b>Text</b></em>' attribute.

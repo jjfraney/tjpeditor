@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SupplementTask extends GlobalAttribute, TaskAttribute
+public interface SupplementTask extends Property, TaskAttribute
 {
   /**
    * Returns the value of the '<em><b>Task</b></em>' reference.

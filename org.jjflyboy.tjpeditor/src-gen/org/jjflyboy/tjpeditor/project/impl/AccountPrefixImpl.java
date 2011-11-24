@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.jjflyboy.tjpeditor.project.Account;
 import org.jjflyboy.tjpeditor.project.AccountPrefix;
@@ -30,7 +29,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  *
  * @generated
  */
-public class AccountPrefixImpl extends MinimalEObjectImpl.Container implements AccountPrefix
+public class AccountPrefixImpl extends IncludePropertiesAttributeImpl implements AccountPrefix
 {
   /**
    * The cached value of the '{@link #getAccount() <em>Account</em>}' reference.

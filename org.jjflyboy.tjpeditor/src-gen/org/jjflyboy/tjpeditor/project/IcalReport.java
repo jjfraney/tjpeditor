@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IcalReport extends GlobalAttribute
+public interface IcalReport extends Property
 {
   /**
    * Returns the value of the '<em><b>Filename</b></em>' attribute.
