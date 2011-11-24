@@ -5,7 +5,7 @@ import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
 var grammarURI = "classpath:/org/jjflyboy/tjpeditor/Project.xtext"
-var file.extensions = "tjp"
+var file.extensions = "tjp,tji"
 var projectName = "org.jjflyboy.tjpeditor"
 var runtimeProject = "../${projectName}"
 

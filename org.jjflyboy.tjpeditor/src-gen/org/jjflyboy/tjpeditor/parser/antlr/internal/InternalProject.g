@@ -96,7 +96,7 @@ ruleGlobal returns [EObject current=null]
 	    }
 
 )
-)(
+)?(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getGlobalAccess().getPropertiesPropertyParserRuleCall_1_0()); 

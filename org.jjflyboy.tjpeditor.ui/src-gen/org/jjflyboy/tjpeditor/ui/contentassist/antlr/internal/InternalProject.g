@@ -9783,7 +9783,7 @@ rule__Global__Group__0__Impl
 :
 (
 { before(grammarAccess.getGlobalAccess().getProjectAssignment_0()); }
-(rule__Global__ProjectAssignment_0)
+(rule__Global__ProjectAssignment_0)?
 { after(grammarAccess.getGlobalAccess().getProjectAssignment_0()); }
 )
 

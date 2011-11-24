@@ -2189,10 +2189,10 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (project=Project properties+=Property*)
+	 *     (project=Project? properties+=Property*)
 	 *
 	 * Features:
-	 *    project[1, 1]
+	 *    project[0, 1]
 	 *    properties[0, *]
 	 */
 	protected void sequence_Global(EObject context, Global semanticObject) {

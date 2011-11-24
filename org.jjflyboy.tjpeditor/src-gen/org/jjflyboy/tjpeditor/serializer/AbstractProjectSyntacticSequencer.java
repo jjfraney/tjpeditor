@@ -219,7 +219,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 
 	/**
 	 * Syntax:
-	 *     'resourcereport' | 'accountreport' | 'textreport' | 'taskreport'
+	 *     'taskreport' | 'textreport' | 'accountreport' | 'resourcereport'
 	 */
 	protected void emit_AccountReport_ResourceReport_TaskReport_TextReport_AccountreportKeyword_0_or_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -253,14 +253,14 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	 * Syntax:
 	 *     (
 	     'headline' | 
-	     'header' | 
-	     'caption' | 
-	     'epilog' | 
+	     'right' | 
 	     'center' | 
-	     'footer' | 
 	     'prolog' | 
+	     'footer' | 
+	     'caption' | 
 	     'left' | 
-	     'right'
+	     'header' | 
+	     'epilog'
 	 )
 	 */
 	protected void emit_Caption_Center_Epilog_Footer_Header_Headline_Left_Prolog_Right_CaptionKeyword_0_or_CenterKeyword_0_or_EpilogKeyword_0_or_FooterKeyword_0_or_HeaderKeyword_0_or_HeadlineKeyword_0_or_LeftKeyword_0_or_PrologKeyword_0_or_RightKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -269,7 +269,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'currencyformat' | 'numberformat'
+	 *     'numberformat' | 'currencyformat'
 	 */
 	protected void emit_CurrencyFormat_NumberFormat_CurrencyformatKeyword_0_or_NumberformatKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -278,14 +278,14 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	/**
 	 * Syntax:
 	 *     (
-	     'monthlymin' | 
-	     'dailymax' | 
+	     'maximum' | 
+	     'dailymin' | 
+	     'weeklymax' | 
 	     'minimum' | 
 	     'weeklymin' | 
-	     'weeklymax' | 
-	     'monthlymax' | 
-	     'maximum' | 
-	     'dailymin'
+	     'monthlymin' | 
+	     'dailymax' | 
+	     'monthlymax'
 	 )
 	 */
 	protected void emit_DailyMax_DailyMin_Maximum_Minimum_MonthlyMax_MonthlyMin_WeeklyMax_WeeklyMin_DailymaxKeyword_0_or_DailyminKeyword_0_or_MaximumKeyword_0_or_MinimumKeyword_0_or_MonthlymaxKeyword_0_or_MonthlyminKeyword_0_or_WeeklymaxKeyword_0_or_WeeklyminKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -334,7 +334,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'text' | 'reference' | 'richtext' | 'date'
+	 *     'reference' | 'text' | 'date' | 'richtext'
 	 */
 	protected void emit_Extend_DateKeyword_0_1_or_ReferenceKeyword_0_0_or_RichtextKeyword_0_2_or_TextKeyword_0_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -454,7 +454,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'sorttasks' | 'sortaccounts' | 'sortjournalentries' | 'sortresources'
+	 *     'sorttasks' | 'sortaccounts' | 'sortresources' | 'sortjournalentries'
 	 */
 	protected void emit_SortAccounts_SortJournalEntries_SortResources_SortTasks_SortaccountsKeyword_0_or_SortjournalentriesKeyword_0_or_SortresourcesKeyword_0_or_SorttasksKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

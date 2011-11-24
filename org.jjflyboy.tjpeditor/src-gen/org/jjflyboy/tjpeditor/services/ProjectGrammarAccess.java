@@ -38,14 +38,16 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//// order and permits repeats
 		////
 		//// TODO: Include
+		//// project is optional so the same rules can be
+		//// used for tji files.
 		//Global:
-		//	project=Project properties+=Property*;
+		//	project=Project? properties+=Property*;
 		public ParserRule getRule() { return rule; }
 
-		//project=Project properties+=Property*
+		//project=Project? properties+=Property*
 		public Group getGroup() { return cGroup; }
 
-		//project=Project
+		//project=Project?
 		public Assignment getProjectAssignment_0() { return cProjectAssignment_0; }
 
 		//Project
@@ -3402,12 +3404,12 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//// http://www.taskjuggler.org/tj3/manual/include.macro.html
 		//// http://www.taskjuggler.org/tj3/manual/include.project.html
 		//// http://www.taskjuggler.org/tj3/manual/include.properties.html
+		//// TODO: property=Property? , waiting for syntax clarification from tjIII developer
 		//IncludeProperties:
-		//	"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")? // TODO: property=Property?
-		//;
+		//	"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")? // TODO: property=Property?
+		//"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"include"
@@ -3478,9 +3480,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDurationAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
 		private final RuleCall cDurationDurationQuantityParserRuleCall_1_1_1_0 = (RuleCall)cDurationAssignment_1_1_1.eContents().get(0);
 		
-		//// http://www.taskjuggler.org/tj3/manual/include.properties.html
-		//// TODO
-		//// not sure how this include and the above include can be differentiated by parser
 		//// http://www.taskjuggler.org/tj3/manual/inherit.extend.html
 		//// do not implement.
 		//// http://www.taskjuggler.org/tj3/manual/interval1.html
@@ -10218,8 +10217,10 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// order and permits repeats
 	////
 	//// TODO: Include
+	//// project is optional so the same rules can be
+	//// used for tji files.
 	//Global:
-	//	project=Project properties+=Property*;
+	//	project=Project? properties+=Property*;
 	public GlobalElements getGlobalAccess() {
 		return (pGlobal != null) ? pGlobal : (pGlobal = new GlobalElements());
 	}
@@ -11158,9 +11159,9 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// http://www.taskjuggler.org/tj3/manual/include.macro.html
 	//// http://www.taskjuggler.org/tj3/manual/include.project.html
 	//// http://www.taskjuggler.org/tj3/manual/include.properties.html
+	//// TODO: property=Property? , waiting for syntax clarification from tjIII developer
 	//IncludeProperties:
-	//	"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")? // TODO: property=Property?
-	//;
+	//	"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?;
 	public IncludePropertiesElements getIncludePropertiesAccess() {
 		return (pIncludeProperties != null) ? pIncludeProperties : (pIncludeProperties = new IncludePropertiesElements());
 	}
@@ -11179,9 +11180,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getIncludePropertiesAttributeAccess().getRule();
 	}
 
-	//// http://www.taskjuggler.org/tj3/manual/include.properties.html
-	//// TODO
-	//// not sure how this include and the above include can be differentiated by parser
 	//// http://www.taskjuggler.org/tj3/manual/inherit.extend.html
 	//// do not implement.
 	//// http://www.taskjuggler.org/tj3/manual/interval1.html
