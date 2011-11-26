@@ -13,35 +13,42 @@ import com.google.common.base.Predicate;
 
 public class ProjectSelectableBasedScope extends SelectableBasedScope {
 	
-	private int steps;
 	private static final String BANG = "!";
 
-	public static IScope createScope(IScope outer, ISelectable selectable, EClass type, boolean ignoreCase, int steps) {
-		return createScope(outer, selectable, null, type, ignoreCase, steps);
+	public static IScope createScope(IScope outer, ISelectable selectable, EClass type, boolean ignoreCase) {
+		return createScope(outer, selectable, null, type, ignoreCase);
 	}
 	
-	public static IScope createScope(IScope outer, ISelectable selectable, Predicate<IEObjectDescription> filter, EClass type, boolean ignoreCase, int steps) {
+	public static IScope createScope(IScope outer, ISelectable selectable, Predicate<IEObjectDescription> filter, EClass type, boolean ignoreCase) {
 		if (selectable == null || selectable.isEmpty())
 			return outer;
-		return new ProjectSelectableBasedScope(outer, selectable, filter, type, ignoreCase, steps);
+		return new ProjectSelectableBasedScope(outer, selectable, filter, type, ignoreCase);
 	}
 
 	protected ProjectSelectableBasedScope(IScope outer, ISelectable selectable,
 			Predicate<IEObjectDescription> filter, EClass type,
-			boolean ignoreCase, int steps) {
+			boolean ignoreCase) {
 		super(outer, selectable, filter, type, ignoreCase);
-		this.steps = steps;
 	}
 	
 	@Override
 	protected Iterable<IEObjectDescription> getLocalElementsByName(final QualifiedName name) {
-		Iterable<IEObjectDescription> result;
-		if(steps != 0) {
-			int bangs = countBangs(name);
-			if(steps == bangs) {
-				result = super.getLocalElementsByName(name.skipFirst(bangs));
-			} else {
-				result = Collections.emptyList();
+
+		ProjectQualifiedName searchname;
+		if(name instanceof ProjectQualifiedName) {
+			searchname = (ProjectQualifiedName)name;
+		} else {
+			searchname = new ProjectQualifiedName(name);
+		}
+		
+		Iterable<IEObjectDescription> result = Collections.emptyList();
+		
+		// an absolute or a relative name (with one last '!') can be found here.
+		if(searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
+			searchname.advance();
+			
+			if(! searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
+				result = super.getLocalElementsByName(searchname);
 			}
 		} else {
 			result = super.getLocalElementsByName(name);
@@ -49,16 +56,5 @@ public class ProjectSelectableBasedScope extends SelectableBasedScope {
 		return result;
 	}
 
-	private int countBangs(QualifiedName name) {
-		int count = 0;
-		for(String segment : name.getSegments()) {
-			if(segment.equals(BANG)) {
-				count ++;
-			} else {
-				break;
-			}
-		}
-		return count;
-	}
 
 }
