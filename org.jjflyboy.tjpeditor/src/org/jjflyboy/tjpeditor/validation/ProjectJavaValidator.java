@@ -2,6 +2,7 @@ package org.jjflyboy.tjpeditor.validation;
 
 import org.eclipse.xtext.validation.Check;
 import org.jjflyboy.tjpeditor.project.Global;
+import org.jjflyboy.tjpeditor.project.IncludeProperties;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
  
 
@@ -21,6 +22,14 @@ public class ProjectJavaValidator extends AbstractProjectJavaValidator {
 			error("A *.tjp file must have a 'project' property.", ProjectPackage.eINSTANCE.getGlobal_Project());
 		} else if("tji".equals(ext) && global.getProject() != null) {
 			error("A *.tji file must not have a 'project' property.", ProjectPackage.eINSTANCE.getGlobal_Project());
+		}
+	}
+	
+	@Check
+	public void checkExtensionOfIncludeFilename(IncludeProperties include) {
+		if(include.getImportURI() != null && ! include.getImportURI().endsWith(".tji")) {
+			error("Can include files only with '*.tji' extension.",
+					ProjectPackage.eINSTANCE.getIncludeProperties_ImportURI());
 		}
 	}
 	

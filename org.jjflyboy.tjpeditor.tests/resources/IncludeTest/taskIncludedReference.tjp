@@ -1,0 +1,32 @@
+project prj "test project" 2010-01-16 + 4 m
+include "taskDefinition.tji"
+
+# top level path can be resolved
+task this "this task" {
+  depends that
+}
+
+# absolute path can be resolved across resources
+task t2 "this task 2" {
+  depends that.deep
+}
+
+# relative path can be resolved across resources
+task t3 "this task 3" {
+
+  depends !that.deep
+  
+  # relative path can be resolved across resources
+  task t4 "this task 4" {
+    depends !!that.deep
+  }
+}
+
+# requires absolute path to get to deep task
+task t5 "this task 5" {
+  # will fail to resolve
+  depends deep
+  task t6 "this task 6" {
+	task t7 "this task 7"
+  }
+}

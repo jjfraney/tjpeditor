@@ -1,0 +1,22 @@
+project prj "test project" 2010-01-16 + 4 m
+
+# top level path cannot be resolved
+task this "this task" {
+  depends that
+}
+
+# absolute path cannot be resolved across resources
+task t2 "this task 2" {
+  depends that.deep
+}
+
+# relative path cannot be resolved across resources
+task t3 "this task 3" {
+  depends !that.deep
+  
+  # relative path cannot be resolved across resources
+  task t4 "this task 4" {
+    depends !!that.deep
+  }
+}
+

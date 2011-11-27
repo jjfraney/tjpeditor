@@ -509,7 +509,7 @@ HideTask: 'hidetask' expression = LogicalExpression;
 // http://www.taskjuggler.org/tj3/manual/include.macro.html
 // http://www.taskjuggler.org/tj3/manual/include.project.html
 // http://www.taskjuggler.org/tj3/manual/include.properties.html
-IncludeProperties: 'include' filename=STRING
+IncludeProperties: 'include' importURI=STRING
 	('{' attributes+=IncludePropertiesAttribute* '}')? 
 	// TODO: property=Property? , waiting for syntax clarification from tjIII developer
 ;

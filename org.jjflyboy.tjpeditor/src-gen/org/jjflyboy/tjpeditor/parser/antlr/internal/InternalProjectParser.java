@@ -15746,12 +15746,12 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIncludeProperties"
-    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6146:1: ruleIncludeProperties returns [EObject current=null] : (otherlv_0= 'include' ( (lv_filename_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )? ) ;
+    // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6146:1: ruleIncludeProperties returns [EObject current=null] : (otherlv_0= 'include' ( (lv_importURI_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )? ) ;
     public final EObject ruleIncludeProperties() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_filename_1_0=null;
+        Token lv_importURI_1_0=null;
         Token otherlv_2=null;
         Token otherlv_4=null;
         EObject lv_attributes_3_0 = null;
@@ -15760,25 +15760,25 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6149:28: ( (otherlv_0= 'include' ( (lv_filename_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )? ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6150:1: (otherlv_0= 'include' ( (lv_filename_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )? )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6149:28: ( (otherlv_0= 'include' ( (lv_importURI_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )? ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6150:1: (otherlv_0= 'include' ( (lv_importURI_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )? )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6150:1: (otherlv_0= 'include' ( (lv_filename_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )? )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6150:3: otherlv_0= 'include' ( (lv_filename_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )?
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6150:1: (otherlv_0= 'include' ( (lv_importURI_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )? )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6150:3: otherlv_0= 'include' ( (lv_importURI_1_0= RULE_STRING ) ) (otherlv_2= '{' ( (lv_attributes_3_0= ruleIncludePropertiesAttribute ) )* otherlv_4= '}' )?
             {
             otherlv_0=(Token)match(input,88,FollowSets000.FOLLOW_88_in_ruleIncludeProperties15453); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getIncludePropertiesAccess().getIncludeKeyword_0());
                 
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6154:1: ( (lv_filename_1_0= RULE_STRING ) )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6155:1: (lv_filename_1_0= RULE_STRING )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6154:1: ( (lv_importURI_1_0= RULE_STRING ) )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6155:1: (lv_importURI_1_0= RULE_STRING )
             {
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6155:1: (lv_filename_1_0= RULE_STRING )
-            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6156:3: lv_filename_1_0= RULE_STRING
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6155:1: (lv_importURI_1_0= RULE_STRING )
+            // ../org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/parser/antlr/internal/InternalProject.g:6156:3: lv_importURI_1_0= RULE_STRING
             {
-            lv_filename_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleIncludeProperties15470); 
+            lv_importURI_1_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleIncludeProperties15470); 
 
-            			newLeafNode(lv_filename_1_0, grammarAccess.getIncludePropertiesAccess().getFilenameSTRINGTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_importURI_1_0, grammarAccess.getIncludePropertiesAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
@@ -15786,8 +15786,8 @@ public class InternalProjectParser extends AbstractInternalAntlrParser {
             	        }
                    		setWithLastConsumed(
                    			current, 
-                   			"filename",
-                    		lv_filename_1_0, 
+                   			"importURI",
+                    		lv_importURI_1_0, 
                     		"STRING");
             	    
 

@@ -465,7 +465,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHideReportAccess().getExpressionAssignment_1(), "rule__HideReport__ExpressionAssignment_1");
 					put(grammarAccess.getHideResourceAccess().getExpressionAssignment_1(), "rule__HideResource__ExpressionAssignment_1");
 					put(grammarAccess.getHideTaskAccess().getExpressionAssignment_1(), "rule__HideTask__ExpressionAssignment_1");
-					put(grammarAccess.getIncludePropertiesAccess().getFilenameAssignment_1(), "rule__IncludeProperties__FilenameAssignment_1");
+					put(grammarAccess.getIncludePropertiesAccess().getImportURIAssignment_1(), "rule__IncludeProperties__ImportURIAssignment_1");
 					put(grammarAccess.getIncludePropertiesAccess().getAttributesAssignment_2_1(), "rule__IncludeProperties__AttributesAssignment_2_1");
 					put(grammarAccess.getInterval1Access().getStartAssignment_0(), "rule__Interval1__StartAssignment_0");
 					put(grammarAccess.getInterval1Access().getEndAssignment_1_0_1(), "rule__Interval1__EndAssignment_1_0_1");

@@ -31,8 +31,9 @@ public class ProjectSelectableBasedScope extends SelectableBasedScope {
 		super(outer, selectable, filter, type, ignoreCase);
 	}
 	
-	@Override
-	protected Iterable<IEObjectDescription> getLocalElementsByName(final QualifiedName name) {
+	public IEObjectDescription getSingleElement(QualifiedName name) {
+		
+		IEObjectDescription result = null;
 
 		ProjectQualifiedName searchname;
 		if(name instanceof ProjectQualifiedName) {
@@ -41,20 +42,22 @@ public class ProjectSelectableBasedScope extends SelectableBasedScope {
 			searchname = new ProjectQualifiedName(name);
 		}
 		
-		Iterable<IEObjectDescription> result = Collections.emptyList();
-		
-		// an absolute or a relative name (with one last '!') can be found here.
+		// either absolute name or relative with one '!' can be found in
+		// this scope or parents.
+		// To find a name in this scope, the name MUST be a relative name
 		if(searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
 			searchname.advance();
-			
-			if(! searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
-				result = super.getLocalElementsByName(searchname);
-			}
-		} else {
-			result = super.getLocalElementsByName(name);
 		}
+		
+		// only non-relative names from this point on
+		if(!searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
+			result = getSingleLocalElementByName(searchname);
+			if(result == null) {
+				result = getParent().getSingleElement(searchname);
+			}
+		} 
 		return result;
 	}
-
+	
 
 }

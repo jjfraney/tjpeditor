@@ -2333,10 +2333,10 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (filename=STRING attributes+=IncludePropertiesAttribute*)
+	 *     (importURI=STRING attributes+=IncludePropertiesAttribute*)
 	 *
 	 * Features:
-	 *    filename[1, 1]
+	 *    importURI[1, 1]
 	 *    attributes[0, *]
 	 */
 	protected void sequence_IncludeProperties(EObject context, IncludeProperties semanticObject) {

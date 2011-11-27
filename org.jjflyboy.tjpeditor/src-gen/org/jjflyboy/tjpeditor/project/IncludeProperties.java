@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.IncludeProperties#getFilename <em>Filename</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.IncludeProperties#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.IncludeProperties#getAttributes <em>Attributes</em>}</li>
  * </ul>
  * </p>
@@ -27,30 +27,30 @@ import org.eclipse.emf.common.util.EList;
 public interface IncludeProperties extends Property
 {
   /**
-   * Returns the value of the '<em><b>Filename</b></em>' attribute.
+   * Returns the value of the '<em><b>Import URI</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Filename</em>' attribute isn't clear,
+   * If the meaning of the '<em>Import URI</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Filename</em>' attribute.
-   * @see #setFilename(String)
-   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getIncludeProperties_Filename()
+   * @return the value of the '<em>Import URI</em>' attribute.
+   * @see #setImportURI(String)
+   * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getIncludeProperties_ImportURI()
    * @model
    * @generated
    */
-  String getFilename();
+  String getImportURI();
 
   /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.IncludeProperties#getFilename <em>Filename</em>}' attribute.
+   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.IncludeProperties#getImportURI <em>Import URI</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Filename</em>' attribute.
-   * @see #getFilename()
+   * @param value the new value of the '<em>Import URI</em>' attribute.
+   * @see #getImportURI()
    * @generated
    */
-  void setFilename(String value);
+  void setImportURI(String value);
 
   /**
    * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.

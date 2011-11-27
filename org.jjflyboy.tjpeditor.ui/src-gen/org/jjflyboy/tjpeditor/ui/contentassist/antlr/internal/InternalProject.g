@@ -17365,9 +17365,9 @@ rule__IncludeProperties__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getIncludePropertiesAccess().getFilenameAssignment_1()); }
-(rule__IncludeProperties__FilenameAssignment_1)
-{ after(grammarAccess.getIncludePropertiesAccess().getFilenameAssignment_1()); }
+{ before(grammarAccess.getIncludePropertiesAccess().getImportURIAssignment_1()); }
+(rule__IncludeProperties__ImportURIAssignment_1)
+{ after(grammarAccess.getIncludePropertiesAccess().getImportURIAssignment_1()); }
 )
 
 ;
@@ -34149,14 +34149,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IncludeProperties__FilenameAssignment_1
+rule__IncludeProperties__ImportURIAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getIncludePropertiesAccess().getFilenameSTRINGTerminalRuleCall_1_0()); }
-	RULE_STRING{ after(grammarAccess.getIncludePropertiesAccess().getFilenameSTRINGTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getIncludePropertiesAccess().getImportURISTRINGTerminalRuleCall_1_0()); }
+	RULE_STRING{ after(grammarAccess.getIncludePropertiesAccess().getImportURISTRINGTerminalRuleCall_1_0()); }
 )
 
 ;

@@ -3393,8 +3393,8 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IncludeProperties");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIncludeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cFilenameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFilenameSTRINGTerminalRuleCall_1_0 = (RuleCall)cFilenameAssignment_1.eContents().get(0);
+		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cAttributesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
@@ -3406,20 +3406,20 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//// http://www.taskjuggler.org/tj3/manual/include.properties.html
 		//// TODO: property=Property? , waiting for syntax clarification from tjIII developer
 		//IncludeProperties:
-		//	"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?;
+		//	"include" importURI=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?
+		//"include" importURI=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"include"
 		public Keyword getIncludeKeyword_0() { return cIncludeKeyword_0; }
 
-		//filename=STRING
-		public Assignment getFilenameAssignment_1() { return cFilenameAssignment_1; }
+		//importURI=STRING
+		public Assignment getImportURIAssignment_1() { return cImportURIAssignment_1; }
 
 		//STRING
-		public RuleCall getFilenameSTRINGTerminalRuleCall_1_0() { return cFilenameSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
 
 		//("{" attributes+=IncludePropertiesAttribute* "}")?
 		public Group getGroup_2() { return cGroup_2; }
@@ -11161,7 +11161,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// http://www.taskjuggler.org/tj3/manual/include.properties.html
 	//// TODO: property=Property? , waiting for syntax clarification from tjIII developer
 	//IncludeProperties:
-	//	"include" filename=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?;
+	//	"include" importURI=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?;
 	public IncludePropertiesElements getIncludePropertiesAccess() {
 		return (pIncludeProperties != null) ? pIncludeProperties : (pIncludeProperties = new IncludePropertiesElements());
 	}

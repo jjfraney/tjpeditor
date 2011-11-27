@@ -1,5 +1,5 @@
 #test case to show relative id to global namespace
-project "test project" 2011-12-11 + 4 m { }
+project middle1 "test project" 2011-12-11 + 4 m { }
 
 task middle1 "Top middle task" {
    task bottom2 "Global SubTask"
@@ -7,7 +7,7 @@ task middle1 "Top middle task" {
 
 task top "Top Task" {
 	task middle1 "First SubTask" {
-		depends !!middle1.bottom2  # resolves to "Global SubTask"
+		depends middle1.bottom2  # resolves to "Global SubTask"
 	}
 }
 

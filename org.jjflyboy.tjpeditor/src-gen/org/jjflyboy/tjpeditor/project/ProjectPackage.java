@@ -2514,13 +2514,13 @@ public interface ProjectPackage extends EPackage
   int INCLUDE_PROPERTIES = 80;
 
   /**
-   * The feature id for the '<em><b>Filename</b></em>' attribute.
+   * The feature id for the '<em><b>Import URI</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INCLUDE_PROPERTIES__FILENAME = PROPERTY_FEATURE_COUNT + 0;
+  int INCLUDE_PROPERTIES__IMPORT_URI = PROPERTY_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -8796,15 +8796,15 @@ public interface ProjectPackage extends EPackage
   EClass getIncludeProperties();
 
   /**
-   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.IncludeProperties#getFilename <em>Filename</em>}'.
+   * Returns the meta object for the attribute '{@link org.jjflyboy.tjpeditor.project.IncludeProperties#getImportURI <em>Import URI</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Filename</em>'.
-   * @see org.jjflyboy.tjpeditor.project.IncludeProperties#getFilename()
+   * @return the meta object for the attribute '<em>Import URI</em>'.
+   * @see org.jjflyboy.tjpeditor.project.IncludeProperties#getImportURI()
    * @see #getIncludeProperties()
    * @generated
    */
-  EAttribute getIncludeProperties_Filename();
+  EAttribute getIncludeProperties_ImportURI();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.jjflyboy.tjpeditor.project.IncludeProperties#getAttributes <em>Attributes</em>}'.

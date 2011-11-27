@@ -6153,9 +6153,9 @@ ruleIncludeProperties returns [EObject current=null]
     }
 (
 (
-		lv_filename_1_0=RULE_STRING
+		lv_importURI_1_0=RULE_STRING
 		{
-			newLeafNode(lv_filename_1_0, grammarAccess.getIncludePropertiesAccess().getFilenameSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_importURI_1_0, grammarAccess.getIncludePropertiesAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -6163,8 +6163,8 @@ ruleIncludeProperties returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"filename",
-        		lv_filename_1_0, 
+       			"importURI",
+        		lv_importURI_1_0, 
         		"STRING");
 	    }
 

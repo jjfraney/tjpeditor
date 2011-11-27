@@ -31,7 +31,7 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.jjflyboy.tjpeditor.project.impl.IncludePropertiesImpl#getFilename <em>Filename</em>}</li>
+ *   <li>{@link org.jjflyboy.tjpeditor.project.impl.IncludePropertiesImpl#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.jjflyboy.tjpeditor.project.impl.IncludePropertiesImpl#getAttributes <em>Attributes</em>}</li>
  * </ul>
  * </p>
@@ -41,24 +41,24 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
 public class IncludePropertiesImpl extends PropertyImpl implements IncludeProperties
 {
   /**
-   * The default value of the '{@link #getFilename() <em>Filename</em>}' attribute.
+   * The default value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFilename()
+   * @see #getImportURI()
    * @generated
    * @ordered
    */
-  protected static final String FILENAME_EDEFAULT = null;
+  protected static final String IMPORT_URI_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getFilename() <em>Filename</em>}' attribute.
+   * The cached value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFilename()
+   * @see #getImportURI()
    * @generated
    * @ordered
    */
-  protected String filename = FILENAME_EDEFAULT;
+  protected String importURI = IMPORT_URI_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
@@ -96,9 +96,9 @@ public class IncludePropertiesImpl extends PropertyImpl implements IncludeProper
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getFilename()
+  public String getImportURI()
   {
-    return filename;
+    return importURI;
   }
 
   /**
@@ -106,12 +106,12 @@ public class IncludePropertiesImpl extends PropertyImpl implements IncludeProper
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFilename(String newFilename)
+  public void setImportURI(String newImportURI)
   {
-    String oldFilename = filename;
-    filename = newFilename;
+    String oldImportURI = importURI;
+    importURI = newImportURI;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.INCLUDE_PROPERTIES__FILENAME, oldFilename, filename));
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.INCLUDE_PROPERTIES__IMPORT_URI, oldImportURI, importURI));
   }
 
   /**
@@ -154,8 +154,8 @@ public class IncludePropertiesImpl extends PropertyImpl implements IncludeProper
   {
     switch (featureID)
     {
-      case ProjectPackage.INCLUDE_PROPERTIES__FILENAME:
-        return getFilename();
+      case ProjectPackage.INCLUDE_PROPERTIES__IMPORT_URI:
+        return getImportURI();
       case ProjectPackage.INCLUDE_PROPERTIES__ATTRIBUTES:
         return getAttributes();
     }
@@ -173,8 +173,8 @@ public class IncludePropertiesImpl extends PropertyImpl implements IncludeProper
   {
     switch (featureID)
     {
-      case ProjectPackage.INCLUDE_PROPERTIES__FILENAME:
-        setFilename((String)newValue);
+      case ProjectPackage.INCLUDE_PROPERTIES__IMPORT_URI:
+        setImportURI((String)newValue);
         return;
       case ProjectPackage.INCLUDE_PROPERTIES__ATTRIBUTES:
         getAttributes().clear();
@@ -194,8 +194,8 @@ public class IncludePropertiesImpl extends PropertyImpl implements IncludeProper
   {
     switch (featureID)
     {
-      case ProjectPackage.INCLUDE_PROPERTIES__FILENAME:
-        setFilename(FILENAME_EDEFAULT);
+      case ProjectPackage.INCLUDE_PROPERTIES__IMPORT_URI:
+        setImportURI(IMPORT_URI_EDEFAULT);
         return;
       case ProjectPackage.INCLUDE_PROPERTIES__ATTRIBUTES:
         getAttributes().clear();
@@ -214,8 +214,8 @@ public class IncludePropertiesImpl extends PropertyImpl implements IncludeProper
   {
     switch (featureID)
     {
-      case ProjectPackage.INCLUDE_PROPERTIES__FILENAME:
-        return FILENAME_EDEFAULT == null ? filename != null : !FILENAME_EDEFAULT.equals(filename);
+      case ProjectPackage.INCLUDE_PROPERTIES__IMPORT_URI:
+        return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
       case ProjectPackage.INCLUDE_PROPERTIES__ATTRIBUTES:
         return attributes != null && !attributes.isEmpty();
     }
@@ -233,8 +233,8 @@ public class IncludePropertiesImpl extends PropertyImpl implements IncludeProper
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (filename: ");
-    result.append(filename);
+    result.append(" (importURI: ");
+    result.append(importURI);
     result.append(')');
     return result.toString();
   }

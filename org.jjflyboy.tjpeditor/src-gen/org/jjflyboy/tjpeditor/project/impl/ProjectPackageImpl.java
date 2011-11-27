@@ -3801,7 +3801,7 @@ public class ProjectPackageImpl extends EPackageImpl implements ProjectPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIncludeProperties_Filename()
+  public EAttribute getIncludeProperties_ImportURI()
   {
         return (EAttribute)getIncludeProperties().getEStructuralFeatures().get(0);
   }
