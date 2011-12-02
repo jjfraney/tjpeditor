@@ -8,7 +8,7 @@ taskreport  "TR 2" {
   taskroot firstTask.midTask
 }
 taskreport  "TR 3" {
-  taskroot midTask
+  taskroot firstTask.midTask
 }
 taskreport  "TR 3" {
   taskroot notask

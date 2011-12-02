@@ -716,12 +716,10 @@ ruleAccountRoot returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getAccountRootRule());
 	        }
         }
-		{ 
-	        newCompositeNode(grammarAccess.getAccountRootAccess().getAccountAccountCrossReference_1_0()); 
-	    }
-		ruleAbsoluteId		{ 
-	        afterParserOrEnumRuleCall();
-	    }
+	otherlv_1=RULE_ID
+	{
+		newLeafNode(otherlv_1, grammarAccess.getAccountRootAccess().getAccountAccountCrossReference_1_0()); 
+	}
 
 )
 ))
@@ -8984,12 +8982,10 @@ ruleResourceRoot returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getResourceRootRule());
 	        }
         }
-		{ 
-	        newCompositeNode(grammarAccess.getResourceRootAccess().getResourceResourceCrossReference_1_0()); 
-	    }
-		ruleAbsoluteId		{ 
-	        afterParserOrEnumRuleCall();
-	    }
+	otherlv_1=RULE_ID
+	{
+		newLeafNode(otherlv_1, grammarAccess.getResourceRootAccess().getResourceResourceCrossReference_1_0()); 
+	}
 
 )
 ))

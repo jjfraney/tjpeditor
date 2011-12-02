@@ -8,7 +8,7 @@ taskreport  "TR 2" {
   accountroot topAccount
 }
 taskreport  "TR 3" {
-  accountroot topAccount.midAccount
+  accountroot midAccount
 }
 
 taskreport  "TR 4" {

@@ -32586,8 +32586,8 @@ rule__AccountRoot__AccountAssignment_1
 (
 { before(grammarAccess.getAccountRootAccess().getAccountAccountCrossReference_1_0()); }
 (
-{ before(grammarAccess.getAccountRootAccess().getAccountAccountAbsoluteIdParserRuleCall_1_0_1()); }
-	ruleAbsoluteId{ after(grammarAccess.getAccountRootAccess().getAccountAccountAbsoluteIdParserRuleCall_1_0_1()); }
+{ before(grammarAccess.getAccountRootAccess().getAccountAccountIDTerminalRuleCall_1_0_1()); }
+	RULE_ID{ after(grammarAccess.getAccountRootAccess().getAccountAccountIDTerminalRuleCall_1_0_1()); }
 )
 { after(grammarAccess.getAccountRootAccess().getAccountAccountCrossReference_1_0()); }
 )
@@ -35300,8 +35300,8 @@ rule__ResourceRoot__ResourceAssignment_1
 (
 { before(grammarAccess.getResourceRootAccess().getResourceResourceCrossReference_1_0()); }
 (
-{ before(grammarAccess.getResourceRootAccess().getResourceResourceAbsoluteIdParserRuleCall_1_0_1()); }
-	ruleAbsoluteId{ after(grammarAccess.getResourceRootAccess().getResourceResourceAbsoluteIdParserRuleCall_1_0_1()); }
+{ before(grammarAccess.getResourceRootAccess().getResourceResourceIDTerminalRuleCall_1_0_1()); }
+	RULE_ID{ after(grammarAccess.getResourceRootAccess().getResourceResourceIDTerminalRuleCall_1_0_1()); }
 )
 { after(grammarAccess.getResourceRootAccess().getResourceResourceCrossReference_1_0()); }
 )

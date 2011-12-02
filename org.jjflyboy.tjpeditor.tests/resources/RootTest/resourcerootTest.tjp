@@ -8,7 +8,7 @@ taskreport  "TR 2" {
   resourceroot top
 }
 taskreport  "TR 3" {
-  resourceroot top.mid
+  resourceroot mid
 }
 
 taskreport  "TR 4" {

@@ -71,7 +71,7 @@ AccountPrefix: 'accountprefix' account=[Account];
 
 AccountReport: 'accountreport' Report;
 
-AccountRoot: 'accountroot' account=[Account|AbsoluteId];
+AccountRoot: 'accountroot' account=[Account|ID];
 
 
 // http://www.taskjuggler.org/tj3/manual/project.html
@@ -766,7 +766,7 @@ ResourcePrefix: 'resourceprefix' resource=[Resource];
 ResourceReport: 'resourcereport' Report;
 
 // http://www.taskjuggler.org/tj3/manual/resourceroot.html
-ResourceRoot: 'resourceroot' resource = [Resource|AbsoluteId];
+ResourceRoot: 'resourceroot' resource = [Resource|ID];
 
 // http://www.taskjuggler.org/tj3/manual/resources.limit.html
 // See Limit

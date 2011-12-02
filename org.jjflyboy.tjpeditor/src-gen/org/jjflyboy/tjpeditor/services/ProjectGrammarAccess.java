@@ -357,26 +357,26 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAccountrootKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cAccountAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cAccountAccountCrossReference_1_0 = (CrossReference)cAccountAssignment_1.eContents().get(0);
-		private final RuleCall cAccountAccountAbsoluteIdParserRuleCall_1_0_1 = (RuleCall)cAccountAccountCrossReference_1_0.eContents().get(1);
+		private final RuleCall cAccountAccountIDTerminalRuleCall_1_0_1 = (RuleCall)cAccountAccountCrossReference_1_0.eContents().get(1);
 		
 		//AccountRoot:
-		//	"accountroot" account=[Account|AbsoluteId];
+		//	"accountroot" account=[Account];
 		public ParserRule getRule() { return rule; }
 
-		//"accountroot" account=[Account|AbsoluteId]
+		//"accountroot" account=[Account]
 		public Group getGroup() { return cGroup; }
 
 		//"accountroot"
 		public Keyword getAccountrootKeyword_0() { return cAccountrootKeyword_0; }
 
-		//account=[Account|AbsoluteId]
+		//account=[Account]
 		public Assignment getAccountAssignment_1() { return cAccountAssignment_1; }
 
-		//[Account|AbsoluteId]
+		//[Account]
 		public CrossReference getAccountAccountCrossReference_1_0() { return cAccountAccountCrossReference_1_0; }
 
-		//AbsoluteId
-		public RuleCall getAccountAccountAbsoluteIdParserRuleCall_1_0_1() { return cAccountAccountAbsoluteIdParserRuleCall_1_0_1; }
+		//ID
+		public RuleCall getAccountAccountIDTerminalRuleCall_1_0_1() { return cAccountAccountIDTerminalRuleCall_1_0_1; }
 	}
 
 	public class ProjectElements extends AbstractParserRuleElementFinder {
@@ -5008,27 +5008,27 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cResourcerootKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cResourceAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cResourceResourceCrossReference_1_0 = (CrossReference)cResourceAssignment_1.eContents().get(0);
-		private final RuleCall cResourceResourceAbsoluteIdParserRuleCall_1_0_1 = (RuleCall)cResourceResourceCrossReference_1_0.eContents().get(1);
+		private final RuleCall cResourceResourceIDTerminalRuleCall_1_0_1 = (RuleCall)cResourceResourceCrossReference_1_0.eContents().get(1);
 		
 		//// http://www.taskjuggler.org/tj3/manual/resourceroot.html
 		//ResourceRoot:
-		//	"resourceroot" resource=[Resource|AbsoluteId];
+		//	"resourceroot" resource=[Resource];
 		public ParserRule getRule() { return rule; }
 
-		//"resourceroot" resource=[Resource|AbsoluteId]
+		//"resourceroot" resource=[Resource]
 		public Group getGroup() { return cGroup; }
 
 		//"resourceroot"
 		public Keyword getResourcerootKeyword_0() { return cResourcerootKeyword_0; }
 
-		//resource=[Resource|AbsoluteId]
+		//resource=[Resource]
 		public Assignment getResourceAssignment_1() { return cResourceAssignment_1; }
 
-		//[Resource|AbsoluteId]
+		//[Resource]
 		public CrossReference getResourceResourceCrossReference_1_0() { return cResourceResourceCrossReference_1_0; }
 
-		//AbsoluteId
-		public RuleCall getResourceResourceAbsoluteIdParserRuleCall_1_0_1() { return cResourceResourceAbsoluteIdParserRuleCall_1_0_1; }
+		//ID
+		public RuleCall getResourceResourceIDTerminalRuleCall_1_0_1() { return cResourceResourceIDTerminalRuleCall_1_0_1; }
 	}
 
 	public class ResponsibleElements extends AbstractParserRuleElementFinder {
@@ -10294,7 +10294,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AccountRoot:
-	//	"accountroot" account=[Account|AbsoluteId];
+	//	"accountroot" account=[Account];
 	public AccountRootElements getAccountRootAccess() {
 		return (pAccountRoot != null) ? pAccountRoot : (pAccountRoot = new AccountRootElements());
 	}
@@ -11761,7 +11761,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// http://www.taskjuggler.org/tj3/manual/resourceroot.html
 	//ResourceRoot:
-	//	"resourceroot" resource=[Resource|AbsoluteId];
+	//	"resourceroot" resource=[Resource];
 	public ResourceRootElements getResourceRootAccess() {
 		return (pResourceRoot != null) ? pResourceRoot : (pResourceRoot = new ResourceRootElements());
 	}

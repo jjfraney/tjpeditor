@@ -17,23 +17,35 @@ public class RootTest extends XtextTest {
 	@Test
 	public void taskrootTest() {
 		ignoreFormattingDifferences();
-		assertConstraints(testFileNoSerializer("taskrootTest.tjp")
-				.nOfThemContain(2, "Couldn't resolve reference to Task"));
+		testFileNoSerializer("taskrootTest.tjp");
+		assertConstraints(
+				  issues.errorsOnly()
+				        .inLine(14)
+				        .oneOfThemContains("Couldn't resolve reference to Task 'notask'")
+				);
 	}
 	
 	@Test
 	public void accountrootTest() {
 		ignoreFormattingDifferences();
-		assertConstraints(testFileNoSerializer("accountrootTest.tjp")
-				.nOfThemContain(1, "Couldn't resolve reference to Account"));
+		testFileNoSerializer("accountrootTest.tjp");
+		assertConstraints(
+				  issues.errorsOnly()
+				        .inLine(15)
+				        .oneOfThemContains("Couldn't resolve reference to Account 'noaccount'")
+				);
 
 	}
 	
 	@Test
 	public void resourcerootTest() {
 		ignoreFormattingDifferences();
-		assertConstraints(testFileNoSerializer("resourcerootTest.tjp")
-				.nOfThemContain(1, "Couldn't resolve reference to Resource"));
+		testFileNoSerializer("resourcerootTest.tjp");
+		assertConstraints(
+				  issues.errorsOnly()
+				        .inLine(15)
+				        .oneOfThemContains("Couldn't resolve reference to Resource 'nonesuch'")
+				);
 
 	}
 

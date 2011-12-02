@@ -1404,7 +1404,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     account=[Account|AbsoluteId]
+	 *     account=[Account|ID]
 	 *
 	 * Features:
 	 *    account[1, 1]
@@ -1416,7 +1416,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAccountRootAccess().getAccountAccountAbsoluteIdParserRuleCall_1_0_1(), semanticObject.getAccount());
+		feeder.accept(grammarAccess.getAccountRootAccess().getAccountAccountIDTerminalRuleCall_1_0_1(), semanticObject.getAccount());
 		feeder.finish();
 	}
 	
@@ -3130,7 +3130,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     resource=[Resource|AbsoluteId]
+	 *     resource=[Resource|ID]
 	 *
 	 * Features:
 	 *    resource[1, 1]
@@ -3142,7 +3142,7 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getResourceRootAccess().getResourceResourceAbsoluteIdParserRuleCall_1_0_1(), semanticObject.getResource());
+		feeder.accept(grammarAccess.getResourceRootAccess().getResourceResourceIDTerminalRuleCall_1_0_1(), semanticObject.getResource());
 		feeder.finish();
 	}
 	
