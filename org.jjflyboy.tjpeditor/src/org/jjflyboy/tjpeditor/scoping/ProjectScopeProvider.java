@@ -6,7 +6,6 @@ package org.jjflyboy.tjpeditor.scoping;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
@@ -15,7 +14,6 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.eclipse.xtext.util.SimpleAttributeResolver;
-import org.jjflyboy.tjpeditor.project.Extend;
 import org.jjflyboy.tjpeditor.project.ExtendResource;
 import org.jjflyboy.tjpeditor.project.ExtendTask;
 import org.jjflyboy.tjpeditor.project.ExtendedResourceAttribute;
@@ -24,7 +22,7 @@ import org.jjflyboy.tjpeditor.project.Global;
 import org.jjflyboy.tjpeditor.project.Managers;
 import org.jjflyboy.tjpeditor.project.Project;
 import org.jjflyboy.tjpeditor.project.ProjectAttribute;
-import org.jjflyboy.tjpeditor.project.Resource;
+import org.jjflyboy.tjpeditor.project.TaskDependency;
 
 import com.google.common.base.Function;
 import com.google.inject.Inject;
@@ -43,22 +41,16 @@ public class ProjectScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	private static final Function<EObject, String> resolver = SimpleAttributeResolver
 			.newResolver(String.class, "id");
-
-	// TODO: be sure this works over included *.tji files.
-	public IScope scope_Resource(Managers managers, EReference ref) {
-		EObject top = goToTop(managers);
-		TreeIterator<EObject> iterator = top.eAllContents();
-		List<EObject> resources = new ArrayList<EObject>();
-		while (iterator.hasNext()) {
-			EObject eobject = iterator.next();
-			if (eobject instanceof Resource) {
-				resources.add(eobject);
-			}
-		}
-		IScope scope = Scopes.scopeFor(resources,
-				QualifiedName.wrapper(resolver), IScope.NULLSCOPE);
-		return scope;
+	
+	public IScope scope_Task(TaskDependency depends, EReference reference) {
+		return getScope(depends.eContainer().eContainer(), reference);
 	}
+	
+	public IScope scope_Resource(Managers managers, EReference reference) {
+		EObject top = goToTop(managers);
+		return getScope(top, reference);
+	}
+	
 	public IScope scope_ExtendedResourceAttribute_extend(EObject extendedResourceAttribute, EReference extend) {
 		return scope_ExtendedAttribute_extend(extendedResourceAttribute);
 	}

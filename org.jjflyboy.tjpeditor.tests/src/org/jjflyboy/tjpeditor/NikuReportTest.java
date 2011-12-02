@@ -4,7 +4,6 @@ import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipselabs.xtext.utils.unittesting.XtextRunner2;
 import org.eclipselabs.xtext.utils.unittesting.XtextTest;
 import org.jjflyboy.tjpeditor.project.NikuReport;
-import org.jjflyboy.tjpeditor.project.TaskReport;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 

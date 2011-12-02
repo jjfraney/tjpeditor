@@ -3,7 +3,6 @@ package org.jjflyboy.tjpeditor;
 import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipselabs.xtext.utils.unittesting.XtextRunner2;
 import org.eclipselabs.xtext.utils.unittesting.XtextTest;
-import org.jjflyboy.tjpeditor.project.IncludeProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -72,6 +71,23 @@ public class IncludeTest  extends XtextTest {
 				  issues.errorsOnly()
 				        .inLine(19)
 				        .oneOfThemContains("Couldn't resolve reference to Task '!!that.deep'")
+				);
+	}
+	
+	@Test
+	public void canResolveIncludedGlobalResourceReference() {
+		ignoreFormattingDifferences();
+		testFile("resourceIncludedReference.tjp");
+	}
+	
+	@Test
+	public void cannotResolveNotIncludedGlobalResourceReference() {
+		ignoreFormattingDifferences();
+		testFile("resourceNotIncludedReference.tjp");
+		assertConstraints(
+				  issues.errorsOnly()
+				        .inLine(14)
+				        .oneOfThemContains("Couldn't resolve reference to Resource 'director2'")
 				);
 	}
 }

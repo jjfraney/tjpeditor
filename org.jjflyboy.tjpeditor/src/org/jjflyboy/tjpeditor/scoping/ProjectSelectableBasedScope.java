@@ -1,7 +1,5 @@
 package org.jjflyboy.tjpeditor.scoping;
 
-import java.util.Collections;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.IEObjectDescription;
@@ -13,8 +11,6 @@ import com.google.common.base.Predicate;
 
 public class ProjectSelectableBasedScope extends SelectableBasedScope {
 	
-	private static final String BANG = "!";
-
 	public static IScope createScope(IScope outer, ISelectable selectable, EClass type, boolean ignoreCase) {
 		return createScope(outer, selectable, null, type, ignoreCase);
 	}
