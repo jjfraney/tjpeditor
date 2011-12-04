@@ -1,11 +1,10 @@
 package org.jjflyboy.tjpeditor.scoping;
 
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 
-import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -18,9 +17,12 @@ import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.ImportUriGlobalScopeProvider;
 import org.eclipse.xtext.scoping.impl.ImportUriResolver;
-import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions;
-import org.eclipse.xtext.scoping.impl.SelectableBasedScope;
 import org.eclipse.xtext.util.IResourceScopeCache;
+import org.eclipse.xtext.util.Pair;
+import org.eclipse.xtext.util.Tuples;
+import org.jjflyboy.tjpeditor.project.Global;
+import org.jjflyboy.tjpeditor.project.IncludeProperties;
+import org.jjflyboy.tjpeditor.project.Property;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
@@ -49,7 +51,6 @@ public class ProjectImportUriGlobalScopeProvider extends
 		final LinkedHashSet<URI> uniqueImportURIs = getImportedUris(resource, originalContext);
 		IResourceDescriptions descriptions = getResourceDescriptions(resource, uniqueImportURIs);
 		List<URI> urisAsList = Lists.newArrayList(uniqueImportURIs);
-		Collections.reverse(urisAsList);
 		IScope scope = IScope.NULLSCOPE;
 		for (URI uri : urisAsList) {
 			scope = createLazyResourceScope(scope, uri, descriptions, type, filter, ignoreCase);
@@ -59,33 +60,72 @@ public class ProjectImportUriGlobalScopeProvider extends
 
 
 	protected LinkedHashSet<URI> getImportedUris(final Resource resource, final EObject originalContext) {
-		return cache.get(ImportUriGlobalScopeProvider.class.getName(), resource, new Provider<LinkedHashSet<URI>>(){
-			public LinkedHashSet<URI> get() {
-				TreeIterator<EObject> iterator = resource.getAllContents();
-				final LinkedHashSet<URI> uniqueImportURIs = new LinkedHashSet<URI>(10);
-				while (iterator.hasNext()) {
-					EObject object = iterator.next();
-					if(object.equals(originalContext)) {
-						break;
-					}
-					String uri = importResolver.apply(object);
-					
-					// we should break from this loop when we hit the context object.
-					if (uri != null) {
-						
-						URI importUri = URI.createURI(uri);
-						uniqueImportURIs.add(importUri);
+		List<Pair<URI, IncludeProperties>> uriList =
+				cache.get(ProjectImportUriGlobalScopeProvider.class.getName(), resource, new Provider<List<Pair<URI, IncludeProperties>>>() {
+
+			@Override
+			public List<Pair<URI, IncludeProperties>> get() {
+				Global global = (Global)resource.getContents().get(0);
+				EList<Property> properties = global.getProperties();
+				final List<Pair<URI, IncludeProperties>> map = new ArrayList<Pair<URI, IncludeProperties>>();
+				for(Property property: properties) {
+					if(property instanceof IncludeProperties) {
+						String uriString = importResolver.apply(property);
+						URI uri = URI.createURI(uriString);
+						if(EcoreUtil2.isValidUri(resource, uri)) {
+							map.add(Tuples.pair(uri, (IncludeProperties)property));
+						}
 					}
 				}
-				Iterator<URI> uriIter = uniqueImportURIs.iterator();
-				while(uriIter.hasNext()) {
-					if (!EcoreUtil2.isValidUri(resource, uriIter.next()))
-						uriIter.remove();
-				}
-				return uniqueImportURIs;
+				return map;
 			}
 		});
+		LinkedHashSet<URI> result = new LinkedHashSet<URI>(10);
+		
+		Property topProperty = toTopProperty(originalContext);
+
+		for(Pair<URI, IncludeProperties> pair: uriList) { 
+			// if this include follows the original property
+			if(follows(pair.getSecond(), topProperty)) {
+				break;
+			}
+			result.add(pair.getFirst());
+		}
+		return result;
 	}
+	
+	private Property toTopProperty(final EObject object) {
+		EObject o = object;
+		Property p = null;
+		while(o != null) {
+			if(o instanceof Property && o.eContainer() instanceof Global) {
+				p = (Property)o;
+				break;
+			}
+			o = o.eContainer();
+		}
+		return p;
+
+	}
+	/**
+	 * true if include follows the property
+	 * @param value
+	 * @param property
+	 * @return
+	 */
+	private boolean follows(IncludeProperties include, Property property) {
+		boolean result = true;
+		for(Property p: ((Global)(property.eContainer())).getProperties()) {
+			if(p.equals(include)) {
+				result = false;
+				break;
+			} else 	if(p.equals(property)) {
+				break;
+			}
+		}
+		return result;
+	}
+
 	protected IScope createLazyResourceScope(IScope parent, final URI uri, final IResourceDescriptions descriptions,
 			EClass type, final Predicate<IEObjectDescription> filter, boolean ignoreCase) {
 		IResourceDescription description = descriptions.getResourceDescription(uri);

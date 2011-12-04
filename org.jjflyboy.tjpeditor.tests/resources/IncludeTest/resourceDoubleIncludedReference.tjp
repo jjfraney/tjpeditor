@@ -1,0 +1,20 @@
+# tests resource linking: all resources populate single scope
+project "test project" 2011-12-11 + 4 m { }
+
+include "referenceDefinition.tji"
+
+resource employee1 "Employee 1" {
+  # should resolve to the 'director2' in 'referenceDefintion.tji'
+  managers director2
+}
+
+
+include "referenceDoubledDefinition.tji"
+
+resource employee2 "Employee 2" {
+  # should resolve to the 'director2' in 'referenceDoubledDefintion.tji'
+  managers director2
+}
+
+
+
