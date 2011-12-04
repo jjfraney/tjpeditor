@@ -90,4 +90,16 @@ public class IncludeTest  extends XtextTest {
 				        .oneOfThemContains("Couldn't resolve reference to Resource 'director2'")
 				);
 	}
+	
+	@Test
+	public void cannotResolveForwardIncludedGlobalResourceReference() {
+		ignoreFormattingDifferences();
+		testFile("resourceForwardIncludedReference.tjp");
+		assertConstraints(
+				  issues.errorsOnly()
+				        .inLine(9)
+				        .oneOfThemContains("Couldn't resolve reference to Resource 'director2'")
+				);
+	}
+
 }

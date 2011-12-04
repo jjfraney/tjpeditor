@@ -40,16 +40,17 @@ public class ProjectSelectableBasedScope extends SelectableBasedScope {
 		
 		// either absolute name or relative with one '!' can be found in
 		// this scope or parents.
-		// To find a name in this scope, the name MUST be a relative name
-		if(searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
-			searchname.advance();
+		if(searchname.isRelative()) {
+			if(searchname.isUp()) {
+				searchname.advance();
+			}
 		}
 		
-		// only non-relative names from this point on
-		if(!searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
-			result = getSingleLocalElementByName(searchname);
-			if(result == null) {
-				result = getParent().getSingleElement(searchname);
+		// not relative or we burned through all UP characters ('!')
+		if(! searchname.isRelative() || ! searchname.isUp()) {
+				result = getSingleLocalElementByName(searchname);
+				if(result == null) {
+					result = getParent().getSingleElement(searchname);
 			}
 		} 
 		return result;

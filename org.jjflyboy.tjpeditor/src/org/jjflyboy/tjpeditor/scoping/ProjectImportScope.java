@@ -15,35 +15,34 @@ public class ProjectImportScope extends ImportScope {
 	public ProjectImportScope(List<ImportNormalizer> namespaceResolvers,
 			IScope parent, ISelectable importFrom, EClass type,
 			boolean ignoreCase) {
-		
+
 		super(namespaceResolvers, parent, importFrom, type, ignoreCase);
 	}
-	
+
 	public IEObjectDescription getSingleElement(QualifiedName name) {
-		
+
 		IEObjectDescription result = null;
 
 		ProjectQualifiedName searchname;
-		if(name instanceof ProjectQualifiedName) {
-			searchname = (ProjectQualifiedName)name;
+		if (name instanceof ProjectQualifiedName) {
+			searchname = (ProjectQualifiedName) name;
 		} else {
 			searchname = new ProjectQualifiedName(name);
 		}
-		
-		// To find a name in this scope, the name MUST be a relative name
-		if(searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
-			searchname.advance();
-			
-			// after advance, a name with '!' first cannot be found in this scope,
-			// look in the next higher scope
-			if(searchname.getFirstSegment().equals(ProjectQualifiedName.UPDIR)) {
-				result = getParent().getSingleElement(searchname);
-			} else {
-				result = getSingleLocalElementByName(searchname);
+
+		if (searchname.isRelative()) {
+			if (searchname.isUp()) {
+				searchname.advance();
 			}
-		} else {
-			// non-relative names will be found in resource scopes
+		}
+
+		// not relative or still more '!' characters
+		if (!searchname.isRelative() || searchname.isUp()) {
+			// keep going towards outer scope
 			result = getParent().getSingleElement(searchname);
+		} else {
+			// get names from this scope
+			result = getSingleLocalElementByName(searchname);
 		}
 		return result;
 	}

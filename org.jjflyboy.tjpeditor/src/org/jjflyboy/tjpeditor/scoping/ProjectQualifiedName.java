@@ -17,10 +17,12 @@ import org.eclipse.xtext.naming.QualifiedName;
 public class ProjectQualifiedName extends QualifiedName {
 
 	private int offset;
+	private boolean relative;
 	public static final String UPDIR = "!";
 
 	public ProjectQualifiedName(QualifiedName name, int offset) {
 		super(name.getSegments().toArray(new String [] {}));
+		setRelative(getFirstSegment().equals(ProjectQualifiedName.UPDIR));
 		this.offset = offset;
 	}
 	public ProjectQualifiedName(QualifiedName name) {
@@ -31,6 +33,21 @@ public class ProjectQualifiedName extends QualifiedName {
 		offset++;
 	}
 	
+	public boolean isRelative() {
+		return relative;
+	}
+	private void setRelative(boolean relative) {
+		this.relative = relative;
+	}
+	
+	/**
+	 * 
+	 * @return true if first character is a '!'
+	 */
+	public boolean isUp() {
+		return getFirstSegment().equals(ProjectQualifiedName.UPDIR);
+	}
+
 	@Override
 	public boolean isEmpty() {
 		return getSegmentCount() == 0;

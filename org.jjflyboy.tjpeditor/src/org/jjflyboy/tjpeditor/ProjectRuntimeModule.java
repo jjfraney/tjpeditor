@@ -5,7 +5,7 @@ package org.jjflyboy.tjpeditor;
 
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
-import org.eclipse.xtext.scoping.impl.ImportUriGlobalScopeProvider;
+import org.jjflyboy.tjpeditor.scoping.ProjectImportUriGlobalScopeProvider;
 import org.jjflyboy.tjpeditor.scoping.ProjectImportedNamespaceAwareLocalScopeProvider;
 import org.jjflyboy.tjpeditor.scoping.ProjectQualifiedNameProvider;
 
@@ -27,7 +27,7 @@ public class ProjectRuntimeModule extends org.jjflyboy.tjpeditor.AbstractProject
 	}
 	// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
 	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
-		return ImportUriGlobalScopeProvider.class;
+		return ProjectImportUriGlobalScopeProvider.class;
 	}
 
 }

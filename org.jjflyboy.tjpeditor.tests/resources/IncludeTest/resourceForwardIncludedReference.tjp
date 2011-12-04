@@ -1,0 +1,15 @@
+# tests resource linking: all resources populate single scope
+project "test project" 2011-12-11 + 4 m { }
+
+resource managerGroup "Managers" {
+  resource director1 "Director1" { }
+}
+
+resource employee2 "Employee 2" {
+  managers director2
+}
+
+include "referenceDefinition.tji"
+
+
+

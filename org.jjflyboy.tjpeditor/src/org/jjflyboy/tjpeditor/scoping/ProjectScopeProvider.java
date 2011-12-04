@@ -42,13 +42,15 @@ public class ProjectScopeProvider extends AbstractDeclarativeScopeProvider {
 	private static final Function<EObject, String> resolver = SimpleAttributeResolver
 			.newResolver(String.class, "id");
 	
+	private ProjectImportedNamespaceAwareLocalScopeProvider getProjectDelegate() {
+		return  ((ProjectImportedNamespaceAwareLocalScopeProvider)getDelegate());
+	}
 	public IScope scope_Task(TaskDependency depends, EReference reference) {
-		return getScope(depends.eContainer().eContainer(), reference);
+		return getProjectDelegate().getScope(depends.eContainer().eContainer(),  reference, depends);
 	}
 	
 	public IScope scope_Resource(Managers managers, EReference reference) {
-		EObject top = goToTop(managers);
-		return getScope(top, reference);
+		return getProjectDelegate().getScope(managers, reference, managers);
 	}
 	
 	public IScope scope_ExtendedResourceAttribute_extend(EObject extendedResourceAttribute, EReference extend) {

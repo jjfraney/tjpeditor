@@ -68,5 +68,14 @@ to skip building ProjectImportScopes, only SelectableBasedScopes.
 
 
 
-ProjectImportedNamespaceAwareLocalScopeProvider.
+Issue: To resolve references, only those include files that appear before the 
+reference should be searched.  Include files after the reference must
+be ignored.  There is no way to change the framework to support this feature because
+the IScopeProvider and IGlobalScopeProvider getScope methods do not preserve
+the original reference to the outer scope.  We created our own interface
+and our own implementation.
+
+
+
+
 
