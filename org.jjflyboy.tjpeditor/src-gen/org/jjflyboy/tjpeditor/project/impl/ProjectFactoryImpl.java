@@ -148,6 +148,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.HIDE_REPORT: return createHideReport();
       case ProjectPackage.HIDE_RESOURCE: return createHideResource();
       case ProjectPackage.HIDE_TASK: return createHideTask();
+      case ProjectPackage.INCLUDE: return createInclude();
       case ProjectPackage.INCLUDE_PROPERTIES: return createIncludeProperties();
       case ProjectPackage.INCLUDE_PROPERTIES_ATTRIBUTE: return createIncludePropertiesAttribute();
       case ProjectPackage.INTERVAL1: return createInterval1();
@@ -1278,6 +1279,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     HideTaskImpl hideTask = new HideTaskImpl();
     return hideTask;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Include createInclude()
+  {
+    IncludeImpl include = new IncludeImpl();
+    return include;
   }
 
   /**

@@ -478,6 +478,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createHideTaskAdapter();
       }
       @Override
+      public Adapter caseInclude(Include object)
+      {
+        return createIncludeAdapter();
+      }
+      @Override
       public Adapter caseIncludeProperties(IncludeProperties object)
       {
         return createIncludePropertiesAdapter();
@@ -2360,6 +2365,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createHideTaskAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Include <em>Include</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.Include
+   * @generated
+   */
+  public Adapter createIncludeAdapter()
   {
     return null;
   }

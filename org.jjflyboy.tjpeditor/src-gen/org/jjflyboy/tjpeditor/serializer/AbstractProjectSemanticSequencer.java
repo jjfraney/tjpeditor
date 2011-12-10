@@ -65,6 +65,7 @@ import org.jjflyboy.tjpeditor.project.HideReport;
 import org.jjflyboy.tjpeditor.project.HideResource;
 import org.jjflyboy.tjpeditor.project.HideTask;
 import org.jjflyboy.tjpeditor.project.IcalReport;
+import org.jjflyboy.tjpeditor.project.Include;
 import org.jjflyboy.tjpeditor.project.IncludeProperties;
 import org.jjflyboy.tjpeditor.project.Interval1;
 import org.jjflyboy.tjpeditor.project.Interval2;
@@ -581,6 +582,13 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				if(context == grammarAccess.getIcalReportRule() ||
 				   context == grammarAccess.getPropertyRule()) {
 					sequence_IcalReport(context, (IcalReport) semanticObject); 
+					return; 
+				}
+				else break;
+			case ProjectPackage.INCLUDE:
+				if(context == grammarAccess.getIncludeRule() ||
+				   context == grammarAccess.getProjectAttributeRule()) {
+					sequence_Include(context, (Include) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1234,7 +1242,8 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 				}
 				else break;
 			case ProjectPackage.TIME_FORMAT:
-				if(context == grammarAccess.getReportAttributeRule() ||
+				if(context == grammarAccess.getProjectAttributeRule() ||
+				   context == grammarAccess.getReportAttributeRule() ||
 				   context == grammarAccess.getTimeFormatRule()) {
 					sequence_TimeFormat(context, (TimeFormat) semanticObject); 
 					return; 
@@ -2341,6 +2350,25 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	 */
 	protected void sequence_IncludeProperties(EObject context, IncludeProperties semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     importURI=STRING
+	 *
+	 * Features:
+	 *    importURI[1, 1]
+	 */
+	protected void sequence_Include(EObject context, Include semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ProjectPackage.eINSTANCE.getInclude_ImportURI()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ProjectPackage.eINSTANCE.getInclude_ImportURI()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getIncludeAccess().getImportURISTRINGTerminalRuleCall_1_0(), semanticObject.getImportURI());
+		feeder.finish();
 	}
 	
 	

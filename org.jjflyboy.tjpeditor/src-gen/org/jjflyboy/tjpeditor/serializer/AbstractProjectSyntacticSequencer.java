@@ -219,7 +219,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 
 	/**
 	 * Syntax:
-	 *     'textreport' | 'taskreport' | 'accountreport' | 'resourcereport'
+	 *     'resourcereport' | 'accountreport' | 'textreport' | 'taskreport'
 	 */
 	protected void emit_AccountReport_ResourceReport_TaskReport_TextReport_AccountreportKeyword_0_or_ResourcereportKeyword_0_or_TaskreportKeyword_0_or_TextreportKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -252,15 +252,15 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	/**
 	 * Syntax:
 	 *     (
-	     'epilog' | 
-	     'footer' | 
-	     'right' | 
 	     'prolog' | 
+	     'left' | 
 	     'center' | 
+	     'footer' | 
+	     'epilog' | 
 	     'headline' | 
 	     'caption' | 
-	     'left' | 
-	     'header'
+	     'header' | 
+	     'right'
 	 )
 	 */
 	protected void emit_Caption_Center_Epilog_Footer_Header_Headline_Left_Prolog_Right_CaptionKeyword_0_or_CenterKeyword_0_or_EpilogKeyword_0_or_FooterKeyword_0_or_HeaderKeyword_0_or_HeadlineKeyword_0_or_LeftKeyword_0_or_PrologKeyword_0_or_RightKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -279,13 +279,13 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	 * Syntax:
 	 *     (
 	     'minimum' | 
-	     'maximum' | 
-	     'weeklymin' | 
-	     'monthlymin' | 
+	     'weeklymax' | 
 	     'dailymax' | 
 	     'dailymin' | 
 	     'monthlymax' | 
-	     'weeklymax'
+	     'monthlymin' | 
+	     'maximum' | 
+	     'weeklymin'
 	 )
 	 */
 	protected void emit_DailyMax_DailyMin_Maximum_Minimum_MonthlyMax_MonthlyMin_WeeklyMax_WeeklyMin_DailymaxKeyword_0_or_DailyminKeyword_0_or_MaximumKeyword_0_or_MinimumKeyword_0_or_MonthlymaxKeyword_0_or_MonthlyminKeyword_0_or_WeeklymaxKeyword_0_or_WeeklyminKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -294,7 +294,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'precedes' | 'depends'
+	 *     'depends' | 'precedes'
 	 */
 	protected void emit_Depends_Precedes_DependsKeyword_0_or_PrecedesKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -302,7 +302,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'details' | 'summary'
+	 *     'summary' | 'details'
 	 */
 	protected void emit_Details_Summary_DetailsKeyword_0_or_SummaryKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -334,7 +334,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'text' | 'reference' | 'richtext' | 'date'
+	 *     'text' | 'richtext' | 'reference' | 'date'
 	 */
 	protected void emit_Extend_DateKeyword_0_1_or_ReferenceKeyword_0_0_or_RichtextKeyword_0_2_or_TextKeyword_0_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -454,7 +454,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'sortjournalentries' | 'sortaccounts' | 'sorttasks' | 'sortresources'
+	 *     'sortjournalentries' | 'sortaccounts' | 'sortresources' | 'sorttasks'
 	 */
 	protected void emit_SortAccounts_SortJournalEntries_SortResources_SortTasks_SortaccountsKeyword_0_or_SortjournalentriesKeyword_0_or_SortresourcesKeyword_0_or_SorttasksKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -462,7 +462,7 @@ public class AbstractProjectSyntacticSequencer extends AbstractSyntacticSequence
 	
 	/**
 	 * Syntax:
-	 *     'sorttasks' | 'sortresources'
+	 *     'sortresources' | 'sorttasks'
 	 */
 	protected void emit_SortResources_SortTasks_SortresourcesKeyword_0_or_SorttasksKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

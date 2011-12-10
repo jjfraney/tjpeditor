@@ -27,7 +27,7 @@ import org.jjflyboy.tjpeditor.project.TimeFormat;
  *
  * @generated
  */
-public class TimeFormatImpl extends ReportAttributeImpl implements TimeFormat
+public class TimeFormatImpl extends ProjectAttributeImpl implements TimeFormat
 {
   /**
    * The default value of the '{@link #getTimeformat() <em>Timeformat</em>}' attribute.

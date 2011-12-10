@@ -456,27 +456,29 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDailyWorkingHoursParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cExtendTaskParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cExtendResourceParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cJournalEntryParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cNowParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cNumberFormatParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cScenarioParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cShortTimeFormatParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cTimezoneParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cTimingResolutionParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cTrackingScenarioParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cWeekStartsParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cWorkingHoursParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cYearlyWorkingDaysParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cIncludeParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cJournalEntryParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cNowParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cNumberFormatParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cScenarioParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cShortTimeFormatParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cTimeFormatParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cTimezoneParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cTimingResolutionParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cTrackingScenarioParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cWeekStartsParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cWorkingHoursParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cYearlyWorkingDaysParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
 		
 		//ProjectAttribute:
-		//	Currency // TODO		| Include
-		//	| CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | JournalEntry | Now | NumberFormat | Scenario |
-		//	ShortTimeFormat | Timezone | TimingResolution | TrackingScenario | WeekStarts | WorkingHours | YearlyWorkingDays;
+		//	Currency | CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | Include | JournalEntry | Now |
+		//	NumberFormat | Scenario | ShortTimeFormat | TimeFormat | Timezone | TimingResolution | TrackingScenario | WeekStarts |
+		//	WorkingHours | YearlyWorkingDays;
 		public ParserRule getRule() { return rule; }
 
-		//Currency // TODO		| Include
-		//| CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | JournalEntry | Now | NumberFormat | Scenario |
-		//ShortTimeFormat | Timezone | TimingResolution | TrackingScenario | WeekStarts | WorkingHours | YearlyWorkingDays
+		//Currency | CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | Include | JournalEntry | Now |
+		//NumberFormat | Scenario | ShortTimeFormat | TimeFormat | Timezone | TimingResolution | TrackingScenario | WeekStarts |
+		//WorkingHours | YearlyWorkingDays
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Currency
@@ -494,38 +496,44 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//ExtendResource
 		public RuleCall getExtendResourceParserRuleCall_4() { return cExtendResourceParserRuleCall_4; }
 
+		//Include
+		public RuleCall getIncludeParserRuleCall_5() { return cIncludeParserRuleCall_5; }
+
 		//JournalEntry
-		public RuleCall getJournalEntryParserRuleCall_5() { return cJournalEntryParserRuleCall_5; }
+		public RuleCall getJournalEntryParserRuleCall_6() { return cJournalEntryParserRuleCall_6; }
 
 		//Now
-		public RuleCall getNowParserRuleCall_6() { return cNowParserRuleCall_6; }
+		public RuleCall getNowParserRuleCall_7() { return cNowParserRuleCall_7; }
 
 		//NumberFormat
-		public RuleCall getNumberFormatParserRuleCall_7() { return cNumberFormatParserRuleCall_7; }
+		public RuleCall getNumberFormatParserRuleCall_8() { return cNumberFormatParserRuleCall_8; }
 
 		//Scenario
-		public RuleCall getScenarioParserRuleCall_8() { return cScenarioParserRuleCall_8; }
+		public RuleCall getScenarioParserRuleCall_9() { return cScenarioParserRuleCall_9; }
 
 		//ShortTimeFormat
-		public RuleCall getShortTimeFormatParserRuleCall_9() { return cShortTimeFormatParserRuleCall_9; }
+		public RuleCall getShortTimeFormatParserRuleCall_10() { return cShortTimeFormatParserRuleCall_10; }
+
+		//TimeFormat
+		public RuleCall getTimeFormatParserRuleCall_11() { return cTimeFormatParserRuleCall_11; }
 
 		//Timezone
-		public RuleCall getTimezoneParserRuleCall_10() { return cTimezoneParserRuleCall_10; }
+		public RuleCall getTimezoneParserRuleCall_12() { return cTimezoneParserRuleCall_12; }
 
 		//TimingResolution
-		public RuleCall getTimingResolutionParserRuleCall_11() { return cTimingResolutionParserRuleCall_11; }
+		public RuleCall getTimingResolutionParserRuleCall_13() { return cTimingResolutionParserRuleCall_13; }
 
 		//TrackingScenario
-		public RuleCall getTrackingScenarioParserRuleCall_12() { return cTrackingScenarioParserRuleCall_12; }
+		public RuleCall getTrackingScenarioParserRuleCall_14() { return cTrackingScenarioParserRuleCall_14; }
 
 		//WeekStarts
-		public RuleCall getWeekStartsParserRuleCall_13() { return cWeekStartsParserRuleCall_13; }
+		public RuleCall getWeekStartsParserRuleCall_15() { return cWeekStartsParserRuleCall_15; }
 
 		//WorkingHours
-		public RuleCall getWorkingHoursParserRuleCall_14() { return cWorkingHoursParserRuleCall_14; }
+		public RuleCall getWorkingHoursParserRuleCall_16() { return cWorkingHoursParserRuleCall_16; }
 
 		//YearlyWorkingDays
-		public RuleCall getYearlyWorkingDaysParserRuleCall_15() { return cYearlyWorkingDaysParserRuleCall_15; }
+		public RuleCall getYearlyWorkingDaysParserRuleCall_17() { return cYearlyWorkingDaysParserRuleCall_17; }
 	}
 
 	public class TaskElements extends AbstractParserRuleElementFinder {
@@ -3389,6 +3397,33 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getExpressionLogicalExpressionParserRuleCall_1_0() { return cExpressionLogicalExpressionParserRuleCall_1_0; }
 	}
 
+	public class IncludeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Include");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cIncludeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
+		
+		//// http://www.taskjuggler.org/tj3/manual/include.macro.html
+		//// http://www.taskjuggler.org/tj3/manual/include.project.html
+		//// http://www.taskjuggler.org/tj3/manual/include.properties.html
+		//Include:
+		//	"include" importURI=STRING;
+		public ParserRule getRule() { return rule; }
+
+		//"include" importURI=STRING
+		public Group getGroup() { return cGroup; }
+
+		//"include"
+		public Keyword getIncludeKeyword_0() { return cIncludeKeyword_0; }
+
+		//importURI=STRING
+		public Assignment getImportURIAssignment_1() { return cImportURIAssignment_1; }
+
+		//STRING
+		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
+	}
+
 	public class IncludePropertiesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IncludeProperties");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -3401,10 +3436,6 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAttributesIncludePropertiesAttributeParserRuleCall_2_1_0 = (RuleCall)cAttributesAssignment_2_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
-		//// http://www.taskjuggler.org/tj3/manual/include.macro.html
-		//// http://www.taskjuggler.org/tj3/manual/include.project.html
-		//// http://www.taskjuggler.org/tj3/manual/include.properties.html
-		//// TODO: property=Property? , waiting for syntax clarification from tjIII developer
 		//IncludeProperties:
 		//	"include" importURI=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?;
 		public ParserRule getRule() { return rule; }
@@ -10017,6 +10048,7 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private HideReportElements pHideReport;
 	private HideResourceElements pHideResource;
 	private HideTaskElements pHideTask;
+	private IncludeElements pInclude;
 	private IncludePropertiesElements pIncludeProperties;
 	private IncludePropertiesAttributeElements pIncludePropertiesAttribute;
 	private Interval1Elements pInterval1;
@@ -10315,9 +10347,9 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ProjectAttribute:
-	//	Currency // TODO		| Include
-	//	| CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | JournalEntry | Now | NumberFormat | Scenario |
-	//	ShortTimeFormat | Timezone | TimingResolution | TrackingScenario | WeekStarts | WorkingHours | YearlyWorkingDays;
+	//	Currency | CurrencyFormat | DailyWorkingHours | ExtendTask | ExtendResource | Include | JournalEntry | Now |
+	//	NumberFormat | Scenario | ShortTimeFormat | TimeFormat | Timezone | TimingResolution | TrackingScenario | WeekStarts |
+	//	WorkingHours | YearlyWorkingDays;
 	public ProjectAttributeElements getProjectAttributeAccess() {
 		return (pProjectAttribute != null) ? pProjectAttribute : (pProjectAttribute = new ProjectAttributeElements());
 	}
@@ -11159,7 +11191,16 @@ public class ProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//// http://www.taskjuggler.org/tj3/manual/include.macro.html
 	//// http://www.taskjuggler.org/tj3/manual/include.project.html
 	//// http://www.taskjuggler.org/tj3/manual/include.properties.html
-	//// TODO: property=Property? , waiting for syntax clarification from tjIII developer
+	//Include:
+	//	"include" importURI=STRING;
+	public IncludeElements getIncludeAccess() {
+		return (pInclude != null) ? pInclude : (pInclude = new IncludeElements());
+	}
+	
+	public ParserRule getIncludeRule() {
+		return getIncludeAccess().getRule();
+	}
+
 	//IncludeProperties:
 	//	"include" importURI=STRING ("{" attributes+=IncludePropertiesAttribute* "}")?;
 	public IncludePropertiesElements getIncludePropertiesAccess() {

@@ -22,7 +22,7 @@ package org.jjflyboy.tjpeditor.project;
  * @model
  * @generated
  */
-public interface TimeFormat extends ReportAttribute
+public interface TimeFormat extends ProjectAttribute, ReportAttribute
 {
   /**
    * Returns the value of the '<em><b>Timeformat</b></em>' attribute.

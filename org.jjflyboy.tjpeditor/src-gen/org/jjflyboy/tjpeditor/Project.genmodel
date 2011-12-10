@@ -426,6 +426,9 @@
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideTask">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideTask/expression"/>
     </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Include">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Include/importURI"/>
+    </genClasses>
     <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties/importURI"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties/attributes"/>

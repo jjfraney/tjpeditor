@@ -918,111 +918,131 @@ ruleProjectAttribute returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getJournalEntryParserRuleCall_5()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getIncludeParserRuleCall_5()); 
     }
-    this_JournalEntry_5=ruleJournalEntry
+    this_Include_5=ruleInclude
     { 
-        $current = $this_JournalEntry_5.current; 
+        $current = $this_Include_5.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getNowParserRuleCall_6()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getJournalEntryParserRuleCall_6()); 
     }
-    this_Now_6=ruleNow
+    this_JournalEntry_6=ruleJournalEntry
     { 
-        $current = $this_Now_6.current; 
+        $current = $this_JournalEntry_6.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getNumberFormatParserRuleCall_7()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getNowParserRuleCall_7()); 
     }
-    this_NumberFormat_7=ruleNumberFormat
+    this_Now_7=ruleNow
     { 
-        $current = $this_NumberFormat_7.current; 
+        $current = $this_Now_7.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getScenarioParserRuleCall_8()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getNumberFormatParserRuleCall_8()); 
     }
-    this_Scenario_8=ruleScenario
+    this_NumberFormat_8=ruleNumberFormat
     { 
-        $current = $this_Scenario_8.current; 
+        $current = $this_NumberFormat_8.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getShortTimeFormatParserRuleCall_9()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getScenarioParserRuleCall_9()); 
     }
-    this_ShortTimeFormat_9=ruleShortTimeFormat
+    this_Scenario_9=ruleScenario
     { 
-        $current = $this_ShortTimeFormat_9.current; 
+        $current = $this_Scenario_9.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getTimezoneParserRuleCall_10()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getShortTimeFormatParserRuleCall_10()); 
     }
-    this_Timezone_10=ruleTimezone
+    this_ShortTimeFormat_10=ruleShortTimeFormat
     { 
-        $current = $this_Timezone_10.current; 
+        $current = $this_ShortTimeFormat_10.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getTimingResolutionParserRuleCall_11()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getTimeFormatParserRuleCall_11()); 
     }
-    this_TimingResolution_11=ruleTimingResolution
+    this_TimeFormat_11=ruleTimeFormat
     { 
-        $current = $this_TimingResolution_11.current; 
+        $current = $this_TimeFormat_11.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getTrackingScenarioParserRuleCall_12()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getTimezoneParserRuleCall_12()); 
     }
-    this_TrackingScenario_12=ruleTrackingScenario
+    this_Timezone_12=ruleTimezone
     { 
-        $current = $this_TrackingScenario_12.current; 
+        $current = $this_Timezone_12.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getWeekStartsParserRuleCall_13()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getTimingResolutionParserRuleCall_13()); 
     }
-    this_WeekStarts_13=ruleWeekStarts
+    this_TimingResolution_13=ruleTimingResolution
     { 
-        $current = $this_WeekStarts_13.current; 
+        $current = $this_TimingResolution_13.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getWorkingHoursParserRuleCall_14()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getTrackingScenarioParserRuleCall_14()); 
     }
-    this_WorkingHours_14=ruleWorkingHours
+    this_TrackingScenario_14=ruleTrackingScenario
     { 
-        $current = $this_WorkingHours_14.current; 
+        $current = $this_TrackingScenario_14.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getProjectAttributeAccess().getYearlyWorkingDaysParserRuleCall_15()); 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getWeekStartsParserRuleCall_15()); 
     }
-    this_YearlyWorkingDays_15=ruleYearlyWorkingDays
+    this_WeekStarts_15=ruleWeekStarts
     { 
-        $current = $this_YearlyWorkingDays_15.current; 
+        $current = $this_WeekStarts_15.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getWorkingHoursParserRuleCall_16()); 
+    }
+    this_WorkingHours_16=ruleWorkingHours
+    { 
+        $current = $this_WorkingHours_16.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getProjectAttributeAccess().getYearlyWorkingDaysParserRuleCall_17()); 
+    }
+    this_YearlyWorkingDays_17=ruleYearlyWorkingDays
+    { 
+        $current = $this_YearlyWorkingDays_17.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -6121,6 +6141,49 @@ ruleHideTask returns [EObject current=null]
         		lv_expression_1_0, 
         		"LogicalExpression");
 	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleInclude
+entryRuleInclude returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getIncludeRule()); }
+	 iv_ruleInclude=ruleInclude 
+	 { $current=$iv_ruleInclude.current; } 
+	 EOF 
+;
+
+// Rule Include
+ruleInclude returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='include' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getIncludeAccess().getIncludeKeyword_0());
+    }
+(
+(
+		lv_importURI_1_0=RULE_STRING
+		{
+			newLeafNode(lv_importURI_1_0, grammarAccess.getIncludeAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getIncludeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"importURI",
+        		lv_importURI_1_0, 
+        		"STRING");
 	    }
 
 )

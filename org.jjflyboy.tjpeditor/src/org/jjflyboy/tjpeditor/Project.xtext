@@ -85,12 +85,13 @@ ProjectAttribute:
 		| DailyWorkingHours
 		| ExtendTask
 		| ExtendResource
-// TODO		| Include
+		| Include
 		| JournalEntry
 		| Now
 		| NumberFormat
 		| Scenario
 		| ShortTimeFormat
+		| TimeFormat
 		| Timezone
 		| TimingResolution
 		| TrackingScenario
@@ -509,10 +510,8 @@ HideTask: 'hidetask' expression = LogicalExpression;
 // http://www.taskjuggler.org/tj3/manual/include.macro.html
 // http://www.taskjuggler.org/tj3/manual/include.project.html
 // http://www.taskjuggler.org/tj3/manual/include.properties.html
-IncludeProperties: 'include' importURI=STRING
-	('{' attributes+=IncludePropertiesAttribute* '}')? 
-	// TODO: property=Property? , waiting for syntax clarification from tjIII developer
-;
+Include: 'include' importURI=STRING;
+IncludeProperties:  'include' importURI=STRING	('{' attributes+=IncludePropertiesAttribute* '}')? ;
 
 IncludePropertiesAttribute: 
 	AccountPrefix

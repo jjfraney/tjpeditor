@@ -188,6 +188,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHideReportAccess().getGroup(), "rule__HideReport__Group__0");
 					put(grammarAccess.getHideResourceAccess().getGroup(), "rule__HideResource__Group__0");
 					put(grammarAccess.getHideTaskAccess().getGroup(), "rule__HideTask__Group__0");
+					put(grammarAccess.getIncludeAccess().getGroup(), "rule__Include__Group__0");
 					put(grammarAccess.getIncludePropertiesAccess().getGroup(), "rule__IncludeProperties__Group__0");
 					put(grammarAccess.getIncludePropertiesAccess().getGroup_2(), "rule__IncludeProperties__Group_2__0");
 					put(grammarAccess.getInterval1Access().getGroup(), "rule__Interval1__Group__0");
@@ -465,6 +466,7 @@ public class ProjectParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHideReportAccess().getExpressionAssignment_1(), "rule__HideReport__ExpressionAssignment_1");
 					put(grammarAccess.getHideResourceAccess().getExpressionAssignment_1(), "rule__HideResource__ExpressionAssignment_1");
 					put(grammarAccess.getHideTaskAccess().getExpressionAssignment_1(), "rule__HideTask__ExpressionAssignment_1");
+					put(grammarAccess.getIncludeAccess().getImportURIAssignment_1(), "rule__Include__ImportURIAssignment_1");
 					put(grammarAccess.getIncludePropertiesAccess().getImportURIAssignment_1(), "rule__IncludeProperties__ImportURIAssignment_1");
 					put(grammarAccess.getIncludePropertiesAccess().getAttributesAssignment_2_1(), "rule__IncludeProperties__AttributesAssignment_2_1");
 					put(grammarAccess.getInterval1Access().getStartAssignment_0(), "rule__Interval1__StartAssignment_0");

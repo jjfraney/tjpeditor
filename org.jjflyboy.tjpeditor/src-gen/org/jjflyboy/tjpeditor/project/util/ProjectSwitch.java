@@ -735,6 +735,14 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.INCLUDE:
+      {
+        Include include = (Include)theEObject;
+        T result = caseInclude(include);
+        if (result == null) result = caseProjectAttribute(include);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.INCLUDE_PROPERTIES:
       {
         IncludeProperties includeProperties = (IncludeProperties)theEObject;
@@ -1564,6 +1572,7 @@ public class ProjectSwitch<T> extends Switch<T>
       {
         TimeFormat timeFormat = (TimeFormat)theEObject;
         T result = caseTimeFormat(timeFormat);
+        if (result == null) result = caseProjectAttribute(timeFormat);
         if (result == null) result = caseReportAttribute(timeFormat);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -3142,6 +3151,22 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseHideTask(HideTask object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Include</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Include</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInclude(Include object)
   {
     return null;
   }

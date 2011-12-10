@@ -746,6 +746,15 @@ public interface ProjectFactory extends EFactory
   HideTask createHideTask();
 
   /**
+   * Returns a new object of class '<em>Include</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Include</em>'.
+   * @generated
+   */
+  Include createInclude();
+
+  /**
    * Returns a new object of class '<em>Include Properties</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
