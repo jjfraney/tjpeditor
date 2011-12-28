@@ -20,5 +20,6 @@ Import-Package: org.apache.log4j,
  org.apache.commons.logging
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.jjflyboy.tjpeditor.ui.contentassist.antlr,
- org.jjflyboy.tjpeditor.ui.internal
+ org.jjflyboy.tjpeditor.ui.internal,
+ org.jjflyboy.tjpeditor.ui.contentassist
 Bundle-Activator: org.jjflyboy.tjpeditor.ui.internal.ProjectActivator

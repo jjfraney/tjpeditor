@@ -1395,9 +1395,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     account=[Account|ID]
-	 *
-	 * Features:
-	 *    account[1, 1]
 	 */
 	protected void sequence_AccountPrefix(EObject context, AccountPrefix semanticObject) {
 		if(errorAcceptor != null) {
@@ -1414,9 +1411,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     account=[Account|ID]
-	 *
-	 * Features:
-	 *    account[1, 1]
 	 */
 	protected void sequence_AccountRoot(EObject context, AccountRoot semanticObject) {
 		if(errorAcceptor != null) {
@@ -1433,10 +1427,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (account=[Account|ID] share=XFloat)
-	 *
-	 * Features:
-	 *    account[1, 1]
-	 *    share[1, 1]
 	 */
 	protected void sequence_AccountShare(EObject context, AccountShare semanticObject) {
 		if(errorAcceptor != null) {
@@ -1456,11 +1446,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID? name=STRING attributes+=AccountAttribute*)
-	 *
-	 * Features:
-	 *    id[0, 1]
-	 *    name[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Account(EObject context, Account semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1470,9 +1455,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     level=AlertLevel
-	 *
-	 * Features:
-	 *    level[1, 1]
 	 */
 	protected void sequence_Alert(EObject context, Alert semanticObject) {
 		if(errorAcceptor != null) {
@@ -1489,10 +1471,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resource=[Resource|ID] attributes+=AllocateResourceAttribute*)
-	 *
-	 * Features:
-	 *    resource[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_AllocateResource(EObject context, AllocateResource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1502,9 +1480,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resources+=AllocateResource resources+=AllocateResource*)
-	 *
-	 * Features:
-	 *    resources[1, *]
 	 */
 	protected void sequence_Allocate(EObject context, Allocate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1514,9 +1489,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resources+=[Resource|ID] resources+=[Resource|ID]*)
-	 *
-	 * Features:
-	 *    resources[1, *]
 	 */
 	protected void sequence_Alternative(EObject context, Alternative semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1526,9 +1498,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     resource=[Resource|ID]
-	 *
-	 * Features:
-	 *    resource[1, 1]
 	 */
 	protected void sequence_Author(EObject context, Author semanticObject) {
 		if(errorAcceptor != null) {
@@ -1545,10 +1514,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (cost=[Account|ID] revenue=[Account|ID])
-	 *
-	 * Features:
-	 *    cost[1, 1]
-	 *    revenue[1, 1]
 	 */
 	protected void sequence_Balance(EObject context, Balance semanticObject) {
 		if(errorAcceptor != null) {
@@ -1568,10 +1533,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (task=[Task|ID] booking=Booking)
-	 *
-	 * Features:
-	 *    task[1, 1]
-	 *    booking[1, 1]
 	 */
 	protected void sequence_BookingResource(EObject context, BookingResource semanticObject) {
 		if(errorAcceptor != null) {
@@ -1591,10 +1552,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resource=[Resource|ID] booking=Booking)
-	 *
-	 * Features:
-	 *    resource[1, 1]
-	 *    booking[1, 1]
 	 */
 	protected void sequence_BookingTask(EObject context, BookingTask semanticObject) {
 		if(errorAcceptor != null) {
@@ -1614,11 +1571,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (interval=Interval4 (overtime=INT? sloppy=INT?)?)
-	 *
-	 * Features:
-	 *    interval[1, 1]
-	 *    overtime[0, 1]
-	 *    sloppy[0, 1]
 	 */
 	protected void sequence_Booking(EObject context, Booking semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1628,10 +1580,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (expression=LogicalExpression color=RGB)
-	 *
-	 * Features:
-	 *    expression[1, 1]
-	 *    color[1, 1]
 	 */
 	protected void sequence_CellColor(EObject context, CellColor semanticObject) {
 		if(errorAcceptor != null) {
@@ -1651,10 +1599,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (text=STRING expresssion=LogicalExpression)
-	 *
-	 * Features:
-	 *    text[1, 1]
-	 *    expresssion[1, 1]
 	 */
 	protected void sequence_CellText(EObject context, CellText semanticObject) {
 		if(errorAcceptor != null) {
@@ -1674,9 +1618,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (accountShares+=AccountShare accountShares+=AccountShare*)
-	 *
-	 * Features:
-	 *    accountShares[1, *]
 	 */
 	protected void sequence_ChargeSet(EObject context, ChargeSet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1686,10 +1627,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (amount=XFloat applies=ChargeApplies)
-	 *
-	 * Features:
-	 *    amount[1, 1]
-	 *    applies[1, 1]
 	 */
 	protected void sequence_Charge(EObject context, Charge semanticObject) {
 		if(errorAcceptor != null) {
@@ -1709,10 +1646,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ColumnId attribute=ColumnAttribute)
-	 *
-	 * Features:
-	 *    id[1, 1]
-	 *    attribute[1, 1]
 	 */
 	protected void sequence_Column(EObject context, Column semanticObject) {
 		if(errorAcceptor != null) {
@@ -1732,9 +1665,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (columns+=Column columns+=Column*)
-	 *
-	 * Features:
-	 *    columns[1, *]
 	 */
 	protected void sequence_Columns(EObject context, Columns semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1744,9 +1674,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     complete=XFloat
-	 *
-	 * Features:
-	 *    complete[1, 1]
 	 */
 	protected void sequence_Complete(EObject context, Complete semanticObject) {
 		if(errorAcceptor != null) {
@@ -1763,9 +1690,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     text=STRING
-	 *
-	 * Features:
-	 *    text[1, 1]
 	 */
 	protected void sequence_Copyright(EObject context, Copyright semanticObject) {
 		if(errorAcceptor != null) {
@@ -1782,11 +1706,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (date=ISODATE description=STRING amount=XFloat)
-	 *
-	 * Features:
-	 *    date[1, 1]
-	 *    description[1, 1]
-	 *    amount[1, 1]
 	 */
 	protected void sequence_Credit(EObject context, Credit semanticObject) {
 		if(errorAcceptor != null) {
@@ -1809,10 +1728,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (columnId=ColumnId direction=CriterionDirection)
-	 *
-	 * Features:
-	 *    columnId[1, 1]
-	 *    direction[1, 1]
 	 */
 	protected void sequence_Criterion(EObject context, Criterion semanticObject) {
 		if(errorAcceptor != null) {
@@ -1832,9 +1747,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     currency=STRING
-	 *
-	 * Features:
-	 *    currency[1, 1]
 	 */
 	protected void sequence_Currency(EObject context, Currency semanticObject) {
 		if(errorAcceptor != null) {
@@ -1851,9 +1763,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     dailyWorkingHours=XFloat
-	 *
-	 * Features:
-	 *    dailyWorkingHours[1, 1]
 	 */
 	protected void sequence_DailyWorkingHours(EObject context, DailyWorkingHours semanticObject) {
 		if(errorAcceptor != null) {
@@ -1870,12 +1779,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (all?='*' | none?='-')
-	 *
-	 * Features:
-	 *    all[0, 1]
-	 *         EXCLUDE_IF_SET none
-	 *    none[0, 1]
-	 *         EXCLUDE_IF_SET all
 	 */
 	protected void sequence_Definitions(EObject context, Definitions semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1885,13 +1788,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (flags?='flags'? resources?='resources'? tasks?='tasks'? project?='project'? projectids?='projectids'?)
-	 *
-	 * Features:
-	 *    flags[0, 1]
-	 *    resources[0, 1]
-	 *    tasks[0, 1]
-	 *    project[0, 1]
-	 *    projectids[0, 1]
 	 */
 	protected void sequence_Definitions(EObject context, Defintions semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1901,10 +1797,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (value=XFloat unit=TimeUnit)
-	 *
-	 * Features:
-	 *    value[1, 1]
-	 *    unit[1, 1]
 	 */
 	protected void sequence_DurationQuantity(EObject context, DurationQuantity semanticObject) {
 		if(errorAcceptor != null) {
@@ -1924,9 +1816,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     duration=DurationQuantity
-	 *
-	 * Features:
-	 *    duration[1, 1]
 	 */
 	protected void sequence_Duration(EObject context, Duration semanticObject) {
 		if(errorAcceptor != null) {
@@ -1943,9 +1832,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     efficiency=XFloat
-	 *
-	 * Features:
-	 *    efficiency[1, 1]
 	 */
 	protected void sequence_Efficiency(EObject context, Efficiency semanticObject) {
 		if(errorAcceptor != null) {
@@ -1962,9 +1848,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     effort=DurationQuantity
-	 *
-	 * Features:
-	 *    effort[1, 1]
 	 */
 	protected void sequence_Effort(EObject context, Effort semanticObject) {
 		if(errorAcceptor != null) {
@@ -1981,9 +1864,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     address=STRING
-	 *
-	 * Features:
-	 *    address[1, 1]
 	 */
 	protected void sequence_Email(EObject context, Email semanticObject) {
 		if(errorAcceptor != null) {
@@ -2000,9 +1880,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     credit=XFloat
-	 *
-	 * Features:
-	 *    credit[1, 1]
 	 */
 	protected void sequence_EndCredit(EObject context, EndCredit semanticObject) {
 		if(errorAcceptor != null) {
@@ -2019,9 +1896,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     end=ISODATE
-	 *
-	 * Features:
-	 *    end[1, 1]
 	 */
 	protected void sequence_End(EObject context, End semanticObject) {
 		if(errorAcceptor != null) {
@@ -2038,11 +1912,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID? filename=STRING attributes+=ExportAttribute*)
-	 *
-	 * Features:
-	 *    id[0, 1]
-	 *    filename[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Export(EObject context, Export semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2052,9 +1921,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (extends+=Extend*)
-	 *
-	 * Features:
-	 *    extends[0, *]
 	 */
 	protected void sequence_ExtendResource(EObject context, ExtendResource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2064,9 +1930,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (extends+=Extend*)
-	 *
-	 * Features:
-	 *    extends[0, *]
 	 */
 	protected void sequence_ExtendTask(EObject context, ExtendTask semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2076,12 +1939,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID name=STRING (inherit?='inherit'? scenariospecific?='scenariospecific'?)?)
-	 *
-	 * Features:
-	 *    id[1, 1]
-	 *    name[1, 1]
-	 *    inherit[0, 1]
-	 *    scenariospecific[0, 1]
 	 */
 	protected void sequence_Extend(EObject context, Extend semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2091,10 +1948,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (extend=[Extend|ID] value=STRING)
-	 *
-	 * Features:
-	 *    extend[1, 1]
-	 *    value[1, 1]
 	 */
 	protected void sequence_ExtendedResourceAttribute(EObject context, ExtendedResourceAttribute semanticObject) {
 		if(errorAcceptor != null) {
@@ -2114,10 +1967,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (extend=[Extend|ID] value=STRING)
-	 *
-	 * Features:
-	 *    extend[1, 1]
-	 *    value[1, 1]
 	 */
 	protected void sequence_ExtendedTaskAttribute(EObject context, ExtendedTaskAttribute semanticObject) {
 		if(errorAcceptor != null) {
@@ -2137,9 +1986,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_Fail(EObject context, Fail semanticObject) {
 		if(errorAcceptor != null) {
@@ -2156,9 +2002,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (flags+=ID flags+=ID*)
-	 *
-	 * Features:
-	 *    flags[1, *]
 	 */
 	protected void sequence_Flags(EObject context, Flags semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2168,9 +2011,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     color=STRING
-	 *
-	 * Features:
-	 *    color[1, 1]
 	 */
 	protected void sequence_FontColor(EObject context, FontColor semanticObject) {
 		if(errorAcceptor != null) {
@@ -2187,9 +2027,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (formats+=ReportFormat formats+=ReportFormat*)
-	 *
-	 * Features:
-	 *    formats[1, *]
 	 */
 	protected void sequence_Formats(EObject context, Formats semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2199,10 +2036,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (project=Project? properties+=Property*)
-	 *
-	 * Features:
-	 *    project[0, 1]
-	 *    properties[0, *]
 	 */
 	protected void sequence_Global(EObject context, Global semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2212,10 +2045,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (expression=LogicalExpression justification=Justification)
-	 *
-	 * Features:
-	 *    expression[1, 1]
-	 *    justification[1, 1]
 	 */
 	protected void sequence_HAlign(EObject context, HAlign semanticObject) {
 		if(errorAcceptor != null) {
@@ -2235,9 +2064,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalFlagExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_HideAccount(EObject context, HideAccount semanticObject) {
 		if(errorAcceptor != null) {
@@ -2254,9 +2080,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalFlagExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_HideJournalEntry(EObject context, HideJournalEntry semanticObject) {
 		if(errorAcceptor != null) {
@@ -2273,9 +2096,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_HideReport(EObject context, HideReport semanticObject) {
 		if(errorAcceptor != null) {
@@ -2292,9 +2112,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_HideResource(EObject context, HideResource semanticObject) {
 		if(errorAcceptor != null) {
@@ -2311,9 +2128,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_HideTask(EObject context, HideTask semanticObject) {
 		if(errorAcceptor != null) {
@@ -2330,10 +2144,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (filename=STRING attributes+=IcalReportAttribute*)
-	 *
-	 * Features:
-	 *    filename[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_IcalReport(EObject context, IcalReport semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2343,10 +2153,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (importURI=STRING attributes+=IncludePropertiesAttribute*)
-	 *
-	 * Features:
-	 *    importURI[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_IncludeProperties(EObject context, IncludeProperties semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2356,9 +2162,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     importURI=STRING
-	 *
-	 * Features:
-	 *    importURI[1, 1]
 	 */
 	protected void sequence_Include(EObject context, Include semanticObject) {
 		if(errorAcceptor != null) {
@@ -2375,13 +2178,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (start=ISODATE (end=ISODATE | duration=DurationQuantity))
-	 *
-	 * Features:
-	 *    start[1, 1]
-	 *    end[0, 1]
-	 *         EXCLUDE_IF_SET duration
-	 *    duration[0, 1]
-	 *         EXCLUDE_IF_SET end
 	 */
 	protected void sequence_Interval1(EObject context, Interval1 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2391,13 +2187,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (start=ISODATE (end=ISODATE | duration=DurationQuantity))
-	 *
-	 * Features:
-	 *    start[1, 1]
-	 *    end[0, 1]
-	 *         EXCLUDE_IF_SET duration
-	 *    duration[0, 1]
-	 *         EXCLUDE_IF_SET end
 	 */
 	protected void sequence_Interval2(EObject context, Interval2 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2407,13 +2196,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (start=ISODATE (end=ISODATE | duration=DurationQuantity)?)
-	 *
-	 * Features:
-	 *    start[1, 1]
-	 *    end[0, 1]
-	 *         EXCLUDE_IF_SET duration
-	 *    duration[0, 1]
-	 *         EXCLUDE_IF_SET end
 	 */
 	protected void sequence_Interval3(EObject context, Interval3 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2423,13 +2205,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (start=ISODATE (end=ISODATE | duration=DurationQuantity)?)
-	 *
-	 * Features:
-	 *    start[1, 1]
-	 *    end[0, 1]
-	 *         EXCLUDE_IF_SET duration
-	 *    duration[0, 1]
-	 *         EXCLUDE_IF_SET end
 	 */
 	protected void sequence_Interval4(EObject context, Interval4 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2449,17 +2224,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	 *         propertyid?='propertyid'? 
 	 *         summary?='summary'?
 	 *     )
-	 *
-	 * Features:
-	 *    flags[0, 1]
-	 *    property[0, 1]
-	 *    details[0, 1]
-	 *    author[0, 1]
-	 *    headline[0, 1]
-	 *    date[0, 1]
-	 *    timesheet[0, 1]
-	 *    propertyid[0, 1]
-	 *    summary[0, 1]
 	 */
 	protected void sequence_JournalAttributes(EObject context, JournalAttributes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2469,14 +2233,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (date=ISODATE headline=STRING (alert=Alert? author=Author? details=Details? summary=Summary?)?)
-	 *
-	 * Features:
-	 *    date[1, 1]
-	 *    headline[1, 1]
-	 *    alert[0, 1]
-	 *    author[0, 1]
-	 *    details[0, 1]
-	 *    summary[0, 1]
 	 */
 	protected void sequence_JournalEntry(EObject context, JournalEntry semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2486,9 +2242,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     mode=JournalModeValue
-	 *
-	 * Features:
-	 *    mode[1, 1]
 	 */
 	protected void sequence_JournalMode(EObject context, JournalMode semanticObject) {
 		if(errorAcceptor != null) {
@@ -2505,9 +2258,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     length=DurationQuantity
-	 *
-	 * Features:
-	 *    length[1, 1]
 	 */
 	protected void sequence_Length(EObject context, Length semanticObject) {
 		if(errorAcceptor != null) {
@@ -2524,27 +2274,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (end=ISODATE | period=Interval1 | (resources+=[Resource|ID] resources+=[Resource|ID]*) | start=ISODATE)
-	 *
-	 * Features:
-	 *    end[0, 1]
-	 *         EXCLUDE_IF_SET period
-	 *         EXCLUDE_IF_SET resources
-	 *         EXCLUDE_IF_SET resources
-	 *         EXCLUDE_IF_SET start
-	 *    period[0, 1]
-	 *         EXCLUDE_IF_SET end
-	 *         EXCLUDE_IF_SET resources
-	 *         EXCLUDE_IF_SET resources
-	 *         EXCLUDE_IF_SET start
-	 *    resources[0, *]
-	 *         EXCLUDE_IF_SET end
-	 *         EXCLUDE_IF_SET period
-	 *         EXCLUDE_IF_SET start
-	 *    start[0, 1]
-	 *         EXCLUDE_IF_SET end
-	 *         EXCLUDE_IF_SET period
-	 *         EXCLUDE_IF_SET resources
-	 *         EXCLUDE_IF_SET resources
 	 */
 	protected void sequence_LimitAttribute(EObject context, LimitAttribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2554,10 +2283,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (duration=DurationQuantity attributes+=LimitAttribute*)
-	 *
-	 * Features:
-	 *    duration[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Limit(EObject context, Limit semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2567,9 +2292,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (attributes+=LimitsAttribute*)
-	 *
-	 * Features:
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Limits(EObject context, Limits semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2579,9 +2301,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     type=ListTypeValues
-	 *
-	 * Features:
-	 *    type[1, 1]
 	 */
 	protected void sequence_ListType(EObject context, ListType semanticObject) {
 		if(errorAcceptor != null) {
@@ -2598,9 +2317,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     unit=LoadDisplayUnit
-	 *
-	 * Features:
-	 *    unit[1, 1]
 	 */
 	protected void sequence_LoadUnit(EObject context, LoadUnit semanticObject) {
 		if(errorAcceptor != null) {
@@ -2617,9 +2333,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     value=STRING
-	 *
-	 * Features:
-	 *    value[1, 1]
 	 */
 	protected void sequence_Macro(EObject context, Macro semanticObject) {
 		if(errorAcceptor != null) {
@@ -2636,9 +2349,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resources+=[Resource|ID] resources+=[Resource|ID]*)
-	 *
-	 * Features:
-	 *    resources[1, *]
 	 */
 	protected void sequence_Managers(EObject context, Managers semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2648,9 +2358,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     mandatory?='mandatory'
-	 *
-	 * Features:
-	 *    mandatory[1, 1]
 	 */
 	protected void sequence_Mandatory(EObject context, Mandatory semanticObject) {
 		if(errorAcceptor != null) {
@@ -2667,9 +2374,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     maxEnd=ISODATE
-	 *
-	 * Features:
-	 *    maxEnd[1, 1]
 	 */
 	protected void sequence_MaxEnd(EObject context, MaxEnd semanticObject) {
 		if(errorAcceptor != null) {
@@ -2686,9 +2390,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     maxStart=ISODATE
-	 *
-	 * Features:
-	 *    maxStart[1, 1]
 	 */
 	protected void sequence_MaxStart(EObject context, MaxStart semanticObject) {
 		if(errorAcceptor != null) {
@@ -2705,9 +2406,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     milestone?='milestone'
-	 *
-	 * Features:
-	 *    milestone[1, 1]
 	 */
 	protected void sequence_Milestone(EObject context, Milestone semanticObject) {
 		if(errorAcceptor != null) {
@@ -2724,9 +2422,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     minEnd=ISODATE
-	 *
-	 * Features:
-	 *    minEnd[1, 1]
 	 */
 	protected void sequence_MinEnd(EObject context, MinEnd semanticObject) {
 		if(errorAcceptor != null) {
@@ -2743,9 +2438,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     minStart=ISODATE
-	 *
-	 * Features:
-	 *    minStart[1, 1]
 	 */
 	protected void sequence_MinStart(EObject context, MinStart semanticObject) {
 		if(errorAcceptor != null) {
@@ -2762,10 +2454,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID attributes+=NavigatorAttribute*)
-	 *
-	 * Features:
-	 *    id[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Navigator(EObject context, Navigator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2775,11 +2463,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID text=STRING attributes+=NewTaskAttribute*)
-	 *
-	 * Features:
-	 *    id[1, 1]
-	 *    text[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_NewTask(EObject context, NewTask semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2789,10 +2472,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (filename=STRING attributes+=NikuReportAttribute*)
-	 *
-	 * Features:
-	 *    filename[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_NikuReport(EObject context, NikuReport semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2802,9 +2481,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     note=STRING
-	 *
-	 * Features:
-	 *    note[1, 1]
 	 */
 	protected void sequence_Note(EObject context, Note semanticObject) {
 		if(errorAcceptor != null) {
@@ -2821,9 +2497,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     now=ISODATE
-	 *
-	 * Features:
-	 *    now[1, 1]
 	 */
 	protected void sequence_Now(EObject context, Now semanticObject) {
 		if(errorAcceptor != null) {
@@ -2840,9 +2513,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     period=Interval2
-	 *
-	 * Features:
-	 *    period[1, 1]
 	 */
 	protected void sequence_Period(EObject context, Period semanticObject) {
 		if(errorAcceptor != null) {
@@ -2859,9 +2529,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     persistent?='persistent'
-	 *
-	 * Features:
-	 *    persistent[1, 1]
 	 */
 	protected void sequence_Persistent(EObject context, Persistent semanticObject) {
 		if(errorAcceptor != null) {
@@ -2878,9 +2545,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     priority=INT
-	 *
-	 * Features:
-	 *    priority[1, 1]
 	 */
 	protected void sequence_Priority(EObject context, Priority semanticObject) {
 		if(errorAcceptor != null) {
@@ -2897,9 +2561,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     projectId=ID
-	 *
-	 * Features:
-	 *    projectId[1, 1]
 	 */
 	protected void sequence_ProjectId(EObject context, ProjectId semanticObject) {
 		if(errorAcceptor != null) {
@@ -2916,9 +2577,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (ids+=ID ids+=ID*)
-	 *
-	 * Features:
-	 *    ids[1, *]
 	 */
 	protected void sequence_ProjectIds(EObject context, ProjectIds semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2928,13 +2586,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID? name=STRING version=STRING? interval=Interval2 attributes+=ProjectAttribute*)
-	 *
-	 * Features:
-	 *    id[0, 1]
-	 *    name[1, 1]
-	 *    version[0, 1]
-	 *    interval[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Project(EObject context, Project semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2944,9 +2595,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     listAttribute=PurgeReportAttribute
-	 *
-	 * Features:
-	 *    listAttribute[1, 1]
 	 */
 	protected void sequence_PurgeReport(EObject context, PurgeReport semanticObject) {
 		if(errorAcceptor != null) {
@@ -2963,9 +2611,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     listAttribute=PurgeResourceAttribute
-	 *
-	 * Features:
-	 *    listAttribute[1, 1]
 	 */
 	protected void sequence_PurgeResource(EObject context, PurgeResource semanticObject) {
 		if(errorAcceptor != null) {
@@ -2982,9 +2627,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     listAttribute=PurgeTaskAttribute
-	 *
-	 * Features:
-	 *    listAttribute[1, 1]
 	 */
 	protected void sequence_PurgeTask(EObject context, PurgeTask semanticObject) {
 		if(errorAcceptor != null) {
@@ -3001,9 +2643,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     value=STRING
-	 *
-	 * Features:
-	 *    value[1, 1]
 	 */
 	protected void sequence_RGB(EObject context, RGB semanticObject) {
 		if(errorAcceptor != null) {
@@ -3020,9 +2659,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     rate=XFloat
-	 *
-	 * Features:
-	 *    rate[1, 1]
 	 */
 	protected void sequence_Rate(EObject context, Rate semanticObject) {
 		if(errorAcceptor != null) {
@@ -3039,13 +2675,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (negativePrefix=STRING negativeSuffix=STRING thousandsSeparator=STRING fractionSeparator=STRING fractionDigits=INT)
-	 *
-	 * Features:
-	 *    negativePrefix[1, 1]
-	 *    negativeSuffix[1, 1]
-	 *    thousandsSeparator[1, 1]
-	 *    fractionSeparator[1, 1]
-	 *    fractionDigits[1, 1]
 	 */
 	protected void sequence_RealFormat(EObject context, RealFormat semanticObject) {
 		if(errorAcceptor != null) {
@@ -3074,9 +2703,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     remaining=DurationQuantity
-	 *
-	 * Features:
-	 *    remaining[1, 1]
 	 */
 	protected void sequence_Remaining(EObject context, Remaining semanticObject) {
 		if(errorAcceptor != null) {
@@ -3093,9 +2719,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     report=[Report|ID]
-	 *
-	 * Features:
-	 *    report[1, 1]
 	 */
 	protected void sequence_ReportPrefix(EObject context, ReportPrefix semanticObject) {
 		if(errorAcceptor != null) {
@@ -3112,11 +2735,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID? name=STRING attributes+=ReportAttribute*)
-	 *
-	 * Features:
-	 *    id[0, 1]
-	 *    name[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Report(EObject context, Report semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3126,11 +2744,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (vacation?='vacation'? booking?='booking'? workingHours?='workinghours'?)
-	 *
-	 * Features:
-	 *    vacation[0, 1]
-	 *    booking[0, 1]
-	 *    workingHours[0, 1]
 	 */
 	protected void sequence_ResourceAttributes(EObject context, ResourceAttributes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3140,9 +2753,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     resource=[Resource|ID]
-	 *
-	 * Features:
-	 *    resource[1, 1]
 	 */
 	protected void sequence_ResourcePrefix(EObject context, ResourcePrefix semanticObject) {
 		if(errorAcceptor != null) {
@@ -3159,9 +2769,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     resource=[Resource|ID]
-	 *
-	 * Features:
-	 *    resource[1, 1]
 	 */
 	protected void sequence_ResourceRoot(EObject context, ResourceRoot semanticObject) {
 		if(errorAcceptor != null) {
@@ -3178,11 +2785,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID? name=STRING attributes+=ResourceAttribute*)
-	 *
-	 * Features:
-	 *    id[0, 1]
-	 *    name[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Resource(EObject context, Resource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3192,9 +2794,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resources+=[Resource|ID] resources+=[Resource|ID]*)
-	 *
-	 * Features:
-	 *    resources[1, *]
 	 */
 	protected void sequence_Responsible(EObject context, Responsible semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3204,9 +2803,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     text=STRING
-	 *
-	 * Features:
-	 *    text[1, 1]
 	 */
 	protected void sequence_RichText(EObject context, RichText semanticObject) {
 		if(errorAcceptor != null) {
@@ -3223,9 +2819,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_RollupAccount(EObject context, RollupAccount semanticObject) {
 		if(errorAcceptor != null) {
@@ -3242,9 +2835,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_RollupResource(EObject context, RollupResource semanticObject) {
 		if(errorAcceptor != null) {
@@ -3261,9 +2851,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_RollupTask(EObject context, RollupTask semanticObject) {
 		if(errorAcceptor != null) {
@@ -3287,9 +2874,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	 *         scale='quarter' | 
 	 *         scale='year'
 	 *     )
-	 *
-	 * Features:
-	 *    scale[0, 6]
 	 */
 	protected void sequence_Scale(EObject context, Scale semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3299,9 +2883,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     scenario=[Scenario|ID]
-	 *
-	 * Features:
-	 *    scenario[1, 1]
 	 */
 	protected void sequence_ScenarioIcal(EObject context, ScenarioIcal semanticObject) {
 		if(errorAcceptor != null) {
@@ -3318,12 +2899,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID name=STRING (active=YesNo? scenario=Scenario?)?)
-	 *
-	 * Features:
-	 *    id[1, 1]
-	 *    name[1, 1]
-	 *    active[0, 1]
-	 *    scenario[0, 1]
 	 */
 	protected void sequence_Scenario(EObject context, Scenario semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3333,9 +2908,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (scenarios+=[Scenario|ID] scenarios+=[Scenario|ID]*)
-	 *
-	 * Features:
-	 *    scenarios[1, *]
 	 */
 	protected void sequence_Scenarios(EObject context, Scenarios semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3345,9 +2917,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     scheduled?='scheduled'
-	 *
-	 * Features:
-	 *    scheduled[1, 1]
 	 */
 	protected void sequence_Scheduled(EObject context, Scheduled semanticObject) {
 		if(errorAcceptor != null) {
@@ -3364,9 +2933,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     scheduling=SchedulingPolicy
-	 *
-	 * Features:
-	 *    scheduling[1, 1]
 	 */
 	protected void sequence_Scheduling(EObject context, Scheduling semanticObject) {
 		if(errorAcceptor != null) {
@@ -3383,9 +2949,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     argument=SelectArgument
-	 *
-	 * Features:
-	 *    argument[1, 1]
 	 */
 	protected void sequence_Select(EObject context, Select semanticObject) {
 		if(errorAcceptor != null) {
@@ -3402,9 +2965,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     selfcontained=YesNo
-	 *
-	 * Features:
-	 *    selfcontained[1, 1]
 	 */
 	protected void sequence_SelfContained(EObject context, SelfContained semanticObject) {
 		if(errorAcceptor != null) {
@@ -3421,9 +2981,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     shift=[Shift|ID]
-	 *
-	 * Features:
-	 *    shift[1, 1]
 	 */
 	protected void sequence_ShiftTimesheet(EObject context, ShiftTimesheet semanticObject) {
 		if(errorAcceptor != null) {
@@ -3440,15 +2997,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID? name=STRING (replace='replace'? timezone=STRING? vacation=VacationShift? shift=Shift? workingHours=WorkingHours?)?)
-	 *
-	 * Features:
-	 *    id[0, 1]
-	 *    name[1, 1]
-	 *    replace[0, 1]
-	 *    timezone[0, 1]
-	 *    vacation[0, 1]
-	 *    shift[0, 1]
-	 *    workingHours[0, 1]
 	 */
 	protected void sequence_Shift(EObject context, Shift semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3458,10 +3006,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (shift=[Shift|ID] (intervals+=Interval3 intervals+=Interval3*)?)
-	 *
-	 * Features:
-	 *    shift[1, 1]
-	 *    intervals[0, *]
 	 */
 	protected void sequence_ShiftsAllocate(EObject context, ShiftsAllocate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3471,10 +3015,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (shift=[Shift|ID] limit=Interval2?)
-	 *
-	 * Features:
-	 *    shift[1, 1]
-	 *    limit[0, 1]
 	 */
 	protected void sequence_ShiftsLimit(EObject context, ShiftsLimit semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3484,9 +3024,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (limits+=ShiftsLimit limits+=ShiftsLimit*)
-	 *
-	 * Features:
-	 *    limits[1, *]
 	 */
 	protected void sequence_Shifts(EObject context, Shifts semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3496,9 +3033,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     shortTimeFormat=STRING
-	 *
-	 * Features:
-	 *    shortTimeFormat[1, 1]
 	 */
 	protected void sequence_ShortTimeFormat(EObject context, ShortTimeFormat semanticObject) {
 		if(errorAcceptor != null) {
@@ -3515,11 +3049,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     ((tree?='tree'? | criteria+=Criterion) criteria+=Criterion*)
-	 *
-	 * Features:
-	 *    tree[0, 1]
-	 *         EXCLUDE_IF_SET criteria
-	 *    criteria[0, *]
 	 */
 	protected void sequence_Sort(EObject context, Sort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3529,9 +3058,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     start=ISODATE
-	 *
-	 * Features:
-	 *    start[1, 1]
 	 */
 	protected void sequence_Start(EObject context, Start semanticObject) {
 		if(errorAcceptor != null) {
@@ -3548,10 +3074,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (filename=STRING attributes+=StatusSheetReportAttribute*)
-	 *
-	 * Features:
-	 *    filename[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_StatusSheetReport(EObject context, StatusSheetReport semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3561,11 +3083,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resource=[Resource|ID] interval=Interval4 attributes+=StatusSheetAttribute*)
-	 *
-	 * Features:
-	 *    resource[1, 1]
-	 *    interval[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_StatusSheet(EObject context, StatusSheet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3575,11 +3092,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (level=AlertLevel text=STRING attributes+=StatusStatusSheetAttribute*)
-	 *
-	 * Features:
-	 *    level[1, 1]
-	 *    text[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_StatusStatusSheet(EObject context, StatusStatusSheet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3589,11 +3101,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (level=AlertLevel text=STRING attributes+=StatusTimesheetAttribute*)
-	 *
-	 * Features:
-	 *    level[1, 1]
-	 *    text[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_StatusTimesheet(EObject context, StatusTimesheet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3603,10 +3110,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (account=[Account|ID] attributes+=AccountAttribute*)
-	 *
-	 * Features:
-	 *    account[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_SupplementAccount(EObject context, SupplementAccount semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3616,10 +3119,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (report=[Report|ID] attributes+=ReportAttribute*)
-	 *
-	 * Features:
-	 *    report[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_SupplementReport(EObject context, SupplementReport semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3629,10 +3128,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resource=[Resource|ID] attributes+=ResourceAttribute*)
-	 *
-	 * Features:
-	 *    resource[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_SupplementResource(EObject context, SupplementResource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3642,10 +3137,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (task=[Task|TaskPath] attributes+=TaskAttribute*)
-	 *
-	 * Features:
-	 *    task[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_SupplementTask(EObject context, SupplementTask semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3655,14 +3146,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID? filename=STRING (hideResource=HideResource? hideTask=HideTask? rollupResource=RollupResource? rollupTask=RollupTask?)?)
-	 *
-	 * Features:
-	 *    id[0, 1]
-	 *    filename[1, 1]
-	 *    hideResource[0, 1]
-	 *    hideTask[0, 1]
-	 *    rollupResource[0, 1]
-	 *    rollupTask[0, 1]
 	 */
 	protected void sequence_TagFile(EObject context, TagFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3684,19 +3167,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	 *         complete?='complete'? 
 	 *         depends?='depends'?
 	 *     )
-	 *
-	 * Features:
-	 *    responsible[0, 1]
-	 *    flags[0, 1]
-	 *    maxstart[0, 1]
-	 *    maxend[0, 1]
-	 *    priority[0, 1]
-	 *    booking[0, 1]
-	 *    note[0, 1]
-	 *    minstart[0, 1]
-	 *    minend[0, 1]
-	 *    complete[0, 1]
-	 *    depends[0, 1]
 	 */
 	protected void sequence_TaskAttributes(EObject context, TaskAttributes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3706,12 +3176,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (task=[Task|TaskPath] (gapDuration=GapDuration? gapLength=GapLength? policy=DependsPolicy?)?)
-	 *
-	 * Features:
-	 *    task[1, 1]
-	 *    gapDuration[0, 1]
-	 *    gapLength[0, 1]
-	 *    policy[0, 1]
 	 */
 	protected void sequence_TaskDependency(EObject context, TaskDependency semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3721,9 +3185,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     task=[Task|ID]
-	 *
-	 * Features:
-	 *    task[1, 1]
 	 */
 	protected void sequence_TaskPrefix(EObject context, TaskPrefix semanticObject) {
 		if(errorAcceptor != null) {
@@ -3740,9 +3201,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     task=[Task|AbsoluteId]
-	 *
-	 * Features:
-	 *    task[1, 1]
 	 */
 	protected void sequence_TaskRoot(EObject context, TaskRoot semanticObject) {
 		if(errorAcceptor != null) {
@@ -3759,10 +3217,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (task=[Task|AbsoluteId] attributes+=TaskStatusSheetAttribute*)
-	 *
-	 * Features:
-	 *    task[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_TaskStatusSheet(EObject context, TaskStatusSheet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3772,10 +3226,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (task=[Task|ID] attributes+=TaskTimesheetAttribute*)
-	 *
-	 * Features:
-	 *    task[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_TaskTimesheet(EObject context, TaskTimesheet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3785,11 +3235,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=ID? name=STRING attributes+=TaskAttribute*)
-	 *
-	 * Features:
-	 *    id[0, 1]
-	 *    name[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Task(EObject context, Task semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3799,9 +3244,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     timeformat=STRING
-	 *
-	 * Features:
-	 *    timeformat[1, 1]
 	 */
 	protected void sequence_TimeFormat(EObject context, TimeFormat semanticObject) {
 		if(errorAcceptor != null) {
@@ -3818,10 +3260,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (id=STRING name=STRING)
-	 *
-	 * Features:
-	 *    id[1, 1]
-	 *    name[1, 1]
 	 */
 	protected void sequence_Timeoff(EObject context, Timeoff semanticObject) {
 		if(errorAcceptor != null) {
@@ -3841,10 +3279,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (filename=STRING attributes+=TimesheetReportAttribute*)
-	 *
-	 * Features:
-	 *    filename[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_TimesheetReport(EObject context, TimesheetReport semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3854,11 +3288,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (resource=[Resource|ID] interval=Interval4 attributes+=TimesheetAttribute*)
-	 *
-	 * Features:
-	 *    resource[1, 1]
-	 *    interval[1, 1]
-	 *    attributes[0, *]
 	 */
 	protected void sequence_Timesheet(EObject context, Timesheet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3868,9 +3297,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     timezone=STRING
-	 *
-	 * Features:
-	 *    timezone[1, 1]
 	 */
 	protected void sequence_Timezone(EObject context, Timezone semanticObject) {
 		if(errorAcceptor != null) {
@@ -3887,9 +3313,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     timingResolution=INT
-	 *
-	 * Features:
-	 *    timingResolution[1, 1]
 	 */
 	protected void sequence_TimingResolution(EObject context, TimingResolution semanticObject) {
 		if(errorAcceptor != null) {
@@ -3906,9 +3329,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     title=STRING
-	 *
-	 * Features:
-	 *    title[1, 1]
 	 */
 	protected void sequence_Title(EObject context, Title semanticObject) {
 		if(errorAcceptor != null) {
@@ -3925,10 +3345,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (expression=LogicalExpression tip=STRING)
-	 *
-	 * Features:
-	 *    expression[1, 1]
-	 *    tip[1, 1]
 	 */
 	protected void sequence_ToolTip(EObject context, ToolTip semanticObject) {
 		if(errorAcceptor != null) {
@@ -3948,9 +3364,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     scenario=[Scenario|ID]
-	 *
-	 * Features:
-	 *    scenario[1, 1]
 	 */
 	protected void sequence_TrackingScenario(EObject context, TrackingScenario semanticObject) {
 		if(errorAcceptor != null) {
@@ -3967,9 +3380,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     level=STRING
-	 *
-	 * Features:
-	 *    level[1, 1]
 	 */
 	protected void sequence_TreeLevel(EObject context, TreeLevel semanticObject) {
 		if(errorAcceptor != null) {
@@ -3986,10 +3396,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (name=STRING? intervals+=Interval3 intervals+=Interval3*)
-	 *
-	 * Features:
-	 *    name[0, 1]
-	 *    intervals[1, *]
 	 */
 	protected void sequence_VacationResource(EObject context, Vacation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -3999,10 +3405,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (name=STRING? (intervals+=Interval3 intervals+=Interval3*)?)
-	 *
-	 * Features:
-	 *    name[0, 1]
-	 *    intervals[0, *]
 	 */
 	protected void sequence_VacationShift(EObject context, Vacation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -4012,10 +3414,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (name=STRING intervals+=Interval3 intervals+=Interval3*)
-	 *
-	 * Features:
-	 *    name[1, 1]
-	 *    intervals[1, *]
 	 */
 	protected void sequence_Vacation(EObject context, Vacation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -4025,9 +3423,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     expression=LogicalExpression
-	 *
-	 * Features:
-	 *    expression[1, 1]
 	 */
 	protected void sequence_Warn(EObject context, Warn semanticObject) {
 		if(errorAcceptor != null) {
@@ -4044,12 +3439,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (sunday?='weekstartssunday' | monday?='weekstartsmonday')
-	 *
-	 * Features:
-	 *    sunday[0, 1]
-	 *         EXCLUDE_IF_SET monday
-	 *    monday[0, 1]
-	 *         EXCLUDE_IF_SET sunday
 	 */
 	protected void sequence_WeekStarts(EObject context, WeekStarts semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -4059,10 +3448,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (first=Weekday last=Weekday?)
-	 *
-	 * Features:
-	 *    first[1, 1]
-	 *    last[0, 1]
 	 */
 	protected void sequence_Weekdays(EObject context, Weekdays semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -4072,9 +3457,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     width=XFloat
-	 *
-	 * Features:
-	 *    width[1, 1]
 	 */
 	protected void sequence_Width(EObject context, Width semanticObject) {
 		if(errorAcceptor != null) {
@@ -4091,10 +3473,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (start=TIME stop=TIME)
-	 *
-	 * Features:
-	 *    start[1, 1]
-	 *    stop[1, 1]
 	 */
 	protected void sequence_WorkHours(EObject context, WorkHours semanticObject) {
 		if(errorAcceptor != null) {
@@ -4114,10 +3492,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (value=XFloat unit=WorkQuantityUnit)
-	 *
-	 * Features:
-	 *    value[1, 1]
-	 *    unit[1, 1]
 	 */
 	protected void sequence_Work(EObject context, Work semanticObject) {
 		if(errorAcceptor != null) {
@@ -4137,14 +3511,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (weekdays+=Weekdays weekdays+=Weekdays* (off?='off' | (hours+=WorkHours hours+=WorkHours*)))
-	 *
-	 * Features:
-	 *    weekdays[1, *]
-	 *    off[0, 1]
-	 *         EXCLUDE_IF_SET hours
-	 *         EXCLUDE_IF_SET hours
-	 *    hours[0, *]
-	 *         EXCLUDE_IF_SET off
 	 */
 	protected void sequence_WorkingHours(EObject context, WorkingHours semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -4154,9 +3520,6 @@ public class AbstractProjectSemanticSequencer extends AbstractSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     yearlyWorkingDays=INT
-	 *
-	 * Features:
-	 *    yearlyWorkingDays[1, 1]
 	 */
 	protected void sequence_YearlyWorkingDays(EObject context, YearlyWorkingDays semanticObject) {
 		if(errorAcceptor != null) {

@@ -8,860 +8,860 @@
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.jjflyboy.tjpeditor.edit"
     editorPluginID="org.jjflyboy.tjpeditor.editor">
   <genPackages prefix="Project" basePackage="org.jjflyboy.tjpeditor" disposableProviderFactory="true"
-      loadInitialization="true" literalsInterface="false" ecorePackage="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/COLUMNS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/DEFINITIONS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/FLAGS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/FORMATS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/JOURNALATTRIBUTES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SCENARIOS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SORTACCOUNTS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SORTJOURNALENTRIES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SORTRESOURCES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReportAttribute/SORTTASKS"/>
+      loadInitialization="true" literalsInterface="false" ecorePackage="Project.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//PurgeReportAttribute">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/COLUMNS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/DEFINITIONS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/FLAGS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/FORMATS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/JOURNALATTRIBUTES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/SCENARIOS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/SORTACCOUNTS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/SORTJOURNALENTRIES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/SORTRESOURCES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeReportAttribute/SORTTASKS"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/FAIL"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/FLAGS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/MANAGERS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/REPORTS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/VACATIONS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResourceAttribute/WARN"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//PurgeResourceAttribute">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeResourceAttribute/FAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeResourceAttribute/FLAGS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeResourceAttribute/MANAGERS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeResourceAttribute/REPORTS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeResourceAttribute/VACATIONS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeResourceAttribute/WARN"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/BOOKING"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/CHARGE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/CHARGESET"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/DEPENDS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/FAIL"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/FLAGS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/PRECEDES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTaskAttribute/WARN"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//PurgeTaskAttribute">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeTaskAttribute/BOOKING"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeTaskAttribute/CHARGE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeTaskAttribute/CHARGESET"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeTaskAttribute/DEPENDS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeTaskAttribute/FAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeTaskAttribute/FLAGS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeTaskAttribute/PRECEDES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//PurgeTaskAttribute/WARN"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/ONSTART"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/ONEND"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/PERHOUR"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/PERDAY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeApplies/PERWEEK"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//ChargeApplies">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ChargeApplies/ONSTART"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ChargeApplies/ONEND"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ChargeApplies/PERHOUR"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ChargeApplies/PERDAY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ChargeApplies/PERWEEK"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Justification">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Justification/LEFT"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Justification/CENTER"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Justification/RIGHT"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//Justification">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Justification/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Justification/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Justification/RIGHT"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalModeValue">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalModeValue/JOURNAL"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalModeValue/JOURNAL_SUB"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalModeValue/STATUS_DOWN"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalModeValue/STATUS_UP"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalModeValue/ALERTS_DOWN"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//JournalModeValue">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalModeValue/JOURNAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalModeValue/JOURNAL_SUB"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalModeValue/STATUS_DOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalModeValue/STATUS_UP"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalModeValue/ALERTS_DOWN"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntrySortCriterion">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntrySortCriterion/DATE_DOWN"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntrySortCriterion/DATE_UP"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntrySortCriterion/ALERT_DOWN"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntrySortCriterion/ALERT_UP"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntrySortCriterion/PROPERTY_UP"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//JournalEntrySortCriterion">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalEntrySortCriterion/DATE_DOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalEntrySortCriterion/DATE_UP"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalEntrySortCriterion/ALERT_DOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalEntrySortCriterion/ALERT_UP"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//JournalEntrySortCriterion/PROPERTY_UP"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ListTypeValues">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ListTypeValues/BULLETS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ListTypeValues/COMMA"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ListTypeValues/NUMBERED"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//ListTypeValues">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ListTypeValues/BULLETS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ListTypeValues/COMMA"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ListTypeValues/NUMBERED"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CriterionDirection">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CriterionDirection/UP"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CriterionDirection/DOWN"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//CriterionDirection">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//CriterionDirection/UP"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//CriterionDirection/DOWN"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//YesNo">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//YesNo/YES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//YesNo/NO"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//YesNo">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//YesNo/YES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//YesNo/NO"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportFormat">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportFormat/CSV"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportFormat/HTML"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportFormat/NIKU"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//ReportFormat">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ReportFormat/CSV"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ReportFormat/HTML"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ReportFormat/NIKU"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit/DAYS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit/HOURS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit/LONGAUTO"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit/MINUTES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit/MONTHS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit/SHORTAUTO"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit/WEEKS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadDisplayUnit/YEARS"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//LoadDisplayUnit">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//LoadDisplayUnit/DAYS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//LoadDisplayUnit/HOURS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//LoadDisplayUnit/LONGAUTO"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//LoadDisplayUnit/MINUTES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//LoadDisplayUnit/MONTHS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//LoadDisplayUnit/SHORTAUTO"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//LoadDisplayUnit/WEEKS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//LoadDisplayUnit/YEARS"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScaleResolution">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScaleResolution/HOUR"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScaleResolution/DAY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScaleResolution/WEEK"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScaleResolution/MONTH"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScaleResolution/QUARTER"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScaleResolution/YEAR"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//ScaleResolution">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ScaleResolution/HOUR"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ScaleResolution/DAY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ScaleResolution/WEEK"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ScaleResolution/MONTH"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ScaleResolution/QUARTER"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ScaleResolution/YEAR"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SelectArgument">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SelectArgument/MAXLOADED"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SelectArgument/MINLOADED"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SelectArgument/MINALLOCATED"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SelectArgument/ORDER"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SelectArgument/RANDOM"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//SelectArgument">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//SelectArgument/MAXLOADED"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//SelectArgument/MINLOADED"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//SelectArgument/MINALLOCATED"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//SelectArgument/ORDER"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//SelectArgument/RANDOM"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/ALERT"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/ALERTMESSAGE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/ALERTSUMMARY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/ALERTTREND"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/CHART"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/COMPLETE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/COMPLETED"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/CRITICALNESS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/COST"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/DAILY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/DURATION"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/DUTIES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/EFFICIENCY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/EFFORT"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/EFFORTDONE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/EFFORTLEFT"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/EMAIL"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/END"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/FLAGS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/FOLLOWERS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/FREETIME"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/FREEWORK"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/FTE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/HEADCOUNT"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/HIERARCHINDEX"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/HOURLY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/ID"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/INDEX"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/JOURNAL"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/LINE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/MAXEND"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/MAXSTART"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/MINEND"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/MINSTART"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/MONTHLY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/NO"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/NAME"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/NOTE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/PATHCRITICALNESS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/PRECURSOR"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/PRIORITY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/QUARTERLY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/RATE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/RESOURCES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/RESPONSIBLE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/REVENUE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/SCENARIO"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/SEQNO"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/START"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/STATUS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/TARGETS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/WBS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/WEEKLY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnId/YEARLY"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//ColumnId">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/ALERT"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/ALERTMESSAGE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/ALERTSUMMARY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/ALERTTREND"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/CHART"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/COMPLETE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/COMPLETED"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/CRITICALNESS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/COST"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/DAILY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/DURATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/DUTIES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/EFFICIENCY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/EFFORT"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/EFFORTDONE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/EFFORTLEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/EMAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/END"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/FLAGS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/FOLLOWERS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/FREETIME"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/FREEWORK"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/FTE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/HEADCOUNT"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/HIERARCHINDEX"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/HOURLY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/ID"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/INDEX"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/JOURNAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/LINE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/MAXEND"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/MAXSTART"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/MINEND"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/MINSTART"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/MONTHLY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/NO"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/NAME"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/NOTE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/PATHCRITICALNESS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/PRECURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/PRIORITY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/QUARTERLY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/RATE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/RESOURCES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/RESPONSIBLE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/REVENUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/SCENARIO"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/SEQNO"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/START"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/STATUS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/TARGETS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/WBS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/WEEKLY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//ColumnId/YEARLY"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AlertLevel">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AlertLevel/RED"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AlertLevel/YELLOW"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AlertLevel/GREEN"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//AlertLevel">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//AlertLevel/RED"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//AlertLevel/YELLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//AlertLevel/GREEN"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DependsPolicy">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DependsPolicy/ONEND"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DependsPolicy/ONSTART"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//DependsPolicy">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//DependsPolicy/ONEND"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//DependsPolicy/ONSTART"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SchedulingPolicy">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SchedulingPolicy/ALAP"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SchedulingPolicy/ASAP"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//SchedulingPolicy">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//SchedulingPolicy/ALAP"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//SchedulingPolicy/ASAP"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeUnit">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeUnit/MINUTE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeUnit/HOUR"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeUnit/DAY"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeUnit/WEEK"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeUnit/MONTH"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeUnit/YEAR"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//TimeUnit">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//TimeUnit/MINUTE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//TimeUnit/HOUR"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//TimeUnit/DAY"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//TimeUnit/WEEK"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//TimeUnit/MONTH"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//TimeUnit/YEAR"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday/MON"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday/TUE"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday/WED"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday/THR"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday/FRI"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday/SAT"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekday/SUN"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//Weekday">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Weekday/MON"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Weekday/TUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Weekday/WED"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Weekday/THR"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Weekday/FRI"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Weekday/SAT"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//Weekday/SUN"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkQuantityUnit">
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkQuantityUnit/PERCENT"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkQuantityUnit/MINUTES"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkQuantityUnit/HOURS"/>
-      <genEnumLiterals ecoreEnumLiteral="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkQuantityUnit/DAYS"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//WorkQuantityUnit">
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//WorkQuantityUnit/PERCENT"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//WorkQuantityUnit/MINUTES"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//WorkQuantityUnit/HOURS"/>
+      <genEnumLiterals ecoreEnumLiteral="Project.ecore#//WorkQuantityUnit/DAYS"/>
     </genEnums>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Global">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Global/project"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Global/properties"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Property"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Account/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountPrefix">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountPrefix/account"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountReport"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountRoot">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountRoot/account"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project/version"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project/interval"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Project/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ProjectAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Task">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Task/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Task/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Task/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Report">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Report/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Report/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Report/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IcalReport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IcalReport/filename"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IcalReport/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IcalReportAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Export">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Export/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Export/filename"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Export/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExportAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Resource/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Allocate">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Allocate/resources"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AllocateResource">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AllocateResource/resource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AllocateResource/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AllocateResourceAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Navigator">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Navigator/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Navigator/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NavigatorAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NewTask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NewTask/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NewTask/text"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NewTask/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NewTaskAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NikuReport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NikuReport/filename"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NikuReport/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NikuReportAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Alert">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Alert/level"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Alternative">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Alternative/resources"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Author">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Author/resource"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Balance">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Balance/cost"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Balance/revenue"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Booking">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Booking/interval"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Booking/overtime"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Booking/sloppy"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingTask">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingTask/resource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingTask/booking"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingResource">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingResource/task"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//BookingResource/booking"/>
+    <genClasses ecoreClass="Project.ecore#//Global">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Global/project"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Global/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Property"/>
+    <genClasses ecoreClass="Project.ecore#//Account">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Account/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Account/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Account/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//AccountAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//AccountPrefix">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//AccountPrefix/account"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//AccountReport"/>
+    <genClasses ecoreClass="Project.ecore#//AccountRoot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//AccountRoot/account"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Project/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Project/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Project/interval"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Project/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ProjectAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Task/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Task/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Task/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TaskAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Report">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Report/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Report/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Report/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ReportAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//IcalReport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//IcalReport/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//IcalReport/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//IcalReportAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Export">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Export/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Export/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Export/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ExportAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Resource/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Resource/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Resource/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ResourceAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Allocate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Allocate/resources"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//AllocateResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//AllocateResource/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//AllocateResource/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//AllocateResourceAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Navigator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Navigator/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Navigator/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//NavigatorAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//NewTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//NewTask/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//NewTask/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//NewTask/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//NewTaskAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//NikuReport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//NikuReport/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//NikuReport/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//NikuReportAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Alert">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Alert/level"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Alternative">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Alternative/resources"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Author">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Author/resource"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Balance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Balance/cost"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Balance/revenue"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Booking">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Booking/interval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Booking/overtime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Booking/sloppy"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//BookingTask">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//BookingTask/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//BookingTask/booking"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//BookingResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//BookingResource/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//BookingResource/booking"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Caption"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellColor">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellColor/expression"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellColor/color"/>
+    <genClasses ecoreClass="Project.ecore#//Caption"/>
+    <genClasses ecoreClass="Project.ecore#//CellColor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//CellColor/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//CellColor/color"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellText">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellText/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CellText/expresssion"/>
+    <genClasses ecoreClass="Project.ecore#//CellText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//CellText/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//CellText/expresssion"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Center"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Charge">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Charge/amount"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Charge/applies"/>
+    <genClasses ecoreClass="Project.ecore#//Center"/>
+    <genClasses ecoreClass="Project.ecore#//Charge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Charge/amount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Charge/applies"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeSet">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ChargeSet/accountShares"/>
+    <genClasses ecoreClass="Project.ecore#//ChargeSet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//ChargeSet/accountShares"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Columns">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Columns/columns"/>
+    <genClasses ecoreClass="Project.ecore#//Columns">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Columns/columns"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Complete">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Complete/complete"/>
+    <genClasses ecoreClass="Project.ecore#//Complete">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Complete/complete"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Copyright">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Copyright/text"/>
+    <genClasses ecoreClass="Project.ecore#//Copyright">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Copyright/text"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Credit">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Credit/date"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Credit/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Credit/amount"/>
+    <genClasses ecoreClass="Project.ecore#//Credit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Credit/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Credit/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Credit/amount"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Currency">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Currency/currency"/>
+    <genClasses ecoreClass="Project.ecore#//Currency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Currency/currency"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//CurrencyFormat"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DailyMax"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DailyMin"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DailyWorkingHours">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DailyWorkingHours/dailyWorkingHours"/>
+    <genClasses ecoreClass="Project.ecore#//CurrencyFormat"/>
+    <genClasses ecoreClass="Project.ecore#//DailyMax"/>
+    <genClasses ecoreClass="Project.ecore#//DailyMin"/>
+    <genClasses ecoreClass="Project.ecore#//DailyWorkingHours">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//DailyWorkingHours/dailyWorkingHours"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Definitions">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Definitions/all"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Definitions/none"/>
+    <genClasses ecoreClass="Project.ecore#//Definitions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Definitions/all"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Definitions/none"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Depends"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Details"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Duration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Duration/duration"/>
+    <genClasses ecoreClass="Project.ecore#//Depends"/>
+    <genClasses ecoreClass="Project.ecore#//Details"/>
+    <genClasses ecoreClass="Project.ecore#//Duration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Duration/duration"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Efficiency">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Efficiency/efficiency"/>
+    <genClasses ecoreClass="Project.ecore#//Efficiency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Efficiency/efficiency"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Effort">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Effort/effort"/>
+    <genClasses ecoreClass="Project.ecore#//Effort">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Effort/effort"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Email">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Email/address"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//End">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//End/end"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//EndCredit">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//EndCredit/credit"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Epilog"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Extend">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Extend/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Extend/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Extend/inherit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Extend/scenariospecific"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendResource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendResource/extends"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendedResourceAttribute">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendedResourceAttribute/extend"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendedResourceAttribute/value"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendTask">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendTask/extends"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendedTaskAttribute">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendedTaskAttribute/extend"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ExtendedTaskAttribute/value"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Fail">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Fail/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Flags">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Flags/flags"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//FontColor">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//FontColor/color"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Footer"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Formats">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Formats/formats"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GapDuration"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//GapLength"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HAlign">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HAlign/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HAlign/justification"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Header"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Headline"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideAccount">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideAccount/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideJournalEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideJournalEntry/expression"/>
+    <genClasses ecoreClass="Project.ecore#//Email">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Email/address"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//End">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//End/end"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//EndCredit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//EndCredit/credit"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Epilog"/>
+    <genClasses ecoreClass="Project.ecore#//Extend">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Extend/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Extend/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Extend/inherit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Extend/scenariospecific"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ExtendResource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//ExtendResource/extends"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ExtendedResourceAttribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ExtendedResourceAttribute/extend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ExtendedResourceAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ExtendTask">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//ExtendTask/extends"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ExtendedTaskAttribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ExtendedTaskAttribute/extend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ExtendedTaskAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Fail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Fail/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Flags">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Flags/flags"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//FontColor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//FontColor/color"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Footer"/>
+    <genClasses ecoreClass="Project.ecore#//Formats">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Formats/formats"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//GapDuration"/>
+    <genClasses ecoreClass="Project.ecore#//GapLength"/>
+    <genClasses ecoreClass="Project.ecore#//HAlign">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HAlign/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HAlign/justification"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Header"/>
+    <genClasses ecoreClass="Project.ecore#//Headline"/>
+    <genClasses ecoreClass="Project.ecore#//HideAccount">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideAccount/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//HideJournalEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideJournalEntry/expression"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideReport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideReport/expression"/>
+    <genClasses ecoreClass="Project.ecore#//HideReport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideReport/expression"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideResource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideResource/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideTask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//HideTask/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Include">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Include/importURI"/>
+    <genClasses ecoreClass="Project.ecore#//HideResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideResource/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//HideTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideTask/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Include">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Include/importURI"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties/importURI"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludeProperties/attributes"/>
+    <genClasses ecoreClass="Project.ecore#//IncludeProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//IncludeProperties/importURI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//IncludeProperties/attributes"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//IncludePropertiesAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval1/start"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval1/end"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval1/duration"/>
+    <genClasses ecoreClass="Project.ecore#//IncludePropertiesAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Interval1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Interval1/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Interval1/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Interval1/duration"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval2">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval2/start"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval2/end"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval2/duration"/>
+    <genClasses ecoreClass="Project.ecore#//Interval2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Interval2/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Interval2/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Interval2/duration"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval3">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval3/start"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval3/end"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval3/duration"/>
+    <genClasses ecoreClass="Project.ecore#//Interval3">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Interval3/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Interval3/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Interval3/duration"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval4">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval4/start"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval4/end"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Interval4/duration"/>
+    <genClasses ecoreClass="Project.ecore#//Interval4">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Interval4/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Interval4/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Interval4/duration"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/all"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/none"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/flags"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/property"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/details"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/author"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/headline"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/date"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/timesheet"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/propertyid"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalAttributes/summary"/>
+    <genClasses ecoreClass="Project.ecore#//JournalAttributes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/all"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/none"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/flags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/details"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/author"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/headline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/timesheet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/propertyid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalAttributes/summary"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntry">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntry/date"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntry/headline"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntry/alert"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntry/author"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntry/details"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalEntry/summary"/>
+    <genClasses ecoreClass="Project.ecore#//JournalEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalEntry/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalEntry/headline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//JournalEntry/alert"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//JournalEntry/author"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//JournalEntry/details"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//JournalEntry/summary"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalMode">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//JournalMode/mode"/>
+    <genClasses ecoreClass="Project.ecore#//JournalMode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//JournalMode/mode"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Left"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Length">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Length/length"/>
+    <genClasses ecoreClass="Project.ecore#//Left"/>
+    <genClasses ecoreClass="Project.ecore#//Length">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Length/length"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Limits">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Limits/attributes"/>
+    <genClasses ecoreClass="Project.ecore#//Limits">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Limits/attributes"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LimitsAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ListItem"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ListType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ListType/type"/>
+    <genClasses ecoreClass="Project.ecore#//LimitsAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//ListItem"/>
+    <genClasses ecoreClass="Project.ecore#//ListType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ListType/type"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadUnit">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LoadUnit/unit"/>
+    <genClasses ecoreClass="Project.ecore#//LoadUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LoadUnit/unit"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Macro">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Macro/value"/>
+    <genClasses ecoreClass="Project.ecore#//Macro">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Macro/value"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Managers">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Managers/resources"/>
+    <genClasses ecoreClass="Project.ecore#//Managers">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Managers/resources"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Mandatory">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Mandatory/mandatory"/>
+    <genClasses ecoreClass="Project.ecore#//Mandatory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Mandatory/mandatory"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MaxEnd">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MaxEnd/maxEnd"/>
+    <genClasses ecoreClass="Project.ecore#//MaxEnd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//MaxEnd/maxEnd"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Maximum"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MaxStart">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MaxStart/maxStart"/>
+    <genClasses ecoreClass="Project.ecore#//Maximum"/>
+    <genClasses ecoreClass="Project.ecore#//MaxStart">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//MaxStart/maxStart"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Milestone">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Milestone/milestone"/>
+    <genClasses ecoreClass="Project.ecore#//Milestone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Milestone/milestone"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Minimum"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MinEnd">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MinEnd/minEnd"/>
+    <genClasses ecoreClass="Project.ecore#//Minimum"/>
+    <genClasses ecoreClass="Project.ecore#//MinEnd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//MinEnd/minEnd"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MinStart">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MinStart/minStart"/>
+    <genClasses ecoreClass="Project.ecore#//MinStart">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//MinStart/minStart"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MonthlyMax"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//MonthlyMin"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Note">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Note/note"/>
+    <genClasses ecoreClass="Project.ecore#//MonthlyMax"/>
+    <genClasses ecoreClass="Project.ecore#//MonthlyMin"/>
+    <genClasses ecoreClass="Project.ecore#//Note">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Note/note"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Now">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Now/now"/>
+    <genClasses ecoreClass="Project.ecore#//Now">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Now/now"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//NumberFormat"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Period">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Period/period"/>
+    <genClasses ecoreClass="Project.ecore#//NumberFormat"/>
+    <genClasses ecoreClass="Project.ecore#//Period">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Period/period"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Persistent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Persistent/persistent"/>
+    <genClasses ecoreClass="Project.ecore#//Persistent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Persistent/persistent"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Precedes"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Priority">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Priority/priority"/>
+    <genClasses ecoreClass="Project.ecore#//Precedes"/>
+    <genClasses ecoreClass="Project.ecore#//Priority">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Priority/priority"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ProjectId">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ProjectId/projectId"/>
+    <genClasses ecoreClass="Project.ecore#//ProjectId">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ProjectId/projectId"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ProjectIds">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ProjectIds/ids"/>
+    <genClasses ecoreClass="Project.ecore#//ProjectIds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ProjectIds/ids"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Prolog"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeReport/listAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Prolog"/>
+    <genClasses ecoreClass="Project.ecore#//PurgeReport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//PurgeReport/listAttribute"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeResource/listAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//PurgeResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//PurgeResource/listAttribute"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//PurgeTask/listAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//PurgeTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//PurgeTask/listAttribute"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Rate">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Rate/rate"/>
+    <genClasses ecoreClass="Project.ecore#//Rate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Rate/rate"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Remaining">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Remaining/remaining"/>
+    <genClasses ecoreClass="Project.ecore#//Remaining">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Remaining/remaining"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportPrefix">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ReportPrefix/report"/>
+    <genClasses ecoreClass="Project.ecore#//ReportPrefix">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ReportPrefix/report"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttributes">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttributes/all"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttributes/none"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttributes/vacation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttributes/booking"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceAttributes/workingHours"/>
+    <genClasses ecoreClass="Project.ecore#//ResourceAttributes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ResourceAttributes/all"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ResourceAttributes/none"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ResourceAttributes/vacation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ResourceAttributes/booking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ResourceAttributes/workingHours"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourcePrefix">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourcePrefix/resource"/>
+    <genClasses ecoreClass="Project.ecore#//ResourcePrefix">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ResourcePrefix/resource"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceReport"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceRoot">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ResourceRoot/resource"/>
+    <genClasses ecoreClass="Project.ecore#//ResourceReport"/>
+    <genClasses ecoreClass="Project.ecore#//ResourceRoot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ResourceRoot/resource"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Responsible">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Responsible/resources"/>
+    <genClasses ecoreClass="Project.ecore#//Responsible">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Responsible/resources"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RGB">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RGB/value"/>
+    <genClasses ecoreClass="Project.ecore#//RGB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RGB/value"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Right"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupAccount">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupAccount/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupResource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupResource/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupTask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RollupTask/expression"/>
+    <genClasses ecoreClass="Project.ecore#//Right"/>
+    <genClasses ecoreClass="Project.ecore#//RollupAccount">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RollupAccount/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//RollupResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RollupResource/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//RollupTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RollupTask/expression"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scale">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scale/scale"/>
+    <genClasses ecoreClass="Project.ecore#//Scale">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Scale/scale"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scenario">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scenario/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scenario/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scenario/active"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scenario/scenario"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScenarioIcal">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ScenarioIcal/scenario"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scenarios">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scenarios/scenarios"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scheduled">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scheduled/scheduled"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scheduling">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Scheduling/scheduling"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Select">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Select/argument"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SelfContained">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SelfContained/selfcontained"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift/replace"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift/timezone"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift/vacation"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift/shift"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shift/workingHours"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftTimesheet">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftTimesheet/shift"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shifts">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Shifts/limits"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftsLimit">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftsLimit/shift"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftsLimit/limit"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftsAllocate">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftsAllocate/shift"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftsAllocate/intervals"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftsResource"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShiftsTask"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShortTimeFormat">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ShortTimeFormat/shortTimeFormat"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort/tree"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Sort/criteria"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortAccounts"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortJournalEntries"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortResources"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SortTasks"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Start">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Start/start"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheet">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheet/level"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheet/text"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheet/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusStatusSheetAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusTimesheet">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusTimesheet/level"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusTimesheet/text"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusTimesheet/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusTimesheetAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheet">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheet/resource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheet/interval"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheet/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReport/filename"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReport/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//StatusSheetReportAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Summary"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementAccount">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementAccount/account"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementAccount/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementReport">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementReport/report"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementReport/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementResource">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementResource/resource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementResource/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementTask">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementTask/task"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//SupplementTask/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TagFile">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TagFile/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TagFile/filename"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TagFile/hideResource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TagFile/hideTask"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TagFile/rollupResource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TagFile/rollupTask"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskStatusSheet">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskStatusSheet/task"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskStatusSheet/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskStatusSheetAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskTimesheet">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskTimesheet/task"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskTimesheet/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskTimesheetAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/all"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/none"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/responsible"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/flags"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/maxstart"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/maxend"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/priority"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/booking"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/note"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/minstart"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/minend"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/complete"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskAttributes/depends"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskPrefix">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskPrefix/task"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskReport"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskRoot">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskRoot/task"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TextReport"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeFormat">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimeFormat/timeformat"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timeoff">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timeoff/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timeoff/name"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timesheet">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timesheet/resource"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timesheet/interval"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timesheet/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimesheetAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimesheetReport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimesheetReport/filename"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimesheetReport/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimesheetReportAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timezone">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Timezone/timezone"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimingResolution">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TimingResolution/timingResolution"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Title">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Title/title"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ToolTip">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ToolTip/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ToolTip/tip"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TrackingScenario">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TrackingScenario/scenario"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TreeLevel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TreeLevel/level"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Vacation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Vacation/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Vacation/intervals"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Warn">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Warn/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WeekStarts">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WeekStarts/sunday"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WeekStarts/monday"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WeeklyMax"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WeeklyMin"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Width">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Width/width"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Work">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Work/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Work/unit"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkingHours">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkingHours/weekdays"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkingHours/off"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkingHours/hours"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//YearlyWorkingDays">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//YearlyWorkingDays/yearlyWorkingDays"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountShare">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountShare/account"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//AccountShare/share"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//ColumnAttribute"/>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Column">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Column/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Column/attribute"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Criterion">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Criterion/columnId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Criterion/direction"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DurationQuantity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DurationQuantity/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//DurationQuantity/unit"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Limit">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Limit/duration"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Limit/attributes"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LimitAttribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LimitAttribute/end"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LimitAttribute/period"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LimitAttribute/resources"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//LimitAttribute/start"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat/negativePrefix"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat/negativeSuffix"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat/thousandsSeparator"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat/fractionSeparator"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RealFormat/fractionDigits"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskDependency">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskDependency/task"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskDependency/gapDuration"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskDependency/gapLength"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//TaskDependency/policy"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RichText">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//RichText/text"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkHours">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkHours/start"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//WorkHours/stop"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekdays">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekdays/first"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Weekdays/last"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Defintions">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Defintions/flags"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Defintions/resources"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Defintions/tasks"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Defintions/project"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.jjflyboy.tjpeditor/src-gen/org/jjflyboy/tjpeditor/Project.ecore#//Defintions/projectids"/>
+    <genClasses ecoreClass="Project.ecore#//Scenario">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Scenario/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Scenario/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Scenario/active"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Scenario/scenario"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ScenarioIcal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ScenarioIcal/scenario"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Scenarios">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Scenarios/scenarios"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Scheduled">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Scheduled/scheduled"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Scheduling">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Scheduling/scheduling"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Select">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Select/argument"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//SelfContained">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//SelfContained/selfcontained"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Shift">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Shift/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Shift/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Shift/replace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Shift/timezone"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Shift/vacation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Shift/shift"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Shift/workingHours"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ShiftTimesheet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ShiftTimesheet/shift"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Shifts">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Shifts/limits"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ShiftsLimit">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ShiftsLimit/shift"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//ShiftsLimit/limit"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ShiftsAllocate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//ShiftsAllocate/shift"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//ShiftsAllocate/intervals"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ShiftsResource"/>
+    <genClasses ecoreClass="Project.ecore#//ShiftsTask"/>
+    <genClasses ecoreClass="Project.ecore#//ShortTimeFormat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ShortTimeFormat/shortTimeFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Sort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Sort/tree"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Sort/criteria"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//SortAccounts"/>
+    <genClasses ecoreClass="Project.ecore#//SortJournalEntries"/>
+    <genClasses ecoreClass="Project.ecore#//SortResources"/>
+    <genClasses ecoreClass="Project.ecore#//SortTasks"/>
+    <genClasses ecoreClass="Project.ecore#//Start">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Start/start"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//StatusStatusSheet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//StatusStatusSheet/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//StatusStatusSheet/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//StatusStatusSheet/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//StatusStatusSheetAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//StatusTimesheet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//StatusTimesheet/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//StatusTimesheet/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//StatusTimesheet/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//StatusTimesheetAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//StatusSheet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//StatusSheet/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//StatusSheet/interval"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//StatusSheet/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//StatusSheetAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//StatusSheetReport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//StatusSheetReport/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//StatusSheetReport/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//StatusSheetReportAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Summary"/>
+    <genClasses ecoreClass="Project.ecore#//SupplementAccount">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//SupplementAccount/account"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//SupplementAccount/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//SupplementReport">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//SupplementReport/report"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//SupplementReport/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//SupplementResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//SupplementResource/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//SupplementResource/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//SupplementTask">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//SupplementTask/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//SupplementTask/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TagFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TagFile/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TagFile/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TagFile/hideResource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TagFile/hideTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TagFile/rollupResource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TagFile/rollupTask"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TaskStatusSheet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//TaskStatusSheet/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TaskStatusSheet/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TaskStatusSheetAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//TaskTimesheet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//TaskTimesheet/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TaskTimesheet/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TaskTimesheetAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//TaskAttributes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/all"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/none"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/responsible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/flags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/maxstart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/maxend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/priority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/booking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/note"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/minstart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/minend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/complete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskAttributes/depends"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TaskPrefix">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//TaskPrefix/task"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TaskReport"/>
+    <genClasses ecoreClass="Project.ecore#//TaskRoot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//TaskRoot/task"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TextReport"/>
+    <genClasses ecoreClass="Project.ecore#//TimeFormat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TimeFormat/timeformat"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Timeoff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Timeoff/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Timeoff/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Timesheet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Timesheet/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Timesheet/interval"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Timesheet/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TimesheetAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//TimesheetReport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TimesheetReport/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TimesheetReport/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TimesheetReportAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Timezone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Timezone/timezone"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TimingResolution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TimingResolution/timingResolution"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Title">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Title/title"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ToolTip">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ToolTip/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ToolTip/tip"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TrackingScenario">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//TrackingScenario/scenario"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TreeLevel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TreeLevel/level"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Vacation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Vacation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Vacation/intervals"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Warn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Warn/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//WeekStarts">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//WeekStarts/sunday"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//WeekStarts/monday"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//WeeklyMax"/>
+    <genClasses ecoreClass="Project.ecore#//WeeklyMin"/>
+    <genClasses ecoreClass="Project.ecore#//Width">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Width/width"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Work">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Work/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Work/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//WorkingHours">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//WorkingHours/weekdays"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//WorkingHours/off"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//WorkingHours/hours"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//YearlyWorkingDays">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//YearlyWorkingDays/yearlyWorkingDays"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//AccountShare">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//AccountShare/account"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//AccountShare/share"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//ColumnAttribute"/>
+    <genClasses ecoreClass="Project.ecore#//Column">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Column/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Column/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Criterion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Criterion/columnId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Criterion/direction"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//DurationQuantity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//DurationQuantity/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//DurationQuantity/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Limit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Limit/duration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Limit/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//LimitAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LimitAttribute/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//LimitAttribute/period"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//LimitAttribute/resources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LimitAttribute/start"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//RealFormat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RealFormat/negativePrefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RealFormat/negativeSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RealFormat/thousandsSeparator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RealFormat/fractionSeparator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RealFormat/fractionDigits"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//TaskDependency">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//TaskDependency/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TaskDependency/gapDuration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//TaskDependency/gapLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//TaskDependency/policy"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//RichText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RichText/text"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//WorkHours">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//WorkHours/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//WorkHours/stop"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Weekdays">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Weekdays/first"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Weekdays/last"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Defintions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Defintions/flags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Defintions/resources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Defintions/tasks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Defintions/project"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Defintions/projectids"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
