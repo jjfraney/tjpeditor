@@ -12,16 +12,16 @@ Language parser and editor is based on Xtext: http://www.eclipse.org/Xtext/
 
 project status: alpha.
 to acheive beta:
-1) demonstrate context sensitive help
-2) significantly more unit test coverage
-3) resolve references
-4) prove these language features
- *) 'macro' keywords and functionality
- *) 'extend' keywords (completed)
- *) 'include' keyword and functionality
- *) 'functions'
- *) 'logical expressions'
-5) post a video demo
+1) demonstrate context sensitive help; status: TODO
+2) unit test framework and significantly more unit test coverage; status: completed 
+3) resolve references; status: completed
+4) prove these task juggler III language features
+ *) 'macro' keywords and functionality; status: cannot be implemented
+ *) 'extend' keywords; status: completed
+ *) 'include' keyword and functionality; status: completed
+ *) 'functions'; status: TODO
+ *) 'logical expressions'; status: TODO
+5) post a video demo; status: TODO
 
 
 TaskJuggler III grammar is in the file:
@@ -36,7 +36,6 @@ Build requirements:
 
 TODO: supply build instructions targetted to developers uninitiated in eclipse plugin development.
 TODO: build project under maven/tycho.
-
 
 
 related work:
