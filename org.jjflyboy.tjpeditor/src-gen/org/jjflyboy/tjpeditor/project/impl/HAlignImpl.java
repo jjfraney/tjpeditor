@@ -6,13 +6,16 @@
 package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.jjflyboy.tjpeditor.project.HAlign;
 import org.jjflyboy.tjpeditor.project.Justification;
+import org.jjflyboy.tjpeditor.project.LogicalExpression;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 
 /**
@@ -32,24 +35,14 @@ import org.jjflyboy.tjpeditor.project.ProjectPackage;
 public class HAlignImpl extends ColumnAttributeImpl implements HAlign
 {
   /**
-   * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.
+   * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getExpression()
    * @generated
    * @ordered
    */
-  protected static final String EXPRESSION_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getExpression() <em>Expression</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExpression()
-   * @generated
-   * @ordered
-   */
-  protected String expression = EXPRESSION_EDEFAULT;
+  protected LogicalExpression expression;
 
   /**
    * The default value of the '{@link #getJustification() <em>Justification</em>}' attribute.
@@ -97,7 +90,7 @@ public class HAlignImpl extends ColumnAttributeImpl implements HAlign
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getExpression()
+  public LogicalExpression getExpression()
   {
     return expression;
   }
@@ -107,12 +100,37 @@ public class HAlignImpl extends ColumnAttributeImpl implements HAlign
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExpression(String newExpression)
+  public NotificationChain basicSetExpression(LogicalExpression newExpression, NotificationChain msgs)
   {
-    String oldExpression = expression;
+    LogicalExpression oldExpression = expression;
     expression = newExpression;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.HALIGN__EXPRESSION, oldExpression, expression));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.HALIGN__EXPRESSION, oldExpression, newExpression);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExpression(LogicalExpression newExpression)
+  {
+    if (newExpression != expression)
+    {
+      NotificationChain msgs = null;
+      if (expression != null)
+        msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.HALIGN__EXPRESSION, null, msgs);
+      if (newExpression != null)
+        msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.HALIGN__EXPRESSION, null, msgs);
+      msgs = basicSetExpression(newExpression, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.HALIGN__EXPRESSION, newExpression, newExpression));
   }
 
   /**
@@ -144,6 +162,22 @@ public class HAlignImpl extends ColumnAttributeImpl implements HAlign
    * @generated
    */
   @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ProjectPackage.HALIGN__EXPRESSION:
+        return basicSetExpression(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -167,7 +201,7 @@ public class HAlignImpl extends ColumnAttributeImpl implements HAlign
     switch (featureID)
     {
       case ProjectPackage.HALIGN__EXPRESSION:
-        setExpression((String)newValue);
+        setExpression((LogicalExpression)newValue);
         return;
       case ProjectPackage.HALIGN__JUSTIFICATION:
         setJustification((Justification)newValue);
@@ -187,7 +221,7 @@ public class HAlignImpl extends ColumnAttributeImpl implements HAlign
     switch (featureID)
     {
       case ProjectPackage.HALIGN__EXPRESSION:
-        setExpression(EXPRESSION_EDEFAULT);
+        setExpression((LogicalExpression)null);
         return;
       case ProjectPackage.HALIGN__JUSTIFICATION:
         setJustification(JUSTIFICATION_EDEFAULT);
@@ -207,7 +241,7 @@ public class HAlignImpl extends ColumnAttributeImpl implements HAlign
     switch (featureID)
     {
       case ProjectPackage.HALIGN__EXPRESSION:
-        return EXPRESSION_EDEFAULT == null ? expression != null : !EXPRESSION_EDEFAULT.equals(expression);
+        return expression != null;
       case ProjectPackage.HALIGN__JUSTIFICATION:
         return justification != JUSTIFICATION_EDEFAULT;
     }
@@ -225,9 +259,7 @@ public class HAlignImpl extends ColumnAttributeImpl implements HAlign
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (expression: ");
-    result.append(expression);
-    result.append(", justification: ");
+    result.append(" (justification: ");
     result.append(justification);
     result.append(')');
     return result.toString();

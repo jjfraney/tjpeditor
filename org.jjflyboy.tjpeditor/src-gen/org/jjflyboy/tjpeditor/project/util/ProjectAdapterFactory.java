@@ -428,6 +428,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
         return createFormatsAdapter();
       }
       @Override
+      public Adapter caseFunction(Function object)
+      {
+        return createFunctionAdapter();
+      }
+      @Override
       public Adapter caseGapDuration(GapDuration object)
       {
         return createGapDurationAdapter();
@@ -561,6 +566,11 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseLoadUnit(LoadUnit object)
       {
         return createLoadUnitAdapter();
+      }
+      @Override
+      public Adapter caseLogicalExpression(LogicalExpression object)
+      {
+        return createLogicalExpressionAdapter();
       }
       @Override
       public Adapter caseMacro(Macro object)
@@ -1146,6 +1156,41 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDefintions(Defintions object)
       {
         return createDefintionsAdapter();
+      }
+      @Override
+      public Adapter caseXBinaryOperation(XBinaryOperation object)
+      {
+        return createXBinaryOperationAdapter();
+      }
+      @Override
+      public Adapter caseLogicalFunctionExpression(LogicalFunctionExpression object)
+      {
+        return createLogicalFunctionExpressionAdapter();
+      }
+      @Override
+      public Adapter caseLogicalAbsoluteIdExression(LogicalAbsoluteIdExression object)
+      {
+        return createLogicalAbsoluteIdExressionAdapter();
+      }
+      @Override
+      public Adapter caseLogicalBooleanLiteral(LogicalBooleanLiteral object)
+      {
+        return createLogicalBooleanLiteralAdapter();
+      }
+      @Override
+      public Adapter caseLogicalNumeralLiteral(LogicalNumeralLiteral object)
+      {
+        return createLogicalNumeralLiteralAdapter();
+      }
+      @Override
+      public Adapter caseLogicalStringLiteral(LogicalStringLiteral object)
+      {
+        return createLogicalStringLiteralAdapter();
+      }
+      @Override
+      public Adapter caseLogicalDateLiteral(LogicalDateLiteral object)
+      {
+        return createLogicalDateLiteralAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -2220,6 +2265,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.Function <em>Function</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.Function
+   * @generated
+   */
+  public Adapter createFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.GapDuration <em>Gap Duration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -2620,6 +2680,21 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLoadUnitAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LogicalExpression <em>Logical Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LogicalExpression
+   * @generated
+   */
+  public Adapter createLogicalExpressionAdapter()
   {
     return null;
   }
@@ -4375,6 +4450,111 @@ public class ProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDefintionsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.XBinaryOperation <em>XBinary Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.XBinaryOperation
+   * @generated
+   */
+  public Adapter createXBinaryOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LogicalFunctionExpression <em>Logical Function Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LogicalFunctionExpression
+   * @generated
+   */
+  public Adapter createLogicalFunctionExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LogicalAbsoluteIdExression <em>Logical Absolute Id Exression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LogicalAbsoluteIdExression
+   * @generated
+   */
+  public Adapter createLogicalAbsoluteIdExressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LogicalBooleanLiteral <em>Logical Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LogicalBooleanLiteral
+   * @generated
+   */
+  public Adapter createLogicalBooleanLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LogicalNumeralLiteral <em>Logical Numeral Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LogicalNumeralLiteral
+   * @generated
+   */
+  public Adapter createLogicalNumeralLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LogicalStringLiteral <em>Logical String Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LogicalStringLiteral
+   * @generated
+   */
+  public Adapter createLogicalStringLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.jjflyboy.tjpeditor.project.LogicalDateLiteral <em>Logical Date Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.jjflyboy.tjpeditor.project.LogicalDateLiteral
+   * @generated
+   */
+  public Adapter createLogicalDateLiteralAdapter()
   {
     return null;
   }

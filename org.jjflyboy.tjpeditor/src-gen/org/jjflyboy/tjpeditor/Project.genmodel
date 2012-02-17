@@ -6,7 +6,7 @@
     modelPluginID="org.jjflyboy.tjpeditor" forceOverwrite="true" modelName="Project"
     updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.jjflyboy.tjpeditor.edit"
-    editorPluginID="org.jjflyboy.tjpeditor.editor">
+    editorPluginID="org.jjflyboy.tjpeditor.editor" usedGenPackages="../../../../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types">
   <genPackages prefix="Project" basePackage="org.jjflyboy.tjpeditor" disposableProviderFactory="true"
       loadInitialization="true" literalsInterface="false" ecorePackage="Project.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Project.ecore#//PurgeReportAttribute">
@@ -307,12 +307,12 @@
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Caption"/>
     <genClasses ecoreClass="Project.ecore#//CellColor">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//CellColor/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//CellColor/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//CellColor/color"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//CellText">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//CellText/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//CellText/expresssion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//CellText/expresssion"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Center"/>
     <genClasses ecoreClass="Project.ecore#//Charge">
@@ -391,7 +391,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ExtendedTaskAttribute/value"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Fail">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Fail/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Fail/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Flags">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Flags/flags"/>
@@ -403,10 +403,19 @@
     <genClasses ecoreClass="Project.ecore#//Formats">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Formats/formats"/>
     </genClasses>
+    <genClasses ecoreClass="Project.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Function/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Function/date"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Function/scenario"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Function/parentId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Function/task"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Function/distance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//Function/resource"/>
+    </genClasses>
     <genClasses ecoreClass="Project.ecore#//GapDuration"/>
     <genClasses ecoreClass="Project.ecore#//GapLength"/>
     <genClasses ecoreClass="Project.ecore#//HAlign">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HAlign/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//HAlign/expression"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HAlign/justification"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Header"/>
@@ -418,13 +427,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideJournalEntry/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//HideReport">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideReport/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//HideReport/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//HideResource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideResource/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//HideResource/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//HideTask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//HideTask/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//HideTask/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Include">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Include/importURI"/>
@@ -493,6 +502,7 @@
     <genClasses ecoreClass="Project.ecore#//LoadUnit">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LoadUnit/unit"/>
     </genClasses>
+    <genClasses ecoreClass="Project.ecore#//LogicalExpression"/>
     <genClasses ecoreClass="Project.ecore#//Macro">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Macro/value"/>
     </genClasses>
@@ -585,13 +595,13 @@
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Right"/>
     <genClasses ecoreClass="Project.ecore#//RollupAccount">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RollupAccount/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//RollupAccount/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//RollupResource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RollupResource/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//RollupResource/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//RollupTask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//RollupTask/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//RollupTask/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Scale">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Scale/scale"/>
@@ -768,7 +778,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Title/title"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//ToolTip">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ToolTip/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//ToolTip/expression"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//ToolTip/tip"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//TrackingScenario">
@@ -782,7 +792,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Vacation/intervals"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//Warn">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Warn/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//Warn/expression"/>
     </genClasses>
     <genClasses ecoreClass="Project.ecore#//WeekStarts">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//WeekStarts/sunday"/>
@@ -862,6 +872,29 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Defintions/tasks"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Defintions/project"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//Defintions/projectids"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//XBinaryOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//XBinaryOperation/leftOperand"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Project.ecore#//XBinaryOperation/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//XBinaryOperation/rightOperand"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//LogicalFunctionExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Project.ecore#//LogicalFunctionExpression/function"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//LogicalAbsoluteIdExression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LogicalAbsoluteIdExression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//LogicalBooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LogicalBooleanLiteral/isTrue"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//LogicalNumeralLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LogicalNumeralLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//LogicalStringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LogicalStringLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Project.ecore#//LogicalDateLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Project.ecore#//LogicalDateLiteral/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

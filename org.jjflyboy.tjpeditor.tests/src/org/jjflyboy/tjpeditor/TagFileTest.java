@@ -18,7 +18,7 @@ public class TagFileTest  extends XtextTest {
 	
 	@Test 
 	public void testHideResource() {
-		testParserRule("tagfile \"file.txt\" { hideresource \"logical expression\" }", "TagFile");
+		testParserRule("tagfile \"file.txt\" { hideresource  true }", "TagFile");
 	}
 
 }

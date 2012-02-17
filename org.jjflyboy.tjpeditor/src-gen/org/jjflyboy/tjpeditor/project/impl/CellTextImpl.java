@@ -6,12 +6,15 @@
 package org.jjflyboy.tjpeditor.project.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.jjflyboy.tjpeditor.project.CellText;
+import org.jjflyboy.tjpeditor.project.LogicalExpression;
 import org.jjflyboy.tjpeditor.project.ProjectPackage;
 
 /**
@@ -51,24 +54,14 @@ public class CellTextImpl extends ColumnAttributeImpl implements CellText
   protected String text = TEXT_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getExpresssion() <em>Expresssion</em>}' attribute.
+   * The cached value of the '{@link #getExpresssion() <em>Expresssion</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getExpresssion()
    * @generated
    * @ordered
    */
-  protected static final String EXPRESSSION_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getExpresssion() <em>Expresssion</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExpresssion()
-   * @generated
-   * @ordered
-   */
-  protected String expresssion = EXPRESSSION_EDEFAULT;
+  protected LogicalExpression expresssion;
 
   /**
    * <!-- begin-user-doc -->
@@ -119,7 +112,7 @@ public class CellTextImpl extends ColumnAttributeImpl implements CellText
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getExpresssion()
+  public LogicalExpression getExpresssion()
   {
     return expresssion;
   }
@@ -129,12 +122,53 @@ public class CellTextImpl extends ColumnAttributeImpl implements CellText
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExpresssion(String newExpresssion)
+  public NotificationChain basicSetExpresssion(LogicalExpression newExpresssion, NotificationChain msgs)
   {
-    String oldExpresssion = expresssion;
+    LogicalExpression oldExpresssion = expresssion;
     expresssion = newExpresssion;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.CELL_TEXT__EXPRESSSION, oldExpresssion, expresssion));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ProjectPackage.CELL_TEXT__EXPRESSSION, oldExpresssion, newExpresssion);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExpresssion(LogicalExpression newExpresssion)
+  {
+    if (newExpresssion != expresssion)
+    {
+      NotificationChain msgs = null;
+      if (expresssion != null)
+        msgs = ((InternalEObject)expresssion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.CELL_TEXT__EXPRESSSION, null, msgs);
+      if (newExpresssion != null)
+        msgs = ((InternalEObject)newExpresssion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ProjectPackage.CELL_TEXT__EXPRESSSION, null, msgs);
+      msgs = basicSetExpresssion(newExpresssion, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.CELL_TEXT__EXPRESSSION, newExpresssion, newExpresssion));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ProjectPackage.CELL_TEXT__EXPRESSSION:
+        return basicSetExpresssion(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -169,7 +203,7 @@ public class CellTextImpl extends ColumnAttributeImpl implements CellText
         setText((String)newValue);
         return;
       case ProjectPackage.CELL_TEXT__EXPRESSSION:
-        setExpresssion((String)newValue);
+        setExpresssion((LogicalExpression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -189,7 +223,7 @@ public class CellTextImpl extends ColumnAttributeImpl implements CellText
         setText(TEXT_EDEFAULT);
         return;
       case ProjectPackage.CELL_TEXT__EXPRESSSION:
-        setExpresssion(EXPRESSSION_EDEFAULT);
+        setExpresssion((LogicalExpression)null);
         return;
     }
     super.eUnset(featureID);
@@ -208,7 +242,7 @@ public class CellTextImpl extends ColumnAttributeImpl implements CellText
       case ProjectPackage.CELL_TEXT__TEXT:
         return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
       case ProjectPackage.CELL_TEXT__EXPRESSSION:
-        return EXPRESSSION_EDEFAULT == null ? expresssion != null : !EXPRESSSION_EDEFAULT.equals(expresssion);
+        return expresssion != null;
     }
     return super.eIsSet(featureID);
   }
@@ -226,8 +260,6 @@ public class CellTextImpl extends ColumnAttributeImpl implements CellText
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (text: ");
     result.append(text);
-    result.append(", expresssion: ");
-    result.append(expresssion);
     result.append(')');
     return result.toString();
   }

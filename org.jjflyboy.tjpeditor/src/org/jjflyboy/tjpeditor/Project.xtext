@@ -1,7 +1,8 @@
-grammar org.jjflyboy.tjpeditor.Project with org.eclipse.xtext.common.Terminals
+grammar org.jjflyboy.tjpeditor.Project  with org.eclipse.xtext.xbase.Xbase
 
 generate project "http://www.jjflyboy.org/tjpeditor/Project"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as types
 
 //
 // The pattern used here for specifying attributes
@@ -466,8 +467,34 @@ Footer: 'footer' RichText;
 Formats: 'formats' formats+=ReportFormat (',' formats+=ReportFormat)*;
 
 // http://www.taskjuggler.org/tj3/manual/functions.html
-// TODO: Functions
-Functions: STRING;
+// http://www.taskjuggler.org/tj3/manual/isactive.html
+// http://www.taskjuggler.org/tj3/manual/ischildof.html
+// http://www.taskjuggler.org/tj3/manual/isdependencyof.html
+// http://www.taskjuggler.org/tj3/manual/isdutyof.html
+// http://www.taskjuggler.org/tj3/manual/isfeatureof.html
+// http://www.taskjuggler.org/tj3/manual/isleaf.html
+// http://www.taskjuggler.org/tj3/manual/ismilestone.html
+// http://www.taskjuggler.org/tj3/manual/isongoing.html
+// http://www.taskjuggler.org/tj3/manual/isresource.html
+// http://www.taskjuggler.org/tj3/manual/istask.html
+
+Function returns Function:
+	 {Function} 	(
+	 	        (('hasalert' | 'hasalert_' )		'('level=INT ',' date = ISODATE ')' )
+	 	 |      (('isactive' | 'isactive_' )		     '('scenario = [Scenario] ')' )
+	 	 |  	(('ischildof' | 'ischildof_' )	     '(' parentId = ID ')' )
+	 	 |	  	(('isdependencyof' | 'isdependencyof_' ) '('  task=[Task] ',' scenario=[Scenario] ',' distance=INT ')'  )
+	 	 |	  	(('isdutyof' | 'isdutyof_'  )		  '(' resource=[Resource] ',' scenario=[Scenario] ')' )
+	 	 |	  	(('isfeatureof' | 'isfeatureof_' ) '(' task=[Task] ',' scenario=[Scenario] ')')
+	 	 | 	  	(('isleaf' | 'isleaf_' )  '('  ')'  )
+	 	 |	  	(('ismilestone' | 'ismilestone_')'('scenario = [Scenario] ')')
+		 |	  	(('isongoing' | 'isongoing_')'('scenario = [Scenario] ')' ) 
+		 |	  	(('isresource' | 'isresource_' ) '('  ')')
+		 |	  	(('isresponsbilityof' | 'isresponsbilityof_' ) '(' resource=[Resource] ',' scenario=[Scenario] ')')
+		 |	  	(('istask' | 'istask_' ) '('  ')' )
+		 |	  	(('treelevel' | 'treelevel_' ) '('  ')')
+	  	)
+;
 
 // http://www.taskjuggler.org/tj3/manual/gapduration.html
 GapDuration: 'gapduration' DurationQuantity;
@@ -504,7 +531,7 @@ HideReport: 'hidereport' expression = LogicalExpression;
 HideResource: 'hideresource' expression = LogicalExpression;
 
 // http://www.taskjuggler.org/tj3/manual/hidetask.html
-HideTask: 'hidetask' expression = LogicalExpression;
+HideTask: 'hidetask' expression = LogicalExpression ;
 
 
 // http://www.taskjuggler.org/tj3/manual/include.macro.html
@@ -534,18 +561,6 @@ Interval3: start = ISODATE (('-' end = ISODATE) | ('+' duration = DurationQuanti
 
 // http://www.taskjuggler.org/tj3/manual/interval4.html
 Interval4: start = ISODATE (('-' end = ISODATE) | ('+' duration = DurationQuantity))?;
-
-// http://www.taskjuggler.org/tj3/manual/isactive.html
-// http://www.taskjuggler.org/tj3/manual/ischildof.html
-// http://www.taskjuggler.org/tj3/manual/isdependencyof.html
-// http://www.taskjuggler.org/tj3/manual/isdutyof.html
-// http://www.taskjuggler.org/tj3/manual/isfeatureof.html
-// http://www.taskjuggler.org/tj3/manual/isleaf.html
-// http://www.taskjuggler.org/tj3/manual/ismilestone.html
-// http://www.taskjuggler.org/tj3/manual/isongoing.html
-// http://www.taskjuggler.org/tj3/manual/isresource.html
-// http://www.taskjuggler.org/tj3/manual/istask.html
-// TODO
 
 
 // http://www.taskjuggler.org/tj3/manual/journalattributes.html
@@ -609,8 +624,52 @@ ListType: 'listtype' type=ListTypeValues;
 LoadUnit: 'loadunit' unit=LoadDisplayUnit;
 
 // http://www.taskjuggler.org/tj3/manual/logicalexpression.html
-LogicalExpression: STRING;
+// this implementation is borrowed from XBase XExpression
+LogicalExpression returns LogicalExpression: LogicalOrExpression;
 
+LogicalOrExpression returns LogicalExpression:
+		LogicalAndExpression (=>({XBinaryOperation.leftOperand=current} feature=[types::JvmIdentifiableElement|LEOpOr]) rightOperand=LogicalAndExpression)*;
+
+LEOpOr: '|';
+
+LogicalAndExpression returns LogicalExpression:
+	LogicalEqualityExpression (=>({XBinaryOperation.leftOperand=current} feature=[types::JvmIdentifiableElement|LEOpAnd]) rightOperand=LogicalEqualityExpression)*;
+
+LEOpAnd: '&';
+
+LogicalEqualityExpression returns LogicalExpression:
+		LogicalRelationalExpression (=>({XBinaryOperation.leftOperand=current} feature=[types::JvmIdentifiableElement|LEOpEquality]) rightOperand=LogicalRelationalExpression)*;
+		
+LEOpEquality:	'=' | '!=';
+
+LogicalRelationalExpression returns LogicalExpression:
+	LogicalPrimaryExpression ( =>({XBinaryOperation.leftOperand=current} feature=[types::JvmIdentifiableElement|OpCompare]) rightOperand=LogicalPrimaryExpression)*;
+
+LogicalPrimaryExpression returns LogicalExpression:
+	LogicalBooleanLiteral  |
+	LogicalNumeralLiteral |
+	LogicalStringLiteral |
+	LogicalISODateLiteral |
+	LogicalPrenthesizedExpression |
+	LogicalAbsoluteIdExpression |
+	LogicalFunctionExpression
+	;
+
+LogicalFunctionExpression returns LogicalExpression: {LogicalFunctionExpression} function = Function;
+
+LogicalAbsoluteIdExpression returns LogicalExpression: {LogicalAbsoluteIdExression} value=AbsoluteId;
+
+LogicalBooleanLiteral returns LogicalExpression: {LogicalBooleanLiteral} ('false' | isTrue?='true');
+
+LogicalNumeralLiteral returns LogicalExpression: {LogicalNumeralLiteral}  value=XFloat;
+
+LogicalStringLiteral returns LogicalExpression: {LogicalStringLiteral} value=STRING;
+
+LogicalISODateLiteral returns LogicalExpression: {LogicalDateLiteral} value = ISODATE;
+
+LogicalPrenthesizedExpression returns LogicalExpression:
+	'(' LogicalExpression ')';
+	
 // http://www.taskjuggler.org/tj3/manual/logicalflagexpression.html
 LogicalFlagExpression: STRING;
 

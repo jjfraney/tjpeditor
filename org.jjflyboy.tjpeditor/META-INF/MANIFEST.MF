@@ -17,7 +17,8 @@ Require-Bundle: org.eclipse.xtext;bundle-version="2.2.0";visibility:=reexport,
  org.eclipse.emf.common,
  org.antlr.runtime,
  org.eclipse.xtext.common.types;bundle-version="2.2.1",
- org.eclipse.xtext.xbase;bundle-version="2.2.1"
+ org.eclipse.xtext.xbase;bundle-version="2.2.1",
+ org.eclipse.xtend2.lib
 Import-Package: org.apache.log4j,
  org.apache.commons.logging,
  org.eclipse.xtext.xbase.lib,
@@ -35,4 +36,5 @@ Export-Package: org.jjflyboy.tjpeditor,
  org.jjflyboy.tjpeditor.serializer,
  org.jjflyboy.tjpeditor.scoping,
  org.jjflyboy.tjpeditor.generator,
- org.jjflyboy.tjpeditor.formatting
+ org.jjflyboy.tjpeditor.formatting,
+ org.jjflyboy.tjpeditor.jvmmodel

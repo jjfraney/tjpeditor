@@ -13,7 +13,9 @@ Workflow {
     bean = StandaloneSetup {
         scanClassPath = true
         platformUri = "${runtimeProject}/.."
-    }
+        registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
+        registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
+     }
 
     component = DirectoryCleaner {
         directory = "${runtimeProject}/src-gen"

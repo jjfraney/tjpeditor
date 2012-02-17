@@ -52,29 +52,29 @@ public interface CellText extends ColumnAttribute
   void setText(String value);
 
   /**
-   * Returns the value of the '<em><b>Expresssion</b></em>' attribute.
+   * Returns the value of the '<em><b>Expresssion</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Expresssion</em>' attribute isn't clear,
+   * If the meaning of the '<em>Expresssion</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Expresssion</em>' attribute.
-   * @see #setExpresssion(String)
+   * @return the value of the '<em>Expresssion</em>' containment reference.
+   * @see #setExpresssion(LogicalExpression)
    * @see org.jjflyboy.tjpeditor.project.ProjectPackage#getCellText_Expresssion()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getExpresssion();
+  LogicalExpression getExpresssion();
 
   /**
-   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.CellText#getExpresssion <em>Expresssion</em>}' attribute.
+   * Sets the value of the '{@link org.jjflyboy.tjpeditor.project.CellText#getExpresssion <em>Expresssion</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Expresssion</em>' attribute.
+   * @param value the new value of the '<em>Expresssion</em>' containment reference.
    * @see #getExpresssion()
    * @generated
    */
-  void setExpresssion(String value);
+  void setExpresssion(LogicalExpression value);
 
 } // CellText

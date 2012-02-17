@@ -129,12 +129,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Caption" eSuperTypes="#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="CellColor" eSuperTypes="#//ColumnAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//RGB" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CellText" eSuperTypes="#//ColumnAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expresssion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expresssion" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Center" eSuperTypes="#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Charge" eSuperTypes="#//TaskAttribute">
@@ -219,7 +221,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fail" eSuperTypes="#//TaskAttribute #//ResourceAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Flags" eSuperTypes="#//Property #//AccountAttribute #//TaskAttribute #//ReportAttribute #//ResourceAttribute #//StatusStatusSheetAttribute #//StatusTimesheetAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="flags" unique="false" upperBound="-1"
@@ -233,10 +236,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formats" unique="false"
         upperBound="-1" eType="#//ReportFormat"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" eType="#//Scenario"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parentId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" eType="#//Resource"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GapDuration"/>
   <eClassifiers xsi:type="ecore:EClass" name="GapLength"/>
   <eClassifiers xsi:type="ecore:EClass" name="HAlign" eSuperTypes="#//ColumnAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="justification" eType="#//Justification"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Header" eSuperTypes="#//ReportAttribute"/>
@@ -248,13 +261,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HideReport" eSuperTypes="#//NavigatorAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HideResource" eSuperTypes="#//ReportAttribute #//IcalReportAttribute #//ExportAttribute #//NikuReportAttribute #//StatusSheetReportAttribute #//TimesheetReportAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HideTask" eSuperTypes="#//ReportAttribute #//IcalReportAttribute #//ExportAttribute #//NikuReportAttribute #//StatusSheetReportAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Include" eSuperTypes="#//ProjectAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -334,6 +350,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="LoadUnit" eSuperTypes="#//ReportAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="#//LoadDisplayUnit"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Macro" eSuperTypes="#//Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -461,13 +478,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Right" eSuperTypes="#//ReportAttribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="RollupAccount" eSuperTypes="#//ReportAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RollupResource" eSuperTypes="#//ReportAttribute #//IcalReportAttribute #//ExportAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RollupTask" eSuperTypes="#//ReportAttribute #//IcalReportAttribute #//ExportAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Scale" eSuperTypes="#//ColumnAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -671,7 +691,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ToolTip" eSuperTypes="#//ColumnAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrackingScenario" eSuperTypes="#//ProjectAttribute">
@@ -686,7 +707,8 @@
         eType="#//Interval3" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Warn" eSuperTypes="#//TaskAttribute #//ResourceAttribute">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//LogicalExpression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WeekStarts" eSuperTypes="#//ProjectAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sunday" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -936,5 +958,31 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tasks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="project" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectids" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XBinaryOperation" eSuperTypes="#//LogicalExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftOperand" eType="#//LogicalExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="ecore:EClass http://www.eclipse.org/xtext/common/JavaVMTypes#//JvmIdentifiableElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightOperand" eType="#//LogicalExpression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalFunctionExpression" eSuperTypes="#//LogicalExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="#//Function"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalAbsoluteIdExression" eSuperTypes="#//LogicalExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalBooleanLiteral" eSuperTypes="#//LogicalExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isTrue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalNumeralLiteral" eSuperTypes="#//LogicalExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalStringLiteral" eSuperTypes="#//LogicalExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalDateLiteral" eSuperTypes="#//LogicalExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

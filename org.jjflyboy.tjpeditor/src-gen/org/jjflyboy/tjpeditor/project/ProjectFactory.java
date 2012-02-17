@@ -656,6 +656,15 @@ public interface ProjectFactory extends EFactory
   Formats createFormats();
 
   /**
+   * Returns a new object of class '<em>Function</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Function</em>'.
+   * @generated
+   */
+  Function createFunction();
+
+  /**
    * Returns a new object of class '<em>Gap Duration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -897,6 +906,15 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   LoadUnit createLoadUnit();
+
+  /**
+   * Returns a new object of class '<em>Logical Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Expression</em>'.
+   * @generated
+   */
+  LogicalExpression createLogicalExpression();
 
   /**
    * Returns a new object of class '<em>Macro</em>'.
@@ -1950,6 +1968,69 @@ public interface ProjectFactory extends EFactory
    * @generated
    */
   Defintions createDefintions();
+
+  /**
+   * Returns a new object of class '<em>XBinary Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>XBinary Operation</em>'.
+   * @generated
+   */
+  XBinaryOperation createXBinaryOperation();
+
+  /**
+   * Returns a new object of class '<em>Logical Function Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Function Expression</em>'.
+   * @generated
+   */
+  LogicalFunctionExpression createLogicalFunctionExpression();
+
+  /**
+   * Returns a new object of class '<em>Logical Absolute Id Exression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Absolute Id Exression</em>'.
+   * @generated
+   */
+  LogicalAbsoluteIdExression createLogicalAbsoluteIdExression();
+
+  /**
+   * Returns a new object of class '<em>Logical Boolean Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Boolean Literal</em>'.
+   * @generated
+   */
+  LogicalBooleanLiteral createLogicalBooleanLiteral();
+
+  /**
+   * Returns a new object of class '<em>Logical Numeral Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Numeral Literal</em>'.
+   * @generated
+   */
+  LogicalNumeralLiteral createLogicalNumeralLiteral();
+
+  /**
+   * Returns a new object of class '<em>Logical String Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical String Literal</em>'.
+   * @generated
+   */
+  LogicalStringLiteral createLogicalStringLiteral();
+
+  /**
+   * Returns a new object of class '<em>Logical Date Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Date Literal</em>'.
+   * @generated
+   */
+  LogicalDateLiteral createLogicalDateLiteral();
 
   /**
    * Returns the package supported by this factory.

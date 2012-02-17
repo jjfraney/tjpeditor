@@ -138,6 +138,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.FONT_COLOR: return createFontColor();
       case ProjectPackage.FOOTER: return createFooter();
       case ProjectPackage.FORMATS: return createFormats();
+      case ProjectPackage.FUNCTION: return createFunction();
       case ProjectPackage.GAP_DURATION: return createGapDuration();
       case ProjectPackage.GAP_LENGTH: return createGapLength();
       case ProjectPackage.HALIGN: return createHAlign();
@@ -165,6 +166,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.LIST_ITEM: return createListItem();
       case ProjectPackage.LIST_TYPE: return createListType();
       case ProjectPackage.LOAD_UNIT: return createLoadUnit();
+      case ProjectPackage.LOGICAL_EXPRESSION: return createLogicalExpression();
       case ProjectPackage.MACRO: return createMacro();
       case ProjectPackage.MANAGERS: return createManagers();
       case ProjectPackage.MANDATORY: return createMandatory();
@@ -282,6 +284,13 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
       case ProjectPackage.WORK_HOURS: return createWorkHours();
       case ProjectPackage.WEEKDAYS: return createWeekdays();
       case ProjectPackage.DEFINTIONS: return createDefintions();
+      case ProjectPackage.XBINARY_OPERATION: return createXBinaryOperation();
+      case ProjectPackage.LOGICAL_FUNCTION_EXPRESSION: return createLogicalFunctionExpression();
+      case ProjectPackage.LOGICAL_ABSOLUTE_ID_EXRESSION: return createLogicalAbsoluteIdExression();
+      case ProjectPackage.LOGICAL_BOOLEAN_LITERAL: return createLogicalBooleanLiteral();
+      case ProjectPackage.LOGICAL_NUMERAL_LITERAL: return createLogicalNumeralLiteral();
+      case ProjectPackage.LOGICAL_STRING_LITERAL: return createLogicalStringLiteral();
+      case ProjectPackage.LOGICAL_DATE_LITERAL: return createLogicalDateLiteral();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -1176,6 +1185,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Function createFunction()
+  {
+    FunctionImpl function = new FunctionImpl();
+    return function;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public GapDuration createGapDuration()
   {
     GapDurationImpl gapDuration = new GapDurationImpl();
@@ -1466,6 +1486,17 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     LoadUnitImpl loadUnit = new LoadUnitImpl();
     return loadUnit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalExpression createLogicalExpression()
+  {
+    LogicalExpressionImpl logicalExpression = new LogicalExpressionImpl();
+    return logicalExpression;
   }
 
   /**
@@ -2753,6 +2784,83 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory
   {
     DefintionsImpl defintions = new DefintionsImpl();
     return defintions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XBinaryOperation createXBinaryOperation()
+  {
+    XBinaryOperationImpl xBinaryOperation = new XBinaryOperationImpl();
+    return xBinaryOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalFunctionExpression createLogicalFunctionExpression()
+  {
+    LogicalFunctionExpressionImpl logicalFunctionExpression = new LogicalFunctionExpressionImpl();
+    return logicalFunctionExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalAbsoluteIdExression createLogicalAbsoluteIdExression()
+  {
+    LogicalAbsoluteIdExressionImpl logicalAbsoluteIdExression = new LogicalAbsoluteIdExressionImpl();
+    return logicalAbsoluteIdExression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalBooleanLiteral createLogicalBooleanLiteral()
+  {
+    LogicalBooleanLiteralImpl logicalBooleanLiteral = new LogicalBooleanLiteralImpl();
+    return logicalBooleanLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalNumeralLiteral createLogicalNumeralLiteral()
+  {
+    LogicalNumeralLiteralImpl logicalNumeralLiteral = new LogicalNumeralLiteralImpl();
+    return logicalNumeralLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalStringLiteral createLogicalStringLiteral()
+  {
+    LogicalStringLiteralImpl logicalStringLiteral = new LogicalStringLiteralImpl();
+    return logicalStringLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalDateLiteral createLogicalDateLiteral()
+  {
+    LogicalDateLiteralImpl logicalDateLiteral = new LogicalDateLiteralImpl();
+    return logicalDateLiteral;
   }
 
   /**

@@ -19,8 +19,8 @@ to acheive beta:
  *) 'macro' keywords and functionality; status: cannot be implemented
  *) 'extend' keywords; status: completed
  *) 'include' keyword and functionality; status: completed
- *) 'functions'; status: TODO
- *) 'logical expressions'; status: TODO
+ *) 'functions'; status: completed
+ *) 'logical expressions'; status: completed
 5) post a video demo; status: TODO
 
 

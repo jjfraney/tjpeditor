@@ -646,6 +646,13 @@ public class ProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ProjectPackage.FUNCTION:
+      {
+        Function function = (Function)theEObject;
+        T result = caseFunction(function);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ProjectPackage.GAP_DURATION:
       {
         GapDuration gapDuration = (GapDuration)theEObject;
@@ -866,6 +873,13 @@ public class ProjectSwitch<T> extends Switch<T>
         LoadUnit loadUnit = (LoadUnit)theEObject;
         T result = caseLoadUnit(loadUnit);
         if (result == null) result = caseReportAttribute(loadUnit);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LOGICAL_EXPRESSION:
+      {
+        LogicalExpression logicalExpression = (LogicalExpression)theEObject;
+        T result = caseLogicalExpression(logicalExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1868,6 +1882,62 @@ public class ProjectSwitch<T> extends Switch<T>
         T result = caseDefintions(defintions);
         if (result == null) result = caseDefinitions(defintions);
         if (result == null) result = caseExportAttribute(defintions);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.XBINARY_OPERATION:
+      {
+        XBinaryOperation xBinaryOperation = (XBinaryOperation)theEObject;
+        T result = caseXBinaryOperation(xBinaryOperation);
+        if (result == null) result = caseLogicalExpression(xBinaryOperation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LOGICAL_FUNCTION_EXPRESSION:
+      {
+        LogicalFunctionExpression logicalFunctionExpression = (LogicalFunctionExpression)theEObject;
+        T result = caseLogicalFunctionExpression(logicalFunctionExpression);
+        if (result == null) result = caseLogicalExpression(logicalFunctionExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LOGICAL_ABSOLUTE_ID_EXRESSION:
+      {
+        LogicalAbsoluteIdExression logicalAbsoluteIdExression = (LogicalAbsoluteIdExression)theEObject;
+        T result = caseLogicalAbsoluteIdExression(logicalAbsoluteIdExression);
+        if (result == null) result = caseLogicalExpression(logicalAbsoluteIdExression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LOGICAL_BOOLEAN_LITERAL:
+      {
+        LogicalBooleanLiteral logicalBooleanLiteral = (LogicalBooleanLiteral)theEObject;
+        T result = caseLogicalBooleanLiteral(logicalBooleanLiteral);
+        if (result == null) result = caseLogicalExpression(logicalBooleanLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LOGICAL_NUMERAL_LITERAL:
+      {
+        LogicalNumeralLiteral logicalNumeralLiteral = (LogicalNumeralLiteral)theEObject;
+        T result = caseLogicalNumeralLiteral(logicalNumeralLiteral);
+        if (result == null) result = caseLogicalExpression(logicalNumeralLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LOGICAL_STRING_LITERAL:
+      {
+        LogicalStringLiteral logicalStringLiteral = (LogicalStringLiteral)theEObject;
+        T result = caseLogicalStringLiteral(logicalStringLiteral);
+        if (result == null) result = caseLogicalExpression(logicalStringLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ProjectPackage.LOGICAL_DATE_LITERAL:
+      {
+        LogicalDateLiteral logicalDateLiteral = (LogicalDateLiteral)theEObject;
+        T result = caseLogicalDateLiteral(logicalDateLiteral);
+        if (result == null) result = caseLogicalExpression(logicalDateLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -2996,6 +3066,22 @@ public class ProjectSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Function</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFunction(Function object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Gap Duration</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -3423,6 +3509,22 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLoadUnit(LoadUnit object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalExpression(LogicalExpression object)
   {
     return null;
   }
@@ -5295,6 +5397,118 @@ public class ProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDefintions(Defintions object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>XBinary Operation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>XBinary Operation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXBinaryOperation(XBinaryOperation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Function Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Function Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalFunctionExpression(LogicalFunctionExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Absolute Id Exression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Absolute Id Exression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalAbsoluteIdExression(LogicalAbsoluteIdExression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Boolean Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Boolean Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalBooleanLiteral(LogicalBooleanLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Numeral Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Numeral Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalNumeralLiteral(LogicalNumeralLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical String Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical String Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalStringLiteral(LogicalStringLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Date Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Date Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalDateLiteral(LogicalDateLiteral object)
   {
     return null;
   }
