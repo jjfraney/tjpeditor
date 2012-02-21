@@ -28,14 +28,16 @@ TaskJuggler III grammar is in the file:
 org.jjflyboy.tjpeditor/src/org/jjflyboy/tjpeditor/Project.xtext
 
 
-Currently, building this plugin can be done only with eclipse IDE. 
-Build requirements:
+Currently, this editor can be built in eclipse IDE and by maven. 
+*Build by eclipse IDE, requirements:
  http://www.eclipse.org (plugin development environment required)
  http://www.eclipse.org/Xtext/
  http://code.google.com/a/eclipselabs.org/p/xtext-utils/wiki/Unit_Testing
+ TODO: supply build instructions targetted to developers uninitiated in eclipse plugin development.
 
-TODO: supply build instructions targetted to developers uninitiated in eclipse plugin development.
-TODO: build project under maven/tycho.
+*Build by maven/tycho, requirements:
+ http://maven.apache.org (maven 3)
+
 
 
 related work:
