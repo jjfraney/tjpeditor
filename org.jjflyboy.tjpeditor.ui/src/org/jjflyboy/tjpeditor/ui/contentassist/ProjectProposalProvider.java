@@ -3,10 +3,35 @@
 */
 package org.jjflyboy.tjpeditor.ui.contentassist;
 
+import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.RuleCall;
+import org.eclipse.xtext.TerminalRule;
+import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
+import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
 import org.jjflyboy.tjpeditor.ui.contentassist.AbstractProjectProposalProvider;
+
+
 /**
  * see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#contentAssist on how to customize content assistant
  */
 public class ProjectProposalProvider extends AbstractProjectProposalProvider {
 
+	@Override
+	public void completeRuleCall(RuleCall ruleCall, ContentAssistContext contentAssistContext, ICompletionProposalAcceptor acceptor) {
+		// standard behaviour
+		super.completeRuleCall(ruleCall, contentAssistContext, acceptor);
+		// if it is a terminal rule, we'll add some extra proposals
+		if(ruleCall.getRule() instanceof TerminalRule){
+			String prop="";
+			if(ruleCall.eContainer() instanceof Assignment){
+				Assignment ass=(Assignment)ruleCall.eContainer();
+				// adding the feature id (e.g. name, id, etc.) and the cardinality of the feature (e.g. optional=? required=[nothing] ...)
+				prop="/"+ass.getFeature()+((ass.getCardinality()!=null)?ass.getCardinality():"")+"/";
+			}else{
+				// adding the name of the Parser rule at least (quite frequently the same anyways)
+				prop="/"+ruleCall.getRule().getName().toLowerCase()+"/";
+			}
+			acceptor.accept(createCompletionProposal("", prop, null, contentAssistContext));
+		}
+	}
 }
